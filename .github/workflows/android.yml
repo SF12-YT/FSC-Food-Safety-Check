@@ -1,0 +1,76 @@
+name: Build FOSCH Android APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Java
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: "9.6.0"
+
+      - name: Check whether stable signing is configured
+        id: signing_check
+        env:
+          FSC_KEYSTORE_BASE64: ${{ secrets.FSC_KEYSTORE_BASE64 }}
+          FSC_KEYSTORE_PASSWORD: ${{ secrets.FSC_KEYSTORE_PASSWORD }}
+          FSC_KEY_ALIAS: ${{ secrets.FSC_KEY_ALIAS }}
+          FSC_KEY_PASSWORD: ${{ secrets.FSC_KEY_PASSWORD }}
+        shell: bash
+        run: |
+          if [[ -n "$FSC_KEYSTORE_BASE64" && -n "$FSC_KEYSTORE_PASSWORD" && -n "$FSC_KEY_ALIAS" && -n "$FSC_KEY_PASSWORD" ]]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+            echo "$FSC_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/fosch-release.jks"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build stable signed APK
+        if: steps.signing_check.outputs.configured == 'true'
+        env:
+          FSC_KEYSTORE_PASSWORD: ${{ secrets.FSC_KEYSTORE_PASSWORD }}
+          FSC_KEY_ALIAS: ${{ secrets.FSC_KEY_ALIAS }}
+          FSC_KEY_PASSWORD: ${{ secrets.FSC_KEY_PASSWORD }}
+        run: >-
+          gradle assembleRelease
+          -PFSC_KEYSTORE_PATH="$RUNNER_TEMP/fosch-release.jks"
+          -PFSC_KEYSTORE_PASSWORD="$FSC_KEYSTORE_PASSWORD"
+          -PFSC_KEY_ALIAS="$FSC_KEY_ALIAS"
+          -PFSC_KEY_PASSWORD="$FSC_KEY_PASSWORD"
+
+      - name: Build debug APK (fallback when stable signing secrets are not configured)
+        if: steps.signing_check.outputs.configured != 'true'
+        run: gradle assembleDebug
+
+      - name: Upload stable signed APK
+        if: steps.signing_check.outputs.configured == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: FOSCH-stable-signed-APK
+          path: app/build/outputs/apk/release/app-release.apk
+          if-no-files-found: error
+
+      - name: Upload debug APK
+        if: steps.signing_check.outputs.configured != 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: FOSCH-debug-APK
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error

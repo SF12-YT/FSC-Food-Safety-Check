@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.application'
+}
+android {
+    namespace 'com.fosch.org'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'com.fosch.org'
+        minSdk 23
+        targetSdk 35
+        versionCode 24
+        versionName '0.10.13'
+    }
+    signingConfigs {
+        foschStable {
+            def ksPath = project.findProperty('FSC_KEYSTORE_PATH')
+            def ksPassword = project.findProperty('FSC_KEYSTORE_PASSWORD')
+            def keyAliasValue = project.findProperty('FSC_KEY_ALIAS')
+            def keyPasswordValue = project.findProperty('FSC_KEY_PASSWORD')
+            if (ksPath && ksPassword && keyAliasValue && keyPasswordValue) {
+                storeFile file(ksPath)
+                storePassword ksPassword
+                keyAlias keyAliasValue
+                keyPassword keyPasswordValue
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (project.hasProperty('FSC_KEYSTORE_PATH') && project.hasProperty('FSC_KEYSTORE_PASSWORD') && project.hasProperty('FSC_KEY_ALIAS') && project.hasProperty('FSC_KEY_PASSWORD')) {
+                signingConfig signingConfigs.foschStable
+            }
+        }
+    }
+}
+dependencies {
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation 'com.google.zxing:core:3.5.3'
+    implementation 'androidx.core:core:1.16.0'
+}
