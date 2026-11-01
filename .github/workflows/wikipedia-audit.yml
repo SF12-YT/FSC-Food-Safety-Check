@@ -1,0 +1,37 @@
+name: Audit FOSCH Wikipedia E-number mappings
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "app/src/main/assets/e_numbers.js"
+      - "scripts/audit_wikipedia_previews.py"
+      - ".github/workflows/wikipedia-audit.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Audit all catalogue entries against Wikipedia
+        run: python scripts/audit_wikipedia_previews.py
+
+      - name: Upload audit report
+        uses: actions/upload-artifact@v7
+        with:
+          name: FOSCH-Wikipedia-E-number-audit
+          path: audit-output/
+          if-no-files-found: error
+          retention-days: 90
