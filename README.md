@@ -1,4 +1,16 @@
-# FOSCH v0.10.18 — additive-name Wikipedia preview heading
+# FOSCH v0.10.22 — food-specific Wikipedia previews
+
+FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
+
+## v0.10.22 changes
+
+- Wikipedia preview selection now favours explicit food-use sections such as “Food coloring” over a generic parent “Uses” section.
+- Generic “Uses” or “Applications” headings are used only when they do not contain more specific subsections, avoiding unrelated medical or technical uses in food-additive previews.
+- Bumped the Wikipedia preview cache schema so previously cached excerpts are refreshed.
+- Updated the Android version to `0.10.22` (`versionCode 33`).
+
+## Previous release: v0.10.21
+
 
 FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
 
