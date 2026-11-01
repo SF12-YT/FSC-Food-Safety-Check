@@ -1,4 +1,16 @@
-# FOSCH v0.10.23 — audited Wikipedia E-number previews
+# FOSCH v0.10.24 — validate stored article redirects
+
+FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
+
+## v0.10.24 changes
+
+- Stored Wikipedia URLs are now resolved through Wikipedia redirects and accepted only when the final article title matches the additive's catalogue name or an explicit name alias.
+- E-number search fallback now requires the candidate article title to match the additive name; a bare E-number or unrelated disambiguation result is no longer sufficient.
+- Bumped the Wikipedia preview cache schema to refresh old results.
+- Updated the Android version to `0.10.24` (`versionCode 35`).
+
+## Previous release: v0.10.23 — audited Wikipedia E-number previews
+
 
 FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
 
