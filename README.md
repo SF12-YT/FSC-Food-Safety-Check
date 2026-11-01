@@ -1,4 +1,13 @@
-# FOSCH v0.10.13 — contribution, correction and analysis fixes
+# FOSCH v0.10.14 — Wikipedia preview visual refinement
+
+FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
+
+## v0.10.14 changes
+
+- Refined the Wikipedia article preview with smoother rounded corners, a slightly narrower card, softer surfaces, and more compact internal spacing and typography.
+- Incremented the Android version to `0.10.14` (`versionCode 25`).
+
+## Previous release: v0.10.13 — contribution, correction and analysis fixes
 
 FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
 
