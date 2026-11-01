@@ -1,4 +1,16 @@
-# FOSCH v0.10.25 — Wikipedia resolver validation
+# FOSCH v0.10.26 — final food-use section filtering
+
+FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
+
+## v0.10.26 changes
+
+- Further tightened Wikipedia preview section selection: “Food grade” and “Food items with tannins” are not treated as food-additive use sections.
+- Bumped the preview cache schema to refresh results using the stricter section filter.
+- The Android workflow now checks every inline JavaScript block with Node.js before building and publishes a full source ZIP alongside the signed APK.
+- Updated the Android version to `0.10.26` (`versionCode 37`).
+
+## Previous release: v0.10.25 — Wikipedia resolver validation
+
 
 FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
 

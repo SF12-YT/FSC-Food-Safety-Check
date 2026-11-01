@@ -42,6 +42,17 @@ jobs:
               print(f"JavaScript block {index}/{len(scripts)} passed node --check")
           PY
 
+      - name: Package source archive
+        run: git archive --format=zip --prefix=FOSCH-v0.10.26/ HEAD > FOSCH-source-v0.10.26.zip
+
+      - name: Upload source archive
+        uses: actions/upload-artifact@v7
+        with:
+          name: FOSCH-source-v0.10.26
+          path: FOSCH-source-v0.10.26.zip
+          if-no-files-found: error
+          retention-days: 90
+
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v6
         with:

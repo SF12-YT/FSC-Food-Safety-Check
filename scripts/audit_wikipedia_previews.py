@@ -235,7 +235,7 @@ FOOD_EXACT = [
     (1, re.compile(r"^(foods?|food products?|food industry|food and drink|food and beverages?|beverages?|culinary|culinary uses?|culinary use|food preparation|food production|food science|in foods?|food use|food applications and maximum use levels)$", re.I)),
 ]
 FOOD_EXCLUSIONS = re.compile(
-    r"\b(safety|allerg\w*|intoleran\w*|sensitiv\w*|toxic\w*|toxicity|health effects|adverse\w*|medical\w*|pharmac\w*|deficien\w*|disease\w*|history|production|synthesis|chemistry|regulat\w*|label\w*|risk\w*|source(s)?|nutrition\w*|dietary recommendations|metabolism|contaminant|food chain|food item)\b",
+    r"\b(safety|allerg\w*|intoleran\w*|sensitiv\w*|toxic\w*|toxicity|health effects|adverse\w*|medical\w*|pharmac\w*|deficien\w*|disease\w*|history|production|synthesis|chemistry|regulat\w*|label\w*|risk\w*|source(s)?|nutrition\w*|dietary recommendations|metabolism|contaminant|food chain|food grade|food item\w*)\b",
     re.I,
 )
 
