@@ -1,5 +1,12 @@
 # FOSCH v0.10.27 — local admin review, ingredient tags and camera refinements
 
+## v0.10.29 changes
+
+- Fixed administrator product-image updates so the newest captured or uploaded official photo becomes the primary image shown in the admin submission preview and Product Lookup.
+- Kept up to five official product photos, with the most recently added image first; older photos remain available after it.
+- Ensured approved product-index records preserve the same latest-first image order and the current primary image.
+- Bumped Android version to `0.10.29` (`versionCode 40`).
+
 ## v0.10.28 changes
 
 - Added administrator-only image selection from device storage for official product photos and brand logos. Administrators can still use the in-app camera.

@@ -107,9 +107,17 @@
     return entry && String(entry.dataUrl || "").startsWith("data:image/") ? entry : null;
   }
   function recordPhotos(record) {
-    if (Array.isArray(record.officialPhotos)) return record.officialPhotos.filter(function (v) { return typeof v === "string" && v.startsWith("data:image/"); });
-    if (record.officialPhoto && String(record.officialPhoto).startsWith("data:image/")) return [record.officialPhoto];
-    return [];
+    if (!record) return [];
+    const stored = Array.isArray(record.officialPhotos) ? record.officialPhotos : [];
+    const latest = String(record.officialPhoto || "");
+    const ordered = latest.startsWith("data:image/")
+      ? [latest].concat(stored.filter(function (v) { return v !== latest; }))
+      : stored;
+    const seen = [];
+    ordered.forEach(function (value) {
+      if (typeof value === "string" && value.startsWith("data:image/") && seen.indexOf(value) < 0 && seen.length < 5) seen.push(value);
+    });
+    return seen;
   }
   function renderProductMedia(product) {
     if (!product) return "";
@@ -386,10 +394,12 @@
       if (!item) { alert("The submission no longer exists."); return true; }
       const record = item.record;
       const product = target.kind === "correction" && record.suggestedProduct ? record.suggestedProduct : record;
-      const photos = Array.isArray(product.officialPhotos) ? product.officialPhotos.slice() : [];
-      photos.push(String(dataUrl));
-      product.officialPhotos = photos.slice(-5);
-      product.officialPhoto = String(dataUrl);
+      const latestPhoto = String(dataUrl);
+      const previousPhotos = Array.isArray(product.officialPhotos) ? product.officialPhotos : [];
+      product.officialPhotos = [latestPhoto].concat(previousPhotos.filter(function (photo) {
+        return typeof photo === "string" && photo.startsWith("data:image/") && photo !== latestPhoto;
+      })).slice(0, 5);
+      product.officialPhoto = latestPhoto;
       if (target.kind === "correction" && record.suggestedProduct) record.suggestedProduct = product;
       if (!persistRecords()) return true;
       if (target.kind === "product" && isApproved(record)) saveMarketProduct(record);
