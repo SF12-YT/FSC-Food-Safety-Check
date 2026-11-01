@@ -19,6 +19,7 @@ import sys
 import time
 import unicodedata
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -333,15 +334,22 @@ def main() -> int:
     titles = sorted({r["title"] for r in resolved if r.get("title")})
     print(f"Checking {len(titles)} unique Wikipedia article pages for section headings.")
     pages = {}
-    for index, title in enumerate(titles, 1):
-        try:
-            pages[title] = audit_page(title)
-        except Exception as exc:
-            pages[title] = {"error": str(exc), "resolved_title": title, "sections": [],
-                            "section": None, "section_reason": "Wikipedia page could not be verified."}
-            print(f"WARNING: {title}: {exc}", file=sys.stderr)
-        if index % 25 == 0 or index == len(titles):
-            print(f"Checked {index}/{len(titles)} article pages.")
+    # Bound concurrency to keep the Wikipedia API responsive while avoiding a
+    # slow serial round-trip for hundreds of unique article titles.
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = {executor.submit(audit_page, title): title for title in titles}
+        completed = 0
+        for future in as_completed(futures):
+            title = futures[future]
+            try:
+                pages[title] = future.result()
+            except Exception as exc:
+                pages[title] = {"error": str(exc), "resolved_title": title, "sections": [],
+                                "section": None, "section_reason": "Wikipedia page could not be verified."}
+                print(f"WARNING: {title}: {exc}", file=sys.stderr)
+            completed += 1
+            if completed % 25 == 0 or completed == len(titles):
+                print(f"Checked {completed}/{len(titles)} article pages.")
 
     for row in resolved:
         title = row.get("title", "")
