@@ -19,7 +19,6 @@ import sys
 import time
 import unicodedata
 from collections import Counter
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -262,15 +261,53 @@ def choose_food_section(sections: list[dict]) -> tuple[dict | None, str]:
                 return section, f"Generic {heading} section has no child subsections."
     return None, "No clearly food-specific section; preview should use an article overview or be manually reviewed."
 
-def audit_page(title: str) -> dict:
-    data = fetch_json({"action": "parse", "page": title, "prop": "sections"})
-    parsed = data.get("parse") or {}
-    if not parsed:
-        raise RuntimeError(data.get("error") or f"Article not found: {title}")
-    sections = parsed.get("sections") or []
-    chosen, reason = choose_food_section(sections)
-    return {"resolved_title": parsed.get("title") or title, "page_id": parsed.get("pageid"),
-            "sections": sections, "section": chosen, "section_reason": reason}
+def audit_pages_bulk(titles: list[str]) -> dict:
+    """Fetch up to 20 article revisions per API call and read their section headings."""
+    pages = {}
+    for offset in range(0, len(titles), 20):
+        batch = titles[offset:offset + 20]
+        data = fetch_json({
+            "action": "query",
+            "titles": "|".join(batch),
+            "redirects": "1",
+            "prop": "revisions",
+            "rvprop": "ids|timestamp|content",
+            "rvslots": "main",
+        })
+        for page in (data.get("query") or {}).get("pages") or []:
+            requested_title = str(page.get("title") or "")
+            if page.get("missing") is not None or not page.get("revisions"):
+                pages[requested_title] = {
+                    "error": "Wikipedia article page not found or has no readable revision.",
+                    "resolved_title": requested_title, "sections": [], "section": None,
+                    "section_reason": "Wikipedia page could not be verified.",
+                }
+                continue
+            revision = page["revisions"][0]
+            slot = (revision.get("slots") or {}).get("main") or {}
+            wikitext = str(slot.get("content") or "")
+            headings = []
+            for match in re.finditer(r"^(={2,6})\s*(.*?)\s*\1\s*$", wikitext, re.M):
+                level = len(match.group(1))
+                line = re.sub(r"\s+", " ", match.group(2)).strip()
+                if line:
+                    headings.append({
+                        "index": str(len(headings) + 1), "line": line,
+                        "anchor": "", "level": level,
+                    })
+            chosen, reason = choose_food_section(headings)
+            pages[requested_title] = {
+                "resolved_title": requested_title,
+                "page_id": page.get("pageid"),
+                "revision_id": revision.get("revid"),
+                "revision_timestamp": revision.get("timestamp"),
+                "sections": headings,
+                "section": chosen,
+                "section_reason": reason,
+            }
+        done = min(offset + len(batch), len(titles))
+        print(f"Read headings for {done}/{len(titles)} unique article pages.")
+    return pages
 
 def write_outputs(results: list[dict], pages: dict, wiki_revision: str) -> None:
     csv_path = OUT / "wikipedia_e_number_audit.csv"
@@ -333,23 +370,7 @@ def main() -> int:
 
     titles = sorted({r["title"] for r in resolved if r.get("title")})
     print(f"Checking {len(titles)} unique Wikipedia article pages for section headings.")
-    pages = {}
-    # Bound concurrency to keep the Wikipedia API responsive while avoiding a
-    # slow serial round-trip for hundreds of unique article titles.
-    with ThreadPoolExecutor(max_workers=8) as executor:
-        futures = {executor.submit(audit_page, title): title for title in titles}
-        completed = 0
-        for future in as_completed(futures):
-            title = futures[future]
-            try:
-                pages[title] = future.result()
-            except Exception as exc:
-                pages[title] = {"error": str(exc), "resolved_title": title, "sections": [],
-                                "section": None, "section_reason": "Wikipedia page could not be verified."}
-                print(f"WARNING: {title}: {exc}", file=sys.stderr)
-            completed += 1
-            if completed % 25 == 0 or completed == len(titles):
-                print(f"Checked {completed}/{len(titles)} article pages.")
+    pages = audit_pages_bulk(titles)
 
     for row in resolved:
         title = row.get("title", "")
