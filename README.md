@@ -1,4 +1,14 @@
-# FOSCH v0.10.14 — Wikipedia preview visual refinement
+# FOSCH v0.10.15 — Wikipedia article lookup fix
+
+FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
+
+## v0.10.15 changes
+
+- Wikipedia lookup searches the additive name before considering any manually linked article URL; it no longer prioritises broad E-number searches.
+- The preview heading always uses the additive’s chemical/common name, while the full article link keeps the resolved Wikipedia page title and URL.
+- Wikipedia redirects are resolved and disambiguation pages are rejected. Old preview cache entries are invalidated so incorrect E-number/disambiguation results are fetched again.
+
+## Previous release: v0.10.14 — Wikipedia preview visual refinement
 
 FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
 
