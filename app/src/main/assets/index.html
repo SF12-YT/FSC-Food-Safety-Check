@@ -565,16 +565,16 @@ function wikipediaSectionPreference(sections){
  const heading=s=>String(s.line||s.anchor||"").replace(/_/g," ").trim();
  const foodSpecific=usable.filter(s=>{
   const h=heading(s);
-  return /\\bfood\\b/i.test(h)&&/\\b(color|colour|coloring|colouring|additive|preservative|use|uses|application|applications|dye|fortification)\\b/i.test(h)
-   ||/\\b(food )?(coloring|colouring)\\b/i.test(h)
-   ||/\\bfood (additive|preservative|use|uses|application|applications)\\b/i.test(h);
+  return /\bfood\b/i.test(h)&&/\b(color|colour|coloring|colouring|additive|preservative|use|uses|application|applications|dye|fortification)\b/i.test(h)
+   ||/\b(food )?(coloring|colouring)\b/i.test(h)
+   ||/\bfood (additive|preservative|use|uses|application|applications)\b/i.test(h);
  });
  if(foodSpecific.length){
   foodSpecific.sort((a,b)=>{
    const score=s=>{
     const h=heading(s);
-    if(/\\bfood\\s+(coloring|colouring)\\b/i.test(h))return 0;
-    if(/\\bfood\\s+(additive|preservative|use|uses|application|applications)\\b/i.test(h))return 1;
+    if(/\bfood\s+(coloring|colouring)\b/i.test(h))return 0;
+    if(/\bfood\s+(additive|preservative|use|uses|application|applications)\b/i.test(h))return 1;
     return 2;
    };
    return score(a)-score(b)||(Number(b.level)||0)-(Number(a.level)||0);
