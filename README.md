@@ -1,5 +1,20 @@
 # FOSCH v0.10.27 — local admin review, ingredient tags and camera refinements
 
+## v0.10.30 changes
+
+- Fixed the product camera preview being stretched: the SurfaceView now preserves the camera preview's aspect ratio instead of squeezing the image to the full screen.
+- Added Lactose and Galactose as indented Carbohydrate entries in Nutrition Information.
+- Added Live cultures to Nutrition Information with a CFU-style quantity field; % DI is marked not applicable.
+- Added Non-GMO and Halal contribution checkboxes. They are saved and displayed only as claims stated on the product packaging; FOSCH does not infer or certify them.
+- Added an optional May contain field for the exact precautionary wording printed on the package, saved with contributions and shown on product details / lookup.
+- Added an admin Reject action with a required reason. Locally rejected drafts display the reason, become read-only to contributors, are removed from the local approved product index if applicable, and are automatically removed from local storage after seven full days.
+- Rejected product details remain viewable during the retention period, with the rejection reason and expiry shown in-app.
+- Bumped Android version to `0.10.30` (`versionCode 41`).
+
+### Rejection and notification limitation
+
+This repository still has no shared moderation backend, user accounts, remote submission database or cross-device notification service. The rejection reason is stored with the local draft and shown as an in-app notice on this device; local-index entries are removed where applicable. This build cannot delete a remote database record or notify a submitter on another device. Those behaviours require a server-side submission service and authenticated user identity; local rejection does not simulate them.
+
 ## v0.10.29 changes
 
 - Fixed administrator product-image updates so the newest captured or uploaded official photo becomes the primary image shown in the admin submission preview and Product Lookup.

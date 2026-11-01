@@ -29,7 +29,8 @@ import java.util.List;
 @SuppressWarnings("deprecation")
 public class ProductCameraActivity extends Activity implements SurfaceHolder.Callback {
     private Camera camera;
-    private SurfaceView surface;
+    private AspectRatioSurfaceView surface;
+    private int cameraDisplayOrientation = 0;
     private Button torchButton;
     private Button captureButton;
     private boolean torchEnabled = false;
@@ -50,10 +51,11 @@ public class ProductCameraActivity extends Activity implements SurfaceHolder.Cal
 
         FrameLayout root = new FrameLayout(this);
         root.setBackgroundColor(Color.BLACK);
-        surface = new SurfaceView(this);
+        surface = new AspectRatioSurfaceView(this);
         surface.getHolder().addCallback(this);
         surface.setOnClickListener(v -> requestTapFocus());
-        root.addView(surface, new FrameLayout.LayoutParams(-1, -1));
+        FrameLayout.LayoutParams previewParams = new FrameLayout.LayoutParams(-1, -1, Gravity.CENTER);
+        root.addView(surface, previewParams);
         root.addView(new ViewfinderOverlay(), new FrameLayout.LayoutParams(-1, -1));
 
         LinearLayout top = new LinearLayout(this);
@@ -195,7 +197,14 @@ public class ProductCameraActivity extends Activity implements SurfaceHolder.Cal
         Camera.getCameraInfo(0, info);
         int rotation = getWindowManager().getDefaultDisplay().getRotation();
         int degrees = rotation == android.view.Surface.ROTATION_90 ? 90 : rotation == android.view.Surface.ROTATION_180 ? 180 : rotation == android.view.Surface.ROTATION_270 ? 270 : 0;
-        camera.setDisplayOrientation((info.orientation - degrees + 360) % 360);
+        cameraDisplayOrientation = (info.orientation - degrees + 360) % 360;
+        camera.setDisplayOrientation(cameraDisplayOrientation);
+        Camera.Size previewSize = camera.getParameters().getPreviewSize();
+        if (surface != null && previewSize != null && previewSize.width > 0 && previewSize.height > 0) {
+            boolean rotated = cameraDisplayOrientation == 90 || cameraDisplayOrientation == 270;
+            float previewAspect = rotated ? (float) previewSize.height / (float) previewSize.width : (float) previewSize.width / (float) previewSize.height;
+            surface.setAspectRatio(previewAspect);
+        }
     }
 
     private void requestInitialFocus() {
@@ -293,6 +302,26 @@ public class ProductCameraActivity extends Activity implements SurfaceHolder.Cal
             camera = null;
         }
         torchEnabled = false;
+    }
+
+    /** Keeps the camera preview at its native aspect ratio instead of stretching it. */
+    private static class AspectRatioSurfaceView extends SurfaceView {
+        private float aspectRatio = 9f / 16f;
+        AspectRatioSurfaceView(Activity context) { super(context); }
+        void setAspectRatio(float ratio) {
+            if (ratio > 0f && !Float.isNaN(ratio) && !Float.isInfinite(ratio) && Math.abs(aspectRatio-ratio)>0.001f) {
+                aspectRatio=ratio;
+                requestLayout();
+            }
+        }
+        @Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+            int maxWidth=MeasureSpec.getSize(widthMeasureSpec),maxHeight=MeasureSpec.getSize(heightMeasureSpec);
+            if(maxWidth<=0||maxHeight<=0||aspectRatio<=0f){super.onMeasure(widthMeasureSpec,heightMeasureSpec);return;}
+            int fittedWidth,fittedHeight;
+            if((float)maxWidth/(float)maxHeight>aspectRatio){fittedHeight=maxHeight;fittedWidth=Math.round(fittedHeight*aspectRatio);}
+            else{fittedWidth=maxWidth;fittedHeight=Math.round(fittedWidth/aspectRatio);}
+            setMeasuredDimension(fittedWidth,fittedHeight);
+        }
     }
 
     private class ViewfinderOverlay extends View {

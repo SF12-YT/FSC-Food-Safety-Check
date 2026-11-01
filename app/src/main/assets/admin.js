@@ -94,6 +94,30 @@
   function isApproved(record) {
     return String(record.status || "").toLowerCase().indexOf("approved") >= 0;
   }
+  function isRejected(record) {
+    return String(record && record.status || "").toLowerCase() === "rejected-local";
+  }
+  function removeFromLocalMarketIndex(record) {
+    const product = record && (record.suggestedProduct || record);
+    if (!product || !product.country || typeof marketProductStorageKey !== "function") return;
+    try {
+      const code = String(product.country || "").toUpperCase();
+      const key = marketProductStorageKey(code);
+      const stored = JSON.parse(localStorage.getItem(key) || "[]");
+      if (!Array.isArray(stored)) return;
+      const productKey = product.productKey || stableProductKey(code, product.brand || "", product.name || "");
+      const barcode = String(product.barcode || record.barcode || "");
+      const size = normalisePackageSizeKey(product.sizeLabel || product.size || "");
+      const kept = stored.filter(function (item) {
+        return !(String(item.productKey || "") === productKey &&
+          String(item.barcode || "") === barcode &&
+          normalisePackageSizeKey(item.sizeLabel || item.size || "") === size);
+      });
+      localStorage.setItem(key, JSON.stringify(kept));
+    } catch (error) {
+      alert("The rejection was saved, but FOSCH could not remove the matching local product-index entry.");
+    }
+  }
   function brandLogoRegistry() {
     try {
       const value = JSON.parse(localStorage.getItem(LOGO_KEY) || "{}");
@@ -141,10 +165,16 @@
     const record = item.record;
     const title = itemLabel(item);
     const brand = itemBrand(item);
-    const status = isApproved(record) ? "Approved locally" : String(record.status || "Pending review").replace(/-/g, " ");
+    const rejected = isRejected(record);
+    const status = rejected ? "Rejected · read-only for 7 days" : (isApproved(record) ? "Approved locally" : String(record.status || "Pending review").replace(/-/g, " "));
     const id = safeId(item.id);
     const type = item.kind;
     const brandCall = brand ? "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Capture brand logo</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Upload brand logo</button>" : "";
+    const rejectionDetails = rejected
+      ? "<div class=\"warning\"><b>Rejection reason:</b> " + esc(record.rejectionReason || "No reason supplied") + "<small>Retained on this device until " + esc(record.rejectionExpiresAt ? new Date(record.rejectionExpiresAt).toLocaleString() : "seven-day expiry") + ". No remote submission service is connected.</small></div>"
+      : "";
+    const rejectButton = rejected ? "" : "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.reject('" + type + "','" + id + "')\">Reject</button>";
+    const approveButton = rejected ? "" : "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.approve('" + type + "','" + id + "')\">" + (isApproved(record) ? "Re-approve" : "Approve") + "</button>";
     return "<article class=\"admin-submission-card\">" +
       "<div class=\"admin-submission-top\"><div><div class=\"admin-submission-title\">" + esc(title) + "</div>" +
       (brand ? "<div class=\"admin-submission-meta\">" + esc(brand) + "</div>" : "") +
@@ -152,13 +182,15 @@
       "<div class=\"admin-submission-meta\">" + esc(record.date ? new Date(record.date).toLocaleString() : "Date not recorded") + "</div></div>" +
       "<span class=\"admin-status " + (isApproved(record) ? "approved" : "") + "\">" + esc(status) + "</span></div>" +
       imagePreview(record) +
+      rejectionDetails +
       "<div class=\"admin-submission-meta\">" + esc(record.ingredients || (record.suggestedProduct && record.suggestedProduct.ingredients) || record.message || "No ingredient details supplied") + "</div>" +
       "<div class=\"admin-action-grid\">" +
-      "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.approve('" + type + "','" + id + "')\">" + (isApproved(record) ? "Re-approve" : "Approve") + "</button>" +
+      approveButton +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.edit('" + type + "','" + id + "')\">Edit submission</button>" +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureOfficialPhoto('" + type + "','" + id + "')\">Capture official photo</button>" +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadOfficialPhoto('" + type + "','" + id + "')\">Upload image from device</button>" +
       brandCall +
+      rejectButton +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.remove('" + type + "','" + id + "')\">Delete</button>" +
       "</div></article>";
   }
@@ -198,7 +230,7 @@
     return "<div class=\"admin-head\"><div><h1>Admin dashboard</h1><div class=\"admin-submission-meta\">Signed in as " + esc(DEFAULT_EMAIL) + "</div></div><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.logout()\">Sign out</button></div>" +
       "<div class=\"admin-tabs\"><button type=\"button\" class=\"" + (activeTab === "submissions" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('submissions')\">Submissions</button><button type=\"button\" class=\"" + (activeTab === "activity" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('activity')\">Activity log (" + auditLog.length + ")</button></div>" +
       content +
-      "<div class=\"warning\">Local prototype only: this queue is not shared with other devices. Approval updates this device's local product index only. Admin credentials are embedded in the public client and the local audit log can be modified by anyone with device access. Do not use this as production authentication or moderation infrastructure.</div>";
+      "<div class=\"warning\">Local prototype only: this queue is not shared with other devices. Approvals and rejections update this device's local product index and drafts only. Rejection notices and seven-day retention are local; there is no remote database deletion or cross-device notification. Admin credentials are embedded in the public client and the local audit log can be modified by anyone with device access. Do not use this as production authentication or moderation infrastructure.</div>";
   }
   function editMarkup() {
     if (!authenticated || !editingRef) return "<section class=\"panel\"><p>No submission is selected.</p><button class=\"secondary\" onclick=\"FOSCHAdmin.backToDashboard()\">Back</button></section>";
@@ -264,6 +296,7 @@
     if (!requireAdmin()) return;
     const item = findItem(kind, id);
     if (!item) { alert("This submission could not be found."); return; }
+    if (isRejected(item.record)) { alert("Rejected submissions cannot be approved."); return; }
     const note = prompt("Optional review note for this approval:", "Approved after review");
     if (note === null) return;
     item.record.status = "approved-local";
@@ -279,6 +312,33 @@
       saveMarketProduct(Object.assign({}, product, { country: product.country || item.record.country || marketCountry }));
     }
     writeAudit("Submission approved", kind, id, itemLabel(item), String(note || "").trim(), "Marked approved on this device only; no shared record was changed.");
+    page = "adminDashboard";
+    render();
+  }
+  function reject(kind, id) {
+    if (!requireAdmin()) return;
+    const item = findItem(kind, id);
+    if (!item) { alert("This submission could not be found."); return; }
+    if (isRejected(item.record)) { alert("This submission has already been rejected."); return; }
+    const reason = askReason("rejecting this submission");
+    if (reason === null) return;
+    const previous = JSON.parse(JSON.stringify(item.record));
+    const wasApproved = isApproved(item.record);
+    const rejectedAt = new Date();
+    const expiresAt = new Date(rejectedAt.getTime() + 7 * 24 * 60 * 60 * 1000);
+    item.record.status = "rejected-local";
+    item.record.rejectionReason = reason;
+    item.record.rejectedAt = rejectedAt.toISOString();
+    item.record.rejectionExpiresAt = expiresAt.toISOString();
+    item.record.rejectedBy = DEFAULT_EMAIL;
+    item.record.rejectionNotification = { title: "Submission rejected", message: reason, createdAt: rejectedAt.toISOString() };
+    if (!persistRecords()) {
+      item.records[item.index] = previous;
+      return;
+    }
+    if (kind === "product" && wasApproved) removeFromLocalMarketIndex(item.record);
+    writeAudit("Submission rejected", kind, id, itemLabel(item), reason,
+      "Marked read-only on this device until " + expiresAt.toISOString() + ". Local product index updated where applicable. No remote moderation database or cross-device notification service exists in this build.");
     page = "adminDashboard";
     render();
   }
@@ -443,6 +503,7 @@
     renderProductMedia: renderProductMedia,
     setTab: setTab,
     approve: approve,
+    reject: reject,
     remove: remove,
     edit: edit,
     saveEdit: saveEdit,
