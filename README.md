@@ -1,4 +1,14 @@
-# FOSCH v0.10.15 — Wikipedia article lookup fix
+# FOSCH v0.10.16 — Wikipedia full-list article sources
+
+FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
+
+## v0.10.16 changes
+
+- Wikipedia preview article links are sourced directly from the linked article hyperlinks in the Full list tables on the English Wikipedia E number page.
+- The lookup maps each E-number row to its name-column article link, displays the app’s additive name, and no longer guesses from an E-number search.
+- Redirects and disambiguation pages are checked before the preview is shown; older preview caches are invalidated.
+
+## Previous release: v0.10.15 — Wikipedia article lookup fix
 
 FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
 
