@@ -1,4 +1,15 @@
-# FOSCH v0.10.24 — validate stored article redirects
+# FOSCH v0.10.25 — Wikipedia resolver validation
+
+FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
+
+## v0.10.25 changes
+
+- Corrected the stored Wikipedia URL path parser so redirect validation can run correctly.
+- Added a Node.js syntax-check step for the inline JavaScript bundled in the Android WebView page before Gradle builds the APK.
+- Updated the Android version to `0.10.25` (`versionCode 36`).
+
+## Previous release: v0.10.24 — validate stored article redirects
+
 
 FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
 
