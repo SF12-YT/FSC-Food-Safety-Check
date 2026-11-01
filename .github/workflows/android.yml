@@ -40,16 +40,18 @@ jobs:
                   filename = handle.name
               subprocess.run(["node", "--check", filename], check=True)
               print(f"JavaScript block {index}/{len(scripts)} passed node --check")
+          subprocess.run(["node", "--check", "app/src/main/assets/admin.js"], check=True)
+          print("Admin JavaScript module passed node --check")
           PY
 
       - name: Package source archive
-        run: git archive --format=zip --prefix=FOSCH-v0.10.26/ HEAD > FOSCH-source-v0.10.26.zip
+        run: git archive --format=zip --prefix=FOSCH-v0.10.27/ HEAD > FOSCH-source-v0.10.27.zip
 
       - name: Upload source archive
         uses: actions/upload-artifact@v7
         with:
           name: FOSCH-source-v0.10.26
-          path: FOSCH-source-v0.10.26.zip
+          path: FOSCH-source-v0.10.27.zip
           if-no-files-found: error
           retention-days: 90
 

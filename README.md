@@ -1,4 +1,19 @@
-# FOSCH v0.10.26 — final food-use section filtering
+# FOSCH v0.10.27 — local admin review, ingredient tags and camera refinements
+
+## v0.10.27 changes
+
+- Added **Calcium** to the optional Nutrition Information table, including quantity per serving, manually entered % DI per Serving, and quantity per 100 g.
+- Ingredient previews now detect known E-number identifiers inside brackets, including `(INS 900)`, `(E100)`, `(621)` and `(INS101)`. Bare numeric codes are linked only when bracketed and matched to an entry in the bundled catalogue.
+- Changed the hidden administrator sign-in identifier to an email address and added the temporary prototype login `admin@admin.org` / `admin`.
+- Added an admin dashboard for locally saved product contributions and correction reports, with approval, reason-required deletion, reason-required editing, official product-photo capture, brand-logo capture, and an append-only local activity log.
+- Admin approvals can add or update entries in this device's local market product index. Official product photos and brand logos can be displayed in local product lookup results.
+- Added continuous-picture / continuous-video autofocus selection, one-shot autofocus fallback, and tap-to-focus to the in-app product camera.
+- Refined the product camera and barcode scanner with clearer framing guides, rounded control panels, and more prominent capture / scanning instructions.
+- Updated the Android version to `0.10.27` (`versionCode 38`).
+
+**Prototype and security limitation:** the admin credentials are embedded in this public client-side app and are not secure. Submissions, approvals, photos, brand logos and audit records are stored locally on the device; no shared moderation server, server-side authentication or tamper-resistant audit service exists yet. This is a local prototype workflow only and must not be treated as production administration.
+
+## Previous release: v0.10.26 — final food-use section filtering
 
 FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
 

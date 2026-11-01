@@ -3,7 +3,11 @@ package com.fosch.org;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.RectF;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.Gravity;
@@ -28,53 +32,71 @@ public class ScannerActivity extends Activity {
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Follow the phone's rotation sensor only when the user's Auto-rotate setting is enabled.
         boolean autoRotateEnabled = false;
         try {
             autoRotateEnabled = Settings.System.getInt(getContentResolver(), Settings.System.ACCELEROMETER_ROTATION, 0) == 1;
         } catch (Exception ignored) { }
         setRequestedOrientation(autoRotateEnabled ? ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR : ActivityInfo.SCREEN_ORIENTATION_LOCKED);
-        getWindow().setStatusBarColor(Color.rgb(17, 22, 41));
-        getWindow().setNavigationBarColor(Color.rgb(17, 22, 41));
+        getWindow().setStatusBarColor(Color.rgb(13, 19, 34));
+        getWindow().setNavigationBarColor(Color.rgb(13, 19, 34));
 
         FrameLayout root = new FrameLayout(this);
-        root.setBackgroundColor(Color.rgb(17, 22, 41));
+        root.setBackgroundColor(Color.rgb(8, 12, 23));
         barcodeView = new DecoratedBarcodeView(this);
-        barcodeView.setStatusText("Point the camera at a product barcode");
-        root.addView(barcodeView, new FrameLayout.LayoutParams(
-            FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+        barcodeView.setStatusText("Align the barcode inside the frame");
+        root.addView(barcodeView, new FrameLayout.LayoutParams(-1, -1));
+        root.addView(new ScannerGuideOverlay(), new FrameLayout.LayoutParams(-1, -1));
 
         LinearLayout toolbar = new LinearLayout(this);
         toolbar.setOrientation(LinearLayout.HORIZONTAL);
         toolbar.setGravity(Gravity.CENTER_VERTICAL);
-        toolbar.setPadding(dp(16), dp(10), dp(16), dp(10));
-        toolbar.setBackgroundColor(Color.rgb(17, 22, 41));
+        toolbar.setPadding(dp(14), dp(9), dp(10), dp(9));
+        toolbar.setBackground(background(Color.argb(220, 13, 19, 34), 20));
+        toolbar.setElevation(dp(8));
+
+        LinearLayout heading = new LinearLayout(this);
+        heading.setOrientation(LinearLayout.VERTICAL);
+        heading.setGravity(Gravity.CENTER_VERTICAL);
         TextView title = new TextView(this);
-        title.setText("FOSCH barcode scanner");
+        title.setText("Scan a product");
         title.setTextColor(Color.WHITE);
-        title.setTextSize(18);
+        title.setTextSize(17);
         title.setTypeface(null, 1);
-        toolbar.addView(title, new LinearLayout.LayoutParams(0, dp(48), 1));
-        torchButton = new Button(this);
-        torchButton.setText("Flashlight off");
-        torchButton.setTextSize(12);
-        torchButton.setAllCaps(false);
-        torchButton.setTextColor(Color.WHITE);
-        torchButton.setBackgroundTintList(android.content.res.ColorStateList.valueOf(Color.rgb(41, 47, 80)));
+        TextView subtitle = new TextView(this);
+        subtitle.setText("Barcode scanning starts automatically");
+        subtitle.setTextColor(Color.rgb(196, 208, 226));
+        subtitle.setTextSize(11);
+        heading.addView(title);
+        heading.addView(subtitle);
+        toolbar.addView(heading, new LinearLayout.LayoutParams(0, dp(48), 1));
+
+        torchButton = button("Flash off", Color.rgb(43, 57, 83));
         torchButton.setOnClickListener(v -> toggleTorch());
-        toolbar.addView(torchButton, new LinearLayout.LayoutParams(dp(112), dp(48)));
-        Button close = new Button(this);
-        close.setText("Close");
-        close.setAllCaps(false);
-        close.setTextColor(Color.WHITE);
-        close.setBackgroundTintList(android.content.res.ColorStateList.valueOf(Color.rgb(41, 47, 80)));
+        toolbar.addView(torchButton, new LinearLayout.LayoutParams(dp(94), dp(44)));
+        Button close = button("Close", Color.rgb(43, 57, 83));
         close.setOnClickListener(v -> finish());
-        LinearLayout.LayoutParams closeParams = new LinearLayout.LayoutParams(dp(74), dp(48));
-        closeParams.leftMargin = dp(6);
+        LinearLayout.LayoutParams closeParams = new LinearLayout.LayoutParams(dp(68), dp(44));
+        closeParams.leftMargin = dp(7);
         toolbar.addView(close, closeParams);
-        FrameLayout.LayoutParams topParams = new FrameLayout.LayoutParams(
-            FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.TOP);
+        FrameLayout.LayoutParams topParams = new FrameLayout.LayoutParams(-1, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.TOP);
+        topParams.setMargins(dp(12), dp(12), dp(12), 0);
         root.addView(toolbar, topParams);
+
+        LinearLayout bottom = new LinearLayout(this);
+        bottom.setOrientation(LinearLayout.VERTICAL);
+        bottom.setGravity(Gravity.CENTER);
+        bottom.setPadding(dp(16), dp(11), dp(16), dp(12));
+        bottom.setBackground(background(Color.argb(225, 13, 19, 34), 20));
+        bottom.setElevation(dp(8));
+        TextView instruction = new TextView(this);
+        instruction.setText("Move closer or farther until the barcode is sharp and centred.");
+        instruction.setTextColor(Color.rgb(218, 226, 238));
+        instruction.setTextSize(12);
+        instruction.setGravity(Gravity.CENTER);
+        bottom.addView(instruction, new LinearLayout.LayoutParams(-1, dp(34)));
+        FrameLayout.LayoutParams bottomParams = new FrameLayout.LayoutParams(-1, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM);
+        bottomParams.setMargins(dp(12), 0, dp(12), dp(14));
+        root.addView(bottom, bottomParams);
         setContentView(root);
 
         barcodeView.decodeContinuous(new BarcodeCallback() {
@@ -89,6 +111,25 @@ public class ScannerActivity extends Activity {
             }
             @Override public void possibleResultPoints(List<com.google.zxing.ResultPoint> points) { }
         });
+    }
+
+    private GradientDrawable background(int color, int radiusDp) {
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setColor(color);
+        drawable.setCornerRadius(dp(radiusDp));
+        return drawable;
+    }
+
+    private Button button(String label, int color) {
+        Button b = new Button(this);
+        b.setText(label);
+        b.setTextSize(12);
+        b.setAllCaps(false);
+        b.setTextColor(Color.WHITE);
+        b.setPadding(dp(8), 0, dp(8), 0);
+        b.setBackground(background(color, 15));
+        b.setElevation(dp(2));
+        return b;
     }
 
     @Override protected void onResume() {
@@ -112,17 +153,48 @@ public class ScannerActivity extends Activity {
             if (torchEnabled) {
                 barcodeView.setTorchOff();
                 torchEnabled = false;
-                torchButton.setText("Flashlight off");
+                torchButton.setText("Flash off");
             } else {
                 barcodeView.setTorchOn();
                 torchEnabled = true;
-                torchButton.setText("Flashlight on");
+                torchButton.setText("Flash on");
             }
         } catch (Exception e) {
             torchEnabled = false;
             try { barcodeView.setTorchOff(); } catch (Exception ignored) { }
-            torchButton.setText("Flashlight unavailable");
+            torchButton.setText("Unavailable");
             android.widget.Toast.makeText(this, "This camera does not provide a usable flashlight.", android.widget.Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private class ScannerGuideOverlay extends View {
+        private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        ScannerGuideOverlay() { super(ScannerActivity.this); setWillNotDraw(false); }
+        @Override protected void onDraw(Canvas canvas) {
+            super.onDraw(canvas);
+            float left = getWidth() * 0.12f;
+            float right = getWidth() * 0.88f;
+            float top = getHeight() * 0.39f;
+            float bottom = getHeight() * 0.59f;
+            float length = dp(30);
+            paint.setColor(Color.argb(190, 255, 255, 255));
+            paint.setStyle(Paint.Style.STROKE);
+            paint.setStrokeWidth(dp(3));
+            paint.setStrokeCap(Paint.Cap.ROUND);
+            RectF frame = new RectF(left, top, right, bottom);
+            Paint faint = new Paint(Paint.ANTI_ALIAS_FLAG);
+            faint.setColor(Color.argb(28, 255, 255, 255));
+            faint.setStyle(Paint.Style.STROKE);
+            faint.setStrokeWidth(dp(1));
+            canvas.drawRoundRect(frame, dp(12), dp(12), faint);
+            canvas.drawLine(left, top + length, left, top, paint);
+            canvas.drawLine(left, top, left + length, top, paint);
+            canvas.drawLine(right - length, top, right, top, paint);
+            canvas.drawLine(right, top, right, top + length, paint);
+            canvas.drawLine(left, bottom - length, left, bottom, paint);
+            canvas.drawLine(left, bottom, left + length, bottom, paint);
+            canvas.drawLine(right - length, bottom, right, bottom, paint);
+            canvas.drawLine(right, bottom - length, right, bottom, paint);
         }
     }
 
