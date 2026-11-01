@@ -8,8 +8,8 @@ android {
         applicationId 'com.fosch.org'
         minSdk 23
         targetSdk 35
-        versionCode 31
-        versionName '0.10.20'
+        versionCode 32
+        versionName '0.10.21'
     }
     signingConfigs {
         foschStable {
