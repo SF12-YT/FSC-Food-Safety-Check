@@ -1,4 +1,15 @@
-# FOSCH v0.10.17 — restore original Wikipedia preview behaviour
+# FOSCH v0.10.18 — additive-name Wikipedia preview heading
+
+FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
+
+## v0.10.18 changes
+
+- Restores the additive’s chemical/common name as the persistent Wikipedia preview heading, including when the article data is loaded from cache.
+- Keeps the resolved Wikipedia article title separate for section requests and the full-article link.
+- Retains the pre-redesign article resolver and its food-use / Uses / Applications section preference and overview fallback.
+- Invalidates previous preview cache entries to prevent older article-title values from overriding the corrected heading.
+
+## Previous release: v0.10.17 — original Wikipedia preview behaviour
 
 FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
 
