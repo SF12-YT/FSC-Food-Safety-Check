@@ -1,4 +1,15 @@
-# FOSCH v0.10.16 — Wikipedia full-list article sources
+# FOSCH v0.10.17 — restore original Wikipedia preview behaviour
+
+FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
+
+## v0.10.17 changes
+
+- Restores the original Wikipedia article resolver from the pre-preview-redesign source: use an additive’s stored Wikipedia URL first, then the original E-number and additive-name fallbacks.
+- Restores the previous section selection: prefer food preservation / food-use sections, then general Uses or Applications sections, with the article overview as a fallback.
+- Keeps the v0.10.14+ Wikipedia preview styling (compact card, softer rounded corners and updated spacing).
+- Invalidates previous Wikipedia preview cache entries so results are fetched again with the restored resolver.
+
+## Previous release: v0.10.16 — Wikipedia Full list link mapping
 
 FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
 
