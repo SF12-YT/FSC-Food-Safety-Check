@@ -230,36 +230,62 @@ def section_parent_has_children(sections: list[dict], position: int) -> bool:
         return True
     return False
 
-FOOD_HEADINGS = [
-    (0, re.compile(r"^(food coloring|food colouring|food additive|food uses?|uses? in food|food applications?|applications? in food)$", re.I)),
-    (1, re.compile(r"^(foods?|food products?|food industry|food and beverage uses?|food and other domestic uses|food preservation|culinary uses?|use in foods?)$", re.I)),
-    (2, re.compile(r"\b(food|foods|culinary|beverage|foodstuff|foodstuffs)\b", re.I)),
+FOOD_EXACT = [
+    (0, re.compile(r"^(food coloring|food colouring|industrial food coloring|industrial food colouring|food dye|food colorant|food preservative|food additive|food additives|use as a food additive|use as food additives|as food additive|food applications?|applications? in food|uses? in food|food uses?|food and other domestic uses|food and beverage uses?|food preservation|use as a consumable coloring agent)$", re.I)),
+    (1, re.compile(r"^(foods?|food products?|food industry|food and drink|food and beverages?|beverages?|culinary|culinary uses?|culinary use|food preparation|food production|food science|in foods?|food use|food applications and maximum use levels)$", re.I)),
 ]
+FOOD_EXCLUSIONS = re.compile(
+    r"\b(safety|allerg\w*|intoleran\w*|sensitiv\w*|toxic\w*|toxicity|health effects|adverse\w*|medical\w*|pharmac\w*|deficien\w*|disease\w*|history|production|synthesis|chemistry|regulat\w*|label\w*|risk\w*|source(s)?|nutrition\w*|dietary recommendations|metabolism|contaminant|food chain|food item)\b",
+    re.I,
+)
+
+def clean_section_heading(value: str) -> str:
+    value = html.unescape(str(value or ""))
+    value = re.sub(r"<[^>]*>", " ", value)
+    value = value.replace("_", " ")
+    return re.sub(r"\s+", " ", value).strip()
 
 def choose_food_section(sections: list[dict]) -> tuple[dict | None, str]:
     usable = [s for s in sections if s.get("index") is not None]
     ranked = []
     for pos, section in enumerate(usable):
-        heading = re.sub(r"\s+", " ", str(section.get("line") or section.get("anchor") or "")).strip()
-        if not heading:
+        heading = clean_section_heading(section.get("line") or section.get("anchor") or "")
+        if not heading or FOOD_EXCLUSIONS.search(heading):
             continue
-        if re.search(r"\b(safety|allerg|toxic|health effects|adverse|medical|pharmac|deficien|disease|history|production|synthesis|chemistry|regulation)\b", heading, re.I):
-            continue
-        for priority, pattern in FOOD_HEADINGS:
-            if pattern.search(heading):
+        for priority, pattern in FOOD_EXACT:
+            if pattern.fullmatch(heading):
                 ranked.append((priority, pos, section, heading))
                 break
+        else:
+            # Some additive articles use a longer descriptive section title,
+            # e.g. "Health care, food, and cosmetic uses" or "Aerosol
+            # propellant for food". Exclude sources, risks, labeling and
+            # nutrition headings above before accepting a food-context heading.
+            if re.search(r"\b(food|foods|culinary|beverage|beverages|drink|drinks)\b", heading, re.I):
+                ranked.append((2, pos, section, heading))
+            elif re.fullmatch(r"cooking", heading, re.I):
+                # "Cooking" is relevant only when nested under Uses/Applications.
+                level = int(section.get("level") or 0)
+                for parent in reversed(usable[:pos]):
+                    parent_level = int(parent.get("level") or 0)
+                    if parent_level < level:
+                        parent_heading = clean_section_heading(parent.get("line") or parent.get("anchor") or "")
+                        if re.fullmatch(r"(uses?|applications?|modern uses?)", parent_heading, re.I):
+                            ranked.append((2, pos, section, heading))
+                        break
     if ranked:
         ranked.sort(key=lambda item: (item[0], item[1]))
         chosen = ranked[0]
         return chosen[2], f"Food-related heading matched: {chosen[3]}"
 
+    # Generic Uses/Applications is acceptable only when it has no child
+    # headings. Otherwise the page overview is safer than a mixed-use excerpt.
     for pos, section in enumerate(usable):
-        heading = str(section.get("line") or section.get("anchor") or "").strip()
+        heading = clean_section_heading(section.get("line") or section.get("anchor") or "")
         if re.fullmatch(r"(uses?|applications?|modern uses?)", heading, re.I):
             if not section_parent_has_children(usable, pos):
                 return section, f"Generic {heading} section has no child subsections."
-    return None, "No clearly food-specific section; preview should use an article overview or be manually reviewed."
+    return None, "No clearly food-use section; use the article overview and flag the mapping/section for review."
 
 def audit_pages_bulk(titles: list[str]) -> dict:
     """Fetch up to 20 article revisions per API call and read their section headings."""
@@ -274,12 +300,18 @@ def audit_pages_bulk(titles: list[str]) -> dict:
             "rvprop": "ids|timestamp|content",
             "rvslots": "main",
         })
-        for page in (data.get("query") or {}).get("pages") or []:
-            requested_title = str(page.get("title") or "")
+        query_data = data.get("query") or {}
+        aliases = {}
+        for alias_group in (query_data.get("normalized") or [], query_data.get("redirects") or []):
+            for alias in alias_group:
+                aliases[str(alias.get("from") or "")] = str(alias.get("to") or "")
+        page_results = {}
+        for page in query_data.get("pages") or []:
+            canonical_title = str(page.get("title") or "")
             if page.get("missing") is not None or not page.get("revisions"):
-                pages[requested_title] = {
+                page_results[canonical_title] = {
                     "error": "Wikipedia article page not found or has no readable revision.",
-                    "resolved_title": requested_title, "sections": [], "section": None,
+                    "resolved_title": canonical_title, "sections": [], "section": None,
                     "section_reason": "Wikipedia page could not be verified.",
                 }
                 continue
@@ -296,8 +328,8 @@ def audit_pages_bulk(titles: list[str]) -> dict:
                         "anchor": "", "level": level,
                     })
             chosen, reason = choose_food_section(headings)
-            pages[requested_title] = {
-                "resolved_title": requested_title,
+            page_results[canonical_title] = {
+                "resolved_title": canonical_title,
                 "page_id": page.get("pageid"),
                 "revision_id": revision.get("revid"),
                 "revision_timestamp": revision.get("timestamp"),
@@ -305,6 +337,27 @@ def audit_pages_bulk(titles: list[str]) -> dict:
                 "section": chosen,
                 "section_reason": reason,
             }
+
+        # Preserve an alias key for every requested title so result rows never
+        # appear missing merely because Wikipedia normalised or redirected the
+        # article title in the multi-page query response.
+        for requested_title in batch:
+            canonical_title = requested_title
+            visited = set()
+            while canonical_title in aliases and canonical_title not in visited:
+                visited.add(canonical_title)
+                canonical_title = aliases[canonical_title]
+            result = page_results.get(canonical_title)
+            if result is None:
+                result = next((v for k, v in page_results.items()
+                               if clean_section_heading(k).casefold() == clean_section_heading(canonical_title).casefold()), None)
+            if result is None:
+                result = {
+                    "error": "Wikipedia returned no page for this requested article title.",
+                    "resolved_title": canonical_title, "sections": [], "section": None,
+                    "section_reason": "Wikipedia page could not be verified.",
+                }
+            pages[requested_title] = result
         done = min(offset + len(batch), len(titles))
         print(f"Read headings for {done}/{len(titles)} unique article pages.")
     return pages
@@ -390,10 +443,10 @@ def main() -> int:
         section = page.get("section") or {}
         section_title = str(section.get("line") or section.get("anchor") or "")
         method = row.get("mapping_status", "")
-        if not section_title:
-            review = "no suitable food-use section"
-        elif method in ("stored_url_fallback", "exact_code_single_link_fallback", "parent_code_single_link_fallback"):
+        if method in ("stored_url_fallback", "exact_code_single_link_fallback", "parent_code_single_link_fallback"):
             review = "mapping needs manual review"
+        elif not section_title:
+            review = "no suitable food-use section"
         else:
             review = "verified"
         row.update({"page_status": "found", "article_title": page.get("resolved_title") or title,
