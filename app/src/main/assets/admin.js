@@ -134,10 +134,9 @@
     const title = itemLabel(item);
     const brand = itemBrand(item);
     const status = isApproved(record) ? "Approved locally" : String(record.status || "Pending review").replace(/-/g, " ");
-    const photoButtonLabel = recordPhotos(record).length ? "Add another official photo" : "Add official product photo";
     const id = safeId(item.id);
     const type = item.kind;
-    const brandCall = brand ? "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Capture brand logo</button>" : "";
+    const brandCall = brand ? "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Capture brand logo</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Upload brand logo</button>" : "";
     return "<article class=\"admin-submission-card\">" +
       "<div class=\"admin-submission-top\"><div><div class=\"admin-submission-title\">" + esc(title) + "</div>" +
       (brand ? "<div class=\"admin-submission-meta\">" + esc(brand) + "</div>" : "") +
@@ -149,7 +148,8 @@
       "<div class=\"admin-action-grid\">" +
       "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.approve('" + type + "','" + id + "')\">" + (isApproved(record) ? "Re-approve" : "Approve") + "</button>" +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.edit('" + type + "','" + id + "')\">Edit submission</button>" +
-      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureOfficialPhoto('" + type + "','" + id + "')\">" + photoButtonLabel + "</button>" +
+      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureOfficialPhoto('" + type + "','" + id + "')\">Capture official photo</button>" +
+      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadOfficialPhoto('" + type + "','" + id + "')\">Upload image from device</button>" +
       brandCall +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.remove('" + type + "','" + id + "')\">Delete</button>" +
       "</div></article>";
@@ -168,7 +168,7 @@
       return "<article class=\"admin-brand-card\"><div class=\"admin-brand-row\">" +
         (logo ? "<img class=\"admin-brand-logo\" src=\"" + esc(logo.dataUrl) + "\" alt=\"" + esc(item.name) + " logo\">" : "<div class=\"admin-brand-logo\" aria-hidden=\"true\">＋</div>") +
         "<div class=\"admin-brand-name\">" + esc(item.name) + "<div class=\"admin-submission-meta\">" + (logo ? "Logo saved on this device" : "No logo added") + "</div></div>" +
-        "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureBrandLogo(decodeURIComponent('" + urlArg(item.name) + "'))\">" + (logo ? "Replace" : "Add logo") + "</button></div></article>";
+        "</div><div class=\"admin-action-grid\"><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureBrandLogo(decodeURIComponent('" + urlArg(item.name) + "'))\">Capture " + (logo ? "replacement logo" : "logo") + "</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadBrandLogo(decodeURIComponent('" + urlArg(item.name) + "'))\">Upload from device</button></div></article>";
     }).join("");
   }
   function auditMarkup() {
@@ -185,7 +185,7 @@
     if (!authenticated) return "<section class=\"panel\"><p>Admin session expired. Please sign in again.</p></section>";
     const items = getItems();
     const submissions = items.length ? items.map(submissionCard).join("") : "<section class=\"panel empty\"><h3>No local submissions</h3><p class=\"muted\">Product contributions and correction drafts saved on this device will appear here.</p></section>";
-    const brandMarkup = "<h2>Brand logos</h2><p class=\"muted\">Capture a logo using the in-app camera. The image is stored locally and shown beside matching brand names on this device.</p>" + brandCardsMarkup();
+    const brandMarkup = "<h2>Brand logos</h2><p class=\"muted\">Administrators can capture a logo with the in-app camera or select an image from this device. Images are stored locally and shown beside matching brand names on this device.</p>" + brandCardsMarkup();
     const content = activeTab === "activity" ? auditMarkup() : "<p class=\"muted\">" + items.length + " local record" + (items.length === 1 ? "" : "s") + " available for review.</p>" + submissions + brandMarkup;
     return "<div class=\"admin-head\"><div><h1>Admin dashboard</h1><div class=\"admin-submission-meta\">Signed in as " + esc(DEFAULT_EMAIL) + "</div></div><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.logout()\">Sign out</button></div>" +
       "<div class=\"admin-tabs\"><button type=\"button\" class=\"" + (activeTab === "submissions" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('submissions')\">Submissions</button><button type=\"button\" class=\"" + (activeTab === "activity" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('activity')\">Activity log (" + auditLog.length + ")</button></div>" +
@@ -339,9 +339,18 @@
     if (!findItem(kind, id)) { alert("This submission could not be found."); return; }
     const note = prompt("Optional note for adding an official product photo:", "Official product image captured by an administrator.");
     if (note === null) return;
-    pendingMedia = { type: "productPhoto", kind: kind, id: String(id), note: String(note || "").trim() };
+    pendingMedia = { type: "productPhoto", kind: kind, id: String(id), note: String(note || "").trim(), source: "camera" };
     if (window.FOSCHBridge && window.FOSCHBridge.captureProductPhoto) window.FOSCHBridge.captureProductPhoto();
     else { pendingMedia = null; alert("The in-app camera is not available in this build."); }
+  }
+  function uploadOfficialPhoto(kind, id) {
+    if (!requireAdmin()) return;
+    if (!findItem(kind, id)) { alert("This submission could not be found."); return; }
+    const note = prompt("Optional note for uploading an official product photo:", "Official product image supplied by an administrator.");
+    if (note === null) return;
+    pendingMedia = { type: "productPhoto", kind: kind, id: String(id), note: String(note || "").trim(), source: "device" };
+    if (window.FOSCHBridge && window.FOSCHBridge.chooseAdminImage) window.FOSCHBridge.chooseAdminImage();
+    else { pendingMedia = null; alert("Device image selection is not available in this build."); }
   }
   function captureBrandLogo(brand) {
     if (!requireAdmin()) return;
@@ -349,9 +358,19 @@
     if (!name) return;
     const note = prompt("Optional note for adding or replacing this brand logo:", "Official brand logo captured by an administrator.");
     if (note === null) return;
-    pendingMedia = { type: "brandLogo", brand: name, note: String(note || "").trim() };
+    pendingMedia = { type: "brandLogo", brand: name, note: String(note || "").trim(), source: "camera" };
     if (window.FOSCHBridge && window.FOSCHBridge.captureProductPhoto) window.FOSCHBridge.captureProductPhoto();
     else { pendingMedia = null; alert("The in-app camera is not available in this build."); }
+  }
+  function uploadBrandLogo(brand) {
+    if (!requireAdmin()) return;
+    const name = String(brand || "").trim();
+    if (!name) return;
+    const note = prompt("Optional note for adding or replacing this brand logo:", "Official brand logo supplied by an administrator.");
+    if (note === null) return;
+    pendingMedia = { type: "brandLogo", brand: name, note: String(note || "").trim(), source: "device" };
+    if (window.FOSCHBridge && window.FOSCHBridge.chooseAdminImage) window.FOSCHBridge.chooseAdminImage();
+    else { pendingMedia = null; alert("Device image selection is not available in this build."); }
   }
   function isCapturingMedia() { return !!pendingMedia; }
   function onPhotoCaptured(dataUrl) {
@@ -375,13 +394,13 @@
       if (!persistRecords()) return true;
       if (target.kind === "product" && isApproved(record)) saveMarketProduct(record);
       if (target.kind === "correction" && isApproved(record) && record.suggestedProduct) saveMarketProduct(Object.assign({}, product, { country: product.country || record.country || marketCountry }));
-      writeAudit("Official product photo added", target.kind, target.id, itemLabel(item), target.note, "Captured in FOSCH's in-app camera and stored locally.");
+      writeAudit("Official product photo added", target.kind, target.id, itemLabel(item), target.note, (target.source === "device" ? "Selected from device storage" : "Captured with FOSCH's in-app camera") + " and stored locally.");
     } else if (target.type === "brandLogo") {
       const registry = brandLogoRegistry();
       registry[normaliseBrandKey(target.brand)] = { brand: target.brand, dataUrl: String(dataUrl), updatedAt: new Date().toISOString() };
       try { localStorage.setItem(LOGO_KEY, JSON.stringify(registry)); }
       catch (error) { alert("The logo could not be stored. Free some device storage and try again."); return true; }
-      writeAudit("Brand logo added or replaced", "brand", normaliseBrandKey(target.brand), target.brand, target.note, "Captured in FOSCH's in-app camera and stored locally.");
+      writeAudit("Brand logo added or replaced", "brand", normaliseBrandKey(target.brand), target.brand, target.note, (target.source === "device" ? "Selected from device storage" : "Captured with FOSCH's in-app camera") + " and stored locally.");
     }
     page = "adminDashboard";
     render();
@@ -390,7 +409,7 @@
   function onPhotoFailed() {
     if (!pendingMedia) return false;
     pendingMedia = null;
-    alert("No admin image was saved. You can try the camera again.");
+    alert("No admin image was saved. You can try again.");
     if (authenticated) { page = "adminDashboard"; render(); }
     return true;
   }
@@ -419,7 +438,9 @@
     saveEdit: saveEdit,
     backToDashboard: backToDashboard,
     captureOfficialPhoto: captureOfficialPhoto,
+    uploadOfficialPhoto: uploadOfficialPhoto,
     captureBrandLogo: captureBrandLogo,
+    uploadBrandLogo: uploadBrandLogo,
     onPhotoCaptured: onPhotoCaptured,
     onPhotoFailed: onPhotoFailed,
     logout: logout

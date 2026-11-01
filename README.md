@@ -1,5 +1,13 @@
 # FOSCH v0.10.27 — local admin review, ingredient tags and camera refinements
 
+## v0.10.28 changes
+
+- Added administrator-only image selection from device storage for official product photos and brand logos. Administrators can still use the in-app camera.
+- Kept ordinary product contributions and correction evidence camera-only; the normal contribution screen does not expose a device image picker.
+- Used Android's system document picker, so FOSCH does not request broad photo or storage access. Selected images are resized and recompressed before being saved to the device's local admin records.
+- Recorded whether an admin image was captured or selected from device storage in the local activity log.
+- Bumped Android version to `0.10.28` (`versionCode 39`).
+
 ## v0.10.27 changes
 
 - Added **Calcium** to the optional Nutrition Information table, including quantity per serving, manually entered % DI per Serving, and quantity per 100 g.

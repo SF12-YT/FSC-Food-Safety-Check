@@ -57,6 +57,7 @@ public class MainActivity extends Activity {
     private static final int CAMERA_PERMISSION_REQUEST = 842;
     private static final int SCANNER_REQUEST = 843;
     private static final int PHOTO_CAPTURE_REQUEST = 844;
+    private static final int ADMIN_IMAGE_PICK_REQUEST = 845;
     private static final int NO_CAMERA_ACTION = 0;
     private static final int CAMERA_ACTION_SCAN = 1;
     private static final int CAMERA_ACTION_PHOTO = 2;
@@ -145,6 +146,21 @@ public class MainActivity extends Activity {
         }
         @JavascriptInterface public void captureProductPhoto() {
             runOnUiThread(() -> beginProductPhotoCapture());
+        }
+        @JavascriptInterface public void chooseAdminImage() {
+            runOnUiThread(() -> {
+                if (view == null) {
+                    sendPhotoFailure();
+                    return;
+                }
+                view.evaluateJavascript(
+                    "(window.FOSCHAdmin && window.FOSCHAdmin.isAuthenticated && window.FOSCHAdmin.isAuthenticated()) ? true : false",
+                    isAdmin -> {
+                        if ("true".equals(isAdmin)) launchAdminImagePicker();
+                        else sendPhotoFailure();
+                    }
+                );
+            });
         }
         @JavascriptInterface public void handleHomeBackPress() {
             runOnUiThread(() -> {
@@ -433,6 +449,20 @@ public class MainActivity extends Activity {
         }
     }
 
+    private void launchAdminImagePicker() {
+        try {
+            Intent picker = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+            picker.addCategory(Intent.CATEGORY_OPENABLE);
+            picker.setType("image/*");
+            picker.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            startActivityForResult(picker, ADMIN_IMAGE_PICK_REQUEST);
+        } catch (Exception e) {
+            Log.e(TAG, "Unable to open the admin image picker", e);
+            sendPhotoFailure();
+            Toast.makeText(this, "Could not open device image selection.", Toast.LENGTH_LONG).show();
+        }
+    }
+
     @Override public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == CAMERA_PERMISSION_REQUEST) {
@@ -461,6 +491,14 @@ public class MainActivity extends Activity {
                 if (!barcode.isEmpty() && view != null) {
                     view.evaluateJavascript("window.onBarcodeScanned && window.onBarcodeScanned(" + JSONObject.quote(barcode) + ")", null);
                 }
+            }
+            return;
+        }
+        if (requestCode == ADMIN_IMAGE_PICK_REQUEST) {
+            if (resultCode == RESULT_OK && data != null && data.getData() != null) {
+                deliverImportedPhoto(data.getData());
+            } else {
+                sendPhotoFailure();
             }
             return;
         }
@@ -499,6 +537,50 @@ public class MainActivity extends Activity {
             Log.e(TAG, "Unable to process camera photo", e);
             sendPhotoFailure();
             Toast.makeText(this, "The photo could not be processed. Please try again.", Toast.LENGTH_LONG).show();
+        } finally {
+            if (bitmap != null && !bitmap.isRecycled()) bitmap.recycle();
+        }
+    }
+
+    private void deliverImportedPhoto(Uri imageUri) {
+        Bitmap bitmap = null;
+        try {
+            String mimeType = getContentResolver().getType(imageUri);
+            if (mimeType != null && !mimeType.toLowerCase(Locale.ROOT).startsWith("image/")) {
+                throw new IOException("The selected file is not an image.");
+            }
+
+            BitmapFactory.Options bounds = new BitmapFactory.Options();
+            bounds.inJustDecodeBounds = true;
+            try (InputStream stream = getContentResolver().openInputStream(imageUri)) {
+                if (stream == null) throw new IOException("The selected image could not be opened.");
+                BitmapFactory.decodeStream(stream, null, bounds);
+            }
+
+            int sample = 1;
+            int maxDimension = Math.max(bounds.outWidth, bounds.outHeight);
+            while (maxDimension > 0 && maxDimension / sample > 1200) sample *= 2;
+
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inSampleSize = sample;
+            options.inPreferredConfig = Bitmap.Config.RGB_565;
+            try (InputStream stream = getContentResolver().openInputStream(imageUri)) {
+                if (stream == null) throw new IOException("The selected image could not be opened.");
+                bitmap = BitmapFactory.decodeStream(stream, null, options);
+            }
+            if (bitmap == null) throw new IOException("The selected image format could not be decoded.");
+
+            ByteArrayOutputStream output = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 74, output);
+            String dataUrl = "data:image/jpeg;base64," + Base64.encodeToString(output.toByteArray(), Base64.NO_WRAP);
+            if (view != null) {
+                String quoted = JSONObject.quote(dataUrl);
+                view.evaluateJavascript("window.onFOSCHProductPhotoCaptured && window.onFOSCHProductPhotoCaptured(" + quoted + ")", null);
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Unable to process administrator-selected image", e);
+            sendPhotoFailure();
+            Toast.makeText(this, "The selected image could not be processed. Choose another image and try again.", Toast.LENGTH_LONG).show();
         } finally {
             if (bitmap != null && !bitmap.isRecycled()) bitmap.recycle();
         }
