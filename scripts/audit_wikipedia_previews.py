@@ -197,7 +197,7 @@ def resolve_entry(entry: dict, table: dict) -> dict:
                 global_matches.append((score, article_title_from_link(link), link["href"]))
     unique = {(title, href) for _, title, href in global_matches}
     if len(unique) == 1:
-        _, title, href = next(iter(unique))
+        title, href = next(iter(unique))
         return {"mapping_status": "global_exact_name_match", "title": title,
                 "url": "https://en.wikipedia.org" + href, "match_score": 100,
                 "mapping_note": "Exact name link found in another E-number list row."}
