@@ -1,4 +1,20 @@
-# FOSCH v0.10.22 — food-specific Wikipedia previews
+# FOSCH v0.10.23 — audited Wikipedia E-number previews
+
+FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
+
+## v0.10.23 changes
+
+- Made Wikipedia article discovery aware of exact E-number sub-entries and additive names, including subcodes such as E101(i), E101(ii), E140(i) and E140(ii).
+- Removed the unsafe fallback that accepted the first unrelated link in an E-number row when its linked name did not match the catalogue entry.
+- Added food-use section matching for headings such as “Foods”, “Food industry”, “Culinary”, “Food additive”, “Food coloring”, “Food preservation” and “Use as a consumable coloring agent”.
+- Excluded headings about allergy, intolerance, toxicity, safety, medical use, regulation, labeling, dietary sources and nutrition from the food-use preview selector.
+- When an article has no clearly food-related section, FOSCH uses the article overview rather than selecting an unrelated subsection.
+- Bumped the Wikipedia preview cache schema so old article and section selections are fetched again.
+- Added an automated audit workflow and report for all 548 bundled E-number entries, checking article mapping and section suitability separately.
+- Updated the Android version to `0.10.23` (`versionCode 34`).
+
+## Previous release: v0.10.22 — food-specific Wikipedia previews
+
 
 FOSCH is an independent, open-source Android prototype for browsing E-number references and looking up retail product barcodes. It is not a regulator-approved or medically authoritative food-safety database.
 
