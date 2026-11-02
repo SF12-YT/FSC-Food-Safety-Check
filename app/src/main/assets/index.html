@@ -196,10 +196,6 @@ html[data-theme=dark],html[data-theme=dark] body{background:#000000!important}
 .product-official-photo{display:block;width:min(100%,260px);max-height:210px;object-fit:contain;background:var(--panel);border-radius:14px;margin:8px 0}
 @media(max-width:360px){.admin-submission-card,.admin-brand-card,.admin-audit-row{padding:11px}.admin-action-grid{gap:5px}.admin-action-grid button{font-size:11px}}
 
-.ingredient-comparison-wrap{width:100%;overflow-x:auto;margin-top:13px}
-.ingredient-comparison-table{width:100%;min-width:390px;border-collapse:collapse;text-align:left;font-size:12px;line-height:1.4}
-.ingredient-comparison-table th,.ingredient-comparison-table td{padding:9px 7px;vertical-align:top;border-bottom:1px solid var(--line)!important;overflow-wrap:anywhere}
-.ingredient-comparison-table th{font-size:11px;color:var(--muted);font-weight:750}
 </style></head><body><main class="app" id="app"></main><nav class="nav hidden" aria-label="Main navigation">
 <button class="scan" aria-label="Scan barcode" onclick="navigateBottomTab('scan')"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7V4h4M17 4h4v3M21 17v3h-4M7 20H3v-3" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 8v8M9 8v8M12 8v8M15 8v8M18 8v8" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg></button>
 <button id="navHome" aria-label="Home" onclick="navigateBottomTab('home')"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 2.1 10.9v1.6h2v7.4c0 .9.7 1.6 1.6 1.6h12.6c.9 0 1.6-.7 1.6-1.6v-7.4h2v-1.6L12 2.8Z" fill="currentColor"/><path d="M10 21.5v-6.2h4v6.2" fill="var(--panel)"/></svg></span></button>
@@ -411,130 +407,6 @@ function splitIngredientPartsAtTopLevel(raw){
  return parts;
 }
 function renderIngredientList(raw){return splitIngredientPartsAtTopLevel(raw).map(ingredientMarkupPart).join(", ")}
-function ingredientPercentageHeading(value){
- return String(value||"").split(/[\[(]/,1)[0].replace(/^\s*(?:ingredients?|of)\s+/i,"").replace(/[.:]+$/,"").trim();
-}
-function ingredientBracketEnd(text,start){
- const stack=[],pairs={")":"(","]":"["};
- for(let i=start;i<text.length;i++){
-  const ch=text.charAt(i);
-  if(ch==="("||ch==="[")stack.push(ch);
-  else if(ch===")"||ch==="]"){if(stack[stack.length-1]!==pairs[ch])return -1;stack.pop();if(!stack.length)return i;}
- }
- return -1;
-}
-function extractIngredientPercentages(raw){
- const results=[],seen=new Set();
- const pct="(?:minimum|min\\.?\\s*)?\\d+(?:[.,]\\d+)?\\s*%";
- // A declared QUID can be followed by a square-bracketed sub-ingredient list:
- // "Ricotta Cheese (27%) [Whey (Milk), ...]".
- const trailing=new RegExp("^(.*?)\\s*\\(\\s*("+pct+")\\s*\\)\\s*(?=(?:\\[|$))","i");
- const prefix=new RegExp("^("+pct+")\\s+(.+)$","i");
- const suffix=new RegExp("^(.+?)\\s+("+pct+")$","i");
- function add(name,pctText,parentPath,whole){
-  const ingredient=ingredientPercentageHeading(name);
-  const match=String(pctText||"").match(/\d+(?:[.,]\d+)?/);
-  const percentage=match?Number(match[0].replace(",", ".")):NaN;
-  if(!ingredient||ingredient.length>80||!Number.isFinite(percentage)||percentage<0||percentage>100)return;
-  if(/^(?:ingredients?|contains|may contain)$/i.test(ingredient))return;
-  const path=parentPath.concat(ingredient);
-  const pathKey=path.map(part=>normaliseIngredientName(part)).join("|");
-  if(seen.has(pathKey))return;
-  seen.add(pathKey);
-  const percentageText=String(pctText||"").trim().replace(/\s+/g," ");
-  results.push({ingredient,percentage,percentageText,path,pathText:path.join(" › "),source:"ingredient-list",labelText:String(whole||"").trim()});
- }
- function walk(levelText,parentPath,depth){
-  if(depth>8)return;
-  splitIngredientPartsAtTopLevel(levelText).forEach(part=>{
-   const value=String(part||"").trim();if(!value)return;
-   let m=trailing.exec(value);
-   if(m)add(m[1],m[2],parentPath,value);
-   else if((m=prefix.exec(value))!==null)add(m[2],m[1],parentPath,value);
-   else if((m=suffix.exec(value))!==null)add(m[1],m[2],parentPath,value);
-   const parentName=ingredientPercentageHeading(value);
-   for(let i=0;i<value.length;i++){
-    const ch=value.charAt(i);if(ch!=="("&&ch!=="[")continue;
-    const end=ingredientBracketEnd(value,i);if(end<0)continue;
-    const inner=value.slice(i+1,end);
-    // Do not recurse into the percentage's own parentheses.
-    if(!/^\s*(?:minimum|min\.?\s*)?\d+(?:[.,]\d+)?\s*%\s*$/i.test(inner)){
-     walk(inner,parentName?parentPath.concat(parentName):parentPath,depth+1);
-    }
-    i=end;
-   }
-  });
- }
- walk(String(raw||""),[],0);
- return results;
-}
-function productIngredientPercentages(value,raw){
- const parsed=extractIngredientPercentages(raw);
- const rows=parsed.length?parsed:(Array.isArray(value)?value.filter(x=>x&&x.ingredient&&x.percentageText):[]);
- const unique=[],seen=new Set();
- rows.forEach(row=>{
-  const path=Array.isArray(row.path)&&row.path.length?row.path:[row.ingredient||""];
-  const key=path.map(part=>normaliseIngredientName(part)).join("|");
-  if(!key.replace(/\|/g,""))return;
-  if(seen.has(key))return;
-  seen.add(key);
-  unique.push(row);
- });
- return unique;
-}
-function renderIngredientComparisonButton(product){
- return productIngredientPercentages(product&&product.ingredientPercentages,product&&(product.ingredients||product.codes)||"").length?'<button class="browse-all" type="button" onclick="beginIngredientComparison()"><span>Compare ingredient percentages</span><span>›</span></button>':"";
-}
-function ingredientComparisonRecordKey(record){
- const country=String(record&&record.country||marketCountry||"").toUpperCase();
- return [String(record&&record.barcode||""),String(record&&record.productKey||stableProductKey(country,record&&record.brand||"",record&&record.name||"")),normalisePackageSizeKey(record&&(record.sizeLabel||record.size)||"")].join("|");
-}
-function ingredientComparisonCandidates(base){
- const key=ingredientComparisonRecordKey(base);
- return knownProductRecords().filter(record=>String(record.status||"")!=="rejected-local"&&ingredientComparisonRecordKey(record)!==key&&productIngredientPercentages(record.ingredientPercentages,record.ingredients||record.codes||"").length>0).sort((a,b)=>String(a.name||"").localeCompare(String(b.name||""))||String(a.brand||"").localeCompare(String(b.brand||"")));
-}
-let ingredientComparisonBase=null,ingredientComparisonSelectedKey="";
-function beginIngredientComparison(){
- const product=readCachedProduct(scannedBarcode,currentLookupMarket());
- if(!product){alert("The current product details are no longer available. Scan the product again.");return}
- if(!productIngredientPercentages(product.ingredientPercentages,product.ingredients||"").length){alert("This product has no ingredient percentages declared in its ingredient list.");return}
- ingredientComparisonBase=product;
- const candidates=ingredientComparisonCandidates(product);
- ingredientComparisonSelectedKey=candidates.length?ingredientComparisonRecordKey(candidates[0]):"";
- page="ingredientComparison";render();
-}
-function selectIngredientComparisonProduct(key){ingredientComparisonSelectedKey=String(key||"");render()}
-function ingredientPercentageMap(product){
- const map=new Map();
- productIngredientPercentages(product&&product.ingredientPercentages,product&&(product.ingredients||product.codes)||"").forEach(row=>{
-  const key=normaliseIngredientName(row.ingredient||"");if(!key)return;
-  const value=String(row.percentageText||String(row.percentage)+"%");
-  if(!map.has(key))map.set(key,{label:row.ingredient||key,values:[]});
-  map.get(key).values.push(value);
- });
- return map;
-}
-function ingredientComparisonMarkup(){
- if(!ingredientComparisonBase)return '<button class="back" onclick="goHome()">‹ Home</button><h1>Ingredient comparison</h1><p class="muted">No product is selected for comparison.</p>';
- const base=ingredientComparisonBase,candidates=ingredientComparisonCandidates(base);
- const selected=candidates.find(x=>ingredientComparisonRecordKey(x)===ingredientComparisonSelectedKey)||null;
- const baseRows=ingredientPercentageMap(base),otherRows=ingredientPercentageMap(selected||{});
- const names=Array.from(new Set([...baseRows.keys(),...otherRows.keys()]));
- let table="";
- if(selected&&names.length){
-  const rows=names.map(key=>{
-   const a=baseRows.get(key),b=otherRows.get(key);
-   return '<tr><td>'+esc((a&&a.label)||(b&&b.label)||key)+'</td><td>'+(a?esc(a.values.join(" / ")):"Not declared")+'</td><td>'+(b?esc(b.values.join(" / ")):"Not declared")+'</td></tr>';
-  }).join("");
-  table='<div class="ingredient-comparison-wrap"><table class="ingredient-comparison-table"><thead><tr><th>Ingredient</th><th>'+esc([base.brand,base.name].filter(Boolean).join(" · ")||"Product A")+'</th><th>'+esc([selected.brand,selected.name].filter(Boolean).join(" · ")||"Product B")+'</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
- }
- const options=candidates.map(x=>{
-  const key=ingredientComparisonRecordKey(x);
-  return '<option value="'+esc(key)+'" '+(key===ingredientComparisonSelectedKey?"selected":"")+'>'+esc([x.brand,x.name,x.sizeLabel||x.size].filter(Boolean).join(" · "))+'</option>';
- }).join("");
- const chooser=candidates.length?'<select id="ingredientCompareSelect" class="field" onchange="selectIngredientComparisonProduct(this.value)">'+options+'</select>'+table:'<div class="contribution-hint">No other product with declared ingredient percentages is saved or cached for this market on this device yet. Add another product with its ingredient label to build a comparison.</div>';
- return '<button class="back" onclick="page=\'productLookup\';render()">‹ Product lookup</button><h1>Ingredient comparison</h1><p class="muted">Compare ingredient percentages printed on two product labels. Choose a comparable product in the same category and variant.</p><section class="panel"><b>Product A</b><p class="muted">'+esc([base.brand,base.name].filter(Boolean).join(" · "))+'</p><label for="ingredientCompareSelect">Compare with</label>'+chooser+'</section><p class="muted" style="font-size:12px">A missing percentage means the label did not declare one; it does not mean 0%. These are label claims, not laboratory measurements or a nutrition assessment. Product records are local to this device or its market cache.</p>';
-}
 function openIngredientDetail(code){const found=allAdditives.find(x=>String(x.code).toLowerCase()===String(code).toLowerCase());if(!found)return;selected=found.code;page="detail";render()}
 function normaliseIngredientList(raw){return String(raw||"").replace(/\r/g,"").split(/[\n]+/).flatMap(line=>splitIngredientPartsAtTopLevel(line)).map(s=>s.trim()).filter(Boolean).join(", ")}
 
@@ -595,7 +467,7 @@ function saveMarketProduct(record){
  const latest=String(record.officialPhoto||"");
  if(latest.startsWith("data:image/")){for(let i=photos.length-1;i>=0;i--){if(photos[i]===latest)photos.splice(i,1)}photos.unshift(latest)}
  const uniquePhotos=[];photos.forEach(photo=>{if(typeof photo==="string"&&photo.startsWith("data:image/")&&!uniquePhotos.includes(photo)&&uniquePhotos.length<5)uniquePhotos.push(photo)});
- const compact={productKey:pkey,country:code,brand:record.brand||"",name:record.name||"",barcode:record.barcode||"",sizeLabel:record.sizeLabel||"",producedIn:record.producedIn||"",producedInPercentage:record.producedInPercentage??"",nutritionInfo:record.nutritionInfo||null,ingredients:record.ingredients||"",ingredientPercentages:extractIngredientPercentages(record.ingredients||""),typicalAnalysis:record.typicalAnalysis||"",claims:record.claims&&typeof record.claims==="object"?{nonGmo:!!record.claims.nonGmo,halal:!!record.claims.halal}:{nonGmo:false,halal:false},mayContain:String(record.mayContain||""),officialPhoto:uniquePhotos[0]||"",officialPhotos:uniquePhotos,date:record.date||new Date().toISOString()};
+ const compact={productKey:pkey,country:code,brand:record.brand||"",name:record.name||"",barcode:record.barcode||"",sizeLabel:record.sizeLabel||"",producedIn:record.producedIn||"",producedInPercentage:record.producedInPercentage??"",nutritionInfo:record.nutritionInfo||null,ingredients:record.ingredients||"",typicalAnalysis:record.typicalAnalysis||"",claims:record.claims&&typeof record.claims==="object"?{nonGmo:!!record.claims.nonGmo,halal:!!record.claims.halal}:{nonGmo:false,halal:false},mayContain:String(record.mayContain||""),officialPhoto:uniquePhotos[0]||"",officialPhotos:uniquePhotos,date:record.date||new Date().toISOString()};
  if(prior>=0)list[prior]=compact;else list.unshift(compact);
  try{localStorage.setItem(key,JSON.stringify(list.slice(0,1000)))}catch(e){}
 }
@@ -720,7 +592,7 @@ function renderNutritionInfo(value){const n=normaliseNutritionInfo(value);const 
 function renderProductClaims(value){const claims=value&&value.claims&&typeof value.claims==="object"?value.claims:{};const labels=[];if(claims.nonGmo)labels.push("Non-GMO");if(claims.halal)labels.push("Halal");return labels.length?`<div class="info"><b>Label claims</b><p>${labels.join(" · ")} <span class="muted">(as stated on the packaging)</span></p></div>`:""}
 function renderMayContain(value){const text=String(value||"").trim();return text?`<div class="info"><b>May contain</b><p>${esc(text)}</p></div>`:""}
 function readContributionLabelDetails(){const state=contributionFormState||prefillProduct||{};const prior=state.claims&&typeof state.claims==="object"?state.claims:{};const nonGmo=document.getElementById("claimNonGmo"),halal=document.getElementById("claimHalal"),may=document.getElementById("pmayContain");return {claims:{nonGmo:nonGmo?!!nonGmo.checked:!!prior.nonGmo,halal:halal?!!halal.checked:!!prior.halal},mayContain:may?String(may.value||"").trim():String(state.mayContain||"")}}
-function readContributionFormState(){const val=id=>{const e=document.getElementById(id);return e?e.value:""};const nutritionInfo=collectNutritionInfoFromForm(),labels=readContributionLabelDetails(),ingredients=normaliseIngredientList(val("pcodes").trim());return {...(contributionFormState||prefillProduct||{}),brand:val("pbrand").trim(),name:val("pname").trim(),sizeLabel:val("psize").trim(),producedIn:val("pproducedIn").trim(),producedInPercentage:val("pproducedInPercentage").trim(),ingredients,ingredientPercentages:extractIngredientPercentages(ingredients),nutritionInfo:nutritionInfo||(Object.prototype.hasOwnProperty.call(contributionFormState||prefillProduct||{},"nutritionInfo")?(contributionFormState||prefillProduct||{}).nutritionInfo:null),claims:labels.claims,mayContain:labels.mayContain,note:val("pnote").trim(),barcode:scannedBarcode,country:marketCountry,typicalAnalysis:(contributionFormState&&contributionFormState.typicalAnalysis)||(prefillProduct&&prefillProduct.typicalAnalysis)||null}}
+function readContributionFormState(){const val=id=>{const e=document.getElementById(id);return e?e.value:""};const nutritionInfo=collectNutritionInfoFromForm(),labels=readContributionLabelDetails(),ingredients=normaliseIngredientList(val("pcodes").trim());return {...(contributionFormState||prefillProduct||{}),brand:val("pbrand").trim(),name:val("pname").trim(),sizeLabel:val("psize").trim(),producedIn:val("pproducedIn").trim(),producedInPercentage:val("pproducedInPercentage").trim(),ingredients,nutritionInfo:nutritionInfo||(Object.prototype.hasOwnProperty.call(contributionFormState||prefillProduct||{},"nutritionInfo")?(contributionFormState||prefillProduct||{}).nutritionInfo:null),claims:labels.claims,mayContain:labels.mayContain,note:val("pnote").trim(),barcode:scannedBarcode,country:marketCountry,typicalAnalysis:(contributionFormState&&contributionFormState.typicalAnalysis)||(prefillProduct&&prefillProduct.typicalAnalysis)||null}}
 function revealTypicalAnalysis(){contributionFormState=readContributionFormState();currentTypicalAnalysis=normaliseTypicalAnalysis(contributionFormState.typicalAnalysis);page="typicalAnalysis";render()}
 function toggleTypicalField(key,checked){currentTypicalAnalysis.fields[key]=!!checked;const wrap=document.getElementById("typicalWrap_"+key),input=document.getElementById("typicalValue_"+key);if(wrap)wrap.classList.toggle("hidden",!checked);if(input)input.required=!!checked;refreshWaterQualitySummary()}
 function returnToContribution(){if(pageHistory.length&&pageHistory[pageHistory.length-1]==="contribute")pageHistory.pop();page="contribute";suppressNextHistoryPush=true;render()}
@@ -755,7 +627,7 @@ else if(page==="correction"){
  const existingCorrection=editingSimpleCorrectionDraftId?findCorrectionDraftById(editingSimpleCorrectionDraftId):null;
  a.innerHTML=`<button class="back" onclick="${existingCorrection?"cancelSimpleCorrectionDraftEdit()":"goBack()"}">‹ ${existingCorrection?"Saved Correction Drafts":"Back to product"}</button><h1>${existingCorrection?"Edit correction draft":"Report a correction"}</h1><p class="muted">Report an incorrect product name or ingredient list. Evidence helps a future reviewer verify it.</p><section class="panel"><p><b>${esc(correctionTarget||"Product lookup")}</b></p><form onsubmit="submitCorrection(event)"><label for="correctionText">What should be corrected?</label><textarea id="correctionText" class="field" required placeholder="Describe the error and provide the corrected information">${esc(existingCorrection&&existingCorrection.message||"")}</textarea><label for="correctionSource">Source / evidence notes</label><textarea id="correctionSource" class="field" placeholder="Link, packaging detail, regulator reference, or other evidence">${esc(existingCorrection&&existingCorrection.source||"")}</textarea><label>Photo evidence (optional)</label><div class="photo-box"><p class="muted" style="margin-top:0;font-size:12px">Capture evidence with the camera. Thumbnails are square previews; original photo proportions are retained in the captured image.</p><div id="photoGallery">${renderPhotoGallery()}</div><p id="photoStatus" class="photo-status">${currentPhotoData.length?`${currentPhotoData.length} photo(s) captured with the camera.`:"No photo captured."}</p></div><button class="primary" style="width:100%;margin-top:15px">${existingCorrection?"Update correction draft":"Save correction draft"}</button>${existingCorrection?`<button type="button" class="secondary" style="width:100%;margin-top:8px" onclick="cancelSimpleCorrectionDraftEdit()">Cancel editing</button>`:""}</form></section><div class="warning">Product correction reports are stored locally on this device only. They are not sent to FOSCH or used to change shared records because a review service is not connected yet.</div>${existingCorrection?"":renderCorrectionDrafts()}`;
 }
-else if(page==="ingredientComparison"){a.innerHTML=ingredientComparisonMarkup()}
+
 else if(page==="productLookup"){
  const lookupMarket=currentLookupMarket();
  const cacheKey=scannedBarcode+"::"+lookupMarket;
@@ -763,7 +635,7 @@ else if(page==="productLookup"){
  const startLookup=!cached&&lookupIssuedKey!==cacheKey;
  if(startLookup){lookupIssuedKey=cacheKey;productLookupStatus="loading";productLookupMessage="";}
  const loading=!cached&&productLookupStatus==="loading"&&lookupIssuedKey===cacheKey;
- const productMarkup=cached?`<h2>${esc(cached.name)}</h2>${window.FOSCHAdmin?window.FOSCHAdmin.renderProductMedia(cached):""}${cached.brand?`<p class="muted" style="margin:4px 0">Brand: ${esc(cached.brand)}</p>`:""}${(cached.producedIn||cached.madeIn||cached.origin||cached.producedInPercentage!==undefined&&cached.producedInPercentage!=="")?`<p class="muted" style="margin:4px 0">Produced in / Made in: ${esc(cached.producedIn||cached.madeIn||cached.origin||"Country not stated")}${cached.producedInPercentage!==undefined&&cached.producedInPercentage!==""?` · ${esc(cached.producedInPercentage)}%` : ""}</p>`:""}${renderNutritionInfo(cached.nutritionInfo||cached.nutrition)}${renderProductClaims(cached)}${renderMayContain(cached.mayContain)}${(cached.size||cached.sizeLabel)?`<p class="muted" style="margin:4px 0">Package size: ${esc(cached.size||cached.sizeLabel)}</p>`:""}${cached.typicalAnalysis?renderWaterQualitySummary(cached.typicalAnalysis):""}<p class="muted ingredient-list">${renderIngredientList(cached.ingredients)}</p>${renderIngredientComparisonButton(cached)}${vagueIngredientFlags(cached.ingredients).length?`<div class="contribution-hint"><span class="hint-title">Ingredient descriptions may be vague</span>${vagueIngredientFlags(cached.ingredients).map(f=>`<div>• ${esc(f)}</div>`).join("")}<div style="margin-top:5px">FOSCH preserves the label wording and does not infer a missing ingredient source.</div></div>`:""}<p class="muted" style="font-size:12px">Source: ${esc(cached.source||"Local device cache")}.</p><p class="muted" style="font-size:12px">Confirm the ingredient list against the actual packaging. Community data can be incomplete or outdated.</p><button class="browse-all" type="button" onclick="beginProductCorrectionFromLookup()"><span>Think we got it wrong?</span><span>›</span></button>`:loading?`<p class="muted">Searching the online product database for a matching product…</p>`:`<h3>Product not found, would you like to add it?</h3><p class="muted">${esc(productLookupMessage||"No matching-market record is available on this device.")}</p>`;
+ const productMarkup=cached?`<h2>${esc(cached.name)}</h2>${window.FOSCHAdmin?window.FOSCHAdmin.renderProductMedia(cached):""}${cached.brand?`<p class="muted" style="margin:4px 0">Brand: ${esc(cached.brand)}</p>`:""}${(cached.producedIn||cached.madeIn||cached.origin||cached.producedInPercentage!==undefined&&cached.producedInPercentage!=="")?`<p class="muted" style="margin:4px 0">Produced in / Made in: ${esc(cached.producedIn||cached.madeIn||cached.origin||"Country not stated")}${cached.producedInPercentage!==undefined&&cached.producedInPercentage!==""?` · ${esc(cached.producedInPercentage)}%` : ""}</p>`:""}${renderNutritionInfo(cached.nutritionInfo||cached.nutrition)}${renderProductClaims(cached)}${renderMayContain(cached.mayContain)}${(cached.size||cached.sizeLabel)?`<p class="muted" style="margin:4px 0">Package size: ${esc(cached.size||cached.sizeLabel)}</p>`:""}${cached.typicalAnalysis?renderWaterQualitySummary(cached.typicalAnalysis):""}<p class="muted ingredient-list">${renderIngredientList(cached.ingredients)}</p>${vagueIngredientFlags(cached.ingredients).length?`<div class="contribution-hint"><span class="hint-title">Ingredient descriptions may be vague</span>${vagueIngredientFlags(cached.ingredients).map(f=>`<div>• ${esc(f)}</div>`).join("")}<div style="margin-top:5px">FOSCH preserves the label wording and does not infer a missing ingredient source.</div></div>`:""}<p class="muted" style="font-size:12px">Source: ${esc(cached.source||"Local device cache")}.</p><p class="muted" style="font-size:12px">Confirm the ingredient list against the actual packaging. Community data can be incomplete or outdated.</p><button class="browse-all" type="button" onclick="beginProductCorrectionFromLookup()"><span>Think we got it wrong?</span><span>›</span></button>`:loading?`<p class="muted">Searching the online product database for a matching product…</p>`:`<h3>Product not found, would you like to add it?</h3><p class="muted">${esc(productLookupMessage||"No matching-market record is available on this device.")}</p>`;
  a.innerHTML=`<button class="back" onclick="goHome()">‹ Home</button><h1>Product lookup</h1><p class="muted">Barcode: <b>${esc(scannedBarcode||"Not available")}</b></p><section class="panel">${productMarkup}<div class="action-row"><button class="primary" onclick="startContributionFromLookup()">Add product</button><button class="secondary" onclick="startBarcodeScan()">Scan again</button></div></section><div class="footnote">Country-specific lookup is keyed by barcode and market. FOSCH will not substitute an ingredient list unless the source tags explicitly match the selected market.</div>`;
  if(startLookup){if(window.FOSCHBridge&&window.FOSCHBridge.lookupProduct)window.FOSCHBridge.lookupProduct(scannedBarcode,lookupMarket);else{productLookupStatus="not_found";productLookupMessage=internetSeemsUnavailable()?"Internet not detected. Connect to the internet and try the online lookup again.":"Online product lookup is available in the installed Android app.";render()}}
 }
@@ -948,7 +820,7 @@ function cancelProductCorrection(){correctionMode=false;editingCorrectionDraftId
 function startContributionFromLookup(){correctionMode=false;editingCorrectionDraftId=null;correctionOriginalProduct=null;prefillProduct=readCachedProduct(scannedBarcode,currentLookupMarket())||{barcode:scannedBarcode,country:currentLookupMarket()};contributionFormState={...prefillProduct,brand:prefillProduct.brand||"",name:prefillProduct.name||"",sizeLabel:prefillProduct.sizeLabel||prefillProduct.size||"",ingredients:prefillProduct.ingredients||""};currentTypicalAnalysis=normaliseTypicalAnalysis(contributionFormState.typicalAnalysis);editingDraftId=null;currentPhotoData=[];page="contribute";render()}
 function openSavedDrafts(){if(page==="contribute")contributionFormState=readContributionFormState();page="savedDrafts";render()}
 function isApprovedLocalProduct(record){return String(record&&record.status||"").toLowerCase().indexOf("approved")>=0}
-function readCachedProduct(barcode,country){const b=String(barcode||""),c=String(country||"");const localDraft=(Array.isArray(contributions)?contributions:[]).find(item=>String(item.status||"")!=="rejected-local"&&String(item.barcode||"")===b&&String(item.country||"")===c&&String(item.name||"").trim()&&String(item.ingredients||"").trim());if(localDraft)return {found:true,barcode:b,country:c,name:localDraft.name,brand:localDraft.brand||"",size:localDraft.sizeLabel||"",producedIn:localDraft.producedIn||"",producedInPercentage:localDraft.producedInPercentage??"",nutritionInfo:localDraft.nutritionInfo||null,claims:localDraft.claims||{nonGmo:false,halal:false},mayContain:localDraft.mayContain||"",ingredients:localDraft.ingredients,ingredientPercentages:extractIngredientPercentages(localDraft.ingredients||""),typicalAnalysis:localDraft.typicalAnalysis||"",officialPhotos:Array.isArray(localDraft.officialPhotos)?localDraft.officialPhotos:[],source:isApprovedLocalProduct(localDraft)?"Locally approved product record":"Saved locally on this device (contribution draft)",updated_at:localDraft.date||""};try{const stored=JSON.parse(localStorage.getItem(marketProductStorageKey(c))||"[]");if(Array.isArray(stored)){const approved=stored.find(item=>String(item.barcode||"")===b&&String(item.country||c)===c&&String(item.name||"").trim()&&String(item.ingredients||"").trim());if(approved)return Object.assign({found:true,source:"Locally approved product record"},approved)}}catch(e){}try{if(window.FOSCHBridge&&window.FOSCHBridge.getCachedProduct){const raw=window.FOSCHBridge.getCachedProduct(b,c);if(raw){const obj=JSON.parse(raw);if(obj&&obj.name&&obj.ingredients)return obj}}}catch(e){}if(lastProductLookupResult&&lastProductLookupResult.found&&lastProductLookupResult.barcode===barcode&&lastProductLookupResult.country===country)return lastProductLookupResult;return null}
+function readCachedProduct(barcode,country){const b=String(barcode||""),c=String(country||"");const localDraft=(Array.isArray(contributions)?contributions:[]).find(item=>String(item.status||"")!=="rejected-local"&&String(item.barcode||"")===b&&String(item.country||"")===c&&String(item.name||"").trim()&&String(item.ingredients||"").trim());if(localDraft)return {found:true,barcode:b,country:c,name:localDraft.name,brand:localDraft.brand||"",size:localDraft.sizeLabel||"",producedIn:localDraft.producedIn||"",producedInPercentage:localDraft.producedInPercentage??"",nutritionInfo:localDraft.nutritionInfo||null,claims:localDraft.claims||{nonGmo:false,halal:false},mayContain:localDraft.mayContain||"",ingredients:localDraft.ingredients,typicalAnalysis:localDraft.typicalAnalysis||"",officialPhotos:Array.isArray(localDraft.officialPhotos)?localDraft.officialPhotos:[],source:isApprovedLocalProduct(localDraft)?"Locally approved product record":"Saved locally on this device (contribution draft)",updated_at:localDraft.date||""};try{const stored=JSON.parse(localStorage.getItem(marketProductStorageKey(c))||"[]");if(Array.isArray(stored)){const approved=stored.find(item=>String(item.barcode||"")===b&&String(item.country||c)===c&&String(item.name||"").trim()&&String(item.ingredients||"").trim());if(approved)return Object.assign({found:true,source:"Locally approved product record"},approved)}}catch(e){}try{if(window.FOSCHBridge&&window.FOSCHBridge.getCachedProduct){const raw=window.FOSCHBridge.getCachedProduct(b,c);if(raw){const obj=JSON.parse(raw);if(obj&&obj.name&&obj.ingredients)return obj}}}catch(e){}if(lastProductLookupResult&&lastProductLookupResult.found&&lastProductLookupResult.barcode===barcode&&lastProductLookupResult.country===country)return lastProductLookupResult;return null}
 window.onProductLookupResult=function(result){if(!result)return;lastProductLookupResult=result;const currentKey=scannedBarcode+"::"+currentLookupMarket();const resultKey=String(result.barcode||"")+"::"+String(result.country||"");if(resultKey!==currentKey)return;productLookupStatus=result.found?"found":"not_found";productLookupMessage=String(result.message||"");if(!result.found&&internetSeemsUnavailable())productLookupMessage="Internet not detected. Connect to the internet and try the online lookup again.";render()};
 window.onProductNameSearchResults=function(result){if(!result||String(result.requestId||"")!==String(latestProductSearchRequest)||page!=="contribute")return;const input=document.getElementById("pname");if(!input||normaliseProductKey(input.value)!==normaliseProductKey(result.query||"")||String(marketCountry||"").toUpperCase()!==String(result.country||"").toUpperCase())return;onlineProductResultsQuery=normaliseProductKey(result.query||"");onlineProductResultsCountry=String(result.country||"").toUpperCase();currentOnlineProductSuggestions=(Array.isArray(result.products)?result.products:[]).map(x=>({...x,name:String(x.name||"").trim(),brand:String(x.brand||"").trim(),sizeLabel:String(x.sizeLabel||x.size||"").trim(),country:onlineProductResultsCountry,productKey:x.productKey||stableProductKey(onlineProductResultsCountry,x.brand||"",x.name||"")})).filter(x=>x.name);productNameSearchStatus=result.ok?"done":"error";productNameSearchMessage=String(result.message||"");if(result.ok&&!currentOnlineProductSuggestions.length)productNameSearchStatus="empty";refreshProductSuggestions(true)};
 function startBarcodeScan(){if(!marketCountry){page="countrySetup";render();return}lookupMarketOverride="";scanTarget=page==="contribute"?"contribute":"home";if(window.FOSCHBridge&&window.FOSCHBridge.startBarcodeScan){try{window.FOSCHBridge.startBarcodeScan();return}catch(e){alert("The scanner could not be opened. Check camera permission and try again.");return}}alert("Barcode scanning is available in the installed Android app.")}
@@ -995,8 +867,7 @@ const producedInPercentage=(document.getElementById("pproducedInPercentage").val
 if(producedInPercentage!==""&&(!Number.isFinite(Number(producedInPercentage))||Number(producedInPercentage)<0||Number(producedInPercentage)>100)){alert("Enter a country-of-origin percentage between 0 and 100, or leave it blank if the package does not state one.");document.getElementById("pproducedInPercentage").focus();return}
 const nutritionInfo=nutritionInfoForDraftSave();
 const typicalAnalysis=(contributionFormState&&contributionFormState.typicalAnalysis)||(prefillProduct&&prefillProduct.typicalAnalysis)||null;
-const ingredientPercentages=extractIngredientPercentages(ingredients);
-const updated={...(editing&&prefillProduct?prefillProduct:{}),id:editingDraftId||makeDraftId(),productKey,brand,name,ingredients,ingredientPercentages,sizeLabel,producedIn,producedInPercentage,nutritionInfo,typicalAnalysis,claims:labelDetails.claims,mayContain:labelDetails.mayContain,note,barcode:scannedBarcode,country:countryCode,photos:[...currentPhotoData],photo:currentPhotoData[0]||"",date:editing&&prefillProduct?prefillProduct.date:new Date().toISOString(),status:"unverified-local-draft",limitDate:editing&&prefillProduct?prefillProduct.limitDate:todayDateKey()};
+const updated={...(editing&&prefillProduct?prefillProduct:{}),id:editingDraftId||makeDraftId(),productKey,brand,name,ingredients,sizeLabel,producedIn,producedInPercentage,nutritionInfo,typicalAnalysis,claims:labelDetails.claims,mayContain:labelDetails.mayContain,note,barcode:scannedBarcode,country:countryCode,photos:[...currentPhotoData],photo:currentPhotoData[0]||"",date:editing&&prefillProduct?prefillProduct.date:new Date().toISOString(),status:"unverified-local-draft",limitDate:editing&&prefillProduct?prefillProduct.limitDate:todayDateKey()};delete updated.ingredientPercentages;
 if(correcting){
  const correctionBarcode=String(scannedBarcode||(correctionOriginalProduct&&correctionOriginalProduct.barcode)||"");updated.barcode=correctionBarcode;const correction={...(editingCorrectionDraftId?correctionReports.find(c=>String(c.id||"")===String(editingCorrectionDraftId)||String(c.id||"")===String(editingCorrectionDraftId)):{}),id:editingCorrectionDraftId||makeDraftId(),kind:"product-correction",target:name,message:"Suggested corrections to product details",originalProduct:{...(correctionOriginalProduct||{})},suggestedProduct:{...updated,brand,name},brand,name,ingredients,sizeLabel,producedIn,producedInPercentage,nutritionInfo,claims:labelDetails.claims,mayContain:labelDetails.mayContain,barcode:correctionBarcode,country:countryCode,photos:[...currentPhotoData],photo:currentPhotoData[0]||"",date:new Date().toISOString(),status:"unverified-local-correction",limitDate:todayDateKey()};
  const idx=correctionReports.findIndex(c=>String(c.id||"")===String(editingCorrectionDraftId||""));const backup=idx>=0?correctionReports[idx]:null;if(idx>=0)correctionReports[idx]=correction;else correctionReports.unshift(correction);
