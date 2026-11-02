@@ -1,9 +1,15 @@
-# FOSCH v0.10.31 — camera text layout fixes
+# FOSCH v0.10.32 — nested ingredient additive detection
+
+## v0.10.32 changes
+
+- Fixed ingredient-list rendering so commas inside square-bracketed compound ingredients and nested parentheses no longer split ingredients into separate top-level entries.
+- Added detection for known bare numeric additive identifiers inside balanced ingredient brackets, including comma-separated groups such as `(270, 260)`, `(331, 330)` and nested forms such as `(471, 322 (Soy))`.
+- Preserves suffixes such as `307b` in the ingredient display and links to the bundled base entry when no exact variant exists.
+- Updated the About page prototype version and bumped Android version to `0.10.32` (`versionCode 43`).
 
 ## v0.10.31 changes
 
 - Fixed subtitle and instruction clipping on both the barcode scanner and product capture camera. Heading and hint areas now expand to fit wrapped text, with bounded multi-line text on narrow screens and larger font settings.
-- Bumped Android version to `0.10.31` (`versionCode 42`).
 
 ## v0.10.30 changes
 
