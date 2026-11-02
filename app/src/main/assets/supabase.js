@@ -337,12 +337,32 @@
         if (!record || !["pending", "approved", "rejected"].includes(String(row.status || ""))) return;
         const reason = String(row.rejection_reason || "");
         const reviewedAt = String(row.reviewed_at || row.updated_at || "");
-        if (record.cloudReviewStatus !== row.status ||
-            String(record.cloudReviewRejectionReason || "") !== reason ||
-            String(record.cloudReviewAt || "") !== reviewedAt) {
-          record.cloudReviewStatus = row.status;
-          record.cloudReviewRejectionReason = reason;
-          record.cloudReviewAt = reviewedAt;
+        const nextLocalStatus = row.status === "approved" ? "approved-cloud" :
+          (row.status === "rejected" ? "rejected-cloud" : "pending-cloud");
+        const localStatusChanged = String(record.status || "") !== nextLocalStatus;
+        const reviewChanged = record.cloudReviewStatus !== row.status ||
+          String(record.cloudReviewRejectionReason || "") !== reason ||
+          String(record.cloudReviewAt || "") !== reviewedAt;
+
+        // Keep the authoritative review result in the record's main status field as well
+        // as the submitter-facing review metadata. The UI and product lookup code read
+        // the main status field when deciding whether a contribution is approved.
+        record.cloudReviewStatus = row.status;
+        record.status = nextLocalStatus;
+        record.cloudReviewRejectionReason = reason;
+        record.cloudReviewAt = reviewedAt;
+
+        // Approval must also promote the product into this device's approved market
+        // index. This is idempotent, so it is safe to run on every status refresh.
+        if (row.status === "approved" && typeof window.FOSCHApplyCloudApproval === "function") {
+          try {
+            window.FOSCHApplyCloudApproval(record);
+          } catch (error) {
+            console.warn("FOSCH could not update the local approved product index:", error);
+          }
+        }
+
+        if (reviewChanged || localStatusChanged) {
           persistLocalRecord(record, storageKey);
           changed++;
         }

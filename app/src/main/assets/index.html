@@ -492,6 +492,15 @@ function saveMarketProduct(record){
  if(prior>=0)list[prior]=compact;else list.unshift(compact);
  try{localStorage.setItem(key,JSON.stringify(list.slice(0,1000)))}catch(e){}
 }
+window.FOSCHApplyCloudApproval = function(record){
+ if(!record)return false;
+ const product=record.suggestedProduct&&typeof record.suggestedProduct==="object"?record.suggestedProduct:record;
+ const country=String(product.country||record.country||"").toUpperCase();
+ if(!country||!String(product.name||"").trim())return false;
+ const approved=Object.assign({},product,{country:country,status:"approved-cloud"});
+ if(typeof saveMarketProduct==="function")saveMarketProduct(approved);
+ return true;
+};
 function bracketedIngredientDetailsAfter(text,matchEnd){
  let i=matchEnd;
  while(/\s/.test(text.charAt(i)))i++;
@@ -865,8 +874,17 @@ function beginProductCorrectionFromLookup(){const barcode=String(scannedBarcode|
 function beginProductCorrection(product){const source=product||readCachedProduct(scannedBarcode,currentLookupMarket())||{};correctionMode=true;editingCorrectionDraftId=null;correctionOriginalProduct={...source,barcode:source.barcode||scannedBarcode,country:source.country||currentLookupMarket()};prefillProduct={...source,brand:source.brand||"",name:source.name||"",sizeLabel:source.sizeLabel||source.size||"",ingredients:source.ingredients||"",barcode:source.barcode||scannedBarcode,country:source.country||currentLookupMarket()};contributionFormState={...prefillProduct};currentTypicalAnalysis=normaliseTypicalAnalysis(prefillProduct.typicalAnalysis);editingDraftId=null;scannedBarcode=String(prefillProduct.barcode||"");currentPhotoData=[];page="contribute";render()}
 function cancelProductCorrection(){correctionMode=false;editingCorrectionDraftId=null;correctionOriginalProduct=null;prefillProduct=null;contributionFormState=null;currentPhotoData=[];page="productLookup";render()}
 function startContributionFromLookup(){correctionMode=false;editingCorrectionDraftId=null;correctionOriginalProduct=null;prefillProduct=readCachedProduct(scannedBarcode,currentLookupMarket())||{barcode:scannedBarcode,country:currentLookupMarket()};contributionFormState={...prefillProduct,brand:prefillProduct.brand||"",name:prefillProduct.name||"",sizeLabel:prefillProduct.sizeLabel||prefillProduct.size||"",ingredients:prefillProduct.ingredients||""};currentTypicalAnalysis=normaliseTypicalAnalysis(contributionFormState.typicalAnalysis);editingDraftId=null;currentPhotoData=[];page="contribute";render()}
-function openSavedDrafts(){if(page==="contribute")contributionFormState=readContributionFormState();page="savedDrafts";render()}
-function isApprovedLocalProduct(record){return String(record&&record.status||"").toLowerCase().indexOf("approved")>=0}
+function refreshSavedSubmissionStatuses(){
+ if(!window.FOSCHCloud||typeof window.FOSCHCloud.syncSubmissionStatuses!=="function")return;
+ window.FOSCHCloud.syncSubmissionStatuses().then(function(changed){
+  if(changed>0){
+   try{const rows=JSON.parse(localStorage.getItem("fosch-contrib")||"[]");if(Array.isArray(rows))contributions=rows}catch(ignored){}
+   if(page==="savedDrafts"||page==="draftDetail")render();
+  }
+ }).catch(function(error){console.warn("FOSCH saved-submission status refresh failed:",error)});
+}
+function openSavedDrafts(){if(page==="contribute")contributionFormState=readContributionFormState();page="savedDrafts";render();refreshSavedSubmissionStatuses()}
+function isApprovedLocalProduct(record){const status=String(record&&record.status||"").toLowerCase();const review=String(record&&record.cloudReviewStatus||"").toLowerCase();return status.indexOf("approved")>=0||review==="approved"}
 function readCachedProduct(barcode,country){const b=String(barcode||""),c=String(country||"");const localDraft=(Array.isArray(contributions)?contributions:[]).find(item=>String(item.status||"")!=="rejected-local"&&String(item.barcode||"")===b&&String(item.country||"")===c&&String(item.name||"").trim()&&String(item.ingredients||"").trim());if(localDraft)return {found:true,barcode:b,country:c,name:localDraft.name,brand:localDraft.brand||"",size:localDraft.sizeLabel||"",producedIn:localDraft.producedIn||"",producedInPercentage:localDraft.producedInPercentage??"",nutritionInfo:localDraft.nutritionInfo||null,claims:localDraft.claims||{nonGmo:false,halal:false},mayContain:localDraft.mayContain||"",ingredients:localDraft.ingredients,typicalAnalysis:localDraft.typicalAnalysis||"",officialPhotos:Array.isArray(localDraft.officialPhotos)?localDraft.officialPhotos:[],source:isApprovedLocalProduct(localDraft)?"Locally approved product record":"Saved locally on this device (contribution draft)",updated_at:localDraft.date||""};try{const stored=JSON.parse(localStorage.getItem(marketProductStorageKey(c))||"[]");if(Array.isArray(stored)){const approved=stored.find(item=>String(item.barcode||"")===b&&String(item.country||c)===c&&String(item.name||"").trim()&&String(item.ingredients||"").trim());if(approved)return Object.assign({found:true,source:"Locally approved product record"},approved)}}catch(e){}try{if(window.FOSCHBridge&&window.FOSCHBridge.getCachedProduct){const raw=window.FOSCHBridge.getCachedProduct(b,c);if(raw){const obj=JSON.parse(raw);if(obj&&obj.name&&obj.ingredients)return obj}}}catch(e){}if(lastProductLookupResult&&lastProductLookupResult.found&&lastProductLookupResult.barcode===barcode&&lastProductLookupResult.country===country)return lastProductLookupResult;return null}
 window.onProductLookupResult=function(result){if(!result)return;lastProductLookupResult=result;const currentKey=scannedBarcode+"::"+currentLookupMarket();const resultKey=String(result.barcode||"")+"::"+String(result.country||"");if(resultKey!==currentKey)return;productLookupStatus=result.found?"found":"not_found";productLookupMessage=String(result.message||"");if(!result.found&&internetSeemsUnavailable())productLookupMessage="Internet not detected. Connect to the internet and try the online lookup again.";render()};
 window.onProductNameSearchResults=function(result){if(!result||String(result.requestId||"")!==String(latestProductSearchRequest)||page!=="contribute")return;const input=document.getElementById("pname");if(!input||normaliseProductKey(input.value)!==normaliseProductKey(result.query||"")||String(marketCountry||"").toUpperCase()!==String(result.country||"").toUpperCase())return;onlineProductResultsQuery=normaliseProductKey(result.query||"");onlineProductResultsCountry=String(result.country||"").toUpperCase();currentOnlineProductSuggestions=(Array.isArray(result.products)?result.products:[]).map(x=>({...x,name:String(x.name||"").trim(),brand:String(x.brand||"").trim(),sizeLabel:String(x.sizeLabel||x.size||"").trim(),country:onlineProductResultsCountry,productKey:x.productKey||stableProductKey(onlineProductResultsCountry,x.brand||"",x.name||"")})).filter(x=>x.name);productNameSearchStatus=result.ok?"done":"error";productNameSearchMessage=String(result.message||"");if(result.ok&&!currentOnlineProductSuggestions.length)productNameSearchStatus="empty";refreshProductSuggestions(true)};
