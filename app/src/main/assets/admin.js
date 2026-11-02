@@ -287,7 +287,9 @@
     const localSyncButton = !record._foschRemote ? "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.retrySync('" + type + "','" + id + "')\">Retry shared upload</button>" : "";
     const localSyncMessage = !record._foschRemote ? "<div class=\"warning\"><b>Local draft — not yet in Supabase.</b><small>" + esc(record.cloudSyncError || (record.cloudSyncStatus === "syncing" ? "Upload in progress." : "This device copy cannot be approved as a shared submission.")) + "</small></div>" : "";
     const approveButton = rejected || !record._foschRemote ? "" : "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.approve('" + type + "','" + id + "')\">" + (isApproved(record) ? "Re-approve" : "Approve") + "</button>";
-    const localMediaButtons = record._foschRemote ? "" :
+    // Official product media actions belong on both local drafts and shared
+    // submissions. Previously these were accidentally hidden for every remote row.
+    const localMediaButtons =
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureOfficialPhoto('" + type + "','" + id + "')\">Capture official photo</button>" +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadOfficialPhoto('" + type + "','" + id + "')\">Upload image from device</button>";
     return "<article class=\"admin-submission-card\">" +
@@ -699,11 +701,51 @@
       const product = target.kind === "correction" && record.suggestedProduct ? record.suggestedProduct : record;
       const latestPhoto = String(dataUrl);
       const previousPhotos = Array.isArray(product.officialPhotos) ? product.officialPhotos : [];
-      product.officialPhotos = [latestPhoto].concat(previousPhotos.filter(function (photo) {
+      const nextPhotos = [latestPhoto].concat(previousPhotos.filter(function (photo) {
         return typeof photo === "string" && photo.startsWith("data:image/") && photo !== latestPhoto;
       })).slice(0, 5);
+      const previousOfficialPhoto = product.officialPhoto;
+      const previousOfficialPhotos = product.officialPhotos;
+      product.officialPhotos = nextPhotos;
       product.officialPhoto = latestPhoto;
       if (target.kind === "correction" && record.suggestedProduct) record.suggestedProduct = product;
+
+      if (record._foschRemote) {
+        // Remote records are intentionally excluded from localStorage. Persist the
+        // image in the shared submission payload through the audited admin RPC.
+        const remotePayload = Object.assign({}, record._remotePayload || {});
+        const remoteProduct = target.kind === "correction" && remotePayload.suggestedProduct
+          ? Object.assign({}, remotePayload.suggestedProduct)
+          : remotePayload;
+        remoteProduct.officialPhoto = latestPhoto;
+        remoteProduct.officialPhotos = nextPhotos;
+        if (target.kind === "correction" && remotePayload.suggestedProduct) {
+          remotePayload.suggestedProduct = remoteProduct;
+        } else {
+          remotePayload.officialPhoto = latestPhoto;
+          remotePayload.officialPhotos = nextPhotos;
+        }
+        const reason = String(target.note || "Administrator added an official product image after review.");
+        window.FOSCHCloud.adminUpdateSubmission(record._remoteId, {
+          payload: remotePayload,
+          audit_action: "official_product_photo_added",
+          audit_details: { source: target.source === "device" ? "device_upload" : "camera_capture" }
+        }, reason).then(async function () {
+          await refreshRemoteData();
+          page = "adminDashboard";
+          render();
+          alert("Official product image saved to the shared submission.");
+        }).catch(function (error) {
+          product.officialPhoto = previousOfficialPhoto || "";
+          product.officialPhotos = previousOfficialPhotos || [];
+          if (target.kind === "correction" && record.suggestedProduct) record.suggestedProduct = product;
+          alert("The image could not be saved to the shared submission: " + String(error && error.message || error));
+          page = "adminDashboard";
+          render();
+        });
+        return true;
+      }
+
       if (!persistRecords()) return true;
       if (target.kind === "product" && isApproved(record)) saveMarketProduct(record);
       if (target.kind === "correction" && isApproved(record) && record.suggestedProduct) saveMarketProduct(Object.assign({}, product, { country: product.country || record.country || marketCountry }));
