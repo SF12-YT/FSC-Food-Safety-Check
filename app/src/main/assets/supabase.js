@@ -36,6 +36,17 @@
     return hex.slice(0, 8) + "-" + hex.slice(8, 12) + "-" + hex.slice(12, 16) + "-" + hex.slice(16, 20) + "-" + hex.slice(20);
   }
 
+  function createStatusToken() {
+    const bytes = new Uint8Array(32);
+    if (window.crypto && typeof window.crypto.getRandomValues === "function") {
+      window.crypto.getRandomValues(bytes);
+    } else {
+      const fallback = (uuid() + uuid()).replace(/-/g, "");
+      for (let i = 0; i < bytes.length; i++) bytes[i] = parseInt(fallback.slice(i * 2, i * 2 + 2), 16) || 0;
+    }
+    return Array.from(bytes, function (value) { return value.toString(16).padStart(2, "0"); }).join("");
+  }
+
   function decodeJwt(token) {
     try {
       const part = String(token || "").split(".")[1];
@@ -195,6 +206,8 @@
       (kind === "product_correction" ? "product_correction" : "correction");
     const submissionId = record.cloudSubmissionId || uuid();
     record.cloudSubmissionId = submissionId;
+    record.cloudStatusToken = record.cloudStatusToken || createStatusToken();
+    record.cloudReviewStatus = record.cloudReviewStatus || "pending";
     record.cloudSyncStatus = "syncing";
     record.cloudSyncError = "";
     persistLocalRecord(record, storageKey);
@@ -203,6 +216,7 @@
       const photoPaths = await uploadSubmissionPhotos(submissionId, photos);
       const payload = JSON.parse(JSON.stringify(record));
       delete payload.photo;
+      delete payload.cloudStatusToken;
       payload.photos = photoPaths;
       payload.photoPaths = photoPaths;
       const product = payload.suggestedProduct || payload;
@@ -221,6 +235,7 @@
         source: record.source || null,
         payload: payload,
         photo_paths: photoPaths,
+        status_token: record.cloudStatusToken,
         status: "pending",
         submitted_by: null,
         submitted_at: record.date || new Date().toISOString()
@@ -286,6 +301,48 @@
     return Array.isArray(rows) ? rows : [];
   }
 
+  async function syncSubmissionStatuses() {
+    const storageKey = "fosch-contrib";
+    let records;
+    try {
+      records = JSON.parse(localStorage.getItem(storageKey) || "[]");
+    } catch (ignored) { return 0; }
+    if (!Array.isArray(records)) return 0;
+    const eligible = records.filter(function (record) {
+      return record && record.id && record.cloudStatusToken && record.cloudSyncStatus === "synced";
+    });
+    if (!eligible.length) return 0;
+    let changed = 0;
+    for (let offset = 0; offset < eligible.length; offset += 60) {
+      const batch = eligible.slice(offset, offset + 60);
+      const lookups = batch.map(function (record) {
+        return {
+          client_record_id: String(record.id),
+          submission_type: "product",
+          status_token: String(record.cloudStatusToken)
+        };
+      });
+      const rows = await api("POST", "/rest/v1/rpc/get_fosch_submission_statuses",
+        JSON.stringify({ p_lookups: lookups }));
+      if (!Array.isArray(rows)) continue;
+      rows.forEach(function (row) {
+        const record = batch.find(function (entry) { return String(entry.id) === String(row.client_record_id); });
+        if (!record || !["pending", "approved", "rejected"].includes(String(row.status || ""))) return;
+        const reason = String(row.rejection_reason || "");
+        if (record.cloudReviewStatus !== row.status ||
+            String(record.cloudReviewRejectionReason || "") !== reason ||
+            String(record.cloudReviewAt || "") !== String(row.reviewed_at || "")) {
+          record.cloudReviewStatus = row.status;
+          record.cloudReviewRejectionReason = reason;
+          record.cloudReviewAt = row.reviewed_at || row.updated_at || "";
+          persistLocalRecord(record, storageKey);
+          changed++;
+        }
+      });
+    }
+    return changed;
+  }
+
   async function listAuditLog() {
     const rows = await api("GET", "/rest/v1/admin_audit_log?select=*&order=created_at.desc&limit=500");
     return Array.isArray(rows) ? rows : [];
@@ -320,6 +377,7 @@
     signOut: signOut,
     queueSubmission: queueSubmission,
     syncPending: syncPending,
+    syncSubmissionStatuses: syncSubmissionStatuses,
     listSubmissions: listSubmissions,
     listAuditLog: listAuditLog,
     adminUpdateSubmission: adminUpdateSubmission,
@@ -328,4 +386,8 @@
   };
 
   if (window.foschInternetOnline === true) syncPending();
+  if (window.foschAppForegroundSyncPending || !document.hidden) {
+    window.foschAppForegroundSyncPending = false;
+    if (typeof window.onFOSCHAppForeground === "function") window.onFOSCHAppForeground();
+  }
 })();

@@ -73,11 +73,17 @@
   function getItems() {
     ensureRecordIds();
     const items = [];
+    function stillNeedsReview(record) {
+      if (!record) return false;
+      if (record._foschRemote) return String(record.status || "").toLowerCase() === "pending-cloud";
+      const status = String(record.status || "").toLowerCase();
+      return status.indexOf("approved") !== 0 && status.indexOf("rejected") !== 0;
+    }
     (Array.isArray(contributions) ? contributions : []).forEach(function (record) {
-      items.push({ kind: "product", id: String(record.id), record: record });
+      if (stillNeedsReview(record)) items.push({ kind: "product", id: String(record.id), record: record });
     });
     (Array.isArray(correctionReports) ? correctionReports : []).forEach(function (record) {
-      items.push({ kind: "correction", id: String(record.id), record: record });
+      if (stillNeedsReview(record)) items.push({ kind: "correction", id: String(record.id), record: record });
     });
     return items.sort(function (a, b) {
       return String(b.record.date || "").localeCompare(String(a.record.date || ""));
@@ -441,7 +447,7 @@
     const reason = askReason("deleting this submission");
     if (reason === null) return;
     if (!confirm(item.record._foschRemote
-      ? "Delete this shared submission permanently? The reason will be retained in the administrator audit log."
+      ? "Remove this shared submission from the pending queue? It will be marked Rejected for the submitter, and the reason will be retained in the audit log."
       : "Delete \"" + itemLabel(item) + "\" from this device? This cannot be undone.")) return;
     if (item.record._foschRemote) {
       window.FOSCHCloud.adminDeleteSubmission(item.record._remoteId, reason).then(async function () {
