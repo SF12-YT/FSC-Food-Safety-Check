@@ -45,6 +45,7 @@ begin
   if pg_catalog.jsonb_array_length(p_lookups) > 100 then
     raise exception 'A maximum of 100 submission statuses can be checked per request';
   end if;
+
   select coalesce(
     pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
       'client_record_id', s.client_record_id,
@@ -61,11 +62,24 @@ begin
   join public.product_submissions as s
     on s.client_record_id = request.value ->> 'client_record_id'
    and s.submission_type = request.value ->> 'submission_type'
-   and (request.value ->> 'status_token') ~ '^[0-9a-fA-F]{64}$'
-   and s.status_token_hash = pg_catalog.encode(
-     extensions.digest(pg_catalog.decode(lower(request.value ->> 'status_token'), 'hex'), 'sha256'),
-     'hex'
-   );
+   and case
+     when s.status_token_hash is not null then
+       case
+         when (request.value ->> 'status_token') ~ '^[0-9a-fA-F]{64}$' then
+           s.status_token_hash = pg_catalog.encode(
+             extensions.digest(
+               pg_catalog.decode(lower(request.value ->> 'status_token'), 'hex'),
+               'sha256'
+             ),
+             'hex'
+           )
+         else false
+       end
+     when s.status_token_hash is null then
+       s.id::text = lower(coalesce(request.value ->> 'submission_id', ''))
+     else false
+   end;
+
   return result;
 end;
 $function$;

@@ -190,7 +190,7 @@ public class MainActivity extends Activity {
                     connection.setReadTimeout(25000);
                     connection.setUseCaches(false);
                     connection.setInstanceFollowRedirects(false);
-                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.38 Android");
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.39 Android");
                     connection.setRequestProperty("Accept", "application/json");
                     JSONObject headers = new JSONObject(headersJson == null ? "{}" : headersJson);
                     java.util.Iterator<String> keys = headers.keys();

@@ -308,19 +308,26 @@
       records = JSON.parse(localStorage.getItem(storageKey) || "[]");
     } catch (ignored) { return 0; }
     if (!Array.isArray(records)) return 0;
+    // cloudSubmissionId is also a high-entropy UUID. It permits status retrieval
+    // for rows created before receipt-token support, but only when the database
+    // has no token hash. Newer rows still require the private 256-bit receipt.
     const eligible = records.filter(function (record) {
-      return record && record.id && record.cloudStatusToken && record.cloudSyncStatus === "synced";
+      return record && record.id && record.cloudSubmissionId && record.cloudSyncStatus === "synced";
     });
     if (!eligible.length) return 0;
     let changed = 0;
     for (let offset = 0; offset < eligible.length; offset += 60) {
       const batch = eligible.slice(offset, offset + 60);
       const lookups = batch.map(function (record) {
-        return {
+        const lookup = {
           client_record_id: String(record.id),
           submission_type: "product",
-          status_token: String(record.cloudStatusToken)
+          submission_id: String(record.cloudSubmissionId)
         };
+        if (/^[0-9a-fA-F]{64}$/.test(String(record.cloudStatusToken || ""))) {
+          lookup.status_token = String(record.cloudStatusToken);
+        }
+        return lookup;
       });
       const rows = await api("POST", "/rest/v1/rpc/get_fosch_submission_statuses",
         JSON.stringify({ p_lookups: lookups }));
@@ -329,12 +336,13 @@
         const record = batch.find(function (entry) { return String(entry.id) === String(row.client_record_id); });
         if (!record || !["pending", "approved", "rejected"].includes(String(row.status || ""))) return;
         const reason = String(row.rejection_reason || "");
+        const reviewedAt = String(row.reviewed_at || row.updated_at || "");
         if (record.cloudReviewStatus !== row.status ||
             String(record.cloudReviewRejectionReason || "") !== reason ||
-            String(record.cloudReviewAt || "") !== String(row.reviewed_at || "")) {
+            String(record.cloudReviewAt || "") !== reviewedAt) {
           record.cloudReviewStatus = row.status;
           record.cloudReviewRejectionReason = reason;
-          record.cloudReviewAt = row.reviewed_at || row.updated_at || "";
+          record.cloudReviewAt = reviewedAt;
           persistLocalRecord(record, storageKey);
           changed++;
         }
@@ -342,7 +350,6 @@
     }
     return changed;
   }
-
   async function listAuditLog() {
     const rows = await api("GET", "/rest/v1/admin_audit_log?select=*&order=created_at.desc&limit=500");
     return Array.isArray(rows) ? rows : [];
