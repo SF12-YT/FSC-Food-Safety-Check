@@ -186,8 +186,31 @@
   function findItem(kind, id) {
     const records = kind === "product" ? contributions : correctionReports;
     if (!Array.isArray(records)) return null;
-    const index = records.findIndex(function (record) { return String(record.id || "") === String(id || ""); });
-    return index < 0 ? null : { kind: kind, id: String(id), record: records[index], index: index, records: records };
+    const requested = String(id == null ? "" : id);
+    let index = records.findIndex(function (record) {
+      if (!record) return false;
+      return String(record.id == null ? "" : record.id) === requested ||
+        String(record._remoteId == null ? "" : record._remoteId) === requested ||
+        (record._foschRemote && "cloud-" + String(record._remoteId || "") === requested);
+    });
+
+    // Compatibility for cards rendered by older builds, which removed punctuation
+    // from IDs before placing them in inline action handlers. Only use this fallback
+    // when it identifies exactly one record; never guess between collisions.
+    if (index < 0) {
+      const wanted = safeId(requested);
+      const matches = [];
+      records.forEach(function (record, candidateIndex) {
+        if (!record) return;
+        const ids = [record.id, record._remoteId,
+          record._foschRemote ? "cloud-" + String(record._remoteId || "") : ""];
+        if (ids.some(function (value) { return value != null && safeId(value) === wanted; })) {
+          matches.push(candidateIndex);
+        }
+      });
+      if (matches.length === 1) index = matches[0];
+    }
+    return index < 0 ? null : { kind: kind, id: String(records[index].id || requested), record: records[index], index: index, records: records };
   }
   function itemLabel(item) {
     if (item.kind === "correction") return correctionDraftProductName(item.record) || "Product correction";
@@ -275,7 +298,7 @@
     const status = !record._foschRemote
       ? "Local draft · not shared"
       : (rejected ? "Rejected" : (isApproved(record) ? "Approved" : "Pending review"));
-    const id = safeId(item.id);
+    const id = urlArg(item.id);
     const type = item.kind;
     const brandCall = brand ? "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Capture brand logo</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Upload brand logo</button>" : "";
     const rejectionDetails = rejected
@@ -283,15 +306,15 @@
         (record._foschRemote ? "<small>Stored with the shared submission record.</small>" :
         "<small>Retained on this device until " + esc(record.rejectionExpiresAt ? new Date(record.rejectionExpiresAt).toLocaleString() : "seven-day expiry") + ".</small>") + "</div>"
       : "";
-    const rejectButton = rejected || !record._foschRemote ? "" : "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.reject('" + type + "','" + id + "')\">Reject</button>";
-    const localSyncButton = !record._foschRemote ? "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.retrySync('" + type + "','" + id + "')\">Retry shared upload</button>" : "";
+    const rejectButton = rejected || !record._foschRemote ? "" : "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.reject('" + type + "',decodeURIComponent('" + id + "'))\">Reject</button>";
+    const localSyncButton = !record._foschRemote ? "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.retrySync('" + type + "',decodeURIComponent('" + id + "'))\">Retry shared upload</button>" : "";
     const localSyncMessage = !record._foschRemote ? "<div class=\"warning\"><b>Local draft — not yet in Supabase.</b><small>" + esc(record.cloudSyncError || (record.cloudSyncStatus === "syncing" ? "Upload in progress." : "This device copy cannot be approved as a shared submission.")) + "</small></div>" : "";
-    const approveButton = rejected || !record._foschRemote ? "" : "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.approve('" + type + "','" + id + "')\">" + (isApproved(record) ? "Re-approve" : "Approve") + "</button>";
+    const approveButton = rejected || !record._foschRemote ? "" : "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.approve('" + type + "',decodeURIComponent('" + id + "'))\">" + (isApproved(record) ? "Re-approve" : "Approve") + "</button>";
     // Official product media actions belong on both local drafts and shared
     // submissions. Previously these were accidentally hidden for every remote row.
     const localMediaButtons =
-      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureOfficialPhoto('" + type + "','" + id + "')\">Capture official photo</button>" +
-      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadOfficialPhoto('" + type + "','" + id + "')\">Upload image from device</button>";
+      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureOfficialPhoto('" + type + "',decodeURIComponent('" + id + "'))\">Capture official photo</button>" +
+      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadOfficialPhoto('" + type + "',decodeURIComponent('" + id + "'))\">Upload image from device</button>";
     return "<article class=\"admin-submission-card\">" +
       "<div class=\"admin-submission-top\"><div><div class=\"admin-submission-title\">" + esc(title) + "</div>" +
       (brand ? "<div class=\"admin-submission-meta\">" + esc(brand) + "</div>" : "") +
@@ -302,9 +325,9 @@
       imagePreview(record) + rejectionDetails + localSyncMessage + nutritionMarkup(record) +
       "<div class=\"admin-submission-meta\">" + esc(record.ingredients || (record.suggestedProduct && record.suggestedProduct.ingredients) || record.message || "No ingredient details supplied") + "</div>" +
       "<div class=\"admin-action-grid\">" + approveButton +
-      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.edit('" + type + "','" + id + "')\">Edit submission</button>" +
+      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.edit('" + type + "',decodeURIComponent('" + id + "'))\">Edit submission</button>" +
       localMediaButtons + brandCall + localSyncButton + rejectButton +
-      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.remove('" + type + "','" + id + "')\">Delete</button>" +
+      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.remove('" + type + "',decodeURIComponent('" + id + "'))\">Delete</button>" +
       "</div></article>";
   }
 
