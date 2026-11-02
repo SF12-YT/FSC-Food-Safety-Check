@@ -194,8 +194,8 @@ public class MainActivity extends Activity {
                     while (keys.hasNext()) {
                         String name = keys.next();
                         String value = headers.optString(name, "");
-                        if (value.isEmpty() || name.indexOf('\\r') >= 0 || name.indexOf('\\n') >= 0 ||
-                            value.indexOf('\\r') >= 0 || value.indexOf('\\n') >= 0) continue;
+                        if (value.isEmpty() || name.indexOf(13) >= 0 || name.indexOf(10) >= 0 ||
+                            value.indexOf(13) >= 0 || value.indexOf(10) >= 0) continue;
                         if (name.equalsIgnoreCase("apikey") || name.equalsIgnoreCase("Authorization") ||
                             name.equalsIgnoreCase("Content-Type") || name.equalsIgnoreCase("Prefer") ||
                             name.equalsIgnoreCase("x-upsert") || name.equalsIgnoreCase("Accept")) {
