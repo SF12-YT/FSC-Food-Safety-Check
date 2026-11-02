@@ -175,6 +175,31 @@
     return { mime: mime, extension: ext, base64: match[2] };
   }
 
+  function photoContentKey(base64) {
+    // A deterministic non-security fingerprint keeps the same photo path stable
+    // across retries, while changed photo bytes receive a fresh immutable path.
+    let first = 2166136261;
+    let second = 0x9e3779b9;
+    const value = String(base64 || "");
+    for (let i = 0; i < value.length; i++) {
+      const code = value.charCodeAt(i);
+      first = Math.imul(first ^ code, 16777619);
+      second = Math.imul(second ^ code, 0x85ebca6b);
+    }
+    return (first >>> 0).toString(16).padStart(8, "0") +
+      (second >>> 0).toString(16).padStart(8, "0");
+  }
+
+  function isAlreadyExistingStorageObject(error) {
+    const details = error && error.details && typeof error.details === "object" ? error.details : {};
+    const code = String(details.code || details.error || error && error.code || "");
+    const message = String(details.message || error && error.message || "");
+    const status = Number(error && (error.status || error.statusCode) ||
+      details.statusCode || details.httpStatusCode || 0);
+    return /^(ResourceAlreadyExists|KeyAlreadyExists|already_exists|Duplicate)$/i.test(code) ||
+      (status === 409 && /resource already exists|already exists/i.test(message));
+  }
+
   async function uploadSubmissionPhotos(submissionId, photos) {
     const paths = [];
     const source = Array.isArray(photos) ? photos : [];
@@ -182,7 +207,8 @@
       const image = String(source[i] || "");
       if (!image.startsWith("data:image/")) continue;
       const parsed = dataUrlParts(image);
-      const path = "submissions/" + submissionId + "/" + (i + 1) + "." + parsed.extension;
+      const path = "submissions/" + submissionId + "/" + (i + 1) + "-" +
+        photoContentKey(parsed.base64) + "." + parsed.extension;
       try {
         await api("POST", "/storage/v1/object/" + BUCKET + "/" + path, parsed.base64, {
           contentType: parsed.mime,
@@ -190,12 +216,60 @@
           upsert: false
         });
       } catch (error) {
-        // Retrying an already-uploaded immutable file is safe; Storage returns 409.
-        if (error.status !== 409) throw error;
+        // A matching content-addressed object means an earlier retry already stored
+        // these exact bytes. Do not mistake other 409/conflict errors for success.
+        if (!isAlreadyExistingStorageObject(error)) throw error;
       }
       paths.push(path);
     }
     return paths;
+  }
+
+  async function findExistingSubmission(record, submissionType) {
+    const lookup = {
+      client_record_id: String(record.id || ""),
+      submission_type: String(submissionType || ""),
+      submission_id: String(record.cloudSubmissionId || "")
+    };
+    if (/^[0-9a-fA-F]{64}$/.test(String(record.cloudStatusToken || ""))) {
+      lookup.status_token = String(record.cloudStatusToken);
+    }
+    const rows = await api("POST", "/rest/v1/rpc/get_fosch_submission_statuses",
+      JSON.stringify({ p_lookups: [lookup] }));
+    if (!Array.isArray(rows)) return null;
+    return rows.find(function (row) {
+      return String(row.client_record_id || "") === String(record.id || "") &&
+        String(row.submission_type || "") === String(submissionType || "");
+    }) || null;
+  }
+
+  function adoptExistingSubmission(record, row, storageKey) {
+    if (!record || !row || !["pending", "approved", "rejected"].includes(String(row.status || ""))) {
+      return false;
+    }
+    record.cloudSyncStatus = "synced";
+    record.cloudSyncError = "";
+    record.cloudReviewStatus = row.status;
+    record.status = row.status === "approved" ? "approved-cloud" :
+      (row.status === "rejected" ? "rejected-cloud" : "pending-cloud");
+    record.cloudReviewRejectionReason = String(row.rejection_reason || "");
+    record.cloudReviewAt = String(row.reviewed_at || row.updated_at || "");
+    persistLocalRecord(record, storageKey);
+    if (row.status === "approved" && typeof window.FOSCHApplyCloudApproval === "function") {
+      try { window.FOSCHApplyCloudApproval(record); }
+      catch (error) { console.warn("FOSCH could not promote an already-approved product:", error); }
+    }
+    return true;
+  }
+
+  function isDuplicateSubmissionInsert(error) {
+    const details = error && error.details && typeof error.details === "object" ? error.details : {};
+    const code = String(details.code || error && error.code || "");
+    const message = String(details.message || error && error.message || "");
+    const status = Number(error && (error.status || error.statusCode) ||
+      details.statusCode || details.httpStatusCode || 0);
+    return code === "23505" || status === 409 ||
+      /duplicate key|resource already exists|already exists/i.test(message);
   }
 
   async function queueSubmission(record, kind) {
@@ -204,6 +278,7 @@
     const storageKey = kind === "product" ? "fosch-contrib" : "fosch-corrections";
     const submissionType = kind === "product" ? "product" :
       (kind === "product_correction" ? "product_correction" : "correction");
+    const hadSubmissionId = !!record.cloudSubmissionId;
     const submissionId = record.cloudSubmissionId || uuid();
     record.cloudSubmissionId = submissionId;
     record.cloudStatusToken = record.cloudStatusToken || createStatusToken();
@@ -212,6 +287,21 @@
     record.cloudSyncError = "";
     persistLocalRecord(record, storageKey);
     try {
+      // A previous attempt may have created the database row but lost its response.
+      // Check the private receipt first so we don't upload the same evidence again.
+      if (hadSubmissionId) {
+        try {
+          const existing = await findExistingSubmission(record, submissionType);
+          if (adoptExistingSubmission(record, existing, storageKey)) {
+            return { ok: true, id: submissionId, alreadyExists: true };
+          }
+        } catch (lookupError) {
+          // Older projects may not yet have the receipt RPC installed. Continue with
+          // the normal upload path and preserve the original upload error if it fails.
+          console.warn("FOSCH existing-submission check was unavailable:", lookupError);
+        }
+      }
+
       const photos = Array.isArray(record.photos) ? record.photos : (record.photo ? [record.photo] : []);
       const photoPaths = await uploadSubmissionPhotos(submissionId, photos);
       const payload = JSON.parse(JSON.stringify(record));
@@ -240,10 +330,22 @@
         submitted_by: null,
         submitted_at: record.date || new Date().toISOString()
       };
-      await api("POST",
-        "/rest/v1/product_submissions?on_conflict=submission_type%2Cclient_record_id",
-        JSON.stringify(body),
-        { prefer: "resolution=ignore-duplicates,return=minimal" });
+      try {
+        await api("POST",
+          "/rest/v1/product_submissions?on_conflict=submission_type%2Cclient_record_id",
+          JSON.stringify(body),
+          { prefer: "resolution=ignore-duplicates,return=minimal" });
+      } catch (insertError) {
+        // A primary-key race can still report a duplicate even with the client
+        // reference conflict target. Only suppress it when the private receipt
+        // confirms the exact submission is already present in Supabase.
+        if (!isDuplicateSubmissionInsert(insertError)) throw insertError;
+        let existing = null;
+        try { existing = await findExistingSubmission(record, submissionType); }
+        catch (lookupError) { throw insertError; }
+        if (!adoptExistingSubmission(record, existing, storageKey)) throw insertError;
+        return { ok: true, id: submissionId, alreadyExists: true };
+      }
       record.cloudSyncStatus = "synced";
       record.cloudSyncError = "";
       persistLocalRecord(record, storageKey);
