@@ -262,16 +262,6 @@
     return true;
   }
 
-  function isDuplicateSubmissionInsert(error) {
-    const details = error && error.details && typeof error.details === "object" ? error.details : {};
-    const code = String(details.code || error && error.code || "");
-    const message = String(details.message || error && error.message || "");
-    const status = Number(error && (error.status || error.statusCode) ||
-      details.statusCode || details.httpStatusCode || 0);
-    return code === "23505" || status === 409 ||
-      /duplicate key|resource already exists|already exists/i.test(message);
-  }
-
   async function queueSubmission(record, kind) {
     if (!record || !record.id) return { ok: false, queued: true, message: "The local record has no ID." };
     if (record.cloudSyncStatus === "synced" && record.cloudSubmissionId) return { ok: true, id: record.cloudSubmissionId };
@@ -330,20 +320,19 @@
         submitted_by: null,
         submitted_at: record.date || new Date().toISOString()
       };
-      try {
-        await api("POST",
-          "/rest/v1/product_submissions?on_conflict=submission_type%2Cclient_record_id",
-          JSON.stringify(body),
-          { prefer: "resolution=ignore-duplicates,return=minimal" });
-      } catch (insertError) {
-        // A primary-key race can still report a duplicate even with the client
-        // reference conflict target. Only suppress it when the private receipt
-        // confirms the exact submission is already present in Supabase.
-        if (!isDuplicateSubmissionInsert(insertError)) throw insertError;
-        let existing = null;
-        try { existing = await findExistingSubmission(record, submissionType); }
-        catch (lookupError) { throw insertError; }
-        if (!adoptExistingSubmission(record, existing, storageKey)) throw insertError;
+      // Submit through a narrowly-scoped SECURITY DEFINER RPC instead of
+      // relying on direct INSERT privileges for the mobile anon/authenticated role.
+      // The RPC accepts only public submission fields and always forces pending status.
+      const inserted = await api("POST",
+        "/rest/v1/rpc/submit_fosch_product_submission",
+        JSON.stringify({ p_submission: body }));
+      if (inserted !== true) {
+        // The client reference already exists. Treat it as success only when the
+        // private receipt proves this exact local draft created that row.
+        const existing = await findExistingSubmission(record, submissionType);
+        if (!adoptExistingSubmission(record, existing, storageKey)) {
+          throw new Error("A submission with this draft reference already exists, but its private receipt did not match. Your local draft has been retained.");
+        }
         return { ok: true, id: submissionId, alreadyExists: true };
       }
       record.cloudSyncStatus = "synced";
