@@ -10,6 +10,52 @@
   let pendingMedia = null;
   let auditLog = [];
   let remoteAuditLog = [];
+  const NUTRITION_FIELDS = [
+    {key:"energy",label:"Energy"},{key:"protein",label:"Protein"},{key:"gluten",label:"Gluten"},
+    {key:"fatTotal",label:"Fat total"},{key:"saturated",label:"Saturated"},{key:"trans",label:"Trans"},
+    {key:"polyunsaturated",label:"Polyunsaturated"},{key:"monounsaturated",label:"Monounsaturated"},
+    {key:"carbohydrate",label:"Carbohydrate"},{key:"sugars",label:"Sugar"},{key:"lactose",label:"Lactose"},
+    {key:"galactose",label:"Galactose"},{key:"dietaryFibre",label:"Dietary fibre"},
+    {key:"cholesterol",label:"Cholesterol"},{key:"sodium",label:"Sodium"},{key:"calcium",label:"Calcium"},
+    {key:"liveCultures",label:"Live cultures",noDI:true}
+  ];
+  function nutritionProduct(record){return record&&record.suggestedProduct&&typeof record.suggestedProduct==="object"?record.suggestedProduct:(record||{});}
+  function normaliseAdminNutrition(value){
+    const n=value&&typeof value==="object"&&!Array.isArray(value)?value:{};
+    return {servings:String(n.servings==null?"":n.servings),servingSize:String(n.servingSize==null?"":n.servingSize),
+      perServing:n.perServing&&typeof n.perServing==="object"?n.perServing:{},
+      dailyIntakePerServing:n.dailyIntakePerServing&&typeof n.dailyIntakePerServing==="object"?n.dailyIntakePerServing:{},
+      per100g:n.per100g&&typeof n.per100g==="object"?n.per100g:{}};
+  }
+  function nutritionMarkup(record){
+    const product=nutritionProduct(record);
+    const n=normaliseAdminNutrition(product.nutritionInfo||product.nutrition||(record&&(record.nutritionInfo||record.nutrition)));
+    const populated=NUTRITION_FIELDS.filter(f=>String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim());
+    if(!n.servings&&!n.servingSize&&!populated.length)return "";
+    const rows=populated.map(f=>"<div class=\"admin-nutrition-row\"><b>"+esc(f.label)+"</b><span>"+esc(n.perServing[f.key]||"—")+"</span><span>"+(f.noDI?"Not applicable":esc(n.dailyIntakePerServing[f.key]||"—"))+"</span><span>"+esc(n.per100g[f.key]||"—")+"</span></div>").join("");
+    return "<details class=\"admin-nutrition\"><summary>Nutrition information ("+populated.length+" nutrients)</summary>"+
+      (n.servings?"<small>Servings: "+esc(n.servings)+"</small>":"")+(n.servingSize?"<small>Serving size: "+esc(n.servingSize)+"</small>":"")+
+      (rows?"<div class=\"admin-nutrition-grid\"><b>Nutrient</b><b>Per serving</b><b>% DI</b><b>Per 100 g</b>"+rows+"</div>":"")+"</details>";
+  }
+  function nutritionEditorMarkup(product){
+    const n=normaliseAdminNutrition(product&&(product.nutritionInfo||product.nutrition));
+    const rows=NUTRITION_FIELDS.map(f=>"<div class=\"admin-nutrition-edit-row\"><b>"+esc(f.label)+"</b>"+
+      "<input class=\"field\" id=\"adminNutritionServing_"+f.key+"\" aria-label=\""+esc(f.label)+" per serving\" value=\""+esc(n.perServing[f.key]||"")+"\" placeholder=\"Per serving\">"+
+      "<input class=\"field\" id=\"adminNutritionDI_"+f.key+"\" aria-label=\""+esc(f.label)+" daily intake\" value=\""+esc(n.dailyIntakePerServing[f.key]||"")+"\" placeholder=\""+(f.noDI?"Not applicable":"% DI")+"\" "+(f.noDI?"disabled":"")+">"+
+      "<input class=\"field\" id=\"adminNutrition100g_"+f.key+"\" aria-label=\""+esc(f.label)+" per 100 g\" value=\""+esc(n.per100g[f.key]||"")+"\" placeholder=\"Per 100 g\"></div>").join("");
+    return "<details class=\"admin-nutrition admin-nutrition-editor\"><summary>Edit nutrition information</summary>"+
+      "<label for=\"adminNutritionServings\">Servings</label><input class=\"field\" id=\"adminNutritionServings\" value=\""+esc(n.servings)+"\">"+
+      "<label for=\"adminNutritionServingSize\">Serving size</label><input class=\"field\" id=\"adminNutritionServingSize\" value=\""+esc(n.servingSize)+"\">"+
+      "<div class=\"admin-nutrition-edit-grid\"><b>Nutrient</b><b>Per serving</b><b>% DI</b><b>Per 100 g</b>"+rows+"</div>"+
+      "<small>Values are saved in the submission JSON payload. Keep the printed units; FOSCH does not calculate missing values.</small></details>";
+  }
+  function readAdminNutritionFromForm(){
+    const val=id=>{const el=document.getElementById(id);return el?String(el.value||"").trim():"";};
+    const n={servings:val("adminNutritionServings"),servingSize:val("adminNutritionServingSize"),perServing:{},dailyIntakePerServing:{},per100g:{}};
+    NUTRITION_FIELDS.forEach(f=>{n.perServing[f.key]=val("adminNutritionServing_"+f.key);n.dailyIntakePerServing[f.key]=f.noDI?"":val("adminNutritionDI_"+f.key);n.per100g[f.key]=val("adminNutrition100g_"+f.key);});
+    const has=!!(n.servings||n.servingSize||NUTRITION_FIELDS.some(f=>n.perServing[f.key]||n.dailyIntakePerServing[f.key]||n.per100g[f.key]));
+    return has?n:null;
+  }
   try {
     const stored = JSON.parse(localStorage.getItem(AUDIT_KEY) || "[]");
     if (Array.isArray(stored)) auditLog = stored;
@@ -76,6 +122,7 @@
     function stillNeedsReview(record) {
       if (!record) return false;
       if (record._foschRemote) return String(record.status || "").toLowerCase() === "pending-cloud";
+      if (record.cloudSyncStatus === "synced" && record.cloudSubmissionId) return false;
       const status = String(record.status || "").toLowerCase();
       return status.indexOf("approved") !== 0 && status.indexOf("rejected") !== 0;
     }
@@ -234,8 +281,10 @@
         (record._foschRemote ? "<small>Stored with the shared submission record.</small>" :
         "<small>Retained on this device until " + esc(record.rejectionExpiresAt ? new Date(record.rejectionExpiresAt).toLocaleString() : "seven-day expiry") + ".</small>") + "</div>"
       : "";
-    const rejectButton = rejected ? "" : "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.reject('" + type + "','" + id + "')\">Reject</button>";
-    const approveButton = rejected ? "" : "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.approve('" + type + "','" + id + "')\">" + (isApproved(record) ? "Re-approve" : "Approve") + "</button>";
+    const rejectButton = rejected || !record._foschRemote ? "" : "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.reject('" + type + "','" + id + "')\">Reject</button>";
+    const localSyncButton = !record._foschRemote ? "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.retrySync('" + type + "','" + id + "')\">Retry shared upload</button>" : "";
+    const localSyncMessage = !record._foschRemote ? "<div class=\"warning\"><b>Local draft — not yet in Supabase.</b><small>" + esc(record.cloudSyncError || (record.cloudSyncStatus === "syncing" ? "Upload in progress." : "This device copy cannot be approved as a shared submission.")) + "</small></div>" : "";
+    const approveButton = rejected || !record._foschRemote ? "" : "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.approve('" + type + "','" + id + "')\">" + (isApproved(record) ? "Re-approve" : "Approve") + "</button>";
     const localMediaButtons = record._foschRemote ? "" :
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureOfficialPhoto('" + type + "','" + id + "')\">Capture official photo</button>" +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadOfficialPhoto('" + type + "','" + id + "')\">Upload image from device</button>";
@@ -246,11 +295,11 @@
       esc(record.barcode || (record.suggestedProduct && record.suggestedProduct.barcode) || "No barcode") + "</div>" +
       "<div class=\"admin-submission-meta\">" + esc(record.date ? new Date(record.date).toLocaleString() : "Date not recorded") + "</div></div>" +
       "<span class=\"admin-status " + (isApproved(record) ? "approved" : "") + "\">" + esc(status) + "</span></div>" +
-      imagePreview(record) + rejectionDetails +
+      imagePreview(record) + rejectionDetails + localSyncMessage + nutritionMarkup(record) +
       "<div class=\"admin-submission-meta\">" + esc(record.ingredients || (record.suggestedProduct && record.suggestedProduct.ingredients) || record.message || "No ingredient details supplied") + "</div>" +
       "<div class=\"admin-action-grid\">" + approveButton +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.edit('" + type + "','" + id + "')\">Edit submission</button>" +
-      localMediaButtons + brandCall + rejectButton +
+      localMediaButtons + brandCall + localSyncButton + rejectButton +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.remove('" + type + "','" + id + "')\">Delete</button>" +
       "</div></article>";
   }
@@ -289,14 +338,19 @@
   function dashboardMarkup() {
     if (!authenticated) return "<section class=\"panel\"><p>Admin session expired. Please sign in again.</p></section>";
     const items = getItems();
-    const sharedCount = items.filter(function (item) { return !!item.record._foschRemote; }).length;
-    const localCount = items.length - sharedCount;
-    const submissions = items.length ? items.map(submissionCard).join("") :
-      "<section class=\"panel empty\"><h3>No submissions yet</h3><p class=\"muted\">Shared submissions and local drafts will appear here.</p></section>";
+    const sharedItems = items.filter(function (item) { return !!item.record._foschRemote; });
+    const localItems = items.filter(function (item) { return !item.record._foschRemote; });
+    const submissions = sharedItems.length
+      ? sharedItems.map(submissionCard).join("")
+      : "<section class=\"panel empty\"><h3>No shared submissions awaiting review</h3><p class=\"muted\">Only submissions confirmed in Supabase appear in this queue.</p></section>";
+    const localDrafts = localItems.length
+      ? "<h2>Local drafts — not in Supabase</h2><p class=\"muted\">These records are stored on this device only until their upload succeeds. They cannot be approved or rejected as shared submissions.</p>" + localItems.map(submissionCard).join("")
+      : "";
     const brandMarkup = "<h2>Brand logos</h2><p class=\"muted\">Administrators can capture a logo with the in-app camera or select an image from this device. Images are stored locally on this device.</p>" + brandCardsMarkup();
     const content = activeTab === "activity" ? auditMarkup() :
-      "<p class=\"muted\">" + sharedCount + " shared submission" + (sharedCount === 1 ? "" : "s") +
-      " · " + localCount + " local draft" + (localCount === 1 ? "" : "s") + ".</p>" + submissions + brandMarkup;
+      "<p class=\"muted\">" + sharedItems.length + " shared submission" + (sharedItems.length === 1 ? "" : "s") +
+      " awaiting review · " + localItems.length + " local draft" + (localItems.length === 1 ? "" : "s") + " awaiting upload.</p>" +
+      submissions + localDrafts + brandMarkup;
     return "<div class=\"admin-head\"><div><h1>Admin dashboard</h1><div class=\"admin-submission-meta\">Signed in as " + esc(DEFAULT_EMAIL) + "</div></div><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.logout()\">Sign out</button></div>" +
       "<div class=\"admin-tabs\"><button type=\"button\" class=\"" + (activeTab === "submissions" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('submissions')\">Submissions</button>" +
       "<button type=\"button\" class=\"" + (activeTab === "activity" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('activity')\">Activity log (" + (remoteAuditLog.length + auditLog.length) + ")</button></div>" +
@@ -317,7 +371,9 @@
         "<label for=\"adminEditBarcode\">Barcode</label><input id=\"adminEditBarcode\" class=\"field\" value=\"" + esc(product.barcode || record.barcode || "") + "\">" +
         "<label for=\"adminEditSize\">Package size</label><input id=\"adminEditSize\" class=\"field\" value=\"" + esc(product.sizeLabel || product.size || "") + "\">" +
         "<label for=\"adminEditIngredients\">Ingredients</label><textarea id=\"adminEditIngredients\" class=\"field\" rows=\"5\">" + esc(product.ingredients || "") + "</textarea>" +
-        "<label for=\"adminEditOrigin\">Produced in / Made in</label><input id=\"adminEditOrigin\" class=\"field\" value=\"" + esc(product.producedIn || "") + "\">"
+        "<label for=\"adminEditOrigin\">Produced in / Made in</label><input id=\"adminEditOrigin\" class=\"field\" value=\"" + esc(product.producedIn || "") + "\">" +
+        "<label for=\"adminEditOriginPercentage\">Country-of-origin percentage</label><input id=\"adminEditOriginPercentage\" class=\"field\" value=\"" + esc(product.producedInPercentage == null ? "" : product.producedInPercentage) + "\">" +
+        nutritionEditorMarkup(product)
       : "<label for=\"adminEditTarget\">Correction target</label><input id=\"adminEditTarget\" class=\"field\" value=\"" + esc(record.target || "") + "\">" +
         "<label for=\"adminEditMessage\">Correction details</label><textarea id=\"adminEditMessage\" class=\"field\" rows=\"5\">" + esc(record.message || "") + "</textarea>" +
         "<label for=\"adminEditSource\">Source</label><input id=\"adminEditSource\" class=\"field\" value=\"" + esc(record.source || "") + "\">";
@@ -372,10 +428,40 @@
     page = "adminDashboard";
     render();
   }
+  async function retrySync(kind, id) {
+    if (!requireAdmin()) return;
+    const item = findItem(kind, id);
+    if (!item) { alert("This local draft could not be found."); return; }
+    if (item.record._foschRemote) { alert("This submission is already shared with Supabase."); return; }
+    if (!window.FOSCHCloud) { alert("The Supabase connection is unavailable. The draft remains on this device."); return; }
+    try {
+      const submissionKind = kind === "product" ? "product" :
+        (item.record.kind === "product-correction" ? "product_correction" : "correction");
+      const result = await window.FOSCHCloud.queueSubmission(item.record, submissionKind);
+      if (!result || !result.ok) {
+        alert("The draft is still only on this device. Supabase did not confirm the upload: " +
+          String(result && result.message || item.record.cloudSyncError || "Unknown upload error"));
+      } else {
+        await refreshRemoteData();
+        alert("The submission has been uploaded to Supabase and is now in the shared review queue.");
+      }
+      page = "adminDashboard";
+      render();
+    } catch (error) {
+      alert("The draft remains on this device. Shared upload failed: " + String(error && error.message || error));
+      page = "adminDashboard";
+      render();
+    }
+  }
+
   function approve(kind, id) {
     if (!requireAdmin()) return;
     const item = findItem(kind, id);
     if (!item) { alert("This submission could not be found."); return; }
+    if (!item.record._foschRemote) {
+      alert("This is a local device draft, not a shared Supabase submission. Retry the shared upload first; only successfully uploaded submissions can be approved.");
+      return;
+    }
     if (isRejected(item.record)) { alert("Rejected submissions cannot be approved."); return; }
     const note = prompt("Reason or review note for this approval (at least 10 characters):", "Approved after review");
     if (note === null) return;
@@ -409,6 +495,10 @@
     if (!requireAdmin()) return;
     const item = findItem(kind, id);
     if (!item) { alert("This submission could not be found."); return; }
+    if (!item.record._foschRemote) {
+      alert("This is a local device draft, not a shared Supabase submission. Retry the shared upload before rejecting it.");
+      return;
+    }
     if (isRejected(item.record)) { alert("This submission has already been rejected."); return; }
     const reason = askReason("rejecting this submission");
     if (reason === null) return;
@@ -492,8 +582,15 @@
       product.sizeLabel = String((document.getElementById("adminEditSize") || {}).value || "").trim();
       product.ingredients = String((document.getElementById("adminEditIngredients") || {}).value || "").trim();
       product.producedIn = String((document.getElementById("adminEditOrigin") || {}).value || "").trim();
+      product.producedInPercentage = String((document.getElementById("adminEditOriginPercentage") || {}).value || "").trim();
+      product.nutritionInfo = readAdminNutritionFromForm();
       if (item.kind === "correction") record.suggestedProduct = product;
       Object.assign(record, { brand: product.brand, name: product.name, barcode: product.barcode, sizeLabel: product.sizeLabel, ingredients: product.ingredients });
+      if (item.kind !== "correction") {
+        record.producedIn = product.producedIn;
+        record.producedInPercentage = product.producedInPercentage;
+        record.nutritionInfo = product.nutritionInfo;
+      }
     } else {
       record.target = String((document.getElementById("adminEditTarget") || {}).value || "").trim();
       record.message = String((document.getElementById("adminEditMessage") || {}).value || "").trim();
@@ -513,12 +610,14 @@
         if (item.kind === "correction" && payload.suggestedProduct) {
           payload.suggestedProduct = Object.assign({}, payload.suggestedProduct, {
             brand: product.brand, name: product.name, barcode: product.barcode,
-            sizeLabel: product.sizeLabel, ingredients: product.ingredients, producedIn: product.producedIn
+            sizeLabel: product.sizeLabel, ingredients: product.ingredients, producedIn: product.producedIn,
+            producedInPercentage: product.producedInPercentage, nutritionInfo: product.nutritionInfo
           });
         } else {
           Object.assign(payload, {
             brand: product.brand, name: product.name, barcode: product.barcode,
-            sizeLabel: product.sizeLabel, ingredients: product.ingredients, producedIn: product.producedIn
+            sizeLabel: product.sizeLabel, ingredients: product.ingredients, producedIn: product.producedIn,
+            producedInPercentage: product.producedInPercentage, nutritionInfo: product.nutritionInfo
           });
         }
       } else {
@@ -650,6 +749,7 @@
     renderProductMedia: renderProductMedia,
     setTab: setTab,
     approve: approve,
+    retrySync: retrySync,
     reject: reject,
     remove: remove,
     edit: edit,
