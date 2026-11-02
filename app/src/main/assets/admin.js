@@ -1,8 +1,7 @@
 (function () {
   "use strict";
 
-  const DEFAULT_EMAIL = "admin@admin.org";
-  const DEFAULT_PASSWORD = "admin";
+  let DEFAULT_EMAIL = "Administrator";
   const AUDIT_KEY = "fosch-admin-audit";
   const LOGO_KEY = "fosch-brand-logos";
   let authenticated = false;
@@ -10,6 +9,7 @@
   let editingRef = null;
   let pendingMedia = null;
   let auditLog = [];
+  let remoteAuditLog = [];
   try {
     const stored = JSON.parse(localStorage.getItem(AUDIT_KEY) || "[]");
     if (Array.isArray(stored)) auditLog = stored;
@@ -40,8 +40,8 @@
   }
   function persistRecords() {
     try {
-      localStorage.setItem("fosch-contrib", JSON.stringify(contributions));
-      localStorage.setItem("fosch-corrections", JSON.stringify(correctionReports));
+      localStorage.setItem("fosch-contrib", JSON.stringify(contributions.filter(function (record) { return !record._foschRemote; })));
+      localStorage.setItem("fosch-corrections", JSON.stringify(correctionReports.filter(function (record) { return !record._foschRemote; })));
       return true;
     } catch (error) {
       alert("FOSCH could not save these admin changes on this device. Check available storage and try again.");
@@ -63,6 +63,12 @@
     auditLog = auditLog.slice(0, 500);
     try { localStorage.setItem(AUDIT_KEY, JSON.stringify(auditLog)); }
     catch (error) { alert("The admin action was applied, but the audit log could not be saved. Free some device storage."); }
+    if (window.FOSCHCloud && window.FOSCHCloud.isAdmin()) {
+      window.FOSCHCloud.logAdminEvent(String(action || "Admin action"), {
+        recordType: String(kind || ""), recordId: String(id || ""), recordLabel: String(label || ""),
+        reason: String(reason || ""), details: String(details || "")
+      }).catch(function (error) { console.warn("FOSCH audit sync failed:", error); });
+    }
   }
   function getItems() {
     ensureRecordIds();
@@ -77,6 +83,50 @@
       return String(b.record.date || "").localeCompare(String(a.record.date || ""));
     });
   }
+
+  async function refreshRemoteData() {
+    if (!window.FOSCHCloud || !window.FOSCHCloud.isAdmin()) return;
+    const response = await Promise.all([
+      window.FOSCHCloud.listSubmissions(),
+      window.FOSCHCloud.listAuditLog()
+    ]);
+    contributions = contributions.filter(function (record) { return !record._foschRemote; });
+    correctionReports = correctionReports.filter(function (record) { return !record._foschRemote; });
+    (response[0] || []).forEach(function (row) {
+      const payload = row.payload && typeof row.payload === "object" ? row.payload : {};
+      const record = Object.assign({}, payload, {
+        id: "cloud-" + String(row.id),
+        _foschRemote: true,
+        _remoteId: String(row.id),
+        _remotePayload: payload,
+        date: row.submitted_at || payload.date || "",
+        status: row.status === "approved" ? "approved-cloud" : (row.status === "rejected" ? "rejected-cloud" : "pending-cloud"),
+        rejectionReason: row.rejection_reason || "",
+        adminNote: row.admin_note || "",
+        barcode: row.barcode || payload.barcode || "",
+        brand: row.brand || payload.brand || "",
+        name: row.product_name || payload.name || payload.target || "",
+        sizeLabel: row.package_size || payload.sizeLabel || "",
+        ingredients: row.ingredients || payload.ingredients || "",
+        country: row.country_code || payload.country || "",
+        photos: Array.isArray(row.photo_paths) ? row.photo_paths : []
+      });
+      if (row.submission_type === "product") contributions.push(record);
+      else correctionReports.push(record);
+    });
+    remoteAuditLog = (response[1] || []).map(function (entry) {
+      return {
+        id: "remote-" + entry.id,
+        at: entry.created_at,
+        actor: entry.actor_email || "Administrator",
+        action: entry.action || "Admin action",
+        recordLabel: entry.client_record_id || "",
+        reason: entry.reason || "",
+        details: entry.details ? JSON.stringify(entry.details) : ""
+      };
+    });
+  }
+
   function findItem(kind, id) {
     const records = kind === "product" ? contributions : correctionReports;
     if (!Array.isArray(records)) return null;
@@ -95,7 +145,7 @@
     return String(record.status || "").toLowerCase().indexOf("approved") >= 0;
   }
   function isRejected(record) {
-    return String(record && record.status || "").toLowerCase() === "rejected-local";
+    return String(record && record.status || "").toLowerCase().indexOf("rejected") === 0;
   }
   function removeFromLocalMarketIndex(record) {
     const product = record && (record.suggestedProduct || record);
@@ -268,23 +318,31 @@
     }
     return reason.trim();
   }
-  function signIn(event) {
+  async function signIn(event) {
     if (event && event.preventDefault) event.preventDefault();
     const email = String((document.getElementById("adminEmail") || {}).value || "").trim().toLowerCase();
     const password = String((document.getElementById("adminPass") || {}).value || "");
     const status = document.getElementById("adminLoginStatus");
-    if (email === DEFAULT_EMAIL && password === DEFAULT_PASSWORD) {
+    if (!window.FOSCHCloud) {
+      if (status) status.textContent = "The authentication service is unavailable. Reload FOSCH and try again.";
+      return;
+    }
+    if (status) status.textContent = "Signing in securely…";
+    try {
+      const user = await window.FOSCHCloud.signIn(email, password);
       authenticated = true;
+      DEFAULT_EMAIL = String((user && user.email) || email || "Administrator");
       activeTab = "submissions";
-      writeAudit("Admin sign-in", "", "", "", "", "Temporary local prototype account.");
+      await refreshRemoteData();
+      writeAudit("Admin sign-in", "", "", "", "", "Authenticated through Supabase Auth.");
       page = "adminDashboard";
       pageHistory = [];
       suppressNextHistoryPush = true;
       render();
-      return;
+    } catch (error) {
+      authenticated = false;
+      if (status) status.textContent = String(error && error.message || "Sign-in failed. Check the email and password.");
     }
-    if (status) status.textContent = "The email address or password is incorrect.";
-    writeAudit("Failed admin sign-in", "", "", "", "", "An unsuccessful local sign-in attempt was made.");
   }
   function setTab(tab) {
     if (!requireAdmin()) return;
@@ -495,7 +553,7 @@
     render();
   }
   window.FOSCHAdmin = {
-    isAuthenticated: function () { return authenticated; },
+    isAuthenticated: function () { return authenticated && !!window.FOSCHCloud && window.FOSCHCloud.isAdmin(); },
     isCapturingMedia: isCapturingMedia,
     attemptSignIn: signIn,
     dashboardMarkup: dashboardMarkup,
