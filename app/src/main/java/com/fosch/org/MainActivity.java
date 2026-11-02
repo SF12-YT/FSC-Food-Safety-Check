@@ -169,11 +169,12 @@ public class MainActivity extends Activity {
             final String cleanMethod = clean(method).toUpperCase(Locale.ROOT);
             final String cleanPath = clean(path);
             if (cleanId.isEmpty() ||
-                !(cleanMethod.equals("GET") || cleanMethod.equals("POST") || cleanMethod.equals("PATCH") ||
-                  cleanMethod.equals("PUT") || cleanMethod.equals("DELETE")) ||
+                !(cleanMethod.equals("GET") || cleanMethod.equals("POST") || cleanMethod.equals("DELETE")) ||
                 !(cleanPath.startsWith("/auth/v1/") || cleanPath.startsWith("/rest/v1/") ||
                   cleanPath.startsWith("/storage/v1/")) || cleanPath.contains("..") || cleanPath.contains("#")) {
-                deliverSupabaseResponse(cleanId, 0, "{\\"message\\":\\"Invalid Supabase request\\"}");
+                JSONObject failure = new JSONObject();
+                try { failure.put("message", "Invalid Supabase request"); } catch (Exception ignored) { }
+                deliverSupabaseResponse(cleanId, 0, failure.toString());
                 return;
             }
             new Thread(() -> {
