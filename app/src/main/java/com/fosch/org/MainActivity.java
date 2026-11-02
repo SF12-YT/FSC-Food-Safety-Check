@@ -162,6 +162,78 @@ public class MainActivity extends Activity {
                 );
             });
         }
+
+        @JavascriptInterface public void supabaseRequest(String requestId, String method, String path,
+                String headersJson, String body, boolean base64Body) {
+            final String cleanId = clean(requestId);
+            final String cleanMethod = clean(method).toUpperCase(Locale.ROOT);
+            final String cleanPath = clean(path);
+            if (cleanId.isEmpty() ||
+                !(cleanMethod.equals("GET") || cleanMethod.equals("POST") || cleanMethod.equals("PATCH") ||
+                  cleanMethod.equals("PUT") || cleanMethod.equals("DELETE")) ||
+                !(cleanPath.startsWith("/auth/v1/") || cleanPath.startsWith("/rest/v1/") ||
+                  cleanPath.startsWith("/storage/v1/")) || cleanPath.contains("..") || cleanPath.contains("#")) {
+                deliverSupabaseResponse(cleanId, 0, "{\\"message\\":\\"Invalid Supabase request\\"}");
+                return;
+            }
+            new Thread(() -> {
+                HttpURLConnection connection = null;
+                try {
+                    URL requestUrl = new URL("https://mqgvagftvuybietazbdc.supabase.co" + cleanPath);
+                    connection = (HttpURLConnection) requestUrl.openConnection();
+                    connection.setRequestMethod(cleanMethod);
+                    connection.setConnectTimeout(12000);
+                    connection.setReadTimeout(25000);
+                    connection.setUseCaches(false);
+                    connection.setInstanceFollowRedirects(false);
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.37 Android");
+                    connection.setRequestProperty("Accept", "application/json");
+                    JSONObject headers = new JSONObject(headersJson == null ? "{}" : headersJson);
+                    java.util.Iterator<String> keys = headers.keys();
+                    while (keys.hasNext()) {
+                        String name = keys.next();
+                        String value = headers.optString(name, "");
+                        if (value.isEmpty() || name.indexOf('\\r') >= 0 || name.indexOf('\\n') >= 0 ||
+                            value.indexOf('\\r') >= 0 || value.indexOf('\\n') >= 0) continue;
+                        if (name.equalsIgnoreCase("apikey") || name.equalsIgnoreCase("Authorization") ||
+                            name.equalsIgnoreCase("Content-Type") || name.equalsIgnoreCase("Prefer") ||
+                            name.equalsIgnoreCase("x-upsert") || name.equalsIgnoreCase("Accept")) {
+                            connection.setRequestProperty(name, value);
+                        }
+                    }
+                    if (body != null && !body.isEmpty() && !cleanMethod.equals("GET")) {
+                        connection.setDoOutput(true);
+                        byte[] payload = base64Body
+                            ? Base64.decode(body, Base64.DEFAULT)
+                            : body.getBytes(StandardCharsets.UTF_8);
+                        try (java.io.OutputStream output = connection.getOutputStream()) {
+                            output.write(payload);
+                            output.flush();
+                        }
+                    }
+                    int status = connection.getResponseCode();
+                    InputStream responseStream = status >= 200 && status < 400
+                        ? connection.getInputStream() : connection.getErrorStream();
+                    StringBuilder response = new StringBuilder();
+                    if (responseStream != null) {
+                        try (BufferedReader reader = new BufferedReader(new InputStreamReader(responseStream, StandardCharsets.UTF_8))) {
+                            String line;
+                            while ((line = reader.readLine()) != null) response.append(line);
+                        }
+                    }
+                    deliverSupabaseResponse(cleanId, status, response.toString());
+                } catch (Exception error) {
+                    Log.w(TAG, "Supabase request failed", error);
+                    JSONObject failure = new JSONObject();
+                    try { failure.put("message", error.getMessage() == null ? "Network request failed" : error.getMessage()); }
+                    catch (Exception ignored) { }
+                    deliverSupabaseResponse(cleanId, 0, failure.toString());
+                } finally {
+                    if (connection != null) connection.disconnect();
+                }
+            }, "FOSCH-Supabase").start();
+        }
+
         @JavascriptInterface public void handleHomeBackPress() {
             runOnUiThread(() -> {
                 long now = android.os.SystemClock.elapsedRealtime();
@@ -596,6 +668,18 @@ public class MainActivity extends Activity {
         try { if (cameraPhotoFile != null && cameraPhotoFile.exists()) cameraPhotoFile.delete(); } catch (Exception ignored) { }
         cameraPhotoFile = null;
         cameraPhotoUri = null;
+    }
+
+
+    private void deliverSupabaseResponse(String requestId, int status, String responseBody) {
+        if (view == null) return;
+        String idJson = JSONObject.quote(requestId == null ? "" : requestId);
+        String bodyJson = JSONObject.quote(responseBody == null ? "" : responseBody);
+        runOnUiThread(() -> {
+            if (view != null) view.evaluateJavascript(
+                "window.onFOSCHSupabaseResponse && window.onFOSCHSupabaseResponse(" +
+                idJson + "," + status + "," + bodyJson + ")", null);
+        });
     }
 
     private void registerConnectivityCallback() {
