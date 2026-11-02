@@ -1,4 +1,13 @@
-# FOSCH v0.10.32 — nested ingredient additive detection
+# FOSCH v0.10.33 — ingredient percentage data and comparison
+
+## v0.10.33 changes
+
+- Preserves nested commas and bracket structure in ingredient lists when saving or editing product records.
+- Automatically extracts percentages declared beside ingredients (for example, `Strawberries (9%)`) into structured product data, retaining displayed percentage wording and nested ingredient context.
+- Shows declared percentages on product lookup and saved draft details, and previews extracted values while contributors enter the ingredient list.
+- Adds an on-device ingredient-percentage comparison view for another product saved or cached in the same market. Missing percentages are shown as “Not declared”, never treated as zero.
+- Keeps ingredient percentages separate from Nutrition Information Panel values and %DI.
+- Updated the About page prototype version and bumped Android version to `0.10.33` (`versionCode 44`).
 
 ## v0.10.32 changes
 
