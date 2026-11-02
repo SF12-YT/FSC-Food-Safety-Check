@@ -124,7 +124,10 @@
       if (record._foschRemote) return String(record.status || "").toLowerCase() === "pending-cloud";
       if (record.cloudSyncStatus === "synced" && record.cloudSubmissionId) return false;
       const status = String(record.status || "").toLowerCase();
-      return status.indexOf("approved") !== 0 && status.indexOf("rejected") !== 0;
+      if (status.indexOf("rejected") === 0) return false;
+      // Older builds could mark a device-only draft approved locally. Keep it
+      // visible until it is uploaded; that local flag is not a shared approval.
+      return status.indexOf("approved") !== 0 || status === "approved-local";
     }
     (Array.isArray(contributions) ? contributions : []).forEach(function (record) {
       if (stillNeedsReview(record)) items.push({ kind: "product", id: String(record.id), record: record });
@@ -269,10 +272,9 @@
     const title = itemLabel(item);
     const brand = itemBrand(item);
     const rejected = isRejected(record);
-    const status = rejected
-      ? (record._foschRemote ? "Rejected" : "Rejected · read-only for 7 days")
-      : (isApproved(record) ? (record._foschRemote ? "Approved" : "Approved locally")
-        : (record._foschRemote ? "Pending review" : String(record.status || "Pending review").replace(/-/g, " ")));
+    const status = !record._foschRemote
+      ? "Local draft · not shared"
+      : (rejected ? "Rejected" : (isApproved(record) ? "Approved" : "Pending review"));
     const id = safeId(item.id);
     const type = item.kind;
     const brandCall = brand ? "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Capture brand logo</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Upload brand logo</button>" : "";
