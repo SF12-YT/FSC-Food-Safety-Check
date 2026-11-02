@@ -1,3 +1,12 @@
+# FOSCH v0.10.34 — ingredient percentage parser correction
+
+## v0.10.34 changes
+
+- Detects a percentage before a following square-bracketed compound ingredient group, including `Ricotta Cheese (27%) [Whey (Milk), ...]`.
+- Deduplicates extracted percentages by ingredient path so a declared percentage is shown once even when legacy structured data contains duplicates.
+- Retains nested ingredient context and keeps extracted label percentages separate from nutrition-label %DI.
+- Updated the About page prototype version and bumped Android version to `0.10.34` (`versionCode 45`).
+
 # FOSCH v0.10.33 — ingredient percentage data and comparison
 
 ## v0.10.33 changes
