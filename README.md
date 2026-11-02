@@ -1,4 +1,9 @@
-# FOSCH v0.10.27 — local admin review, ingredient tags and camera refinements
+# FOSCH v0.10.31 — camera text layout fixes
+
+## v0.10.31 changes
+
+- Fixed subtitle and instruction clipping on both the barcode scanner and product capture camera. Heading and hint areas now expand to fit wrapped text, with bounded multi-line text on narrow screens and larger font settings.
+- Bumped Android version to `0.10.31` (`versionCode 42`).
 
 ## v0.10.30 changes
 

@@ -77,9 +77,14 @@ public class ProductCameraActivity extends Activity implements SurfaceHolder.Cal
         subtitle.setText("Keep the label inside the frame");
         subtitle.setTextColor(Color.rgb(196, 208, 226));
         subtitle.setTextSize(11);
+        title.setSingleLine(true);
+        title.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        subtitle.setMaxLines(2);
+        subtitle.setEllipsize(android.text.TextUtils.TruncateAt.END);
         heading.addView(title);
         heading.addView(subtitle);
-        top.addView(heading, new LinearLayout.LayoutParams(0, dp(48), 1));
+        heading.setMinimumHeight(dp(48));
+        top.addView(heading, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
 
         torchButton = button("Flash off", Color.rgb(43, 57, 83));
         torchButton.setOnClickListener(v -> toggleTorch());
@@ -103,7 +108,10 @@ public class ProductCameraActivity extends Activity implements SurfaceHolder.Cal
         hint.setTextColor(Color.rgb(210, 219, 233));
         hint.setTextSize(12);
         hint.setGravity(Gravity.CENTER);
-        LinearLayout.LayoutParams hintParams = new LinearLayout.LayoutParams(-1, dp(30));
+        hint.setMaxLines(2);
+        hint.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        hint.setMinHeight(dp(30));
+        LinearLayout.LayoutParams hintParams = new LinearLayout.LayoutParams(-1, LinearLayout.LayoutParams.WRAP_CONTENT);
         hintParams.bottomMargin = dp(8);
         bottom.addView(hint, hintParams);
 

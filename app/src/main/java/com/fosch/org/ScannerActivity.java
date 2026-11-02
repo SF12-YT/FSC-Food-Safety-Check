@@ -66,9 +66,14 @@ public class ScannerActivity extends Activity {
         subtitle.setText("Barcode scanning starts automatically");
         subtitle.setTextColor(Color.rgb(196, 208, 226));
         subtitle.setTextSize(11);
+        title.setSingleLine(true);
+        title.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        subtitle.setMaxLines(2);
+        subtitle.setEllipsize(android.text.TextUtils.TruncateAt.END);
         heading.addView(title);
         heading.addView(subtitle);
-        toolbar.addView(heading, new LinearLayout.LayoutParams(0, dp(48), 1));
+        heading.setMinimumHeight(dp(48));
+        toolbar.addView(heading, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
 
         torchButton = button("Flash off", Color.rgb(43, 57, 83));
         torchButton.setOnClickListener(v -> toggleTorch());
@@ -93,7 +98,10 @@ public class ScannerActivity extends Activity {
         instruction.setTextColor(Color.rgb(218, 226, 238));
         instruction.setTextSize(12);
         instruction.setGravity(Gravity.CENTER);
-        bottom.addView(instruction, new LinearLayout.LayoutParams(-1, dp(34)));
+        instruction.setMaxLines(2);
+        instruction.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        instruction.setMinHeight(dp(34));
+        bottom.addView(instruction, new LinearLayout.LayoutParams(-1, LinearLayout.LayoutParams.WRAP_CONTENT));
         FrameLayout.LayoutParams bottomParams = new FrameLayout.LayoutParams(-1, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM);
         bottomParams.setMargins(dp(12), 0, dp(12), dp(14));
         root.addView(bottom, bottomParams);
