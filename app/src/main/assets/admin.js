@@ -216,34 +216,39 @@
     const title = itemLabel(item);
     const brand = itemBrand(item);
     const rejected = isRejected(record);
-    const status = rejected ? "Rejected · read-only for 7 days" : (isApproved(record) ? "Approved locally" : String(record.status || "Pending review").replace(/-/g, " "));
+    const status = rejected
+      ? (record._foschRemote ? "Rejected" : "Rejected · read-only for 7 days")
+      : (isApproved(record) ? (record._foschRemote ? "Approved" : "Approved locally")
+        : (record._foschRemote ? "Pending review" : String(record.status || "Pending review").replace(/-/g, " ")));
     const id = safeId(item.id);
     const type = item.kind;
     const brandCall = brand ? "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Capture brand logo</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Upload brand logo</button>" : "";
     const rejectionDetails = rejected
-      ? "<div class=\"warning\"><b>Rejection reason:</b> " + esc(record.rejectionReason || "No reason supplied") + "<small>Retained on this device until " + esc(record.rejectionExpiresAt ? new Date(record.rejectionExpiresAt).toLocaleString() : "seven-day expiry") + ". No remote submission service is connected.</small></div>"
+      ? "<div class=\"warning\"><b>Rejection reason:</b> " + esc(record.rejectionReason || "No reason supplied") +
+        (record._foschRemote ? "<small>Stored with the shared submission record.</small>" :
+        "<small>Retained on this device until " + esc(record.rejectionExpiresAt ? new Date(record.rejectionExpiresAt).toLocaleString() : "seven-day expiry") + ".</small>") + "</div>"
       : "";
     const rejectButton = rejected ? "" : "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.reject('" + type + "','" + id + "')\">Reject</button>";
     const approveButton = rejected ? "" : "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.approve('" + type + "','" + id + "')\">" + (isApproved(record) ? "Re-approve" : "Approve") + "</button>";
+    const localMediaButtons = record._foschRemote ? "" :
+      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureOfficialPhoto('" + type + "','" + id + "')\">Capture official photo</button>" +
+      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadOfficialPhoto('" + type + "','" + id + "')\">Upload image from device</button>";
     return "<article class=\"admin-submission-card\">" +
       "<div class=\"admin-submission-top\"><div><div class=\"admin-submission-title\">" + esc(title) + "</div>" +
       (brand ? "<div class=\"admin-submission-meta\">" + esc(brand) + "</div>" : "") +
-      "<div class=\"admin-submission-meta\">" + esc(type === "product" ? "Product contribution" : "Correction report") + " · " + esc(record.barcode || (record.suggestedProduct && record.suggestedProduct.barcode) || "No barcode") + "</div>" +
+      "<div class=\"admin-submission-meta\">" + esc(type === "product" ? "Product contribution" : "Correction report") + " · " +
+      esc(record.barcode || (record.suggestedProduct && record.suggestedProduct.barcode) || "No barcode") + "</div>" +
       "<div class=\"admin-submission-meta\">" + esc(record.date ? new Date(record.date).toLocaleString() : "Date not recorded") + "</div></div>" +
       "<span class=\"admin-status " + (isApproved(record) ? "approved" : "") + "\">" + esc(status) + "</span></div>" +
-      imagePreview(record) +
-      rejectionDetails +
+      imagePreview(record) + rejectionDetails +
       "<div class=\"admin-submission-meta\">" + esc(record.ingredients || (record.suggestedProduct && record.suggestedProduct.ingredients) || record.message || "No ingredient details supplied") + "</div>" +
-      "<div class=\"admin-action-grid\">" +
-      approveButton +
+      "<div class=\"admin-action-grid\">" + approveButton +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.edit('" + type + "','" + id + "')\">Edit submission</button>" +
-      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureOfficialPhoto('" + type + "','" + id + "')\">Capture official photo</button>" +
-      "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadOfficialPhoto('" + type + "','" + id + "')\">Upload image from device</button>" +
-      brandCall +
-      rejectButton +
+      localMediaButtons + brandCall + rejectButton +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.remove('" + type + "','" + id + "')\">Delete</button>" +
       "</div></article>";
   }
+
   function brandCardsMarkup() {
     const seen = Object.create(null);
     getItems().forEach(function (item) {
@@ -262,9 +267,13 @@
     }).join("");
   }
   function auditMarkup() {
-    if (!auditLog.length) return "<section class=\"panel empty\"><h3>No admin activity yet</h3><p class=\"muted\">Sign-ins, approvals, edits, deletions and media changes will be recorded here.</p></section>";
-    return auditLog.map(function (entry) {
-      return "<article class=\"admin-audit-row\"><b>" + esc(entry.action) + (entry.recordLabel ? " · " + esc(entry.recordLabel) : "") + "</b>" +
+    const entries = remoteAuditLog.concat(auditLog).sort(function (a, b) {
+      return String(b.at || "").localeCompare(String(a.at || ""));
+    });
+    if (!entries.length) return "<section class=\"panel empty\"><h3>No admin activity yet</h3><p class=\"muted\">Sign-ins, approvals, edits and deletions will be recorded here.</p></section>";
+    return entries.map(function (entry) {
+      return "<article class=\"admin-audit-row\"><b>" + esc(entry.action) +
+        (entry.recordLabel ? " · " + esc(entry.recordLabel) : "") + "</b>" +
         "<small>" + esc(entry.at ? new Date(entry.at).toLocaleString() : "Unknown time") + " · " + esc(entry.actor || DEFAULT_EMAIL) + "</small>" +
         (entry.reason ? "<small>Reason: " + esc(entry.reason) + "</small>" : "") +
         (entry.details ? "<small>" + esc(entry.details) + "</small>" : "") +
@@ -274,14 +283,21 @@
   function dashboardMarkup() {
     if (!authenticated) return "<section class=\"panel\"><p>Admin session expired. Please sign in again.</p></section>";
     const items = getItems();
-    const submissions = items.length ? items.map(submissionCard).join("") : "<section class=\"panel empty\"><h3>No local submissions</h3><p class=\"muted\">Product contributions and correction drafts saved on this device will appear here.</p></section>";
-    const brandMarkup = "<h2>Brand logos</h2><p class=\"muted\">Administrators can capture a logo with the in-app camera or select an image from this device. Images are stored locally and shown beside matching brand names on this device.</p>" + brandCardsMarkup();
-    const content = activeTab === "activity" ? auditMarkup() : "<p class=\"muted\">" + items.length + " local record" + (items.length === 1 ? "" : "s") + " available for review.</p>" + submissions + brandMarkup;
+    const sharedCount = items.filter(function (item) { return !!item.record._foschRemote; }).length;
+    const localCount = items.length - sharedCount;
+    const submissions = items.length ? items.map(submissionCard).join("") :
+      "<section class=\"panel empty\"><h3>No submissions yet</h3><p class=\"muted\">Shared submissions and local drafts will appear here.</p></section>";
+    const brandMarkup = "<h2>Brand logos</h2><p class=\"muted\">Administrators can capture a logo with the in-app camera or select an image from this device. Images are stored locally on this device.</p>" + brandCardsMarkup();
+    const content = activeTab === "activity" ? auditMarkup() :
+      "<p class=\"muted\">" + sharedCount + " shared submission" + (sharedCount === 1 ? "" : "s") +
+      " · " + localCount + " local draft" + (localCount === 1 ? "" : "s") + ".</p>" + submissions + brandMarkup;
     return "<div class=\"admin-head\"><div><h1>Admin dashboard</h1><div class=\"admin-submission-meta\">Signed in as " + esc(DEFAULT_EMAIL) + "</div></div><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.logout()\">Sign out</button></div>" +
-      "<div class=\"admin-tabs\"><button type=\"button\" class=\"" + (activeTab === "submissions" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('submissions')\">Submissions</button><button type=\"button\" class=\"" + (activeTab === "activity" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('activity')\">Activity log (" + auditLog.length + ")</button></div>" +
+      "<div class=\"admin-tabs\"><button type=\"button\" class=\"" + (activeTab === "submissions" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('submissions')\">Submissions</button>" +
+      "<button type=\"button\" class=\"" + (activeTab === "activity" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('activity')\">Activity log (" + (remoteAuditLog.length + auditLog.length) + ")</button></div>" +
       content +
-      "<div class=\"warning\">Local prototype only: this queue is not shared with other devices. Approvals and rejections update this device's local product index and drafts only. Rejection notices and seven-day retention are local; there is no remote database deletion or cross-device notification. Admin credentials are embedded in the public client and the local audit log can be modified by anyone with device access. Do not use this as production authentication or moderation infrastructure.</div>";
+      "<div class=\"warning\">Shared product submissions and moderation actions are stored in Supabase. Unsent drafts remain on this device until a network connection is available. Product evidence is stored in a private bucket and is visible to administrators only.</div>";
   }
+
   function editMarkup() {
     if (!authenticated || !editingRef) return "<section class=\"panel\"><p>No submission is selected.</p><button class=\"secondary\" onclick=\"FOSCHAdmin.backToDashboard()\">Back</button></section>";
     const item = findItem(editingRef.kind, editingRef.id);
@@ -355,8 +371,18 @@
     const item = findItem(kind, id);
     if (!item) { alert("This submission could not be found."); return; }
     if (isRejected(item.record)) { alert("Rejected submissions cannot be approved."); return; }
-    const note = prompt("Optional review note for this approval:", "Approved after review");
+    const note = prompt("Reason or review note for this approval (at least 10 characters):", "Approved after review");
     if (note === null) return;
+    if (item.record._foschRemote) {
+      if (!validReason(note)) { alert("Please provide a meaningful review reason of at least 10 characters."); return; }
+      window.FOSCHCloud.adminUpdateSubmission(item.record._remoteId, {
+        status: "approved", admin_note: String(note).trim(), rejection_reason: "",
+        audit_action: "submission_approved"
+      }, String(note).trim()).then(async function () {
+        await refreshRemoteData(); page = "adminDashboard"; render();
+      }).catch(function (error) { alert("The shared submission could not be approved: " + String(error.message || error)); });
+      return;
+    }
     item.record.status = "approved-local";
     item.record.adminReviewedAt = new Date().toISOString();
     item.record.adminReviewedBy = DEFAULT_EMAIL;
@@ -369,7 +395,7 @@
       saveMarketBrand(product.brand || "", product.country || item.record.country || marketCountry);
       saveMarketProduct(Object.assign({}, product, { country: product.country || item.record.country || marketCountry }));
     }
-    writeAudit("Submission approved", kind, id, itemLabel(item), String(note || "").trim(), "Marked approved on this device only; no shared record was changed.");
+    writeAudit("Submission approved", kind, id, itemLabel(item), String(note || "").trim(), "Marked approved on this device only.");
     page = "adminDashboard";
     render();
   }
@@ -380,6 +406,14 @@
     if (isRejected(item.record)) { alert("This submission has already been rejected."); return; }
     const reason = askReason("rejecting this submission");
     if (reason === null) return;
+    if (item.record._foschRemote) {
+      window.FOSCHCloud.adminUpdateSubmission(item.record._remoteId, {
+        status: "rejected", rejection_reason: reason, audit_action: "submission_rejected"
+      }, reason).then(async function () {
+        await refreshRemoteData(); page = "adminDashboard"; render();
+      }).catch(function (error) { alert("The shared submission could not be rejected: " + String(error.message || error)); });
+      return;
+    }
     const previous = JSON.parse(JSON.stringify(item.record));
     const wasApproved = isApproved(item.record);
     const rejectedAt = new Date();
@@ -396,7 +430,7 @@
     }
     if (kind === "product" && wasApproved) removeFromLocalMarketIndex(item.record);
     writeAudit("Submission rejected", kind, id, itemLabel(item), reason,
-      "Marked read-only on this device until " + expiresAt.toISOString() + ". Local product index updated where applicable. No remote moderation database or cross-device notification service exists in this build.");
+      "Marked read-only on this device until " + expiresAt.toISOString() + ".");
     page = "adminDashboard";
     render();
   }
@@ -406,13 +440,22 @@
     if (!item) { alert("This submission could not be found."); return; }
     const reason = askReason("deleting this submission");
     if (reason === null) return;
-    if (!confirm("Delete \"" + itemLabel(item) + "\" from this device? This cannot be undone.")) return;
+    if (!confirm(item.record._foschRemote
+      ? "Delete this shared submission permanently? The reason will be retained in the administrator audit log."
+      : "Delete \"" + itemLabel(item) + "\" from this device? This cannot be undone.")) return;
+    if (item.record._foschRemote) {
+      window.FOSCHCloud.adminDeleteSubmission(item.record._remoteId, reason).then(async function () {
+        await refreshRemoteData(); page = "adminDashboard"; render();
+      }).catch(function (error) { alert("The shared submission could not be deleted: " + String(error.message || error)); });
+      return;
+    }
     item.records.splice(item.index, 1);
     if (!persistRecords()) return;
     writeAudit("Submission deleted", kind, id, itemLabel(item), reason, "Removed from this device's local submission list.");
     page = "adminDashboard";
     render();
   }
+
   function edit(kind, id) {
     if (!requireAdmin()) return;
     if (!findItem(kind, id)) { alert("This submission could not be found."); return; }
@@ -452,6 +495,40 @@
     }
     record.adminEditedAt = new Date().toISOString();
     record.adminEditedBy = DEFAULT_EMAIL;
+    if (record._foschRemote) {
+      const payload = Object.assign({}, record._remotePayload || {});
+      const changes = {};
+      if (structured) {
+        const product = record.suggestedProduct || record;
+        Object.assign(changes, {
+          brand: record.brand, product_name: record.name, barcode: record.barcode,
+          package_size: record.sizeLabel, ingredients: record.ingredients
+        });
+        if (item.kind === "correction" && payload.suggestedProduct) {
+          payload.suggestedProduct = Object.assign({}, payload.suggestedProduct, {
+            brand: product.brand, name: product.name, barcode: product.barcode,
+            sizeLabel: product.sizeLabel, ingredients: product.ingredients, producedIn: product.producedIn
+          });
+        } else {
+          Object.assign(payload, {
+            brand: product.brand, name: product.name, barcode: product.barcode,
+            sizeLabel: product.sizeLabel, ingredients: product.ingredients, producedIn: product.producedIn
+          });
+        }
+      } else {
+        Object.assign(changes, { target: record.target, message: record.message, source: record.source });
+        Object.assign(payload, { target: record.target, message: record.message, source: record.source });
+      }
+      changes.payload = payload;
+      changes.audit_action = "submission_edited";
+      window.FOSCHCloud.adminUpdateSubmission(record._remoteId, changes, reason).then(async function () {
+        await refreshRemoteData();
+        editingRef = null; page = "adminDashboard"; render();
+      }).catch(function (error) {
+        alert("The shared submission could not be saved: " + String(error.message || error));
+      });
+      return;
+    }
     if (!persistRecords()) return;
     if (item.kind === "product" && isApproved(record)) saveMarketProduct(record);
     if (item.kind === "correction" && isApproved(record) && record.suggestedProduct) saveMarketProduct(Object.assign({}, record.suggestedProduct, { country: record.suggestedProduct.country || record.country || marketCountry }));
@@ -460,6 +537,7 @@
     page = "adminDashboard";
     render();
   }
+
   function captureOfficialPhoto(kind, id) {
     if (!requireAdmin()) return;
     if (!findItem(kind, id)) { alert("This submission could not be found."); return; }
@@ -541,17 +619,22 @@
     if (authenticated) { page = "adminDashboard"; render(); }
     return true;
   }
-  function logout() {
+  async function logout() {
     if (!authenticated) return;
     writeAudit("Admin sign-out", "", "", "", "", "Administrator session ended.");
     authenticated = false;
     editingRef = null;
     pendingMedia = null;
+    try { await window.FOSCHCloud.signOut(); } catch (error) { console.warn("FOSCH sign-out warning:", error); }
+    remoteAuditLog = [];
+    contributions = contributions.filter(function (record) { return !record._foschRemote; });
+    correctionReports = correctionReports.filter(function (record) { return !record._foschRemote; });
     page = "adminLogin";
     pageHistory = [];
     suppressNextHistoryPush = true;
     render();
   }
+
   window.FOSCHAdmin = {
     isAuthenticated: function () { return authenticated && !!window.FOSCHCloud && window.FOSCHCloud.isAdmin(); },
     isCapturingMedia: isCapturingMedia,
