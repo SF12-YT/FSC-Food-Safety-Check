@@ -348,7 +348,8 @@
   }
   function renderProductMedia(product) {
     if(!product)return"";
-    const brands=String(product.brand||product.brands||"").split(/[,;|/]+/).map(v=>v.trim()).filter(Boolean);
+    const fullBrand=String(product.brand||product.brands||"").trim();
+    const brands=Array.from(new Set([fullBrand].concat(fullBrand.split(/[,;|/]+/).map(v=>v.trim())).filter(Boolean)));
     for(const brand of brands){
       const logo=logoFor(brand);
       const publicUrl=window.FOSCHCloud&&window.FOSCHCloud.publicBrandLogoUrl?window.FOSCHCloud.publicBrandLogoUrl(brand):"";
