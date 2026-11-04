@@ -487,14 +487,16 @@ const POTENTIAL_ALLERGEN_TERMS=[
 function detectPotentialAllergens(raw){
  const text=String(raw||"");
  return POTENTIAL_ALLERGEN_TERMS.map(group=>{
-  const matches=group.terms.filter(term=>!!normalizedPhraseRange(text,term));
-  return matches.length?{label:group.label,matches:matches.slice(0,4)}:null;
+  const matches=[];
+  const terms=group.terms.slice().sort((a,b)=>normaliseIngredientName(b).length-normaliseIngredientName(a).length);
+  terms.forEach(term=>{const range=normalizedPhraseRange(text,term);if(!range)return;if(matches.some(hit=>range.start<hit.end&&range.end>hit.start))return;matches.push({term,start:range.start,end:range.end})});
+  return matches.length?{label:group.label,matches:matches.map(hit=>hit.term)}:null;
  }).filter(Boolean);
 }
 function renderPotentialAllergens(ingredients,mayContain){
  const direct=detectPotentialAllergens(ingredients),precautionary=detectPotentialAllergens(mayContain);
  if(!direct.length&&!precautionary.length)return "";
- const line=items=>items.map(x=>esc(x.label)+(x.matches.length>1?" ("+esc(x.matches.join(", "))+")":"")).join(" · ");
+ const line=items=>items.map(x=>esc(x.label)+" ("+esc(x.matches.join(", "))+")").join(" · ");
  return '<div class="info"><b>Potential allergen terms detected</b>'+
   (direct.length?'<p><b>In ingredients:</b> '+line(direct)+'</p>':"")+
   (precautionary.length?'<p><b>In “May contain”:</b> '+line(precautionary)+'</p>':"")+
