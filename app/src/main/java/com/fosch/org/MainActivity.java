@@ -195,7 +195,7 @@ public class MainActivity extends Activity {
                     connection.setReadTimeout(25000);
                     connection.setUseCaches(false);
                     connection.setInstanceFollowRedirects(false);
-                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.39 Android");
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.46 Android");
                     connection.setRequestProperty("Accept", "application/json");
                     JSONObject headers = new JSONObject(headersJson == null ? "{}" : headersJson);
                     java.util.Iterator<String> keys = headers.keys();
@@ -324,7 +324,7 @@ public class MainActivity extends Activity {
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(4500);
                     connection.setReadTimeout(5500);
-                    connection.setRequestProperty("User-Agent", "FoodSafetyCheck/0.10.11 (open-source Android application; product-name autocomplete)");
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.46 (open-source Android application; product-name autocomplete)");
                     connection.setRequestProperty("Accept", "application/json");
                     int statusCode = connection.getResponseCode();
                     InputStream stream = statusCode >= 200 && statusCode < 300 ? connection.getInputStream() : connection.getErrorStream();
@@ -410,7 +410,7 @@ public class MainActivity extends Activity {
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(7000);
                     connection.setReadTimeout(9000);
-                    connection.setRequestProperty("User-Agent", "FoodSafetyCheck/0.10.11 (open-source Android application)");
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.46 (open-source Android application)");
                     connection.setRequestProperty("Accept", "application/json");
                     int statusCode = connection.getResponseCode();
                     InputStream stream = statusCode >= 200 && statusCode < 300 ? connection.getInputStream() : connection.getErrorStream();
