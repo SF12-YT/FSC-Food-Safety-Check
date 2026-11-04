@@ -1,5 +1,7 @@
-# Market-specific product data files
+# Market-specific product data files and local SQLite caches
 
-FOSCH loads only the file for the currently selected market (`markets/<ISO-3166-1-alpha-2>.js`). Each file exposes a market-scoped `products` array; the initial files are empty because FOSCH does not yet operate a shared product submission/admin database. They are kept separate so a future reviewed dataset can be added per market without scanning a combined cross-country file.
+FOSCH loads only the selected market asset (`markets/<ISO-3166-1-alpha-2>.js`) plus the international fallback asset (`markets/INT.js`). Regional products always take priority; the international asset is consulted only after a regional match is absent. The initial curated asset arrays remain empty until a reviewed catalogue is populated.
 
-The runtime also keeps local cached products and local product suggestion indexes in country-keyed namespaces. Product records must remain market-scoped; do not fall back to another market when no local record matches. Sizes are stored as the label's original quantity/unit text and are never converted or rounded.
+The Android product cache is stored in separate SQLite files: `fosch_products_<ISO>.db` for each selected market and `fosch_products_INT.db` for entries whose Open Food Facts country tags explicitly include `en:world`, `en:international` or `en:global`. The selected market cache is queried first; only then is the INT cache queried. The former combined `fosch_product_cache.db` is lazily copied into the corresponding regional file and retained as a compatibility backup.
+
+The public product catalogue is still not a shared approved-submission API. Product submissions remain subject to administrator review; this local cache is populated by successful market-matched product lookups. Sizes are stored as the label's original quantity/unit text and are never converted or rounded.

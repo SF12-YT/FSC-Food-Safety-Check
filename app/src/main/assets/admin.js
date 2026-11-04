@@ -319,13 +319,17 @@
     if (!product) return "";
     const brand = String(product.brand || "").trim();
     const logo = logoFor(brand);
-    const photos = recordPhotos(product);
-    let html = "";
-    if (logo) html += "<div class=\"product-media-row\"><img class=\"product-brand-logo\" src=\"" + esc(logo.dataUrl) + "\" alt=\"" + esc(brand) + " brand logo\"><b>" + esc(brand) + "</b></div>";
-    photos.slice(0, 5).forEach(function (photo, index) {
-      html += "<img class=\"product-official-photo\" src=\"" + esc(photo) + "\" alt=\"Official product photo " + (index + 1) + "\">";
-    });
-    return html;
+    if (!logo) return "";
+    return "<div class=\"product-media-row\"><img class=\"product-brand-logo\" src=\"" + esc(logo.dataUrl) + "\" alt=\"" + esc(brand) + " brand logo\"></div>";
+  }
+  function renderOfficialProductPhotos(product) {
+    if (!product) return "";
+    const photos = recordPhotos(product).slice(0, 5);
+    if (!photos.length) return "";
+    return "<section class=\"official-product-gallery\"><b>Official product images</b><div class=\"official-product-gallery-grid\">" +
+      photos.map(function (photo, index) {
+        return "<img class=\"product-official-photo\" src=\"" + esc(photo) + "\" alt=\"Official product image " + (index + 1) + "\">";
+      }).join("") + "</div></section>";
   }
   function imagePreview(record) {
     const official = recordPhotos(record);
@@ -864,6 +868,7 @@
     refreshDashboard: refreshDashboard,
     editMarkup: editMarkup,
     renderProductMedia: renderProductMedia,
+    renderOfficialProductPhotos: renderOfficialProductPhotos,
     setTab: setTab,
     approve: approve,
     retrySync: retrySync,

@@ -195,7 +195,7 @@ public class MainActivity extends Activity {
                     connection.setReadTimeout(25000);
                     connection.setUseCaches(false);
                     connection.setInstanceFollowRedirects(false);
-                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.46 Android");
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.47 Android");
                     connection.setRequestProperty("Accept", "application/json");
                     JSONObject headers = new JSONObject(headersJson == null ? "{}" : headersJson);
                     java.util.Iterator<String> keys = headers.keys();
@@ -324,7 +324,7 @@ public class MainActivity extends Activity {
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(4500);
                     connection.setReadTimeout(5500);
-                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.46 (open-source Android application; product-name autocomplete)");
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.47 (open-source Android application; product-name autocomplete)");
                     connection.setRequestProperty("Accept", "application/json");
                     int statusCode = connection.getResponseCode();
                     InputStream stream = statusCode >= 200 && statusCode < 300 ? connection.getInputStream() : connection.getErrorStream();
@@ -410,7 +410,7 @@ public class MainActivity extends Activity {
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(7000);
                     connection.setReadTimeout(9000);
-                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.46 (open-source Android application)");
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.47 (open-source Android application)");
                     connection.setRequestProperty("Accept", "application/json");
                     int statusCode = connection.getResponseCode();
                     InputStream stream = statusCode >= 200 && statusCode < 300 ? connection.getInputStream() : connection.getErrorStream();
@@ -804,6 +804,7 @@ public class MainActivity extends Activity {
 
     private boolean marketMatches(String market, JSONArray countryTags) {
         if (countryTags == null || countryTags.length() == 0) return false;
+        if (ProductCacheDb.isInternationalCountryTags(countryTags.toString())) return true;
         String code = clean(market).toUpperCase(Locale.ROOT);
         if (code.length() != 2) return false;
         String countryName = new Locale("", code).getDisplayCountry(Locale.ENGLISH);

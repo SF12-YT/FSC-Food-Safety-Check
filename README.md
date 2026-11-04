@@ -1,3 +1,15 @@
+# FOSCH v0.10.47 — regional SQLite caches and submitter edits
+
+## v0.10.47 changes
+
+- Stores local product lookup caches in separate SQLite files by market, with a dedicated international fallback file used only for records explicitly tagged as worldwide/international. Regional entries always take priority.
+- Migrates cached entries from the previous combined database into each market file on demand without deleting the original cache.
+- Preserves text-based nutrition values verbatim, including “LESS THAN 0.1g”.
+- Removes the separate declared ingredient percentage extraction and display. The ingredient declaration itself remains unchanged, including printed percentages and brackets.
+- Moves official product images to the bottom of the product lookup details.
+- Places allergen matches, precautionary statements, ingredient notes and product-data cautions behind a round, expandable ❕ icon.
+- Allows submitters to edit their own pending submissions using a private receipt-token RPC. The new Supabase migration must be applied for remote edits to work.
+
 # FOSCH v0.10.34 — ingredient percentage parser correction
 
 ## v0.10.34 changes

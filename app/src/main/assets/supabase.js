@@ -312,9 +312,11 @@
 
       const photos = Array.isArray(record.photos) ? record.photos : (record.photo ? [record.photo] : []);
       const photoPaths = await uploadSubmissionPhotos(submissionId, photos);
+      record.cloudPhotoPaths = photoPaths;
       const payload = JSON.parse(JSON.stringify(record));
       delete payload.photo;
       delete payload.cloudStatusToken;
+      delete payload.cloudPhotoPaths;
       payload.photos = photoPaths;
       payload.photoPaths = photoPaths;
       const product = payload.suggestedProduct || payload;
@@ -362,6 +364,67 @@
       record.cloudSyncError = String(error && error.message || error).slice(0, 240);
       persistLocalRecord(record, storageKey);
       return { ok: false, queued: true, message: record.cloudSyncError };
+    }
+  }
+
+  async function updatePendingSubmission(record, kind) {
+    if (!record || !record.id || !record.cloudSubmissionId) {
+      return { ok: false, message: "This submission has no confirmed server record." };
+    }
+    if (String(record.cloudReviewStatus || "").toLowerCase() !== "pending") {
+      return { ok: false, message: "Only submissions still pending review can be edited." };
+    }
+    if (!/^[0-9a-fA-F]{64}$/.test(String(record.cloudStatusToken || ""))) {
+      return { ok: false, message: "The private edit receipt is unavailable. This older submission cannot be edited remotely." };
+    }
+
+    const storageKey = kind === "product" ? "fosch-contrib" : "fosch-corrections";
+    const submissionType = kind === "product" ? "product" :
+      (kind === "product_correction" ? "product_correction" : "correction");
+    try {
+      const photos = Array.isArray(record.photos) ? record.photos : (record.photo ? [record.photo] : []);
+      const photoPaths = await uploadSubmissionPhotos(String(record.cloudSubmissionId), photos);
+      const payload = JSON.parse(JSON.stringify(record));
+      delete payload.photo;
+      delete payload.cloudStatusToken;
+      delete payload.cloudPhotoPaths;
+      delete payload.cloudSyncError;
+      delete payload.cloudSyncStatus;
+      delete payload.cloudEditError;
+      payload.photos = photoPaths;
+      payload.photoPaths = photoPaths;
+      const product = payload.suggestedProduct || payload;
+      const changes = {
+        brand: product.brand || record.brand || null,
+        product_name: product.name || record.name || record.target || null,
+        barcode: product.barcode || record.barcode || null,
+        package_size: product.sizeLabel || product.size || record.sizeLabel || null,
+        country_code: String(product.country || record.country || "").toUpperCase().slice(0, 2) || null,
+        ingredients: product.ingredients || record.ingredients || null,
+        target: record.target || null,
+        message: record.message || null,
+        source: record.source || null,
+        payload: payload,
+        photo_paths: photoPaths
+      };
+      await api("POST", "/rest/v1/rpc/edit_fosch_pending_submission", JSON.stringify({
+        p_submission_id: String(record.cloudSubmissionId),
+        p_client_record_id: String(record.id),
+        p_submission_type: submissionType,
+        p_status_token: String(record.cloudStatusToken),
+        p_changes: changes
+      }));
+      record.cloudPhotoPaths = photoPaths;
+      record.cloudSyncStatus = "synced";
+      record.cloudSyncError = "";
+      record.cloudEditError = "";
+      persistLocalRecord(record, storageKey);
+      return { ok: true, id: record.cloudSubmissionId };
+    } catch (error) {
+      const message = String(error && error.message || error).slice(0, 300);
+      record.cloudEditError = message;
+      persistLocalRecord(record, storageKey);
+      return { ok: false, message: message };
     }
   }
 
@@ -512,6 +575,7 @@
     signIn: signIn,
     signOut: signOut,
     queueSubmission: queueSubmission,
+    updatePendingSubmission: updatePendingSubmission,
     syncPending: syncPending,
     syncSubmissionStatuses: syncSubmissionStatuses,
     listSubmissions: listSubmissions,
