@@ -121,14 +121,15 @@ public final class ProductCacheDb {
                                   String source, String countryTags, String brand, String quantity) {
         String market = normaliseMarket(country);
         if (market.isEmpty() || barcode == null || barcode.trim().isEmpty()) return;
-        MarketDatabase regional = database(market);
-        migrateLegacyMarket(market, regional);
-        if (regional != null) regional.put(barcode, market, name, ingredients, source, countryTags, brand, quantity);
         if (isInternationalCountryTags(countryTags)) {
             MarketDatabase international = database("INT");
             if (international != null) international.put(barcode, "INT", name, ingredients,
                 (source == null ? "" : source) + " · international listing", countryTags, brand, quantity);
+            return;
         }
+        MarketDatabase regional = database(market);
+        migrateLegacyMarket(market, regional);
+        if (regional != null) regional.put(barcode, market, name, ingredients, source, countryTags, brand, quantity);
     }
 
     public static boolean isInternationalCountryTags(String countryTags) {
