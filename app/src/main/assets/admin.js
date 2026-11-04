@@ -199,6 +199,17 @@
       if (remoteRefreshPromise === operation) remoteRefreshPromise = null;
     }
   }
+  async function refreshDashboard() {
+    if (!requireAdmin()) return false;
+    try {
+      const refreshed = await refreshRemoteData();
+      if (refreshed && authenticated && page === "adminDashboard") render();
+      return !!refreshed;
+    } catch (error) {
+      alert("The administrator list could not be refreshed. The last loaded list has been kept. " + String(error && error.message || error));
+      return false;
+    }
+  }
   async function onAppForeground() {
     if (!authenticated || !window.FOSCHCloud || !window.FOSCHCloud.isAdmin() || page !== "adminDashboard") return false;
     const now = Date.now();
@@ -410,7 +421,7 @@
       "<p class=\"muted\">" + sharedItems.length + " shared submission" + (sharedItems.length === 1 ? "" : "s") +
       " awaiting review · " + localItems.length + " local draft" + (localItems.length === 1 ? "" : "s") + " awaiting upload.</p>" +
       submissions + localDrafts + brandMarkup;
-    return "<div class=\"admin-head\"><div><h1>Admin dashboard</h1><div class=\"admin-submission-meta\">Signed in as " + esc(DEFAULT_EMAIL) + "</div></div><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.logout()\">Sign out</button></div>" +
+    return "<div class=\"admin-head\"><div><h1>Admin dashboard</h1><div class=\"admin-submission-meta\">Signed in as " + esc(DEFAULT_EMAIL) + "</div></div><div class=\"admin-head-actions\"><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.refreshDashboard()\">Refresh</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.logout()\">Sign out</button></div></div>" +
       "<div class=\"admin-tabs\"><button type=\"button\" class=\"" + (activeTab === "submissions" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('submissions')\">Submissions</button>" +
       "<button type=\"button\" class=\"" + (activeTab === "activity" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('activity')\">Activity log (" + (remoteAuditLog.length + auditLog.length) + ")</button></div>" +
       content +
@@ -850,6 +861,7 @@
     attemptSignIn: signIn,
     dashboardMarkup: dashboardMarkup,
     onAppForeground: onAppForeground,
+    refreshDashboard: refreshDashboard,
     editMarkup: editMarkup,
     renderProductMedia: renderProductMedia,
     setTab: setTab,
