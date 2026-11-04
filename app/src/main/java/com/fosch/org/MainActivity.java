@@ -29,6 +29,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.net.UnknownHostException;
+import java.net.SocketException;
+import java.net.SocketTimeoutException;
+import java.net.ConnectException;
+import java.net.NoRouteToHostException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -300,7 +305,7 @@ public class MainActivity extends Activity {
             }
             if (!hasValidatedInternet()) {
                 sendProductNameSearchResult(nameSearchResult(cleanRequestId, cleanQuery, cleanCountry, new JSONArray(), false,
-                    "Internet not detected. Saved product suggestions are still available."));
+                    "Internet not connected, please try again"));
                 return;
             }
             new Thread(() -> {
@@ -363,8 +368,10 @@ public class MainActivity extends Activity {
                     sendProductNameSearchResult(nameSearchResult(cleanRequestId, cleanQuery, cleanCountry, matches, true, message));
                 } catch (Exception e) {
                     Log.w(TAG, "Product-name autocomplete failed", e);
-                    sendProductNameSearchResult(nameSearchResult(cleanRequestId, cleanQuery, cleanCountry, new JSONArray(), false,
-                        "Online product suggestions are unavailable right now. You can still use saved suggestions or contribute manually."));
+                    String message = isNetworkUnavailable(e)
+                        ? "Internet not connected, please try again"
+                        : "Online product suggestions are unavailable right now. You can still use saved suggestions or contribute manually.";
+                    sendProductNameSearchResult(nameSearchResult(cleanRequestId, cleanQuery, cleanCountry, new JSONArray(), false, message));
                 } finally {
                     if (connection != null) connection.disconnect();
                 }
@@ -386,6 +393,10 @@ public class MainActivity extends Activity {
                         cached.put("message", "Loaded from this device's product cache.");
                     } catch (Exception ignored) { }
                     sendProductLookupResult(cached);
+                    return;
+                }
+                if (!hasValidatedInternet()) {
+                    sendProductLookupResult(notFoundResult(cleanBarcode, cleanCountry, "Internet not connected, please try again"));
                     return;
                 }
                 HttpURLConnection connection = null;
@@ -453,13 +464,29 @@ public class MainActivity extends Activity {
                     sendProductLookupResult(result);
                 } catch (Exception e) {
                     Log.w(TAG, "External product lookup failed", e);
-                    sendProductLookupResult(notFoundResult(cleanBarcode, cleanCountry,
-                        "No matching-market product data could be confirmed online. Check the connection or add the product manually."));
+                    String message = isNetworkUnavailable(e)
+                        ? "Internet not connected, please try again"
+                        : "No matching-market product data could be confirmed online. Please try again or add the product manually.";
+                    sendProductLookupResult(notFoundResult(cleanBarcode, cleanCountry, message));
                 } finally {
                     if (connection != null) connection.disconnect();
                 }
             }, "FOSCH-product-lookup").start();
         }
+    }
+
+    private boolean isNetworkUnavailable(Exception error) {
+        if (!hasValidatedInternet()) return true;
+        Throwable current = error;
+        while (current != null) {
+            if (current instanceof UnknownHostException || current instanceof SocketException ||
+                current instanceof SocketTimeoutException || current instanceof ConnectException ||
+                current instanceof NoRouteToHostException) return true;
+            String message = String.valueOf(current.getMessage() == null ? "" : current.getMessage());
+            if (message.matches("(?is).*(unable to resolve host|unknownhost|name or service not known|failed to connect|network is unreachable|no route to host|connection timed out|timed out).*")) return true;
+            current = current.getCause();
+        }
+        return false;
     }
 
     private boolean hasValidatedInternet() {
