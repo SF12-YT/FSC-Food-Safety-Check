@@ -106,13 +106,31 @@
     if (opts.prefer) headers.Prefer = opts.prefer;
     if (opts.upsert !== undefined) headers["x-upsert"] = opts.upsert ? "true" : "false";
 
-    const response = await nativeRequest(method, path, headers,
-      body === undefined || body === null ? "" : body,
-      !!opts.base64Body);
+    let response;
+    try {
+      response = await nativeRequest(method, path, headers,
+        body === undefined || body === null ? "" : body,
+        !!opts.base64Body);
+    } catch (requestError) {
+      const requestMessage = String(requestError && requestError.message || requestError || "");
+      if (/unable to resolve host|unknownhost|name or service not known|failed to connect|network is unreachable|no route to host|connection timed out|network request failed/i.test(requestMessage)) {
+        const friendly = new Error("Internet not connected, please try again");
+        friendly.status = 0;
+        friendly.cause = requestError;
+        throw friendly;
+      }
+      throw requestError;
+    }
     const parsed = parseResponse(response);
     if (response.status < 200 || response.status >= 300) {
       const message = parsed && (parsed.msg || parsed.message || parsed.error_description || parsed.error) ||
         ("Supabase returned HTTP " + response.status);
+      if (Number(response.status) === 0 || /unable to resolve host|unknownhost|name or service not known|failed to connect|network is unreachable|no route to host|connection timed out|network request failed/i.test(String(message))) {
+        const friendly = new Error("Internet not connected, please try again");
+        friendly.status = 0;
+        friendly.details = parsed;
+        throw friendly;
+      }
       const error = new Error(String(message));
       error.status = response.status;
       error.details = parsed;
