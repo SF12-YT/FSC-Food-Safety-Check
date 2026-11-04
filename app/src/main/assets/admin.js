@@ -297,10 +297,18 @@
     } catch (ignored) { return {}; }
   }
   function logoFor(brand) {
-    const key = normaliseBrandKey(brand);
-    if (!key) return null;
-    const entry = brandLogoRegistry()[key];
-    return entry && String(entry.dataUrl || "").startsWith("data:image/") ? entry : null;
+    const candidates = String(brand || "").split(/[,;|/]+/).map(function (value) {
+      return value.trim();
+    }).filter(Boolean);
+    if (!candidates.length) return null;
+    const registry = brandLogoRegistry();
+    for (const candidate of candidates) {
+      const key = normaliseBrandKey(candidate);
+      if (!key) continue;
+      const entry = registry[key];
+      if (entry && String(entry.dataUrl || "").startsWith("data:image/")) return entry;
+    }
+    return null;
   }
   function recordPhotos(record) {
     if (!record) return [];
@@ -317,10 +325,17 @@
   }
   function renderProductMedia(product) {
     if (!product) return "";
-    const brand = String(product.brand || "").trim();
-    const logo = logoFor(brand);
-    if (!logo) return "";
-    return "<div class=\"product-media-row\"><img class=\"product-brand-logo\" src=\"" + esc(logo.dataUrl) + "\" alt=\"" + esc(brand) + " brand logo\"></div>";
+    const brands = String(product.brand || product.brands || "").split(/[,;|/]+/).map(function (value) {
+      return value.trim();
+    }).filter(Boolean);
+    for (const brand of brands) {
+      const logo = logoFor(brand);
+      if (logo) {
+        const label = String(logo.brand || brand).trim();
+        return "<div class=\"product-media-row\"><img class=\"product-brand-logo\" loading=\"lazy\" src=\"" + esc(logo.dataUrl) + "\" alt=\"" + esc(label) + " brand logo\"></div>";
+      }
+    }
+    return "";
   }
   function renderOfficialProductPhotos(product) {
     if (!product) return "";
@@ -328,7 +343,7 @@
     if (!photos.length) return "";
     return "<section class=\"official-product-gallery\"><b>Official product images</b><div class=\"official-product-gallery-grid\">" +
       photos.map(function (photo, index) {
-        return "<img class=\"product-official-photo\" src=\"" + esc(photo) + "\" alt=\"Official product image " + (index + 1) + "\">";
+        return "<img class=\"product-official-photo\" loading=\"lazy\" decoding=\"async\" src=\"" + esc(photo) + "\" alt=\"Official product image " + (index + 1) + "\">";
       }).join("") + "</div></section>";
   }
   function imagePreview(record) {
@@ -806,6 +821,14 @@
           audit_action: "official_product_photo_added",
           audit_details: { source: target.source === "device" ? "device_upload" : "camera_capture" }
         }, reason).then(async function () {
+          if (isApproved(record) && typeof window.FOSCHApplyCloudApproval === "function") {
+            const cacheRecord = Object.assign({}, remotePayload, {
+              status: "approved-cloud",
+              country: remotePayload.country || record.country || marketCountry
+            });
+            try { window.FOSCHApplyCloudApproval(cacheRecord); }
+            catch (cacheError) { console.warn("FOSCH could not refresh the local official-image cache:", cacheError); }
+          }
           await refreshRemoteData();
           page = "adminDashboard";
           render();
