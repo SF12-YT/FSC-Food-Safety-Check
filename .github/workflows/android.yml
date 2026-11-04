@@ -47,13 +47,13 @@ jobs:
           PY
 
       - name: Package source archive
-        run: git archive --format=zip --prefix=FOSCH-v0.10.49/ HEAD > FOSCH-source-v0.10.49.zip
+        run: git archive --format=zip --prefix=FOSCH-v0.10.50/ HEAD > FOSCH-source-v0.10.50.zip
 
       - name: Upload source archive
         uses: actions/upload-artifact@v7
         with:
-          name: FOSCH-source-v0.10.49
-          path: FOSCH-source-v0.10.49.zip
+          name: FOSCH-source-v0.10.50
+          path: FOSCH-source-v0.10.50.zip
           if-no-files-found: error
           retention-days: 90
 

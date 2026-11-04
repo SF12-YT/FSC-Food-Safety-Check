@@ -812,7 +812,7 @@
       const latestPhoto = String(dataUrl);
       const previousPhotos = Array.isArray(product.officialPhotos) ? product.officialPhotos : [];
       const nextPhotos = [latestPhoto].concat(previousPhotos.filter(function (photo) {
-        return typeof photo === "string" && photo.startsWith("data:image/") && photo !== latestPhoto;
+        return typeof photo === "string" && (photo.startsWith("data:image/") || isPublicProductMediaUrl(photo)) && photo !== latestPhoto;
       })).slice(0, 5);
       const previousOfficialPhoto = product.officialPhoto;
       const previousOfficialPhotos = product.officialPhotos;

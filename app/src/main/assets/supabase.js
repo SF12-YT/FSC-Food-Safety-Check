@@ -550,7 +550,7 @@
 
   function encodeStoragePath(path){return String(path||"").split("/").filter(Boolean).map(encodeURIComponent).join("/");}
   function publicMediaUrl(path){return SUPABASE_URL+"/storage/v1/object/public/"+PUBLIC_MEDIA_BUCKET+"/"+encodeStoragePath(path);}
-  function normalisePublicBrandKey(brand){return String(brand||"").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().replace(/\\s+/g,"-");}
+  function normalisePublicBrandKey(brand){return String(brand||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().replace(/\s+/g,"-");}
   function brandLogoPath(brand){const key=normalisePublicBrandKey(brand);if(!key)throw new Error("A brand name is required before uploading its logo.");return "brands/"+key+".jpeg";}
   async function uploadPublicMedia(path,dataUrl){
     if(!isAdmin())throw new Error("Administrator sign-in is required to publish product media.");
