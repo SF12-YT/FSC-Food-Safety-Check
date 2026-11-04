@@ -16,7 +16,7 @@
     {key:"polyunsaturated",label:"Polyunsaturated"},{key:"monounsaturated",label:"Monounsaturated"},
     {key:"carbohydrate",label:"Carbohydrate"},{key:"sugars",label:"Sugar"},{key:"lactose",label:"Lactose"},
     {key:"galactose",label:"Galactose"},{key:"dietaryFibre",label:"Dietary fibre"},
-    {key:"cholesterol",label:"Cholesterol"},{key:"sodium",label:"Sodium"},{key:"calcium",label:"Calcium"},
+    {key:"cholesterol",label:"Cholesterol"},{key:"sodium",label:"Sodium"},{key:"calcium",label:"Calcium"},{key:"potassium",label:"Potassium"},
     {key:"liveCultures",label:"Live cultures",noDI:true}
   ];
   function nutritionProduct(record){return record&&record.suggestedProduct&&typeof record.suggestedProduct==="object"?record.suggestedProduct:(record||{});}
@@ -140,47 +140,79 @@
     });
   }
 
+  let remoteRefreshPromise = null;
+  let lastAdminForegroundRefreshAt = 0;
   async function refreshRemoteData() {
-    if (!window.FOSCHCloud || !window.FOSCHCloud.isAdmin()) return;
-    const response = await Promise.all([
-      window.FOSCHCloud.listSubmissions(),
-      window.FOSCHCloud.listAuditLog()
-    ]);
-    contributions = contributions.filter(function (record) { return !record._foschRemote; });
-    correctionReports = correctionReports.filter(function (record) { return !record._foschRemote; });
-    (response[0] || []).forEach(function (row) {
-      const payload = row.payload && typeof row.payload === "object" ? row.payload : {};
-      const record = Object.assign({}, payload, {
-        id: "cloud-" + String(row.id),
-        _foschRemote: true,
-        _remoteId: String(row.id),
-        _remotePayload: payload,
-        date: row.submitted_at || payload.date || "",
-        status: row.status === "approved" ? "approved-cloud" : (row.status === "rejected" ? "rejected-cloud" : "pending-cloud"),
-        rejectionReason: row.rejection_reason || "",
-        adminNote: row.admin_note || "",
-        barcode: row.barcode || payload.barcode || "",
-        brand: row.brand || payload.brand || "",
-        name: row.product_name || payload.name || payload.target || "",
-        sizeLabel: row.package_size || payload.sizeLabel || "",
-        ingredients: row.ingredients || payload.ingredients || "",
-        country: row.country_code || payload.country || "",
-        photos: Array.isArray(row.photo_paths) ? row.photo_paths : []
+    if (!window.FOSCHCloud || !window.FOSCHCloud.isAdmin()) return false;
+    if (remoteRefreshPromise) return remoteRefreshPromise;
+    const operation = (async function () {
+      const response = await Promise.all([
+        window.FOSCHCloud.listSubmissions(),
+        window.FOSCHCloud.listAuditLog()
+      ]);
+      // Build the replacement snapshot before changing visible state. A failed request
+      // therefore leaves the last successful admin list intact.
+      const remoteProducts = [];
+      const remoteCorrections = [];
+      (response[0] || []).forEach(function (row) {
+        const payload = row.payload && typeof row.payload === "object" ? row.payload : {};
+        const record = Object.assign({}, payload, {
+          id: "cloud-" + String(row.id),
+          _foschRemote: true,
+          _remoteId: String(row.id),
+          _remotePayload: payload,
+          date: row.submitted_at || payload.date || "",
+          status: row.status === "approved" ? "approved-cloud" : (row.status === "rejected" ? "rejected-cloud" : "pending-cloud"),
+          rejectionReason: row.rejection_reason || "",
+          adminNote: row.admin_note || "",
+          barcode: row.barcode || payload.barcode || "",
+          brand: row.brand || payload.brand || "",
+          name: row.product_name || payload.name || payload.target || "",
+          sizeLabel: row.package_size || payload.sizeLabel || "",
+          ingredients: row.ingredients || payload.ingredients || "",
+          country: row.country_code || payload.country || "",
+          photos: Array.isArray(row.photo_paths) ? row.photo_paths : []
+        });
+        if (row.submission_type === "product") remoteProducts.push(record);
+        else remoteCorrections.push(record);
       });
-      if (row.submission_type === "product") contributions.push(record);
-      else correctionReports.push(record);
-    });
-    remoteAuditLog = (response[1] || []).map(function (entry) {
-      return {
-        id: "remote-" + entry.id,
-        at: entry.created_at,
-        actor: entry.actor_email || "Administrator",
-        action: entry.action || "Admin action",
-        recordLabel: entry.client_record_id || "",
-        reason: entry.reason || "",
-        details: entry.details ? JSON.stringify(entry.details) : ""
-      };
-    });
+      const nextAudit = (response[1] || []).map(function (entry) {
+        return {
+          id: "remote-" + entry.id,
+          at: entry.created_at,
+          actor: entry.actor_email || "Administrator",
+          action: entry.action || "Admin action",
+          recordLabel: entry.client_record_id || "",
+          reason: entry.reason || "",
+          details: entry.details ? JSON.stringify(entry.details) : ""
+        };
+      });
+      contributions = (Array.isArray(contributions) ? contributions : []).filter(function (record) { return !record._foschRemote; }).concat(remoteProducts);
+      correctionReports = (Array.isArray(correctionReports) ? correctionReports : []).filter(function (record) { return !record._foschRemote; }).concat(remoteCorrections);
+      remoteAuditLog = nextAudit;
+      return true;
+    })();
+    remoteRefreshPromise = operation;
+    try {
+      return await operation;
+    } finally {
+      if (remoteRefreshPromise === operation) remoteRefreshPromise = null;
+    }
+  }
+  async function onAppForeground() {
+    if (!authenticated || !window.FOSCHCloud || !window.FOSCHCloud.isAdmin() || page !== "adminDashboard") return false;
+    const now = Date.now();
+    if (now - lastAdminForegroundRefreshAt < 1800) return false;
+    lastAdminForegroundRefreshAt = now;
+    try {
+      const refreshed = await refreshRemoteData();
+      if (refreshed && authenticated && page === "adminDashboard") render();
+      return !!refreshed;
+    } catch (error) {
+      // Keep the current snapshot on transient failures. The next foreground visit retries.
+      console.warn("FOSCH admin dashboard refresh failed:", error);
+      return false;
+    }
   }
 
   function findItem(kind, id) {
@@ -579,10 +611,15 @@
     render();
   }
 
-  function edit(kind, id) {
+  async function edit(kind, id) {
     if (!requireAdmin()) return;
-    if (!findItem(kind, id)) { alert("This submission could not be found."); return; }
-    editingRef = { kind: kind, id: String(id) };
+    let item = findItem(kind, id);
+    if (!item) {
+      try { await refreshRemoteData(); } catch (error) { console.warn("FOSCH refreshed the admin list after a missed selection:", error); }
+      item = findItem(kind, id);
+    }
+    if (!item) { alert("This submission could not be found. Refresh the administrator page and try again."); return; }
+    editingRef = { kind: kind, id: String(item.id) };
     page = "adminEditSubmission";
     render();
   }
@@ -812,6 +849,7 @@
     isCapturingMedia: isCapturingMedia,
     attemptSignIn: signIn,
     dashboardMarkup: dashboardMarkup,
+    onAppForeground: onAppForeground,
     editMarkup: editMarkup,
     renderProductMedia: renderProductMedia,
     setTab: setTab,
