@@ -8,6 +8,7 @@
   const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_eQN_daectBMn-nbjDEcWsg_mZDoO-95";
   const SESSION_KEY = "fosch-supabase-session";
   const BUCKET = "fosch-submission-photos";
+  const PUBLIC_MEDIA_BUCKET = "fosch-public-product-media";
   let session = null;
   let requestCounter = 0;
   const pending = Object.create(null);
@@ -547,6 +548,28 @@
     return Array.isArray(rows) ? rows : [];
   }
 
+  function encodeStoragePath(path){return String(path||"").split("/").filter(Boolean).map(encodeURIComponent).join("/");}
+  function publicMediaUrl(path){return SUPABASE_URL+"/storage/v1/object/public/"+PUBLIC_MEDIA_BUCKET+"/"+encodeStoragePath(path);}
+  function normalisePublicBrandKey(brand){return String(brand||"").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().replace(/\\s+/g,"-");}
+  function brandLogoPath(brand){const key=normalisePublicBrandKey(brand);if(!key)throw new Error("A brand name is required before uploading its logo.");return "brands/"+key+".jpeg";}
+  async function uploadPublicMedia(path,dataUrl){
+    if(!isAdmin())throw new Error("Administrator sign-in is required to publish product media.");
+    const cleanPath=encodeStoragePath(path);if(!cleanPath||cleanPath.includes(".."))throw new Error("Invalid public media path.");
+    const parsed=dataUrlParts(dataUrl);
+    await api("POST","/storage/v1/object/"+PUBLIC_MEDIA_BUCKET+"/"+cleanPath,parsed.base64,{contentType:parsed.mime,base64Body:true,upsert:true});
+    return publicMediaUrl(path);
+  }
+  async function uploadProductPhoto(dataUrl,country,barcode){
+    const parsed=dataUrlParts(dataUrl),market=/^[A-Z]{2}$/i.test(String(country||""))?String(country).toUpperCase():"INT";
+    const code=String(barcode||"unbarcoded").replace(/[^a-zA-Z0-9_-]/g,"").slice(0,80)||"unbarcoded";
+    return uploadPublicMedia("products/"+market+"/"+code+"/"+photoContentKey(parsed.base64)+"."+parsed.extension,dataUrl);
+  }
+  async function getPublishedProductMedia(barcode,country){
+    const code=String(barcode||"").trim(),market=String(country||"").trim().toUpperCase();if(!code||!/^[A-Z]{2}$/.test(market))return null;
+    const result=await api("POST","/rest/v1/rpc/get_fosch_public_product_media",JSON.stringify({p_barcode:code,p_country:market}),{publicOnly:true});
+    return Array.isArray(result)?result[0]||null:(result&&typeof result==="object"?result:null);
+  }
+
   async function adminUpdateSubmission(id, changes, reason) {
     return api("POST", "/rest/v1/rpc/admin_update_product_submission", JSON.stringify({
       p_submission_id: id,
@@ -581,6 +604,12 @@
     listSubmissions: listSubmissions,
     listAuditLog: listAuditLog,
     adminUpdateSubmission: adminUpdateSubmission,
+    uploadPublicMedia: uploadPublicMedia,
+    uploadProductPhoto: uploadProductPhoto,
+    publicMediaUrl: publicMediaUrl,
+    brandLogoPath: brandLogoPath,
+    publicBrandLogoUrl: function (brand) { try { return publicMediaUrl(brandLogoPath(brand)); } catch (ignored) { return ""; } },
+    getPublishedProductMedia: getPublishedProductMedia,
     adminDeleteSubmission: adminDeleteSubmission,
     logAdminEvent: logAdminEvent
   };

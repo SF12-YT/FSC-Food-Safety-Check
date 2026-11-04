@@ -140,6 +140,31 @@
     });
   }
 
+  async function publishLegacyAdminMedia(rows){
+    if(!window.FOSCHCloud||!window.FOSCHCloud.isAdmin())return;
+    const registry=brandLogoRegistry();let changed=false;
+    for(const key of Object.keys(registry)){
+      const entry=registry[key];if(!entry||!String(entry.dataUrl||"").startsWith("data:image/")||entry.publicUrl)continue;
+      try{const url=await window.FOSCHCloud.uploadPublicMedia(window.FOSCHCloud.brandLogoPath(entry.brand||key),entry.dataUrl);registry[key]=Object.assign({},entry,{publicUrl:url,updatedAt:new Date().toISOString()});changed=true}
+      catch(error){console.warn("FOSCH could not publish an older brand logo yet:",error)}
+    }
+    if(changed){try{localStorage.setItem(LOGO_KEY,JSON.stringify(registry))}catch(ignored){}}
+    for(const row of (Array.isArray(rows)?rows:[])){
+      if(!row||row.status!=="approved"||!row.id||!row.payload||typeof row.payload!=="object")continue;
+      const payload=row.payload,isCorrection=payload.suggestedProduct&&typeof payload.suggestedProduct==="object";
+      const product=isCorrection?payload.suggestedProduct:payload,photos=recordPhotos(product);
+      if(!photos.some(photo=>photo.startsWith("data:image/")))continue;
+      const published=[];
+      try{
+        for(const photo of photos){const url=photo.startsWith("data:image/")?await window.FOSCHCloud.uploadProductPhoto(photo,row.country_code||product.country||payload.country,row.barcode||product.barcode||payload.barcode):photo;if(url&&!published.includes(url)&&published.length<5)published.push(url)}
+        const nextProduct=Object.assign({},product,{officialPhoto:published[0]||"",officialPhotos:published});
+        const nextPayload=isCorrection?Object.assign({},payload,{suggestedProduct:nextProduct}):Object.assign({},payload,nextProduct);
+        await window.FOSCHCloud.adminUpdateSubmission(row.id,{payload:nextPayload,audit_action:"official_product_media_published",audit_details:{media_count:published.length,migration:"public_product_media"}},"Published previously uploaded official product images for cross-device display.");
+        row.payload=nextPayload;
+      }catch(error){console.warn("FOSCH could not migrate an older official product image yet:",error)}
+    }
+  }
+
   let remoteRefreshPromise = null;
   let lastAdminForegroundRefreshAt = 0;
   async function refreshRemoteData() {
@@ -150,6 +175,7 @@
         window.FOSCHCloud.listSubmissions(),
         window.FOSCHCloud.listAuditLog()
       ]);
+      await publishLegacyAdminMedia(response[0] || []);
       // Build the replacement snapshot before changing visible state. A failed request
       // therefore leaves the last successful admin list intact.
       const remoteProducts = [];
@@ -310,30 +336,24 @@
     }
     return null;
   }
-  function recordPhotos(record) {
-    if (!record) return [];
-    const stored = Array.isArray(record.officialPhotos) ? record.officialPhotos : [];
-    const latest = String(record.officialPhoto || "");
-    const ordered = latest.startsWith("data:image/")
-      ? [latest].concat(stored.filter(function (v) { return v !== latest; }))
-      : stored;
-    const seen = [];
-    ordered.forEach(function (value) {
-      if (typeof value === "string" && value.startsWith("data:image/") && seen.indexOf(value) < 0 && seen.length < 5) seen.push(value);
-    });
+  function isPublicProductMediaUrl(value){return typeof value==="string"&&/^https:\/\/mqgvagftvuybietazbdc\.supabase\.co\/storage\/v1\/object\/public\/fosch-public-product-media\//.test(value)}
+  function recordPhotos(record){
+    if(!record)return[];
+    const stored=Array.isArray(record.officialPhotos)?record.officialPhotos:[];
+    const latest=String(record.officialPhoto||"");
+    const ordered=latest?[latest].concat(stored.filter(v=>v!==latest)):stored;
+    const seen=[];
+    ordered.forEach(function(value){if(typeof value==="string"&&(value.startsWith("data:image/")||isPublicProductMediaUrl(value))&&seen.indexOf(value)<0&&seen.length<5)seen.push(value)});
     return seen;
   }
   function renderProductMedia(product) {
-    if (!product) return "";
-    const brands = String(product.brand || product.brands || "").split(/[,;|/]+/).map(function (value) {
-      return value.trim();
-    }).filter(Boolean);
-    for (const brand of brands) {
-      const logo = logoFor(brand);
-      if (logo) {
-        const label = String(logo.brand || brand).trim();
-        return "<div class=\"product-media-row\"><img class=\"product-brand-logo\" loading=\"lazy\" src=\"" + esc(logo.dataUrl) + "\" alt=\"" + esc(label) + " brand logo\"></div>";
-      }
+    if(!product)return"";
+    const brands=String(product.brand||product.brands||"").split(/[,;|/]+/).map(v=>v.trim()).filter(Boolean);
+    for(const brand of brands){
+      const logo=logoFor(brand);
+      const publicUrl=window.FOSCHCloud&&window.FOSCHCloud.publicBrandLogoUrl?window.FOSCHCloud.publicBrandLogoUrl(brand):"";
+      const src=publicUrl||(logo&&logo.dataUrl)||"";
+      if(src){const label=String((logo&&logo.brand)||brand).trim();return "<div class=\"product-media-row\"><img class=\"product-brand-logo\" loading=\"lazy\" src=\""+esc(src)+"\" alt=\""+esc(label)+" brand logo\" onerror=\"this.style.display='none'\"></div>"}
     }
     return "";
   }
@@ -406,7 +426,7 @@
       const logo = logoFor(item.name);
       return "<article class=\"admin-brand-card\"><div class=\"admin-brand-row\">" +
         (logo ? "<img class=\"admin-brand-logo\" src=\"" + esc(logo.dataUrl) + "\" alt=\"" + esc(item.name) + " logo\">" : "<div class=\"admin-brand-logo\" aria-hidden=\"true\">＋</div>") +
-        "<div class=\"admin-brand-name\">" + esc(item.name) + "<div class=\"admin-submission-meta\">" + (logo ? "Logo saved on this device" : "No logo added") + "</div></div>" +
+        "<div class=\"admin-brand-name\">" + esc(item.name) + "<div class=\"admin-submission-meta\">" + (logo ? "Published for all users" : "No logo added") + "</div></div>" +
         "</div><div class=\"admin-action-grid\"><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureBrandLogo(decodeURIComponent('" + urlArg(item.name) + "'))\">Capture " + (logo ? "replacement logo" : "logo") + "</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadBrandLogo(decodeURIComponent('" + urlArg(item.name) + "'))\">Upload from device</button></div></article>";
     }).join("");
   }
@@ -435,7 +455,7 @@
     const localDrafts = localItems.length
       ? "<h2>Local drafts — not in Supabase</h2><p class=\"muted\">These records are stored on this device only until their upload succeeds. They cannot be approved or rejected as shared submissions.</p>" + localItems.map(submissionCard).join("")
       : "";
-    const brandMarkup = "<h2>Brand logos</h2><p class=\"muted\">Administrators can capture a logo with the in-app camera or select an image from this device. Images are stored locally on this device.</p>" + brandCardsMarkup();
+    const brandMarkup = "<h2>Brand logos</h2><p class=\"muted\">Administrators can capture a logo with the in-app camera or select an image from this device. Administrator brand logos are published through shared media storage and are visible to all users.</p>" + brandCardsMarkup();
     const content = activeTab === "activity" ? auditMarkup() :
       "<p class=\"muted\">" + sharedItems.length + " shared submission" + (sharedItems.length === 1 ? "" : "s") +
       " awaiting review · " + localItems.length + " local draft" + (localItems.length === 1 ? "" : "s") + " awaiting upload.</p>" +
@@ -444,7 +464,7 @@
       "<div class=\"admin-tabs\"><button type=\"button\" class=\"" + (activeTab === "submissions" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('submissions')\">Submissions</button>" +
       "<button type=\"button\" class=\"" + (activeTab === "activity" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('activity')\">Activity log (" + (remoteAuditLog.length + auditLog.length) + ")</button></div>" +
       content +
-      "<div class=\"warning\">Shared product submissions and moderation actions are stored in Supabase. Unsent drafts remain on this device until a network connection is available. Product evidence is stored in a private bucket and is visible to administrators only.</div>";
+      "<div class=\"warning\">Shared product submissions and moderation actions are stored in Supabase. Unsent drafts remain on this device until a network connection is available. Product evidence remains private; official product images and brand logos use a separate public-read bucket.</div>";
   }
 
   function editMarkup() {
@@ -800,47 +820,30 @@
       product.officialPhoto = latestPhoto;
       if (target.kind === "correction" && record.suggestedProduct) record.suggestedProduct = product;
 
-      if (record._foschRemote) {
-        // Remote records are intentionally excluded from localStorage. Persist the
-        // image in the shared submission payload through the audited admin RPC.
-        const remotePayload = Object.assign({}, record._remotePayload || {});
-        const remoteProduct = target.kind === "correction" && remotePayload.suggestedProduct
-          ? Object.assign({}, remotePayload.suggestedProduct)
-          : remotePayload;
-        remoteProduct.officialPhoto = latestPhoto;
-        remoteProduct.officialPhotos = nextPhotos;
-        if (target.kind === "correction" && remotePayload.suggestedProduct) {
-          remotePayload.suggestedProduct = remoteProduct;
-        } else {
-          remotePayload.officialPhoto = latestPhoto;
-          remotePayload.officialPhotos = nextPhotos;
-        }
-        const reason = String(target.note || "Administrator added an official product image after review.");
-        window.FOSCHCloud.adminUpdateSubmission(record._remoteId, {
-          payload: remotePayload,
-          audit_action: "official_product_photo_added",
-          audit_details: { source: target.source === "device" ? "device_upload" : "camera_capture" }
-        }, reason).then(async function () {
-          if (isApproved(record) && typeof window.FOSCHApplyCloudApproval === "function") {
-            const cacheRecord = Object.assign({}, remotePayload, {
-              status: "approved-cloud",
-              country: remotePayload.country || record.country || marketCountry
-            });
-            try { window.FOSCHApplyCloudApproval(cacheRecord); }
-            catch (cacheError) { console.warn("FOSCH could not refresh the local official-image cache:", cacheError); }
+      if(record._foschRemote){
+        (async function(){
+          try{
+            const country=product.country||record.country||marketCountry,barcode=product.barcode||record.barcode||"",published=[];
+            for(const photo of nextPhotos){const url=photo.startsWith("data:image/")?await window.FOSCHCloud.uploadProductPhoto(photo,country,barcode):photo;if(url&&!published.includes(url)&&published.length<5)published.push(url)}
+            const remotePayload=Object.assign({},record._remotePayload||{});
+            const remoteProduct=target.kind==="correction"&&remotePayload.suggestedProduct?Object.assign({},remotePayload.suggestedProduct):remotePayload;
+            remoteProduct.officialPhoto=published[0]||"";remoteProduct.officialPhotos=published;
+            if(target.kind==="correction"&&remotePayload.suggestedProduct)remotePayload.suggestedProduct=remoteProduct;
+            else{remotePayload.officialPhoto=published[0]||"";remotePayload.officialPhotos=published}
+            const reason=String(target.note||"Administrator added an official product image after review.");
+            await window.FOSCHCloud.adminUpdateSubmission(record._remoteId,{payload:remotePayload,audit_action:"official_product_photo_added",audit_details:{source:target.source==="device"?"device_upload":"camera_capture",public_media:true}},reason);
+            if(isApproved(record)&&typeof window.FOSCHApplyCloudApproval==="function"){
+              const cacheRecord=Object.assign({},remotePayload,{status:"approved-cloud",country:country,barcode:barcode});
+              try{window.FOSCHApplyCloudApproval(cacheRecord)}catch(cacheError){console.warn("FOSCH local media cache failed:",cacheError)}
+            }
+            await refreshRemoteData();page="adminDashboard";render();alert("Official product image published for FOSCH users.");
+          }catch(error){
+            product.officialPhoto=previousOfficialPhoto||"";product.officialPhotos=previousOfficialPhotos||[];
+            if(target.kind==="correction"&&record.suggestedProduct)record.suggestedProduct=product;
+            alert("The image could not be published. Check that the latest Supabase public-media SQL migration has been run. "+String(error&&error.message||error));
+            page="adminDashboard";render();
           }
-          await refreshRemoteData();
-          page = "adminDashboard";
-          render();
-          alert("Official product image saved to the shared submission.");
-        }).catch(function (error) {
-          product.officialPhoto = previousOfficialPhoto || "";
-          product.officialPhotos = previousOfficialPhotos || [];
-          if (target.kind === "correction" && record.suggestedProduct) record.suggestedProduct = product;
-          alert("The image could not be saved to the shared submission: " + String(error && error.message || error));
-          page = "adminDashboard";
-          render();
-        });
+        })();
         return true;
       }
 
@@ -849,11 +852,19 @@
       if (target.kind === "correction" && isApproved(record) && record.suggestedProduct) saveMarketProduct(Object.assign({}, product, { country: product.country || record.country || marketCountry }));
       writeAudit("Official product photo added", target.kind, target.id, itemLabel(item), target.note, (target.source === "device" ? "Selected from device storage" : "Captured with FOSCH's in-app camera") + " and stored locally.");
     } else if (target.type === "brandLogo") {
-      const registry = brandLogoRegistry();
-      registry[normaliseBrandKey(target.brand)] = { brand: target.brand, dataUrl: String(dataUrl), updatedAt: new Date().toISOString() };
-      try { localStorage.setItem(LOGO_KEY, JSON.stringify(registry)); }
-      catch (error) { alert("The logo could not be stored. Free some device storage and try again."); return true; }
-      writeAudit("Brand logo added or replaced", "brand", normaliseBrandKey(target.brand), target.brand, target.note, (target.source === "device" ? "Selected from device storage" : "Captured with FOSCH's in-app camera") + " and stored locally.");
+      (async function(){
+        try{
+          const publicUrl=await window.FOSCHCloud.uploadPublicMedia(window.FOSCHCloud.brandLogoPath(target.brand),String(dataUrl));
+          const registry=brandLogoRegistry();
+          registry[normaliseBrandKey(target.brand)]={brand:target.brand,dataUrl:String(dataUrl),publicUrl:publicUrl,updatedAt:new Date().toISOString()};
+          localStorage.setItem(LOGO_KEY,JSON.stringify(registry));
+          writeAudit("Brand logo published","brand",normaliseBrandKey(target.brand),target.brand,target.note,(target.source==="device"?"Selected from device storage":"Captured with FOSCH's in-app camera")+" and published for all users.");
+          page="adminDashboard";render();
+        }catch(error){
+          alert("The brand logo could not be published. Check that the latest Supabase public-media SQL migration has been run. "+String(error&&error.message||error));
+          page="adminDashboard";render();
+        }
+      })();
     }
     page = "adminDashboard";
     render();
