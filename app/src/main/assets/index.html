@@ -470,18 +470,19 @@ function renderDeclaredIngredientPercentages(raw){
 }
 const POTENTIAL_ALLERGEN_TERMS=[
  {label:"Gluten-containing cereals",terms:["wheat","wheat flour","barley","rye","oats","spelt","triticale","gluten","malt","malt extract"]},
- {label:"Crustaceans",terms:["crustacean","prawn","shrimp","crab","lobster","crayfish","langoustine","krill"]},
- {label:"Fish",terms:["fish","salmon","tuna","cod","anchovy","sardine","mackerel","herring","trout","haddock","pollock","bonito","fish sauce","fish oil","surimi"]},
- {label:"Molluscs",terms:["mollusc","mollusk","oyster","mussel","squid","octopus","clam","scallop","abalone","snail"]},
- {label:"Peanuts",terms:["peanut","groundnut","arachis"]},
- {label:"Soy",terms:["soybean","soyabean","soya","soy","soy protein","soy lecithin","tofu","tempeh","edamame","miso"]},
- {label:"Milk",terms:["milk","milk powder","milk solids","whey","casein","caseinate","butter","cream","cheese","yoghurt","yogurt","ghee","lactalbumin","lactoglobulin"]},
- {label:"Egg",terms:["egg","egg white","egg yolk","albumen","ovalbumin"]},
- {label:"Tree nuts",terms:["almond","brazil nut","cashew","hazelnut","macadamia","pecan","pistachio","pine nut","walnut","chestnut"]},
- {label:"Sesame",terms:["sesame","tahini"]},
- {label:"Lupin",terms:["lupin","lupine"]},
+ {label:"Crustaceans",terms:["crustaceans","crustacean","prawns","prawn","shrimps","shrimp","crabs","crab","lobsters","lobster","crayfish","langoustines","langoustine","krill"]},
+ {label:"Fish",terms:["fish","salmon","tuna","cod","anchovy","anchovies","sardine","sardines","mackerel","herring","trout","haddock","pollock","bonito","fish sauce","fish oil","surimi"]},
+ {label:"Shellfish",terms:["shellfish"]},
+ {label:"Molluscs",terms:["molluscs","mollusk","mollusks","mollusc","oysters","oyster","mussels","mussel","squid","octopus","octopuses","clams","clam","scallops","scallop","abalones","abalone","snails","snail"]},
+ {label:"Peanuts",terms:["peanuts","peanut","groundnuts","groundnut","arachis"]},
+ {label:"Soy",terms:["soybeans","soybean","soyabeans","soyabean","soya beans","soy beans","soya","soy","soy protein","soy lecithin","tofu","tempeh","edamame","miso"]},
+ {label:"Milk",terms:["milk","milk powder","milk solids","whey","casein","caseinate","butter","cream","cheese","cheeses","yoghurt","yoghurts","yogurt","yogurts","ghee","lactalbumin","lactoglobulin"]},
+ {label:"Egg",terms:["eggs","egg","egg whites","egg white","egg yolks","egg yolk","albumen","ovalbumin"]},
+ {label:"Tree nuts",terms:["almonds","almond","brazil nuts","brazil nut","cashews","cashew","hazelnuts","hazelnut","macadamias","macadamia","pecans","pecan","pistachios","pistachio","pine nuts","pine nut","walnuts","walnut","chestnuts","chestnut"]},
+ {label:"Sesame",terms:["sesame seeds","sesame","tahini"]},
+ {label:"Lupin",terms:["lupins","lupin","lupines","lupine"]},
  {label:"Sulphites",terms:["sulphite","sulphites","sulfite","sulfites","sulphur dioxide","sulfur dioxide","e220","e221","e222","e223","e224","e226","e227","e228"]},
- {label:"Mustard",terms:["mustard","mustard seed"]},
+ {label:"Mustard",terms:["mustard","mustard seed","mustard seeds"]},
  {label:"Celery",terms:["celery","celeriac"]}
 ];
 function detectPotentialAllergens(raw){
