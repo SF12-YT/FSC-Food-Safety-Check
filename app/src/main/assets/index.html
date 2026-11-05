@@ -993,7 +993,7 @@ let productLookupStatus="idle", productLookupMessage="", lookupIssuedKey="", las
  function isFOSCHPublicMediaUrl(value){return typeof value==="string"&&/^https:\/\/mqgvagftvuybietazbdc\.supabase\.co\/storage\/v1\/object\/public\/fosch-public-product-media\//.test(value)}
  function isFOSCHImageSource(value){return typeof value==="string"&&(value.startsWith("data:image/")||isFOSCHPublicMediaUrl(value))}
  function fallbackPublicBrandLogoUrl(brand){
-  const key=String(brand||"").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().replace(/\\s+/g,"-");
+  const key=String(brand||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().replace(/\s+/g,"-");
   return key?"https://mqgvagftvuybietazbdc.supabase.co/storage/v1/object/public/fosch-public-product-media/brands/"+encodeURIComponent(key)+".jpeg":"";
  }
  function renderLookupProductBrandLogo(product){
