@@ -16,9 +16,18 @@
     {key:"polyunsaturated",label:"Polyunsaturated"},{key:"monounsaturated",label:"Monounsaturated"},
     {key:"carbohydrate",label:"Carbohydrate"},{key:"sugars",label:"Sugar"},{key:"lactose",label:"Lactose"},
     {key:"galactose",label:"Galactose"},{key:"dietaryFibre",label:"Dietary fibre"},
-    {key:"cholesterol",label:"Cholesterol"},{key:"sodium",label:"Sodium"},{key:"calcium",label:"Calcium"},{key:"potassium",label:"Potassium"},
+    {key:"cholesterol",label:"Cholesterol"},{key:"sodium",label:"Sodium"},{key:"calcium",label:"Calcium"},{key:"vitaminC",label:"Vitamin C"},{key:"potassium",label:"Potassium"},
     {key:"liveCultures",label:"Live cultures",noDI:true}
   ];
+  function formatAdminDateTime(value){
+    const date=value instanceof Date?value:new Date(value);
+    if(!value||Number.isNaN(date.getTime()))return "Date unavailable";
+    const zone=Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const dateOptions={day:"2-digit",month:"2-digit",year:"numeric"};
+    const timeOptions={hour:"2-digit",minute:"2-digit",hourCycle:"h23"};
+    if(zone){dateOptions.timeZone=zone;timeOptions.timeZone=zone}
+    return new Intl.DateTimeFormat("en-GB",dateOptions).format(date)+" · "+new Intl.DateTimeFormat("en-GB",timeOptions).format(date);
+  }
   function nutritionProduct(record){return record&&record.suggestedProduct&&typeof record.suggestedProduct==="object"?record.suggestedProduct:(record||{});}
   function normaliseAdminNutrition(value){
     const n=value&&typeof value==="object"&&!Array.isArray(value)?value:{};
@@ -387,11 +396,10 @@
     const rejectionDetails = rejected
       ? "<div class=\"warning\"><b>Rejection reason:</b> " + esc(record.rejectionReason || "No reason supplied") +
         (record._foschRemote ? "<small>Stored with the shared submission record.</small>" :
-        "<small>Retained on this device until " + esc(record.rejectionExpiresAt ? new Date(record.rejectionExpiresAt).toLocaleString() : "seven-day expiry") + ".</small>") + "</div>"
+        "<small>Retained on this device until " + esc(record.rejectionExpiresAt ? formatAdminDateTime(record.rejectionExpiresAt) : "seven-day expiry") + ".</small>") + "</div>"
       : "";
     const rejectButton = rejected || !record._foschRemote ? "" : "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.reject('" + type + "',decodeURIComponent('" + id + "'))\">Reject</button>";
-    const localSyncButton = !record._foschRemote ? "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.retrySync('" + type + "',decodeURIComponent('" + id + "'))\">Retry shared upload</button>" : "";
-    const localSyncMessage = !record._foschRemote ? "<div class=\"warning\"><b>Local draft — not yet in Supabase.</b><small>" + esc(record.cloudSyncError || (record.cloudSyncStatus === "syncing" ? "Upload in progress." : "This device copy cannot be approved as a shared submission.")) + "</small></div>" : "";
+    const localSyncMessage = !record._foschRemote ? "<div class=\"warning\"><b>Local draft — not yet in Supabase.</b><small>" + esc(record.cloudSyncError || (record.cloudSyncStatus === "syncing" ? "Upload in progress." : "This device copy will upload automatically when an internet connection is detected.")) + "</small></div>" : "";
     const approveButton = rejected || !record._foschRemote ? "" : "<button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.approve('" + type + "',decodeURIComponent('" + id + "'))\">" + (isApproved(record) ? "Re-approve" : "Approve") + "</button>";
     // Official product media actions belong on both local drafts and shared
     // submissions. Previously these were accidentally hidden for every remote row.
@@ -403,13 +411,13 @@
       (brand ? "<div class=\"admin-submission-meta\">" + esc(brand) + "</div>" : "") +
       "<div class=\"admin-submission-meta\">" + esc(type === "product" ? "Product contribution" : "Correction report") + " · " +
       esc(record.barcode || (record.suggestedProduct && record.suggestedProduct.barcode) || "No barcode") + "</div>" +
-      "<div class=\"admin-submission-meta\">" + esc(record.date ? new Date(record.date).toLocaleString() : "Date not recorded") + "</div></div>" +
+      "<div class=\"admin-submission-meta\">" + esc(record.date ? formatAdminDateTime(record.date) : "Date not recorded") + "</div></div>" +
       "<span class=\"admin-status " + (isApproved(record) ? "approved" : "") + "\">" + esc(status) + "</span></div>" +
       imagePreview(record) + rejectionDetails + localSyncMessage + nutritionMarkup(record) +
       "<div class=\"admin-submission-meta\">" + esc(record.ingredients || (record.suggestedProduct && record.suggestedProduct.ingredients) || record.message || "No ingredient details supplied") + "</div>" +
       "<div class=\"admin-action-grid\">" + approveButton +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.edit('" + type + "',decodeURIComponent('" + id + "'))\">Edit submission</button>" +
-      localMediaButtons + brandCall + localSyncButton + rejectButton +
+      localMediaButtons + brandCall + rejectButton +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.remove('" + type + "',decodeURIComponent('" + id + "'))\">Delete</button>" +
       "</div></article>";
   }
@@ -439,7 +447,7 @@
     return entries.map(function (entry) {
       return "<article class=\"admin-audit-row\"><b>" + esc(entry.action) +
         (entry.recordLabel ? " · " + esc(entry.recordLabel) : "") + "</b>" +
-        "<small>" + esc(entry.at ? new Date(entry.at).toLocaleString() : "Unknown time") + " · " + esc(entry.actor || DEFAULT_EMAIL) + "</small>" +
+        "<small>" + esc(entry.at ? formatAdminDateTime(entry.at) : "Unknown time") + " · " + esc(entry.actor || DEFAULT_EMAIL) + "</small>" +
         (entry.reason ? "<small>Reason: " + esc(entry.reason) + "</small>" : "") +
         (entry.details ? "<small>" + esc(entry.details) + "</small>" : "") +
         "</article>";
@@ -538,38 +546,13 @@
     page = "adminDashboard";
     render();
   }
-  async function retrySync(kind, id) {
-    if (!requireAdmin()) return;
-    const item = findItem(kind, id);
-    if (!item) { alert("This local draft could not be found."); return; }
-    if (item.record._foschRemote) { alert("This submission is already shared with Supabase."); return; }
-    if (!window.FOSCHCloud) { alert("The Supabase connection is unavailable. The draft remains on this device."); return; }
-    try {
-      const submissionKind = kind === "product" ? "product" :
-        (item.record.kind === "product-correction" ? "product_correction" : "correction");
-      const result = await window.FOSCHCloud.queueSubmission(item.record, submissionKind);
-      if (!result || !result.ok) {
-        alert("The draft is still only on this device. Supabase did not confirm the upload: " +
-          String(result && result.message || item.record.cloudSyncError || "Unknown upload error"));
-      } else {
-        await refreshRemoteData();
-        alert("The submission has been uploaded to Supabase and is now in the shared review queue.");
-      }
-      page = "adminDashboard";
-      render();
-    } catch (error) {
-      alert("The draft remains on this device. Shared upload failed: " + String(error && error.message || error));
-      page = "adminDashboard";
-      render();
-    }
-  }
 
   function approve(kind, id) {
     if (!requireAdmin()) return;
     const item = findItem(kind, id);
     if (!item) { alert("This submission could not be found."); return; }
     if (!item.record._foschRemote) {
-      alert("This is a local device draft, not a shared Supabase submission. Retry the shared upload first; only successfully uploaded submissions can be approved.");
+      alert("This is a local device draft, not a shared Supabase submission. It will upload automatically when an internet connection is detected; review it after it appears in the shared queue.");
       return;
     }
     if (isRejected(item.record)) { alert("Rejected submissions cannot be approved."); return; }
@@ -606,7 +589,7 @@
     const item = findItem(kind, id);
     if (!item) { alert("This submission could not be found."); return; }
     if (!item.record._foschRemote) {
-      alert("This is a local device draft, not a shared Supabase submission. Retry the shared upload before rejecting it.");
+      alert("This is a local device draft, not a shared Supabase submission. It will upload automatically when an internet connection is detected; review it after it appears in the shared queue.");
       return;
     }
     if (isRejected(item.record)) { alert("This submission has already been rejected."); return; }
@@ -908,7 +891,6 @@
     renderOfficialProductPhotos: renderOfficialProductPhotos,
     setTab: setTab,
     approve: approve,
-    retrySync: retrySync,
     reject: reject,
     remove: remove,
     edit: edit,
