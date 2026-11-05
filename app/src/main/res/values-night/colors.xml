@@ -1,0 +1,8 @@
+<resources>
+    <color name="fosch_widget_surface">#151D22</color>
+    <color name="fosch_widget_field">#202B31</color>
+    <color name="fosch_widget_action">#315F91</color>
+    <color name="fosch_widget_text">#F1F7FA</color>
+    <color name="fosch_widget_muted">#A4B7C1</color>
+    <color name="fosch_widget_border">#34444C</color>
+</resources>

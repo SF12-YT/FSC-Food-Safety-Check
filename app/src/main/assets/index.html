@@ -1214,4 +1214,21 @@ function submitCorrection(e){e.preventDefault();const editing=!!editingSimpleCor
 matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",()=>{if(prefs.theme==="system"){theme();render()}});render();
 let lastSubmissionStatusRefreshAt=0;
 window.onFOSCHAppForeground=function(){const now=Date.now();if(now-lastSubmissionStatusRefreshAt<2500)return;lastSubmissionStatusRefreshAt=now;if(!window.FOSCHCloud){window.foschAppForegroundSyncPending=true;return}let online=window.foschInternetOnline===true;try{if(window.FOSCHBridge&&typeof window.FOSCHBridge.checkInternetConnection==="function")online=!!window.FOSCHBridge.checkInternetConnection()}catch(ignored){}if(!online)return;if(page==="adminDashboard"&&window.FOSCHAdmin&&window.FOSCHAdmin.isAuthenticated&&window.FOSCHAdmin.isAuthenticated()){window.FOSCHAdmin.onAppForeground().catch(function(error){console.warn("FOSCH admin resume refresh failed:",error)})}syncCloudQueue();window.FOSCHCloud.syncSubmissionStatuses().then(function(changed){if(changed){try{const refreshed=JSON.parse(localStorage.getItem("fosch-contrib")||"[]");if(Array.isArray(refreshed))contributions=refreshed}catch(ignored){}if(typeof render==="function"&&(page==="savedDrafts"||page==="draftDetail"))render()}}).catch(function(error){console.warn("FOSCH submission status refresh failed:",error)})};
-</script><script src="supabase.js"></script><script src="admin.js"></script></body></html>
+</script><script src="supabase.js"></script><script src="admin.js"></script><script>
+window.onFOSCHWidgetSearch=function(value){
+ const term=String(value||"").trim();
+ page="home";
+ selected=null;
+ query=term;
+ searchCategoryFilter="all";
+ favoritesOnly=false;
+ searchFiltersExpanded=false;
+ suppressNextHistoryPush=true;
+ render();
+ const field=document.getElementById("search");
+ if(field){
+  field.focus();
+  if(typeof field.setSelectionRange==="function")field.setSelectionRange(field.value.length,field.value.length);
+ }
+};
+</script></body></html>

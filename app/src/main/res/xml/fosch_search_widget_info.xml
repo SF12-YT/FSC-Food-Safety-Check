@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="250dp"
+    android:minHeight="72dp"
+    android:minResizeWidth="210dp"
+    android:minResizeHeight="72dp"
+    android:targetCellWidth="2"
+    android:targetCellHeight="1"
+    android:updatePeriodMillis="0"
+    android:initialLayout="@layout/fosch_search_widget"
+    android:previewLayout="@layout/fosch_search_widget"
+    android:previewImage="@mipmap/ic_launcher"
+    android:resizeMode="horizontal"
+    android:widgetCategory="home_screen" />

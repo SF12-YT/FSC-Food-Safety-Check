@@ -69,6 +69,7 @@ public class MainActivity extends Activity {
     private int pendingCameraAction = NO_CAMERA_ACTION;
     private long lastHomeBackPress = 0L;
     private static final String TAG = "FOSCHScanner";
+    public static final String EXTRA_WIDGET_SEARCH_QUERY = "com.fosch.org.EXTRA_WIDGET_SEARCH_QUERY";
     private WebView view;
     private Uri cameraPhotoUri;
     private File cameraPhotoFile;
@@ -77,6 +78,8 @@ public class MainActivity extends Activity {
     private ConnectivityManager.NetworkCallback connectivityCallback;
     private boolean webPageReady = false;
     private boolean tileScanPending = false;
+    private boolean widgetSearchPending = false;
+    private String pendingWidgetSearchQuery = "";
 
     @Override public void onCreate(Bundle savedInstanceState) {
         // Select the window theme from the saved user preference before Activity creates its window.
@@ -119,6 +122,7 @@ public class MainActivity extends Activity {
                 super.onPageFinished(webView, url);
                 webPageReady = true;
                 launchPendingTileScanIfReady();
+                launchPendingWidgetSearchIfReady();
             }
         });
         // FOSCH deliberately has no HTML file picker: product evidence must be captured with the camera.
@@ -127,6 +131,7 @@ public class MainActivity extends Activity {
         setContentView(view);
         registerConnectivityCallback();
         handleScanTileIntent(getIntent());
+        handleWidgetSearchIntent(getIntent());
     }
 
     private void handleScanTileIntent(Intent intent) {
@@ -146,6 +151,26 @@ public class MainActivity extends Activity {
         super.onNewIntent(intent);
         setIntent(intent);
         handleScanTileIntent(intent);
+        handleWidgetSearchIntent(intent);
+    }
+
+    private void handleWidgetSearchIntent(Intent intent) {
+        if (intent == null || !intent.hasExtra(EXTRA_WIDGET_SEARCH_QUERY)) return;
+        pendingWidgetSearchQuery = clean(intent.getStringExtra(EXTRA_WIDGET_SEARCH_QUERY));
+        intent.removeExtra(EXTRA_WIDGET_SEARCH_QUERY);
+        widgetSearchPending = true;
+        launchPendingWidgetSearchIfReady();
+    }
+
+    private void launchPendingWidgetSearchIfReady() {
+        if (!widgetSearchPending || !webPageReady || view == null) return;
+        widgetSearchPending = false;
+        String query = pendingWidgetSearchQuery;
+        pendingWidgetSearchQuery = "";
+        view.evaluateJavascript(
+                "window.onFOSCHWidgetSearch && window.onFOSCHWidgetSearch(" + JSONObject.quote(query) + ")",
+                null
+        );
     }
 
     @Override protected void onResume() {

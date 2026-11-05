@@ -30,6 +30,22 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
+        <receiver
+            android:name=".FOSCHSearchWidgetProvider"
+            android:label="@string/fosch_search_widget_label"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/fosch_search_widget_info" />
+        </receiver>
+        <activity
+            android:name=".FOSCHWidgetSearchActivity"
+            android:exported="false"
+            android:theme="@style/FOSCHWidgetSearchDialogTheme"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
         <activity
             android:name=".FOSCHScanTilePreferencesActivity"
             android:exported="true"

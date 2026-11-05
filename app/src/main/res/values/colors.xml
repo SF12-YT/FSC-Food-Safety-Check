@@ -1,3 +1,9 @@
 <resources>
     <color name="ic_launcher_background">#215D43</color>
+    <color name="fosch_widget_surface">#EDF5F9</color>
+    <color name="fosch_widget_field">#FFFFFF</color>
+    <color name="fosch_widget_action">#007D9E</color>
+    <color name="fosch_widget_text">#17313A</color>
+    <color name="fosch_widget_muted">#60727B</color>
+    <color name="fosch_widget_border">#D4E2E8</color>
 </resources>
