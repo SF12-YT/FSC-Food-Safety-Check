@@ -75,6 +75,8 @@ public class MainActivity extends Activity {
     private ProductCacheDb productCacheDb;
     private ConnectivityManager connectivityManager;
     private ConnectivityManager.NetworkCallback connectivityCallback;
+    private boolean webPageReady = false;
+    private boolean tileScanPending = false;
 
     @Override public void onCreate(Bundle savedInstanceState) {
         // Select the window theme from the saved user preference before Activity creates its window.
@@ -112,12 +114,38 @@ public class MainActivity extends Activity {
         settings.setAllowContentAccess(true);
         settings.setJavaScriptCanOpenWindowsAutomatically(true);
         view.addJavascriptInterface(new FOSCHBridge(), "FOSCHBridge");
-        view.setWebViewClient(new WebViewClient());
+        view.setWebViewClient(new WebViewClient() {
+            @Override public void onPageFinished(WebView webView, String url) {
+                super.onPageFinished(webView, url);
+                webPageReady = true;
+                launchPendingTileScanIfReady();
+            }
+        });
         // FOSCH deliberately has no HTML file picker: product evidence must be captured with the camera.
         view.setWebChromeClient(new WebChromeClient());
         view.loadUrl("file:///android_asset/index.html");
         setContentView(view);
         registerConnectivityCallback();
+        handleScanTileIntent(getIntent());
+    }
+
+    private void handleScanTileIntent(Intent intent) {
+        if (intent == null || !intent.getBooleanExtra(FOSCHScanTileService.EXTRA_SCAN_FROM_TILE, false)) return;
+        intent.removeExtra(FOSCHScanTileService.EXTRA_SCAN_FROM_TILE);
+        tileScanPending = true;
+        launchPendingTileScanIfReady();
+    }
+
+    private void launchPendingTileScanIfReady() {
+        if (!tileScanPending || !webPageReady || view == null) return;
+        tileScanPending = false;
+        beginBarcodeScan();
+    }
+
+    @Override protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        handleScanTileIntent(intent);
     }
 
     @Override protected void onResume() {
