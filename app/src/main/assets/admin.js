@@ -353,7 +353,7 @@
     for(const brand of brands){
       const logo=logoFor(brand);
       const publicUrl=window.FOSCHCloud&&window.FOSCHCloud.publicBrandLogoUrl?window.FOSCHCloud.publicBrandLogoUrl(brand):"";
-      const src=publicUrl||(logo&&logo.dataUrl)||"";
+      const src=String(product.brandLogoUrl||(logo&&logo.publicUrl)||(logo&&logo.dataUrl)||publicUrl||"");
       if(src){const label=String((logo&&logo.brand)||brand).trim();return "<div class=\"product-media-row\"><img class=\"product-brand-logo\" loading=\"lazy\" src=\""+esc(src)+"\" alt=\""+esc(label)+" brand logo\" onerror=\"this.style.display='none'\"></div>"}
     }
     return "";
@@ -855,7 +855,9 @@
     } else if (target.type === "brandLogo") {
       (async function(){
         try{
-          const publicUrl=await window.FOSCHCloud.uploadPublicMedia(window.FOSCHCloud.brandLogoPath(target.brand),String(dataUrl));
+          const objectPath=window.FOSCHCloud.brandLogoPath(target.brand);
+          const publicUrl=await window.FOSCHCloud.uploadPublicMedia(objectPath,String(dataUrl));
+          await window.FOSCHCloud.registerBrandLogo(target.brand,objectPath);
           const registry=brandLogoRegistry();
           registry[normaliseBrandKey(target.brand)]={brand:target.brand,dataUrl:String(dataUrl),publicUrl:publicUrl,updatedAt:new Date().toISOString()};
           localStorage.setItem(LOGO_KEY,JSON.stringify(registry));

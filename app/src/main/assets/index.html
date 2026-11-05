@@ -619,7 +619,7 @@ function saveMarketProduct(record){
  const latest=String(record.officialPhoto||"");
  if(latest.startsWith("data:image/")){for(let i=photos.length-1;i>=0;i--){if(photos[i]===latest)photos.splice(i,1)}photos.unshift(latest)}
  const uniquePhotos=[];photos.forEach(photo=>{if(typeof photo==="string"&&(photo.startsWith("data:image/")||/^https:\/\/mqgvagftvuybietazbdc\.supabase\.co\/storage\/v1\/object\/public\/fosch-public-product-media\//.test(photo))&&!uniquePhotos.includes(photo)&&uniquePhotos.length<5)uniquePhotos.push(photo)});
- const compact={productKey:pkey,country:code,brand:record.brand||"",name:record.name||"",barcode:record.barcode||"",sizeLabel:record.sizeLabel||"",producedIn:record.producedIn||"",producedInPercentage:record.producedInPercentage??"",nutritionInfo:record.nutritionInfo||null,ingredients:record.ingredients||"",typicalAnalysis:record.typicalAnalysis||"",claims:record.claims&&typeof record.claims==="object"?{nonGmo:!!record.claims.nonGmo,halal:!!record.claims.halal,glutenFree:!!record.claims.glutenFree,organic:!!record.claims.organic,vegan:!!record.claims.vegan,vegetarian:!!record.claims.vegetarian,kosher:!!record.claims.kosher}:{nonGmo:false,halal:false,glutenFree:false,organic:false,vegan:false,vegetarian:false,kosher:false},mayContain:String(record.mayContain||""),officialPhoto:uniquePhotos[0]||"",officialPhotos:uniquePhotos,date:record.date||new Date().toISOString()};
+ const compact={productKey:pkey,country:code,brand:record.brand||"",name:record.name||"",barcode:record.barcode||"",sizeLabel:record.sizeLabel||"",producedIn:record.producedIn||"",producedInPercentage:record.producedInPercentage??"",nutritionInfo:record.nutritionInfo||null,ingredients:record.ingredients||"",typicalAnalysis:record.typicalAnalysis||"",claims:record.claims&&typeof record.claims==="object"?{nonGmo:!!record.claims.nonGmo,halal:!!record.claims.halal,glutenFree:!!record.claims.glutenFree,organic:!!record.claims.organic,vegan:!!record.claims.vegan,vegetarian:!!record.claims.vegetarian,kosher:!!record.claims.kosher}:{nonGmo:false,halal:false,glutenFree:false,organic:false,vegan:false,vegetarian:false,kosher:false},mayContain:String(record.mayContain||""),brandLogoUrl:String(record.brandLogoUrl||""),officialPhoto:uniquePhotos[0]||"",officialPhotos:uniquePhotos,date:record.date||new Date().toISOString()};
  if(prior>=0)list[prior]=compact;else list.unshift(compact);
  try{localStorage.setItem(key,JSON.stringify(list.slice(0,1000)))}catch(e){}
 }
@@ -993,12 +993,14 @@ let productLookupStatus="idle", productLookupMessage="", lookupIssuedKey="", las
  function isFOSCHPublicMediaUrl(value){return typeof value==="string"&&/^https:\/\/mqgvagftvuybietazbdc\.supabase\.co\/storage\/v1\/object\/public\/fosch-public-product-media\//.test(value)}
  function requestSharedProductMedia(product,key){
   if(!product||!window.FOSCHCloud||typeof window.FOSCHCloud.getPublishedProductMedia!=="function"||Object.prototype.hasOwnProperty.call(publicProductMediaResults,key)||publicProductMediaRequests[key])return;
-  const barcode=String(product.barcode||scannedBarcode||""),country=String(product.country||currentLookupMarket()||"").toUpperCase();
-  publicProductMediaRequests[key]=window.FOSCHCloud.getPublishedProductMedia(barcode,country).then(function(media){
-   const result=media&&typeof media==="object"?media:{};
+  const barcode=String(product.barcode||scannedBarcode||""),country=String(product.country||currentLookupMarket()||"").toUpperCase(),brand=String(product.brand||product.brands||"").trim();
+  publicProductMediaRequests[key]=window.FOSCHCloud.getPublishedProductMedia(barcode,country,brand).then(function(media){
+   const result=media&&typeof media==="object"?Object.assign({},media):{};
+   if(!String(result.brand||"").trim())result.brand=brand;
+   if(!String(result.brandLogoUrl||"").trim()&&brand&&window.FOSCHCloud.publicBrandLogoUrl)result.brandLogoUrl=window.FOSCHCloud.publicBrandLogoUrl(brand);
    publicProductMediaResults[key]=result;
    const photos=[];[result.officialPhoto].concat(Array.isArray(result.officialPhotos)?result.officialPhotos:[]).forEach(function(photo){if(isFOSCHPublicMediaUrl(photo)&&!photos.includes(photo)&&photos.length<5)photos.push(photo)});
-   if(photos.length&&typeof saveMarketProduct==="function"){try{saveMarketProduct(Object.assign({},product,{brand:result.brand||product.brand||"",officialPhoto:photos[0],officialPhotos:photos}))}catch(error){console.warn("FOSCH could not cache public product images:",error)}}
+   if((photos.length||result.brandLogoUrl)&&typeof saveMarketProduct==="function"){try{saveMarketProduct(Object.assign({},product,{brand:result.brand||brand||product.brand||"",brandLogoUrl:result.brandLogoUrl||product.brandLogoUrl||"",officialPhoto:photos[0]||product.officialPhoto||"",officialPhotos:photos.length?photos:(product.officialPhotos||[])}))}catch(error){console.warn("FOSCH could not cache published product media:",error)}}
    if(page==="productLookup"&&scannedBarcode+"::"+currentLookupMarket()===key)render();
   }).catch(function(error){console.warn("FOSCH public product media lookup failed:",error);delete publicProductMediaResults[key]}).finally(function(){delete publicProductMediaRequests[key]});
  }

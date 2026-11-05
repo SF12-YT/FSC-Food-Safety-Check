@@ -564,10 +564,29 @@
     const code=String(barcode||"unbarcoded").replace(/[^a-zA-Z0-9_-]/g,"").slice(0,80)||"unbarcoded";
     return uploadPublicMedia("products/"+market+"/"+code+"/"+photoContentKey(parsed.base64)+"."+parsed.extension,dataUrl);
   }
-  async function getPublishedProductMedia(barcode,country){
+  async function registerBrandLogo(brand,objectPath){
+    if(!isAdmin())throw new Error("Administrator sign-in is required to register a brand logo.");
+    const key=normalisePublicBrandKey(brand),path=String(objectPath||brandLogoPath(brand));
+    if(!key||path!=="brands/"+key+".jpeg")throw new Error("The brand logo reference is invalid.");
+    await api("POST","/rest/v1/rpc/admin_set_fosch_brand_logo",JSON.stringify({p_brand_key:key,p_brand_name:String(brand||"").trim(),p_object_path:path}));
+    return publicMediaUrl(path);
+  }
+  async function getPublishedBrandLogo(brand){
+    const key=normalisePublicBrandKey(brand);if(!key)return "";
+    const path=await api("POST","/rest/v1/rpc/get_fosch_public_brand_logo",JSON.stringify({p_brand_key:key}),{publicOnly:true});
+    return typeof path==="string"&&path?publicMediaUrl(path):"";
+  }
+  async function getPublishedProductMedia(barcode,country,brand){
     const code=String(barcode||"").trim(),market=String(country||"").trim().toUpperCase();if(!code||!/^[A-Z]{2}$/.test(market))return null;
-    const result=await api("POST","/rest/v1/rpc/get_fosch_public_product_media",JSON.stringify({p_barcode:code,p_country:market}),{publicOnly:true});
-    return Array.isArray(result)?result[0]||null:(result&&typeof result==="object"?result:null);
+    const response=await api("POST","/rest/v1/rpc/get_fosch_public_product_media",JSON.stringify({p_barcode:code,p_country:market}),{publicOnly:true});
+    const value=Array.isArray(response)?(response[0]||{}):(response&&typeof response==="object"?response:{});
+    const resolvedBrand=String(value.brand||brand||"").trim();
+    if(!String(value.brand||"").trim()&&resolvedBrand)value.brand=resolvedBrand;
+    if(resolvedBrand){
+      try{value.brandLogoUrl=await getPublishedBrandLogo(resolvedBrand)||publicMediaUrl(brandLogoPath(resolvedBrand));}
+      catch(error){value.brandLogoUrl=publicMediaUrl(brandLogoPath(resolvedBrand));}
+    }
+    return value;
   }
 
   async function adminUpdateSubmission(id, changes, reason) {
@@ -608,6 +627,8 @@
     uploadProductPhoto: uploadProductPhoto,
     publicMediaUrl: publicMediaUrl,
     brandLogoPath: brandLogoPath,
+    registerBrandLogo: registerBrandLogo,
+    getPublishedBrandLogo: getPublishedBrandLogo,
     publicBrandLogoUrl: function (brand) { try { return publicMediaUrl(brandLogoPath(brand)); } catch (ignored) { return ""; } },
     getPublishedProductMedia: getPublishedProductMedia,
     adminDeleteSubmission: adminDeleteSubmission,
