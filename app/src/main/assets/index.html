@@ -317,7 +317,7 @@ const countryOptions=[{"code":"AF","name":"Afghanistan"},{"code":"AL","name":"Al
 function countryName(code){const c=countryOptions.find(x=>x.code===code);return c?c.name:(code||"Not selected")}
 function currentMonthKey(){const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")}
 function countryChangeLedger(){try{const old=JSON.parse(localStorage.getItem("fosch-country-change-ledger")||"{}");if(old.month!==currentMonthKey())return {month:currentMonthKey(),count:0};return {month:old.month,count:Number(old.count)||0}}catch(e){return {month:currentMonthKey(),count:0}}}
-function changeMarketCountry(next){if(!next||next===marketCountry)return;const ledger=countryChangeLedger();if(ledger.count>=2){alert("You have used both country changes for this month. You can change your market again next month.");render();return}const previous=marketCountry;marketCountry=next;loadMarketProductIndex(marketCountry);localStorage.setItem("fosch-market-country",marketCountry);localStorage.setItem("fosch-country-change-ledger",JSON.stringify({month:ledger.month,count:ledger.count+1}));lastProductLookupResult=null;lookupIssuedKey="";productLookupStatus="idle";productLookupMessage="";alert("Product market changed from "+countryName(previous)+" to "+countryName(next)+". Changes used this month: "+(ledger.count+1)+" of 2.");render()}
+function changeMarketCountry(next){if(!next||next===marketCountry)return;const ledger=countryChangeLedger();if(ledger.count>=2){alert("You have used both country changes for this month. You can change your market again next month.");render();return}const previous=marketCountry;marketCountry=next;loadMarketProductIndex(marketCountry);localStorage.setItem("fosch-market-country",marketCountry);localStorage.setItem("fosch-country-change-ledger",JSON.stringify({month:ledger.month,count:ledger.count+1}));lastProductLookupResult=null;lookupIssuedKey="";productLookupStatus="idle";productLookupMessage="";render();showInformationPopup("Country has changed from "+countryName(previous)+" to "+countryName(next))}
 function countryChangesRemaining(){return Math.max(0,2-countryChangeLedger().count)}
 let contributions=JSON.parse(localStorage.getItem("fosch-contrib")||"[]"),page=localStorage.getItem("fosch-market-country")?"home":"countrySetup",query="",selected=null,browseCategory=null,editingDraftId=null,viewingDraftId=null;
 let searchCategoryFilter="all",favoritesOnly=false,searchFiltersExpanded=false;
@@ -494,6 +494,14 @@ function renderInfoBubble(title,body){
  const content=String(body||"").trim();if(!content)return "";
  return `<span class="info-bubble"><button class="info-bubble-button" type="button" aria-label="${esc(title)} information" onclick="openInfoBubble(this)">❕</button><div class="info-bubble-overlay" hidden onclick="closeInfoBubble(this)"><section class="info-bubble-dialog" role="dialog" aria-modal="true" aria-label="${esc(title)}" onclick="event.stopPropagation()"><button class="info-bubble-close" type="button" aria-label="Close information" onclick="closeInfoBubble(this.closest('.info-bubble-overlay'))">×</button><b>${esc(title)}</b><div class="info-bubble-content">${content}</div></section></div></span>`;
 }
+function showInformationPopup(message){
+ document.querySelectorAll(".info-message-overlay").forEach(function(item){item.remove()});
+ const overlay=document.createElement("div");overlay.className="info-bubble-overlay info-message-overlay";
+ overlay.innerHTML='<section class="info-bubble-dialog" role="dialog" aria-modal="true" aria-label="Information"><button class="info-bubble-close" type="button" aria-label="Close information">×</button><div class="info-bubble-content"><p>'+esc(message)+'</p></div></section>';
+ document.body.appendChild(overlay);
+ overlay.addEventListener("click",function(event){if(event.target===overlay)closeInfoBubble(overlay)});
+ const close=overlay.querySelector(".info-bubble-close");if(close){close.addEventListener("click",function(){closeInfoBubble(overlay)});close.focus()}
+}
 function openInfoBubble(button){
  const overlay=button&&button.nextElementSibling;if(!overlay)return;
  document.querySelectorAll(".info-bubble-overlay").forEach(function(item){item.hidden=true});
@@ -502,6 +510,7 @@ function openInfoBubble(button){
 }
 function closeInfoBubble(overlay){
  if(!overlay)return;
+ if(overlay.classList&&overlay.classList.contains("info-message-overlay")){overlay.remove();return}
  overlay.hidden=true;
  const trigger=overlay.previousElementSibling;if(trigger&&typeof trigger.focus==="function")trigger.focus();
 }
@@ -517,16 +526,16 @@ function detectPotentialAllergens(raw){
  return POTENTIAL_ALLERGEN_TERMS.map(group=>{
   const matches=[];
   const terms=group.terms.slice().sort((a,b)=>normaliseIngredientName(b).length-normaliseIngredientName(a).length);
-  terms.forEach(term=>{const range=normalizedPhraseRange(text,term);if(!range)return;if(matches.some(hit=>range.start<hit.end&&range.end>hit.start))return;matches.push({term,start:range.start,end:range.end})});
-  return matches.length?{label:group.label,matches:matches.map(hit=>hit.term)}:null;
+  terms.forEach(term=>{const range=normalizedPhraseRange(text,term);if(!range)return;if(matches.some(hit=>range.start<hit.end&&range.end>hit.start))return;matches.push({term,matchedText:text.slice(range.start,range.end),start:range.start,end:range.end})});
+  return matches.length?{label:group.label,matches:matches.map(hit=>hit.matchedText||hit.term)}:null;
  }).filter(Boolean);
 }
 function renderPotentialAllergens(ingredients,mayContain){
  const direct=detectPotentialAllergens(ingredients),precautionary=detectPotentialAllergens(mayContain);
  if(!direct.length&&!precautionary.length)return "";
- const line=items=>items.map(x=>esc(x.label)+" ("+esc(x.matches.join(", "))+")").join(" · ");
- const body=(direct.length?`<p><b>In ingredients:</b> ${line(direct)}</p>`:"")+
-  (precautionary.length?`<p><b>In “May contain”:</b> ${line(precautionary)}</p>`:"")+
+ const line=items=>items.map(x=>x.matches.map(term=>{const display=String(term).replace(/(^|\s)([a-z])/g,(_,space,letter)=>space+letter.toUpperCase());return normaliseIngredientName(display)===normaliseIngredientName(x.label)?esc(x.label):esc(display)+" ("+esc(x.label)+")"}).join(", ")).join(" · ");
+ const body=(direct.length?'<p><b>In ingredients:</b> '+line(direct)+'</p>':"")+
+  (precautionary.length?'<p><b>In May Contain:</b> '+line(precautionary)+'</p>':"")+
   '<p class="muted">These are possible wording matches, not a confirmed allergen assessment. Check the full package label.</p>';
  return renderInfoBubble("Potential allergen matches",body);
 }
@@ -570,7 +579,24 @@ let cachedProductCandidatesByMarket=Object.create(null);
 function cachedProductsForMarket(){const code=String(marketCountry||"").toUpperCase();if(Object.prototype.hasOwnProperty.call(cachedProductCandidatesByMarket,code))return cachedProductCandidatesByMarket[code];let list=[];try{if(window.FOSCHBridge&&window.FOSCHBridge.getCachedProducts){const raw=window.FOSCHBridge.getCachedProducts(code);const parsed=JSON.parse(raw||"[]");if(Array.isArray(parsed))list=parsed}}catch(e){}list=list.filter(x=>!x.country||String(x.country).toUpperCase()===code);cachedProductCandidatesByMarket[code]=list;return list}
 function knownProductRecords(){const country=String(marketCountry||"").toUpperCase();const fromDrafts=(Array.isArray(contributions)?contributions:[]).filter(x=>String(x.country||"").toUpperCase()===country).map(x=>({...x,brand:x.brand||"",sizeLabel:x.sizeLabel||x.size||"",productKey:x.productKey||stableProductKey(country,x.brand||"",x.name||"")}));const local=localMarketProducts().filter(x=>String(x.country||country).toUpperCase()===country);let cached=[];try{cached=cachedProductsForMarket()}catch(e){}const asset=(window.FOSCH_MARKET_PRODUCT_FILES&&window.FOSCH_MARKET_PRODUCT_FILES[country]&&Array.isArray(window.FOSCH_MARKET_PRODUCT_FILES[country].products))?window.FOSCH_MARKET_PRODUCT_FILES[country].products:[];const internationalAsset=(window.FOSCH_MARKET_PRODUCT_FILES&&window.FOSCH_MARKET_PRODUCT_FILES.INT&&Array.isArray(window.FOSCH_MARKET_PRODUCT_FILES.INT.products))?window.FOSCH_MARKET_PRODUCT_FILES.INT.products.map(x=>({...x,catalogMarket:"INT"})):[];const all=[...fromDrafts,...local,...cached,...asset,...internationalAsset];const dedup=new Map();all.forEach(x=>{const key=String(x.barcode||"")+"|"+String(x.productKey||stableProductKey(country,x.brand||"",x.name||""))+"|"+normalisePackageSizeKey(x.sizeLabel||x.size||"");if((x.name||"").trim()&&!dedup.has(key))dedup.set(key,{...x,country})});return Array.from(dedup.values())}
 function normaliseProductKey(value){return normaliseIngredientName(value).replace(/\b(flavour|flavours)\b/g,"flavor").replace(/\b(flavoured|flavouring)\b/g,"flavored").replace(/\b(colour|colours)\b/g,"color").replace(/\b(yoghurt)\b/g,"yogurt").replace(/\b(centre)\b/g,"center").replace(/\b(crisps)\b/g,"chips").replace(/\s+/g," ").trim()}
-function normalisePackageSizeKey(value){return String(value||"").normalize?String(value||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[×✕]/g,"x").replace(/[\s\u00a0]+/g,"").replace(/,/g,".").trim():String(value||"").toLowerCase().replace(/[×✕]/g,"x").replace(/[\s\u00a0]+/g,"").replace(/,/g,".").trim()}
+function normalisePackageSizeKey(value){
+ let text=String(value||"");
+ if(text.normalize)text=text.normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+ return text.toLowerCase()
+  .replace(/\b(millilitres?|milliliters?)\b/g,"ml")
+  .replace(/\b(centilitres?|centiliters?)\b/g,"cl")
+  .replace(/\b(decilitres?|deciliters?)\b/g,"dl")
+  .replace(/\b(kilolitres?|kiloliters?)\b/g,"kl")
+  .replace(/\b(litres?|liters?)\b/g,"l")
+  .replace(/\b(milligrams?)\b/g,"mg")
+  .replace(/\b(micrograms?)\b/g,"mcg")
+  .replace(/\b(kilograms?)\b/g,"kg")
+  .replace(/\b(grams?)\b/g,"g")
+  .replace(/[×✕]/g,"x")
+  .replace(/[\s\u00a0]+/g,"")
+  .replace(/,/g,".")
+  .trim()
+}
 function normaliseBrandKey(value){return normaliseIngredientName(value).replace(/\s+/g," ").trim()}
 function stableProductKey(country,brand,name){return "product:"+String(country||"").toUpperCase()+":"+normaliseBrandKey(brand)+":"+normaliseProductKey(name)}
 function editDistance(a,b){a=String(a);b=String(b);if(a===b)return 0;if(!a.length)return b.length;if(!b.length)return a.length;let prev=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){const cur=[i];for(let j=1;j<=b.length;j++)cur[j]=Math.min(cur[j-1]+1,prev[j]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));prev=cur}return prev[b.length]}
@@ -738,6 +764,7 @@ const nutritionNutrients=[
  {key:"cholesterol",label:"Cholesterol",placeholder:"e.g. 0 mg"},
  {key:"sodium",label:"Sodium",placeholder:"e.g. 260 mg"},
  {key:"calcium",label:"Calcium",placeholder:"e.g. 130 mg"},
+ {key:"vitaminC",label:"Vitamin C",placeholder:"e.g. 60 mg"},
  {key:"potassium",label:"Potassium",placeholder:"e.g. 180 mg"},
  {key:"liveCultures",label:"Live cultures",placeholder:"e.g. 1 × 10⁹ CFU",noDI:true}
 ];
@@ -749,7 +776,7 @@ function hasNutritionInfo(value){const n=normaliseNutritionInfo(value);return !!
 function openNutritionForm(){contributionFormState=readContributionFormState();page="nutritionForm";render()}
 function saveNutritionAndReturn(e){if(e)e.preventDefault();const nutritionInfo=collectNutritionInfoFromForm();contributionFormState={...(contributionFormState||prefillProduct||{}),nutritionInfo};returnToContribution()}
 function clearNutritionAndReturn(){contributionFormState={...(contributionFormState||prefillProduct||{}),nutritionInfo:null};returnToContribution()}
-function nutritionFormMarkup(product){const n=normaliseNutritionInfo(product&& (product.nutritionInfo||product.nutrition));return `<section class="nutrition-section"><h3>Nutrition information (optional)</h3><p class="nutrition-intro">Copy values, units and wording exactly as printed, including phrases such as “LESS THAN 0.1g”.</p><div class="nutrition-meta"><div><label for="nutritionServings">Servings</label><input id="nutritionServings" class="field" value="${esc(n.servings)}" placeholder="e.g. 5" autocomplete="off"></div><div><label for="nutritionServingSize">Serving size</label><input id="nutritionServingSize" class="field" value="${esc(n.servingSize)}" placeholder="e.g. 30 g" autocomplete="off"></div></div><div class="nutrition-table-wrap"><div class="nutrition-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Quantity per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Quantity per 100 g</div>${nutritionNutrients.map(f=>`<div class="nutrient-name ${f.indent?"sub-nutrient":"parent-nutrient"}">${esc(f.label)}</div><input id="nutritionServing_${f.key}" class="field" aria-label="${esc(f.label)} quantity per serving" value="${esc(n.perServing[f.key]||"")}" placeholder="${esc(f.placeholder)}" autocomplete="off"><input id="nutritionDI_${f.key}" class="field" aria-label="${esc(f.label)} percent daily intake per serving" value="${esc(n.dailyIntakePerServing[f.key]||"")}" placeholder="${f.noDI?"Not applicable":"e.g. 5%"}" ${f.noDI?"disabled":""} autocomplete="off"><input id="nutritionPer100g_${f.key}" class="field" aria-label="${esc(f.label)} quantity per 100 g" value="${esc(n.per100g[f.key]||"")}" placeholder="${esc(f.placeholder)}" autocomplete="off">`).join("")}</div></div></section>`}
+function nutritionFormMarkup(product){const n=normaliseNutritionInfo(product&& (product.nutritionInfo||product.nutrition));return `<section class="nutrition-section"><h3>Nutrition information (optional)</h3><p class="nutrition-intro">Copy values, units and wording exactly as printed, including phrases such as “LESS THAN 0.1g”.</p><div class="nutrition-meta"><div><label for="nutritionServings">Servings</label><input id="nutritionServings" class="field" value="${esc(n.servings)}" placeholder="e.g. 5" autocomplete="off"></div><div><label for="nutritionServingSize">Serving size</label><input id="nutritionServingSize" class="field" value="${esc(n.servingSize)}" placeholder="e.g. 30 g" autocomplete="off"></div></div><div class="nutrition-table-wrap"><div class="nutrition-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Quantity per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Quantity per 100 g</div>${nutritionNutrients.map(f=>`<div class="nutrient-name ${f.indent?"sub-nutrient":"parent-nutrient"}">${esc(f.label)}</div><input id="nutritionServing_${f.key}" class="field" aria-label="${esc(f.label)} quantity per serving" value="${esc(n.perServing[f.key]||"")}" placeholder="${esc(f.placeholder)}" autocomplete="off"><input id="nutritionDI_${f.key}" class="field" aria-label="${esc(f.label)} percent daily intake per serving" value="${esc(n.dailyIntakePerServing[f.key]||"")}" placeholder="${f.noDI?"Not applicable":"e.g. 5% or &lt;0.1%"}" ${f.noDI?"disabled":""} autocomplete="off"><input id="nutritionPer100g_${f.key}" class="field" aria-label="${esc(f.label)} quantity per 100 g" value="${esc(n.per100g[f.key]||"")}" placeholder="${esc(f.placeholder)}" autocomplete="off">`).join("")}</div></div></section>`}
 function renderNutritionInfo(value){const n=normaliseNutritionInfo(value);const has=!!(n.servings||n.servingSize||nutritionNutrients.some(f=>String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim()));if(!has)return "";const rows=nutritionNutrients.filter(f=>String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim()).map(f=>`<div class="nutrient-name ${f.indent?"sub-nutrient":"parent-nutrient"}">${esc(f.label)}</div><div>${esc(n.perServing[f.key]||"—")}</div><div>${f.noDI?"Not applicable":esc(n.dailyIntakePerServing[f.key]||"—")}</div><div>${esc(n.per100g[f.key]||"—")}</div>`).join("");return `<div class="info nutrition-view"><b>Nutrition information (as provided)</b>${n.servings?`<p class="nutrition-origin">Servings: ${esc(n.servings)}</p>`:""}${n.servingSize?`<p class="nutrition-origin">Serving size: ${esc(n.servingSize)}</p>`:""}${rows?`<div class="nutrition-table-wrap"><div class="nutrition-read-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Per 100 g</div>${rows}</div></div>`:""}</div>`}
 function renderProductClaims(value){const claims=value&&value.claims&&typeof value.claims==="object"?value.claims:{};const labels=[];if(claims.nonGmo)labels.push("Non-GMO");if(claims.halal)labels.push("Halal");if(claims.glutenFree)labels.push("Gluten Free");if(claims.organic)labels.push("Organic");if(claims.vegan)labels.push("Vegan");if(claims.vegetarian)labels.push("Vegetarian");if(claims.kosher)labels.push("Kosher");return labels.length?`<div class="info"><b>Label claims</b><p>${labels.join(" · ")}</p></div>`:""}
 function renderMayContain(value){const text=String(value||"").trim();return text?renderInfoBubble("May contain (package wording)",`<p>${esc(text)}</p><p class="muted">This is the precautionary statement copied from the product label.</p>`):""}
