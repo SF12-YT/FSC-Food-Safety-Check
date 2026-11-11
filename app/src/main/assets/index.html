@@ -194,6 +194,7 @@ html[data-theme=dark],html[data-theme=dark] body{background:#000000!important}
 .admin-head h1{margin:0}.admin-head .secondary{width:auto;white-space:nowrap}
 .admin-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:12px 0}
 .admin-tabs button{min-height:42px;min-width:0;padding:9px 5px!important;font-size:11px;white-space:normal;line-height:1.2}
+.admin-tabs{position:relative;z-index:30;pointer-events:auto!important;isolation:isolate}.admin-tabs button{position:relative;z-index:31;pointer-events:auto!important;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .admin-submission-card,.admin-brand-card,.admin-audit-row{padding:14px;margin:10px 0;border-radius:16px;background:var(--panel);box-shadow:0 2px 10px rgba(0,0,0,.045)}
 .admin-submission-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
 .admin-submission-title{font-weight:750;font-size:15px}
