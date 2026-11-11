@@ -468,7 +468,7 @@
       "<span class=\"admin-submission-meta\">" + esc(type === "product" ? "Product contribution" : "Correction report") + " · " +
       esc(record.barcode || (record.suggestedProduct && record.suggestedProduct.barcode) || "No barcode") + "</span>" +
       "<span class=\"admin-submission-meta\">" + esc(record.date ? formatAdminDateTime(record.date) : "Date not recorded") + "</span></button>" +
-      "<span class=\"admin-status \" + (isApproved(record) ? "approved" : "") + "\">" + esc(status) + "</span></div>" +
+      "<span class=\"admin-status " + (isApproved(record) ? "approved" : "") + "\">" + esc(status) + "</span></div>" +
       officialPhotosMarkup + imagePreview(record) + rejectionDetails + localSyncMessage + nutritionMarkup(record) +
       "<div class=\"admin-submission-meta\">" + esc(record.ingredients || (record.suggestedProduct && record.suggestedProduct.ingredients) || record.message || "No ingredient details supplied") + "</div>" +
       "<div class=\"admin-action-grid\">" + approveButton +
