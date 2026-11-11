@@ -42,10 +42,10 @@
     return !!(String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim());
   }
   function adminNutritionViewRow(f,n){
-    return "<div class=\"admin-nutrition-row\"><b>"+esc(f.label)+"</b><span>"+esc(n.perServing[f.key]||"—")+"</span><span>"+(f.noDI?"Not applicable":esc(n.dailyIntakePerServing[f.key]||"—"))+"</span><span>"+esc(n.per100g[f.key]||"—")+"</span></div>";
+    return "<div class=\"admin-nutrition-row\"><b class=\""+(f.parent?"admin-sub-nutrient":"admin-parent-nutrient")+"\">"+esc(f.label)+"</b><span>"+esc(n.perServing[f.key]||"—")+"</span><span>"+(f.noDI?"Not applicable":esc(n.dailyIntakePerServing[f.key]||"—"))+"</span><span>"+esc(n.per100g[f.key]||"—")+"</span></div>";
   }
   function adminNutritionEditRow(f,n){
-    return "<div class=\"admin-nutrition-edit-row\"><b>"+esc(f.label)+"</b>"+
+    return "<div class=\"admin-nutrition-edit-row\"><b class=\""+(f.parent?"admin-sub-nutrient":"admin-parent-nutrient")+"\">"+esc(f.label)+"</b>"+
       "<input class=\"field\" id=\"adminNutritionServing_"+f.key+"\" aria-label=\""+esc(f.label)+" per serving\" value=\""+esc(n.perServing[f.key]||"")+"\" placeholder=\"Per serving\">"+
       "<input class=\"field\" id=\"adminNutritionDI_"+f.key+"\" aria-label=\""+esc(f.label)+" daily intake\" value=\""+esc(n.dailyIntakePerServing[f.key]||"")+"\" placeholder=\""+(f.noDI?"Not applicable":"% DI")+"\" "+(f.noDI?"disabled":"")+">"+
       "<input class=\"field\" id=\"adminNutrition100g_"+f.key+"\" aria-label=\""+esc(f.label)+" per 100 g\" value=\""+esc(n.per100g[f.key]||"")+"\" placeholder=\"Per 100 g\"></div>";
