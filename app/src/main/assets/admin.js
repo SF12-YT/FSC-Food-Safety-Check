@@ -38,12 +38,20 @@
     return new Intl.DateTimeFormat("en-GB",dateOptions).format(date)+" · "+new Intl.DateTimeFormat("en-GB",timeOptions).format(date);
   }
   function nutritionProduct(record){return record&&record.suggestedProduct&&typeof record.suggestedProduct==="object"?record.suggestedProduct:(record||{});}
+  function normaliseAdminMicrogramUnitText(value){
+    return String(value==null?"":value).replace(/\b(?:mcg|ug|micrograms?|microgrammes?)\b/gi,"µg").replace(/[μµ]\s*g\b/gi,"µg");
+  }
+  function normaliseAdminQuantityValues(value){
+    const result={...(value&&typeof value==="object"&&!Array.isArray(value)?value:{})};
+    Object.keys(result).forEach(key=>{result[key]=normaliseAdminMicrogramUnitText(result[key]);});
+    return result;
+  }
   function normaliseAdminNutrition(value){
     const n=value&&typeof value==="object"&&!Array.isArray(value)?value:{};
     return {servings:String(n.servings==null?"":n.servings),servingSize:String(n.servingSize==null?"":n.servingSize),
-      perServing:n.perServing&&typeof n.perServing==="object"?n.perServing:{},
+      perServing:normaliseAdminQuantityValues(n.perServing),
       dailyIntakePerServing:n.dailyIntakePerServing&&typeof n.dailyIntakePerServing==="object"?n.dailyIntakePerServing:{},
-      per100g:n.per100g&&typeof n.per100g==="object"?n.per100g:{}};
+      per100g:normaliseAdminQuantityValues(n.per100g)};
   }
   function adminNutritionPopulated(n,f){
     return !!(String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim());
@@ -89,12 +97,12 @@
       "<label for=\"adminNutritionServingSize\">Serving size</label><input class=\"field\" id=\"adminNutritionServingSize\" value=\""+esc(n.servingSize)+"\">"+
       "<div class=\"nutrition-disclaimer\"><b>RDI is different from %DI.</b> RDI means Recommended Dietary Intake; %DI means percentage of the Daily Intake reference value for a serving. They are not interchangeable. Do not enter an RDI value in the %DI column.</div>"+
       "<div class=\"admin-nutrition-edit-grid\"><b>Nutrient</b><b>Per serving</b><b>% DI</b><b>Per 100 g</b>"+rows+"</div>"+
-      "<small>Values are saved in the submission JSON payload. Keep the printed units; FOSCH does not calculate missing values.</small></details>";
+      "<small>For micrograms, type mcg or ug if you cannot enter µg; FOSCH displays µg without changing the amount. Keep the printed units; FOSCH does not calculate missing values.</small></details>";
   }
   function readAdminNutritionFromForm(){
     const val=id=>{const el=document.getElementById(id);return el?String(el.value||"").trim():"";};
     const n={servings:val("adminNutritionServings"),servingSize:val("adminNutritionServingSize"),perServing:{},dailyIntakePerServing:{},per100g:{}};
-    NUTRITION_FIELDS.forEach(f=>{n.perServing[f.key]=val("adminNutritionServing_"+f.key);n.dailyIntakePerServing[f.key]=f.noDI?"":val("adminNutritionDI_"+f.key);n.per100g[f.key]=val("adminNutrition100g_"+f.key);});
+    NUTRITION_FIELDS.forEach(f=>{n.perServing[f.key]=normaliseAdminMicrogramUnitText(val("adminNutritionServing_"+f.key));n.dailyIntakePerServing[f.key]=f.noDI?"":val("adminNutritionDI_"+f.key);n.per100g[f.key]=normaliseAdminMicrogramUnitText(val("adminNutrition100g_"+f.key));});
     const has=!!(n.servings||n.servingSize||NUTRITION_FIELDS.some(f=>n.perServing[f.key]||n.dailyIntakePerServing[f.key]||n.per100g[f.key]));
     return has?n:null;
   }
