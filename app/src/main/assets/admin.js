@@ -463,12 +463,12 @@
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureOfficialPhoto('" + type + "',decodeURIComponent('" + id + "'))\">Capture official photo</button>" +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadOfficialPhoto('" + type + "',decodeURIComponent('" + id + "'))\">Upload image from device</button>";
     return "<article class=\"admin-submission-card\">" +
-      "<div class=\"admin-submission-top\"><div><div class=\"admin-submission-title\">" + esc(title) + "</div>" +
-      (brand ? "<div class=\"admin-submission-meta\">" + esc(brand) + "</div>" : "") +
-      "<div class=\"admin-submission-meta\">" + esc(type === "product" ? "Product contribution" : "Correction report") + " · " +
-      esc(record.barcode || (record.suggestedProduct && record.suggestedProduct.barcode) || "No barcode") + "</div>" +
-      "<div class=\"admin-submission-meta\">" + esc(record.date ? formatAdminDateTime(record.date) : "Date not recorded") + "</div></div>" +
-      "<span class=\"admin-status " + (isApproved(record) ? "approved" : "") + "\">" + esc(status) + "</span></div>" +
+      "<div class=\"admin-submission-top\"><button type=\"button\" class=\"admin-submission-open\" onclick=\"FOSCHAdmin.edit('" + type + "',decodeURIComponent('" + id + "'))\" aria-label=\"Open submission: " + esc(title) + "\"><span class=\"admin-submission-title\">" + esc(title) + "</span>" +
+      (brand ? "<span class=\"admin-submission-meta\">" + esc(brand) + "</span>" : "") +
+      "<span class=\"admin-submission-meta\">" + esc(type === "product" ? "Product contribution" : "Correction report") + " · " +
+      esc(record.barcode || (record.suggestedProduct && record.suggestedProduct.barcode) || "No barcode") + "</span>" +
+      "<span class=\"admin-submission-meta\">" + esc(record.date ? formatAdminDateTime(record.date) : "Date not recorded") + "</span></button>" +
+      "<span class=\"admin-status \" + (isApproved(record) ? "approved" : "") + "\">" + esc(status) + "</span></div>" +
       officialPhotosMarkup + imagePreview(record) + rejectionDetails + localSyncMessage + nutritionMarkup(record) +
       "<div class=\"admin-submission-meta\">" + esc(record.ingredients || (record.suggestedProduct && record.suggestedProduct.ingredients) || record.message || "No ingredient details supplied") + "</div>" +
       "<div class=\"admin-action-grid\">" + approveButton +
