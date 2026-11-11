@@ -12,11 +12,13 @@
   let remoteAuditLog = [];
   const NUTRITION_FIELDS = [
     {key:"energy",label:"Energy"},{key:"protein",label:"Protein"},{key:"gluten",label:"Gluten"},
-    {key:"fatTotal",label:"Fat total"},{key:"saturated",label:"Saturated"},{key:"trans",label:"Trans"},
-    {key:"polyunsaturated",label:"Polyunsaturated"},{key:"monounsaturated",label:"Monounsaturated"},
-    {key:"carbohydrate",label:"Carbohydrate"},{key:"sugars",label:"Sugar"},{key:"lactose",label:"Lactose"},
-    {key:"galactose",label:"Galactose"},{key:"dietaryFibre",label:"Dietary fibre"},
-    {key:"cholesterol",label:"Cholesterol"},{key:"sodium",label:"Sodium"},{key:"calcium",label:"Calcium"},{key:"vitaminC",label:"Vitamin C"},{key:"potassium",label:"Potassium"},
+    {key:"fatTotal",label:"Fat total",subsectionLabel:"Fat breakdown"},{key:"saturated",label:"Saturated",parent:"fatTotal"},{key:"trans",label:"Trans",parent:"fatTotal"},
+    {key:"polyunsaturated",label:"Polyunsaturated",parent:"fatTotal"},{key:"monounsaturated",label:"Monounsaturated",parent:"fatTotal"},
+    {key:"carbohydrate",label:"Carbohydrate"},{key:"sugars",label:"Sugar",subsectionLabel:"Sugar breakdown"},{key:"naturalSugar",label:"Natural Sugar",parent:"sugars"},{key:"addedSugar",label:"Added Sugar",parent:"sugars"},
+    {key:"lactose",label:"Lactose",parent:"sugars"},{key:"galactose",label:"Galactose",parent:"sugars"},{key:"dietaryFibre",label:"Dietary fibre"},{key:"prebioticFibre",label:"Prebiotic fibre"},
+    {key:"cholesterol",label:"Cholesterol"},{key:"sodium",label:"Sodium"},{key:"potassium",label:"Potassium"},{key:"calcium",label:"Calcium"},
+    {key:"phosphorus",label:"Phosphorus"},{key:"magnesium",label:"Magnesium"},{key:"iodine",label:"Iodine"},{key:"caffeine",label:"Caffeine"},
+    {key:"vitaminB2",label:"Vitamin B2"},{key:"vitaminB5",label:"Vitamin B5"},{key:"vitaminB12",label:"Vitamin B12"},{key:"vitaminC",label:"Vitamin C"},
     {key:"liveCultures",label:"Live cultures",noDI:true}
   ];
   function formatAdminDateTime(value){
@@ -36,25 +38,45 @@
       dailyIntakePerServing:n.dailyIntakePerServing&&typeof n.dailyIntakePerServing==="object"?n.dailyIntakePerServing:{},
       per100g:n.per100g&&typeof n.per100g==="object"?n.per100g:{}};
   }
+  function adminNutritionPopulated(n,f){
+    return !!(String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim());
+  }
+  function adminNutritionViewRow(f,n){
+    return "<div class=\"admin-nutrition-row\"><b>"+esc(f.label)+"</b><span>"+esc(n.perServing[f.key]||"—")+"</span><span>"+(f.noDI?"Not applicable":esc(n.dailyIntakePerServing[f.key]||"—"))+"</span><span>"+esc(n.per100g[f.key]||"—")+"</span></div>";
+  }
+  function adminNutritionEditRow(f,n){
+    return "<div class=\"admin-nutrition-edit-row\"><b>"+esc(f.label)+"</b>"+
+      "<input class=\"field\" id=\"adminNutritionServing_"+f.key+"\" aria-label=\""+esc(f.label)+" per serving\" value=\""+esc(n.perServing[f.key]||"")+"\" placeholder=\"Per serving\">"+
+      "<input class=\"field\" id=\"adminNutritionDI_"+f.key+"\" aria-label=\""+esc(f.label)+" daily intake\" value=\""+esc(n.dailyIntakePerServing[f.key]||"")+"\" placeholder=\""+(f.noDI?"Not applicable":"% DI")+"\" "+(f.noDI?"disabled":"")+">"+
+      "<input class=\"field\" id=\"adminNutrition100g_"+f.key+"\" aria-label=\""+esc(f.label)+" per 100 g\" value=\""+esc(n.per100g[f.key]||"")+"\" placeholder=\"Per 100 g\"></div>";
+  }
+  function adminNutritionGroupedRows(n,editMode){
+    return NUTRITION_FIELDS.filter(function(f){return !f.parent}).map(function(f){
+      const children=NUTRITION_FIELDS.filter(function(child){return child.parent===f.key});
+      const parentRow=(editMode||adminNutritionPopulated(n,f))?(editMode?adminNutritionEditRow(f,n):adminNutritionViewRow(f,n)):"";
+      const visibleChildren=editMode?children:children.filter(function(child){return adminNutritionPopulated(n,child)});
+      const childRows=visibleChildren.map(function(child){return editMode?adminNutritionEditRow(child,n):adminNutritionViewRow(child,n)}).join("");
+      const details=children.length&&(editMode||visibleChildren.length)?"<details class=\"admin-nutrition-subgroup\"><summary>"+esc(f.subsectionLabel||f.label+" details")+(editMode?"":" ("+visibleChildren.length+")")+"</summary><div class=\"admin-nutrition-subgrid\">"+childRows+"</div></details>":"";
+      return parentRow+details;
+    }).join("");
+  }
   function nutritionMarkup(record){
     const product=nutritionProduct(record);
     const n=normaliseAdminNutrition(product.nutritionInfo||product.nutrition||(record&&(record.nutritionInfo||record.nutrition)));
-    const populated=NUTRITION_FIELDS.filter(f=>String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim());
+    const populated=NUTRITION_FIELDS.filter(function(f){return adminNutritionPopulated(n,f)});
     if(!n.servings&&!n.servingSize&&!populated.length)return "";
-    const rows=populated.map(f=>"<div class=\"admin-nutrition-row\"><b>"+esc(f.label)+"</b><span>"+esc(n.perServing[f.key]||"—")+"</span><span>"+(f.noDI?"Not applicable":esc(n.dailyIntakePerServing[f.key]||"—"))+"</span><span>"+esc(n.per100g[f.key]||"—")+"</span></div>").join("");
+    const rows=adminNutritionGroupedRows(n,false);
     return "<details class=\"admin-nutrition\"><summary>Nutrition information ("+populated.length+" nutrients)</summary>"+
       (n.servings?"<small>Servings: "+esc(n.servings)+"</small>":"")+(n.servingSize?"<small>Serving size: "+esc(n.servingSize)+"</small>":"")+
       (rows?"<div class=\"admin-nutrition-grid\"><b>Nutrient</b><b>Per serving</b><b>% DI</b><b>Per 100 g</b>"+rows+"</div>":"")+"</details>";
   }
   function nutritionEditorMarkup(product){
     const n=normaliseAdminNutrition(product&&(product.nutritionInfo||product.nutrition));
-    const rows=NUTRITION_FIELDS.map(f=>"<div class=\"admin-nutrition-edit-row\"><b>"+esc(f.label)+"</b>"+
-      "<input class=\"field\" id=\"adminNutritionServing_"+f.key+"\" aria-label=\""+esc(f.label)+" per serving\" value=\""+esc(n.perServing[f.key]||"")+"\" placeholder=\"Per serving\">"+
-      "<input class=\"field\" id=\"adminNutritionDI_"+f.key+"\" aria-label=\""+esc(f.label)+" daily intake\" value=\""+esc(n.dailyIntakePerServing[f.key]||"")+"\" placeholder=\""+(f.noDI?"Not applicable":"% DI")+"\" "+(f.noDI?"disabled":"")+">"+
-      "<input class=\"field\" id=\"adminNutrition100g_"+f.key+"\" aria-label=\""+esc(f.label)+" per 100 g\" value=\""+esc(n.per100g[f.key]||"")+"\" placeholder=\"Per 100 g\"></div>").join("");
+    const rows=adminNutritionGroupedRows(n,true);
     return "<details class=\"admin-nutrition admin-nutrition-editor\"><summary>Edit nutrition information</summary>"+
       "<label for=\"adminNutritionServings\">Servings</label><input class=\"field\" id=\"adminNutritionServings\" value=\""+esc(n.servings)+"\">"+
       "<label for=\"adminNutritionServingSize\">Serving size</label><input class=\"field\" id=\"adminNutritionServingSize\" value=\""+esc(n.servingSize)+"\">"+
+      "<div class=\"nutrition-disclaimer\"><b>RDI is different from %DI.</b> RDI means Recommended Dietary Intake; %DI means percentage of the Daily Intake reference value for a serving. They are not interchangeable. Do not enter an RDI value in the %DI column.</div>"+
       "<div class=\"admin-nutrition-edit-grid\"><b>Nutrient</b><b>Per serving</b><b>% DI</b><b>Per 100 g</b>"+rows+"</div>"+
       "<small>Values are saved in the submission JSON payload. Keep the printed units; FOSCH does not calculate missing values.</small></details>";
   }
