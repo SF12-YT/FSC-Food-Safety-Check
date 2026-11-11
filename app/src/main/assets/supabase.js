@@ -559,6 +559,24 @@
     await api("POST","/storage/v1/object/"+PUBLIC_MEDIA_BUCKET+"/"+cleanPath,parsed.base64,{contentType:parsed.mime,base64Body:true,upsert:true});
     return publicMediaUrl(path);
   }
+  function productPhotoPathFromPublicUrl(value){
+    const prefix=SUPABASE_URL+"/storage/v1/object/public/"+PUBLIC_MEDIA_BUCKET+"/";
+    const raw=String(value||"").split("?")[0];
+    if(raw.indexOf(prefix)!==0)throw new Error("This image is not in FOSCH's public product-media bucket.");
+    const encodedPath=raw.slice(prefix.length);
+    let path;
+    try{path=encodedPath.split("/").map(function(part){return decodeURIComponent(part)}).join("/");}
+    catch(error){throw new Error("The official image path is malformed.");}
+    const parts=path.split("/");
+    if(parts[0]!=="products"||!path||parts.some(function(part){return !part||part==="."||part===".."}))throw new Error("Only official product images can be deleted here.");
+    return path;
+  }
+  async function deleteProductPhoto(publicUrl){
+    if(!isAdmin())throw new Error("Administrator sign-in is required to delete product media.");
+    const path=productPhotoPathFromPublicUrl(publicUrl);
+    await api("DELETE","/storage/v1/object/"+PUBLIC_MEDIA_BUCKET,JSON.stringify({prefixes:[path]}));
+    return true;
+  }
   async function uploadProductPhoto(dataUrl,country,barcode){
     const parsed=dataUrlParts(dataUrl),market=/^[A-Z]{2}$/i.test(String(country||""))?String(country).toUpperCase():"INT";
     const code=String(barcode||"unbarcoded").replace(/[^a-zA-Z0-9_-]/g,"").slice(0,80)||"unbarcoded";
@@ -625,6 +643,7 @@
     adminUpdateSubmission: adminUpdateSubmission,
     uploadPublicMedia: uploadPublicMedia,
     uploadProductPhoto: uploadProductPhoto,
+    deleteProductPhoto: deleteProductPhoto,
     publicMediaUrl: publicMediaUrl,
     brandLogoPath: brandLogoPath,
     registerBrandLogo: registerBrandLogo,
