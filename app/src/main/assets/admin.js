@@ -398,6 +398,19 @@
         return "<img class=\"product-official-photo\" loading=\"lazy\" decoding=\"async\" src=\"" + esc(photo) + "\" alt=\"Official product image " + (index + 1) + "\">";
       }).join("") + "</div></section>";
   }
+  function renderAdminOfficialProductPhotos(item) {
+    if (!item || !item.record) return "";
+    const record=item.record;
+    const product=item.kind==="correction"&&record.suggestedProduct?record.suggestedProduct:record;
+    const photos=recordPhotos(product);
+    if (!photos.length) return "";
+    const id=urlArg(item.id),kind=item.kind;
+    return "<section class=\"official-product-gallery admin-official-gallery\"><b>Official product images · administrator controls</b><div class=\"official-product-gallery-grid\">"+
+      photos.map(function(photo,index){
+        return "<div class=\"admin-official-photo-item\"><img class=\"product-official-photo\" loading=\"lazy\" decoding=\"async\" src=\""+esc(photo)+"\" alt=\"Official product image "+(index+1)+"\">"+
+          "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.deleteOfficialPhoto('"+kind+"',decodeURIComponent('"+id+"'),"+index+")\">Delete image</button></div>";
+      }).join("")+"</div></section>";
+  }
   function imagePreview(record) {
     const official = recordPhotos(record);
     const evidence = Array.isArray(record.photos) ? record.photos : [];
@@ -414,6 +427,7 @@
       : (rejected ? "Rejected" : (isApproved(record) ? "Approved" : "Pending review"));
     const id = urlArg(item.id);
     const type = item.kind;
+    const officialPhotosMarkup = renderAdminOfficialProductPhotos(item);
     const brandCall = brand ? "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Capture brand logo</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadBrandLogo(decodeURIComponent('" + urlArg(brand) + "'))\">Upload brand logo</button>" : "";
     const rejectionDetails = rejected
       ? "<div class=\"warning\"><b>Rejection reason:</b> " + esc(record.rejectionReason || "No reason supplied") +
@@ -435,7 +449,7 @@
       esc(record.barcode || (record.suggestedProduct && record.suggestedProduct.barcode) || "No barcode") + "</div>" +
       "<div class=\"admin-submission-meta\">" + esc(record.date ? formatAdminDateTime(record.date) : "Date not recorded") + "</div></div>" +
       "<span class=\"admin-status " + (isApproved(record) ? "approved" : "") + "\">" + esc(status) + "</span></div>" +
-      imagePreview(record) + rejectionDetails + localSyncMessage + nutritionMarkup(record) +
+      officialPhotosMarkup + imagePreview(record) + rejectionDetails + localSyncMessage + nutritionMarkup(record) +
       "<div class=\"admin-submission-meta\">" + esc(record.ingredients || (record.suggestedProduct && record.suggestedProduct.ingredients) || record.message || "No ingredient details supplied") + "</div>" +
       "<div class=\"admin-action-grid\">" + approveButton +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.edit('" + type + "',decodeURIComponent('" + id + "'))\">Edit submission</button>" +
@@ -763,6 +777,67 @@
     render();
   }
 
+  async function deleteOfficialPhoto(kind,id,index) {
+    if (!requireAdmin()) return;
+    const item=findItem(kind,id);
+    if (!item) { alert("This submission could not be found."); return; }
+    const record=item.record;
+    const isCorrection=kind==="correction"&&!!record.suggestedProduct;
+    const product=isCorrection?record.suggestedProduct:record;
+    const photos=recordPhotos(product);
+    const photo=photos[Number(index)];
+    if (!photo) { alert("This official image is no longer available. Refresh the administrator dashboard and try again."); return; }
+    if (!confirm("Permanently delete official product image "+(Number(index)+1)+"? This cannot be undone.")) return;
+    const nextPhotos=photos.filter(function(value,photoIndex){return photoIndex!==Number(index)});
+    const nextProduct=Object.assign({},product,{officialPhotos:nextPhotos,officialPhoto:nextPhotos[0]||""});
+    if (record._foschRemote) {
+      if (!window.FOSCHCloud || !window.FOSCHCloud.adminUpdateSubmission) { alert("The administrator connection is unavailable."); return; }
+      const remotePayload=Object.assign({},record._remotePayload||{});
+      if (isCorrection&&remotePayload.suggestedProduct) remotePayload.suggestedProduct=Object.assign({},remotePayload.suggestedProduct,nextProduct);
+      else Object.assign(remotePayload,nextProduct);
+      try {
+        await window.FOSCHCloud.adminUpdateSubmission(record._remoteId,{
+          payload:remotePayload,
+          audit_action:"official_product_photo_deleted",
+          audit_details:{image_index:Number(index),storage_object:isPublicProductMediaUrl(photo)}
+        },"Administrator removed an official product image.");
+      } catch(error) {
+        alert("The official image could not be removed from the product record: "+String(error&&error.message||error));
+        return;
+      }
+      record._remotePayload=remotePayload;
+      if(isCorrection)record.suggestedProduct=nextProduct;
+      else Object.assign(record,nextProduct);
+      let cleanupError=null;
+      if(isPublicProductMediaUrl(photo)){
+        try {
+          if(!window.FOSCHCloud.deleteProductPhoto)throw new Error("The storage deletion function is unavailable in this build.");
+          await window.FOSCHCloud.deleteProductPhoto(photo);
+        } catch(error) { cleanupError=error; }
+      }
+      if(isApproved(record)&&typeof window.FOSCHApplyCloudApproval==="function"){
+        try {
+          const cacheRecord=Object.assign({},remotePayload,{status:"approved-cloud",country:product.country||record.country||marketCountry,barcode:product.barcode||record.barcode||""});
+          window.FOSCHApplyCloudApproval(cacheRecord);
+        } catch(cacheError) { console.warn("FOSCH could not refresh the approved product media cache:",cacheError); }
+      }
+      try { await refreshRemoteData(); } catch(refreshError) { console.warn("FOSCH could not refresh the admin dashboard after image deletion:",refreshError); }
+      page="adminDashboard";render();
+      alert(cleanupError
+        ?"The image was removed from the product record, but its stored file could not be deleted. "+String(cleanupError.message||cleanupError)
+        :"Official product image deleted.");
+      return;
+    }
+    if(isCorrection)record.suggestedProduct=nextProduct;
+    else Object.assign(record,nextProduct);
+    if(!persistRecords())return;
+    if(kind==="product"&&isApproved(record))saveMarketProduct(record);
+    if(isCorrection&&isApproved(record))saveMarketProduct(Object.assign({},nextProduct,{country:nextProduct.country||record.country||marketCountry}));
+    writeAudit("Official product image deleted",kind,item.id,itemLabel(item),"","Removed an official product image"+(isPublicProductMediaUrl(photo)?" from public media storage.":" from the local record."));
+    page="adminDashboard";render();
+    alert("Official product image deleted.");
+  }
+
   function captureOfficialPhoto(kind, id) {
     if (!requireAdmin()) return;
     if (!findItem(kind, id)) { alert("This submission could not be found."); return; }
@@ -911,6 +986,8 @@
     editMarkup: editMarkup,
     renderProductMedia: renderProductMedia,
     renderOfficialProductPhotos: renderOfficialProductPhotos,
+    renderAdminOfficialProductPhotos: renderAdminOfficialProductPhotos,
+    deleteOfficialPhoto: deleteOfficialPhoto,
     setTab: setTab,
     approve: approve,
     reject: reject,
