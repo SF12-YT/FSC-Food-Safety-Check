@@ -710,7 +710,21 @@ function normalisePackageSizeKey(value){
   .trim()
 }
 function normaliseBrandKey(value){return normaliseIngredientName(value).replace(/\s+/g," ").trim()}
-function stableProductKey(country,brand,name){return "product:"+String(country||"").toUpperCase()+":"+normaliseBrandKey(brand)+":"+normaliseProductKey(name)}
+function stripPackageSizeFromProductName(value){
+ let text=String(value||"");
+ const amount="\\d+(?:[.,]\\d+)?";
+ const unit="(?:fluid\\s*ounces?|fl\\.?\\s*oz|millilit(?:er|re)s?|ml|lit(?:er|re)s?|l|kilograms?|kg|grams?|g|milligrams?|mg|micrograms?|microgrammes?|mcg|[µμ]g|ounces?|oz|pounds?|lbs?)";
+ text=text.replace(new RegExp("\\b"+amount+"\\s*[x×]\\s*"+amount+"\\s*"+unit+"\\b","gi")," ");
+ text=text.replace(new RegExp("\\b"+amount+"\\s*"+unit+"\\s*[x×]\\s*"+amount+"\\b","gi")," ");
+ text=text.replace(new RegExp("\\b"+amount+"\\s*[x×]\\s*"+unit+"\\b","gi")," ");
+ text=text.replace(new RegExp("\\b"+amount+"\\s*"+unit+"\\b","gi")," ");
+ text=text.replace(new RegExp("\\b"+amount+"\\s*[x×]\\s*"+amount+"\\s*(?:packs?|pk)\\b","gi")," ");
+ text=text.replace(/\b(?:pack|packs|pk)\s*(?:of\s*)?\d+\b/gi," ");
+ text=text.replace(/\b\d+\s*[- ]?\s*(?:packs?|pk|count|ct|pieces?|pcs)\b/gi," ");
+ return text.replace(/[\[\](){}]/g," ").replace(/\s+/g," ").trim();
+}
+function productFamilyNameKey(value){return normaliseProductKey(stripPackageSizeFromProductName(value))}
+function stableProductKey(country,brand,name){return "product:"+String(country||"").toUpperCase()+":"+normaliseBrandKey(brand)+":"+productFamilyNameKey(name)}
 function editDistance(a,b){a=String(a);b=String(b);if(a===b)return 0;if(!a.length)return b.length;if(!b.length)return a.length;let prev=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){const cur=[i];for(let j=1;j<=b.length;j++)cur[j]=Math.min(cur[j-1]+1,prev[j]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));prev=cur}return prev[b.length]}
 function tokenSimilar(a,b){if(a===b)return 1;if(!a||!b)return 0;if(a.startsWith(b)||b.startsWith(a))return Math.min(a.length,b.length)/Math.max(a.length,b.length);if(Math.min(a.length,b.length)<4)return 0;const d=editDistance(a,b);return 1-d/Math.max(a.length,b.length)}
 function productMatchScore(queryText,candidateText){const q=normaliseProductKey(queryText),c=normaliseProductKey(candidateText);if(!q||!c)return 0;if(q===c)return 1;if(c.includes(q)||q.includes(c))return Math.min(q.length,c.length)/Math.max(q.length,c.length)+0.25;const qt=q.split(" ").filter(x=>x.length>1),ct=c.split(" ").filter(x=>x.length>1);let score=0;qt.forEach(t=>{let best=0;ct.forEach(k=>{best=Math.max(best,tokenSimilar(t,k))});if(best>=0.72)score+=best});const queryCoverage=score/Math.max(1,qt.length),candidateCoverage=score/Math.max(1,ct.length);return queryCoverage*0.78+candidateCoverage*0.22}
@@ -738,14 +752,30 @@ function refreshProductSuggestions(skipOnlineSearch=false){
  const localRecords=knownProductRecords();
  const onlineRecords=(onlineProductResultsQuery===queryKey&&onlineProductResultsCountry===country)?currentOnlineProductSuggestions:[];
  const records=[...localRecords,...onlineRecords];
- const seen=new Map();records.forEach(x=>{const name=String(x.name||"").trim();if(!name)return;const key=normaliseBrandKey(x.brand)+"|"+normaliseProductKey(name);if(!seen.has(key))seen.set(key,{...x,name,score:productMatchScore(raw,name)})});
- const exactKey=normaliseProductKey(raw);
- const matches=Array.from(seen.values()).filter(x=>x.score>=0.48||normaliseProductKey(x.name)===exactKey).sort((a,b)=>{const ae=normaliseProductKey(a.name)===exactKey?1:0,be=normaliseProductKey(b.name)===exactKey?1:0;return be-ae||b.score-a.score||a.name.localeCompare(b.name)}).slice(0,5);
- currentProductSuggestions=matches;const exact=matches.some(x=>normaliseProductKey(x.name)===exactKey);
- const notice=productNameSearchStatus==="loading"?(matches.length?`<div class="autocomplete-heading">Checking for more matches online…</div>`:`<div class="autocomplete-heading">Searching this market’s product database…</div>`):productNameSearchStatus==="error"?`<div class="autocomplete-heading">${esc(productNameSearchMessage||"Online suggestions unavailable; saved suggestions are still available.")}</div>`:productNameSearchStatus==="empty"&&!matches.length?`<div class="autocomplete-heading">${esc(productNameSearchMessage||"No matching product suggestions found. You can still contribute a new product.")}</div>`:"";
- box.innerHTML=(matches.length?`<div class="autocomplete-heading">${exact?"Existing product match":"Did you mean…?"}</div>`+matches.map((x,i)=>`<button class="autocomplete-option" type="button" data-index="${i}" onclick="selectProductSuggestion(Number(this.dataset.index))">${esc(x.name)}${x.brand||x.sizeLabel||x.size?`<small>${[x.brand,x.sizeLabel||x.size].filter(Boolean).map(esc).join(" · ")}${x.source&&String(x.source).includes("Open Food Facts")?" · Open Food Facts": ""}</small>`:""}</button>`).join(""):"")+notice;
+ const familyQueryKey=productFamilyNameKey(raw);
+ const seen=new Map();
+ records.forEach(x=>{
+  const name=String(x.name||"").trim();if(!name)return;
+  const familyKey=productFamilyNameKey(name);if(!familyKey)return;
+  const key=normaliseBrandKey(x.brand)+"|"+familyKey;
+  const size=String(x.sizeLabel||x.size||"").trim();
+  if(!seen.has(key))seen.set(key,{...x,name,familyKey,score:productMatchScore(familyQueryKey,familyKey),sizeLabels:[]});
+  const entry=seen.get(key);
+  if(size&&!entry.sizeLabels.includes(size))entry.sizeLabels.push(size);
+ });
+ const matches=Array.from(seen.values()).filter(x=>x.score>=0.48||x.familyKey===familyQueryKey).sort((a,b)=>{const ae=a.familyKey===familyQueryKey?1:0,be=b.familyKey===familyQueryKey?1:0;return be-ae||b.score-a.score||a.name.localeCompare(b.name)}).slice(0,5);
+ currentProductSuggestions=matches;const exact=matches.some(x=>x.familyKey===familyQueryKey);
+ const notice=productNameSearchStatus==="loading"?(matches.length?'<div class="autocomplete-heading">Checking for more matches online…</div>':'<div class="autocomplete-heading">Searching this market’s product database…</div>'):productNameSearchStatus==="error"?'<div class="autocomplete-heading">'+esc(productNameSearchMessage||"Online suggestions unavailable; saved suggestions are still available.")+'</div>':productNameSearchStatus==="empty"&&!matches.length?'<div class="autocomplete-heading">'+esc(productNameSearchMessage||"No matching product suggestions found. You can still contribute a new product.")+'</div>':"";
+ const suggestions=matches.map((x,i)=>{
+  const sizes=x.sizeLabels.length?("Sizes: "+x.sizeLabels.slice(0,3).join(", ")+(x.sizeLabels.length>3?"…":"")):(x.sizeLabel||x.size||"");
+  const details=[x.brand,sizes].filter(Boolean);
+  const displayName=stripPackageSizeFromProductName(x.name)||x.name;
+  const sourceNote=x.source&&String(x.source).includes("Open Food Facts")?" · Open Food Facts":"";
+  return '<button class="autocomplete-option" type="button" data-index="'+i+'" onclick="selectProductSuggestion(Number(this.dataset.index))">'+esc(displayName)+(details.length||sourceNote?'<small>'+details.map(esc).join(" · ")+sourceNote+'</small>':"")+'</button>';
+ }).join("");
+ box.innerHTML=(matches.length?'<div class="autocomplete-heading">'+(exact?"Existing product family":"Did you mean…?")+'</div>'+suggestions:"")+notice;
 }
-function selectProductSuggestion(index){const item=currentProductSuggestions[index];const input=document.getElementById("pname"),brandInput=document.getElementById("pbrand"),box=document.getElementById("productSuggestions");if(!item||!input)return;if(productSearchTimer)clearTimeout(productSearchTimer);latestProductSearchRequest=++productSearchRequestCounter;input.value=item.name;if(brandInput&&item.brand&&!brandInput.value.trim())brandInput.value=item.brand;selectedProductSuggestion=item;box.innerHTML="";updateContributionHints()}
+function selectProductSuggestion(index){const item=currentProductSuggestions[index];const input=document.getElementById("pname"),brandInput=document.getElementById("pbrand"),box=document.getElementById("productSuggestions");if(!item||!input)return;if(productSearchTimer)clearTimeout(productSearchTimer);latestProductSearchRequest=++productSearchRequestCounter;input.value=stripPackageSizeFromProductName(item.name)||item.name;if(brandInput&&item.brand&&!brandInput.value.trim())brandInput.value=item.brand;selectedProductSuggestion=item;box.innerHTML="";updateContributionHints()}
 function saveMarketBrand(brand,country){const b=String(brand||"").trim(),code=String(country||"").toUpperCase();if(!b||!code)return;try{const key=marketBrandStorageKey(code),old=JSON.parse(localStorage.getItem(key)||"[]"),list=Array.isArray(old)?old:[];const found=list.find(x=>normaliseBrandKey(x)===normaliseBrandKey(b));if(!found)list.unshift(b);localStorage.setItem(key,JSON.stringify(list.slice(0,1000)))}catch(e){}}
 function saveMarketProduct(record){
  const code=String(record.country||marketCountry||"").toUpperCase();if(!code)return;
@@ -929,7 +959,8 @@ function nutritionReadRowsMarkup(n){
 }
 ;
 function emptyNutritionInfo(){return {servings:"",servingSize:"",perServing:{},dailyIntakePerServing:{},per100g:{}}}
-function normaliseNutritionInfo(value){if(!value||typeof value!=="object"||Array.isArray(value))return emptyNutritionInfo();const textValues=source=>{const result={...(source&&typeof source==="object"&&!Array.isArray(source)?source:{})};Object.keys(result).forEach(key=>{result[key]=result[key]===null||result[key]===undefined?"":String(result[key])});return result};return {...emptyNutritionInfo(),...value,servings:String(value.servings??""),servingSize:String(value.servingSize??""),perServing:textValues(value.perServing),dailyIntakePerServing:textValues(value.dailyIntakePerServing),per100g:textValues(value.per100g)}}
+function normaliseMicrogramUnitText(value){return String(value==null?"":value).replace(/\b(?:mcg|ug|micrograms?|microgrammes?)\b/gi,"µg").replace(/[μµ]\s*g\b/gi,"µg")}
+function normaliseNutritionInfo(value){if(!value||typeof value!=="object"||Array.isArray(value))return emptyNutritionInfo();const textValues=(source,normaliseUnits)=>{const result={...(source&&typeof source==="object"&&!Array.isArray(source)?source:{})};Object.keys(result).forEach(key=>{const text=result[key]===null||result[key]===undefined?"":String(result[key]);result[key]=normaliseUnits?normaliseMicrogramUnitText(text):text});return result};return {...emptyNutritionInfo(),...value,servings:String(value.servings??""),servingSize:String(value.servingSize??""),perServing:textValues(value.perServing,true),dailyIntakePerServing:textValues(value.dailyIntakePerServing,false),per100g:textValues(value.per100g,true)}}
 function collectNutritionInfoFromForm(){const val=id=>{const el=document.getElementById(id);return el?String(el.value||"").trim():""};const info={servings:val("nutritionServings"),servingSize:val("nutritionServingSize"),perServing:{},dailyIntakePerServing:{},per100g:{}};nutritionNutrients.forEach(f=>{info.perServing[f.key]=val("nutritionServing_"+f.key);info.dailyIntakePerServing[f.key]=val("nutritionDI_"+f.key);info.per100g[f.key]=val("nutritionPer100g_"+f.key)});const has=!!(info.servings||info.servingSize||nutritionNutrients.some(f=>info.perServing[f.key]||info.dailyIntakePerServing[f.key]||info.per100g[f.key]));return has?info:null}
 function nutritionInfoForDraftSave(){const state=contributionFormState||prefillProduct||{};if(document.getElementById("nutritionServings"))return collectNutritionInfoFromForm();if(Object.prototype.hasOwnProperty.call(state,"nutritionInfo"))return state.nutritionInfo||null;if(Object.prototype.hasOwnProperty.call(state,"nutrition"))return state.nutrition||null;return collectNutritionInfoFromForm()}
 function hasNutritionInfo(value){const n=normaliseNutritionInfo(value);return !!(n.servings||n.servingSize||nutritionNutrients.some(f=>String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim()))}
@@ -939,7 +970,7 @@ function clearNutritionAndReturn(){contributionFormState={...(contributionFormSt
 function nutritionFormMarkup(product){
  const n=normaliseNutritionInfo(product&& (product.nutritionInfo||product.nutrition));
  return '<section class="nutrition-section"><h3>Nutrition information (optional)</h3>'+
- '<p class="nutrition-intro">Copy values, units and wording exactly as printed, including phrases such as “LESS THAN 0.1g”.</p>'+
+ '<p class="nutrition-intro">Copy values, units and wording exactly as printed, including phrases such as “LESS THAN 0.1g”. For micrograms, you can type “mcg” or “ug” instead of “µg”; FOSCH displays “µg” without changing the amount.</p>'+
  '<p class="nutrition-disclaimer"><b>RDI is different from %DI.</b> RDI means Recommended Dietary Intake. %DI means percentage of the Daily Intake reference value for a serving. They are separate reference measures and are not interchangeable. Do not enter or add an RDI value in the %DI column; copy %DI only when it is printed on the label.</p>'+
  '<div class="nutrition-meta"><div><label for="nutritionServings">Servings</label><input id="nutritionServings" class="field" value="'+esc(n.servings)+'" placeholder="e.g. 5" autocomplete="off"></div>'+
  '<div><label for="nutritionServingSize">Serving size</label><input id="nutritionServingSize" class="field" value="'+esc(n.servingSize)+'" placeholder="e.g. 30 g" autocomplete="off"></div></div>'+
@@ -1340,10 +1371,11 @@ const matchRecords=[...existing,...liveOnlineSuggestions];
 let brand=typedBrand;
 let productMatch=null;
 if(!correcting){const exactBrand=matchRecords.find(x=>x.brand&&normaliseBrandKey(x.brand)===normaliseBrandKey(typedBrand));if(exactBrand)brand=exactBrand.brand;else if(chosenBrandName&&normaliseBrandKey(chosenBrandName)===normaliseBrandKey(typedBrand))brand=chosenBrandName;else{try{const registry=JSON.parse(localStorage.getItem(marketBrandStorageKey(countryCode))||"[]");if(Array.isArray(registry)){const match=registry.find(x=>normaliseBrandKey(x)===normaliseBrandKey(typedBrand));if(match)brand=match}}catch(e){}}
-productMatch=selectedProductSuggestion&&normaliseProductKey(selectedProductSuggestion.name)===normaliseProductKey(name)&&(!selectedProductSuggestion.brand||normaliseBrandKey(selectedProductSuggestion.brand)===normaliseBrandKey(brand))?selectedProductSuggestion:null;
-if(!productMatch){const exactCandidates=matchRecords.filter(x=>normaliseProductKey(x.name)===normaliseProductKey(name)&&normaliseBrandKey(x.brand||"")===normaliseBrandKey(brand));productMatch=exactCandidates[0]||null}
-if(productMatch)name=productMatch.name;}
-const productKey=productMatch&&!correcting?(productMatch.productKey||stableProductKey(countryCode,brand,productMatch.name)):stableProductKey(countryCode,brand,name);
+const requestedFamilyKey=productFamilyNameKey(name);
+productMatch=selectedProductSuggestion&&productFamilyNameKey(selectedProductSuggestion.name)===requestedFamilyKey&&(!selectedProductSuggestion.brand||normaliseBrandKey(selectedProductSuggestion.brand)===normaliseBrandKey(brand))?selectedProductSuggestion:null;
+if(!productMatch){const exactCandidates=matchRecords.filter(x=>productFamilyNameKey(x.name)===requestedFamilyKey&&normaliseBrandKey(x.brand||"")===normaliseBrandKey(brand));productMatch=exactCandidates[0]||null}
+name=stripPackageSizeFromProductName(productMatch?productMatch.name:name)||name;}
+const productKey=stableProductKey(countryCode,brand,name);
 const note=document.getElementById("pnote").value.trim();
 const labelDetails=readContributionLabelDetails();
 const producedIn=(document.getElementById("pproducedIn").value||"").trim();
