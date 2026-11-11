@@ -643,9 +643,9 @@
       " awaiting review · " + localItems.length + " local draft" + (localItems.length === 1 ? "" : "s") + " awaiting upload.</p>" +
       submissions + localDrafts + brandMarkup;
     return "<div class=\"admin-head\"><div><h1>Admin dashboard</h1><div class=\"admin-submission-meta\">Signed in as " + esc(DEFAULT_EMAIL) + "</div></div><div class=\"admin-head-actions\"><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.refreshDashboard()\">Refresh</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.logout()\">Sign out</button></div></div>" +
-      "<div class=\"admin-tabs\"><button type=\"button\" class=\"" + (activeTab === "submissions" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('submissions')\">Submissions</button>" +
-      "<button type=\"button\" class=\"" + (activeTab === "all" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('all')\">All Submissions</button>" +
-      "<button type=\"button\" class=\"" + (activeTab === "activity" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('activity')\">Activity log (" + (remoteAuditLog.length + auditLog.length) + ")</button></div>" +
+      "<div class=\"admin-tabs\" role=\"tablist\" aria-label=\"Administrator sections\"><button type=\"button\" role=\"tab\" class=\"" + (activeTab === "submissions" ? "primary" : "secondary") + "\" data-fosch-admin-tab=\"submissions\" aria-selected=\"" + (activeTab === "submissions" ? "true" : "false") + "\">Submissions</button>" +
+      "<button type=\"button\" role=\"tab\" class=\"" + (activeTab === "all" ? "primary" : "secondary") + "\" data-fosch-admin-tab=\"all\" aria-selected=\"" + (activeTab === "all" ? "true" : "false") + "\">All Submissions</button>" +
+      "<button type=\"button\" role=\"tab\" class=\"" + (activeTab === "activity" ? "primary" : "secondary") + "\" data-fosch-admin-tab=\"activity\" aria-selected=\"" + (activeTab === "activity" ? "true" : "false") + "\">Activity log (" + (remoteAuditLog.length + auditLog.length) + ")</button></div>" +
       content +
       "<div class=\"warning\">Shared product submissions and moderation actions are stored in Supabase. Unsent drafts remain on this device until a network connection is available. Product evidence remains private; official product images and brand logos use a separate public-read bucket.</div>";
   }
@@ -720,6 +720,18 @@
     page = "adminDashboard";
     render();
   }
+
+  // Capture the administrator tab click before any app-level handlers. This
+  // avoids relying on inline WebView click attributes for the main dashboard tabs.
+  document.addEventListener("click", function (event) {
+    const button = event.target && event.target.closest
+      ? event.target.closest(".admin-tabs [data-fosch-admin-tab]")
+      : null;
+    if (!button) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    setTab(button.getAttribute("data-fosch-admin-tab"));
+  }, true);
 
   function approve(kind, id) {
     if (!requireAdmin()) return;
