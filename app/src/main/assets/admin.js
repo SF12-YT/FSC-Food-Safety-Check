@@ -462,7 +462,7 @@
     const localMediaButtons =
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.captureOfficialPhoto('" + type + "',decodeURIComponent('" + id + "'))\">Capture official photo</button>" +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.uploadOfficialPhoto('" + type + "',decodeURIComponent('" + id + "'))\">Upload image from device</button>";
-    return "<article class=\"admin-submission-card\">" +
+    return "<article class=\"admin-submission-card\" data-fosch-admin-open-kind=\"" + esc(type) + "\" data-fosch-admin-open-id=\"" + esc(item.id) + "\">" +
       "<div class=\"admin-submission-top\"><button type=\"button\" class=\"admin-submission-open\" onclick=\"FOSCHAdmin.edit('" + type + "',decodeURIComponent('" + id + "'))\" aria-label=\"Open submission: " + esc(title) + "\"><span class=\"admin-submission-title\">" + esc(title) + "</span>" +
       (brand ? "<span class=\"admin-submission-meta\">" + esc(brand) + "</span>" : "") +
       "<span class=\"admin-submission-meta\">" + esc(type === "product" ? "Product contribution" : "Correction report") + " · " +
@@ -637,16 +637,24 @@
       ? "<h2>Local drafts — not in Supabase</h2><p class=\"muted\">These records are stored on this device only until their upload succeeds. They cannot be approved or rejected as shared submissions.</p>" + localItems.map(submissionCard).join("")
       : "";
     const brandMarkup = "<h2>Brand logos</h2><p class=\"muted\">Administrators can capture a logo with the in-app camera or select an image from this device. Administrator brand logos are published through shared media storage and are visible to all users.</p>" + brandCardsMarkup();
-    const content = activeTab === "activity" ? auditMarkup() :
-      activeTab === "all" ? allSubmissionsMarkup(allItems) :
-      "<p class=\"muted\">" + sharedItems.length + " shared submission" + (sharedItems.length === 1 ? "" : "s") +
+    const submissionsContent = "<p class=\"muted\">" + sharedItems.length + " shared submission" + (sharedItems.length === 1 ? "" : "s") +
       " awaiting review · " + localItems.length + " local draft" + (localItems.length === 1 ? "" : "s") + " awaiting upload.</p>" +
       submissions + localDrafts + brandMarkup;
+    const panels = "<div class=\"admin-dashboard-shell\">" +
+      "<input class=\"admin-tab-radio\" type=\"radio\" name=\"foschAdminTab\" id=\"foschAdminTabSubmissions\" value=\"submissions\" " + (activeTab === "submissions" ? "checked" : "") + ">" +
+      "<input class=\"admin-tab-radio\" type=\"radio\" name=\"foschAdminTab\" id=\"foschAdminTabAll\" value=\"all\" " + (activeTab === "all" ? "checked" : "") + ">" +
+      "<input class=\"admin-tab-radio\" type=\"radio\" name=\"foschAdminTab\" id=\"foschAdminTabActivity\" value=\"activity\" " + (activeTab === "activity" ? "checked" : "") + ">" +
+      "<div class=\"admin-tabs\" role=\"tablist\" aria-label=\"Administrator sections\">" +
+      "<label role=\"tab\" for=\"foschAdminTabSubmissions\" aria-controls=\"adminPanelSubmissions\">Submissions</label>" +
+      "<label role=\"tab\" for=\"foschAdminTabAll\" aria-controls=\"adminPanelAll\">All Submissions</label>" +
+      "<label role=\"tab\" for=\"foschAdminTabActivity\" aria-controls=\"adminPanelActivity\">Activity log (" + (remoteAuditLog.length + auditLog.length) + ")</label></div>" +
+      "<div class=\"admin-tab-panels\">" +
+      "<section id=\"adminPanelSubmissions\" class=\"admin-tab-panel admin-panel-submissions\">" + submissionsContent + "</section>" +
+      "<section id=\"adminPanelAll\" class=\"admin-tab-panel admin-panel-all\">" + allSubmissionsMarkup(allItems) + "</section>" +
+      "<section id=\"adminPanelActivity\" class=\"admin-tab-panel admin-panel-activity\">" + auditMarkup() + "</section>" +
+      "</div></div>";
     return "<div class=\"admin-head\"><div><h1>Admin dashboard</h1><div class=\"admin-submission-meta\">Signed in as " + esc(DEFAULT_EMAIL) + "</div></div><div class=\"admin-head-actions\"><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.refreshDashboard()\">Refresh</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.logout()\">Sign out</button></div></div>" +
-      "<div class=\"admin-tabs\" role=\"tablist\" aria-label=\"Administrator sections\"><button type=\"button\" role=\"tab\" class=\"" + (activeTab === "submissions" ? "primary" : "secondary") + "\" data-fosch-admin-tab=\"submissions\" aria-selected=\"" + (activeTab === "submissions" ? "true" : "false") + "\">Submissions</button>" +
-      "<button type=\"button\" role=\"tab\" class=\"" + (activeTab === "all" ? "primary" : "secondary") + "\" data-fosch-admin-tab=\"all\" aria-selected=\"" + (activeTab === "all" ? "true" : "false") + "\">All Submissions</button>" +
-      "<button type=\"button\" role=\"tab\" class=\"" + (activeTab === "activity" ? "primary" : "secondary") + "\" data-fosch-admin-tab=\"activity\" aria-selected=\"" + (activeTab === "activity" ? "true" : "false") + "\">Activity log (" + (remoteAuditLog.length + auditLog.length) + ")</button></div>" +
-      content +
+      panels +
       "<div class=\"warning\">Shared product submissions and moderation actions are stored in Supabase. Unsent drafts remain on this device until a network connection is available. Product evidence remains private; official product images and brand logos use a separate public-read bucket.</div>";
   }
 
@@ -721,16 +729,26 @@
     render();
   }
 
-  // Capture the administrator tab click before any app-level handlers. This
-  // avoids relying on inline WebView click attributes for the main dashboard tabs.
+  // Native radio/label selection changes the visible tab panel through CSS.
+  // This listener only synchronizes state for later refreshes and rerenders.
+  document.addEventListener("change", function (event) {
+    const radio = event.target;
+    if (!radio || !radio.matches || !radio.matches(".admin-dashboard-shell > .admin-tab-radio")) return;
+    setTab(radio.value);
+  }, true);
+
+  // Tapping the body of an All Submissions card opens it. Dedicated action
+  // controls and disclosure summaries keep their individual behaviour.
   document.addEventListener("click", function (event) {
-    const button = event.target && event.target.closest
-      ? event.target.closest(".admin-tabs [data-fosch-admin-tab]")
-      : null;
-    if (!button) return;
+    const target = event.target;
+    const card = target && target.closest ? target.closest(".admin-submission-card[data-fosch-admin-open-kind]") : null;
+    if (!card) return;
+    const isOpenHeader = target.closest(".admin-submission-open");
+    const otherControl = target.closest("button:not(.admin-submission-open),a,input,textarea,select,summary,[role='button']");
+    if (!isOpenHeader && otherControl) return;
     event.preventDefault();
     event.stopImmediatePropagation();
-    setTab(button.getAttribute("data-fosch-admin-tab"));
+    edit(card.getAttribute("data-fosch-admin-open-kind"), card.getAttribute("data-fosch-admin-open-id"));
   }, true);
 
   function approve(kind, id) {
