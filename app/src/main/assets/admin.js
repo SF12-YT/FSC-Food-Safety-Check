@@ -6,6 +6,13 @@
   const LOGO_KEY = "fosch-brand-logos";
   let authenticated = false;
   let activeTab = "submissions";
+  // All Submissions filter state is kept inside this admin module. These
+  // values must exist before dashboardMarkup() builds the all-submissions view.
+  let allFilterMode = "all";
+  let allFilterText = "";
+  let selectedBrandFilter = "";
+  let allFilterCountry = "";
+  let allFilterApplied = false;
   let editingRef = null;
   let pendingMedia = null;
   let auditLog = [];
