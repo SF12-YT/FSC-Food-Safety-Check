@@ -240,6 +240,28 @@ html[data-theme=dark],html[data-theme=dark] body{background:#000000!important}
 .info-bubble-button{display:inline-grid!important;place-items:center!important;width:24px!important;height:24px!important;min-width:24px!important;padding:0!important;margin:0!important;border:1px solid var(--dropdown-border)!important;border-radius:50%!important;background:var(--panel)!important;color:var(--muted)!important;font-size:14px!important;font-weight:750!important;line-height:1!important;box-shadow:none!important;appearance:none!important;-webkit-appearance:none!important}
 .info-bubble-button:focus{outline:2px solid var(--blue)!important;outline-offset:2px!important}
 .info-bubble-button:active{background:var(--blue2)!important;color:var(--blue)!important}
+
+/* v0.10.60 nutrition groups, claims disclosure and nitrate grouping. */
+.nutrition-table,.nutrition-read-table{grid-template-columns:minmax(0,1.1fr) repeat(3,minmax(0,1fr))}
+.nutrition-subsection{grid-column:1/-1;min-width:0;margin:0 0 7px;border-radius:10px;background:var(--bg);overflow:hidden}
+.nutrition-subsection>summary{list-style:none;cursor:pointer;padding:8px 9px;color:var(--blue);font-size:11px;font-weight:750}
+.nutrition-subsection>summary::-webkit-details-marker,.claim-editor>summary::-webkit-details-marker,.product-claims>summary::-webkit-details-marker{display:none}
+.nutrition-subgrid{display:grid;grid-template-columns:minmax(0,1.1fr) repeat(3,minmax(0,1fr));gap:6px;align-items:center;padding:0 7px 8px}
+.nutrition-subgrid-read{align-items:start;font-size:12px}
+.nutrition-disclaimer{font-size:11px;line-height:1.45;color:var(--muted);background:var(--bg);padding:9px 10px;border-radius:10px;margin:8px 0}
+.claim-editor,.product-claims{margin-top:12px}
+.claim-editor>summary,.product-claims>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;list-style:none;cursor:pointer;padding:10px 2px}
+.claim-editor>summary small{display:block;color:var(--muted);font-size:11px;font-weight:400;margin-top:3px}
+.claim-editor>summary .arrow,.product-claims>summary .arrow{transition:transform .15s}
+.claim-editor[open]>summary .arrow,.product-claims[open]>summary .arrow{transform:rotate(90deg)}
+.claim-options{padding:3px 0 5px}
+.claim-options .setting{padding:10px 0}
+.product-claims>p{margin:7px 0 0;color:var(--muted);line-height:1.5;font-size:13px}
+.analysis-subsection-title{font-size:13px;margin:14px 3px 7px;color:var(--blue)}
+.admin-nutrition-subgroup{grid-column:1/-1;margin:4px 0 8px}
+.admin-nutrition-subgroup>summary{cursor:pointer;color:var(--blue);font-size:12px;font-weight:700;padding:7px 0}
+.admin-nutrition-subgrid{display:grid;grid-template-columns:minmax(0,1.1fr) repeat(3,minmax(0,1fr));gap:6px;align-items:center}
+@media(max-width:360px){.nutrition-table,.nutrition-read-table,.nutrition-subgrid,.admin-nutrition-subgrid{grid-template-columns:minmax(0,1.05fr) repeat(3,minmax(0,1fr));gap:4px}.nutrition-table .field,.nutrition-subgrid .field{padding:7px 4px!important;font-size:10px}.nutrition-table .nutrient-name,.nutrition-subgrid .nutrient-name{font-size:10px}}
 </style></head><body><main class="app" id="app"></main><nav class="nav hidden" aria-label="Main navigation">
 <button class="scan" aria-label="Scan barcode" onclick="navigateBottomTab('scan')"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7V4h4M17 4h4v3M21 17v3h-4M7 20H3v-3" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 8v8M9 8v8M12 8v8M15 8v8M18 8v8" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg></button>
 <button id="navHome" aria-label="Home" onclick="navigateBottomTab('home')"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 2.1 10.9v1.6h2v7.4c0 .9.7 1.6 1.6 1.6h12.6c.9 0 1.6-.7 1.6-1.6v-7.4h2v-1.6L12 2.8Z" fill="currentColor"/><path d="M10 21.5v-6.2h4v6.2" fill="var(--panel)"/></svg></span></button>
@@ -795,23 +817,62 @@ const nutritionNutrients=[
  {key:"energy",label:"Energy",placeholder:"e.g. 820 kJ"},
  {key:"protein",label:"Protein:",placeholder:"e.g. 5 g"},
  {key:"gluten",label:"Gluten",indent:true,placeholder:"e.g. 0 g"},
- {key:"fatTotal",label:"Fat total:",placeholder:"e.g. 8 g"},
- {key:"saturated",label:"Saturated",indent:true,placeholder:"e.g. 2 g"},
- {key:"trans",label:"Trans",indent:true,placeholder:"e.g. 0 g"},
- {key:"polyunsaturated",label:"Polyunsaturated",indent:true,placeholder:"e.g. 1 g"},
- {key:"monounsaturated",label:"Monounsaturated",indent:true,placeholder:"e.g. 3 g"},
+ {key:"fatTotal",label:"Fat total:",placeholder:"e.g. 8 g",subsectionLabel:"Fat breakdown"},
+ {key:"saturated",label:"Saturated",indent:true,parent:"fatTotal",placeholder:"e.g. 2 g"},
+ {key:"trans",label:"Trans",indent:true,parent:"fatTotal",placeholder:"e.g. 0 g"},
+ {key:"polyunsaturated",label:"Polyunsaturated",indent:true,parent:"fatTotal",placeholder:"e.g. 1 g"},
+ {key:"monounsaturated",label:"Monounsaturated",indent:true,parent:"fatTotal",placeholder:"e.g. 3 g"},
  {key:"carbohydrate",label:"Carbohydrate",placeholder:"e.g. 14 g"},
- {key:"sugars",label:"Sugar",indent:true,placeholder:"e.g. 4 g"},
- {key:"lactose",label:"Lactose",indent:true,placeholder:"e.g. 0 g"},
- {key:"galactose",label:"Galactose",indent:true,placeholder:"e.g. 0 g"},
+ {key:"sugars",label:"Sugar",indent:true,placeholder:"e.g. 4 g",subsectionLabel:"Sugar breakdown"},
+ {key:"naturalSugar",label:"Natural Sugar",indent:true,parent:"sugars",placeholder:"e.g. 3 g"},
+ {key:"addedSugar",label:"Added Sugar",indent:true,parent:"sugars",placeholder:"e.g. 1 g"},
+ {key:"lactose",label:"Lactose",indent:true,parent:"sugars",placeholder:"e.g. 0 g"},
+ {key:"galactose",label:"Galactose",indent:true,parent:"sugars",placeholder:"e.g. 0 g"},
  {key:"dietaryFibre",label:"Dietary Fibre",placeholder:"e.g. 3 g"},
+ {key:"prebioticFibre",label:"Prebiotic Fibre",placeholder:"e.g. 2 g"},
  {key:"cholesterol",label:"Cholesterol",placeholder:"e.g. 0 mg"},
  {key:"sodium",label:"Sodium",placeholder:"e.g. 260 mg"},
- {key:"calcium",label:"Calcium",placeholder:"e.g. 130 mg"},
- {key:"vitaminC",label:"Vitamin C",placeholder:"e.g. 60 mg"},
  {key:"potassium",label:"Potassium",placeholder:"e.g. 180 mg"},
+ {key:"calcium",label:"Calcium",placeholder:"e.g. 130 mg"},
+ {key:"phosphorus",label:"Phosphorus",placeholder:"e.g. 100 mg"},
+ {key:"magnesium",label:"Magnesium",placeholder:"e.g. 35 mg"},
+ {key:"iodine",label:"Iodine",placeholder:"e.g. 20 µg"},
+ {key:"caffeine",label:"Caffeine",placeholder:"e.g. 80 mg"},
+ {key:"vitaminB2",label:"Vitamin B2",placeholder:"e.g. 0.2 mg"},
+ {key:"vitaminB5",label:"Vitamin B5",placeholder:"e.g. 1 mg"},
+ {key:"vitaminB12",label:"Vitamin B12",placeholder:"e.g. 0.5 µg"},
+ {key:"vitaminC",label:"Vitamin C",placeholder:"e.g. 60 mg"},
  {key:"liveCultures",label:"Live cultures",placeholder:"e.g. 1 × 10⁹ CFU",noDI:true}
-];
+]
+;
+function nutritionFieldHasValue(n,f){return !!(String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim())}
+function nutritionInputFieldMarkup(f,n){
+ return '<div class="nutrient-name '+(f.indent?'sub-nutrient':'parent-nutrient')+'">'+esc(f.label)+'</div>'+
+ '<input id="nutritionServing_'+f.key+'" class="field" aria-label="'+esc(f.label)+' quantity per serving" value="'+esc(n.perServing[f.key]||'')+'" placeholder="'+esc(f.placeholder)+'" autocomplete="off">'+
+ '<input id="nutritionDI_'+f.key+'" class="field" aria-label="'+esc(f.label)+' percent daily intake per serving" value="'+esc(n.dailyIntakePerServing[f.key]||'')+'" placeholder="'+(f.noDI?'Not applicable':'e.g. 5% or &lt;0.1%')+'" '+(f.noDI?'disabled':'')+' autocomplete="off">'+
+ '<input id="nutritionPer100g_'+f.key+'" class="field" aria-label="'+esc(f.label)+' quantity per 100 g" value="'+esc(n.per100g[f.key]||'')+'" placeholder="'+esc(f.placeholder)+'" autocomplete="off">';
+}
+function nutritionInputRowsMarkup(n){
+ return nutritionNutrients.filter(f=>!f.parent).map(function(f){
+  const children=nutritionNutrients.filter(child=>child.parent===f.key);
+  const parentRow=nutritionInputFieldMarkup(f,n);
+  if(!children.length)return parentRow;
+  return parentRow+'<details class="nutrition-subsection"><summary>'+esc(f.subsectionLabel||f.label+' details')+'</summary><div class="nutrition-subgrid">'+children.map(child=>nutritionInputFieldMarkup(child,n)).join('')+'</div></details>';
+ }).join('');
+}
+function nutritionReadFieldMarkup(f,n){
+ return '<div class="nutrient-name '+(f.indent?'sub-nutrient':'parent-nutrient')+'">'+esc(f.label)+'</div><div>'+esc(n.perServing[f.key]||'—')+'</div><div>'+(f.noDI?'Not applicable':esc(n.dailyIntakePerServing[f.key]||'—'))+'</div><div>'+esc(n.per100g[f.key]||'—')+'</div>';
+}
+function nutritionReadRowsMarkup(n){
+ return nutritionNutrients.filter(f=>!f.parent).map(function(f){
+  const children=nutritionNutrients.filter(child=>child.parent===f.key&&nutritionFieldHasValue(n,child));
+  const parentHas=nutritionFieldHasValue(n,f);
+  const parentRow=(parentHas||children.length)?nutritionReadFieldMarkup(f,n):'';
+  const childMarkup=children.length?'<details class="nutrition-subsection"><summary>'+esc(f.subsectionLabel||f.label+' details')+' ('+children.length+')</summary><div class="nutrition-subgrid nutrition-subgrid-read">'+children.map(child=>nutritionReadFieldMarkup(child,n)).join('')+'</div></details>':'';
+  return parentRow+childMarkup;
+ }).join('');
+}
+;
 function emptyNutritionInfo(){return {servings:"",servingSize:"",perServing:{},dailyIntakePerServing:{},per100g:{}}}
 function normaliseNutritionInfo(value){if(!value||typeof value!=="object"||Array.isArray(value))return emptyNutritionInfo();const textValues=source=>{const result={...(source&&typeof source==="object"&&!Array.isArray(source)?source:{})};Object.keys(result).forEach(key=>{result[key]=result[key]===null||result[key]===undefined?"":String(result[key])});return result};return {...emptyNutritionInfo(),...value,servings:String(value.servings??""),servingSize:String(value.servingSize??""),perServing:textValues(value.perServing),dailyIntakePerServing:textValues(value.dailyIntakePerServing),per100g:textValues(value.per100g)}}
 function collectNutritionInfoFromForm(){const val=id=>{const el=document.getElementById(id);return el?String(el.value||"").trim():""};const info={servings:val("nutritionServings"),servingSize:val("nutritionServingSize"),perServing:{},dailyIntakePerServing:{},per100g:{}};nutritionNutrients.forEach(f=>{info.perServing[f.key]=val("nutritionServing_"+f.key);info.dailyIntakePerServing[f.key]=val("nutritionDI_"+f.key);info.per100g[f.key]=val("nutritionPer100g_"+f.key)});const has=!!(info.servings||info.servingSize||nutritionNutrients.some(f=>info.perServing[f.key]||info.dailyIntakePerServing[f.key]||info.per100g[f.key]));return has?info:null}
@@ -820,8 +881,25 @@ function hasNutritionInfo(value){const n=normaliseNutritionInfo(value);return !!
 function openNutritionForm(){contributionFormState=readContributionFormState();page="nutritionForm";render()}
 function saveNutritionAndReturn(e){if(e)e.preventDefault();const nutritionInfo=collectNutritionInfoFromForm();contributionFormState={...(contributionFormState||prefillProduct||{}),nutritionInfo};returnToContribution()}
 function clearNutritionAndReturn(){contributionFormState={...(contributionFormState||prefillProduct||{}),nutritionInfo:null};returnToContribution()}
-function nutritionFormMarkup(product){const n=normaliseNutritionInfo(product&& (product.nutritionInfo||product.nutrition));return `<section class="nutrition-section"><h3>Nutrition information (optional)</h3><p class="nutrition-intro">Copy values, units and wording exactly as printed, including phrases such as “LESS THAN 0.1g”.</p><div class="nutrition-meta"><div><label for="nutritionServings">Servings</label><input id="nutritionServings" class="field" value="${esc(n.servings)}" placeholder="e.g. 5" autocomplete="off"></div><div><label for="nutritionServingSize">Serving size</label><input id="nutritionServingSize" class="field" value="${esc(n.servingSize)}" placeholder="e.g. 30 g" autocomplete="off"></div></div><div class="nutrition-table-wrap"><div class="nutrition-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Quantity per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Quantity per 100 g</div>${nutritionNutrients.map(f=>`<div class="nutrient-name ${f.indent?"sub-nutrient":"parent-nutrient"}">${esc(f.label)}</div><input id="nutritionServing_${f.key}" class="field" aria-label="${esc(f.label)} quantity per serving" value="${esc(n.perServing[f.key]||"")}" placeholder="${esc(f.placeholder)}" autocomplete="off"><input id="nutritionDI_${f.key}" class="field" aria-label="${esc(f.label)} percent daily intake per serving" value="${esc(n.dailyIntakePerServing[f.key]||"")}" placeholder="${f.noDI?"Not applicable":"e.g. 5% or &lt;0.1%"}" ${f.noDI?"disabled":""} autocomplete="off"><input id="nutritionPer100g_${f.key}" class="field" aria-label="${esc(f.label)} quantity per 100 g" value="${esc(n.per100g[f.key]||"")}" placeholder="${esc(f.placeholder)}" autocomplete="off">`).join("")}</div></div></section>`}
-function renderNutritionInfo(value){const n=normaliseNutritionInfo(value);const has=!!(n.servings||n.servingSize||nutritionNutrients.some(f=>String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim()));if(!has)return "";const rows=nutritionNutrients.filter(f=>String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim()).map(f=>`<div class="nutrient-name ${f.indent?"sub-nutrient":"parent-nutrient"}">${esc(f.label)}</div><div>${esc(n.perServing[f.key]||"—")}</div><div>${f.noDI?"Not applicable":esc(n.dailyIntakePerServing[f.key]||"—")}</div><div>${esc(n.per100g[f.key]||"—")}</div>`).join("");return `<div class="info nutrition-view"><b>Nutrition information (as provided)</b>${n.servings?`<p class="nutrition-origin">Servings: ${esc(n.servings)}</p>`:""}${n.servingSize?`<p class="nutrition-origin">Serving size: ${esc(n.servingSize)}</p>`:""}${rows?`<div class="nutrition-table-wrap"><div class="nutrition-read-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Per 100 g</div>${rows}</div></div>`:""}</div>`}
+function nutritionFormMarkup(product){
+ const n=normaliseNutritionInfo(product&& (product.nutritionInfo||product.nutrition));
+ return '<section class="nutrition-section"><h3>Nutrition information (optional)</h3>'+
+ '<p class="nutrition-intro">Copy values, units and wording exactly as printed, including phrases such as “LESS THAN 0.1g”.</p>'+
+ '<p class="nutrition-disclaimer"><b>RDI is different from %DI.</b> RDI means Recommended Dietary Intake. %DI means percentage of the Daily Intake reference value for a serving. They are separate reference measures and are not interchangeable. Do not enter or add an RDI value in the %DI column; copy %DI only when it is printed on the label.</p>'+
+ '<div class="nutrition-meta"><div><label for="nutritionServings">Servings</label><input id="nutritionServings" class="field" value="'+esc(n.servings)+'" placeholder="e.g. 5" autocomplete="off"></div>'+
+ '<div><label for="nutritionServingSize">Serving size</label><input id="nutritionServingSize" class="field" value="'+esc(n.servingSize)+'" placeholder="e.g. 30 g" autocomplete="off"></div></div>'+
+ '<div class="nutrition-table-wrap"><div class="nutrition-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Quantity per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Quantity per 100 g</div>'+nutritionInputRowsMarkup(n)+'</div></div></section>';
+}
+function renderNutritionInfo(value){
+ const n=normaliseNutritionInfo(value);
+ const has=!!(n.servings||n.servingSize||nutritionNutrients.some(f=>nutritionFieldHasValue(n,f)));
+ if(!has)return '';
+ const rows=nutritionReadRowsMarkup(n);
+ return '<div class="info nutrition-view"><b>Nutrition information (as provided)</b>'+
+ (n.servings?'<p class="nutrition-origin">Servings: '+esc(n.servings)+'</p>':'')+
+ (n.servingSize?'<p class="nutrition-origin">Serving size: '+esc(n.servingSize)+'</p>':'')+
+ (rows?'<p class="nutrition-disclaimer">RDI (Recommended Dietary Intake) and %DI (percentage Daily Intake) are different reference measures and must not be treated as interchangeable.</p><div class="nutrition-table-wrap"><div class="nutrition-read-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Per 100 g</div>'+rows+'</div></div>':'')+'</div>';
+}
 function renderProductClaims(value){const claims=value&&value.claims&&typeof value.claims==="object"?value.claims:{};const labels=[];if(claims.nonGmo)labels.push("Non-GMO");if(claims.halal)labels.push("Halal");if(claims.glutenFree)labels.push("Gluten Free");if(claims.organic)labels.push("Organic");if(claims.vegan)labels.push("Vegan");if(claims.vegetarian)labels.push("Vegetarian");if(claims.kosher)labels.push("Kosher");return labels.length?`<div class="info"><b>Label claims</b><p>${labels.join(" · ")}</p></div>`:""}
 function renderMayContain(value){const text=String(value||"").trim();return text?renderInfoBubble("May contain (package wording)",`<p>${esc(text)}</p><p class="muted">This is the precautionary statement copied from the product label.</p>`):""}
 function readContributionLabelDetails(){const state=contributionFormState||prefillProduct||{};const prior=state.claims&&typeof state.claims==="object"?state.claims:{};const may=document.getElementById("pmayContain");const flag=id=>{const el=document.getElementById("claim_"+id);return el?!!el.checked:!!prior[id]};return {claims:{nonGmo:flag("nonGmo"),halal:flag("halal"),glutenFree:flag("glutenFree"),organic:flag("organic"),vegan:flag("vegan"),vegetarian:flag("vegetarian"),kosher:flag("kosher")},mayContain:may?String(may.value||"").trim():String(state.mayContain||"")}}
