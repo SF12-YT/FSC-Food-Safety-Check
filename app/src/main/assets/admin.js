@@ -53,11 +53,15 @@
   function adminNutritionGroupedRows(n,editMode){
     return NUTRITION_FIELDS.filter(function(f){return !f.parent}).map(function(f){
       const children=NUTRITION_FIELDS.filter(function(child){return child.parent===f.key});
-      const parentRow=(editMode||adminNutritionPopulated(n,f))?(editMode?adminNutritionEditRow(f,n):adminNutritionViewRow(f,n)):"";
       const visibleChildren=editMode?children:children.filter(function(child){return adminNutritionPopulated(n,child)});
+      const hasChildren=children.length&&(editMode||visibleChildren.length);
+      const parentVisible=editMode||adminNutritionPopulated(n,f)||visibleChildren.length;
+      const parentRow=parentVisible?(editMode?adminNutritionEditRow(f,n):adminNutritionViewRow(f,n)):"";
       const childRows=visibleChildren.map(function(child){return editMode?adminNutritionEditRow(child,n):adminNutritionViewRow(child,n)}).join("");
-      const details=children.length&&(editMode||visibleChildren.length)?"<details class=\"admin-nutrition-subgroup\"><summary>"+esc(f.subsectionLabel||f.label+" details")+(editMode?"":" ("+visibleChildren.length+")")+"</summary><div class=\"admin-nutrition-subgrid\">"+childRows+"</div></details>":"";
-      return parentRow+details;
+      if(hasChildren){
+        return "<details class=\"admin-nutrition-subgroup\"><summary><div class=\"admin-nutrition-parent-row\">"+parentRow+"</div></summary><div class=\"admin-nutrition-subgrid\">"+childRows+"</div></details>";
+      }
+      return parentRow;
     }).join("");
   }
   function nutritionMarkup(record){
@@ -169,6 +173,22 @@
     return items.sort(function (a, b) {
       return String(b.record.date || "").localeCompare(String(a.record.date || ""));
     });
+  }
+
+  function getAllItems() {
+    ensureRecordIds();
+    const items = [];
+    function addRecords(records,kind) {
+      (Array.isArray(records)?records:[]).forEach(function(record) {
+        if(!record)return;
+        // A synced local draft is represented by its canonical remote row.
+        if(!record._foschRemote&&record.cloudSyncStatus==="synced"&&record.cloudSubmissionId)return;
+        items.push({kind:kind,id:String(record.id||""),record:record});
+      });
+    }
+    addRecords(contributions,"product");
+    addRecords(correctionReports,"correction");
+    return items.sort(function(a,b){return String(b.record.date||"").localeCompare(String(a.record.date||""));});
   }
 
   async function publishLegacyAdminMedia(rows){
