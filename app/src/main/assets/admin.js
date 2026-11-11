@@ -489,9 +489,125 @@
         "</article>";
     }).join("");
   }
+
+  function allItemCountry(item) {
+    const product=item&&item.record&&(item.record.suggestedProduct||item.record);
+    return String(product&&product.country||item&&item.record&&item.record.country||"").trim();
+  }
+  function allCountryLabel(value) {
+    const raw=String(value||"").trim();
+    if(/^[A-Za-z]{2}$/.test(raw)){
+      try{return new Intl.DisplayNames(["en"],{type:"region"}).of(raw.toUpperCase())||raw.toUpperCase();}catch(ignored){}
+    }
+    return raw;
+  }
+  function allCountryOptions(items) {
+    const values=Object.create(null);
+    items.forEach(function(item){const value=allItemCountry(item);if(value)values[value.toUpperCase()]=value;});
+    return Object.keys(values).sort().map(function(key){return values[key];});
+  }
+  function allBrandOptions(items) {
+    const values=Object.create(null);
+    items.forEach(function(item){const value=itemBrand(item);const key=normaliseBrandKey(value);if(key&&!values[key])values[key]=value;});
+    return Object.keys(values).sort().map(function(key){return values[key];});
+  }
+  function allSearchSuggestionsMarkup(items) {
+    const query=String(allFilterText||"").trim().toLowerCase();
+    if(!query||(allFilterMode==="brand"&&selectedBrandFilter===allFilterText))return "";
+    if(allFilterMode==="brand"){
+      return allBrandOptions(items).filter(function(name){return name.toLowerCase().indexOf(query)>=0;}).slice(0,8).map(function(name){
+        return "<button type=\"button\" class=\"admin-search-suggestion\" role=\"option\" onclick=\"FOSCHAdmin.selectAllBrand(decodeURIComponent('"+urlArg(name)+"'))\">"+esc(name)+"</button>";
+      }).join("");
+    }
+    if(allFilterMode==="product"){
+      const seen=Object.create(null),matches=[];
+      items.forEach(function(item){
+        const name=itemLabel(item),brand=itemBrand(item),key=(name+"|"+brand).toLowerCase();
+        if(name.toLowerCase().indexOf(query)<0||seen[key])return;
+        seen[key]=true;
+        matches.push({name:name,brand:brand});
+      });
+      return matches.slice(0,8).map(function(match){
+        return "<button type=\"button\" class=\"admin-search-suggestion\" role=\"option\" onclick=\"FOSCHAdmin.selectAllProduct(decodeURIComponent('"+urlArg(match.name)+"'))\"><b>"+esc(match.name)+"</b>"+(match.brand?"<small>"+esc(match.brand)+"</small>":"")+"</button>";
+      }).join("");
+    }
+    return "";
+  }
+  function updateAllSearch(value) {
+    const next=String(value||"");
+    if(allFilterMode==="brand"&&next!==allFilterText)selectedBrandFilter="";
+    allFilterText=next;
+    const target=document.getElementById("adminAllSuggestions");
+    if(target)target.innerHTML=allSearchSuggestionsMarkup(getAllItems());
+  }
+  function selectAllBrand(value) {
+    selectedBrandFilter=String(value||"").trim();
+    allFilterText=selectedBrandFilter;
+    const input=document.getElementById("adminAllSearchText");
+    const suggestions=document.getElementById("adminAllSuggestions");
+    if(input)input.value=allFilterText;
+    if(suggestions)suggestions.innerHTML="";
+  }
+  function selectAllProduct(value) {
+    allFilterText=String(value||"").trim();
+    const input=document.getElementById("adminAllSearchText");
+    const suggestions=document.getElementById("adminAllSuggestions");
+    if(input)input.value=allFilterText;
+    if(suggestions)suggestions.innerHTML="";
+  }
+  function updateAllCountry(value) { allFilterCountry=String(value||""); }
+  function setAllFilterMode(mode) {
+    const allowed=["all","approved","brand","product","country"];
+    allFilterMode=allowed.indexOf(mode)>=0?mode:"all";
+    allFilterText="";selectedBrandFilter="";allFilterCountry="";allFilterApplied=false;
+    render();
+  }
+  function searchAllSubmissions() {
+    if(allFilterMode==="brand"&&!selectedBrandFilter){alert("Choose a brand from the suggestions before searching.");return;}
+    if(allFilterMode==="product"&&!String(allFilterText||"").trim()){alert("Enter a product name or part of a product name to search.");return;}
+    if(allFilterMode==="country"&&!allFilterCountry){alert("Choose a country before searching.");return;}
+    allFilterApplied=true;
+    render();
+  }
+  function clearAllSubmissionsSearch() {
+    allFilterMode="all";allFilterText="";selectedBrandFilter="";allFilterCountry="";allFilterApplied=false;
+    render();
+  }
+  function allSubmissionsMarkup(items) {
+    const modeOptions=[["all","All"],["approved","Approved"],["brand","Brand Name"],["product","Product Name"],["country","Country"]];
+    const filterOptions=modeOptions.map(function(option){return "<option value=\""+option[0]+"\" "+(allFilterMode===option[0]?"selected":"")+">"+option[1]+"</option>";}).join("");
+    let searchInput="";
+    if(allFilterMode==="brand"||allFilterMode==="product"){
+      searchInput="<label for=\"adminAllSearchText\">"+(allFilterMode==="brand"?"Brand name":"Product name")+"</label>"+
+        "<input id=\"adminAllSearchText\" class=\"field\" type=\"search\" autocomplete=\"off\" placeholder=\""+(allFilterMode==="brand"?"Start typing a brand":"Start typing a product name")+"\" value=\""+esc(allFilterText)+"\" oninput=\"FOSCHAdmin.updateAllSearch(this.value)\">"+
+        "<div id=\"adminAllSuggestions\" class=\"admin-search-suggestions\" role=\"listbox\">"+allSearchSuggestionsMarkup(items)+"</div>"+
+        (allFilterMode==="brand"?"<small class=\"muted\">Select a suggested brand before searching.</small>":"<small class=\"muted\">Partial product names are supported; suggestions appear as you type.</small>");
+    } else if(allFilterMode==="country"){
+      searchInput="<label for=\"adminAllCountry\">Country</label><select id=\"adminAllCountry\" class=\"field\" onchange=\"FOSCHAdmin.updateAllCountry(this.value)\"><option value=\"\">Select a country</option>"+
+        allCountryOptions(items).map(function(value){return "<option value=\""+esc(value)+"\" "+(allFilterCountry.toUpperCase()===value.toUpperCase()?"selected":"")+">"+esc(allCountryLabel(value))+"</option>";}).join("")+"</select>";
+    } else if(allFilterMode==="approved"){
+      searchInput="<p class=\"muted admin-search-hint\">Only submissions marked Approved will be shown.</p>";
+    } else {
+      searchInput="<p class=\"muted admin-search-hint\">Browse every available submission, including pending and rejected records.</p>";
+    }
+    let shown=items;
+    if(allFilterApplied){
+      if(allFilterMode==="approved")shown=items.filter(function(item){return isApproved(item.record);});
+      else if(allFilterMode==="brand")shown=items.filter(function(item){return normaliseBrandKey(itemBrand(item))===normaliseBrandKey(selectedBrandFilter);});
+      else if(allFilterMode==="product"){
+        const query=String(allFilterText||"").trim().toLowerCase();
+        shown=items.filter(function(item){return itemLabel(item).toLowerCase().indexOf(query)>=0;});
+      } else if(allFilterMode==="country")shown=items.filter(function(item){return allItemCountry(item).toUpperCase()===allFilterCountry.toUpperCase();});
+    }
+    const resultMarkup=shown.length?shown.map(submissionCard).join(""):"<section class=\"panel empty\"><h3>No matching submissions</h3><p class=\"muted\">Try another filter or clear the search.</p></section>";
+    return "<section class=\"admin-all-search\"><label for=\"adminAllFilter\">Filter by</label><select id=\"adminAllFilter\" class=\"field\" onchange=\"FOSCHAdmin.setAllFilterMode(this.value)\">"+filterOptions+"</select>"+
+      searchInput+"<div class=\"admin-all-search-actions\"><button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.searchAllSubmissions()\">Search</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.clearAllSubmissionsSearch()\">Clear</button></div></section>"+
+      "<p class=\"muted admin-all-count\">Showing "+shown.length+" of "+items.length+" submissions.</p>"+resultMarkup;
+  }
   function dashboardMarkup() {
     if (!authenticated) return "<section class=\"panel\"><p>Admin session expired. Please sign in again.</p></section>";
     const items = getItems();
+    const allItems = getAllItems();
     const sharedItems = items.filter(function (item) { return !!item.record._foschRemote; });
     const localItems = items.filter(function (item) { return !item.record._foschRemote; });
     const submissions = sharedItems.length
@@ -502,11 +618,13 @@
       : "";
     const brandMarkup = "<h2>Brand logos</h2><p class=\"muted\">Administrators can capture a logo with the in-app camera or select an image from this device. Administrator brand logos are published through shared media storage and are visible to all users.</p>" + brandCardsMarkup();
     const content = activeTab === "activity" ? auditMarkup() :
+      activeTab === "all" ? allSubmissionsMarkup(allItems) :
       "<p class=\"muted\">" + sharedItems.length + " shared submission" + (sharedItems.length === 1 ? "" : "s") +
       " awaiting review · " + localItems.length + " local draft" + (localItems.length === 1 ? "" : "s") + " awaiting upload.</p>" +
       submissions + localDrafts + brandMarkup;
     return "<div class=\"admin-head\"><div><h1>Admin dashboard</h1><div class=\"admin-submission-meta\">Signed in as " + esc(DEFAULT_EMAIL) + "</div></div><div class=\"admin-head-actions\"><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.refreshDashboard()\">Refresh</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.logout()\">Sign out</button></div></div>" +
       "<div class=\"admin-tabs\"><button type=\"button\" class=\"" + (activeTab === "submissions" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('submissions')\">Submissions</button>" +
+      "<button type=\"button\" class=\"" + (activeTab === "all" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('all')\">All Submissions</button>" +
       "<button type=\"button\" class=\"" + (activeTab === "activity" ? "primary" : "secondary") + "\" onclick=\"FOSCHAdmin.setTab('activity')\">Activity log (" + (remoteAuditLog.length + auditLog.length) + ")</button></div>" +
       content +
       "<div class=\"warning\">Shared product submissions and moderation actions are stored in Supabase. Unsent drafts remain on this device until a network connection is available. Product evidence remains private; official product images and brand logos use a separate public-read bucket.</div>";
@@ -578,7 +696,7 @@
   }
   function setTab(tab) {
     if (!requireAdmin()) return;
-    activeTab = tab === "activity" ? "activity" : "submissions";
+    activeTab = tab === "activity" ? "activity" : (tab === "all" ? "all" : "submissions");
     page = "adminDashboard";
     render();
   }
@@ -989,6 +1107,13 @@
     renderAdminOfficialProductPhotos: renderAdminOfficialProductPhotos,
     deleteOfficialPhoto: deleteOfficialPhoto,
     setTab: setTab,
+    setAllFilterMode: setAllFilterMode,
+    updateAllSearch: updateAllSearch,
+    selectAllBrand: selectAllBrand,
+    selectAllProduct: selectAllProduct,
+    updateAllCountry: updateAllCountry,
+    searchAllSubmissions: searchAllSubmissions,
+    clearAllSubmissionsSearch: clearAllSubmissionsSearch,
     approve: approve,
     reject: reject,
     remove: remove,
