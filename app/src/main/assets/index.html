@@ -1319,6 +1319,8 @@ function selectProductSizeVariant(index){
  productLookupStatus="found";
  productLookupMessage="";
  page="productLookup";
+ preloadProductImages(item,3);
+ requestSharedProductMedia(item,barcode+"::"+country);
  render();
 }
 
@@ -1359,18 +1361,71 @@ let productLookupStatus="idle", productLookupMessage="", lookupIssuedKey="", las
    return '<img class="product-official-photo" loading="'+(index===0?"eager":"lazy")+'" decoding="async"'+(index===0?' fetchpriority="high"':'')+' src="'+esc(photo)+'" alt="Official product image '+(index+1)+'">';
   }).join("")+'</div></section>';
  }
+ const preloadedProductImages=new Map();
+ function preloadFOSCHImage(url,priority){
+  const source=String(url||"").trim();
+  if(!isFOSCHPublicMediaUrl(source)||preloadedProductImages.has(source))return;
+  const image=new Image();
+  image.decoding="async";
+  image.loading="eager";
+  if(priority)image.setAttribute("fetchpriority","high");
+  image.onerror=function(){preloadedProductImages.delete(source)};
+  image.src=source;
+  preloadedProductImages.set(source,image);
+  while(preloadedProductImages.size>24){
+   const oldest=preloadedProductImages.keys().next().value;
+   preloadedProductImages.delete(oldest);
+  }
+ }
+ function preloadProductImages(product,maxPhotos){
+  if(!product)return;
+  const photos=[];
+  [product.officialPhoto].concat(Array.isArray(product.officialPhotos)?product.officialPhotos:[]).forEach(function(photo){
+   if(isFOSCHPublicMediaUrl(photo)&&!photos.includes(photo)&&photos.length<Math.max(1,Math.min(5,Number(maxPhotos)||3)))photos.push(photo);
+  });
+  photos.forEach(function(photo,index){preloadFOSCHImage(photo,index===0)});
+  if(isFOSCHPublicMediaUrl(product.brandLogoUrl))preloadFOSCHImage(product.brandLogoUrl,false);
+ }
+ const publicProductMediaPendingProducts=Object.create(null);
+ function cacheSharedProductMedia(product,key,media){
+  const result=media&&typeof media==="object"?media:{};
+  const brand=String(result.brand||product.brand||product.brands||"").trim();
+  const photos=[];
+  [result.officialPhoto].concat(Array.isArray(result.officialPhotos)?result.officialPhotos:[],product.officialPhoto||"",Array.isArray(product.officialPhotos)?product.officialPhotos:[]).forEach(function(photo){
+   if(isFOSCHPublicMediaUrl(photo)&&!photos.includes(photo)&&photos.length<5)photos.push(photo);
+  });
+  const merged=Object.assign({},product,{
+   brand:brand||product.brand||"",
+   brandLogoUrl:result.brandLogoUrl||product.brandLogoUrl||"",
+   officialPhoto:photos[0]||product.officialPhoto||"",
+   officialPhotos:photos.length?photos:(product.officialPhotos||[])
+  });
+  preloadProductImages(merged,3);
+  if((photos.length||merged.brandLogoUrl)&&String(merged.name||"").trim()&&typeof saveMarketProduct==="function"){
+   try{saveMarketProduct(merged)}catch(error){console.warn("FOSCH could not cache published product media:",error)}
+  }
+ }
  function requestSharedProductMedia(product,key){
-  if(!product||!window.FOSCHCloud||typeof window.FOSCHCloud.getPublishedProductMedia!=="function"||Object.prototype.hasOwnProperty.call(publicProductMediaResults,key)||publicProductMediaRequests[key])return;
+  if(!product||!window.FOSCHCloud||typeof window.FOSCHCloud.getPublishedProductMedia!=="function")return;
+  if(String(product.name||"").trim())publicProductMediaPendingProducts[key]=product;
+  if(Object.prototype.hasOwnProperty.call(publicProductMediaResults,key)){
+   cacheSharedProductMedia(publicProductMediaPendingProducts[key]||product,key,publicProductMediaResults[key]);
+   return;
+  }
+  if(publicProductMediaRequests[key])return;
   const barcode=String(product.barcode||scannedBarcode||""),country=String(product.country||currentLookupMarket()||"").toUpperCase(),brand=String(product.brand||product.brands||"").trim();
+  if(!barcode||!/^[A-Z]{2}$/.test(country))return;
   publicProductMediaRequests[key]=window.FOSCHCloud.getPublishedProductMedia(barcode,country,brand).then(function(media){
    const result=media&&typeof media==="object"?Object.assign({},media):{};
    if(!String(result.brand||"").trim())result.brand=brand;
    if(!String(result.brandLogoUrl||"").trim()&&brand&&window.FOSCHCloud.publicBrandLogoUrl)result.brandLogoUrl=window.FOSCHCloud.publicBrandLogoUrl(brand);
    publicProductMediaResults[key]=result;
-   const photos=[];[result.officialPhoto].concat(Array.isArray(result.officialPhotos)?result.officialPhotos:[]).forEach(function(photo){if(isFOSCHPublicMediaUrl(photo)&&!photos.includes(photo)&&photos.length<5)photos.push(photo)});
-   if((photos.length||result.brandLogoUrl)&&typeof saveMarketProduct==="function"){try{saveMarketProduct(Object.assign({},product,{brand:result.brand||brand||product.brand||"",brandLogoUrl:result.brandLogoUrl||product.brandLogoUrl||"",officialPhoto:photos[0]||product.officialPhoto||"",officialPhotos:photos.length?photos:(product.officialPhotos||[])}))}catch(error){console.warn("FOSCH could not cache published product media:",error)}}
+   cacheSharedProductMedia(publicProductMediaPendingProducts[key]||product,key,result);
    if(page==="productLookup"&&scannedBarcode+"::"+currentLookupMarket()===key)render();
-  }).catch(function(error){console.warn("FOSCH public product media lookup failed:",error);delete publicProductMediaResults[key]}).finally(function(){delete publicProductMediaRequests[key]});
+  }).catch(function(error){console.warn("FOSCH public product media lookup failed:",error);delete publicProductMediaResults[key]}).finally(function(){
+   delete publicProductMediaRequests[key];
+   delete publicProductMediaPendingProducts[key];
+  });
  }
 let correctionMode=false, correctionOriginalProduct=null, editingCorrectionDraftId=null, contributionFormState=null, viewingCorrectionDraftId=null, editingSimpleCorrectionDraftId=null;
 let currentTypicalAnalysis={fields:{},values:{},testedDate:"",laboratory:"",source:"",notes:""};
@@ -1451,7 +1506,7 @@ function captureProductPhoto(){if(!(window.FOSCHAdmin&&window.FOSCHAdmin.isCaptu
 window.onFOSCHProductPhotoCaptured=function(dataUrl){if(!dataUrl||!String(dataUrl).startsWith("data:image/")){window.onFOSCHProductPhotoFailed();return}if(window.FOSCHAdmin&&window.FOSCHAdmin.onPhotoCaptured(dataUrl))return;if(currentPhotoData.length>=5){alert("You can attach up to five photos to one draft.");return}currentPhotoData.push(String(dataUrl));refreshPhotoGallery()};
 window.onFOSCHProductPhotoFailed=function(){if(window.FOSCHAdmin&&window.FOSCHAdmin.onPhotoFailed())return;const status=document.getElementById("photoStatus");if(status&&!currentPhotoData.length)status.textContent="No photo captured."};
 function clearProductPhoto(){currentPhotoData=[];refreshPhotoGallery()}
-window.onBarcodeScanned=function(raw){let code=String(raw||"").trim();if(!code)return;scannedBarcode=code;if(scanTarget==="contribute"){const status=document.getElementById("barcodeStatus");if(status)status.textContent="Barcode scanned: "+code;return}else{lookupMarketOverride="";lastProductLookupResult=null;lookupIssuedKey="";productLookupStatus="idle";productLookupMessage="";marketCountry=marketCountry||localStorage.getItem("fosch-market-country")||"";page="productLookup";render()}};
+window.onBarcodeScanned=function(raw){let code=String(raw||"").trim();if(!code)return;scannedBarcode=code;if(scanTarget==="contribute"){const status=document.getElementById("barcodeStatus");if(status)status.textContent="Barcode scanned: "+code;return}else{lookupMarketOverride="";lastProductLookupResult=null;lookupIssuedKey="";productLookupStatus="idle";productLookupMessage="";marketCountry=marketCountry||localStorage.getItem("fosch-market-country")||"";page="productLookup";const market=currentLookupMarket(),key=code+"::"+market,cached=readCachedProduct(code,market);if(cached){preloadProductImages(cached,3);buildProductSizeVariants(cached,market,code).slice(0,3).forEach(function(item){preloadProductImages(item,1)})}requestSharedProductMedia(cached||{barcode:code,country:market},key);render()}};
 function potentialAdditiveSuggestionsForIngredient(part){const raw=String(part||"").trim(),norm=normaliseIngredientName(raw);if(norm.length<4)return [];const candidates=_additiveNameCandidates||(_additiveNameCandidates=additiveNameCandidates());const out=new Map();for(const c of candidates){const cn=normaliseIngredientName(c.name);if(!cn||cn===norm)continue;const partial=cn.startsWith(norm+" ")||cn.endsWith(" "+norm)||cn.includes(" "+norm+" ")||(norm.split(" ").length===1&&norm.length>=4&&cn.split(" ").includes(norm));if(!partial)continue;const canon=allAdditives.find(x=>String(x.code).toUpperCase()===String(c.code).toUpperCase())||{code:c.code,name:c.name};if(!out.has(canon.code))out.set(canon.code,{code:canon.code,name:canon.name||c.name})}return Array.from(out.values()).slice(0,8)}
 function nextIngredientSuggestion(ingredients){const parts=normaliseIngredientList(ingredients).split(/\s*,\s*/).filter(Boolean);for(let i=0;i<parts.length;i++){const key=normaliseIngredientName(parts[i]);if(!key||ignoredIngredientSuggestionKeys.has(key))continue;const suggestions=potentialAdditiveSuggestionsForIngredient(parts[i]);if(suggestions.length)return {part:parts[i],index:i,suggestions}}return null}
 function showIngredientSuggestionDialog(item){const old=document.getElementById("ingredientSuggestionOverlay");if(old)old.remove();const overlay=document.createElement("div");overlay.id="ingredientSuggestionOverlay";overlay.className="ingredient-suggestion-overlay";overlay.innerHTML=`<section class="ingredient-suggestion-dialog" role="dialog" aria-modal="true" aria-labelledby="ingredientSuggestTitle"><h2 id="ingredientSuggestTitle">Did you mean an additive?</h2><p class="muted">The ingredient <b>${esc(item.part)}</b> is similar to one or more additive names. Select the intended chemical only if the label means it. Otherwise, keep the wording exactly as printed.</p>${item.suggestions.map((x,i)=>`<button type="button" class="autocomplete-option" onclick="chooseIngredientSuggestion(${i})"><b>${esc(x.name)}</b><small>${esc(x.code)}</small></button>`).join("")}<div class="dialog-actions"><button type="button" class="secondary" onclick="keepIngredientWording()">Keep as written</button><button type="button" class="primary" onclick="closeIngredientSuggestionDialog()">Cancel submission</button></div></section>`;document.body.appendChild(overlay);pendingIngredientSuggestion=item}
