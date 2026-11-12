@@ -187,10 +187,11 @@
   }
 
   function dataUrlParts(value) {
-    const match = String(value || "").match(/^data:image\/(jpeg|jpg|png|webp);base64,([A-Za-z0-9+/=]+)$/i);
-    if (!match) throw new Error("A product photo is not a supported JPEG, PNG or WebP image.");
-    const ext = match[1].toLowerCase() === "jpg" ? "jpeg" : match[1].toLowerCase();
-    const mime = ext === "jpeg" ? "image/jpeg" : "image/" + ext;
+    const match = String(value || "").match(/^data:image\/(jpeg|jpg|png|webp|svg\+xml);base64,([A-Za-z0-9+/=]+)$/i);
+    if (!match) throw new Error("Choose a JPEG, PNG, WebP or SVG image.");
+    const type = match[1].toLowerCase();
+    const ext = type === "jpg" ? "jpeg" : (type === "svg+xml" ? "svg" : type);
+    const mime = type === "svg+xml" ? "image/svg+xml" : (ext === "jpeg" ? "image/jpeg" : "image/" + ext);
     return { mime: mime, extension: ext, base64: match[2] };
   }
 
@@ -558,7 +559,7 @@
     const parts=rawPath.split("/");
     if(!rawPath||parts.some(function(part){return !part||part==="."||part===".."||part.indexOf("\\")>=0||part.indexOf("%")>=0}))throw new Error("Invalid public media path.");
     const cleanPath=parts.join("/");
-    const validProduct=/^products[/](?:[A-Z]{2}|INT)[/][A-Za-z0-9_-]{1,80}[/][0-9a-f]{16}[.](?:jpeg|png|webp)$/.test(cleanPath);
+    const validProduct=/^products[/](?:[A-Z]{2}|INT)[/][A-Za-z0-9_-]{1,80}[/][0-9a-f]{16}[.](?:jpeg|png|webp|svg)$/.test(cleanPath);
     const validBrand=/^brands[/][a-z0-9]+(?:-[a-z0-9]+)*[.]jpeg$/.test(cleanPath);
     if(!validProduct&&!validBrand)throw new Error("Only FOSCH product photos and brand logos can be uploaded.");
     const parsed=dataUrlParts(dataUrl);
@@ -566,13 +567,6 @@
     if(!result||typeof result.publicUrl!=="string"||result.publicUrl.indexOf("https://")!==0)throw new Error("R2 did not return a valid public image URL.");
     try{window.FOSCHR2PublicUrl=new URL(result.publicUrl).origin;}catch(ignored){}
     return result.publicUrl;
-  }
-  async function runMediaMigration(payload) {
-    if (!isAdmin()) throw new Error("Administrator sign-in is required to migrate public media.");
-    const result = await api("POST", "/functions/v1/fosch-media-migration", JSON.stringify(payload || {}));
-    if (!result || typeof result !== "object") throw new Error("The R2 migration service returned an invalid response.");
-    if (result.error) throw new Error(String(result.error));
-    return result;
   }
   function productPhotoPathFromPublicUrl(value){
     const raw=String(value||"").split("?")[0];
@@ -589,7 +583,7 @@
     let path;
     try{path=encodedPath.split("/").map(function(part){return decodeURIComponent(part)}).join("/");}
     catch(error){throw new Error("The official image path is malformed.");}
-    if(!/^products[/](?:[A-Z]{2}|INT)[/][A-Za-z0-9_-]{1,80}[/][0-9a-f]{16}[.](?:jpeg|png|webp)$/.test(path))throw new Error("Only official product images can be deleted here.");
+    if(!/^products[/](?:[A-Z]{2}|INT)[/][A-Za-z0-9_-]{1,80}[/][0-9a-f]{16}[.](?:jpeg|png|webp|svg)$/.test(path))throw new Error("Only official product images can be deleted here.");
     return {path:path,provider:provider};
   }
   async function deleteProductPhoto(publicUrl){
@@ -679,7 +673,6 @@
     listAuditLog: listAuditLog,
     adminUpdateSubmission: adminUpdateSubmission,
     uploadPublicMedia: uploadPublicMedia,
-    runMediaMigration: runMediaMigration,
     uploadProductPhoto: uploadProductPhoto,
     deleteProductPhoto: deleteProductPhoto,
     publicMediaUrl: publicMediaUrl,
