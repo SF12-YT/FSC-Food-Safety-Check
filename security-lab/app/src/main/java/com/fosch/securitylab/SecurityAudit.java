@@ -337,7 +337,7 @@ public final class SecurityAudit {
                 if (!"https".equalsIgnoreCase(parsed.getScheme()) ||
                         parsed.getHost() == null ||
                         !parsed.getHost().toLowerCase(Locale.ROOT).endsWith(".supabase.co") ||
-                        hasUserInfo(parsed) || !parsed.getPath().isEmpty()) return null;
+                        hasUserInfo(parsed) || (parsed.getPath() != null && !parsed.getPath().isEmpty() && !"/".equals(parsed.getPath()))) return null;
                 return new BackendConfig(base, key);
             }
         } catch (Exception e) {
