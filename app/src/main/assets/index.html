@@ -1311,7 +1311,10 @@ function productSizeVariantImage(record){
  return photo?'<img class="product-size-photo" loading="eager" decoding="async" src="'+esc(photo)+'" alt="Product preview">':'<span class="product-size-placeholder" aria-hidden="true">▧</span>';
 }
 function renderProductSizeVariants(product){
- currentLookupSizeVariants=buildProductSizeVariants(product,currentLookupMarket(),scannedBarcode);
+ currentLookupSizeVariants=buildProductSizeVariants(product,currentLookupMarket(),scannedBarcode).map(function(item){
+  const key=String(item.barcode||"")+"::"+String(item.country||currentLookupMarket()).toUpperCase();
+  return Object.assign({},item,publicProductMediaResults[key]||{});
+ });
  if(currentLookupSizeVariants.length<2)return "";
  // Retrieve thumbnails for known package-size variants as soon as the picker is shown.
  // The media lookup is deduplicated by barcode and its results are persisted for future views.
