@@ -205,16 +205,16 @@ async function signedR2List(prefix: string): Promise<string[]> {
     if (continuationToken) params.push(["continuation-token", continuationToken]);
     const canonicalQuery = canonicalAwsQuery(params);
     const requestUrl = "https://" + host + canonicalUri + "?" + canonicalQuery;
-    const amzDate = new Date().toISOString().replace(/[:-]|\\.\\d{3}/g, "");
+    const amzDate = new Date().toISOString().replace(/[:-]|\.\d{3}/g, "");
     const dateStamp = amzDate.slice(0, 8);
     const emptyPayloadHash = await sha256(new Uint8Array());
     const signedHeaders = "host;x-amz-content-sha256;x-amz-date";
-    const canonicalHeaders = "host:" + host + "\\n" +
-      "x-amz-content-sha256:" + emptyPayloadHash + "\\n" +
-      "x-amz-date:" + amzDate + "\\n";
-    const canonicalRequest = ["GET", canonicalUri, canonicalQuery, canonicalHeaders, signedHeaders, emptyPayloadHash].join("\\n");
+    const canonicalHeaders = "host:" + host + "\n" +
+      "x-amz-content-sha256:" + emptyPayloadHash + "\n" +
+      "x-amz-date:" + amzDate + "\n";
+    const canonicalRequest = ["GET", canonicalUri, canonicalQuery, canonicalHeaders, signedHeaders, emptyPayloadHash].join("\n");
     const scope = dateStamp + "/auto/s3/aws4_request";
-    const stringToSign = "AWS4-HMAC-SHA256\\n" + amzDate + "\\n" + scope + "\\n" +
+    const stringToSign = "AWS4-HMAC-SHA256\n" + amzDate + "\n" + scope + "\n" +
       await sha256(encoder.encode(canonicalRequest));
     const kDate = await hmac(encoder.encode("AWS4" + secretAccessKey), dateStamp);
     const kRegion = await hmac(kDate, "auto");
@@ -236,14 +236,14 @@ async function signedR2List(prefix: string): Promise<string[]> {
       throw new Error("Cloudflare R2 could not list product images for fingerprint reconciliation (HTTP " + response.status + ").");
     }
     const xml = await response.text();
-    const keyExpression = /<Key>([\\s\\S]*?)<\\/Key>/g;
+    const keyExpression = /<Key>([\s\S]*?)<\/Key>/g;
     let keyMatch: RegExpExecArray | null;
     while ((keyMatch = keyExpression.exec(xml)) !== null) {
       keys.push(decodeXmlValue(keyMatch[1]));
     }
-    const truncated = /<IsTruncated>true<\\/IsTruncated>/.test(xml);
+    const truncated = /<IsTruncated>true<\/IsTruncated>/.test(xml);
     if (!truncated) break;
-    const tokenMatch = xml.match(/<NextContinuationToken>([\\s\\S]*?)<\\/NextContinuationToken>/);
+    const tokenMatch = xml.match(/<NextContinuationToken>([\s\S]*?)<\/NextContinuationToken>/);
     if (!tokenMatch || !tokenMatch[1]) throw new Error("Cloudflare R2 returned a truncated listing without a continuation token.");
     continuationToken = decodeXmlValue(tokenMatch[1]);
     page++;
@@ -262,7 +262,7 @@ async function trySignedR2Get(path: string): Promise<Uint8Array | null> {
 }
 
 async function resolveR2PathByFingerprint(legacyPath: string): Promise<string> {
-  const match = legacyPath.match(/^(products\\/(?:[A-Z]{2}|INT)\\/[A-Za-z0-9_-]{1,80}\\/)([0-9a-f]{16})\\.(jpeg|png|webp)$/);
+  const match = legacyPath.match(/^(products\/(?:[A-Z]{2}|INT)\/[A-Za-z0-9_-]{1,80}\/)([0-9a-f]{16})\.(jpeg|png|webp)$/);
   if (!match) throw new Error("A stale legacy reference is not a valid content-addressed product image: " + legacyPath);
 
   const prefix = match[1];
@@ -274,7 +274,7 @@ async function resolveR2PathByFingerprint(legacyPath: string): Promise<string> {
 
   const verifiedCandidates: Array<{path: string; fingerprint: string; sha256: string; filenameFingerprint: string}> = [];
   for (const key of keys) {
-    const keyMatch = key.match(/\\/([0-9a-f]{16})\\.(?:jpeg|png|webp)$/);
+    const keyMatch = key.match(/\/([0-9a-f]{16})\.(?:jpeg|png|webp)$/);
     if (!keyMatch) continue;
     const bytes = await signedR2Get(key);
     if (!bytes.length || bytes.length > MAX_OBJECT_BYTES) continue;
