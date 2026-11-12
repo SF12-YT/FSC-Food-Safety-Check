@@ -1324,6 +1324,7 @@
     onPhotoCaptured: onPhotoCaptured,
     onPhotoFailed: onPhotoFailed,
     logout: logout,
-    runR2MediaMigration: runR2MediaMigration,\n    toggleR2MigrationErrors: toggleR2MigrationErrors
+    runR2MediaMigration: runR2MediaMigration,
+    toggleR2MigrationErrors: toggleR2MigrationErrors
   };
 })();
