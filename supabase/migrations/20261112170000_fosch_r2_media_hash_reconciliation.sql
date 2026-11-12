@@ -27,10 +27,15 @@ begin
     raise exception 'Administrator access required' using errcode = '42501';
   end if;
 
-  if p_path_mappings is null
-     or jsonb_typeof(p_path_mappings) <> 'object'
-     or jsonb_object_length(p_path_mappings) < 1
-     or jsonb_object_length(p_path_mappings) > 100 then
+  if p_path_mappings is null or jsonb_typeof(p_path_mappings) <> 'object' then
+    raise exception 'Supply a JSON object containing verified media path mappings' using errcode = '22023';
+  end if;
+
+  select count(*)::integer
+  into mapping_count
+  from jsonb_object_keys(p_path_mappings);
+
+  if mapping_count < 1 or mapping_count > 100 then
     raise exception 'Supply between 1 and 100 verified media path mappings' using errcode = '22023';
   end if;
 
@@ -38,6 +43,10 @@ begin
     select entry.key as source_path, entry.value #>> '{}' as destination_path
     from jsonb_each(p_path_mappings) as entry
   loop
+    if jsonb_typeof(p_path_mappings -> mapping_row.source_path) <> 'string'
+       or mapping_row.destination_path is null then
+      raise exception 'Every media path mapping must have a string destination path' using errcode = '22023';
+    end if;
     source_path := mapping_row.source_path;
     destination_path := mapping_row.destination_path;
 
@@ -49,7 +58,6 @@ begin
       raise exception 'Mappings must connect valid product-photo paths within the same market and barcode folder' using errcode = '22023';
     end if;
 
-    mapping_count := mapping_count + 1;
   end loop;
 
   select cfg.r2_public_url into r2_base
