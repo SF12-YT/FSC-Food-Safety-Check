@@ -396,7 +396,7 @@ public class MainActivity extends Activity {
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(4500);
                     connection.setReadTimeout(5500);
-                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.56 (open-source Android application; product-name autocomplete)");
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.76 (open-source Android application; product-name autocomplete)");
                     connection.setRequestProperty("Accept", "application/json");
                     int statusCode = connection.getResponseCode();
                     InputStream stream = statusCode >= 200 && statusCode < 300 ? connection.getInputStream() : connection.getErrorStream();
@@ -482,7 +482,7 @@ public class MainActivity extends Activity {
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(7000);
                     connection.setReadTimeout(9000);
-                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.56 (open-source Android application)");
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.76 (open-source Android application)");
                     connection.setRequestProperty("Accept", "application/json");
                     int statusCode = connection.getResponseCode();
                     InputStream stream = statusCode >= 200 && statusCode < 300 ? connection.getInputStream() : connection.getErrorStream();
