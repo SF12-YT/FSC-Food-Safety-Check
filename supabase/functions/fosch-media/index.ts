@@ -94,7 +94,7 @@ function awsEncode(value: string): string {
   );
 }
 
-async function signedR2Request(method: "PUT" | "DELETE", path: string, body: Uint8Array): Promise<void> {
+async function signedR2Request(method: "PUT" | "DELETE", path: string, body: Uint8Array, contentType?: string): Promise<void> {
   const accountId = requiredEnv("CLOUDFLARE_ACCOUNT_ID");
   const accessKeyId = requiredEnv("R2_ACCESS_KEY_ID");
   const secretAccessKey = requiredEnv("R2_SECRET_ACCESS_KEY");
@@ -133,8 +133,8 @@ async function signedR2Request(method: "PUT" | "DELETE", path: string, body: Uin
     "x-amz-date": amzDate
   };
   if (method === "PUT") {
-    headers["Content-Type"] = path.endsWith(".png") ? "image/png" :
-      (path.endsWith(".webp") ? "image/webp" : "image/jpeg");
+    headers["Content-Type"] = contentType || (path.endsWith(".png") ? "image/png" :
+      (path.endsWith(".webp") ? "image/webp" : "image/jpeg"));
     headers["Cache-Control"] = path.startsWith("brands/") ? "public, max-age=3600" :
       "public, max-age=31536000, immutable";
   }
@@ -227,11 +227,15 @@ Deno.serve(async (request: Request): Promise<Response> => {
 
     if (action === "upload") {
       const contentType = String(body.contentType || "");
+      const supportedType = contentType === "image/jpeg" || contentType === "image/png" || contentType === "image/webp";
       const expectedType = path.endsWith(".png") ? "image/png" :
         (path.endsWith(".webp") ? "image/webp" : "image/jpeg");
-      if (contentType !== expectedType) return jsonResponse(400, { error: "The image type does not match its file extension." });
+      const isBrandLogo = path.startsWith("brands/");
+      if (!supportedType || (!isBrandLogo && contentType !== expectedType)) {
+        return jsonResponse(400, { error: "The image type does not match its file extension." });
+      }
       const bytes = bytesFromBase64(body.base64);
-      await signedR2Request("PUT", path, bytes);
+      await signedR2Request("PUT", path, bytes, contentType);
       const publicUrl = publicBase + "/" + path.split("/").map(awsEncode).join("/");
       return jsonResponse(200, { ok: true, publicUrl });
     }

@@ -554,16 +554,16 @@
   function brandLogoPath(brand){const key=normalisePublicBrandKey(brand);if(!key)throw new Error("A brand name is required before uploading its logo.");return "brands/"+key+".jpeg";}
   async function uploadPublicMedia(path,dataUrl){
     if(!isAdmin())throw new Error("Administrator sign-in is required to publish product media.");
-    const rawPath=String(path||"").replace(/^\\/+|\\/+$/g,"");
+    const rawPath=String(path||"").replace(/^[/]+|[/]+$/g,"");
     const parts=rawPath.split("/");
     if(!rawPath||parts.some(function(part){return !part||part==="."||part===".."||part.indexOf("\\")>=0||part.indexOf("%")>=0}))throw new Error("Invalid public media path.");
     const cleanPath=parts.join("/");
-    const validProduct=/^products\\/(?:[A-Z]{2}|INT)\\/[A-Za-z0-9_-]{1,80}\\/[0-9a-f]{16}\\.(?:jpeg|png|webp)$/.test(cleanPath);
-    const validBrand=/^brands\\/[a-z0-9]+(?:-[a-z0-9]+)*\\.jpeg$/.test(cleanPath);
+    const validProduct=/^products[/](?:[A-Z]{2}|INT)[/][A-Za-z0-9_-]{1,80}[/][0-9a-f]{16}[.](?:jpeg|png|webp)$/.test(cleanPath);
+    const validBrand=/^brands[/][a-z0-9]+(?:-[a-z0-9]+)*[.]jpeg$/.test(cleanPath);
     if(!validProduct&&!validBrand)throw new Error("Only FOSCH product photos and brand logos can be uploaded.");
     const parsed=dataUrlParts(dataUrl);
     const result=await api("POST","/functions/v1/fosch-media",JSON.stringify({action:"upload",path:cleanPath,contentType:parsed.mime,base64:parsed.base64}));
-    if(!result||typeof result.publicUrl!=="string"||!result.publicUrl.startsWith("https://"))throw new Error("R2 did not return a valid public image URL.");
+    if(!result||typeof result.publicUrl!=="string"||result.publicUrl.indexOf("https://")!==0)throw new Error("R2 did not return a valid public image URL.");
     return result.publicUrl;
   }
   function productPhotoPathFromPublicUrl(value){
@@ -575,13 +575,13 @@
       let parsed;
       try{parsed=new URL(raw)}catch(error){throw new Error("The official image URL is malformed.");}
       if(parsed.protocol!=="https:")throw new Error("Only secure official image URLs can be deleted.");
-      encodedPath=parsed.pathname.replace(/^\\/+/, "");
+      encodedPath=parsed.pathname.charAt(0)==="/" ? parsed.pathname.slice(1) : parsed.pathname;
       provider="r2";
     }
     let path;
     try{path=encodedPath.split("/").map(function(part){return decodeURIComponent(part)}).join("/");}
     catch(error){throw new Error("The official image path is malformed.");}
-    if(!/^products\\/(?:[A-Z]{2}|INT)\\/[A-Za-z0-9_-]{1,80}\\/[0-9a-f]{16}\\.(?:jpeg|png|webp)$/.test(path))throw new Error("Only official product images can be deleted here.");
+    if(!/^products[/](?:[A-Z]{2}|INT)[/][A-Za-z0-9_-]{1,80}[/][0-9a-f]{16}[.](?:jpeg|png|webp)$/.test(path))throw new Error("Only official product images can be deleted here.");
     return {path:path,provider:provider};
   }
   async function deleteProductPhoto(publicUrl){
@@ -610,7 +610,7 @@
     const key=normalisePublicBrandKey(brand);if(!key)return "";
     const value=await api("POST","/rest/v1/rpc/get_fosch_public_brand_logo",JSON.stringify({p_brand_key:key}),{publicOnly:true});
     if(typeof value!=="string"||!value)return "";
-    return /^https:\\/\\//i.test(value)?value:publicMediaUrl(value);
+    return value.indexOf("https://")===0?value:publicMediaUrl(value);
   }
   async function getPublishedProductMedia(barcode,country,brand){
     const code=String(barcode||"").trim(),market=String(country||"").trim().toUpperCase();if(!code||!/^[A-Z]{2}$/.test(market))return null;

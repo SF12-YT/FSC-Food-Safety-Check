@@ -246,7 +246,7 @@ public class MainActivity extends Activity {
                     connection = (HttpURLConnection) requestUrl.openConnection();
                     connection.setRequestMethod(cleanMethod);
                     connection.setConnectTimeout(12000);
-                    connection.setReadTimeout(25000);
+                    connection.setReadTimeout(cleanPath.startsWith("/functions/v1/") ? 60000 : 25000);
                     connection.setUseCaches(false);
                     connection.setInstanceFollowRedirects(false);
                     connection.setRequestProperty("User-Agent", "FOSCH/0.10.57 Android");
