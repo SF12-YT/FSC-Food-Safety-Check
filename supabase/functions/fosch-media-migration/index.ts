@@ -331,6 +331,41 @@ async function deleteSupabaseObjects(
   }
 }
 
+async function listLegacyReferencedPaths(
+  auth: {token: string; publishableKey: string; supabaseUrl: string}
+): Promise<string[]> {
+  const response = await fetch(auth.supabaseUrl + "/rest/v1/rpc/admin_list_fosch_r2_legacy_media_paths", {
+    method: "POST",
+    headers: {
+      "apikey": auth.publishableKey,
+      "Authorization": "Bearer " + auth.token,
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: "{}"
+  });
+  if (!response.ok) {
+    console.error("FOSCH legacy media reference discovery failed with HTTP", response.status, (await response.text()).slice(0, 200));
+    throw new Error("Supabase could not list remaining legacy media references. No originals were deleted.");
+  }
+  const result = await response.json();
+  if (!Array.isArray(result) || result.some((path) => typeof path !== "string" || !validMediaPath(path))) {
+    throw new Error("Supabase returned an invalid legacy media reference list. No originals were deleted.");
+  }
+  return [...new Set(result as string[])];
+}
+
+async function verifyR2OnlyReference(path: string): Promise<void> {
+  if (!validMediaPath(path)) throw new Error("A remaining legacy reference is not an approved FOSCH media path.");
+  // The Supabase original is already absent, so byte-for-byte comparison is
+  // impossible. Require an authenticated R2 read and a non-empty image-sized
+  // object before allowing its database URL to be switched to R2.
+  const bytes = await signedR2Get(path);
+  if (!bytes.length || bytes.length > MAX_OBJECT_BYTES) {
+    throw new Error("The R2-only referenced image is empty or exceeds the 5 MB limit: " + path + ". No originals were deleted.");
+  }
+}
+
 async function purgeSupabaseOriginals(
   auth: {token: string; publishableKey: string; supabaseUrl: string}
 ): Promise<Record<string, unknown>> {
@@ -347,13 +382,26 @@ async function purgeSupabaseOriginals(
   const verified = [];
   for (const path of paths) verified.push(await verifyR2CopyForDeletion(path));
 
-  // Re-apply the URL mapping after byte-level R2 verification. This repairs any
-  // references missed by an earlier/partial finalize pass, while the following
-  // database guard still blocks deletion if even one legacy URL remains.
-  for (let i = 0; i < paths.length; i += 100) {
-    await finalizePaths(auth, paths.slice(i, i + 100));
+  // Discover URLs that still point at the old bucket, including objects whose
+  // Supabase originals are already absent. Verify every such R2-only object
+  // exists before rewriting its database reference.
+  const legacyReferencedPaths = await listLegacyReferencedPaths(auth);
+  const pathsToFinalize = new Set<string>(paths);
+  for (const path of legacyReferencedPaths) {
+    if (!pathsToFinalize.has(path)) {
+      await verifyR2OnlyReference(path);
+      pathsToFinalize.add(path);
+    }
   }
-  await verifyDatabaseReferencesCleared(auth, paths);
+
+  // Re-apply URL mapping for both source objects verified byte-for-byte above
+  // and R2-only objects authenticated as present. The safety guard remains
+  // authoritative and blocks deletion if any legacy URL remains.
+  const finalizationPaths = [...pathsToFinalize];
+  for (let i = 0; i < finalizationPaths.length; i += 100) {
+    await finalizePaths(auth, finalizationPaths.slice(i, i + 100));
+  }
+  await verifyDatabaseReferencesCleared(auth, finalizationPaths);
   await deleteSupabaseObjects(auth, paths);
 
   const after = await listObjects(auth);
