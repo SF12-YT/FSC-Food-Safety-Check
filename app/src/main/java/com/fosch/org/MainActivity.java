@@ -46,7 +46,9 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 import android.media.AudioAttributes;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.ToneGenerator;
 import android.database.Cursor;
 import android.provider.OpenableColumns;
 import android.graphics.Color;
@@ -86,7 +88,7 @@ public class MainActivity extends Activity {
     private String pendingWidgetSearchQuery = "";
     private MediaPlayer successfulScanPlayer;
     private boolean successfulScanSoundPrepared = false;
-    private boolean successfulScanSoundPending = false;
+    private ToneGenerator successfulScanFallbackTone;
     private static final int MAX_ADMIN_IMAGE_BYTES = 5 * 1024 * 1024;
     private static final String SUCCESSFUL_SCAN_SOUND_URL = "https://socketmobile-assets-dbhnethkfecvgchq.a03.azurefd.net/sitefinity-assets/docs/default-source/sounds/successful-scan.mp3";
 
@@ -262,7 +264,7 @@ public class MainActivity extends Activity {
                     connection.setReadTimeout(cleanPath.startsWith("/functions/v1/") ? 60000 : 25000);
                     connection.setUseCaches(false);
                     connection.setInstanceFollowRedirects(false);
-                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.57 Android");
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.78 Android");
                     connection.setRequestProperty("Accept", "application/json");
                     JSONObject headers = new JSONObject(headersJson == null ? "{}" : headersJson);
                     java.util.Iterator<String> keys = headers.keys();
@@ -396,7 +398,7 @@ public class MainActivity extends Activity {
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(4500);
                     connection.setReadTimeout(5500);
-                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.77 (open-source Android application; product-name autocomplete)");
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.78 (open-source Android application; product-name autocomplete)");
                     connection.setRequestProperty("Accept", "application/json");
                     int statusCode = connection.getResponseCode();
                     InputStream stream = statusCode >= 200 && statusCode < 300 ? connection.getInputStream() : connection.getErrorStream();
@@ -482,7 +484,7 @@ public class MainActivity extends Activity {
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(7000);
                     connection.setReadTimeout(9000);
-                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.77 (open-source Android application)");
+                    connection.setRequestProperty("User-Agent", "FOSCH/0.10.78 (open-source Android application)");
                     connection.setRequestProperty("Accept", "application/json");
                     int statusCode = connection.getResponseCode();
                     InputStream stream = statusCode >= 200 && statusCode < 300 ? connection.getInputStream() : connection.getErrorStream();
@@ -893,16 +895,13 @@ public class MainActivity extends Activity {
             successfulScanPlayer = player;
             successfulScanSoundPrepared = false;
             player.setAudioAttributes(new AudioAttributes.Builder()
-                .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                // Route through the normal media volume; sonification volume is often muted separately.
+                .setUsage(AudioAttributes.USAGE_MEDIA)
+                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                 .build());
             player.setOnPreparedListener(prepared -> {
                 if (successfulScanPlayer != prepared) { prepared.release(); return; }
                 successfulScanSoundPrepared = true;
-                if (successfulScanSoundPending) {
-                    successfulScanSoundPending = false;
-                    playSuccessfulScanSound();
-                }
             });
             player.setOnErrorListener((failed, what, extra) -> {
                 Log.w(TAG, "Barcode confirmation sound could not be loaded (what=" + what + ", extra=" + extra + ").");
@@ -910,42 +909,60 @@ public class MainActivity extends Activity {
                     successfulScanPlayer = null;
                     successfulScanSoundPrepared = false;
                 }
-                failed.release();
+                try { failed.release(); } catch (Exception ignored) { }
                 return true;
             });
             player.setDataSource(SUCCESSFUL_SCAN_SOUND_URL);
             player.prepareAsync();
         } catch (Exception error) {
             Log.w(TAG, "Unable to prepare the barcode confirmation sound.", error);
-            releaseSuccessfulScanSound();
+            resetSuccessfulScanPlayer();
         }
     }
 
     private void playSuccessfulScanSound() {
         MediaPlayer player = successfulScanPlayer;
-        if (player == null || !successfulScanSoundPrepared) {
-            successfulScanSoundPending = true;
-            if (player == null) prepareSuccessfulScanSound();
-            return;
+        if (player != null && successfulScanSoundPrepared) {
+            try {
+                if (player.isPlaying()) player.pause();
+                player.seekTo(0);
+                player.start();
+                return;
+            } catch (Exception error) {
+                Log.w(TAG, "Unable to play the barcode confirmation sound; using the built-in fallback.", error);
+                resetSuccessfulScanPlayer();
+            }
         }
+
+        // Never leave a successful scan silent while the remote MP3 is loading or unavailable.
+        playSuccessfulScanFallbackTone();
+        if (successfulScanPlayer == null) prepareSuccessfulScanSound();
+    }
+
+    private void playSuccessfulScanFallbackTone() {
         try {
-            if (player.isPlaying()) player.pause();
-            player.seekTo(0);
-            player.start();
+            if (successfulScanFallbackTone == null) {
+                successfulScanFallbackTone = new ToneGenerator(AudioManager.STREAM_MUSIC, 90);
+            }
+            successfulScanFallbackTone.startTone(ToneGenerator.TONE_PROP_ACK, 120);
         } catch (Exception error) {
-            Log.w(TAG, "Unable to play the barcode confirmation sound.", error);
-            releaseSuccessfulScanSound();
-            successfulScanSoundPending = true;
-            prepareSuccessfulScanSound();
+            Log.w(TAG, "Unable to play the built-in barcode confirmation tone.", error);
         }
     }
 
-    private void releaseSuccessfulScanSound() {
-        successfulScanSoundPending = false;
+    private void resetSuccessfulScanPlayer() {
         successfulScanSoundPrepared = false;
         if (successfulScanPlayer != null) {
             try { successfulScanPlayer.release(); } catch (Exception ignored) { }
             successfulScanPlayer = null;
+        }
+    }
+
+    private void releaseSuccessfulScanSound() {
+        resetSuccessfulScanPlayer();
+        if (successfulScanFallbackTone != null) {
+            try { successfulScanFallbackTone.release(); } catch (Exception ignored) { }
+            successfulScanFallbackTone = null;
         }
     }
 
