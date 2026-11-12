@@ -123,16 +123,16 @@ async function signedR2Get(path: string): Promise<Uint8Array> {
   const canonicalUri = "/" + awsEncode(bucket) + "/" + path.split("/").map(awsEncode).join("/");
   const requestUrl = "https://" + accountId + ".r2.cloudflarestorage.com" + canonicalUri;
   const host = new URL(requestUrl).host;
-  const amzDate = new Date().toISOString().replace(/[:-]|\\.\\d{3}/g, "");
+  const amzDate = new Date().toISOString().replace(/[:-]|\.\d{3}/g, "");
   const dateStamp = amzDate.slice(0, 8);
   const emptyPayloadHash = await sha256(new Uint8Array());
   const signedHeaders = "host;x-amz-content-sha256;x-amz-date";
-  const canonicalHeaders = "host:" + host + "\\n" +
-    "x-amz-content-sha256:" + emptyPayloadHash + "\\n" +
-    "x-amz-date:" + amzDate + "\\n";
-  const canonicalRequest = ["GET", canonicalUri, "", canonicalHeaders, signedHeaders, emptyPayloadHash].join("\\n");
+  const canonicalHeaders = "host:" + host + "\n" +
+    "x-amz-content-sha256:" + emptyPayloadHash + "\n" +
+    "x-amz-date:" + amzDate + "\n";
+  const canonicalRequest = ["GET", canonicalUri, "", canonicalHeaders, signedHeaders, emptyPayloadHash].join("\n");
   const scope = dateStamp + "/auto/s3/aws4_request";
-  const stringToSign = "AWS4-HMAC-SHA256\\n" + amzDate + "\\n" + scope + "\\n" +
+  const stringToSign = "AWS4-HMAC-SHA256\n" + amzDate + "\n" + scope + "\n" +
     await sha256(encoder.encode(canonicalRequest));
   const kDate = await hmac(encoder.encode("AWS4" + secretAccessKey), dateStamp);
   const kRegion = await hmac(kDate, "auto");
