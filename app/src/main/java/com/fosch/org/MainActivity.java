@@ -760,9 +760,9 @@ public class MainActivity extends Activity {
                 if (!lowerSvg.contains("<svg") || lowerSvg.contains("<!doctype") || lowerSvg.contains("<!entity") ||
                     lowerSvg.contains("<script") || lowerSvg.contains("<foreignobject") ||
                     lowerSvg.contains("javascript:") || lowerSvg.contains("@import") ||
-                    lowerSvg.matches("(?s).*\son[a-z0-9_-]+\s*=.*") ||
-                    lowerSvg.matches("(?s).*(?:href|xlink:href)\s*=\s*['\"]\s*(?:https?:|//|javascript:).*") ||
-                    lowerSvg.matches("(?s).*url\(\s*['\"]?\s*(?:https?:|//).*")) {
+                    lowerSvg.matches("(?s).*\\son[a-z0-9_-]+\\s*=.*") ||
+                    lowerSvg.matches("(?s).*(?:href|xlink:href)\\s*=\\s*['\"]\\s*(?:https?:|//|javascript:).*") ||
+                    lowerSvg.matches("(?s).*url\\(\\s*['\"]?\\s*(?:https?:|//).*")) {
                     throw new IOException("This SVG contains unsupported active or external content. Export it as a clean SVG or PNG and try again.");
                 }
                 String dataUrl = "data:image/svg+xml;base64," + Base64.encodeToString(svgBytes, Base64.NO_WRAP);
