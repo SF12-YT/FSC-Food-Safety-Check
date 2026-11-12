@@ -1,0 +1,4 @@
+project_id = "mqgvagftvuybietazbdc"
+
+[functions.fosch-media]
+verify_jwt = true
