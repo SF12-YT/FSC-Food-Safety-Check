@@ -1,0 +1,42 @@
+name: Build FOSCH Security Lab APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "security-lab" ]
+    paths:
+      - "security-lab/**"
+      - ".github/workflows/security-lab.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Java
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: "9.6.0"
+
+      - name: Build Security Lab debug APK
+        working-directory: security-lab
+        run: gradle assembleDebug
+
+      - name: Upload Security Lab APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: FOSCH-Security-Lab-debug-APK
+          path: security-lab/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 90
