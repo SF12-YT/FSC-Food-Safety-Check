@@ -593,7 +593,7 @@ public class MainActivity extends Activity {
             root.put("history", history);
             root.put("notice", "Read-only/low-impact defensive checks. A PASS is limited to the described test and is not proof of complete security.");
         } catch (Exception ignored) { }
-        return root.toString(2);
+        return root.toString();
     }
 
     private String formatBytes(long bytes) {
