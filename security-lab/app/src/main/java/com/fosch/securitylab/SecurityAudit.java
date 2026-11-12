@@ -427,14 +427,14 @@ public final class SecurityAudit {
         String value = key.trim();
         String lower = value.toLowerCase(Locale.ROOT);
         if (value.isEmpty() || value.length() > 4096
-                || value.matches(".*\\\\s+.*")
+                || value.matches(".*\\s+.*")
                 || lower.startsWith("sb_secret_")
                 || lower.contains("service_role")) {
             return false;
         }
         // Legacy Supabase anon/service_role keys are JWTs; inspect the role claim
         // so a service_role key cannot be pasted into this public-key field.
-        String[] jwt = value.split("\\\\.");
+        String[] jwt = value.split("\\.");
         if (jwt.length == 3) {
             try {
                 byte[] payload = Base64.decode(jwt[1],
