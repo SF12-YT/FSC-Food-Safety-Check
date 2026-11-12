@@ -1127,7 +1127,7 @@
           writeAudit("Brand logo published","brand",normaliseBrandKey(target.brand),target.brand,target.note,(target.source==="device"?"Selected from device storage":"Captured with FOSCH's in-app camera")+" and published for all users.");
           page="adminDashboard";render();
         }catch(error){
-          alert("The brand logo could not be published. Check that the latest Supabase public-media SQL migration has been run. "+String(error&&error.message||error));
+          alert("The brand logo could not be published. Check that the latest FOSCH R2 media SQL migration has been run and the media function is deployed. "+String(error&&error.message||error));
           page="adminDashboard";render();
         }
       })();
