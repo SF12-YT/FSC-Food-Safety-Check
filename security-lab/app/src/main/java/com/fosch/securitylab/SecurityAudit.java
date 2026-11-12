@@ -9,8 +9,10 @@ import android.content.pm.ProviderInfo;
 import android.content.pm.ServiceInfo;
 import android.net.Uri;
 import android.os.Build;
+import android.util.Base64;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -424,11 +426,24 @@ public final class SecurityAudit {
         if (key == null) return false;
         String value = key.trim();
         String lower = value.toLowerCase(Locale.ROOT);
-        return !value.isEmpty()
-                && value.length() <= 4096
-                && !value.matches(".*\\\\s+.*")
-                && !lower.startsWith("sb_secret_")
-                && !lower.contains("service_role");
+        if (value.isEmpty() || value.length() > 4096
+                || value.matches(".*\\\\s+.*")
+                || lower.startsWith("sb_secret_")
+                || lower.contains("service_role")) {
+            return false;
+        }
+        // Legacy Supabase anon/service_role keys are JWTs; inspect the role claim
+        // so a service_role key cannot be pasted into this public-key field.
+        String[] jwt = value.split("\\\\.");
+        if (jwt.length == 3) {
+            try {
+                byte[] payload = Base64.decode(jwt[1],
+                        Base64.URL_SAFE | Base64.NO_WRAP | Base64.NO_PADDING);
+                JSONObject claims = new JSONObject(new String(payload, StandardCharsets.UTF_8));
+                if ("service_role".equalsIgnoreCase(claims.optString("role", ""))) return false;
+            } catch (Exception ignored) { }
+        }
+        return true;
     }
 
     public static List<Check> runStagingSecuritySuite(String rawUrl, String rawKey) {
