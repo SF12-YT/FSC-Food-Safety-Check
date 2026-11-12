@@ -130,14 +130,14 @@ public class MainActivity extends Activity {
         addActionCard("Run read-only API checks",
                 "Extract the public Supabase configuration from the installed FOSCH APK. Probe anonymous read access and a harmless SQL-filter canary. No writes or deletes.",
                 "RUN API AUDIT", false, v -> runBackendAudit());
-        addActionCard("Staging rate-limit probe",
-                "Five sequential GET requests, spaced apart. Non-production Supabase target only. This is a gentle signal check, not a DDoS or capacity test.",
-                "CONFIGURE STAGING PROBE", true, v -> showStagingDialog());
+        addActionCard("Advanced staging security suite",
+                "Probe anonymous database reads, admin RPC authorization, private evidence-bucket listing, malformed submission validation and a bounded 24-request concurrency burst. Uses your staging URL and public anon/publishable key.",
+                "CONFIGURE STAGING SUITE", true, v -> showStagingDialog());
 
         LinearLayout safetyCard = card();
-        TextView safetyTitle = text("Guardrails are on", 14, COLOR_GREEN, true);
+        TextView safetyTitle = text("Staging suite · bounded active tests", 14, COLOR_GREEN, true);
         safetyCard.addView(safetyTitle);
-        TextView safetyBody = text("No private FOSCH storage or session access. No destructive RPCs, uploads, account lockouts, or high-volume traffic. Production stress testing is blocked.", 12, COLOR_MUTED, false);
+        TextView safetyBody = text("The suite sends active negative-test requests only to the explicitly entered Supabase staging project. It does not upload/delete files, extract records, lock accounts or run an unbounded flood. The known FOSCH production project is blocked.", 12, COLOR_MUTED, false);
         safetyBody.setPadding(0, dp(6), 0, 0);
         safetyCard.addView(safetyBody);
         content.addView(safetyCard, matchWrap());
@@ -161,7 +161,7 @@ public class MainActivity extends Activity {
         historyContainer.setOrientation(LinearLayout.VERTICAL);
         content.addView(historyContainer, matchWrap());
 
-        TextView footer = text("FOSCH Security Lab · 0.1.0 · Findings are evidence, not a guarantee of security.", 11, COLOR_MUTED, false);
+        TextView footer = text("FOSCH Security Lab · 0.2.0 · Findings are evidence, not a guarantee of security.", 11, COLOR_MUTED, false);
         footer.setGravity(Gravity.CENTER);
         footer.setPadding(0, dp(22), 0, 0);
         content.addView(footer);
@@ -301,18 +301,27 @@ public class MainActivity extends Activity {
         form.setOrientation(LinearLayout.VERTICAL);
         form.setPadding(dp(4), dp(4), dp(4), dp(4));
 
-        TextView warning = text("Only use a staging project you own or are explicitly authorised to test. Production is blocked. This sends at most five sequential GET requests.", 12, COLOR_MUTED, false);
+        TextView warning = text("Authorise only a staging Supabase project you own. The URL must be the project base URL. Enter the public anon/publishable key only — never a service_role or secret key. The key is used in memory and is not saved or exported. The known FOSCH production project is blocked. The suite includes active negative tests and a capped 4-worker / 24-request burst.", 12, COLOR_MUTED, false);
         form.addView(warning);
 
         EditText url = new EditText(this);
         url.setSingleLine(true);
         url.setTextColor(COLOR_TEXT);
         url.setHintTextColor(COLOR_MUTED);
-        url.setHint("https://your-staging-project.supabase.co");
+        url.setHint("https://your-project-ref.supabase.co");
         url.setText("https://");
         LinearLayout.LayoutParams fieldParams = matchWrap();
         fieldParams.topMargin = dp(12);
         form.addView(url, fieldParams);
+
+        EditText key = new EditText(this);
+        key.setSingleLine(true);
+        key.setTextColor(COLOR_TEXT);
+        key.setHintTextColor(COLOR_MUTED);
+        key.setHint("Supabase publishable / anon key");
+        LinearLayout.LayoutParams keyParams = matchWrap();
+        keyParams.topMargin = dp(8);
+        form.addView(key, keyParams);
 
         EditText confirmation = new EditText(this);
         confirmation.setSingleLine(true);
@@ -324,23 +333,24 @@ public class MainActivity extends Activity {
         form.addView(confirmation, confirmParams);
 
         new AlertDialog.Builder(this)
-                .setTitle("Staging-only rate-limit probe")
+                .setTitle("Authorised staging security suite")
                 .setView(form)
                 .setNegativeButton("Cancel", null)
-                .setPositiveButton("Run 5 requests", (dialog, which) -> {
+                .setPositiveButton("RUN ADVANCED SUITE", (dialog, which) -> {
                     String phrase = confirmation.getText().toString().trim();
                     if (!"I OWN THIS STAGING TARGET".equals(phrase)) {
                         Toast.makeText(this, "Authorisation phrase did not match. No requests sent.", Toast.LENGTH_LONG).show();
                         return;
                     }
                     String target = url.getText().toString().trim();
-                    setBusy("Running five low-rate staging requests…");
+                    String publicKey = key.getText().toString().trim();
+                    setBusy("Running staging security suite…");
                     executor.execute(() -> {
                         List<SecurityAudit.Check> checks =
-                                SecurityAudit.runStagingRateLimitProbe(target);
+                                SecurityAudit.runStagingSecuritySuite(target, publicKey);
                         runOnUiThread(() -> {
                             appendChecks(checks);
-                            setIdle("Staging probe complete");
+                            setIdle("Staging security suite complete · " + checks.size() + " checks");
                         });
                     });
                 })
