@@ -596,7 +596,7 @@ public class MainActivity extends Activity {
         JSONObject root = new JSONObject();
         try {
             root.put("application", "FOSCH Security Lab");
-            root.put("version", "0.1.0");
+            root.put("version", "0.2.0");
             root.put("targetPackage", SecurityAudit.FOSCH_PACKAGE);
             root.put("generatedAt", new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX", Locale.US)
                     .format(new Date()));
