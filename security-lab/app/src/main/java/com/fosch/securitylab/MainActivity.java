@@ -108,6 +108,10 @@ public class MainActivity extends Activity {
         targetCard.addView(open, matchWrap());
         content.addView(targetCard, matchWrap());
 
+        activityStatus = text("Ready · no tests have been run", 11, COLOR_MUTED, false);
+        activityStatus.setPadding(dp(3), dp(8), dp(3), dp(2));
+        content.addView(activityStatus);
+
         addSection("01  ·  LOCAL APP & APK");
         addActionCard("Run local integrity audit",
                 "Inspect install metadata, signing certificate, APK structure, exported components, backup and transport flags, plus device-level indicators.",
