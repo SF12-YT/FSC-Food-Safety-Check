@@ -19,7 +19,7 @@
       const parsed = new URL(String(value || ""));
       if (parsed.protocol !== "https:" || parsed.username || parsed.password ||
           parsed.search || parsed.hash ||
-          !(parsed.pathname === "/" || /^\\/(?:products|brands)\\//.test(parsed.pathname))) return;
+          !(parsed.pathname === "/" || parsed.pathname.startsWith("/products/") || parsed.pathname.startsWith("/brands/"))) return;
       window.FOSCHR2PublicUrl = parsed.origin;
       localStorage.setItem(R2_PUBLIC_ORIGIN_KEY, parsed.origin);
     } catch (ignored) {}
