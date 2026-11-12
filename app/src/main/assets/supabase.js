@@ -12,6 +12,20 @@
   let session = null;
   let requestCounter = 0;
   const pending = Object.create(null);
+  const R2_PUBLIC_ORIGIN_KEY = "fosch-r2-public-origin";
+
+  function rememberR2PublicOrigin(value) {
+    try {
+      const parsed = new URL(String(value || ""));
+      if (parsed.protocol !== "https:" || parsed.username || parsed.password ||
+          parsed.search || parsed.hash ||
+          !(parsed.pathname === "/" || /^\\/(?:products|brands)\\//.test(parsed.pathname))) return;
+      window.FOSCHR2PublicUrl = parsed.origin;
+      localStorage.setItem(R2_PUBLIC_ORIGIN_KEY, parsed.origin);
+    } catch (ignored) {}
+  }
+
+  try { rememberR2PublicOrigin(localStorage.getItem(R2_PUBLIC_ORIGIN_KEY)); } catch (ignored) {}
 
   try {
     const cached = JSON.parse(localStorage.getItem(SESSION_KEY) || "null");
@@ -565,7 +579,7 @@
     const parsed=dataUrlParts(dataUrl);
     const result=await api("POST","/functions/v1/fosch-media",JSON.stringify({action:"upload",path:cleanPath,contentType:parsed.mime,base64:parsed.base64}));
     if(!result||typeof result.publicUrl!=="string"||result.publicUrl.indexOf("https://")!==0)throw new Error("R2 did not return a valid public image URL.");
-    try{window.FOSCHR2PublicUrl=new URL(result.publicUrl).origin;}catch(ignored){}
+    rememberR2PublicOrigin(result.publicUrl);
     return result.publicUrl;
   }
   function productPhotoPathFromPublicUrl(value){
@@ -615,7 +629,7 @@
     if(value.indexOf("https://")===0){
       const legacyPrefix=SUPABASE_URL+"/storage/v1/object/public/"+PUBLIC_MEDIA_BUCKET+"/";
       if(value.indexOf(legacyPrefix)!==0){
-        try{const parsed=new URL(value);if(parsed.protocol==="https:"&&parsed.pathname.indexOf("/brands/")>=0)window.FOSCHR2PublicUrl=parsed.origin;}catch(ignored){}
+        rememberR2PublicOrigin(value);
       }
       return value;
     }
@@ -627,7 +641,7 @@
     const value=Array.isArray(response)?(response[0]||{}):(response&&typeof response==="object"?response:{});
     const r2Base=String(value.r2PublicUrl||"").trim();
     if(r2Base.indexOf("https://")===0){
-      try{const parsedBase=new URL(r2Base);if(parsedBase.protocol==="https:"&&parsedBase.pathname==="/")window.FOSCHR2PublicUrl=parsedBase.origin;}catch(ignored){}
+      rememberR2PublicOrigin(r2Base);
     }
     const resolvedBrand=String(value.brand||brand||"").trim();
     if(!String(value.brand||"").trim()&&resolvedBrand)value.brand=resolvedBrand;
