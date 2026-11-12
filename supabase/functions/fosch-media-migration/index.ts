@@ -115,6 +115,46 @@ async function signedR2Put(path: string, bytes: Uint8Array, contentType: string)
     throw new Error("Cloudflare R2 rejected the upload (HTTP " + response.status + ").");
   }
 }
+async function signedR2Get(path: string): Promise<Uint8Array> {
+  const accountId = requiredEnv("CLOUDFLARE_ACCOUNT_ID");
+  const accessKeyId = requiredEnv("R2_ACCESS_KEY_ID");
+  const secretAccessKey = requiredEnv("R2_SECRET_ACCESS_KEY");
+  const bucket = requiredEnv("R2_BUCKET_NAME");
+  const canonicalUri = "/" + awsEncode(bucket) + "/" + path.split("/").map(awsEncode).join("/");
+  const requestUrl = "https://" + accountId + ".r2.cloudflarestorage.com" + canonicalUri;
+  const host = new URL(requestUrl).host;
+  const amzDate = new Date().toISOString().replace(/[:-]|\\.\\d{3}/g, "");
+  const dateStamp = amzDate.slice(0, 8);
+  const emptyPayloadHash = await sha256(new Uint8Array());
+  const signedHeaders = "host;x-amz-content-sha256;x-amz-date";
+  const canonicalHeaders = "host:" + host + "\\n" +
+    "x-amz-content-sha256:" + emptyPayloadHash + "\\n" +
+    "x-amz-date:" + amzDate + "\\n";
+  const canonicalRequest = ["GET", canonicalUri, "", canonicalHeaders, signedHeaders, emptyPayloadHash].join("\\n");
+  const scope = dateStamp + "/auto/s3/aws4_request";
+  const stringToSign = "AWS4-HMAC-SHA256\\n" + amzDate + "\\n" + scope + "\\n" +
+    await sha256(encoder.encode(canonicalRequest));
+  const kDate = await hmac(encoder.encode("AWS4" + secretAccessKey), dateStamp);
+  const kRegion = await hmac(kDate, "auto");
+  const kService = await hmac(kRegion, "s3");
+  const kSigning = await hmac(kService, "aws4_request");
+  const signature = toHex(await hmac(kSigning, stringToSign));
+  const response = await fetch(requestUrl, {
+    method: "GET",
+    headers: {
+      "Authorization": "AWS4-HMAC-SHA256 Credential=" + accessKeyId + "/" + scope +
+        ", SignedHeaders=" + signedHeaders + ", Signature=" + signature,
+      "x-amz-content-sha256": emptyPayloadHash,
+      "x-amz-date": amzDate
+    }
+  });
+  if (!response.ok) {
+    const detail = (await response.text()).slice(0, 180);
+    console.error("FOSCH migration R2 read-back failed with HTTP", response.status, detail);
+    throw new Error("Cloudflare R2 read-back failed (HTTP " + response.status + ").");
+  }
+  return new Uint8Array(await response.arrayBuffer());
+}
 async function authorizeAdmin(request: Request): Promise<{token: string; publishableKey: string; supabaseUrl: string}> {
   const match = (request.headers.get("Authorization") || "").match(/^Bearer\s+(.+)$/i);
   if (!match) throw new Response("Administrator sign-in is required.", { status: 401 });
@@ -216,22 +256,10 @@ async function migrateOne(
   }
   const originalHash = await sha256(bytes);
   await signedR2Put(path, bytes, mime);
-  const publicUrl = publicBase + "/" + path.split("/").map(awsEncode).join("/");
-  let verified = false;
-  let lastStatus = 0;
-  for (let attempt = 0; attempt < 4; attempt++) {
-    const check = await fetch(publicUrl, { headers: { "Cache-Control": "no-cache" } });
-    lastStatus = check.status;
-    if (check.ok) {
-      const copied = new Uint8Array(await check.arrayBuffer());
-      if (copied.length === bytes.length && await sha256(copied) === originalHash) {
-        verified = true;
-        break;
-      }
-    }
-    await new Promise((resolve) => setTimeout(resolve, 250 * (attempt + 1)));
+  const copied = await signedR2Get(path);
+  if (copied.length !== bytes.length || await sha256(copied) !== originalHash) {
+    throw new Error("R2 copy failed SHA-256 verification: the uploaded object does not match the Supabase source.");
   }
-  if (!verified) throw new Error("R2 copy failed SHA-256 verification (last HTTP status " + lastStatus + ").");
   return { path, size: bytes.length, sha256: originalHash };
 }
 async function finalizePaths(
