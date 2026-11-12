@@ -45,6 +45,10 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+import android.media.AudioAttributes;
+import android.media.MediaPlayer;
+import android.database.Cursor;
+import android.provider.OpenableColumns;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.Bitmap;
@@ -80,6 +84,11 @@ public class MainActivity extends Activity {
     private boolean tileScanPending = false;
     private boolean widgetSearchPending = false;
     private String pendingWidgetSearchQuery = "";
+    private MediaPlayer successfulScanPlayer;
+    private boolean successfulScanSoundPrepared = false;
+    private boolean successfulScanSoundPending = false;
+    private static final int MAX_ADMIN_IMAGE_BYTES = 5 * 1024 * 1024;
+    private static final String SUCCESSFUL_SCAN_SOUND_URL = "https://socketmobile-assets-dbhnethkfecvgchq.a03.azurefd.net/sitefinity-assets/docs/default-source/sounds/successful-scan.mp3";
 
     @Override public void onCreate(Bundle savedInstanceState) {
         // Select the window theme from the saved user preference before Activity creates its window.
@@ -129,6 +138,7 @@ public class MainActivity extends Activity {
         view.setWebChromeClient(new WebChromeClient());
         view.loadUrl("file:///android_asset/index.html");
         setContentView(view);
+        prepareSuccessfulScanSound();
         registerConnectivityCallback();
         handleScanTileIntent(getIntent());
         handleWidgetSearchIntent(getIntent());
@@ -326,6 +336,11 @@ public class MainActivity extends Activity {
                 getWindow().getDecorView().setSystemUiVisibility(flags);
                 if (view != null) view.setBackgroundColor(surface);
             });
+        }
+        @JavascriptInterface public void showToast(String message) {
+            String value = clean(message);
+            final String toastMessage = value.isEmpty() ? "You have logged out" : value.substring(0, Math.min(100, value.length()));
+            runOnUiThread(() -> Toast.makeText(MainActivity.this, toastMessage, Toast.LENGTH_SHORT).show());
         }
         @JavascriptInterface public void openExternal(String url) {
             runOnUiThread(() -> {
@@ -610,7 +625,12 @@ public class MainActivity extends Activity {
         try {
             Intent picker = new Intent(Intent.ACTION_OPEN_DOCUMENT);
             picker.addCategory(Intent.CATEGORY_OPENABLE);
-            picker.setType("image/*");
+            picker.setType("*/*");
+            picker.putExtra(Intent.EXTRA_MIME_TYPES, new String[] {
+                "image/jpeg", "image/png", "image/webp", "image/svg+xml",
+                "image/gif", "image/avif", "image/heic", "image/heif",
+                "image/bmp", "image/tiff"
+            });
             picker.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             startActivityForResult(picker, ADMIN_IMAGE_PICK_REQUEST);
         } catch (Exception e) {
@@ -646,6 +666,7 @@ public class MainActivity extends Activity {
             if (resultCode == RESULT_OK && data != null) {
                 String barcode = clean(data.getStringExtra("SCAN_RESULT"));
                 if (!barcode.isEmpty() && view != null) {
+                    playSuccessfulScanSound();
                     view.evaluateJavascript("window.onBarcodeScanned && window.onBarcodeScanned(" + JSONObject.quote(barcode) + ")", null);
                 }
             }
@@ -699,12 +720,59 @@ public class MainActivity extends Activity {
         }
     }
 
+    private String getImportedImageName(Uri uri) {
+        try (Cursor cursor = getContentResolver().query(uri, new String[] { OpenableColumns.DISPLAY_NAME }, null, null, null)) {
+            if (cursor != null && cursor.moveToFirst()) {
+                int column = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
+                if (column >= 0) return cursor.getString(column);
+            }
+        } catch (Exception ignored) { }
+        return "";
+    }
+
     private void deliverImportedPhoto(Uri imageUri) {
         Bitmap bitmap = null;
         try {
             String mimeType = getContentResolver().getType(imageUri);
-            if (mimeType != null && !mimeType.toLowerCase(Locale.ROOT).startsWith("image/")) {
+            String normalizedMime = mimeType == null ? "" : mimeType.toLowerCase(Locale.ROOT);
+            String fileName = getImportedImageName(imageUri).toLowerCase(Locale.ROOT);
+            boolean isSvg = normalizedMime.equals("image/svg+xml") || fileName.endsWith(".svg");
+            if (!isSvg && !normalizedMime.isEmpty() && !normalizedMime.startsWith("image/")) {
                 throw new IOException("The selected file is not an image.");
+            }
+
+            if (isSvg) {
+                byte[] svgBytes;
+                try (InputStream stream = getContentResolver().openInputStream(imageUri);
+                     ByteArrayOutputStream output = new ByteArrayOutputStream()) {
+                    if (stream == null) throw new IOException("The selected SVG could not be opened.");
+                    byte[] buffer = new byte[8192];
+                    int read;
+                    int total = 0;
+                    while ((read = stream.read(buffer)) != -1) {
+                        total += read;
+                        if (total > MAX_ADMIN_IMAGE_BYTES) throw new IOException("SVG files must be 5 MB or smaller.");
+                        output.write(buffer, 0, read);
+                    }
+                    svgBytes = output.toByteArray();
+                }
+                String lowerSvg = new String(svgBytes, StandardCharsets.UTF_8).toLowerCase(Locale.ROOT);
+                if (!lowerSvg.contains("<svg") || lowerSvg.contains("<!doctype") || lowerSvg.contains("<!entity") ||
+                    lowerSvg.contains("<script") || lowerSvg.contains("<foreignobject") ||
+                    lowerSvg.contains("javascript:") || lowerSvg.contains(" onload=") ||
+                    lowerSvg.contains(" onclick=") || lowerSvg.contains(" onerror=") ||
+                    lowerSvg.contains("href=\"http") || lowerSvg.contains("href='http") ||
+                    lowerSvg.contains("href=\"//") || lowerSvg.contains("href='//") ||
+                    lowerSvg.contains("url(http") || lowerSvg.contains("url(https") ||
+                    lowerSvg.contains("url(//") || lowerSvg.contains("@import")) {
+                    throw new IOException("This SVG contains unsupported active or external content. Export it as a clean SVG or PNG and try again.");
+                }
+                String dataUrl = "data:image/svg+xml;base64," + Base64.encodeToString(svgBytes, Base64.NO_WRAP);
+                if (view != null) {
+                    String quoted = JSONObject.quote(dataUrl);
+                    view.evaluateJavascript("window.onFOSCHProductPhotoCaptured && window.onFOSCHProductPhotoCaptured(" + quoted + ")", null);
+                }
+                return;
             }
 
             BitmapFactory.Options bounds = new BitmapFactory.Options();
@@ -713,23 +781,34 @@ public class MainActivity extends Activity {
                 if (stream == null) throw new IOException("The selected image could not be opened.");
                 BitmapFactory.decodeStream(stream, null, bounds);
             }
-
             int sample = 1;
             int maxDimension = Math.max(bounds.outWidth, bounds.outHeight);
-            while (maxDimension > 0 && maxDimension / sample > 1200) sample *= 2;
+            if (maxDimension <= 0) throw new IOException("The selected image format could not be decoded.");
+            while (maxDimension / sample > 1200) sample *= 2;
 
             BitmapFactory.Options options = new BitmapFactory.Options();
             options.inSampleSize = sample;
-            options.inPreferredConfig = Bitmap.Config.RGB_565;
+            options.inPreferredConfig = Bitmap.Config.ARGB_8888;
             try (InputStream stream = getContentResolver().openInputStream(imageUri)) {
                 if (stream == null) throw new IOException("The selected image could not be opened.");
                 bitmap = BitmapFactory.decodeStream(stream, null, options);
             }
-            if (bitmap == null) throw new IOException("The selected image format could not be decoded.");
+            if (bitmap == null) throw new IOException("The selected image format is not supported on this device.");
 
             ByteArrayOutputStream output = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 74, output);
-            String dataUrl = "data:image/jpeg;base64," + Base64.encodeToString(output.toByteArray(), Base64.NO_WRAP);
+            String outputMime;
+            if (bitmap.hasAlpha()) {
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, output);
+                outputMime = "image/png";
+            } else if (normalizedMime.equals("image/webp")) {
+                bitmap.compress(Bitmap.CompressFormat.WEBP, 84, output);
+                outputMime = "image/webp";
+            } else {
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 82, output);
+                outputMime = "image/jpeg";
+            }
+            if (output.size() > MAX_ADMIN_IMAGE_BYTES) throw new IOException("The processed image is larger than 5 MB. Choose a smaller image.");
+            String dataUrl = "data:" + outputMime + ";base64," + Base64.encodeToString(output.toByteArray(), Base64.NO_WRAP);
             if (view != null) {
                 String quoted = JSONObject.quote(dataUrl);
                 view.evaluateJavascript("window.onFOSCHProductPhotoCaptured && window.onFOSCHProductPhotoCaptured(" + quoted + ")", null);
@@ -801,8 +880,72 @@ public class MainActivity extends Activity {
             try { connectivityManager.unregisterNetworkCallback(connectivityCallback); } catch (Exception ignored) { }
         }
         cleanupCameraPhoto();
+        releaseSuccessfulScanSound();
         if (productCacheDb != null) productCacheDb.close();
         super.onDestroy();
+    }
+
+    private void prepareSuccessfulScanSound() {
+        if (successfulScanPlayer != null) return;
+        try {
+            MediaPlayer player = new MediaPlayer();
+            successfulScanPlayer = player;
+            successfulScanSoundPrepared = false;
+            player.setAudioAttributes(new AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                .build());
+            player.setOnPreparedListener(prepared -> {
+                if (successfulScanPlayer != prepared) { prepared.release(); return; }
+                successfulScanSoundPrepared = true;
+                if (successfulScanSoundPending) {
+                    successfulScanSoundPending = false;
+                    playSuccessfulScanSound();
+                }
+            });
+            player.setOnErrorListener((failed, what, extra) -> {
+                Log.w(TAG, "Barcode confirmation sound could not be loaded (what=" + what + ", extra=" + extra + ").");
+                if (successfulScanPlayer == failed) {
+                    successfulScanPlayer = null;
+                    successfulScanSoundPrepared = false;
+                }
+                failed.release();
+                return true;
+            });
+            player.setDataSource(SUCCESSFUL_SCAN_SOUND_URL);
+            player.prepareAsync();
+        } catch (Exception error) {
+            Log.w(TAG, "Unable to prepare the barcode confirmation sound.", error);
+            releaseSuccessfulScanSound();
+        }
+    }
+
+    private void playSuccessfulScanSound() {
+        MediaPlayer player = successfulScanPlayer;
+        if (player == null || !successfulScanSoundPrepared) {
+            successfulScanSoundPending = true;
+            if (player == null) prepareSuccessfulScanSound();
+            return;
+        }
+        try {
+            if (player.isPlaying()) player.pause();
+            player.seekTo(0);
+            player.start();
+        } catch (Exception error) {
+            Log.w(TAG, "Unable to play the barcode confirmation sound.", error);
+            releaseSuccessfulScanSound();
+            successfulScanSoundPending = true;
+            prepareSuccessfulScanSound();
+        }
+    }
+
+    private void releaseSuccessfulScanSound() {
+        successfulScanSoundPending = false;
+        successfulScanSoundPrepared = false;
+        if (successfulScanPlayer != null) {
+            try { successfulScanPlayer.release(); } catch (Exception ignored) { }
+            successfulScanPlayer = null;
+        }
     }
 
     private static String clean(String value) { return value == null ? "" : value.trim(); }
