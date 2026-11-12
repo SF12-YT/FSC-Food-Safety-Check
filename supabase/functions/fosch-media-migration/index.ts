@@ -356,11 +356,17 @@ async function listLegacyReferencedPaths(
 }
 
 async function verifyR2OnlyReference(path: string): Promise<void> {
-  if (!validMediaPath(path)) throw new Error("A remaining legacy reference is not an approved FOSCH media path.");
+  if (!validMediaPath(path)) throw new Error("A remaining legacy reference is not an approved FOSCH media path: " + String(path));
   // The Supabase original is already absent, so byte-for-byte comparison is
   // impossible. Require an authenticated R2 read and a non-empty image-sized
   // object before allowing its database URL to be switched to R2.
-  const bytes = await signedR2Get(path);
+  let bytes: Uint8Array;
+  try {
+    bytes = await signedR2Get(path);
+  } catch (error) {
+    const detail = error instanceof Error ? error.message : "Unknown R2 read error.";
+    throw new Error("Could not verify R2-only legacy image at '" + path + "': " + detail + " No originals were deleted.");
+  }
   if (!bytes.length || bytes.length > MAX_OBJECT_BYTES) {
     throw new Error("The R2-only referenced image is empty or exceeds the 5 MB limit: " + path + ". No originals were deleted.");
   }
