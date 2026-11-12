@@ -262,6 +262,102 @@ async function migrateOne(
   }
   return { path, size: bytes.length, sha256: originalHash };
 }
+
+async function verifyR2CopyForDeletion(path: string): Promise<{path: string; size: number; sha256: string}> {
+  if (!validMediaPath(path)) throw new Error("The source object path is not an approved FOSCH media path.");
+  const sourceResponse = await fetch(SOURCE_BASE + path.split("/").map(encodeURIComponent).join("/"), {
+    headers: { "Cache-Control": "no-cache" }
+  });
+  if (!sourceResponse.ok) throw new Error("Could not re-read the Supabase original for " + path + " (HTTP " + sourceResponse.status + ").");
+  const source = new Uint8Array(await sourceResponse.arrayBuffer());
+  if (!source.length || source.length > MAX_OBJECT_BYTES) throw new Error("The original image is empty or exceeds the 5 MB limit: " + path);
+  const destination = await signedR2Get(path);
+  const sourceHash = await sha256(source);
+  if (destination.length !== source.length || await sha256(destination) !== sourceHash) {
+    throw new Error("R2 verification failed immediately before deletion for " + path + ". The Supabase original has been retained.");
+  }
+  return { path, size: source.length, sha256: sourceHash };
+}
+
+async function verifyDatabaseReferencesCleared(
+  auth: {token: string; publishableKey: string; supabaseUrl: string},
+  paths: string[]
+): Promise<Record<string, unknown>> {
+  const response = await fetch(auth.supabaseUrl + "/rest/v1/rpc/admin_verify_fosch_r2_media_purge", {
+    method: "POST",
+    headers: {
+      "apikey": auth.publishableKey,
+      "Authorization": "Bearer " + auth.token,
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({ p_object_paths: paths })
+  });
+  if (!response.ok) {
+    console.error("FOSCH Supabase reference safety check failed with HTTP", response.status, (await response.text()).slice(0, 200));
+    throw new Error("Supabase could not confirm that all public image references now point to R2. No originals were deleted.");
+  }
+  const result = await response.json();
+  if (!result || result.safeToDelete !== true) {
+    throw new Error("Supabase still reports references to the old public media bucket. No originals were deleted.");
+  }
+  return result;
+}
+
+async function deleteSupabaseObjects(
+  auth: {token: string; publishableKey: string; supabaseUrl: string},
+  paths: string[]
+): Promise<void> {
+  for (let i = 0; i < paths.length; i += 100) {
+    const batch = paths.slice(i, i + 100);
+    const response = await fetch(auth.supabaseUrl + "/storage/v1/object/" + BUCKET, {
+      method: "DELETE",
+      headers: {
+        "apikey": auth.publishableKey,
+        "Authorization": "Bearer " + auth.token,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ prefixes: batch })
+    });
+    if (!response.ok) {
+      console.error("FOSCH Supabase original deletion failed with HTTP", response.status, (await response.text()).slice(0, 200));
+      throw new Error("Supabase could not delete an original image batch (HTTP " + response.status + "). Any not-yet-deleted originals remain in place.");
+    }
+  }
+}
+
+async function purgeSupabaseOriginals(
+  auth: {token: string; publishableKey: string; supabaseUrl: string}
+): Promise<Record<string, unknown>> {
+  const inventory = await listObjects(auth);
+  if (inventory.skipped.length) {
+    throw new Error("Deletion stopped: " + inventory.skipped.length + " unsupported image file(s) remain in Supabase. No originals were deleted.");
+  }
+  const paths = inventory.objects.map((item) => item.path);
+  if (!paths.length) return { deletedCount: 0, verifiedCount: 0, remainingImageCount: 0 };
+  if (paths.some((path) => !validMediaPath(path))) {
+    throw new Error("Deletion stopped because the Supabase bucket contains an unapproved image path.");
+  }
+
+  const verified = [];
+  for (const path of paths) verified.push(await verifyR2CopyForDeletion(path));
+  await verifyDatabaseReferencesCleared(auth, paths);
+  await deleteSupabaseObjects(auth, paths);
+
+  const after = await listObjects(auth);
+  const deletedSet = new Set(paths);
+  const remaining = after.objects.filter((item) => deletedSet.has(item.path));
+  if (remaining.length) {
+    throw new Error("Supabase reported " + remaining.length + " migrated original(s) still present after deletion. Re-run the cleanup to finish.");
+  }
+  return {
+    deletedCount: paths.length,
+    verifiedCount: verified.length,
+    remainingImageCount: after.objects.length,
+    unsupportedImageCount: after.skipped.length
+  };
+}
+
 async function finalizePaths(
   auth: {token: string; publishableKey: string; supabaseUrl: string},
   paths: string[]
@@ -315,6 +411,10 @@ Deno.serve(async (request: Request): Promise<Response> => {
       const paths = body.paths;
       const result = await finalizePaths(auth, paths);
       return jsonResponse(200, { ok: true, result });
+    }
+    if (action === "purge") {
+      const result = await purgeSupabaseOriginals(auth);
+      return jsonResponse(200, { ok: true, ...result });
     }
     return jsonResponse(400, { error: "Unsupported migration action." });
   } catch (error) {
