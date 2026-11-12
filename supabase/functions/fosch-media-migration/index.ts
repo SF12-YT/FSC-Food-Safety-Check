@@ -155,6 +155,176 @@ async function signedR2Get(path: string): Promise<Uint8Array> {
   }
   return new Uint8Array(await response.arrayBuffer());
 }
+function base64FromBytes(bytes: Uint8Array): string {
+  let binary = "";
+  for (let offset = 0; offset < bytes.length; offset += 0x8000) {
+    binary += String.fromCharCode(...bytes.subarray(offset, Math.min(offset + 0x8000, bytes.length)));
+  }
+  return btoa(binary);
+}
+
+// Must remain identical to photoContentKey() in app/src/main/assets/supabase.js.
+function foschPhotoContentKey(base64: string): string {
+  let first = 2166136261;
+  let second = 0x9e3779b9;
+  for (let i = 0; i < base64.length; i++) {
+    const code = base64.charCodeAt(i);
+    first = Math.imul(first ^ code, 16777619);
+    second = Math.imul(second ^ code, 0x85ebca6b);
+  }
+  return (first >>> 0).toString(16).padStart(8, "0") +
+    (second >>> 0).toString(16).padStart(8, "0");
+}
+
+function decodeXmlValue(value: string): string {
+  return value.replace(/&amp;/g, "&").replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&apos;/g, "'");
+}
+
+function canonicalAwsQuery(params: Array<[string, string]>): string {
+  return params
+    .map(([key, value]) => [awsEncode(key), awsEncode(value)] as [string, string])
+    .sort((a, b) => a[0].localeCompare(b[0]) || a[1].localeCompare(b[1]))
+    .map(([key, value]) => key + "=" + value)
+    .join("&");
+}
+
+async function signedR2List(prefix: string): Promise<string[]> {
+  const accountId = requiredEnv("CLOUDFLARE_ACCOUNT_ID");
+  const accessKeyId = requiredEnv("R2_ACCESS_KEY_ID");
+  const secretAccessKey = requiredEnv("R2_SECRET_ACCESS_KEY");
+  const bucket = requiredEnv("R2_BUCKET_NAME");
+  const canonicalUri = "/" + awsEncode(bucket);
+  const host = accountId + ".r2.cloudflarestorage.com";
+  const keys: string[] = [];
+  let continuationToken = "";
+  let page = 0;
+
+  while (true) {
+    const params: Array<[string, string]> = [["list-type", "2"], ["prefix", prefix]];
+    if (continuationToken) params.push(["continuation-token", continuationToken]);
+    const canonicalQuery = canonicalAwsQuery(params);
+    const requestUrl = "https://" + host + canonicalUri + "?" + canonicalQuery;
+    const amzDate = new Date().toISOString().replace(/[:-]|\\.\\d{3}/g, "");
+    const dateStamp = amzDate.slice(0, 8);
+    const emptyPayloadHash = await sha256(new Uint8Array());
+    const signedHeaders = "host;x-amz-content-sha256;x-amz-date";
+    const canonicalHeaders = "host:" + host + "\\n" +
+      "x-amz-content-sha256:" + emptyPayloadHash + "\\n" +
+      "x-amz-date:" + amzDate + "\\n";
+    const canonicalRequest = ["GET", canonicalUri, canonicalQuery, canonicalHeaders, signedHeaders, emptyPayloadHash].join("\\n");
+    const scope = dateStamp + "/auto/s3/aws4_request";
+    const stringToSign = "AWS4-HMAC-SHA256\\n" + amzDate + "\\n" + scope + "\\n" +
+      await sha256(encoder.encode(canonicalRequest));
+    const kDate = await hmac(encoder.encode("AWS4" + secretAccessKey), dateStamp);
+    const kRegion = await hmac(kDate, "auto");
+    const kService = await hmac(kRegion, "s3");
+    const kSigning = await hmac(kService, "aws4_request");
+    const signature = toHex(await hmac(kSigning, stringToSign));
+    const response = await fetch(requestUrl, {
+      method: "GET",
+      headers: {
+        "Authorization": "AWS4-HMAC-SHA256 Credential=" + accessKeyId + "/" + scope +
+          ", SignedHeaders=" + signedHeaders + ", Signature=" + signature,
+        "x-amz-content-sha256": emptyPayloadHash,
+        "x-amz-date": amzDate
+      }
+    });
+    if (!response.ok) {
+      const detail = (await response.text()).slice(0, 180);
+      console.error("FOSCH R2 object listing failed with HTTP", response.status, detail);
+      throw new Error("Cloudflare R2 could not list product images for fingerprint reconciliation (HTTP " + response.status + ").");
+    }
+    const xml = await response.text();
+    const keyExpression = /<Key>([\\s\\S]*?)<\\/Key>/g;
+    let keyMatch: RegExpExecArray | null;
+    while ((keyMatch = keyExpression.exec(xml)) !== null) {
+      keys.push(decodeXmlValue(keyMatch[1]));
+    }
+    const truncated = /<IsTruncated>true<\\/IsTruncated>/.test(xml);
+    if (!truncated) break;
+    const tokenMatch = xml.match(/<NextContinuationToken>([\\s\\S]*?)<\\/NextContinuationToken>/);
+    if (!tokenMatch || !tokenMatch[1]) throw new Error("Cloudflare R2 returned a truncated listing without a continuation token.");
+    continuationToken = decodeXmlValue(tokenMatch[1]);
+    page++;
+    if (page > 100) throw new Error("R2 fingerprint listing exceeded 100 pages; refusing an incomplete reconciliation.");
+  }
+  return [...new Set(keys)].filter(validMediaPath).sort();
+}
+
+async function trySignedR2Get(path: string): Promise<Uint8Array | null> {
+  try {
+    return await signedR2Get(path);
+  } catch (error) {
+    if (error instanceof Error && /HTTP 404/.test(error.message)) return null;
+    throw error;
+  }
+}
+
+async function resolveR2PathByFingerprint(legacyPath: string): Promise<string> {
+  const match = legacyPath.match(/^(products\\/(?:[A-Z]{2}|INT)\\/[A-Za-z0-9_-]{1,80}\\/)([0-9a-f]{16})\\.(jpeg|png|webp)$/);
+  if (!match) throw new Error("A stale legacy reference is not a valid content-addressed product image: " + legacyPath);
+
+  const prefix = match[1];
+  const referencedFingerprint = match[2];
+  const keys = await signedR2List(prefix);
+  if (!keys.length) {
+    throw new Error("No R2 images were found in the product folder for legacy reference '" + legacyPath + "'. No originals were deleted.");
+  }
+
+  const verifiedCandidates: Array<{path: string; fingerprint: string; sha256: string; filenameFingerprint: string}> = [];
+  for (const key of keys) {
+    const keyMatch = key.match(/\\/([0-9a-f]{16})\\.(?:jpeg|png|webp)$/);
+    if (!keyMatch) continue;
+    const bytes = await signedR2Get(key);
+    if (!bytes.length || bytes.length > MAX_OBJECT_BYTES) continue;
+    const fingerprint = foschPhotoContentKey(base64FromBytes(bytes));
+    verifiedCandidates.push({
+      path: key,
+      fingerprint,
+      sha256: await sha256(bytes),
+      filenameFingerprint: keyMatch[1]
+    });
+  }
+
+  // Strongest match: the actual image bytes produce the fingerprint embedded
+  // in the legacy URL, even if the object's current key has a different name.
+  const exactFingerprintMatches = verifiedCandidates.filter((candidate) =>
+    candidate.fingerprint === referencedFingerprint
+  );
+  if (exactFingerprintMatches.length === 1) return exactFingerprintMatches[0].path;
+  if (exactFingerprintMatches.length > 1) {
+    const sameBytes = exactFingerprintMatches.every((candidate) =>
+      candidate.sha256 === exactFingerprintMatches[0].sha256
+    );
+    if (sameBytes) return exactFingerprintMatches[0].path;
+    throw new Error(
+      "Ambiguous fingerprint match for '" + legacyPath + "': " +
+      exactFingerprintMatches.map((candidate) => candidate.path).join(", ") +
+      ". No originals were deleted."
+    );
+  }
+
+  // Filename fallback is permitted only when there is exactly one R2 image
+  // in this barcode folder and its bytes verify against its own FOSCH key.
+  const selfVerified = verifiedCandidates.filter((candidate) =>
+    candidate.fingerprint === candidate.filenameFingerprint
+  );
+  if (selfVerified.length === 1 && verifiedCandidates.length === 1) {
+    return selfVerified[0].path;
+  }
+
+  const diagnostics = verifiedCandidates.map((candidate) =>
+    candidate.path + " [content fingerprint " + candidate.fingerprint +
+    (candidate.fingerprint === candidate.filenameFingerprint ? ", filename verified" : ", filename mismatch") + "]"
+  );
+  throw new Error(
+    "Could not safely reconcile legacy image '" + legacyPath + "'. R2 candidates: " +
+    (diagnostics.length ? diagnostics.join("; ") : "none passed image validation") +
+    ". No originals were deleted."
+  );
+}
+
 async function authorizeAdmin(request: Request): Promise<{token: string; publishableKey: string; supabaseUrl: string}> {
   const match = (request.headers.get("Authorization") || "").match(/^Bearer\s+(.+)$/i);
   if (!match) throw new Response("Administrator sign-in is required.", { status: 401 });
@@ -355,21 +525,33 @@ async function listLegacyReferencedPaths(
   return [...new Set(result as string[])];
 }
 
-async function verifyR2OnlyReference(path: string): Promise<void> {
-  if (!validMediaPath(path)) throw new Error("A remaining legacy reference is not an approved FOSCH media path: " + String(path));
-  // The Supabase original is already absent, so byte-for-byte comparison is
-  // impossible. Require an authenticated R2 read and a non-empty image-sized
-  // object before allowing its database URL to be switched to R2.
-  let bytes: Uint8Array;
-  try {
-    bytes = await signedR2Get(path);
-  } catch (error) {
-    const detail = error instanceof Error ? error.message : "Unknown R2 read error.";
-    throw new Error("Could not verify R2-only legacy image at '" + path + "': " + detail + " No originals were deleted.");
+async function finalizeReferenceMappings(
+  auth: {token: string; publishableKey: string; supabaseUrl: string},
+  mappings: Record<string, string>
+): Promise<unknown> {
+  const entries = Object.entries(mappings);
+  if (!entries.length) return null;
+  if (entries.length > 100 || entries.some(([source, destination]) =>
+    !validMediaPath(source) || !validMediaPath(destination) ||
+    !source.startsWith("products/") || !destination.startsWith(source.split("/").slice(0, 3).join("/") + "/")
+  )) {
+    throw new Error("Content fingerprint reconciliation produced invalid or excessive media mappings. No originals were deleted.");
   }
-  if (!bytes.length || bytes.length > MAX_OBJECT_BYTES) {
-    throw new Error("The R2-only referenced image is empty or exceeds the 5 MB limit: " + path + ". No originals were deleted.");
+  const response = await fetch(auth.supabaseUrl + "/rest/v1/rpc/admin_finalize_fosch_r2_media_reference_mappings", {
+    method: "POST",
+    headers: {
+      "apikey": auth.publishableKey,
+      "Authorization": "Bearer " + auth.token,
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({ p_path_mappings: mappings })
+  });
+  if (!response.ok) {
+    console.error("FOSCH hash-based reference reconciliation failed with HTTP", response.status, (await response.text()).slice(0, 200));
+    throw new Error("Supabase could not apply the verified content-fingerprint media mappings. Run the hash-reconciliation SQL migration first.");
   }
+  return await response.json();
 }
 
 async function purgeSupabaseOriginals(
@@ -393,21 +575,41 @@ async function purgeSupabaseOriginals(
   // exists before rewriting its database reference.
   const legacyReferencedPaths = await listLegacyReferencedPaths(auth);
   const pathsToFinalize = new Set<string>(paths);
+  const referenceMappings: Record<string, string> = {};
+
   for (const path of legacyReferencedPaths) {
-    if (!pathsToFinalize.has(path)) {
-      await verifyR2OnlyReference(path);
+    if (pathsToFinalize.has(path)) continue;
+
+    // A legacy URL may already point to an R2-only object. Keep the exact key
+    // when it exists; otherwise reconcile a stale filename against verified
+    // image fingerprints in that same market/barcode folder.
+    const exactObject = await trySignedR2Get(path);
+    if (exactObject) {
+      if (!exactObject.length || exactObject.length > MAX_OBJECT_BYTES) {
+        throw new Error("The R2-only referenced image is empty or exceeds the 5 MB limit: " + path + ". No originals were deleted.");
+      }
       pathsToFinalize.add(path);
+      continue;
     }
+
+    if (path.startsWith("brands/")) {
+      throw new Error("The referenced brand logo is absent from R2 and cannot be reconciled by product-photo fingerprints: " + path + ". No originals were deleted.");
+    }
+
+    referenceMappings[path] = await resolveR2PathByFingerprint(path);
   }
 
-  // Re-apply URL mapping for both source objects verified byte-for-byte above
-  // and R2-only objects authenticated as present. The safety guard remains
-  // authoritative and blocks deletion if any legacy URL remains.
+  // Rewrite stale filenames only after authenticated reads and fingerprint
+  // checks have identified an unambiguous R2 destination. Normal exact-path
+  // finalization remains unchanged, and the database guard still blocks purge
+  // if any old Supabase URL remains.
+  await finalizeReferenceMappings(auth, referenceMappings);
+
   const finalizationPaths = [...pathsToFinalize];
   for (let i = 0; i < finalizationPaths.length; i += 100) {
     await finalizePaths(auth, finalizationPaths.slice(i, i + 100));
   }
-  await verifyDatabaseReferencesCleared(auth, finalizationPaths);
+  await verifyDatabaseReferencesCleared(auth, [...finalizationPaths, ...Object.keys(referenceMappings)]);
   await deleteSupabaseObjects(auth, paths);
 
   const after = await listObjects(auth);
