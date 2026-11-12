@@ -548,8 +548,12 @@ async function finalizeReferenceMappings(
     body: JSON.stringify({ p_path_mappings: mappings })
   });
   if (!response.ok) {
-    console.error("FOSCH hash-based reference reconciliation failed with HTTP", response.status, (await response.text()).slice(0, 200));
-    throw new Error("Supabase could not apply the verified content-fingerprint media mappings. Run the hash-reconciliation SQL migration first.");
+    const detail = (await response.text()).slice(0, 500);
+    console.error("FOSCH hash-based reference reconciliation failed with HTTP", response.status, detail);
+    throw new Error(
+      "Supabase rejected the verified content-fingerprint mappings (HTTP " +
+      response.status + "): " + detail + ". No originals were deleted."
+    );
   }
   return await response.json();
 }
