@@ -655,6 +655,28 @@
   function saveR2MigrationState(value) {
     try { localStorage.setItem(R2_MIGRATION_STATE_KEY, JSON.stringify(value)); } catch (ignored) {}
   }
+  function toggleR2MigrationErrors() {
+    const state = readR2MigrationState();
+    const panel = document.getElementById("foschR2MigrationErrors");
+    const button = document.getElementById("foschR2MigrationErrorsButton");
+    if (!panel || !button) return;
+    const isHidden = panel.hidden;
+    if (isHidden) {
+      const failures = state && Array.isArray(state.failures) ? state.failures : [];
+      panel.textContent = failures.length
+        ? failures.map(function (item, index) {
+            return (index + 1) + ". " + String(item.path || "Unknown file") + "\\n   " +
+              String(item.error || "No error detail was returned.");
+          }).join("\\n\\n")
+        : "No individual file errors have been saved.";
+      panel.hidden = false;
+      button.textContent = "Hide migration errors";
+    } else {
+      panel.hidden = true;
+      button.textContent = "Show migration errors";
+    }
+  }
+
   async function runR2MediaMigration() {
     if (r2MigrationRunning) return;
     if (!authenticated || !window.FOSCHCloud || !window.FOSCHCloud.isAdmin()) {
@@ -776,7 +798,7 @@
         ? "Verified " + (migrationState.migratedPaths || []).length + " migrated images. " + ((migrationState.skipped || []).length) + " unsupported image files remain in Supabase."
         : "Saved progress: " + (migrationState.migratedPaths || []).length + " of " + (migrationState.objects || []).length + " supported images verified.")
       : "This temporary administrator utility copies existing public product images and brand logos to R2. It does not delete the originals.";
-    const migrationMarkup = "<section class=\"panel\"><h2>Temporary R2 image migration</h2><p class=\"muted\">One-off transfer of existing product photos and brand logos. Each copied file is SHA-256 verified before database references are changed. Original Supabase files are not deleted.</p><button type=\"button\" class=\"secondary\" id=\"foschR2MigrationButton\" onclick=\"FOSCHAdmin.runR2MediaMigration()\">" + (migrationState && !migrationState.completed ? "Resume migration" : migrationState && migrationState.completed ? "Check migration status" : "Scan and migrate existing images") + "</button><p id=\"foschR2MigrationStatus\" class=\"muted\" role=\"status\" aria-live=\"polite\">" + esc(migrationSummary) + "</p></section>";
+    const migrationFailures = migrationState && Array.isArray(migrationState.failures) ? migrationState.failures.length : 0;\n    const migrationMarkup = "<section class=\"panel\"><h2>Temporary R2 image migration</h2><p class=\"muted\">One-off transfer of existing product photos and brand logos. Each copied file is SHA-256 verified before database references are changed. Original Supabase files are not deleted.</p><button type=\"button\" class=\"secondary\" id=\"foschR2MigrationButton\" onclick=\"FOSCHAdmin.runR2MediaMigration()\">" + (migrationState && !migrationState.completed ? "Resume migration" : migrationState && migrationState.completed ? "Check migration status" : "Scan and migrate existing images") + "</button><p id=\"foschR2MigrationStatus\" class=\"muted\" role=\"status\" aria-live=\"polite\">" + esc(migrationSummary) + "</p>" + (migrationFailures ? "<button type=\"button\" class=\"secondary\" id=\"foschR2MigrationErrorsButton\" onclick=\"FOSCHAdmin.toggleR2MigrationErrors()\">Show migration errors (" + migrationFailures + ")</button><pre id=\"foschR2MigrationErrors\" class=\"muted\" hidden style=\"white-space:pre-wrap;overflow-wrap:anywhere;max-height:22rem;overflow:auto;\"></pre>" : "") + "</section>";
     return "<div class=\"admin-head\"><div><h1>Admin dashboard</h1><div class=\"admin-submission-meta\">Signed in as " + esc(DEFAULT_EMAIL) + "</div></div><div class=\"admin-head-actions\"><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.refreshDashboard()\">Refresh</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.logout()\">Sign out</button></div></div>" +
       panels + migrationMarkup +
       "<div class=\"warning\">Shared product submissions and moderation actions are stored in Supabase. Unsent drafts remain on this device until a network connection is available. Product evidence remains private; official product images and brand logos use a separate public-read bucket.</div>";
@@ -1301,6 +1323,6 @@
     onPhotoCaptured: onPhotoCaptured,
     onPhotoFailed: onPhotoFailed,
     logout: logout,
-    runR2MediaMigration: runR2MediaMigration
+    runR2MediaMigration: runR2MediaMigration,\n    toggleR2MigrationErrors: toggleR2MigrationErrors
   };
 })();
