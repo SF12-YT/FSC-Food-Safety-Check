@@ -77,15 +77,21 @@ function toHex(bytes: Uint8Array): string {
   return Array.from(bytes, (value) => value.toString(16).padStart(2, "0")).join("");
 }
 
+function toArrayBuffer(bytes: Uint8Array): ArrayBuffer {
+  const copy = new ArrayBuffer(bytes.byteLength);
+  new Uint8Array(copy).set(bytes);
+  return copy;
+}
+
 async function sha256(bytes: Uint8Array): Promise<string> {
-  return toHex(new Uint8Array(await crypto.subtle.digest("SHA-256", bytes)));
+  return toHex(new Uint8Array(await crypto.subtle.digest("SHA-256", toArrayBuffer(bytes))));
 }
 
 async function hmac(key: Uint8Array, message: string): Promise<Uint8Array> {
   const imported = await crypto.subtle.importKey(
-    "raw", key, { name: "HMAC", hash: "SHA-256" }, false, ["sign"]
+    "raw", toArrayBuffer(key), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]
   );
-  return new Uint8Array(await crypto.subtle.sign("HMAC", imported, encoder.encode(message)));
+  return new Uint8Array(await crypto.subtle.sign("HMAC", imported, toArrayBuffer(encoder.encode(message))));
 }
 
 function awsEncode(value: string): string {
@@ -142,7 +148,7 @@ async function signedR2Request(method: "PUT" | "DELETE", path: string, body: Uin
   const response = await fetch(requestUrl, {
     method,
     headers,
-    body: method === "PUT" ? body : undefined
+    body: method === "PUT" ? body as unknown as BodyInit : undefined
   });
   if (!response.ok) {
     const detail = (await response.text()).slice(0, 240);
