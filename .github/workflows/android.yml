@@ -52,8 +52,8 @@ jobs:
       - name: Upload source archive
         uses: actions/upload-artifact@v7
         with:
-          name: FOSCH-source-v0.10.76
-          path: FOSCH-source-v0.10.76.zip
+          name: FOSCH-source-v0.10.77
+          path: FOSCH-source-v0.10.77.zip
           if-no-files-found: error
           retention-days: 90
 
