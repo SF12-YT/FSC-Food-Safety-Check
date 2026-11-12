@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:gravity="center_vertical"
-    android:padding="6dp"
-    android:background="@drawable/bg_fosch_widget_surface">
+    android:padding="2dp"
+    android:background="@android:color/transparent">
 
     <FrameLayout
         android:id="@+id/widget_scan_button"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@drawable/bg_fosch_widget_action"
         android:clickable="true"
         android:focusable="true"
@@ -27,7 +27,7 @@
     <LinearLayout
         android:id="@+id/widget_search_field"
         android:layout_width="0dp"
-        android:layout_height="44dp"
+        android:layout_height="40dp"
         android:layout_weight="1"
         android:layout_marginStart="6dp"
         android:orientation="horizontal"
@@ -40,8 +40,8 @@
         android:contentDescription="Open FOSCH to search E-numbers and additive names">
 
         <ImageView
-            android:layout_width="18dp"
-            android:layout_height="18dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_marginEnd="8dp"
             android:src="@drawable/ic_fosch_widget_search"
             android:tint="@color/fosch_widget_text"
@@ -60,7 +60,7 @@
                 android:ellipsize="end"
                 android:text="Search additives"
                 android:textColor="@color/fosch_widget_text"
-                android:textSize="14sp"
+                android:textSize="13sp"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                 android:ellipsize="end"
                 android:text="E-number or additive name"
                 android:textColor="@color/fosch_widget_muted"
-                android:textSize="10sp" />
+                android:textSize="9sp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
