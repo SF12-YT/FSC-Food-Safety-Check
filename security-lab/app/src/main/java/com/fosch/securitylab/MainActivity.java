@@ -579,7 +579,7 @@ public class MainActivity extends Activity {
 
     private void setIdle(String message) {
         if (activityStatus != null) activityStatus.setText(message);
-        Toast.makeText(this, message, Toast.SHORT).show();
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     private String buildReport() {
