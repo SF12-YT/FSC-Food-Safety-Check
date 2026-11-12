@@ -299,7 +299,12 @@ async function verifyDatabaseReferencesCleared(
   }
   const result = await response.json();
   if (!result || result.safeToDelete !== true) {
-    throw new Error("Supabase still reports references to the old public media bucket. No originals were deleted.");
+    const submissionRows = Number(result?.legacySubmissionRows || 0);
+    const brandRows = Number(result?.legacyBrandRows || 0);
+    throw new Error(
+      "Supabase still reports old media references (" + submissionRows +
+      " submission row(s), " + brandRows + " brand row(s)). No originals were deleted."
+    );
   }
   return result;
 }
@@ -341,6 +346,13 @@ async function purgeSupabaseOriginals(
 
   const verified = [];
   for (const path of paths) verified.push(await verifyR2CopyForDeletion(path));
+
+  // Re-apply the URL mapping after byte-level R2 verification. This repairs any
+  // references missed by an earlier/partial finalize pass, while the following
+  // database guard still blocks deletion if even one legacy URL remains.
+  for (let i = 0; i < paths.length; i += 100) {
+    await finalizePaths(auth, paths.slice(i, i + 100));
+  }
   await verifyDatabaseReferencesCleared(auth, paths);
   await deleteSupabaseObjects(auth, paths);
 
