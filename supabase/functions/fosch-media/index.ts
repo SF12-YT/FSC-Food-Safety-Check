@@ -51,7 +51,7 @@ function validateObjectPath(path: unknown, action: string): string {
       path.split("/").some((part) => !part || part === "." || part === "..")) {
     throw new Error("Invalid media object path.");
   }
-  const product = /^products\/(?:[A-Z]{2}|INT)\/[A-Za-z0-9_-]{1,80}\/[0-9a-f]{16}\.(?:jpeg|png|webp)$/.test(path);
+  const product = /^products\/(?:[A-Z]{2}|INT)\/[A-Za-z0-9_-]{1,80}\/[0-9a-f]{16}\.(?:jpeg|png|webp|svg)$/.test(path);
   const brand = /^brands\/[a-z0-9]+(?:-[a-z0-9]+)*\.jpeg$/.test(path);
   if (action === "upload" && (product || brand)) return path;
   if (action === "delete" && product) return path;
@@ -233,9 +233,9 @@ Deno.serve(async (request: Request): Promise<Response> => {
 
     if (action === "upload") {
       const contentType = String(body.contentType || "");
-      const supportedType = contentType === "image/jpeg" || contentType === "image/png" || contentType === "image/webp";
+      const supportedType = contentType === "image/jpeg" || contentType === "image/png" || contentType === "image/webp" || contentType === "image/svg+xml";
       const expectedType = path.endsWith(".png") ? "image/png" :
-        (path.endsWith(".webp") ? "image/webp" : "image/jpeg");
+        (path.endsWith(".webp") ? "image/webp" : (path.endsWith(".svg") ? "image/svg+xml" : "image/jpeg"));
       const isBrandLogo = path.startsWith("brands/");
       if (!supportedType || (!isBrandLogo && contentType !== expectedType)) {
         return jsonResponse(400, { error: "The image type does not match its file extension." });
