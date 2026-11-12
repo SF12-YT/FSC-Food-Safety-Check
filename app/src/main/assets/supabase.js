@@ -612,7 +612,10 @@
     const value=await api("POST","/rest/v1/rpc/get_fosch_public_brand_logo",JSON.stringify({p_brand_key:key}),{publicOnly:true});
     if(typeof value!=="string"||!value)return "";
     if(value.indexOf("https://")===0){
-      try{const parsed=new URL(value);if(parsed.protocol==="https:"&&parsed.pathname.indexOf("/brands/")>=0)window.FOSCHR2PublicUrl=parsed.origin;}catch(ignored){}
+      const legacyPrefix=SUPABASE_URL+"/storage/v1/object/public/"+PUBLIC_MEDIA_BUCKET+"/";
+      if(value.indexOf(legacyPrefix)!==0){
+        try{const parsed=new URL(value);if(parsed.protocol==="https:"&&parsed.pathname.indexOf("/brands/")>=0)window.FOSCHR2PublicUrl=parsed.origin;}catch(ignored){}
+      }
       return value;
     }
     return publicMediaUrl(value);

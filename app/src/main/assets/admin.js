@@ -211,7 +211,12 @@
     const registry=brandLogoRegistry();let changed=false;
     for(const key of Object.keys(registry)){
       const entry=registry[key];if(!entry||!String(entry.dataUrl||"").startsWith("data:image/")||entry.publicUrl)continue;
-      try{const url=await window.FOSCHCloud.uploadPublicMedia(window.FOSCHCloud.brandLogoPath(entry.brand||key),entry.dataUrl);registry[key]=Object.assign({},entry,{publicUrl:url,updatedAt:new Date().toISOString()});changed=true}
+      try{
+        const brand=entry.brand||key,objectPath=window.FOSCHCloud.brandLogoPath(brand);
+        const url=await window.FOSCHCloud.uploadPublicMedia(objectPath,entry.dataUrl);
+        await window.FOSCHCloud.registerBrandLogo(brand,objectPath);
+        registry[key]=Object.assign({},entry,{publicUrl:url,updatedAt:new Date().toISOString()});changed=true;
+      }
       catch(error){console.warn("FOSCH could not publish an older brand logo yet:",error)}
     }
     if(changed){try{localStorage.setItem(LOGO_KEY,JSON.stringify(registry))}catch(ignored){}}
