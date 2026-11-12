@@ -283,13 +283,13 @@ public final class SecurityAudit {
         }
         boolean testKeys = Build.TAGS != null && Build.TAGS.contains("test-keys");
         if (found.isEmpty() && !testKeys) {
-            add(out, "Runtime", "Root / hooking indicators", "INFO", "INFO",
-                    "No common filesystem indicators were found. This heuristic cannot prove that the device is unrooted or that runtime instrumentation is absent.");
+            add(out, "Runtime", "Device environment indicators", "INFO", "INFO",
+                    "No common root, instrumentation or test-build indicators were found. This heuristic cannot prove that the device is unrooted or that runtime instrumentation is absent.");
         } else {
             String detail = found.isEmpty() ? "Build uses test-keys." : String.join("\n", found);
             if (testKeys) detail += "\nBuild tags contain test-keys.";
-            add(out, "Runtime", "Root / hooking indicators", "WARN", "MEDIUM",
-                    "Potential device-level indicators were found. This is not proof of compromise and may produce false positives.\n" + detail);
+            add(out, "Runtime", "Device environment indicators", "INFO", "INFO",
+                    "Root, instrumentation or test-build indicators were detected on the device. These describe the test environment; they are not evidence that FOSCH itself is compromised, modified or under attack.\n" + detail);
         }
     }
 
@@ -536,20 +536,44 @@ public final class SecurityAudit {
                 "{\"prefix\":\"security-lab-no-such-prefix-" + UUID.randomUUID()
                         + "\",\"limit\":1,\"offset\":0}");
         String privateBody = lower(privateList.body);
-        if (privateList.status == 401 || privateList.status == 403
-                || (privateList.status == 400 && (privateBody.contains("row-level security")
+        boolean explicitPolicyDenial = (privateBody.contains("row-level security")
                 || privateBody.contains("permission denied")
                 || privateBody.contains("not authorized")
-                || privateBody.contains("unauthorized")))) {
+                || privateBody.contains("unauthorized")
+                || privateBody.contains("insufficient privilege"))
+                && !privateBody.contains("invalid api key")
+                && !privateBody.contains("invalid jwt")
+                && !privateBody.contains("jwt expired");
+        if ((privateList.status == 400 || privateList.status == 401 || privateList.status == 403)
+                && explicitPolicyDenial) {
             add(out, "Storage permissions", "Private evidence bucket listing", "PASS", "INFO",
-                    "Anonymous listing of fosch-submission-photos was denied. No object was uploaded, downloaded or deleted.");
-        } else if (privateList.status == 200) {
-            add(out, "Storage permissions", "Private evidence bucket listing", "FAIL", "HIGH",
-                    "The anonymous role was allowed to list the private evidence bucket, even though the prefix was a random non-existent probe path. Review storage.objects SELECT policies.");
+                    "The storage service returned an explicit authorization/policy denial. "
+                            + responseEvidence(privateList)
+                            + ". No object was uploaded, downloaded or deleted.");
+        } else if (privateList.status == 200 && isJsonArray(privateList.body)) {
+            try {
+                JSONArray entries = new JSONArray(privateList.body);
+                if (entries.length() > 0) {
+                    add(out, "Storage permissions", "Private evidence bucket listing", "FAIL", "HIGH",
+                            "The anonymous request received " + entries.length()
+                                    + " storage-list entr(y/ies) for a random, nonexistent probe prefix. This demonstrates metadata listing access, but does not prove file-download access. Object names and metadata were deliberately excluded from the report. "
+                                    + responseEvidence(privateList)
+                                    + ". Review storage.objects SELECT policies immediately.");
+                } else {
+                    add(out, "Storage permissions", "Private evidence bucket listing", "INCONCLUSIVE", "MEDIUM",
+                            "The server accepted the list request but returned an empty array. This does not demonstrate an object disclosure: the random prefix may match nothing, or row-level security may have filtered the results. A non-sensitive canary object in staging is needed to distinguish those cases. "
+                                    + responseEvidence(privateList));
+                }
+            } catch (Exception e) {
+                add(out, "Storage permissions", "Private evidence bucket listing", "INCONCLUSIVE", "LOW",
+                        "The storage service returned HTTP 200, but the response could not be parsed as a JSON listing. "
+                                + responseEvidence(privateList));
+            }
         } else {
             add(out, "Storage permissions", "Private evidence bucket listing", "INCONCLUSIVE", "LOW",
-                    "The storage list request returned HTTP " + privateList.status
-                            + ". A missing bucket/migration or request-format issue cannot be distinguished from an access-control result.");
+                    "The storage-list request did not provide a conclusive policy result. "
+                            + responseEvidence(privateList)
+                            + ". A missing bucket/migration, rejected API key or request-format issue may explain the response.");
         }
 
         runBoundedBurst(base, key, out);
@@ -719,7 +743,7 @@ public final class SecurityAudit {
             connection.setReadTimeout(6000);
             connection.setUseCaches(false);
             connection.setInstanceFollowRedirects(false);
-            connection.setRequestProperty("User-Agent", "FOSCH-Security-Lab/0.2.0");
+            connection.setRequestProperty("User-Agent", "FOSCH-Security-Lab/0.3.0");
             connection.setRequestProperty("Accept", "application/json");
             connection.setRequestProperty("apikey", key);
             // New publishable keys are opaque API keys, not JWT bearer tokens.
@@ -738,15 +762,49 @@ public final class SecurityAudit {
                 }
             }
             int status = connection.getResponseCode();
+            if (status < 100) {
+                return new ApiResponse(0, "", connection.getContentType(),
+                        Math.max(0L, System.currentTimeMillis() - start),
+                        "HTTP connection returned no response code");
+            }
+            String contentType = connection.getContentType();
             InputStream responseStream = status >= 200 && status < 400
                     ? connection.getInputStream() : connection.getErrorStream();
-            return new ApiResponse(status, readLimited(responseStream),
-                    Math.max(0L, System.currentTimeMillis() - start));
+            return new ApiResponse(status, readLimited(responseStream), contentType,
+                    Math.max(0L, System.currentTimeMillis() - start), "");
         } catch (Exception e) {
-            return new ApiResponse(0, "", Math.max(0L, System.currentTimeMillis() - start));
+            String contentType = null;
+            if (connection != null) {
+                try { contentType = connection.getContentType(); }
+                catch (Exception ignored) { }
+            }
+            return new ApiResponse(0, "", contentType,
+                    Math.max(0L, System.currentTimeMillis() - start),
+                    e.getClass().getSimpleName());
         } finally {
             if (connection != null) connection.disconnect();
         }
+    }
+
+    private static String responseEvidence(ApiResponse response) {
+        StringBuilder evidence = new StringBuilder();
+        if (response.status >= 100) {
+            evidence.append("HTTP status: ").append(response.status);
+        } else {
+            evidence.append("HTTP status: NO_RESPONSE (no response code received)");
+        }
+        if (response.contentType == null || response.contentType.trim().isEmpty()) {
+            evidence.append("; Content-Type: unavailable");
+        } else {
+            evidence.append("; Content-Type: ").append(response.contentType);
+        }
+        int capturedBytes = response.body == null ? 0
+                : response.body.getBytes(StandardCharsets.UTF_8).length;
+        evidence.append("; captured response body: ").append(capturedBytes).append(" bytes");
+        if (response.transportError != null && !response.transportError.isEmpty()) {
+            evidence.append("; transport detail: ").append(response.transportError);
+        }
+        return evidence.toString();
     }
 
     private static String readLimited(InputStream input) {
@@ -770,11 +828,17 @@ public final class SecurityAudit {
     private static final class ApiResponse {
         final int status;
         final String body;
+        final String contentType;
         final long elapsedMs;
-        ApiResponse(int status, String body, long elapsedMs) {
+        final String transportError;
+
+        ApiResponse(int status, String body, String contentType,
+                    long elapsedMs, String transportError) {
             this.status = status;
             this.body = body;
+            this.contentType = contentType;
             this.elapsedMs = elapsedMs;
+            this.transportError = transportError;
         }
     }
 
