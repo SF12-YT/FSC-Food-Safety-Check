@@ -644,6 +644,103 @@
       searchInput+"<div class=\"admin-all-search-actions\"><button type=\"button\" class=\"primary\" onclick=\"FOSCHAdmin.searchAllSubmissions()\">Search</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.clearAllSubmissionsSearch()\">Clear</button></div></section>"+
       "<p class=\"muted admin-all-count\">Showing "+shown.length+" of "+items.length+" submissions.</p>"+resultMarkup;
   }
+  const R2_MIGRATION_STATE_KEY = "fosch-r2-public-media-migration-v1";
+  let r2MigrationRunning = false;
+  function readR2MigrationState() {
+    try {
+      const value = JSON.parse(localStorage.getItem(R2_MIGRATION_STATE_KEY) || "null");
+      return value && typeof value === "object" && Array.isArray(value.objects) ? value : null;
+    } catch (ignored) { return null; }
+  }
+  function saveR2MigrationState(value) {
+    try { localStorage.setItem(R2_MIGRATION_STATE_KEY, JSON.stringify(value)); } catch (ignored) {}
+  }
+  async function runR2MediaMigration() {
+    if (r2MigrationRunning) return;
+    if (!authenticated || !window.FOSCHCloud || !window.FOSCHCloud.isAdmin()) {
+      alert("Administrator sign-in is required.");
+      return;
+    }
+    r2MigrationRunning = true;
+    const button = document.getElementById("foschR2MigrationButton");
+    const status = document.getElementById("foschR2MigrationStatus");
+    if (button) button.disabled = true;
+    const report = function (message) { if (status) status.textContent = message; };
+    try {
+      let state = readR2MigrationState();
+      if (!state) {
+        report("Scanning the old Supabase public media bucket…");
+        const inventory = await window.FOSCHCloud.runMediaMigration({ action: "inventory" });
+        if (!inventory || !Array.isArray(inventory.objects)) throw new Error("Supabase returned an invalid image inventory.");
+        state = { objects: inventory.objects, skipped: inventory.skipped || [], migratedPaths: [], finalizedPaths: [], failures: [], completed: false };
+        saveR2MigrationState(state);
+      }
+      const objectPaths = state.objects.map(function (item) { return item.path; });
+      let completed = new Set(state.migratedPaths || []);
+      let failures = [];
+      (state.failures || []).forEach(function (item) { failures.push(item); });
+      while (true) {
+        const pending = objectPaths.filter(function (path) { return !completed.has(path); });
+        if (!pending.length) break;
+        const batch = pending.slice(0, 3);
+        report("Copying and verifying " + completed.size + " of " + objectPaths.length + " images…");
+        const result = await window.FOSCHCloud.runMediaMigration({ action: "migrate", paths: batch });
+        (result.migrated || []).forEach(function (item) { completed.add(item.path); });
+        (result.failed || []).forEach(function (item) { failures.push(item); });
+        state.migratedPaths = Array.from(completed);
+        state.failures = failures;
+        saveR2MigrationState(state);
+        if (!result.migrated || (!result.migrated.length && (!result.failed || !result.failed.length))) {
+          throw new Error("The migration batch returned no results. Progress has been saved.");
+        }
+        if (result.failed && result.failed.length) {
+          const failedNow = new Set(result.failed.map(function (item) { return item.path; }));
+          state.retryPaths = Array.from(new Set([...(state.retryPaths || []), ...failedNow]));
+          // Continue with remaining files; failed objects stay in Supabase and can be retried later.
+          objectPaths.forEach(function (path) {
+            if (failedNow.has(path)) completed.add("__failed__" + path);
+          });
+          state.migratedPaths = Array.from(completed);
+          saveR2MigrationState(state);
+          break;
+        }
+      }
+      // Remove temporary failed markers before calculating finalised paths.
+      const migratedOnly = Array.from(completed).filter(function (path) { return path.indexOf("__failed__") !== 0; });
+      const alreadyFinalized = new Set(state.finalizedPaths || []);
+      const toFinalize = migratedOnly.filter(function (path) { return !alreadyFinalized.has(path); });
+      for (let i = 0; i < toFinalize.length; i += 100) {
+        const paths = toFinalize.slice(i, i + 100);
+        report("Updating approved product and brand image references (" + Math.min(i + paths.length, toFinalize.length) + " of " + toFinalize.length + ")…");
+        await window.FOSCHCloud.runMediaMigration({ action: "finalize", paths: paths });
+        paths.forEach(function (path) { alreadyFinalized.add(path); });
+        state.finalizedPaths = Array.from(alreadyFinalized);
+        saveR2MigrationState(state);
+      }
+      const remaining = objectPaths.filter(function (path) { return !completed.has(path) && !completed.has("__failed__" + path); });
+      state.migratedPaths = migratedOnly;
+      state.failures = failures;
+      state.completed = remaining.length === 0 && alreadyFinalized.size === objectPaths.length;
+      saveR2MigrationState(state);
+      if (state.completed) {
+        report("Complete: " + migratedOnly.length + " images copied, SHA-256 verified and database references updated. " +
+          (state.skipped || []).length + " unsupported image files were left in Supabase. Original files have not been deleted.");
+      } else {
+        report("Partially complete: " + migratedOnly.length + " of " + objectPaths.length +
+          " images verified and referenced. " + (state.failures || []).length +
+          " file attempt(s) failed. Press Resume migration to retry the remaining files. Originals remain in Supabase.");
+      }
+    } catch (error) {
+      report("Migration stopped safely. " + String(error && error.message || error) + " Saved progress is available; press Resume migration to continue.");
+    } finally {
+      r2MigrationRunning = false;
+      if (button) {
+        button.disabled = false;
+        button.textContent = "Resume migration";
+      }
+    }
+  }
+
   function dashboardMarkup() {
     if (!authenticated) return "<section class=\"panel\"><p>Admin session expired. Please sign in again.</p></section>";
     const items = getItems();
@@ -673,8 +770,15 @@
       "<section id=\"adminPanelAll\" class=\"admin-tab-panel admin-panel-all\">" + allSubmissionsMarkup(allItems) + "</section>" +
       "<section id=\"adminPanelActivity\" class=\"admin-tab-panel admin-panel-activity\">" + auditMarkup() + "</section>" +
       "</div></div>";
+    const migrationState = readR2MigrationState();
+    const migrationSummary = migrationState
+      ? (migrationState.completed
+        ? "Verified " + (migrationState.migratedPaths || []).length + " migrated images. " + ((migrationState.skipped || []).length) + " unsupported image files remain in Supabase."
+        : "Saved progress: " + (migrationState.migratedPaths || []).length + " of " + (migrationState.objects || []).length + " supported images verified.")
+      : "This temporary administrator utility copies existing public product images and brand logos to R2. It does not delete the originals.";
+    const migrationMarkup = "<section class=\"panel\"><h2>Temporary R2 image migration</h2><p class=\"muted\">One-off transfer of existing product photos and brand logos. Each copied file is SHA-256 verified before database references are changed. Original Supabase files are not deleted.</p><button type=\"button\" class=\"secondary\" id=\"foschR2MigrationButton\" onclick=\"FOSCHAdmin.runR2MediaMigration()\">" + (migrationState && !migrationState.completed ? "Resume migration" : migrationState && migrationState.completed ? "Check migration status" : "Scan and migrate existing images") + "</button><p id=\"foschR2MigrationStatus\" class=\"muted\" role=\"status\" aria-live=\"polite\">" + esc(migrationSummary) + "</p></section>";
     return "<div class=\"admin-head\"><div><h1>Admin dashboard</h1><div class=\"admin-submission-meta\">Signed in as " + esc(DEFAULT_EMAIL) + "</div></div><div class=\"admin-head-actions\"><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.refreshDashboard()\">Refresh</button><button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.logout()\">Sign out</button></div></div>" +
-      panels +
+      panels + migrationMarkup +
       "<div class=\"warning\">Shared product submissions and moderation actions are stored in Supabase. Unsent drafts remain on this device until a network connection is available. Product evidence remains private; official product images and brand logos use a separate public-read bucket.</div>";
   }
 
@@ -1196,6 +1300,7 @@
     uploadBrandLogo: uploadBrandLogo,
     onPhotoCaptured: onPhotoCaptured,
     onPhotoFailed: onPhotoFailed,
-    logout: logout
+    logout: logout,
+    runR2MediaMigration: runR2MediaMigration
   };
 })();

@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "supabase/functions/fosch-media/**"
+      - "supabase/functions/fosch-media-migration/**"
       - "supabase/config.toml"
       - ".github/workflows/deploy-fosch-media.yml"
   workflow_dispatch:
@@ -48,7 +49,9 @@ jobs:
           deno-version: v2.x
 
       - name: Check Edge Function TypeScript
-        run: deno check supabase/functions/fosch-media/index.ts
+        run: |
+          deno check supabase/functions/fosch-media/index.ts
+          deno check supabase/functions/fosch-media-migration/index.ts
 
       - name: Set up Supabase CLI
         uses: supabase/setup-cli@v1
@@ -72,4 +75,6 @@ jobs:
           rm -f "$secrets_file"
 
       - name: Deploy FOSCH media Edge Function
-        run: supabase functions deploy fosch-media --project-ref "$SUPABASE_PROJECT_REF" --yes
+        run: |
+          supabase functions deploy fosch-media --project-ref "$SUPABASE_PROJECT_REF" --yes
+          supabase functions deploy fosch-media-migration --project-ref "$SUPABASE_PROJECT_REF" --yes

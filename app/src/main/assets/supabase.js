@@ -567,6 +567,13 @@
     try{window.FOSCHR2PublicUrl=new URL(result.publicUrl).origin;}catch(ignored){}
     return result.publicUrl;
   }
+  async function runMediaMigration(payload) {
+    if (!isAdmin()) throw new Error("Administrator sign-in is required to migrate public media.");
+    const result = await api("POST", "/functions/v1/fosch-media-migration", JSON.stringify(payload || {}));
+    if (!result || typeof result !== "object") throw new Error("The R2 migration service returned an invalid response.");
+    if (result.error) throw new Error(String(result.error));
+    return result;
+  }
   function productPhotoPathFromPublicUrl(value){
     const raw=String(value||"").split("?")[0];
     const legacyPrefix=SUPABASE_URL+"/storage/v1/object/public/"+PUBLIC_MEDIA_BUCKET+"/";
@@ -672,6 +679,7 @@
     listAuditLog: listAuditLog,
     adminUpdateSubmission: adminUpdateSubmission,
     uploadPublicMedia: uploadPublicMedia,
+    runMediaMigration: runMediaMigration,
     uploadProductPhoto: uploadProductPhoto,
     deleteProductPhoto: deleteProductPhoto,
     publicMediaUrl: publicMediaUrl,
