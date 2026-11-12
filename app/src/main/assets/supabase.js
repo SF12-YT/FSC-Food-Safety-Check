@@ -636,7 +636,7 @@
       // are deterministic, so do not make a second serial RPC just to resolve
       // the URL; the browser can fetch/cache it alongside the product photos.
       const path=brandLogoPath(resolvedBrand);
-      const base=String(window.FOSCHR2PublicUrl||"").replace(/\\/+$/,"");
+      const base=String(window.FOSCHR2PublicUrl||"").replace(/\/+$/,"");
       value.brandLogoUrl=base?base+"/"+path.split("/").map(encodeURIComponent).join("/"):publicMediaUrl(path);
     }
     return value;
