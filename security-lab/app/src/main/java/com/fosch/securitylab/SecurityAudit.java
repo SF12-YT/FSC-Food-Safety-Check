@@ -722,7 +722,11 @@ public final class SecurityAudit {
             connection.setRequestProperty("User-Agent", "FOSCH-Security-Lab/0.2.0");
             connection.setRequestProperty("Accept", "application/json");
             connection.setRequestProperty("apikey", key);
-            connection.setRequestProperty("Authorization", "Bearer " + key);
+            // New publishable keys are opaque API keys, not JWT bearer tokens.
+            // Legacy anon JWTs still work as both apikey and Authorization.
+            if (!key.startsWith("sb_publishable_")) {
+                connection.setRequestProperty("Authorization", "Bearer " + key);
+            }
             if (body != null) {
                 byte[] payload = body.getBytes(StandardCharsets.UTF_8);
                 connection.setDoOutput(true);
