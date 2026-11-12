@@ -1,24 +1,43 @@
 # FOSCH Security Lab
 
-A standalone Android companion app for authorised testing of the FOSCH Android app and its own Supabase backend.
+A standalone Android companion app for authorised inspection and security testing of FOSCH and a separate Supabase staging project.
 
 - Android package: `com.fosch.securitylab`
 - Target app: `com.fosch.org`
+- Version: `0.2.0`
 - Install FOSCH separately; Security Lab does not replace it.
-- No FOSCH private app data, WebView storage, login session, or private submission photos are accessed.
-- The app uses Android's package manager to inspect public package metadata and the installed APK.
-- A known-good APK can be imported through Android's document picker as an integrity baseline.
-- API checks use the public publishable key extracted from the installed FOSCH APK and perform read-only GET requests only.
-- Reports are stored locally and can be exported as JSON. Credentials and response bodies are not written to reports.
+- The local audit inspects public package metadata, signing certificate, APK hash, exported components and basic runtime indicators.
+- A known-good APK can be imported through Android's document picker as a modding/tamper comparison baseline.
+- Reports are stored locally and can be exported as JSON. Staging API keys and response bodies are not saved or exported.
 
-## Safety limits
+## Staging target
 
-- The default audit is local and passive.
-- Backend probes are deliberately read-only and capped.
-- The optional rate-limit probe is a five-request, sequential, low-impact check; it is not a DDoS simulator.
-- The rate-limit probe rejects the known FOSCH production hostname and requires an explicit staging authorisation phrase.
-- No automatic writes, deletions, account lockouts, privilege changes, data extraction, or high-volume load tests.
-- Admin RPC and upload mutation tests are not included until they can be exercised with isolated disposable test fixtures.
+Use a separate Supabase project, not the live FOSCH project. The generated Supabase project URL normally has the form:
+
+```
+https://<20-character-project-ref>.supabase.co
+```
+
+The previous build incorrectly required the words `staging`, `stage`, `dev`, `test` or `preview` in the hostname. Supabase-generated hostnames do not include the project name. Version 0.2.0 accepts a standard Supabase project-ref hostname, while hard-blocking the known FOSCH production hostname.
+
+The suite requires the project's public `anon` / publishable key. Never enter a `service_role` or secret key. The key is used in memory for requests and is not stored or included in reports.
+
+## Included tests
+
+- Anonymous read checks against `product_submissions` and `admin_audit_log`. A 401/403 is marked inconclusive, not automatically passed; a 200 with actual rows is a high-severity finding.
+- A random SQL-looking PostgREST filter canary. This is deliberately described as a narrow parameter-handling check, not a complete SQL-injection proof.
+- Malformed submission RPC input (invalid UUID) to check validation before insert.
+- Anonymous invocation checks for admin RPCs, using invalid arguments and a random absent UUID so the probe should not change a real row.
+- Anonymous listing attempt against the private `fosch-submission-photos` bucket, using a random non-existent prefix. No object is uploaded, fetched or deleted.
+- A bounded API burst of at most 24 read-only GET requests, with no more than four concurrent workers. It stops on the first 429, 5xx or transport failure. This is not a DDoS simulator or a capacity certification.
+
+## Boundaries
+
+- Never accesses FOSCH private app storage, WebView local storage, login sessions or private submission-photo contents.
+- No production stress tests; the known live FOSCH Supabase hostname is rejected.
+- No file uploads/deletions, account lockouts, credentials harvesting, destructive database calls, or unbounded traffic.
+- Missing tables/functions and invalid API keys produce inconclusive results rather than false passes.
+- Run against a staging project populated only with fake test data and the same migrations/policies as production.
 
 ## Build
 
