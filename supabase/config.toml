@@ -2,6 +2,3 @@ project_id = "mqgvagftvuybietazbdc"
 
 [functions.fosch-media]
 verify_jwt = true
-
-[functions.fosch-media-migration]
-verify_jwt = true
