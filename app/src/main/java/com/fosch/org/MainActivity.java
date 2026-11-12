@@ -759,12 +759,10 @@ public class MainActivity extends Activity {
                 String lowerSvg = new String(svgBytes, StandardCharsets.UTF_8).toLowerCase(Locale.ROOT);
                 if (!lowerSvg.contains("<svg") || lowerSvg.contains("<!doctype") || lowerSvg.contains("<!entity") ||
                     lowerSvg.contains("<script") || lowerSvg.contains("<foreignobject") ||
-                    lowerSvg.contains("javascript:") || lowerSvg.contains(" onload=") ||
-                    lowerSvg.contains(" onclick=") || lowerSvg.contains(" onerror=") ||
-                    lowerSvg.contains("href=\"http") || lowerSvg.contains("href='http") ||
-                    lowerSvg.contains("href=\"//") || lowerSvg.contains("href='//") ||
-                    lowerSvg.contains("url(http") || lowerSvg.contains("url(https") ||
-                    lowerSvg.contains("url(//") || lowerSvg.contains("@import")) {
+                    lowerSvg.contains("javascript:") || lowerSvg.contains("@import") ||
+                    lowerSvg.matches("(?s).*\\\\son[a-z0-9_-]+\\\\s*=.*") ||
+                    lowerSvg.matches("(?s).*(?:href|xlink:href)\\\\s*=\\\\s*['\\\"]\\\\s*(?:https?:|//|javascript:).*") ||
+                    lowerSvg.matches("(?s).*url\\\\(\\\\s*['\\\"]?\\\\s*(?:https?:|//).*")) {
                     throw new IOException("This SVG contains unsupported active or external content. Export it as a clean SVG or PNG and try again.");
                 }
                 String dataUrl = "data:image/svg+xml;base64," + Base64.encodeToString(svgBytes, Base64.NO_WRAP);
