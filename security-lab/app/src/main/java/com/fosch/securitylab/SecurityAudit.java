@@ -23,9 +23,16 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Locale;
+import java.util.UUID;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
@@ -357,142 +364,367 @@ public final class SecurityAudit {
         add(out, "API security", "Backend target", "INFO", "INFO",
                 "Read-only checks will target " + Uri.parse(config.url).getHost() + ". The publishable key is public by design and is not included in this report.");
 
-        ApiResponse read = request(config, "/rest/v1/product_submissions?select=id&limit=0");
-        if (read.status == 401 || read.status == 403) {
-            add(out, "Database access", "Anonymous submission-table read", "PASS", "INFO",
-                    "The anonymous read request was rejected with HTTP " + read.status + ". No records were read.");
-            add(out, "SQL injection", "Read-only filter injection canary", "PASS", "INFO",
-                    "The endpoint denied the request before the filter was evaluated (HTTP " + read.status + ").");
-            return out;
-        }
-        if (read.status == 200) {
-            add(out, "Database access", "Anonymous submission-table read", "FAIL", "HIGH",
-                    "The public API accepted a read-only request to product_submissions (HTTP 200). Review grants and RLS policies. The request used limit=0 and did not retrieve rows.");
-        } else if (read.status == 404) {
-            add(out, "Database access", "Anonymous submission-table read", "INCONCLUSIVE", "LOW",
-                    "The endpoint returned HTTP 404. Confirm that the expected table and API schema are deployed.");
-        } else {
-            add(out, "Database access", "Anonymous submission-table read", "INCONCLUSIVE", "LOW",
-                    "The endpoint returned HTTP " + read.status + ". No conclusion about RLS can be drawn from this response.");
-        }
+        ApiResponse read = request(config, "/rest/v1/product_submissions?select=id&limit=1");
+        assessAnonymousRead(out, "product_submissions", read);
+
+        ApiResponse auditRead = request(config, "/rest/v1/admin_audit_log?select=id&limit=1");
+        assessAnonymousRead(out, "admin_audit_log", auditRead);
 
         try {
-            String payload = "security-lab-' OR '1'='1";
+            String payload = "security-lab-" + UUID.randomUUID() + "' OR '1'='1";
             String encoded = URLEncoder.encode(payload, "UTF-8");
             ApiResponse injection = request(config,
                     "/rest/v1/product_submissions?select=id&client_record_id=eq." + encoded + "&limit=1");
-            if (injection.status == 400 || injection.status == 401 || injection.status == 403) {
-                add(out, "SQL injection", "Read-only filter injection canary", "PASS", "INFO",
-                        "The crafted filter was rejected (HTTP " + injection.status + "). This is a narrow parameter-handling check, not a complete SQL-injection audit.");
-            } else if (injection.status == 200) {
+            if (injection.status == 200) {
                 String body = injection.body == null ? "" : injection.body.trim();
                 if (body.startsWith("[") && body.endsWith("]")) {
                     JSONArray rows = new JSONArray(body);
                     if (rows.length() == 0) {
-                        add(out, "SQL injection", "Read-only filter injection canary", "PASS", "INFO",
-                                "The crafted value was handled as a filter value and returned no rows. This does not prove every SQL path is safe.");
+                        add(out, "Input handling", "PostgREST filter canary", "PASS", "INFO",
+                                "The random SQL-looking value returned no rows. It appears to have been treated as a filter value; this is a narrow canary, not proof that every query path is injection-safe.");
                     } else {
-                        add(out, "SQL injection", "Read-only filter injection canary", "FAIL", "HIGH",
-                                "The crafted read-only filter returned one or more rows. Review query construction and RLS immediately; row contents were not saved.");
+                        add(out, "Input handling", "PostgREST filter canary", "INCONCLUSIVE", "MEDIUM",
+                                "The canary returned rows. This may be an unexpected filter/query result; inspect server logs and reproduce with a controlled fixture. Row contents were discarded.");
                     }
                 } else {
-                    add(out, "SQL injection", "Read-only filter injection canary", "INCONCLUSIVE", "LOW",
+                    add(out, "Input handling", "PostgREST filter canary", "INCONCLUSIVE", "LOW",
                             "HTTP 200 returned an unexpected response shape. Response body was discarded.");
                 }
+            } else if (injection.status == 401 || injection.status == 403) {
+                add(out, "Input handling", "PostgREST filter canary", "INCONCLUSIVE", "LOW",
+                        "The request was rejected with HTTP " + injection.status + " before the filter behaviour could be assessed. Authentication rejection is not evidence of SQL-injection resistance.");
             } else {
-                add(out, "SQL injection", "Read-only filter injection canary", "INCONCLUSIVE", "LOW",
-                        "The endpoint returned HTTP " + injection.status + ". This probe cannot determine parameter handling.");
+                add(out, "Input handling", "PostgREST filter canary", "INCONCLUSIVE", "LOW",
+                        "The endpoint returned HTTP " + injection.status + ". The response does not establish whether the filter was handled safely.");
             }
         } catch (Exception e) {
-            add(out, "SQL injection", "Read-only filter injection canary", "ERROR", "LOW",
-                    safeMessage(e));
+            add(out, "Input handling", "PostgREST filter canary", "ERROR", "LOW", safeMessage(e));
         }
         return out;
     }
 
-    public static List<Check> runStagingRateLimitProbe(String rawUrl) {
-        List<Check> out = new ArrayList<>();
+    private static String validateStagingBase(String rawUrl) {
         Uri uri = Uri.parse(rawUrl == null ? "" : rawUrl.trim());
         String host = uri.getHost() == null ? "" : uri.getHost().toLowerCase(Locale.ROOT);
-        if (!"https".equalsIgnoreCase(uri.getScheme()) ||
-                !host.endsWith(".supabase.co") ||
-                !(host.contains("staging") || host.contains("stage") || host.contains("dev") || host.contains("test") || host.contains("preview")) ||
-                host.equals(KNOWN_PRODUCTION_HOST) ||
-                hasUserInfo(uri) || uri.getQuery() != null || uri.getFragment() != null ||
-                (uri.getPath() != null && !uri.getPath().isEmpty() && !"/".equals(uri.getPath()))) {
-            add(out, "Rate limiting", "Staging target validation", "FAIL", "MEDIUM",
-                    "Target rejected. Supply only the HTTPS base URL of an authorised non-production Supabase staging project.");
+        String path = uri.getPath();
+        if (!"https".equalsIgnoreCase(uri.getScheme())
+                || !host.matches("^[a-z0-9]{20}\\.supabase\\.co$")
+                || host.equals(KNOWN_PRODUCTION_HOST)
+                || uri.getPort() != -1
+                || hasUserInfo(uri)
+                || uri.getQuery() != null
+                || uri.getFragment() != null
+                || (path != null && !path.isEmpty() && !"/".equals(path))) {
+            return null;
+        }
+        return "https://" + host;
+    }
+
+    private static boolean isPublicSupabaseKey(String key) {
+        if (key == null) return false;
+        String value = key.trim();
+        String lower = value.toLowerCase(Locale.ROOT);
+        return !value.isEmpty()
+                && value.length() <= 4096
+                && !value.matches(".*\\\\s+.*")
+                && !lower.startsWith("sb_secret_")
+                && !lower.contains("service_role");
+    }
+
+    public static List<Check> runStagingSecuritySuite(String rawUrl, String rawKey) {
+        List<Check> out = new ArrayList<>();
+        String base = validateStagingBase(rawUrl);
+        if (base == null) {
+            add(out, "Target validation", "Staging project URL", "FAIL", "HIGH",
+                    "Rejected. Enter only the HTTPS base URL of a Supabase project (https://<20-character-project-ref>.supabase.co). The known FOSCH production project is blocked. No requests were sent.");
+            return out;
+        }
+        String key = rawKey == null ? "" : rawKey.trim();
+        if (!isPublicSupabaseKey(key)) {
+            add(out, "Target validation", "Supabase publishable key", "FAIL", "HIGH",
+                    "A public publishable/anon key is required. Secret and service_role keys are rejected. No requests were sent.");
             return out;
         }
 
-        add(out, "Rate limiting", "Low-impact staging probe", "INFO", "INFO",
-                "Sending five sequential read-only GET requests, at least 1.1 seconds apart, to " + host + ". No concurrent requests or writes will be sent.");
+        String host = Uri.parse(base).getHost();
+        add(out, "Target validation", "Explicit staging target accepted", "PASS", "INFO",
+                "Target " + host + " passed HTTPS, hostname, path and production-host checks. The entered publishable/anon key is used only in memory and is not saved or included in the report.");
 
-        int seen429 = 0;
-        List<Integer> codes = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            String base = rawUrl.trim();
-            while (base.endsWith("/")) base = base.substring(0, base.length() - 1);
-            int code = requestWithoutKey(base + "/rest/v1/");
-            codes.add(code);
-            if (code == 429) seen429++;
-            if (i < 4) {
-                try { Thread.sleep(1100L); }
-                catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                    add(out, "Rate limiting", "Staging request sequence", "ERROR", "LOW",
-                            "Probe interrupted. No further requests were sent.");
-                    return out;
-                }
+        ApiResponse submissions = stagingRequest(base, key, "GET",
+                "/rest/v1/product_submissions?select=id&limit=1", null);
+        assessAnonymousRead(out, "product_submissions", submissions);
+
+        ApiResponse auditLog = stagingRequest(base, key, "GET",
+                "/rest/v1/admin_audit_log?select=id&limit=1", null);
+        assessAnonymousRead(out, "admin_audit_log", auditLog);
+
+        String canary = "security-lab-" + UUID.randomUUID() + "' OR '1'='1";
+        try {
+            ApiResponse filter = stagingRequest(base, key, "GET",
+                    "/rest/v1/product_submissions?select=id&client_record_id=eq."
+                            + URLEncoder.encode(canary, "UTF-8") + "&limit=1", null);
+            if (filter.status == 200 && isJsonArray(filter.body)) {
+                JSONArray rows = new JSONArray(filter.body);
+                add(out, "Input validation", "SQL-looking PostgREST filter canary",
+                        rows.length() == 0 ? "PASS" : "INCONCLUSIVE",
+                        rows.length() == 0 ? "INFO" : "MEDIUM",
+                        rows.length() == 0
+                                ? "A random SQL-looking string behaved like a literal filter and returned no rows. This is a narrow PostgREST check, not a full SQL-injection proof."
+                                : "The canary returned a row. This could be a fixture collision or unexpected filter behaviour; inspect the staging logs. Row contents were discarded.");
+            } else if (filter.status == 401 || filter.status == 403) {
+                add(out, "Input validation", "SQL-looking PostgREST filter canary", "INCONCLUSIVE", "LOW",
+                        "HTTP " + filter.status + " prevented filter evaluation. Authentication rejection is not proof of injection resistance.");
+            } else {
+                add(out, "Input validation", "SQL-looking PostgREST filter canary", "INCONCLUSIVE", "LOW",
+                        "HTTP " + filter.status + " did not provide enough evidence to classify filter handling.");
             }
+        } catch (Exception e) {
+            add(out, "Input validation", "SQL-looking PostgREST filter canary", "ERROR", "LOW", safeMessage(e));
         }
-        if (seen429 > 0) {
-            add(out, "Rate limiting", "Rate-limit response observed", "PASS", "INFO",
-                    "HTTP 429 was observed during the five-request sequence. Codes: " + codes + ".");
+
+        // The public submission RPC must reject malformed input before any insert can occur.
+        ApiResponse invalidSubmission = stagingRequest(base, key, "POST",
+                "/rest/v1/rpc/submit_fosch_product_submission",
+                "{\"p_submission\":{\"id\":\"not-a-uuid\"}}");
+        String invalidBody = lower(invalidSubmission.body);
+        if (invalidSubmission.status == 400 && invalidBody.contains("valid submission id")) {
+            add(out, "Input validation", "Malformed submission UUID", "PASS", "INFO",
+                    "The public submission RPC rejected an invalid UUID before attempting an insert.");
+        } else if (invalidSubmission.status == 200) {
+            add(out, "Input validation", "Malformed submission UUID", "FAIL", "CRITICAL",
+                    "The submission RPC accepted an invalid UUID payload. Check the deployed function immediately.");
         } else {
-            add(out, "Rate limiting", "Rate-limit response observed", "INCONCLUSIVE", "LOW",
-                    "No HTTP 429 was observed. Five low-rate requests are not enough to assess DoS resistance or establish a safe capacity limit. Codes: " + codes + ".");
+            add(out, "Input validation", "Malformed submission UUID", "INCONCLUSIVE", "LOW",
+                    "The malformed request returned HTTP " + invalidSubmission.status + ". Expected a validation error mentioning the submission ID; confirm the staging migration and API key.");
         }
+
+        probeAdminRpc(base, key, out, "admin_log_event",
+                "/rest/v1/rpc/admin_log_event",
+                "{\"p_action\":\"\",\"p_details\":{}}",
+                "Empty action is rejected before any audit insert can occur.");
+        String absentId = UUID.randomUUID().toString();
+        probeAdminRpc(base, key, out, "admin_update_product_submission",
+                "/rest/v1/rpc/admin_update_product_submission",
+                "{\"p_submission_id\":\"" + absentId + "\",\"p_changes\":{},\"p_reason\":\"Security Lab unauthorised negative test\"}",
+                "Uses a freshly generated UUID that is not sourced from any submission. A missing-row path cannot update a real submission.");
+        probeAdminRpc(base, key, out, "admin_delete_product_submission",
+                "/rest/v1/rpc/admin_delete_product_submission",
+                "{\"p_submission_id\":\"" + absentId + "\",\"p_reason\":\"Security Lab unauthorised negative test\"}",
+                "Uses the same freshly generated UUID; no submission contents are read or supplied.");
+        probeAdminRpc(base, key, out, "admin_set_fosch_r2_public_url",
+                "/rest/v1/rpc/admin_set_fosch_r2_public_url",
+                "{\"p_public_url\":\"not-a-valid-url\"}",
+                "Invalid URL input is used so the probe cannot change the configured public origin.");
+
+        ApiResponse privateList = stagingRequest(base, key, "POST",
+                "/storage/v1/object/list/fosch-submission-photos",
+                "{\"prefix\":\"security-lab-no-such-prefix-" + UUID.randomUUID()
+                        + "\",\"limit\":1,\"offset\":0}");
+        String privateBody = lower(privateList.body);
+        if (privateList.status == 401 || privateList.status == 403
+                || (privateList.status == 400 && (privateBody.contains("row-level security")
+                || privateBody.contains("permission denied")
+                || privateBody.contains("not authorized")
+                || privateBody.contains("unauthorized")))) {
+            add(out, "Storage permissions", "Private evidence bucket listing", "PASS", "INFO",
+                    "Anonymous listing of fosch-submission-photos was denied. No object was uploaded, downloaded or deleted.");
+        } else if (privateList.status == 200) {
+            add(out, "Storage permissions", "Private evidence bucket listing", "FAIL", "HIGH",
+                    "The anonymous role was allowed to list the private evidence bucket, even though the prefix was a random non-existent probe path. Review storage.objects SELECT policies.");
+        } else {
+            add(out, "Storage permissions", "Private evidence bucket listing", "INCONCLUSIVE", "LOW",
+                    "The storage list request returned HTTP " + privateList.status
+                            + ". A missing bucket/migration or request-format issue cannot be distinguished from an access-control result.");
+        }
+
+        runBoundedBurst(base, key, out);
         return out;
     }
 
-    private static ApiResponse request(BackendConfig config, String path) {
-        HttpURLConnection connection = null;
-        try {
-            URL url = new URL(config.url + path);
-            connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("GET");
-            connection.setConnectTimeout(8000);
-            connection.setReadTimeout(8000);
-            connection.setUseCaches(false);
-            connection.setInstanceFollowRedirects(false);
-            connection.setRequestProperty("User-Agent", "FOSCH-Security-Lab/0.1.0");
-            connection.setRequestProperty("Accept", "application/json");
-            connection.setRequestProperty("apikey", config.publishableKey);
-            connection.setRequestProperty("Authorization", "Bearer " + config.publishableKey);
-            int status = connection.getResponseCode();
-            return new ApiResponse(status, readLimited(status >= 200 && status < 400
-                    ? connection.getInputStream() : connection.getErrorStream()));
-        } catch (Exception e) {
-            return new ApiResponse(0, "");
-        } finally {
-            if (connection != null) connection.disconnect();
+    private static void assessAnonymousRead(List<Check> out, String table, ApiResponse response) {
+        if (response.status == 200 && isJsonArray(response.body)) {
+            try {
+                JSONArray rows = new JSONArray(response.body);
+                if (rows.length() == 0) {
+                    add(out, "Database RLS", "Anonymous read: " + table, "PASS", "INFO",
+                            "The anonymous publishable-key request returned an empty array. This is consistent with the intended RLS policy; it does not validate authenticated-admin access.");
+                } else {
+                    add(out, "Database RLS", "Anonymous read: " + table, "FAIL", "CRITICAL",
+                            "The anonymous role received " + rows.length() + " row(s) from " + table
+                                    + ". Only row IDs were requested; response contents were discarded. Review table grants and RLS immediately.");
+                }
+            } catch (Exception e) {
+                add(out, "Database RLS", "Anonymous read: " + table, "INCONCLUSIVE", "LOW",
+                        "Could not parse the HTTP 200 response as a JSON array.");
+            }
+        } else if (response.status == 401 || response.status == 403) {
+            add(out, "Database RLS", "Anonymous read: " + table, "INCONCLUSIVE", "LOW",
+                    "HTTP " + response.status + " rejected the request. This may be API-key/auth rejection before RLS; it is not recorded as a PASS.");
+        } else if (response.status == 404) {
+            add(out, "Database RLS", "Anonymous read: " + table, "INCONCLUSIVE", "LOW",
+                    "HTTP 404: table or API schema may be absent in this staging project.");
+        } else {
+            add(out, "Database RLS", "Anonymous read: " + table, "INCONCLUSIVE", "LOW",
+                    "HTTP " + response.status + " did not establish whether anonymous row access is blocked.");
         }
     }
 
-    private static int requestWithoutKey(String urlText) {
-        HttpURLConnection connection = null;
+    private static boolean isJsonArray(String body) {
+        if (body == null) return false;
+        String value = body.trim();
+        return value.startsWith("[") && value.endsWith("]");
+    }
+
+    private static String lower(String value) {
+        return value == null ? "" : value.toLowerCase(Locale.ROOT);
+    }
+
+    private static void probeAdminRpc(String base, String key, List<Check> out,
+                                      String functionName, String path, String body,
+                                      String safetyNote) {
+        ApiResponse response = stagingRequest(base, key, "POST", path, body);
+        String text = lower(response.body);
+        boolean explicitAdminDeny = text.contains("administrator access required")
+                || text.contains("42501")
+                || text.contains("insufficient_privilege");
+        if (response.status == 401 || response.status == 403 || explicitAdminDeny) {
+            add(out, "RPC authorization", "Anonymous call: " + functionName, "PASS", "INFO",
+                    "The anonymous call was blocked by the API privilege boundary or the function's admin check. " + safetyNote);
+        } else if (response.status == 200) {
+            add(out, "RPC authorization", "Anonymous call: " + functionName, "FAIL", "CRITICAL",
+                    "The admin RPC returned HTTP 200 to the anonymous role. Review EXECUTE grants and the server-side admin check immediately.");
+        } else if (response.status == 400 && (text.contains("submission not found")
+                || text.contains("invalid r2 public origin")
+                || text.contains("action is required"))) {
+            add(out, "RPC authorization", "Anonymous call: " + functionName, "FAIL", "CRITICAL",
+                    "The request reached function-level validation without an explicit admin denial. No intended data change was made because the probe arguments are invalid or reference a random absent UUID. Review EXECUTE grants and SECURITY DEFINER checks. " + safetyNote);
+        } else if (response.status == 404) {
+            add(out, "RPC authorization", "Anonymous call: " + functionName, "INCONCLUSIVE", "LOW",
+                    "HTTP 404: the RPC may not be deployed, exposed in the API schema, or callable by this role.");
+        } else {
+            add(out, "RPC authorization", "Anonymous call: " + functionName, "INCONCLUSIVE", "LOW",
+                    "HTTP " + response.status + " did not prove that the RPC privilege boundary held. " + safetyNote);
+        }
+    }
+
+    private static void runBoundedBurst(String base, String key, List<Check> out) {
+        final int workers = 4;
+        final int requestsPerWorker = 6;
+        final AtomicBoolean stop = new AtomicBoolean(false);
+        final List<Integer> codes = Collections.synchronizedList(new ArrayList<>());
+        final List<Long> latencies = Collections.synchronizedList(new ArrayList<>());
+        ExecutorService pool = Executors.newFixedThreadPool(workers);
+        List<Future<?>> tasks = new ArrayList<>();
+
+        add(out, "Rate limiting", "Bounded concurrency test", "INFO", "INFO",
+                "Starting at most 24 read-only GET requests with no more than four concurrent workers. The sequence stops early on HTTP 429, any 5xx response or a transport failure. No writes or uploads are sent.");
+
+        for (int worker = 0; worker < workers; worker++) {
+            tasks.add(pool.submit(() -> {
+                for (int i = 0; i < requestsPerWorker && !stop.get(); i++) {
+                    ApiResponse response = stagingRequest(base, key, "GET", "/rest/v1/", null);
+                    codes.add(response.status);
+                    latencies.add(response.elapsedMs);
+                    if (response.status == 429 || response.status >= 500 || response.status == 0) {
+                        stop.set(true);
+                    }
+                    if (i + 1 < requestsPerWorker && !stop.get()) {
+                        try { Thread.sleep(180L); }
+                        catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                            stop.set(true);
+                        }
+                    }
+                }
+            }));
+        }
+
+        pool.shutdown();
         try {
-            connection = (HttpURLConnection) new URL(urlText).openConnection();
-            connection.setRequestMethod("GET");
-            connection.setConnectTimeout(4000);
-            connection.setReadTimeout(4000);
+            for (Future<?> task : tasks) task.get(35, TimeUnit.SECONDS);
+            if (!pool.awaitTermination(2, TimeUnit.SECONDS)) pool.shutdownNow();
+        } catch (Exception e) {
+            stop.set(true);
+            pool.shutdownNow();
+        }
+
+        int count429 = 0;
+        int count5xx = 0;
+        int countTransport = 0;
+        int countAuth = 0;
+        long maxLatency = 0L;
+        long totalLatency = 0L;
+        synchronized (codes) {
+            for (int code : codes) {
+                if (code == 429) count429++;
+                if (code >= 500) count5xx++;
+                if (code == 0) countTransport++;
+                if (code == 401 || code == 403) countAuth++;
+            }
+        }
+        synchronized (latencies) {
+            for (long duration : latencies) {
+                totalLatency += duration;
+                maxLatency = Math.max(maxLatency, duration);
+            }
+        }
+        long averageLatency = latencies.isEmpty() ? 0L : totalLatency / latencies.size();
+        String evidence = "Requests completed: " + codes.size() + " (maximum 24), HTTP 429: "
+                + count429 + ", 5xx: " + count5xx + ", transport failures: " + countTransport
+                + ", auth denials: " + countAuth + ", average latency: " + averageLatency
+                + " ms, maximum latency: " + maxLatency + " ms. Codes: " + codes + ".";
+
+        if (count429 > 0) {
+            add(out, "Rate limiting", "Bounded concurrency response", "PASS", "INFO",
+                    "The API returned HTTP 429 during the bounded burst. " + evidence);
+        } else if (count5xx > 0) {
+            add(out, "Availability", "Staging API under bounded burst", "WARN", "HIGH",
+                    "The staging API returned one or more 5xx responses under a small 4-worker probe. The test stopped early. " + evidence);
+        } else if (countTransport > 0 || countAuth == codes.size()) {
+            add(out, "Rate limiting", "Bounded concurrency response", "INCONCLUSIVE", "LOW",
+                    "The probe encountered transport failures or every request was rejected at authentication, so throttling behaviour could not be assessed. " + evidence);
+        } else {
+            add(out, "Rate limiting", "Bounded concurrency response", "INCONCLUSIVE", "LOW",
+                    "No HTTP 429 was observed, but 24 requests are not a capacity or DoS-resistance test and cannot prove rate limiting is absent. " + evidence);
+        }
+    }
+
+    private static ApiResponse request(BackendConfig config, String path) {
+        return stagingRequest(config.url, config.publishableKey, "GET", path, null);
+    }
+
+    private static ApiResponse stagingRequest(String base, String key, String method,
+                                              String path, String body) {
+        HttpURLConnection connection = null;
+        long start = System.currentTimeMillis();
+        try {
+            connection = (HttpURLConnection) new URL(base + path).openConnection();
+            connection.setRequestMethod(method);
+            connection.setConnectTimeout(6000);
+            connection.setReadTimeout(6000);
             connection.setUseCaches(false);
             connection.setInstanceFollowRedirects(false);
-            connection.setRequestProperty("User-Agent", "FOSCH-Security-Lab/0.1.0");
-            return connection.getResponseCode();
+            connection.setRequestProperty("User-Agent", "FOSCH-Security-Lab/0.2.0");
+            connection.setRequestProperty("Accept", "application/json");
+            connection.setRequestProperty("apikey", key);
+            connection.setRequestProperty("Authorization", "Bearer " + key);
+            if (body != null) {
+                byte[] payload = body.getBytes(StandardCharsets.UTF_8);
+                connection.setDoOutput(true);
+                connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+                connection.setFixedLengthStreamingMode(payload.length);
+                try (java.io.OutputStream stream = connection.getOutputStream()) {
+                    stream.write(payload);
+                    stream.flush();
+                }
+            }
+            int status = connection.getResponseCode();
+            InputStream responseStream = status >= 200 && status < 400
+                    ? connection.getInputStream() : connection.getErrorStream();
+            return new ApiResponse(status, readLimited(responseStream),
+                    Math.max(0L, System.currentTimeMillis() - start));
         } catch (Exception e) {
-            return 0;
+            return new ApiResponse(0, "", Math.max(0L, System.currentTimeMillis() - start));
         } finally {
             if (connection != null) connection.disconnect();
         }
@@ -519,9 +751,11 @@ public final class SecurityAudit {
     private static final class ApiResponse {
         final int status;
         final String body;
-        ApiResponse(int status, String body) {
+        final long elapsedMs;
+        ApiResponse(int status, String body, long elapsedMs) {
             this.status = status;
             this.body = body;
+            this.elapsedMs = elapsedMs;
         }
     }
 
