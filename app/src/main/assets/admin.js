@@ -687,7 +687,7 @@
     const state = readR2MigrationState();
     if (!state || !state.completed || !Array.isArray(state.objects) ||
         !Array.isArray(state.migratedPaths) || state.migratedPaths.length !== state.objects.length ||
-        (state.skipped || []).length || (state.failures || []).length) {
+        (state.skipped || []).length) {
       alert("The completed, fully verified migration state is required before deleting originals.");
       return;
     }
@@ -844,9 +844,11 @@
       "</div></div>";
     const migrationState = readR2MigrationState();
     const migrationSummary = migrationState
-      ? (migrationState.completed
-        ? "Verified " + (migrationState.migratedPaths || []).length + " migrated images. " + ((migrationState.skipped || []).length) + " unsupported image files remain in Supabase."
-        : "Saved progress: " + (migrationState.migratedPaths || []).length + " of " + (migrationState.objects || []).length + " supported images verified.")
+      ? (migrationState.originalsDeleted
+        ? "Deleted " + (migrationState.deletedCount || (migrationState.objects || []).length) + " original Supabase images. R2 copies remain in place."
+        : migrationState.completed
+          ? "Verified " + (migrationState.migratedPaths || []).length + " migrated images. " + ((migrationState.skipped || []).length) + " unsupported image files remain in Supabase. Originals are ready for guarded deletion."
+          : "Saved progress: " + (migrationState.migratedPaths || []).length + " of " + (migrationState.objects || []).length + " supported images verified.")
       : "This temporary administrator utility copies existing public product images and brand logos to R2. It does not delete the originals.";
     const migrationFailures = migrationState && Array.isArray(migrationState.failures) ? migrationState.failures.length : 0;
     const purgeMarkup = migrationState && migrationState.completed && !migrationState.originalsDeleted
