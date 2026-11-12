@@ -632,8 +632,12 @@
     const resolvedBrand=String(value.brand||brand||"").trim();
     if(!String(value.brand||"").trim()&&resolvedBrand)value.brand=resolvedBrand;
     if(resolvedBrand){
-      try{value.brandLogoUrl=await getPublishedBrandLogo(resolvedBrand)||publicMediaUrl(brandLogoPath(resolvedBrand));}
-      catch(error){value.brandLogoUrl=publicMediaUrl(brandLogoPath(resolvedBrand));}
+      // The public-media RPC already supplies the R2 origin. Brand logo paths
+      // are deterministic, so do not make a second serial RPC just to resolve
+      // the URL; the browser can fetch/cache it alongside the product photos.
+      const path=brandLogoPath(resolvedBrand);
+      const base=String(window.FOSCHR2PublicUrl||"").replace(/\\/+$/,"");
+      value.brandLogoUrl=base?base+"/"+path.split("/").map(encodeURIComponent).join("/"):publicMediaUrl(path);
     }
     return value;
   }
