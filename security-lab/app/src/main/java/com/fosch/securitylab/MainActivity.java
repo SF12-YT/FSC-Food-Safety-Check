@@ -115,7 +115,7 @@ public class MainActivity extends Activity {
 
         addSection("01  ·  LOCAL APP & APK");
         addActionCard("Run local integrity audit",
-                "Inspect install metadata, signing certificate, APK structure, exported components, backup and transport flags, plus device-level indicators.",
+                "Inspect install metadata, signing certificate, APK structure, exported components, backup and transport flags, plus device-level indicators. Root signals describe the test device and are not treated as proof that FOSCH is compromised.",
                 "RUN LOCAL AUDIT", false, v -> runLocalAudit());
         addActionCard("Import known-good FOSCH APK",
                 "Select an official FOSCH APK you trust. Security Lab stores it privately inside its own app sandbox and uses it as the modding/tamper comparison baseline.",
@@ -131,7 +131,7 @@ public class MainActivity extends Activity {
                 "Extract the public Supabase configuration from the installed FOSCH APK. Probe anonymous read access and a harmless SQL-filter canary. No writes or deletes.",
                 "RUN API AUDIT", false, v -> runBackendAudit());
         addActionCard("Advanced staging security suite",
-                "Probe anonymous database reads, admin RPC authorization, private evidence-bucket listing, malformed submission validation and a bounded 24-request concurrency burst. Uses your staging URL and public anon/publishable key.",
+                "Probe anonymous database reads, admin RPC authorization, private evidence-bucket listing, malformed submission validation and a bounded 24-request concurrency burst. Storage results include the HTTP response code, content type and returned-entry count; object names are never saved.",
                 "CONFIGURE STAGING SUITE", true, v -> showStagingDialog());
 
         LinearLayout safetyCard = card();
@@ -161,7 +161,7 @@ public class MainActivity extends Activity {
         historyContainer.setOrientation(LinearLayout.VERTICAL);
         content.addView(historyContainer, matchWrap());
 
-        TextView footer = text("FOSCH Security Lab · 0.2.0 · Findings are evidence, not a guarantee of security.", 11, COLOR_MUTED, false);
+        TextView footer = text("FOSCH Security Lab · 0.3.0 · Findings are evidence, not a guarantee of security.", 11, COLOR_MUTED, false);
         footer.setGravity(Gravity.CENTER);
         footer.setPadding(0, dp(22), 0, 0);
         content.addView(footer);
@@ -596,7 +596,7 @@ public class MainActivity extends Activity {
         JSONObject root = new JSONObject();
         try {
             root.put("application", "FOSCH Security Lab");
-            root.put("version", "0.2.0");
+            root.put("version", "0.3.0");
             root.put("targetPackage", SecurityAudit.FOSCH_PACKAGE);
             root.put("generatedAt", new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX", Locale.US)
                     .format(new Date()));
