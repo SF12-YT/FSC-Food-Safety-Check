@@ -1319,11 +1319,19 @@ function selectProductSizeVariant(index){
 
 let productLookupStatus="idle", productLookupMessage="", lookupIssuedKey="", lastProductLookupResult=null, prefillProduct=null, correctionTarget=null, currentLookupSizeVariants=[];
  let publicProductMediaResults=Object.create(null),publicProductMediaRequests=Object.create(null);
- function isFOSCHPublicMediaUrl(value){return typeof value==="string"&&/^https:\/\/mqgvagftvuybietazbdc\.supabase\.co\/storage\/v1\/object\/public\/fosch-public-product-media\//.test(value)}
+ function isFOSCHPublicMediaUrl(value){
+  if(typeof value!=="string")return false;
+  if(/^https:\/\/mqgvagftvuybietazbdc\.supabase\.co\/storage\/v1\/object\/public\/fosch-public-product-media\//.test(value))return true;
+  const base=String(window.FOSCHR2PublicUrl||"").replace(/\/+$/,"");
+  if(!base||value.indexOf(base+"/")!==0)return false;
+  const objectPath=value.slice(base.length+1).split("?")[0];
+  return objectPath.indexOf("products/")===0||objectPath.indexOf("brands/")===0;
+ }
  function isFOSCHImageSource(value){return typeof value==="string"&&(value.startsWith("data:image/")||isFOSCHPublicMediaUrl(value))}
  function fallbackPublicBrandLogoUrl(brand){
   const key=String(brand||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().replace(/\s+/g,"-");
-  return key?"https://mqgvagftvuybietazbdc.supabase.co/storage/v1/object/public/fosch-public-product-media/brands/"+encodeURIComponent(key)+".jpeg":"";
+  const base=String(window.FOSCHR2PublicUrl||"").replace(/\/+$/,"");
+  return key?(base?base+"/brands/"+encodeURIComponent(key)+".jpeg":"https://mqgvagftvuybietazbdc.supabase.co/storage/v1/object/public/fosch-public-product-media/brands/"+encodeURIComponent(key)+".jpeg"):"";
  }
  function renderLookupProductBrandLogo(product){
   if(!product)return "";

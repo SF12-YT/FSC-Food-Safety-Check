@@ -564,6 +564,7 @@
     const parsed=dataUrlParts(dataUrl);
     const result=await api("POST","/functions/v1/fosch-media",JSON.stringify({action:"upload",path:cleanPath,contentType:parsed.mime,base64:parsed.base64}));
     if(!result||typeof result.publicUrl!=="string"||result.publicUrl.indexOf("https://")!==0)throw new Error("R2 did not return a valid public image URL.");
+    try{window.FOSCHR2PublicUrl=new URL(result.publicUrl).origin;}catch(ignored){}
     return result.publicUrl;
   }
   function productPhotoPathFromPublicUrl(value){
@@ -610,12 +611,20 @@
     const key=normalisePublicBrandKey(brand);if(!key)return "";
     const value=await api("POST","/rest/v1/rpc/get_fosch_public_brand_logo",JSON.stringify({p_brand_key:key}),{publicOnly:true});
     if(typeof value!=="string"||!value)return "";
-    return value.indexOf("https://")===0?value:publicMediaUrl(value);
+    if(value.indexOf("https://")===0){
+      try{const parsed=new URL(value);if(parsed.protocol==="https:"&&parsed.pathname.indexOf("/brands/")>=0)window.FOSCHR2PublicUrl=parsed.origin;}catch(ignored){}
+      return value;
+    }
+    return publicMediaUrl(value);
   }
   async function getPublishedProductMedia(barcode,country,brand){
     const code=String(barcode||"").trim(),market=String(country||"").trim().toUpperCase();if(!code||!/^[A-Z]{2}$/.test(market))return null;
     const response=await api("POST","/rest/v1/rpc/get_fosch_public_product_media",JSON.stringify({p_barcode:code,p_country:market}),{publicOnly:true});
     const value=Array.isArray(response)?(response[0]||{}):(response&&typeof response==="object"?response:{});
+    const r2Base=String(value.r2PublicUrl||"").trim();
+    if(r2Base.indexOf("https://")===0){
+      try{const parsedBase=new URL(r2Base);if(parsedBase.protocol==="https:"&&parsedBase.pathname==="/")window.FOSCHR2PublicUrl=parsedBase.origin;}catch(ignored){}
+    }
     const resolvedBrand=String(value.brand||brand||"").trim();
     if(!String(value.brand||"").trim()&&resolvedBrand)value.brand=resolvedBrand;
     if(resolvedBrand){
@@ -666,7 +675,7 @@
     brandLogoPath: brandLogoPath,
     registerBrandLogo: registerBrandLogo,
     getPublishedBrandLogo: getPublishedBrandLogo,
-    publicBrandLogoUrl: function (brand) { try { return publicMediaUrl(brandLogoPath(brand)); } catch (ignored) { return ""; } },
+    publicBrandLogoUrl: function (brand) { try { const path=brandLogoPath(brand),base=String(window.FOSCHR2PublicUrl||"").replace(/\/+$/,""); return base?base+"/"+path:publicMediaUrl(path); } catch (ignored) { return ""; } },
     getPublishedProductMedia: getPublishedProductMedia,
     adminDeleteSubmission: adminDeleteSubmission,
     logAdminEvent: logAdminEvent

@@ -201,6 +201,7 @@ photo_list as (
 )
 select jsonb_build_object(
   'brand', coalesce((select brand from brand_choice), ''),
+  'r2PublicUrl', coalesce((select cfg.r2_public_url from public.fosch_media_storage_config cfg where cfg.singleton = true), ''),
   'officialPhoto', photo_list.first_photo,
   'officialPhotos', photo_list.photos
 )
