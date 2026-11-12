@@ -337,7 +337,7 @@ public final class SecurityAudit {
                 if (!"https".equalsIgnoreCase(parsed.getScheme()) ||
                         parsed.getHost() == null ||
                         !parsed.getHost().toLowerCase(Locale.ROOT).endsWith(".supabase.co") ||
-                        parsed.getUserInfo() != null || !parsed.getPath().isEmpty()) return null;
+                        hasUserInfo(parsed) || !parsed.getPath().isEmpty()) return null;
                 return new BackendConfig(base, key);
             }
         } catch (Exception e) {
@@ -416,8 +416,9 @@ public final class SecurityAudit {
         String host = uri.getHost() == null ? "" : uri.getHost().toLowerCase(Locale.ROOT);
         if (!"https".equalsIgnoreCase(uri.getScheme()) ||
                 !host.endsWith(".supabase.co") ||
+                !(host.contains("staging") || host.contains("stage") || host.contains("dev") || host.contains("test") || host.contains("preview")) ||
                 host.equals(KNOWN_PRODUCTION_HOST) ||
-                uri.getUserInfo() != null || uri.getQuery() != null || uri.getFragment() != null ||
+                hasUserInfo(uri) || uri.getQuery() != null || uri.getFragment() != null ||
                 (uri.getPath() != null && !uri.getPath().isEmpty() && !"/".equals(uri.getPath()))) {
             add(out, "Rate limiting", "Staging target validation", "FAIL", "MEDIUM",
                     "Target rejected. Supply only the HTTPS base URL of an authorised non-production Supabase staging project.");
@@ -430,7 +431,9 @@ public final class SecurityAudit {
         int seen429 = 0;
         List<Integer> codes = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            int code = requestWithoutKey(rawUrl.trim() + "/rest/v1/");
+            String base = rawUrl.trim();
+            while (base.endsWith("/")) base = base.substring(0, base.length() - 1);
+            int code = requestWithoutKey(base + "/rest/v1/");
             codes.add(code);
             if (code == 429) seen429++;
             if (i < 4) {
@@ -520,6 +523,11 @@ public final class SecurityAudit {
             this.status = status;
             this.body = body;
         }
+    }
+
+    private static boolean hasUserInfo(Uri uri) {
+        String authority = uri == null ? null : uri.getEncodedAuthority();
+        return authority == null || authority.contains("@");
     }
 
     private static int signingFlag() {
