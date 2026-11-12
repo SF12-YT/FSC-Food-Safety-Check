@@ -68,8 +68,8 @@ jobs:
             printf 'R2_BUCKET_NAME=%s\n' "$R2_BUCKET_NAME"
             printf 'R2_PUBLIC_URL=%s\n' "$R2_PUBLIC_URL"
           } > "$secrets_file"
-          supabase secrets set --env-file "$secrets_file" --project-ref "$SUPABASE_PROJECT_REF"
+          supabase secrets set --env-file "$secrets_file" --project-ref "$SUPABASE_PROJECT_REF" --yes
           rm -f "$secrets_file"
 
       - name: Deploy FOSCH media Edge Function
-        run: supabase functions deploy fosch-media --project-ref "$SUPABASE_PROJECT_REF"
+        run: supabase functions deploy fosch-media --project-ref "$SUPABASE_PROJECT_REF" --yes
