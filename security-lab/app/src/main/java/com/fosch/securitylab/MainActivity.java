@@ -10,6 +10,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Build;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -384,12 +385,10 @@ public class MainActivity extends Activity {
             if (error == null) {
                 try {
                     PackageInfo info = getPackageManager().getPackageArchiveInfo(
-                            temp.getAbsolutePath(), PackageManager.GET_SIGNING_CERTIFICATES);
+                            temp.getAbsolutePath(), (Build.VERSION.SDK_INT >= 28 ? PackageManager.GET_SIGNING_CERTIFICATES : PackageManager.GET_SIGNATURES));
                     if (info == null || !SecurityAudit.FOSCH_PACKAGE.equals(info.packageName)) {
                         error = "That APK is not the FOSCH package (" + SecurityAudit.FOSCH_PACKAGE + ").";
-                    } else if (info.signingInfo == null ||
-                            info.signingInfo.getApkContentsSigners() == null ||
-                            info.signingInfo.getApkContentsSigners().length == 0) {
+                    } else if (!hasArchiveSigner(info)) {
                         error = "The selected APK does not expose a readable signing certificate.";
                     }
                 } catch (Exception e) {
@@ -418,6 +417,14 @@ public class MainActivity extends Activity {
                 }
             });
         });
+    }
+
+    private boolean hasArchiveSigner(PackageInfo info) {
+        if (Build.VERSION.SDK_INT >= 28) {
+            return info.signingInfo != null && info.signingInfo.getApkContentsSigners() != null
+                    && info.signingInfo.getApkContentsSigners().length > 0;
+        }
+        return info.signatures != null && info.signatures.length > 0;
     }
 
     private void exportReport() {
