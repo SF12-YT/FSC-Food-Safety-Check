@@ -807,7 +807,7 @@ public final class SecurityAudit {
             connection.setReadTimeout(6000);
             connection.setUseCaches(false);
             connection.setInstanceFollowRedirects(false);
-            connection.setRequestProperty("User-Agent", "FOSCH-Security-Lab/0.4.0");
+            connection.setRequestProperty("User-Agent", "FOSCH-Security-Lab/0.5.0");
             connection.setRequestProperty("Accept",
                     path != null && path.contains("/object/authenticated/")
                             ? "*/*" : "application/json");
