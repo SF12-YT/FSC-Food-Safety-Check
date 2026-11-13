@@ -25,7 +25,7 @@ The bundle is an ordered copy of all 14 timestamped FOSCH migrations in `supabas
 
 If this staging project already contains partial FOSCH migrations or unrelated application tables, stop and inspect its current schema before running the bundle. Do not reset or drop the project just to make the script run.
 
-After execution, confirm there were no SQL errors. The expected private bucket is `fosch-submission-photos` and it must be marked **Private**.
+After execution, confirm there were no SQL errors. The expected private bucket is `fosch-submission-photos` and it must be marked **Private**. The bootstrap also sends a PostgREST schema-cache reload notification so newly created tables and RPCs should become visible to the API without a manual refresh.
 
 ## 3. Create a harmless storage canary
 
