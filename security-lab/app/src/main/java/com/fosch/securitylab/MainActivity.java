@@ -161,7 +161,7 @@ public class MainActivity extends Activity {
         historyContainer.setOrientation(LinearLayout.VERTICAL);
         content.addView(historyContainer, matchWrap());
 
-        TextView footer = text("FOSCH Security Lab · 0.5.0 · Findings are evidence, not a guarantee of security.", 11, COLOR_MUTED, false);
+        TextView footer = text("FOSCH Security Lab · 0.5.1 · Findings are evidence, not a guarantee of security.", 11, COLOR_MUTED, false);
         footer.setGravity(Gravity.CENTER);
         footer.setPadding(0, dp(22), 0, 0);
         content.addView(footer);
@@ -630,7 +630,7 @@ public class MainActivity extends Activity {
         JSONObject root = new JSONObject();
         try {
             root.put("application", "FOSCH Security Lab");
-            root.put("version", "0.5.0");
+            root.put("version", "0.5.1");
             root.put("targetPackage", SecurityAudit.FOSCH_PACKAGE);
             root.put("historyScopeNote", "Each new history entry has a scope. EXPLICIT_STAGING entries use only the host entered in the staging suite. EMBEDDED_BACKEND_READ_ONLY entries are from the separate API audit against the backend URL extracted from the installed FOSCH APK. LOCAL entries are on-device checks. Entries without a scope predate this version and are marked LEGACY_UNCLASSIFIED; do not attribute them to the latest run.");
             root.put("generatedAt", new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX", Locale.US)
