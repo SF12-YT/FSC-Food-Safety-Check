@@ -603,7 +603,7 @@ public final class SecurityAudit {
         }
 
         ApiResponse download = stagingRequest(base, key, "GET",
-                "/storage/v1/object/authenticated/fosch-submission-photos/" + objectPath,
+                "/storage/v1/object/fosch-submission-photos/" + objectPath,
                 null);
         String downloadBody = lower(download.body);
         boolean downloadInvalidCredentials = downloadBody.contains("invalid api key")
@@ -626,9 +626,14 @@ public final class SecurityAudit {
             add(out, "Storage permissions", "Private evidence canary download", "PASS", "INFO",
                     "The Storage service explicitly denied anonymous access to the confirmed canary object. "
                             + responseEvidence(download));
+        } else if ((download.status == 400 || download.status == 404)
+                && downloadBody.contains("nosuchkey")) {
+            add(out, "Storage permissions", "Private evidence canary download", "INCONCLUSIVE", "LOW",
+                    "Supabase Storage returned NoSuchKey. For a private bucket, an object hidden from the anonymous role by storage.objects permissions/RLS can appear not found; a missing backing object can produce the same response. Because the Dashboard object was operator-confirmed, this is consistent with anonymous access being blocked, but the response alone cannot prove that. "
+                            + responseEvidence(download));
         } else {
             add(out, "Storage permissions", "Private evidence canary download", "INCONCLUSIVE", "LOW",
-                    "The object request did not distinguish an access denial from an absent object or invalid API credentials. Confirm the canary exists and inspect the reported response details. "
+                    "The object request did not establish whether anonymous access was denied or whether the object/key was unavailable. "
                             + responseEvidence(download));
         }
     }
@@ -807,9 +812,9 @@ public final class SecurityAudit {
             connection.setReadTimeout(6000);
             connection.setUseCaches(false);
             connection.setInstanceFollowRedirects(false);
-            connection.setRequestProperty("User-Agent", "FOSCH-Security-Lab/0.5.0");
+            connection.setRequestProperty("User-Agent", "FOSCH-Security-Lab/0.5.1");
             connection.setRequestProperty("Accept",
-                    path != null && path.contains("/object/authenticated/")
+                    path != null && path.contains("/storage/v1/object/")
                             ? "*/*" : "application/json");
             connection.setRequestProperty("apikey", key);
             // New publishable keys are opaque API keys, not JWT bearer tokens.
