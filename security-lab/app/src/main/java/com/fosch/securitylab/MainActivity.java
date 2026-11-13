@@ -128,7 +128,7 @@ public class MainActivity extends Activity {
 
         addSection("02  ·  BACKEND & API");
         addActionCard("Run read-only API checks",
-                "Extract the public Supabase configuration from the installed FOSCH APK. Probe anonymous read access and a harmless SQL-filter canary. No writes or deletes.",
+                "Separate from the staging suite: targets the Supabase host embedded in installed FOSCH (often production). Requires a confirmation before sending three read-only GET requests. No writes or deletes.",
                 "RUN API AUDIT", false, v -> runBackendAudit());
         addActionCard("Advanced staging security suite",
                 "Probe anonymous database reads, admin RPC authorization, private evidence-bucket listing, malformed submission validation and a bounded 24-request concurrency burst. Storage results include the HTTP response code, content type and returned-entry count; object names are never saved.",
@@ -137,7 +137,7 @@ public class MainActivity extends Activity {
         LinearLayout safetyCard = card();
         TextView safetyTitle = text("Staging suite · bounded active tests", 14, COLOR_GREEN, true);
         safetyCard.addView(safetyTitle);
-        TextView safetyBody = text("The suite sends active negative-test requests only to the explicitly entered Supabase staging project. It does not upload/delete files, extract records, lock accounts or run an unbounded flood. The known FOSCH production project is blocked.", 12, COLOR_MUTED, false);
+        TextView safetyBody = text("The advanced suite sends requests only to the explicitly entered staging Supabase host; the known FOSCH production host is blocked. The separate RUN API AUDIT action targets the backend embedded in FOSCH and requires its own confirmation. The staging suite never invokes that separate check. No uploads, deletes, record extraction or unbounded traffic.", 12, COLOR_MUTED, false);
         safetyBody.setPadding(0, dp(6), 0, 0);
         safetyCard.addView(safetyBody);
         content.addView(safetyCard, matchWrap());
@@ -161,7 +161,7 @@ public class MainActivity extends Activity {
         historyContainer.setOrientation(LinearLayout.VERTICAL);
         content.addView(historyContainer, matchWrap());
 
-        TextView footer = text("FOSCH Security Lab · 0.4.0 · Findings are evidence, not a guarantee of security.", 11, COLOR_MUTED, false);
+        TextView footer = text("FOSCH Security Lab · 0.5.0 · Findings are evidence, not a guarantee of security.", 11, COLOR_MUTED, false);
         footer.setGravity(Gravity.CENTER);
         footer.setPadding(0, dp(22), 0, 0);
         content.addView(footer);
@@ -277,7 +277,7 @@ public class MainActivity extends Activity {
             List<SecurityAudit.Check> checks = SecurityAudit.inspectInstalled(
                     getApplicationContext(), baselineFile);
             runOnUiThread(() -> {
-                appendChecks(checks);
+                appendChecks(checks, "LOCAL_APP");
                 setIdle("Local audit complete · " + checks.size() + " checks");
                 refreshTargetStatus();
             });
@@ -285,15 +285,28 @@ public class MainActivity extends Activity {
     }
 
     private void runBackendAudit() {
-        setBusy("Running read-only API checks…");
-        executor.execute(() -> {
-            List<SecurityAudit.Check> checks =
-                    SecurityAudit.runReadOnlyBackendAudit(getApplicationContext());
-            runOnUiThread(() -> {
-                appendChecks(checks);
-                setIdle("API audit complete · " + checks.size() + " checks");
-            });
-        });
+        SecurityAudit.BackendConfig config =
+                SecurityAudit.readBackendConfig(getApplicationContext());
+        String host = config == null ? "unknown (configuration unavailable)"
+                : Uri.parse(config.url).getHost();
+        new AlertDialog.Builder(this)
+                .setTitle("Separate embedded-backend audit")
+                .setMessage("This is separate from the staging suite. It targets the backend host embedded in the installed FOSCH APK: "
+                        + host + ". It does not use the staging URL entered in the advanced suite. "
+                        + "The checks are limited to three read-only GET requests. Continue?")
+                .setNegativeButton("CANCEL", null)
+                .setPositiveButton("RUN READ-ONLY CHECKS", (dialog, which) -> {
+                    setBusy("Running read-only API checks…");
+                    executor.execute(() -> {
+                        List<SecurityAudit.Check> checks =
+                                SecurityAudit.runReadOnlyBackendAudit(getApplicationContext());
+                        runOnUiThread(() -> {
+                            appendChecks(checks, "EMBEDDED_BACKEND_READ_ONLY");
+                            setIdle("API audit complete · " + checks.size() + " checks");
+                        });
+                    });
+                })
+                .show();
     }
 
     private void showStagingDialog() {
@@ -363,7 +376,10 @@ public class MainActivity extends Activity {
                         List<SecurityAudit.Check> checks =
                                 SecurityAudit.runStagingSecuritySuite(target, publicKey, canaryObjectPath);
                         runOnUiThread(() -> {
-                            appendChecks(checks);
+                            String stagingHost = Uri.parse(target).getHost();
+                            appendChecks(checks, stagingHost == null
+                                    ? "EXPLICIT_STAGING"
+                                    : "EXPLICIT_STAGING:" + stagingHost);
                             setIdle("Staging security suite complete · " + checks.size() + " checks");
                         });
                     });
@@ -433,10 +449,12 @@ public class MainActivity extends Activity {
                 refreshBaselineStatus();
                 if (result == null) {
                     appendChecks(singleCheck("Modding", "Known-good APK imported", "PASS", "INFO",
-                            "FOSCH package identity and signing certificate parsed successfully. This APK is now the local comparison baseline."));
+                            "FOSCH package identity and signing certificate parsed successfully. This APK is now the local comparison baseline."),
+                            "LOCAL_BASELINE");
                     setIdle("Baseline ready");
                 } else {
-                    appendChecks(singleCheck("Modding", "APK baseline import", "FAIL", "MEDIUM", result));
+                    appendChecks(singleCheck("Modding", "APK baseline import", "FAIL", "MEDIUM", result),
+                            "LOCAL_BASELINE");
                     setIdle("Baseline import failed");
                 }
             });
@@ -491,7 +509,7 @@ public class MainActivity extends Activity {
         return list;
     }
 
-    private void appendChecks(List<SecurityAudit.Check> checks) {
+    private void appendChecks(List<SecurityAudit.Check> checks, String scope) {
         if (checks == null || checks.isEmpty()) return;
         visibleChecks.clear();
         visibleChecks.addAll(checks);
@@ -499,6 +517,7 @@ public class MainActivity extends Activity {
             JSONObject item = new JSONObject();
             try {
                 item.put("timestamp", System.currentTimeMillis());
+                item.put("scope", scope == null ? "UNCLASSIFIED" : scope);
                 item.put("category", check.category);
                 item.put("title", check.title);
                 item.put("status", check.status);
@@ -550,9 +569,10 @@ public class MainActivity extends Activity {
             if (item == null) continue;
             String title = item.optString("title", "Test");
             String status = item.optString("status", "INFO");
+            String scope = item.optString("scope", "LEGACY_UNCLASSIFIED");
             String date = new SimpleDateFormat("dd MMM HH:mm", Locale.getDefault())
                     .format(new Date(item.optLong("timestamp", 0)));
-            TextView line = text(date + "  ·  " + status + "  ·  " + title, 11,
+            TextView line = text(date + "  ·  " + scope + "  ·  " + status + "  ·  " + title, 11,
                     statusColor(status), false);
             line.setPadding(dp(2), dp(5), dp(2), dp(5));
             historyContainer.addView(line);
@@ -610,8 +630,9 @@ public class MainActivity extends Activity {
         JSONObject root = new JSONObject();
         try {
             root.put("application", "FOSCH Security Lab");
-            root.put("version", "0.4.0");
+            root.put("version", "0.5.0");
             root.put("targetPackage", SecurityAudit.FOSCH_PACKAGE);
+            root.put("historyScopeNote", "Each new history entry has a scope. EXPLICIT_STAGING entries use only the host entered in the staging suite. EMBEDDED_BACKEND_READ_ONLY entries are from the separate API audit against the backend URL extracted from the installed FOSCH APK. LOCAL entries are on-device checks. Entries without a scope predate this version and are marked LEGACY_UNCLASSIFIED; do not attribute them to the latest run.");
             root.put("generatedAt", new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX", Locale.US)
                     .format(new Date()));
             root.put("history", history);
