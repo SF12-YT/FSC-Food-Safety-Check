@@ -3,7 +3,10 @@ name: Build FOSCH Android APK
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "security-lab" ]
+    paths:
+      - "app/**"
+      - ".github/workflows/android.yml"
 
 permissions:
   contents: read
