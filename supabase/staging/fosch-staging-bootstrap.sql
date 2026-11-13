@@ -1815,3 +1815,7 @@ grant execute on function public.admin_finalize_fosch_r2_media_reference_mapping
 commit;
 
 -- END SOURCE MIGRATION: supabase/migrations/20261112180000_fosch_r2_media_hash_reconciliation_key_count.sql
+
+-- Ask PostgREST to refresh its schema cache so the tables and RPCs added above
+-- are visible to the API immediately after the SQL Editor transaction commits.
+NOTIFY pgrst, 'reload schema';
