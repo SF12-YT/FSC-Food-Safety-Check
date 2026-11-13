@@ -488,10 +488,12 @@ public final class SecurityAudit {
                                 : "The canary returned a row. This could be a fixture collision or unexpected filter behaviour; inspect the staging logs. Row contents were discarded.");
             } else if (filter.status == 401 || filter.status == 403) {
                 add(out, "Input validation", "SQL-looking PostgREST filter canary", "INCONCLUSIVE", "LOW",
-                        "HTTP " + filter.status + " prevented filter evaluation. Authentication rejection is not proof of injection resistance.");
+                        "HTTP " + filter.status + " prevented filter evaluation. Authentication rejection is not proof of injection resistance. "
+                                + responseEvidence(filter));
             } else {
                 add(out, "Input validation", "SQL-looking PostgREST filter canary", "INCONCLUSIVE", "LOW",
-                        "HTTP " + filter.status + " did not provide enough evidence to classify filter handling.");
+                        "HTTP " + filter.status + " did not provide enough evidence to classify filter handling. "
+                                + responseEvidence(filter));
             }
         } catch (Exception e) {
             add(out, "Input validation", "SQL-looking PostgREST filter canary", "ERROR", "LOW", safeMessage(e));
@@ -504,13 +506,15 @@ public final class SecurityAudit {
         String invalidBody = lower(invalidSubmission.body);
         if (invalidSubmission.status == 400 && invalidBody.contains("valid submission id")) {
             add(out, "Input validation", "Malformed submission UUID", "PASS", "INFO",
-                    "The public submission RPC rejected an invalid UUID before attempting an insert.");
+                    "The public submission RPC rejected an invalid UUID before attempting an insert. "
+                            + responseEvidence(invalidSubmission));
         } else if (invalidSubmission.status == 200) {
             add(out, "Input validation", "Malformed submission UUID", "FAIL", "CRITICAL",
                     "The submission RPC accepted an invalid UUID payload. Check the deployed function immediately.");
         } else {
             add(out, "Input validation", "Malformed submission UUID", "INCONCLUSIVE", "LOW",
-                    "The malformed request returned HTTP " + invalidSubmission.status + ". Expected a validation error mentioning the submission ID; confirm the staging migration and API key.");
+                    "The malformed request returned HTTP " + invalidSubmission.status + ". Expected a validation error mentioning the submission ID; confirm the staging migration and API key. "
+                            + responseEvidence(invalidSubmission));
         }
 
         probeAdminRpc(base, key, out, "admin_log_event",
@@ -630,30 +634,35 @@ public final class SecurityAudit {
     }
 
     private static void assessAnonymousRead(List<Check> out, String table, ApiResponse response) {
+        String evidence = responseEvidence(response);
         if (response.status == 200 && isJsonArray(response.body)) {
             try {
                 JSONArray rows = new JSONArray(response.body);
                 if (rows.length() == 0) {
                     add(out, "Database RLS", "Anonymous read: " + table, "PASS", "INFO",
-                            "The anonymous publishable-key request returned an empty array. This is consistent with the intended RLS policy; it does not validate authenticated-admin access.");
+                            "The anonymous publishable-key request returned an empty array. This is consistent with the intended RLS policy; it does not validate authenticated-admin access. "
+                                    + evidence);
                 } else {
                     add(out, "Database RLS", "Anonymous read: " + table, "FAIL", "CRITICAL",
                             "The anonymous role received " + rows.length() + " row(s) from " + table
-                                    + ". Only row IDs were requested; response contents were discarded. Review table grants and RLS immediately.");
+                                    + ". Only row IDs were requested; response contents were discarded. Review table grants and RLS immediately. "
+                                    + evidence);
                 }
             } catch (Exception e) {
                 add(out, "Database RLS", "Anonymous read: " + table, "INCONCLUSIVE", "LOW",
-                        "Could not parse the HTTP 200 response as a JSON array.");
+                        "Could not parse the HTTP 200 response as a JSON array. " + evidence);
             }
         } else if (response.status == 401 || response.status == 403) {
             add(out, "Database RLS", "Anonymous read: " + table, "INCONCLUSIVE", "LOW",
-                    "HTTP " + response.status + " rejected the request. This may be API-key/auth rejection before RLS; it is not recorded as a PASS.");
+                    "HTTP " + response.status + " rejected the request. This may be API-key/auth rejection before RLS; it is not recorded as a PASS. "
+                            + evidence);
         } else if (response.status == 404) {
             add(out, "Database RLS", "Anonymous read: " + table, "INCONCLUSIVE", "LOW",
-                    "HTTP 404: table or API schema may be absent in this staging project.");
+                    "HTTP 404: table or API schema may be absent in this staging project. " + evidence);
         } else {
             add(out, "Database RLS", "Anonymous read: " + table, "INCONCLUSIVE", "LOW",
-                    "HTTP " + response.status + " did not establish whether anonymous row access is blocked.");
+                    "HTTP " + response.status + " did not establish whether anonymous row access is blocked. "
+                            + evidence);
         }
     }
 
@@ -677,21 +686,26 @@ public final class SecurityAudit {
                 || text.contains("insufficient_privilege");
         if (response.status == 401 || response.status == 403 || explicitAdminDeny) {
             add(out, "RPC authorization", "Anonymous call: " + functionName, "PASS", "INFO",
-                    "The anonymous call was blocked by the API privilege boundary or the function's admin check. " + safetyNote);
+                    "The anonymous call was blocked by the API privilege boundary or the function's admin check. " + safetyNote
+                            + " " + responseEvidence(response));
         } else if (response.status == 200) {
             add(out, "RPC authorization", "Anonymous call: " + functionName, "FAIL", "CRITICAL",
-                    "The admin RPC returned HTTP 200 to the anonymous role. Review EXECUTE grants and the server-side admin check immediately.");
+                    "The admin RPC returned HTTP 200 to the anonymous role. Review EXECUTE grants and the server-side admin check immediately. "
+                            + responseEvidence(response));
         } else if (response.status == 400 && (text.contains("submission not found")
                 || text.contains("invalid r2 public origin")
                 || text.contains("action is required"))) {
             add(out, "RPC authorization", "Anonymous call: " + functionName, "FAIL", "CRITICAL",
-                    "The request reached function-level validation without an explicit admin denial. No intended data change was made because the probe arguments are invalid or reference a random absent UUID. Review EXECUTE grants and SECURITY DEFINER checks. " + safetyNote);
+                    "The request reached function-level validation without an explicit admin denial. No intended data change was made because the probe arguments are invalid or reference a random absent UUID. Review EXECUTE grants and SECURITY DEFINER checks. " + safetyNote
+                            + " " + responseEvidence(response));
         } else if (response.status == 404) {
             add(out, "RPC authorization", "Anonymous call: " + functionName, "INCONCLUSIVE", "LOW",
-                    "HTTP 404: the RPC may not be deployed, exposed in the API schema, or callable by this role.");
+                    "HTTP 404: the RPC may not be deployed, exposed in the API schema, or callable by this role. "
+                            + responseEvidence(response));
         } else {
             add(out, "RPC authorization", "Anonymous call: " + functionName, "INCONCLUSIVE", "LOW",
-                    "HTTP " + response.status + " did not prove that the RPC privilege boundary held. " + safetyNote);
+                    "HTTP " + response.status + " did not prove that the RPC privilege boundary held. " + safetyNote
+                            + " " + responseEvidence(response));
         }
     }
 
@@ -705,7 +719,7 @@ public final class SecurityAudit {
         List<Future<?>> tasks = new ArrayList<>();
 
         add(out, "Rate limiting", "Bounded concurrency test", "INFO", "INFO",
-                "Starting at most 24 read-only GET requests with no more than four concurrent workers. The sequence stops early on HTTP 429, any 5xx response or a transport failure. No writes or uploads are sent.");
+                "Starting at most 24 read-only GET requests with no more than four concurrent workers. The sequence stops early on HTTP 429, 401/403 authentication rejection, any 5xx response or a transport failure. No writes or uploads are sent.");
 
         for (int worker = 0; worker < workers; worker++) {
             tasks.add(pool.submit(() -> {
@@ -713,7 +727,8 @@ public final class SecurityAudit {
                     ApiResponse response = stagingRequest(base, key, "GET", "/rest/v1/", null);
                     codes.add(response.status);
                     latencies.add(response.elapsedMs);
-                    if (response.status == 429 || response.status >= 500 || response.status == 0) {
+                    if (response.status == 429 || response.status == 401 || response.status == 403
+                            || response.status >= 500 || response.status == 0) {
                         stop.set(true);
                     }
                     if (i + 1 < requestsPerWorker && !stop.get()) {
@@ -852,10 +867,57 @@ public final class SecurityAudit {
         int capturedBytes = response.body == null ? 0
                 : response.body.getBytes(StandardCharsets.UTF_8).length;
         evidence.append("; captured response body: ").append(capturedBytes).append(" bytes");
+        String errorSummary = safeErrorSummary(response);
+        if (!errorSummary.isEmpty()) {
+            evidence.append("; server error: ").append(errorSummary);
+        }
         if (response.transportError != null && !response.transportError.isEmpty()) {
             evidence.append("; transport detail: ").append(response.transportError);
         }
         return evidence.toString();
+    }
+
+    /*
+     * Error diagnostics deliberately allow-list only the structured error code and
+     * message. Successful response bodies (which may contain product/submission data)
+     * are never copied into a report. Credentials and bearer tokens are redacted.
+     */
+    private static String safeErrorSummary(ApiResponse response) {
+        if (response == null || response.status < 400
+                || response.body == null || response.body.trim().isEmpty()) {
+            return "";
+        }
+        try {
+            JSONObject json = new JSONObject(response.body);
+            String code = json.optString("code", "").trim();
+            String message = json.optString("message", "").trim();
+            if (message.isEmpty()) message = json.optString("error_description", "").trim();
+            if (message.isEmpty()) {
+                Object error = json.opt("error");
+                if (error instanceof String) message = ((String) error).trim();
+            }
+            StringBuilder summary = new StringBuilder();
+            if (!code.isEmpty()) summary.append(code);
+            if (!message.isEmpty()) {
+                if (summary.length() > 0) summary.append(": ");
+                summary.append(message);
+            }
+            return sanitiseDiagnostic(summary.toString());
+        } catch (Exception ignored) {
+            return "";
+        }
+    }
+
+    private static String sanitiseDiagnostic(String value) {
+        if (value == null || value.trim().isEmpty()) return "";
+        String safe = value
+                .replaceAll("(?i)sb_(?:publishable|secret)_[A-Za-z0-9_-]+", "[REDACTED_API_KEY]")
+                .replaceAll("(?i)Bearer\\s+[^\\s,;]+", "Bearer [REDACTED]")
+                .replaceAll("\\beyJ[A-Za-z0-9_-]{5,}\\.[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+\\b", "[REDACTED_JWT]")
+                .replaceAll("(?i)(authorization|apikey)\\s*[:=]\\s*[^,;]+", "$1=[REDACTED]")
+                .replaceAll("[\\r\\n\\t]+", " ")
+                .trim();
+        return safe.length() > 220 ? safe.substring(0, 220) : safe;
     }
 
     private static String readLimited(InputStream input) {
