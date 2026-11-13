@@ -161,7 +161,7 @@ public class MainActivity extends Activity {
         historyContainer.setOrientation(LinearLayout.VERTICAL);
         content.addView(historyContainer, matchWrap());
 
-        TextView footer = text("FOSCH Security Lab · 0.3.0 · Findings are evidence, not a guarantee of security.", 11, COLOR_MUTED, false);
+        TextView footer = text("FOSCH Security Lab · 0.4.0 · Findings are evidence, not a guarantee of security.", 11, COLOR_MUTED, false);
         footer.setGravity(Gravity.CENTER);
         footer.setPadding(0, dp(22), 0, 0);
         content.addView(footer);
@@ -610,7 +610,7 @@ public class MainActivity extends Activity {
         JSONObject root = new JSONObject();
         try {
             root.put("application", "FOSCH Security Lab");
-            root.put("version", "0.3.0");
+            root.put("version", "0.4.0");
             root.put("targetPackage", SecurityAudit.FOSCH_PACKAGE);
             root.put("generatedAt", new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX", Locale.US)
                     .format(new Date()));
