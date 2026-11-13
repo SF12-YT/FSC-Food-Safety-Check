@@ -301,7 +301,7 @@ public class MainActivity extends Activity {
         form.setOrientation(LinearLayout.VERTICAL);
         form.setPadding(dp(4), dp(4), dp(4), dp(4));
 
-        TextView warning = text("Authorise only a staging Supabase project you own. The URL must be the project base URL. Enter the public anon/publishable key only — never a service_role or secret key. The key is used in memory and is not saved or exported. The known FOSCH production project is blocked. The suite includes active negative tests and a capped 4-worker / 24-request burst.", 12, COLOR_MUTED, false);
+        TextView warning = text("Authorise only a staging Supabase project you own. Enter its base URL and public anon/publishable key only — never a service_role or secret key. The key is used in memory and is not saved or exported. The known FOSCH production project is blocked. The suite is read-only and includes a capped 4-worker / 24-request burst.", 12, COLOR_MUTED, false);
         form.addView(warning);
 
         EditText url = new EditText(this);
@@ -322,6 +322,19 @@ public class MainActivity extends Activity {
         LinearLayout.LayoutParams keyParams = matchWrap();
         keyParams.topMargin = dp(8);
         form.addView(key, keyParams);
+
+        TextView canaryInfo = text("Storage canary (recommended): in the staging Dashboard, upload a plain-text file in the private fosch-submission-photos bucket at security-lab-canary/<UUID>/canary.txt. Use a fresh UUID and exact content FOSCH-SECURITY-LAB-CANARY-v1. Confirm the file exists in the Dashboard, then enter its full path below. The app only attempts anonymous listing and download; it never uploads or deletes the canary.", 11, COLOR_MUTED, false);
+        canaryInfo.setPadding(0, dp(12), 0, dp(4));
+        form.addView(canaryInfo);
+
+        EditText canaryPath = new EditText(this);
+        canaryPath.setSingleLine(true);
+        canaryPath.setTextColor(COLOR_TEXT);
+        canaryPath.setHintTextColor(COLOR_MUTED);
+        canaryPath.setHint("security-lab-canary/<UUID>/canary.txt");
+        LinearLayout.LayoutParams canaryParams = matchWrap();
+        canaryParams.topMargin = dp(4);
+        form.addView(canaryPath, canaryParams);
 
         EditText confirmation = new EditText(this);
         confirmation.setSingleLine(true);
@@ -344,10 +357,11 @@ public class MainActivity extends Activity {
                     }
                     String target = url.getText().toString().trim();
                     String publicKey = key.getText().toString().trim();
+                    String canaryObjectPath = canaryPath.getText().toString().trim();
                     setBusy("Running staging security suite…");
                     executor.execute(() -> {
                         List<SecurityAudit.Check> checks =
-                                SecurityAudit.runStagingSecuritySuite(target, publicKey);
+                                SecurityAudit.runStagingSecuritySuite(target, publicKey, canaryObjectPath);
                         runOnUiThread(() -> {
                             appendChecks(checks);
                             setIdle("Staging security suite complete · " + checks.size() + " checks");
