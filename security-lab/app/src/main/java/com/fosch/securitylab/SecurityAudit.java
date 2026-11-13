@@ -446,7 +446,7 @@ public final class SecurityAudit {
         return true;
     }
 
-    public static List<Check> runStagingSecuritySuite(String rawUrl, String rawKey) {
+    public static List<Check> runStagingSecuritySuite(String rawUrl, String rawKey, String canaryObjectPath) {
         List<Check> out = new ArrayList<>();
         String base = validateStagingBase(rawUrl);
         if (base == null) {
@@ -531,53 +531,102 @@ public final class SecurityAudit {
                 "{\"p_public_url\":\"not-a-valid-url\"}",
                 "Invalid URL input is used so the probe cannot change the configured public origin.");
 
-        ApiResponse privateList = stagingRequest(base, key, "POST",
-                "/storage/v1/object/list/fosch-submission-photos",
-                "{\"prefix\":\"security-lab-no-such-prefix-" + UUID.randomUUID()
-                        + "\",\"limit\":1,\"offset\":0}");
-        String privateBody = lower(privateList.body);
-        boolean explicitPolicyDenial = (privateBody.contains("row-level security")
-                || privateBody.contains("permission denied")
-                || privateBody.contains("not authorized")
-                || privateBody.contains("unauthorized")
-                || privateBody.contains("insufficient privilege"))
-                && !privateBody.contains("invalid api key")
-                && !privateBody.contains("invalid jwt")
-                && !privateBody.contains("jwt expired");
-        if ((privateList.status == 400 || privateList.status == 401 || privateList.status == 403)
-                && explicitPolicyDenial) {
-            add(out, "Storage permissions", "Private evidence bucket listing", "PASS", "INFO",
-                    "The storage service returned an explicit authorization/policy denial. "
-                            + responseEvidence(privateList)
-                            + ". No object was uploaded, downloaded or deleted.");
-        } else if (privateList.status == 200 && isJsonArray(privateList.body)) {
-            try {
-                JSONArray entries = new JSONArray(privateList.body);
-                if (entries.length() > 0) {
-                    add(out, "Storage permissions", "Private evidence bucket listing", "FAIL", "HIGH",
-                            "The anonymous request received " + entries.length()
-                                    + " storage-list entr(y/ies) for a random, nonexistent probe prefix. This demonstrates metadata listing access, but does not prove file-download access. Object names and metadata were deliberately excluded from the report. "
-                                    + responseEvidence(privateList)
-                                    + ". Review storage.objects SELECT policies immediately.");
-                } else {
-                    add(out, "Storage permissions", "Private evidence bucket listing", "INCONCLUSIVE", "MEDIUM",
-                            "The server accepted the list request but returned an empty array. This does not demonstrate an object disclosure: the random prefix may match nothing, or row-level security may have filtered the results. A non-sensitive canary object in staging is needed to distinguish those cases. "
-                                    + responseEvidence(privateList));
-                }
-            } catch (Exception e) {
-                add(out, "Storage permissions", "Private evidence bucket listing", "INCONCLUSIVE", "LOW",
-                        "The storage service returned HTTP 200, but the response could not be parsed as a JSON listing. "
-                                + responseEvidence(privateList));
-            }
-        } else {
-            add(out, "Storage permissions", "Private evidence bucket listing", "INCONCLUSIVE", "LOW",
-                    "The storage-list request did not provide a conclusive policy result. "
-                            + responseEvidence(privateList)
-                            + ". A missing bucket/migration, rejected API key or request-format issue may explain the response.");
-        }
+        runStorageCanaryChecks(base, key, canaryObjectPath, out);
 
         runBoundedBurst(base, key, out);
         return out;
+    }
+
+    private static void runStorageCanaryChecks(String base, String key,
+                                                   String rawCanaryPath, List<Check> out) {
+        String objectPath = rawCanaryPath == null ? "" : rawCanaryPath.trim();
+        if (objectPath.isEmpty()) {
+            add(out, "Storage permissions", "Private evidence canary checks", "SKIP", "INFO",
+                    "No canary object path was supplied. Upload and verify a harmless canary in the staging Dashboard, then rerun this check.");
+            return;
+        }
+
+        if (!objectPath.matches("^security-lab-canary/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/canary[.]txt$")) {
+            add(out, "Storage permissions", "Private evidence canary path", "SKIP", "INFO",
+                    "The supplied path was not accepted. Use security-lab-canary/<UUID>/canary.txt. No storage requests were sent.");
+            return;
+        }
+
+        String prefix = objectPath.substring(0, objectPath.lastIndexOf('/'));
+        ApiResponse listing = stagingRequest(base, key, "POST",
+                "/storage/v1/object/list/fosch-submission-photos",
+                "{\"prefix\":\"" + prefix + "\",\"limit\":10,\"offset\":0}");
+        String listingBody = lower(listing.body);
+        boolean invalidCredentials = listingBody.contains("invalid api key")
+                || listingBody.contains("invalid jwt")
+                || listingBody.contains("jwt expired");
+        boolean explicitPolicyDenial = (listingBody.contains("row-level security")
+                || listingBody.contains("permission denied")
+                || listingBody.contains("not authorized")
+                || listingBody.contains("unauthorized")
+                || listingBody.contains("insufficient privilege")
+                || listingBody.contains("access denied"))
+                && !invalidCredentials;
+
+        if (listing.status == 200 && isJsonArray(listing.body)) {
+            try {
+                JSONArray entries = new JSONArray(listing.body);
+                if (entries.length() > 0) {
+                    add(out, "Storage permissions", "Private evidence canary listing", "FAIL", "HIGH",
+                            "The anonymous role received " + entries.length()
+                                    + " entry/entries beneath the confirmed canary folder. This demonstrates storage metadata-listing access; object names were not retained. "
+                                    + responseEvidence(listing)
+                                    + ". Review storage.objects SELECT policies.");
+                } else {
+                    add(out, "Storage permissions", "Private evidence canary listing", "PASS", "INFO",
+                            "The anonymous list request returned no entries beneath the canary folder. This is meaningful only because the operator confirmed that the exact canary object exists in the staging Dashboard before running the test. "
+                                    + responseEvidence(listing));
+                }
+            } catch (Exception e) {
+                add(out, "Storage permissions", "Private evidence canary listing", "INCONCLUSIVE", "LOW",
+                        "The list endpoint returned HTTP 200 but its JSON response could not be parsed. "
+                                + responseEvidence(listing));
+            }
+        } else if ((listing.status == 400 || listing.status == 401 || listing.status == 403)
+                && explicitPolicyDenial) {
+            add(out, "Storage permissions", "Private evidence canary listing", "PASS", "INFO",
+                    "The Storage service explicitly denied anonymous folder listing. "
+                            + responseEvidence(listing));
+        } else {
+            add(out, "Storage permissions", "Private evidence canary listing", "INCONCLUSIVE", "LOW",
+                    "The list request did not establish whether the canary folder is visible anonymously. Check that the canary exists and that the staging API key is valid. "
+                            + responseEvidence(listing));
+        }
+
+        ApiResponse download = stagingRequest(base, key, "GET",
+                "/storage/v1/object/authenticated/fosch-submission-photos/" + objectPath,
+                null);
+        String downloadBody = lower(download.body);
+        boolean downloadInvalidCredentials = downloadBody.contains("invalid api key")
+                || downloadBody.contains("invalid jwt")
+                || downloadBody.contains("jwt expired");
+        boolean downloadExplicitDenial = (downloadBody.contains("row-level security")
+                || downloadBody.contains("permission denied")
+                || downloadBody.contains("not authorized")
+                || downloadBody.contains("unauthorized")
+                || downloadBody.contains("access denied"))
+                && !downloadInvalidCredentials;
+
+        if (download.status == 200) {
+            add(out, "Storage permissions", "Private evidence canary download", "FAIL", "CRITICAL",
+                    "The anonymous role successfully retrieved the private canary object. The response bytes were discarded and not written to the report. "
+                            + responseEvidence(download)
+                            + ". Review storage.objects SELECT policies and confirm the bucket remains private.");
+        } else if ((download.status == 401 || download.status == 403
+                || download.status == 400) && downloadExplicitDenial) {
+            add(out, "Storage permissions", "Private evidence canary download", "PASS", "INFO",
+                    "The Storage service explicitly denied anonymous access to the confirmed canary object. "
+                            + responseEvidence(download));
+        } else {
+            add(out, "Storage permissions", "Private evidence canary download", "INCONCLUSIVE", "LOW",
+                    "The object request did not distinguish an access denial from an absent object or invalid API credentials. Confirm the canary exists and inspect the reported response details. "
+                            + responseEvidence(download));
+        }
     }
 
     private static void assessAnonymousRead(List<Check> out, String table, ApiResponse response) {
@@ -744,7 +793,9 @@ public final class SecurityAudit {
             connection.setUseCaches(false);
             connection.setInstanceFollowRedirects(false);
             connection.setRequestProperty("User-Agent", "FOSCH-Security-Lab/0.3.0");
-            connection.setRequestProperty("Accept", "application/json");
+            connection.setRequestProperty("Accept",
+                    path != null && path.contains("/object/authenticated/")
+                            ? "*/*" : "application/json");
             connection.setRequestProperty("apikey", key);
             // New publishable keys are opaque API keys, not JWT bearer tokens.
             // Legacy anon JWTs still work as both apikey and Authorization.
