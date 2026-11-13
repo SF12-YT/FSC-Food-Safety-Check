@@ -6,6 +6,7 @@ on:
     branches: [ "security-lab" ]
     paths:
       - "security-lab/**"
+      - "supabase/staging/**"
       - ".github/workflows/security-lab.yml"
 
 permissions:
@@ -38,5 +39,15 @@ jobs:
         with:
           name: FOSCH-Security-Lab-debug-APK
           path: security-lab/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Upload FOSCH staging setup files
+        uses: actions/upload-artifact@v7
+        with:
+          name: FOSCH-Staging-Setup
+          path: |
+            supabase/staging/fosch-staging-bootstrap.sql
+            supabase/staging/STAGING-SETUP.md
           if-no-files-found: error
           retention-days: 90
