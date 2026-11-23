@@ -24,8 +24,15 @@
     {key:"carbohydrate",label:"Carbohydrate"},{key:"sugars",label:"Sugar",subsectionLabel:"Sugar breakdown"},{key:"naturalSugar",label:"Natural Sugar",parent:"sugars"},{key:"addedSugar",label:"Added Sugar",parent:"sugars"},
     {key:"lactose",label:"Lactose",parent:"sugars"},{key:"galactose",label:"Galactose",parent:"sugars"},{key:"dietaryFibre",label:"Dietary fibre"},{key:"prebioticFibre",label:"Prebiotic fibre"},
     {key:"cholesterol",label:"Cholesterol"},{key:"sodium",label:"Sodium"},{key:"potassium",label:"Potassium"},{key:"calcium",label:"Calcium"},
-    {key:"phosphorus",label:"Phosphorus"},{key:"magnesium",label:"Magnesium"},{key:"iodine",label:"Iodine"},{key:"caffeine",label:"Caffeine"},
-    {key:"vitaminB2",label:"Vitamin B2"},{key:"vitaminB5",label:"Vitamin B5"},{key:"vitaminB12",label:"Vitamin B12"},{key:"vitaminC",label:"Vitamin C"},
+    {key:"phosphorus",label:"Phosphorus"},{key:"magnesium",label:"Magnesium"},{key:"iron",label:"Iron"},{key:"zinc",label:"Zinc"},
+    {key:"iodine",label:"Iodine"},{key:"caffeine",label:"Caffeine"},
+    {key:"vitaminA",label:"Vitamin A",category:"Vitamins"},{key:"vitaminB1",label:"Vitamin B1 (Thiamin)",category:"Vitamins"},
+    {key:"vitaminB2",label:"Vitamin B2 (Riboflavin)",category:"Vitamins"},{key:"vitaminB3",label:"Vitamin B3 (Niacin)",category:"Vitamins"},
+    {key:"vitaminB5",label:"Vitamin B5",category:"Vitamins"},{key:"vitaminB6",label:"Vitamin B6",category:"Vitamins"},
+    {key:"vitaminB9",label:"Vitamin B9 (Folate)",category:"Vitamins"},{key:"vitaminB12",label:"Vitamin B12",category:"Vitamins"},
+    {key:"vitaminC",label:"Vitamin C",category:"Vitamins"},{key:"vitaminD",label:"Vitamin D",category:"Vitamins"},
+    {key:"vitaminE",label:"Vitamin E",category:"Vitamins"},{key:"vitaminK",label:"Vitamin K",category:"Vitamins"},
+    {key:"biotin",label:"Biotin (B7)",category:"Vitamins"},
     {key:"liveCultures",label:"Live cultures",noDI:true}
   ];
   function formatAdminDateTime(value){
@@ -51,7 +58,8 @@
     return {servings:String(n.servings==null?"":n.servings),servingSize:String(n.servingSize==null?"":n.servingSize),
       perServing:normaliseAdminQuantityValues(n.perServing),
       dailyIntakePerServing:n.dailyIntakePerServing&&typeof n.dailyIntakePerServing==="object"?n.dailyIntakePerServing:{},
-      per100g:normaliseAdminQuantityValues(n.per100g)};
+      per100g:normaliseAdminQuantityValues(n.per100g),
+      autoPer100g:n.autoPer100g&&typeof n.autoPer100g==="object"?n.autoPer100g:{}};
   }
   function adminNutritionPopulated(n,f){
     return !!(String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim());
@@ -63,21 +71,28 @@
     return "<div class=\"admin-nutrition-edit-row\"><b class=\""+(f.parent?"admin-sub-nutrient":"admin-parent-nutrient")+"\">"+esc(f.label)+"</b>"+
       "<input class=\"field\" id=\"adminNutritionServing_"+f.key+"\" aria-label=\""+esc(f.label)+" per serving\" value=\""+esc(n.perServing[f.key]||"")+"\" placeholder=\"Per serving\">"+
       "<input class=\"field\" id=\"adminNutritionDI_"+f.key+"\" aria-label=\""+esc(f.label)+" daily intake\" value=\""+esc(n.dailyIntakePerServing[f.key]||"")+"\" placeholder=\""+(f.noDI?"Not applicable":"% DI")+"\" "+(f.noDI?"disabled":"")+">"+
-      "<input class=\"field\" id=\"adminNutrition100g_"+f.key+"\" aria-label=\""+esc(f.label)+" per 100 g\" value=\""+esc(n.per100g[f.key]||"")+"\" placeholder=\"Per 100 g\"></div>";
+      "<input class=\"field\" id=\"adminNutrition100g_"+f.key+"\" data-auto-filled=\""+(n.autoPer100g&&n.autoPer100g[f.key]?"true":"false")+"\" aria-label=\""+esc(f.label)+" per 100 g\" value=\""+esc(n.per100g[f.key]||"")+"\" placeholder=\"Per 100 g\"></div>";
   }
   function adminNutritionGroupedRows(n,editMode){
-    return NUTRITION_FIELDS.filter(function(f){return !f.parent}).map(function(f){
+    const categories=Array.from(new Set(NUTRITION_FIELDS.filter(function(f){return f.category}).map(function(f){return f.category})));
+    const regular=NUTRITION_FIELDS.filter(function(f){return !f.parent&&!f.category}).map(function(f){
       const children=NUTRITION_FIELDS.filter(function(child){return child.parent===f.key});
       const visibleChildren=editMode?children:children.filter(function(child){return adminNutritionPopulated(n,child)});
       const hasChildren=children.length&&(editMode||visibleChildren.length);
       const parentVisible=editMode||adminNutritionPopulated(n,f)||visibleChildren.length;
       const parentRow=parentVisible?(editMode?adminNutritionEditRow(f,n):adminNutritionViewRow(f,n)):"";
       const childRows=visibleChildren.map(function(child){return editMode?adminNutritionEditRow(child,n):adminNutritionViewRow(child,n)}).join("");
-      if(hasChildren){
-        return "<details class=\"admin-nutrition-subgroup\"><summary><div class=\"admin-nutrition-parent-row\">"+parentRow+"</div></summary><div class=\"admin-nutrition-subgrid\">"+childRows+"</div></details>";
-      }
+      if(hasChildren)return "<details class=\"admin-nutrition-subgroup\"><summary><div class=\"admin-nutrition-parent-row\">"+parentRow+"</div></summary><div class=\"admin-nutrition-subgrid\">"+childRows+"</div></details>";
       return parentRow;
     }).join("");
+    const grouped=categories.map(function(category){
+      const fields=NUTRITION_FIELDS.filter(function(f){return f.category===category});
+      const visible=editMode?fields:fields.filter(function(f){return adminNutritionPopulated(n,f)});
+      if(!visible.length)return "";
+      const rows=visible.map(function(f){return editMode?adminNutritionEditRow(f,n):adminNutritionViewRow(f,n)}).join("");
+      return "<details class=\"admin-nutrition-subgroup\"><summary>"+esc(category)+"</summary><div class=\"admin-nutrition-subgrid\">"+rows+"</div></details>";
+    }).join("");
+    return regular+grouped;
   }
   function nutritionMarkup(record){
     const product=nutritionProduct(record);
@@ -101,8 +116,8 @@
   }
   function readAdminNutritionFromForm(){
     const val=id=>{const el=document.getElementById(id);return el?String(el.value||"").trim():"";};
-    const n={servings:val("adminNutritionServings"),servingSize:val("adminNutritionServingSize"),perServing:{},dailyIntakePerServing:{},per100g:{}};
-    NUTRITION_FIELDS.forEach(f=>{n.perServing[f.key]=normaliseAdminMicrogramUnitText(val("adminNutritionServing_"+f.key));n.dailyIntakePerServing[f.key]=f.noDI?"":val("adminNutritionDI_"+f.key);n.per100g[f.key]=normaliseAdminMicrogramUnitText(val("adminNutrition100g_"+f.key));});
+    const n={servings:val("adminNutritionServings"),servingSize:val("adminNutritionServingSize"),perServing:{},dailyIntakePerServing:{},per100g:{},autoPer100g:{}};
+    NUTRITION_FIELDS.forEach(f=>{n.perServing[f.key]=normaliseAdminMicrogramUnitText(val("adminNutritionServing_"+f.key));n.dailyIntakePerServing[f.key]=f.noDI?"":val("adminNutritionDI_"+f.key);n.per100g[f.key]=normaliseAdminMicrogramUnitText(val("adminNutrition100g_"+f.key));const field=document.getElementById("adminNutrition100g_"+f.key);n.autoPer100g[f.key]=!!(field&&field.dataset.autoFilled==="true");});
     const has=!!(n.servings||n.servingSize||NUTRITION_FIELDS.some(f=>n.perServing[f.key]||n.dailyIntakePerServing[f.key]||n.per100g[f.key]));
     return has?n:null;
   }
