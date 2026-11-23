@@ -803,7 +803,15 @@
         status: "approved", admin_note: String(note).trim(), rejection_reason: "",
         audit_action: "submission_approved"
       }, String(note).trim()).then(async function () {
+        let cleanupError = null;
+        try {
+          if (!window.FOSCHCloud.cleanupApprovedSubmissionPhotos) throw new Error("The private photo cleanup function is not available in this build.");
+          await window.FOSCHCloud.cleanupApprovedSubmissionPhotos(item.record._remoteId);
+        } catch (error) {
+          cleanupError = String(error && error.message || error);
+        }
         await refreshRemoteData(); page = "adminDashboard"; render();
+        if (cleanupError) alert("The submission was approved, but its private evidence photos could not yet be deleted. " + cleanupError);
       }).catch(function (error) { alert("The shared submission could not be approved: " + String(error.message || error)); });
       return;
     }
