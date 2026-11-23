@@ -3,7 +3,7 @@ name: Build FOSCH Android APK
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "feature/contribution-overhaul-nov-2026" ]
 
 permissions:
   contents: read
