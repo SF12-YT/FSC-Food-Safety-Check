@@ -625,7 +625,6 @@ function showInformationPopup(message){
 window.alert=function(message){showInformationPopup(String(message==null?"":message))};
 document.addEventListener("error",function(event){const image=event.target;if(image&&image.tagName==="IMG"){image.hidden=true;image.style.display="none";image.removeAttribute("src")}},true);
 window.FOSCHNotifySubmissionReview=function(record,status){const name=String(record&&record.name||"Your product");const approved=String(status||"").toLowerCase()==="approved";showInformationPopup(approved?name+" has been approved.":name+" was not approved. "+String(record&&record.cloudReviewRejectionReason||"Check My Submissions for the review details."))};
-}
 function openInfoBubble(button){
  const overlay=button&&button.nextElementSibling;if(!overlay)return;
  document.querySelectorAll(".info-bubble-overlay:not([hidden])").forEach(function(item){if(item!==overlay)closeInfoBubble(item)});
