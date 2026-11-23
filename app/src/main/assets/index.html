@@ -622,6 +622,10 @@ function showInformationPopup(message){
  overlay.addEventListener("click",function(event){if(event.target===overlay)closeInfoBubble(overlay)});
  const close=overlay.querySelector(".info-bubble-close");if(close){close.addEventListener("click",function(){closeInfoBubble(overlay)});close.focus()}
 }
+window.alert=function(message){showInformationPopup(String(message==null?"":message))};
+document.addEventListener("error",function(event){const image=event.target;if(image&&image.tagName==="IMG"){image.hidden=true;image.style.display="none";image.removeAttribute("src")}},true);
+window.FOSCHNotifySubmissionReview=function(record,status){const name=String(record&&record.name||"Your product");const approved=String(status||"").toLowerCase()==="approved";showInformationPopup(approved?name+" has been approved.":name+" was not approved. "+String(record&&record.cloudReviewRejectionReason||"Check My Submissions for the review details."))};
+}
 function openInfoBubble(button){
  const overlay=button&&button.nextElementSibling;if(!overlay)return;
  document.querySelectorAll(".info-bubble-overlay:not([hidden])").forEach(function(item){if(item!==overlay)closeInfoBubble(item)});
@@ -652,32 +656,39 @@ function allergenComparisonKey(value){
   return word;
  }).join(" ");
 }
+function ingredientPhraseForAllergenHit(raw,start,end){
+ const text=String(raw||"");let stack=[];
+ for(let i=0;i<start;i++){const ch=text.charAt(i);if(ch==="("||ch==="[")stack.push({ch:ch,pos:i});else if(ch===")"&&stack[stack.length-1]&&stack[stack.length-1].ch==="(")stack.pop();else if(ch==="]"&&stack[stack.length-1]&&stack[stack.length-1].ch==="[")stack.pop()}
+ let scopeStart=0,scopeEnd=text.length,insideBracket=stack.length>0;
+ if(insideBracket){const open=stack[stack.length-1];scopeStart=open.pos+1;const close=open.ch==="("?")":"]";let depth=0;scopeEnd=text.length;for(let i=scopeStart;i<text.length;i++){const ch=text.charAt(i);if(ch===open.ch)depth++;else if(ch===close){if(depth===0){scopeEnd=i;break}depth--}}}
+ let segmentStart=scopeStart;const openStack=[];
+ for(let i=scopeStart;i<start;i++){const ch=text.charAt(i);if(ch==="("||ch==="[")openStack.push(ch);else if(ch===")"&&openStack[openStack.length-1]==="(")openStack.pop();else if(ch==="]"&&openStack[openStack.length-1]==="[")openStack.pop();else if((ch===","||ch===";")&&openStack.length===0)segmentStart=i+1}
+ const closeStack=[];let segmentEnd=scopeEnd;
+ for(let i=end;i<scopeEnd;i++){const ch=text.charAt(i);if(ch==="("||ch==="[")closeStack.push(ch);else if(ch===")"&&closeStack[closeStack.length-1]==="(")closeStack.pop();else if(ch==="]"&&closeStack[closeStack.length-1]==="[")closeStack.pop();else if((ch===","||ch===";")&&closeStack.length===0){segmentEnd=i;break}}
+ let phrase=text.slice(segmentStart,segmentEnd).trim();
+ if(!insideBracket)phrase=phrase.replace(/\s*[([][^()[\]]*[)\]]/g,"").trim();
+ return phrase||text.slice(start,end);
+}
 function detectPotentialAllergens(raw){
  const text=String(raw||"");
  return POTENTIAL_ALLERGEN_TERMS.map(group=>{
-  const matches=[];
-  const terms=group.terms.slice().sort((a,b)=>normaliseIngredientName(b).length-normaliseIngredientName(a).length);
-  terms.forEach(term=>{
-   const range=normalizedPhraseRange(text,term);if(!range)return;
-   if(matches.some(hit=>range.start<hit.end&&range.end>hit.start))return;
-   matches.push({term,matchedText:text.slice(range.start,range.end),start:range.start,end:range.end});
-  });
-  const unique=new Map();
-  matches.forEach(hit=>{const key=allergenComparisonKey(hit.matchedText||hit.term);if(!unique.has(key))unique.set(key,hit.matchedText||hit.term)});
+  const matches=[];const terms=group.terms.slice().sort((a,b)=>normaliseIngredientName(b).length-normaliseIngredientName(a).length);
+  terms.forEach(term=>{const range=normalizedPhraseRange(text,term);if(!range)return;if(matches.some(hit=>range.start<hit.end&&range.end>hit.start))return;matches.push({term,phrase:ingredientPhraseForAllergenHit(text,range.start,range.end),start:range.start,end:range.end})});
+  const unique=new Map();matches.forEach(hit=>{const key=allergenComparisonKey(hit.phrase);if(!unique.has(key))unique.set(key,hit.phrase)});
   return unique.size?{label:group.label,matches:Array.from(unique.values())}:null;
  }).filter(Boolean);
 }
 function renderPotentialAllergens(ingredients,mayContain){
  const direct=detectPotentialAllergens(ingredients),precautionary=detectPotentialAllergens(mayContain);
  if(!direct.length&&!precautionary.length)return "";
- const line=items=>items.map(x=>x.matches.map(term=>{
-  const display=String(term).replace(/(^|\s)([a-z])/g,(_,space,letter)=>space+letter.toUpperCase());
-  return allergenComparisonKey(display)===allergenComparisonKey(x.label)?esc(x.label):esc(display)+" ("+esc(x.label)+")";
+ const line=items=>items.map(x=>x.matches.map(phrase=>{
+  const display=String(phrase).replace(/(^|\s)([a-z])/g,(_,space,letter)=>space+letter.toUpperCase());
+  return allergenComparisonKey(display)===allergenComparisonKey(x.label)?esc(x.label):esc(display)+" — "+esc(x.label);
  }).join(", ")).join(" · ");
  const body=(direct.length?'<p><b>In ingredients:</b> '+line(direct)+'</p>':"")+
   (precautionary.length?'<p><b>In May Contain:</b> '+line(precautionary)+'</p>':"")+
   '<p class="muted">These are possible wording matches, not a confirmed allergen assessment. Check the full package label.</p>';
- return renderInfoBubble("Potential allergen matches",body);
+ return renderInfoBubble("Potential Allergen(s)",body);
 }
 function renderMayContain(value){
  const text=String(value||"").trim();
@@ -1106,7 +1117,7 @@ function cloudUploadStateLabel(record){
 }
 function submissionStatusInfo(record){if(!record)return null;let status=String(record.cloudReviewStatus||"").toLowerCase();if(!status&&isRejectedRecord(record))status="rejected";if(status==="approved"||status==="approved-cloud")return {label:"Accepted",className:"accepted"};if(status==="rejected"||status==="rejected-cloud")return {label:"Rejected",className:"rejected"};if(status==="pending"||status==="pending-cloud"||hasCloudSubmission(record))return {label:"Pending",className:"pending"};return null;}
 function renderSubmissionStatusBubble(record){const info=submissionStatusInfo(record);return info?'<span class="submission-status-pill '+info.className+'" aria-label="Submission status: '+info.label+'">'+info.label+'</span>':"";}
-function cloudRejectionNoticeMarkup(record){if(!record||String(record.cloudReviewStatus||"").toLowerCase()!=="rejected")return "";return '<div class="warning" role="status"><b>Administrator rejection reason</b><p>'+esc(record.cloudReviewRejectionReason||"No reason was provided.")+'</p></div>';}
+function cloudRejectionNoticeMarkup(record){if(!record)return "";const status=String(record.cloudReviewStatus||"").toLowerCase();if(status==="approved")return '<div class="success" role="status"><b>Submission approved</b><p>Your product contribution has been accepted.</p></div>';if(status==="rejected")return '<div class="warning" role="status"><b>Administrator rejection reason</b><p>'+esc(record.cloudReviewRejectionReason||"No reason was provided.")+'</p></div>';return "";}
 function renderContributionDrafts(){if(!contributions.length)return "";return '<div class="section-title">Product contributions ('+contributions.length+')</div>'+contributions.map(function(c,i){const photo=photoArrayForRecord(c).slice(0,1).map(function(p){return '<img class="photo-thumb" src="'+p+'" alt="Saved product evidence photo" style="display:inline-block;margin:8px 6px 0 0">'}).join("");const rejected=isRejectedRecord(c);const submitted=hasCloudSubmission(c);const statusInfo=submissionStatusInfo(c);const status=rejected?"Rejected":(submitted?"Submitted · "+(statusInfo?statusInfo.label:"Awaiting status"):cloudUploadStateLabel(c));return '<button type="button" class="draft-card" onclick="viewContributionDraft('+i+')"><span class="submission-card-heading"><span class="draft-title">'+esc(c.name||"Unnamed product")+'</span>'+renderSubmissionStatusBubble(c)+'</span>'+(c.brand?'<span class="draft-meta">'+esc(c.brand)+'</span>':"")+((c.sizeLabel||c.size)?'<span class="draft-meta">Package size: '+esc(c.sizeLabel||c.size)+'</span>':"")+((c.producedIn||c.madeIn||c.origin||c.producedInPercentage!==undefined&&c.producedInPercentage!=="")?'<span class="draft-meta">Produced in / Made in: '+esc(c.producedIn||c.madeIn||c.origin||"Country not stated")+(c.producedInPercentage!==undefined&&c.producedInPercentage!==""?' · '+esc(c.producedInPercentage)+'%':"")+'</span>':"")+'<span class="muted ingredient-list">'+esc(c.ingredients||c.codes||"")+'</span><span class="draft-meta">'+esc(c.barcode||"No barcode saved")+' · '+status+'</span>'+(rejected?'<span class="draft-meta">Rejection reason: '+esc(c.rejectionReason||"Not provided")+'</span>':"")+(c.cloudSyncError?'<span class="draft-meta">Upload error: '+esc(c.cloudSyncError)+'</span>':"")+(String(c.cloudReviewStatus||"").toLowerCase()==="rejected"?'<span class="draft-meta">Rejection reason: '+esc(c.cloudReviewRejectionReason||"Not provided")+'</span>':"")+'<div>'+photo+'</div><span class="draft-meta">Open product ›</span></button>'}).join("")}
 function makeDraftId(){return "draft-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,9)}
 function viewContributionDraft(index){const c=contributions[index];if(!c)return;if(!c.id){c.id=makeDraftId();save()}viewingDraftId=c.id;page="draftDetail";render()}
