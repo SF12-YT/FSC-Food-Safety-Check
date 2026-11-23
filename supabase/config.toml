@@ -2,3 +2,5 @@ project_id = "mqgvagftvuybietazbdc"
 
 [functions.fosch-media]
 verify_jwt = true
+[functions.fosch-submission-photo-cleanup]
+verify_jwt = true
