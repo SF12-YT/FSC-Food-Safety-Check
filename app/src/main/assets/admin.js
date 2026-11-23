@@ -282,6 +282,7 @@
           name: row.product_name || payload.name || payload.target || "",
           sizeLabel: row.package_size || payload.sizeLabel || "",
           ingredients: row.ingredients || payload.ingredients || "",
+          cultures: payload.cultures || "",
           country: row.country_code || payload.country || "",
           photos: Array.isArray(row.photo_paths) ? row.photo_paths : []
         });
@@ -505,6 +506,7 @@
       "<span class=\"admin-submission-meta\">" + esc(record.date ? formatAdminDateTime(record.date) : "Date not recorded") + "</span></button>" +
       "<span class=\"admin-status " + (isApproved(record) ? "approved" : "") + "\">" + esc(status) + "</span></div>" +
       officialPhotosMarkup + imagePreview(record) + rejectionDetails + localSyncMessage + nutritionMarkup(record) +
+      ((record.cultures || (record.suggestedProduct && record.suggestedProduct.cultures)) ? "<div class=\"admin-submission-meta\"><b>Cultures / microorganisms:</b> " + esc(record.cultures || record.suggestedProduct.cultures) + "</div>" : "") +
       "<div class=\"admin-submission-meta\">" + esc(record.ingredients || (record.suggestedProduct && record.suggestedProduct.ingredients) || record.message || "No ingredient details supplied") + "</div>" +
       "<div class=\"admin-action-grid\">" + approveButton +
       "<button type=\"button\" class=\"secondary\" onclick=\"FOSCHAdmin.edit('" + type + "',decodeURIComponent('" + id + "'))\">Edit submission</button>" +
@@ -706,6 +708,7 @@
         "<label for=\"adminEditBarcode\">Barcode</label><input id=\"adminEditBarcode\" class=\"field\" value=\"" + esc(product.barcode || record.barcode || "") + "\">" +
         "<label for=\"adminEditSize\">Package size</label><input id=\"adminEditSize\" class=\"field\" value=\"" + esc(product.sizeLabel || product.size || "") + "\">" +
         "<label for=\"adminEditIngredients\">Ingredients</label><textarea id=\"adminEditIngredients\" class=\"field\" rows=\"5\">" + esc(product.ingredients || "") + "</textarea>" +
+        "<label for=\"adminEditCultures\">Cultures / microorganisms</label><textarea id=\"adminEditCultures\" class=\"field\" rows=\"2\">" + esc(product.cultures || "") + "</textarea>" +
         "<label for=\"adminEditOrigin\">Produced in / Made in</label><input id=\"adminEditOrigin\" class=\"field\" value=\"" + esc(product.producedIn || "") + "\">" +
         "<label for=\"adminEditOriginPercentage\">Country-of-origin percentage</label><input id=\"adminEditOriginPercentage\" class=\"field\" value=\"" + esc(product.producedInPercentage == null ? "" : product.producedInPercentage) + "\">" +
         nutritionEditorMarkup(product)
@@ -926,11 +929,12 @@
       product.barcode = String((document.getElementById("adminEditBarcode") || {}).value || "").trim();
       product.sizeLabel = String((document.getElementById("adminEditSize") || {}).value || "").trim();
       product.ingredients = String((document.getElementById("adminEditIngredients") || {}).value || "").trim();
+      product.cultures = String((document.getElementById("adminEditCultures") || {}).value || "").trim();
       product.producedIn = String((document.getElementById("adminEditOrigin") || {}).value || "").trim();
       product.producedInPercentage = String((document.getElementById("adminEditOriginPercentage") || {}).value || "").trim();
       product.nutritionInfo = readAdminNutritionFromForm();
       if (item.kind === "correction") record.suggestedProduct = product;
-      Object.assign(record, { brand: product.brand, name: product.name, barcode: product.barcode, sizeLabel: product.sizeLabel, ingredients: product.ingredients });
+      Object.assign(record, { brand: product.brand, name: product.name, barcode: product.barcode, sizeLabel: product.sizeLabel, ingredients: product.ingredients, cultures: product.cultures });
       if (item.kind !== "correction") {
         record.producedIn = product.producedIn;
         record.producedInPercentage = product.producedInPercentage;
