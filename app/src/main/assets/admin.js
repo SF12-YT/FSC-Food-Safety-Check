@@ -959,13 +959,13 @@
         if (item.kind === "correction" && payload.suggestedProduct) {
           payload.suggestedProduct = Object.assign({}, payload.suggestedProduct, {
             brand: product.brand, name: product.name, barcode: product.barcode,
-            sizeLabel: product.sizeLabel, ingredients: product.ingredients, producedIn: product.producedIn,
+            sizeLabel: product.sizeLabel, ingredients: product.ingredients, cultures: product.cultures, producedIn: product.producedIn,
             producedInPercentage: product.producedInPercentage, nutritionInfo: product.nutritionInfo
           });
         } else {
           Object.assign(payload, {
             brand: product.brand, name: product.name, barcode: product.barcode,
-            sizeLabel: product.sizeLabel, ingredients: product.ingredients, producedIn: product.producedIn,
+            sizeLabel: product.sizeLabel, ingredients: product.ingredients, cultures: product.cultures, producedIn: product.producedIn,
             producedInPercentage: product.producedInPercentage, nutritionInfo: product.nutritionInfo
           });
         }
