@@ -962,47 +962,68 @@ const nutritionNutrients=[
  {key:"calcium",label:"Calcium",placeholder:"e.g. 130 mg"},
  {key:"phosphorus",label:"Phosphorus",placeholder:"e.g. 100 mg"},
  {key:"magnesium",label:"Magnesium",placeholder:"e.g. 35 mg"},
- {key:"iodine",label:"Iodine",placeholder:"e.g. 20 µg"},
+ {key:"iron",label:"Iron",placeholder:"e.g. 2 mg"},
+ {key:"zinc",label:"Zinc",placeholder:"e.g. 1.5 mg"},
+ {key:"iodine",label:"Iodine",placeholder:"e.g. 20 mcg",microgram:true},
  {key:"caffeine",label:"Caffeine",placeholder:"e.g. 80 mg"},
- {key:"vitaminB2",label:"Vitamin B2",placeholder:"e.g. 0.2 mg"},
- {key:"vitaminB5",label:"Vitamin B5",placeholder:"e.g. 1 mg"},
- {key:"vitaminB12",label:"Vitamin B12",placeholder:"e.g. 0.5 µg"},
- {key:"vitaminC",label:"Vitamin C",placeholder:"e.g. 60 mg"},
+ {key:"vitaminA",label:"Vitamin A",placeholder:"e.g. 750 mcg",category:"Vitamins",microgram:true},
+ {key:"vitaminB1",label:"Vitamin B1 (Thiamin)",placeholder:"e.g. 0.2 mg",category:"Vitamins"},
+ {key:"vitaminB2",label:"Vitamin B2 (Riboflavin)",placeholder:"e.g. 0.2 mg",category:"Vitamins"},
+ {key:"vitaminB3",label:"Vitamin B3 (Niacin)",placeholder:"e.g. 3 mg",category:"Vitamins"},
+ {key:"vitaminB5",label:"Vitamin B5",placeholder:"e.g. 1 mg",category:"Vitamins"},
+ {key:"vitaminB6",label:"Vitamin B6",placeholder:"e.g. 0.3 mg",category:"Vitamins"},
+ {key:"vitaminB9",label:"Vitamin B9 (Folate)",placeholder:"e.g. 100 mcg",category:"Vitamins",microgram:true},
+ {key:"vitaminB12",label:"Vitamin B12",placeholder:"e.g. 0.5 mcg",category:"Vitamins",microgram:true},
+ {key:"vitaminC",label:"Vitamin C",placeholder:"e.g. 60 mg",category:"Vitamins"},
+ {key:"vitaminD",label:"Vitamin D",placeholder:"e.g. 5 mcg",category:"Vitamins",microgram:true},
+ {key:"vitaminE",label:"Vitamin E",placeholder:"e.g. 2 mg",category:"Vitamins"},
+ {key:"vitaminK",label:"Vitamin K",placeholder:"e.g. 25 mcg",category:"Vitamins",microgram:true},
+ {key:"biotin",label:"Biotin (B7)",placeholder:"e.g. 10 mcg",category:"Vitamins",microgram:true},
  {key:"liveCultures",label:"Live cultures",placeholder:"e.g. 1 × 10⁹ CFU",noDI:true}
 ]
-;
 function nutritionFieldHasValue(n,f){return !!(String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim())}
 function nutritionInputFieldMarkup(f,n){
  return '<div class="nutrient-name '+(f.indent?'sub-nutrient':'parent-nutrient')+'">'+esc(f.label)+'</div>'+
- '<input id="nutritionServing_'+f.key+'" class="field" aria-label="'+esc(f.label)+' quantity per serving" value="'+esc(n.perServing[f.key]||'')+'" placeholder="'+esc(f.placeholder)+'" autocomplete="off">'+
+ '<input id="nutritionServing_'+f.key+'" data-nutrition-role="per-serving" data-nutrition-key="'+f.key+'" '+(f.microgram?'data-microgram-help="true"':'')+' class="field" aria-label="'+esc(f.label)+' quantity per serving" value="'+esc(n.perServing[f.key]||'')+'" placeholder="'+esc(f.placeholder)+'" autocomplete="off">'+
  '<input id="nutritionDI_'+f.key+'" class="field" aria-label="'+esc(f.label)+' percent daily intake per serving" value="'+esc(n.dailyIntakePerServing[f.key]||'')+'" placeholder="'+(f.noDI?'Not applicable':'e.g. 5% or &lt;0.1%')+'" '+(f.noDI?'disabled':'')+' autocomplete="off">'+
- '<input id="nutritionPer100g_'+f.key+'" class="field" aria-label="'+esc(f.label)+' quantity per 100 g" value="'+esc(n.per100g[f.key]||'')+'" placeholder="'+esc(f.placeholder)+'" autocomplete="off">';
+ '<input id="nutritionPer100g_'+f.key+'" data-nutrition-role="per-100g" data-nutrition-key="'+f.key+'" data-auto-filled="'+(n.autoPer100g&&n.autoPer100g[f.key]?'true':'false')+'" class="field" aria-label="'+esc(f.label)+' quantity per 100 g" value="'+esc(n.per100g[f.key]||'')+'" placeholder="'+esc(f.placeholder)+'" autocomplete="off">';
+}
+function nutritionCategoryRowsMarkup(n,category,readOnly){
+ const fields=nutritionNutrients.filter(f=>f.category===category);
+ const visible=readOnly?fields.filter(f=>nutritionFieldHasValue(n,f)):fields;
+ if(!visible.length)return '';
+ const rows=visible.map(f=>readOnly?nutritionReadFieldMarkup(f,n):nutritionInputFieldMarkup(f,n)).join('');
+ return '<details class="nutrition-subsection nutrition-category"><summary>'+esc(category)+'</summary><div class="nutrition-subgrid '+(readOnly?'nutrition-subgrid-read':'')+'">'+rows+'</div></details>';
 }
 function nutritionInputRowsMarkup(n){
- return nutritionNutrients.filter(f=>!f.parent).map(function(f){
+ const categories=Array.from(new Set(nutritionNutrients.filter(f=>f.category).map(f=>f.category)));
+ const regular=nutritionNutrients.filter(f=>!f.parent&&!f.category).map(function(f){
   const children=nutritionNutrients.filter(child=>child.parent===f.key);
   const parentRow=nutritionInputFieldMarkup(f,n);
   if(!children.length)return parentRow;
   return '<details class="nutrition-subsection"><summary><div class="nutrition-parent-row">'+parentRow+'</div></summary><div class="nutrition-subgrid">'+children.map(child=>nutritionInputFieldMarkup(child,n)).join('')+'</div></details>';
  }).join('');
+ return regular+categories.map(category=>nutritionCategoryRowsMarkup(n,category,false)).join('');
 }
 function nutritionReadFieldMarkup(f,n){
  return '<div class="nutrient-name '+(f.indent?'sub-nutrient':'parent-nutrient')+'">'+esc(f.label)+'</div><div>'+esc(n.perServing[f.key]||'—')+'</div><div>'+(f.noDI?'Not applicable':esc(n.dailyIntakePerServing[f.key]||'—'))+'</div><div>'+esc(n.per100g[f.key]||'—')+'</div>';
 }
 function nutritionReadRowsMarkup(n){
- return nutritionNutrients.filter(f=>!f.parent).map(function(f){
+ const categories=Array.from(new Set(nutritionNutrients.filter(f=>f.category).map(f=>f.category)));
+ const regular=nutritionNutrients.filter(f=>!f.parent&&!f.category).map(function(f){
   const children=nutritionNutrients.filter(child=>child.parent===f.key&&nutritionFieldHasValue(n,child));
   const parentHas=nutritionFieldHasValue(n,f);
   const parentRow=(parentHas||children.length)?nutritionReadFieldMarkup(f,n):'';
   if(children.length)return '<details class="nutrition-subsection"><summary><div class="nutrition-parent-row">'+parentRow+'</div></summary><div class="nutrition-subgrid nutrition-subgrid-read">'+children.map(child=>nutritionReadFieldMarkup(child,n)).join('')+'</div></details>';
   return parentRow;
  }).join('');
+ return regular+categories.map(category=>nutritionCategoryRowsMarkup(n,category,true)).join('');
 }
 ;
-function emptyNutritionInfo(){return {servings:"",servingSize:"",perServing:{},dailyIntakePerServing:{},per100g:{}}}
+function emptyNutritionInfo(){return {servings:"",servingSize:"",perServing:{},dailyIntakePerServing:{},per100g:{},autoPer100g:{}}}
 function normaliseMicrogramUnitText(value){return String(value==null?"":value).replace(/\b(?:mcg|ug|micrograms?|microgrammes?)\b/gi,"µg").replace(/[μµ]\s*g\b/gi,"µg")}
-function normaliseNutritionInfo(value){if(!value||typeof value!=="object"||Array.isArray(value))return emptyNutritionInfo();const textValues=(source,normaliseUnits)=>{const result={...(source&&typeof source==="object"&&!Array.isArray(source)?source:{})};Object.keys(result).forEach(key=>{const text=result[key]===null||result[key]===undefined?"":String(result[key]);result[key]=normaliseUnits?normaliseMicrogramUnitText(text):text});return result};return {...emptyNutritionInfo(),...value,servings:String(value.servings??""),servingSize:String(value.servingSize??""),perServing:textValues(value.perServing,true),dailyIntakePerServing:textValues(value.dailyIntakePerServing,false),per100g:textValues(value.per100g,true)}}
-function collectNutritionInfoFromForm(){const val=id=>{const el=document.getElementById(id);return el?String(el.value||"").trim():""};const info={servings:val("nutritionServings"),servingSize:val("nutritionServingSize"),perServing:{},dailyIntakePerServing:{},per100g:{}};nutritionNutrients.forEach(f=>{info.perServing[f.key]=val("nutritionServing_"+f.key);info.dailyIntakePerServing[f.key]=val("nutritionDI_"+f.key);info.per100g[f.key]=val("nutritionPer100g_"+f.key)});const has=!!(info.servings||info.servingSize||nutritionNutrients.some(f=>info.perServing[f.key]||info.dailyIntakePerServing[f.key]||info.per100g[f.key]));return has?info:null}
+function normaliseNutritionInfo(value){if(!value||typeof value!=="object"||Array.isArray(value))return emptyNutritionInfo();const textValues=(source,normaliseUnits)=>{const result={...(source&&typeof source==="object"&&!Array.isArray(source)?source:{})};Object.keys(result).forEach(key=>{const text=result[key]===null||result[key]===undefined?"":String(result[key]);result[key]=normaliseUnits?normaliseMicrogramUnitText(text):text});return result};return {...emptyNutritionInfo(),...value,servings:String(value.servings??""),servingSize:String(value.servingSize??""),perServing:textValues(value.perServing,true),dailyIntakePerServing:textValues(value.dailyIntakePerServing,false),per100g:textValues(value.per100g,true),autoPer100g:{...(value.autoPer100g&&typeof value.autoPer100g==="object"&&!Array.isArray(value.autoPer100g)?value.autoPer100g:{})}}}
+function collectNutritionInfoFromForm(){const val=id=>{const el=document.getElementById(id);return el?String(el.value||"").trim():""};const info={servings:val("nutritionServings"),servingSize:val("nutritionServingSize"),perServing:{},dailyIntakePerServing:{},per100g:{},autoPer100g:{}};nutritionNutrients.forEach(f=>{info.perServing[f.key]=val("nutritionServing_"+f.key);info.dailyIntakePerServing[f.key]=val("nutritionDI_"+f.key);const field=document.getElementById("nutritionPer100g_"+f.key);info.per100g[f.key]=field?String(field.value||"").trim():"";info.autoPer100g[f.key]=!!(field&&field.dataset.autoFilled==="true")});const has=!!(info.servings||info.servingSize||nutritionNutrients.some(f=>info.perServing[f.key]||info.dailyIntakePerServing[f.key]||info.per100g[f.key]));return has?info:null}
 function nutritionInfoForDraftSave(){const state=contributionFormState||prefillProduct||{};if(document.getElementById("nutritionServings"))return collectNutritionInfoFromForm();if(Object.prototype.hasOwnProperty.call(state,"nutritionInfo"))return state.nutritionInfo||null;if(Object.prototype.hasOwnProperty.call(state,"nutrition"))return state.nutrition||null;return collectNutritionInfoFromForm()}
 function hasNutritionInfo(value){const n=normaliseNutritionInfo(value);return !!(n.servings||n.servingSize||nutritionNutrients.some(f=>String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim()))}
 function openNutritionForm(){contributionFormState=readContributionFormState();page="nutritionForm";render()}
