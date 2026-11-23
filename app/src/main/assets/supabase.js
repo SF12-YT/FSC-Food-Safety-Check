@@ -525,6 +525,8 @@
         if (!record || !["pending", "approved", "rejected"].includes(String(row.status || ""))) return;
         const reason = String(row.rejection_reason || "");
         const reviewedAt = String(row.reviewed_at || row.updated_at || "");
+        const previousReviewStatus = String(record.cloudReviewStatus || "").toLowerCase();
+        const wasPending = previousReviewStatus === "pending" || String(record.status || "").toLowerCase() === "pending-cloud";
         const nextLocalStatus = row.status === "approved" ? "approved-cloud" :
           (row.status === "rejected" ? "rejected-cloud" : "pending-cloud");
         const localStatusChanged = String(record.status || "") !== nextLocalStatus;
@@ -539,6 +541,12 @@
         record.status = nextLocalStatus;
         record.cloudReviewRejectionReason = reason;
         record.cloudReviewAt = reviewedAt;
+        if (row.status === "approved") {
+          // Private label-evidence photos are not retained in the contributor's local view.
+          record.photos = [];
+          record.photo = "";
+          record.cloudPhotoPaths = [];
+        }
 
         // Approval must also promote the product into this device's approved market
         // index. This is idempotent, so it is safe to run on every status refresh.
@@ -553,6 +561,11 @@
         if (reviewChanged || localStatusChanged) {
           persistLocalRecord(record, storageKey);
           changed++;
+        }
+        if (wasPending && previousReviewStatus !== row.status && row.status !== "pending" &&
+            typeof window.FOSCHNotifySubmissionReview === "function") {
+          try { window.FOSCHNotifySubmissionReview(record, row.status); }
+          catch (notificationError) { console.warn("FOSCH could not display the submission review notification:", notificationError); }
         }
       });
     }
@@ -671,6 +684,16 @@
     }));
   }
 
+  async function cleanupApprovedSubmissionPhotos(id) {
+    if (!isAdmin()) throw new Error("Administrator sign-in is required to clean up submitted photos.");
+    const submissionId = String(id || "");
+    if (!/^[0-9a-f-]{36}$/i.test(submissionId)) throw new Error("The submission ID is invalid.");
+    const result = await api("POST", "/functions/v1/fosch-submission-photo-cleanup",
+      JSON.stringify({ submission_id: submissionId }));
+    if (!result || result.ok !== true) throw new Error("The server did not confirm deletion of the submitted photos.");
+    return result;
+  }
+
   async function logAdminEvent(action, details) {
     return api("POST", "/rest/v1/rpc/admin_log_event", JSON.stringify({
       p_action: String(action || ""),
@@ -700,6 +723,7 @@
     publicBrandLogoUrl: function (brand) { try { const path=brandLogoPath(brand),base=String(window.FOSCHR2PublicUrl||"").replace(/\/+$/,""); return base?base+"/"+path:publicMediaUrl(path); } catch (ignored) { return ""; } },
     getPublishedProductMedia: getPublishedProductMedia,
     adminDeleteSubmission: adminDeleteSubmission,
+    cleanupApprovedSubmissionPhotos: cleanupApprovedSubmissionPhotos,
     logAdminEvent: logAdminEvent
   };
 
