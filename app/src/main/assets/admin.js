@@ -61,7 +61,7 @@
       per100g:normaliseAdminQuantityValues(n.per100g),
       autoPer100g:n.autoPer100g&&typeof n.autoPer100g==="object"?n.autoPer100g:{}};
   }
-  function adminNutritionBasisLabel(value){const match=String(value||"").trim().match(/^([0-9]+(?:[.,][0-9]+)?\\s*(?:ml|millilitres?|milliliters?))$/i);return match?"100 mL":"100 g"}
+  function adminNutritionBasisLabel(value){const match=String(value||"").trim().match(/^[0-9]+(?:[.,][0-9]+)? *(?:ml|millilitres?|milliliters?)$/i);return match?"100 mL":"100 g"}
   function adminNutritionPopulated(n,f){
     return !!(String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim());
   }
