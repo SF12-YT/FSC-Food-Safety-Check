@@ -251,6 +251,19 @@ html[data-theme=dark],html[data-theme=dark] body{background:#000000!important}
 .info-bubble-button{display:inline-grid!important;place-items:center!important;width:24px!important;height:24px!important;min-width:24px!important;padding:0!important;margin:0!important;border:1px solid var(--dropdown-border)!important;border-radius:50%!important;background:var(--panel)!important;color:var(--muted)!important;font-size:14px!important;font-weight:750!important;line-height:1!important;box-shadow:none!important;appearance:none!important;-webkit-appearance:none!important}
 .info-bubble-button:focus{outline:2px solid var(--blue)!important;outline-offset:2px!important}
 .info-bubble-button:active{background:var(--blue2)!important;color:var(--blue)!important}
+.info-heading-row{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}
+.info-heading-row>b{display:block;font-size:13px;margin:0;min-width:0}
+.info-heading-row .info-bubble{margin:0!important;flex:0 0 auto}
+.page-title-info{margin:4px 2px 10px}
+.page-title-info h1{margin:0;font-size:22px;line-height:1.15}
+.field-label-info-row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.field-label-info-row label{margin:12px 0 6px;min-width:0}
+.field-label-info-row .info-bubble{margin:0 0 0 auto!important;flex:0 0 auto}
+.browse-all-info-row{width:100%;display:flex;align-items:center;gap:8px;padding:0 15px;margin:14px 0;border:1px solid var(--line);border-radius:15px;background:var(--panel);min-height:52px}
+.browse-all-info-row .browse-all-label{flex:1;min-width:0;width:auto;margin:0;padding:15px 0;background:transparent!important;border:0!important;color:var(--text);font-weight:750;text-align:left}
+.browse-all-info-row .info-bubble{margin:0!important;flex:0 0 auto}
+.browse-all-info-row .browse-all-next{flex:0 0 auto;padding:8px 0 8px 4px;background:transparent!important;border:0!important;color:var(--blue);font-size:22px;line-height:1}
+.nutrition-category>summary{font-size:12px!important;font-weight:650!important}
 
 /* v0.10.60 nutrition groups, claims disclosure and nitrate grouping. */
 .nutrition-table,.nutrition-read-table{grid-template-columns:minmax(0,1.1fr) repeat(3,minmax(0,1fr))}
@@ -614,6 +627,7 @@ function renderInfoBubble(title,body){
  const content=String(body||"").trim();if(!content)return "";
  return `<span class="info-bubble"><button class="info-bubble-button" type="button" aria-label="${esc(title)} information" onclick="openInfoBubble(this)">i</button><div class="info-bubble-overlay" hidden onclick="closeInfoBubble(this)"><section class="info-bubble-dialog" role="dialog" aria-modal="true" aria-label="${esc(title)}" onclick="event.stopPropagation()"><button class="info-bubble-close" type="button" aria-label="Close information" onclick="closeInfoBubble(this.closest('.info-bubble-overlay'))">×</button><b>${esc(title)}</b><div class="info-bubble-content">${content}</div></section></div></span>`;
 }
+function renderInfoHeading(label,title,body){return '<div class="info-heading-row"><b>'+esc(label)+'</b>'+renderInfoBubble(title||label,body)+'</div>'}
 function showInformationPopup(message){
  document.querySelectorAll(".info-message-overlay").forEach(function(item){item.remove()});
  const overlay=document.createElement("div");overlay.className="info-bubble-overlay info-message-overlay";
