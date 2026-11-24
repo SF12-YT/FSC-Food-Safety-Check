@@ -25,14 +25,14 @@
     {key:"lactose",label:"Lactose",parent:"sugars"},{key:"galactose",label:"Galactose",parent:"sugars"},{key:"dietaryFibre",label:"Dietary fibre"},{key:"prebioticFibre",label:"Prebiotic fibre"},
     {key:"cholesterol",label:"Cholesterol"},{key:"sodium",label:"Sodium"},{key:"potassium",label:"Potassium"},{key:"calcium",label:"Calcium"},
     {key:"phosphorus",label:"Phosphorus"},{key:"magnesium",label:"Magnesium"},{key:"iron",label:"Iron"},{key:"zinc",label:"Zinc"},
-    {key:"iodine",label:"Iodine"},{key:"caffeine",label:"Caffeine"},
-    {key:"vitaminA",label:"Vitamin A",category:"Vitamins"},{key:"vitaminB1",label:"Vitamin B1 (Thiamin)",category:"Vitamins"},
+    {key:"iodine",label:"Iodine",microgram:true},{key:"caffeine",label:"Caffeine"},
+    {key:"vitaminA",label:"Vitamin A",category:"Vitamins",microgram:true},{key:"vitaminB1",label:"Vitamin B1 (Thiamin)",category:"Vitamins"},
     {key:"vitaminB2",label:"Vitamin B2 (Riboflavin)",category:"Vitamins"},{key:"vitaminB3",label:"Vitamin B3 (Niacin)",category:"Vitamins"},
     {key:"vitaminB5",label:"Vitamin B5",category:"Vitamins"},{key:"vitaminB6",label:"Vitamin B6",category:"Vitamins"},
-    {key:"vitaminB9",label:"Vitamin B9 (Folate)",category:"Vitamins"},{key:"vitaminB12",label:"Vitamin B12",category:"Vitamins"},
-    {key:"vitaminC",label:"Vitamin C",category:"Vitamins"},{key:"vitaminD",label:"Vitamin D",category:"Vitamins"},
-    {key:"vitaminE",label:"Vitamin E",category:"Vitamins"},{key:"vitaminK",label:"Vitamin K",category:"Vitamins"},
-    {key:"biotin",label:"Biotin (B7)",category:"Vitamins"},
+    {key:"vitaminB9",label:"Vitamin B9 (Folate)",category:"Vitamins",microgram:true},{key:"vitaminB12",label:"Vitamin B12",category:"Vitamins",microgram:true},
+    {key:"vitaminC",label:"Vitamin C",category:"Vitamins"},{key:"vitaminD",label:"Vitamin D",category:"Vitamins",microgram:true},
+    {key:"vitaminE",label:"Vitamin E",category:"Vitamins"},{key:"vitaminK",label:"Vitamin K",category:"Vitamins",microgram:true},
+    {key:"biotin",label:"Biotin (B7)",category:"Vitamins",microgram:true},
     {key:"liveCultures",label:"Live cultures",noDI:true}
   ];
   function formatAdminDateTime(value){
