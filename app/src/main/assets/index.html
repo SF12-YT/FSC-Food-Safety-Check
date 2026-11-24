@@ -1082,7 +1082,7 @@ function nutritionFormMarkup(product){
  '<div class="nutrition-meta"><div><label for="nutritionServings">Servings</label><input id="nutritionServings" class="field" value="'+esc(n.servings)+'" placeholder="e.g. 5" autocomplete="off"></div>'+
  '<div><label for="nutritionServingSize">Serving size</label><input id="nutritionServingSize" class="field" value="'+esc(n.servingSize)+'" placeholder="e.g. 30 g" autocomplete="off"></div></div>'+
  '<label class="setting" for="nutritionAuto100g" style="margin:12px 0 4px"><span><b>Automatically calculate per 100 g</b><small>Uses serving size in grams and per-serving values. Manually entered values are left untouched.</small></span><input id="nutritionAuto100g" class="switch" type="checkbox" '+(nutritionAuto100gEnabled()?'checked':'')+' onchange="toggleNutritionAuto100g(this.checked)"></label>'+
- '<div class="nutrition-table-wrap"><div class="nutrition-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Quantity per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Quantity per <span class="nutrition-per-100-basis">'+esc(nutrition100BasisLabel(n.servingSize))+</span></div>'+nutritionInputRowsMarkup(n)+'</div></div></section>';
+ '<div class="nutrition-table-wrap"><div class="nutrition-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Quantity per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Quantity per <span class="nutrition-per-100-basis">'+esc(nutrition100BasisLabel(n.servingSize))+'</span></div>'+nutritionInputRowsMarkup(n)+'</div></div></section>';
 }
 function renderNutritionInfo(value){
  const n=normaliseNutritionInfo(value);
@@ -1092,7 +1092,7 @@ function renderNutritionInfo(value){
  return '<details class="info nutrition-view product-collapsible"><summary><b>Nutrition information (as provided)</b><span class="arrow">›</span></summary><div class="product-collapsible-content">'+
  (n.servings?'<p class="nutrition-origin">Servings: '+esc(n.servings)+'</p>':'')+
  (n.servingSize?'<p class="nutrition-origin">Serving size: '+esc(n.servingSize)+'</p>':'')+
- (rows?'<div class="nutrition-table-wrap"><div class="nutrition-read-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Per <span class="nutrition-per-100-basis">'+esc(nutrition100BasisLabel(n.servingSize))+</span></div>'+rows+'</div></div>':'')+'</div></details>';
+ (rows?'<div class="nutrition-table-wrap"><div class="nutrition-read-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Per <span class="nutrition-per-100-basis">'+esc(nutrition100BasisLabel(n.servingSize))+'</span></div>'+rows+'</div></div>':'')+'</div></details>';
 }
 function renderProductClaims(value){
  const claims=value&&value.claims&&typeof value.claims==="object"?value.claims:{};
