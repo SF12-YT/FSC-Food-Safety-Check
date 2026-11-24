@@ -1089,7 +1089,6 @@ function nutritionFormMarkup(product){
  '<p class="nutrition-disclaimer"><b>RDI is different from %DI.</b> RDI means Recommended Dietary Intake. %DI means percentage of the Daily Intake reference value for a serving. They are separate reference measures and are not interchangeable. Do not enter or add an RDI value in the %DI column; copy %DI only when it is printed on the label.</p>'+
  '<div class="nutrition-meta"><div><label for="nutritionServings">Servings</label><input id="nutritionServings" class="field" value="'+esc(n.servings)+'" placeholder="e.g. 5" autocomplete="off"></div>'+
  '<div><label for="nutritionServingSize">Serving size</label><input id="nutritionServingSize" class="field" value="'+esc(n.servingSize)+'" placeholder="e.g. 30 g" autocomplete="off"></div></div>'+
- '
  '<div class="nutrition-table-wrap"><div class="nutrition-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Quantity per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Quantity per <span class="nutrition-per-100-basis">'+esc(nutrition100BasisLabel(n.servingSize))+'</span></div>'+nutritionInputRowsMarkup(n)+'</div></div></section>';
 }
 function renderNutritionInfo(value){
