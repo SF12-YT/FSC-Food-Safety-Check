@@ -61,6 +61,7 @@
       per100g:normaliseAdminQuantityValues(n.per100g),
       autoPer100g:n.autoPer100g&&typeof n.autoPer100g==="object"?n.autoPer100g:{}};
   }
+  function adminNutritionBasisLabel(value){const match=String(value||"").trim().match(/^([0-9]+(?:[.,][0-9]+)?\\s*(?:ml|millilitres?|milliliters?))$/i);return match?"100 mL":"100 g"}
   function adminNutritionPopulated(n,f){
     return !!(String(n.perServing[f.key]||"").trim()||String(n.dailyIntakePerServing[f.key]||"").trim()||String(n.per100g[f.key]||"").trim());
   }
@@ -71,7 +72,7 @@
     return "<div class=\"admin-nutrition-edit-row\"><b class=\""+(f.parent?"admin-sub-nutrient":"admin-parent-nutrient")+"\">"+esc(f.label)+"</b>"+
       "<input class=\"field\" id=\"adminNutritionServing_"+f.key+"\" aria-label=\""+esc(f.label)+" per serving\" value=\""+esc(n.perServing[f.key]||"")+"\" placeholder=\"Per serving\">"+
       "<input class=\"field\" id=\"adminNutritionDI_"+f.key+"\" aria-label=\""+esc(f.label)+" daily intake\" value=\""+esc(n.dailyIntakePerServing[f.key]||"")+"\" placeholder=\""+(f.noDI?"Not applicable":"% DI")+"\" "+(f.noDI?"disabled":"")+">"+
-      "<input class=\"field\" id=\"adminNutrition100g_"+f.key+"\" data-auto-filled=\""+(n.autoPer100g&&n.autoPer100g[f.key]?"true":"false")+"\" aria-label=\""+esc(f.label)+" per 100 g\" value=\""+esc(n.per100g[f.key]||"")+"\" placeholder=\"Per 100 g\"></div>";
+      "<input class=\"field\" id=\"adminNutrition100g_"+f.key+"\" data-auto-filled=\""+(n.autoPer100g&&n.autoPer100g[f.key]?"true":"false")+"\" aria-label=\""+esc(f.label)+" per "+adminNutritionBasisLabel(n.servingSize)+"\" value=\""+esc(n.per100g[f.key]||"")+"\" placeholder=\"Per "+adminNutritionBasisLabel(n.servingSize)+"\"></div>";
   }
   function adminNutritionGroupedRows(n,editMode){
     const categories=Array.from(new Set(NUTRITION_FIELDS.filter(function(f){return f.category}).map(function(f){return f.category})));
@@ -90,7 +91,7 @@
       const visible=editMode?fields:fields.filter(function(f){return adminNutritionPopulated(n,f)});
       if(!visible.length)return "";
       const rows=visible.map(function(f){return editMode?adminNutritionEditRow(f,n):adminNutritionViewRow(f,n)}).join("");
-      return "<details class=\"admin-nutrition-subgroup\"><summary>"+esc(category)+"</summary><div class=\"admin-nutrition-subgrid\">"+rows+"</div></details>";
+      return "<details class=\"admin-nutrition-subgroup admin-nutrition-category\"><summary>"+esc(category)+"</summary><div class=\"admin-nutrition-subgrid\">"+rows+"</div></details>";
     }).join("");
     return regular+grouped;
   }
@@ -102,7 +103,7 @@
     const rows=adminNutritionGroupedRows(n,false);
     return "<details class=\"admin-nutrition\"><summary>Nutrition information ("+populated.length+" nutrients)</summary>"+
       (n.servings?"<small>Servings: "+esc(n.servings)+"</small>":"")+(n.servingSize?"<small>Serving size: "+esc(n.servingSize)+"</small>":"")+
-      (rows?"<div class=\"admin-nutrition-grid\"><b>Nutrient</b><b>Per serving</b><b>% DI</b><b>Per 100 g</b>"+rows+"</div>":"")+"</details>";
+      (rows?"<div class=\"admin-nutrition-grid\"><b>Nutrient</b><b>Per serving</b><b>% DI</b><b>Per "+adminNutritionBasisLabel(n.servingSize)+"</b>"+rows+"</div>":"")+"</details>";
   }
   function nutritionEditorMarkup(product){
     const n=normaliseAdminNutrition(product&&(product.nutritionInfo||product.nutrition));
@@ -111,7 +112,7 @@
       "<label for=\"adminNutritionServings\">Servings</label><input class=\"field\" id=\"adminNutritionServings\" value=\""+esc(n.servings)+"\">"+
       "<label for=\"adminNutritionServingSize\">Serving size</label><input class=\"field\" id=\"adminNutritionServingSize\" value=\""+esc(n.servingSize)+"\">"+
       "<div class=\"nutrition-disclaimer\"><b>RDI is different from %DI.</b> RDI means Recommended Dietary Intake; %DI means percentage of the Daily Intake reference value for a serving. They are not interchangeable. Do not enter an RDI value in the %DI column.</div>"+
-      "<div class=\"admin-nutrition-edit-grid\"><b>Nutrient</b><b>Per serving</b><b>% DI</b><b>Per 100 g</b>"+rows+"</div>"+
+      "<div class=\"admin-nutrition-edit-grid\"><b>Nutrient</b><b>Per serving</b><b>% DI</b><b>Per "+adminNutritionBasisLabel(n.servingSize)+"</b>"+rows+"</div>"+
       "<small>For micrograms, type mcg or ug if you cannot enter µg; FOSCH displays µg without changing the amount. Keep the printed units; FOSCH does not calculate missing values.</small></details>";
   }
   function readAdminNutritionFromForm(){
