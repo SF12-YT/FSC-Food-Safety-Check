@@ -1017,7 +1017,7 @@ function nutritionInputFieldMarkup(f,n){
  return '<div class="nutrient-name '+(f.indent?'sub-nutrient':'parent-nutrient')+'">'+esc(f.label)+'</div>'+
  '<input id="nutritionServing_'+f.key+'" data-nutrition-role="per-serving" data-nutrition-key="'+f.key+'" '+(f.microgram?'data-microgram-help="true"':'')+' class="field" aria-label="'+esc(f.label)+' quantity per serving" value="'+esc(n.perServing[f.key]||'')+'" placeholder="'+esc(f.placeholder)+'" autocomplete="off">'+
  '<input id="nutritionDI_'+f.key+'" class="field" aria-label="'+esc(f.label)+' percent daily intake per serving" value="'+esc(n.dailyIntakePerServing[f.key]||'')+'" placeholder="'+(f.noDI?'Not applicable':'e.g. 5% or &lt;0.1%')+'" '+(f.noDI?'disabled':'')+' autocomplete="off">'+
- '<input id="nutritionPer100g_'+f.key+'" data-nutrition-role="per-100g" data-nutrition-key="'+f.key+'" data-auto-filled="'+(n.autoPer100g&&n.autoPer100g[f.key]?'true':'false')+'" class="field" aria-label="'+esc(f.label)+' quantity per 100 g" value="'+esc(n.per100g[f.key]||'')+'" placeholder="'+esc(f.placeholder)+'" autocomplete="off">';
+ '<input id="nutritionPer100g_'+f.key+'" data-nutrition-role="per-100g" data-nutrition-key="'+f.key+'" '+(f.microgram?'data-microgram-help="true"':'')+' data-auto-filled="'+(n.autoPer100g&&n.autoPer100g[f.key]?'true':'false')+'" class="field" aria-label="'+esc(f.label)+' quantity per 100 g" value="'+esc(n.per100g[f.key]||'')+'" placeholder="'+esc(f.placeholder)+'" autocomplete="off">';
 }
 function nutritionCategoryRowsMarkup(n,category,readOnly){
  const fields=nutritionNutrients.filter(f=>f.category===category);
