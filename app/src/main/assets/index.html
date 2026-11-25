@@ -248,7 +248,7 @@ html[data-theme=dark],html[data-theme=dark] body{background:#000000!important}
 .info-bubble{margin:1px 3px!important}
 .info-bubble-button{width:auto!important;height:auto!important;min-width:0!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;color:var(--muted)!important;font-size:13px!important;line-height:1!important;box-shadow:none!important;appearance:none!important;-webkit-appearance:none!important}
 .info-bubble{margin:0 0 0 6px!important;vertical-align:middle;z-index:auto}
-.info-bubble-button{display:inline-grid!important;place-items:center!important;width:24px!important;height:24px!important;min-width:24px!important;padding:0!important;margin:0!important;border:1px solid var(--dropdown-border)!important;border-radius:50%!important;background:var(--panel)!important;color:var(--muted)!important;font-size:14px!important;font-weight:750!important;line-height:1!important;box-shadow:none!important;appearance:none!important;-webkit-appearance:none!important}
+.info-bubble-button{display:inline-grid!important;place-items:center!important;text-align:center!important;text-indent:-.5px!important;font-family:Arial,sans-serif!important;width:24px!important;height:24px!important;min-width:24px!important;padding:0!important;margin:0!important;border:1px solid var(--dropdown-border)!important;border-radius:50%!important;background:var(--panel)!important;color:var(--muted)!important;font-size:14px!important;font-weight:750!important;line-height:1!important;box-shadow:none!important;appearance:none!important;-webkit-appearance:none!important}
 .info-bubble-button:focus{outline:2px solid var(--blue)!important;outline-offset:2px!important}
 .info-bubble-button:active{background:var(--blue2)!important;color:var(--blue)!important}
 .info-heading-row{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}
@@ -311,6 +311,16 @@ html[data-theme=dark],html[data-theme=dark] body{background:#000000!important}
 .admin-nutrition-subgroup{background:transparent!important}
 .admin-nutrition-subgroup>summary{color:var(--text)!important;font-size:inherit;font-weight:inherit}
 .admin-nutrition-subgrid{padding:0 0 5px 12px}
+/* v0.10.85: keep nutrition columns aligned and horizontally accessible on narrow screens. */
+.nutrition-table-wrap{width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:thin;padding-bottom:5px}
+.nutrition-table,.nutrition-read-table{width:100%;min-width:520px;grid-template-columns:minmax(132px,1.2fr) minmax(112px,1fr) minmax(108px,.95fr) minmax(112px,1fr);gap:6px}
+.nutrition-subgrid{width:100%;min-width:520px;grid-template-columns:minmax(132px,1.2fr) minmax(112px,1fr) minmax(108px,.95fr) minmax(112px,1fr);gap:6px}
+.nutrition-parent-row{width:100%;grid-template-columns:minmax(132px,1.2fr) minmax(112px,1fr) minmax(108px,.95fr) minmax(112px,1fr);gap:6px}
+.nutrition-table .nutrition-head,.nutrition-read-table .nutrition-head{text-align:center;overflow-wrap:normal}
+.nutrition-table .nutrition-head:first-child,.nutrition-read-table .nutrition-head:first-child{text-align:left}
+.nutrition-table .field{font-variant-numeric:tabular-nums}
+@media(max-width:360px){.nutrition-table,.nutrition-read-table,.nutrition-subgrid{grid-template-columns:minmax(132px,1.2fr) minmax(112px,1fr) minmax(108px,.95fr) minmax(112px,1fr);gap:6px}.nutrition-table .field,.nutrition-subgrid .field{padding:7px 4px!important;font-size:11px}.nutrition-table .nutrient-name,.nutrition-subgrid .nutrient-name{font-size:11px}}
+
 .admin-nutrition>summary{padding:3px 0 9px!important}
 .admin-all-search{padding:13px;margin:10px 0;border-radius:15px;background:var(--panel)}
 .admin-all-search label{margin:8px 0 5px}
@@ -1071,7 +1081,7 @@ function nutritionAuto100gEnabled(){try{return localStorage.getItem(NUTRITION_AU
 function servingAmountForNutrition100(){const field=document.getElementById("nutritionServingSize");const value=String(field&&field.value||"").trim();const match=value.match(/^([0-9]+(?:[.,][0-9]+)?)\s*(g|grams?|ml|millilitres?|milliliters?)$/i);if(!match)return null;const amount=Number(match[1].replace(",", "."));if(!Number.isFinite(amount)||amount<=0)return null;const unit=/^m/i.test(match[2])?"mL":"g";return {amount,unit,label:unit==="mL"?"100 mL":"100 g"}}
 function nutrition100BasisLabel(value){const match=String(value||"").trim().match(/^([0-9]+(?:[.,][0-9]+)?)\s*(g|grams?|ml|millilitres?|milliliters?)$/i);return match&&/^m/i.test(match[2])?"100 mL":"100 g"}
 function updateNutrition100BasisLabels(){const field=document.getElementById("nutritionServingSize");const label=nutrition100BasisLabel(field&&field.value||"");document.querySelectorAll(".nutrition-per-100-basis").forEach(node=>{node.textContent=label})}
-function scalePerServingValue(value,factor){const raw=String(value||"").trim();const match=raw.match(/^(\s*(?:less\s+than\s+|<\s*)?)([0-9]+(?:[.,][0-9]+)?)(\s*(?:kJ|kcal|mg|mcg|µg|ug|g)?)\s*$/i);if(!match)return "";const amount=Number(match[2].replace(",", "."));if(!Number.isFinite(amount))return "";const scaled=amount*factor;const rounded=Math.round((scaled+Number.EPSILON)*100)/100;return match[1]+String(rounded)+match[3]}
+function scalePerServingValue(value,factor){const raw=String(value||"").trim();const match=raw.match(/^(\s*(?:less\s+than\s+|<\s*)?)([0-9]+(?:[.,][0-9]+)?)(\s*(?:kJ|kcal|mg|mcg|µg|ug|g)?)\s*$/i);if(!match)return "";const amount=Number(match[2].replace(",", "."));if(!Number.isFinite(amount))return "";const precision=(match[2].split(/[.,]/)[1]||"").length;const scaled=amount*factor;const multiplier=Math.pow(10,precision);const rounded=Math.round((scaled+Number.EPSILON)*multiplier)/multiplier;return match[1]+rounded.toFixed(precision)+match[3]}
 function recalculateNutrition100gField(key){if(!nutritionAuto100gEnabled())return false;const perServing=document.getElementById("nutritionServing_"+key),per100g=document.getElementById("nutritionPer100g_"+key);if(!perServing||!per100g)return false;if(per100g.value.trim()&&per100g.dataset.autoFilled!=="true")return false;const serving=servingAmountForNutrition100();const value=serving?scalePerServingValue(perServing.value,100/serving.amount):"";if(!value){if(per100g.dataset.autoFilled==="true"){per100g.value="";per100g.dataset.autoFilled="false"}return false}per100g.value=value;per100g.dataset.autoFilled="true";return true}
 function recalculateNutrition100gAll(){nutritionNutrients.forEach(function(field){const target=document.getElementById("nutritionPer100g_"+field.key);if(target&&(!target.value.trim()||target.dataset.autoFilled==="true"))recalculateNutrition100gField(field.key)})}
 function toggleNutritionAuto100g(enabled){try{localStorage.setItem(NUTRITION_AUTO_100G_KEY,enabled?"true":"false")}catch(ignored){}if(enabled)recalculateNutrition100gAll()}
