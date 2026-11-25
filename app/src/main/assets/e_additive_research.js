@@ -225,15 +225,31 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E103": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "JECFA identity cross-check; historical specification withdrawn",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Chrysoine resorcinol as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Alkannin (also called alkanet; CAS 23444-65-7) is a natural red colour pigment listed by JECFA as INS 103. JECFA records no ADI allocation and withdrawal of the specification in 1984, so the listing is historical and does not establish current permission for use in food. Important naming distinction: Chrysoine S / Chrysoine resorcinol (CAS 547-57-9) is a different synthetic colourant. JECFA lists that compound separately under the historical EEC serial reference E103; it is not Alkannin/INS 103.",
     "sources": [
       {
-        "label": "Preproom — Biology: E Numbers",
-        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
-        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+        "label": "FAO/WHO JECFA — Alkanet and Alkannin (INS 103; CAS 23444-65-7)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2359",
+        "note": "Identifies Alkannin as INS 103, colour; no ADI allocated and specification withdrawn in 1984."
+      },
+      {
+        "label": "FAO/WHO JECFA — Chrysoine (CAS 547-57-9; historical EEC serial E103)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1953",
+        "note": "Separate identity from Alkannin/INS 103: Chrysoine S is a synthetic colour; JECFA records its specification withdrawn in 1984."
+      },
+      {
+        "label": "Food Standards Australia New Zealand — Schedule 8 additive names and code numbers",
+        "url": "https://www.foodstandards.gov.au/sites/default/files/2026-03/Food%20Standards%20Code%20-%20Compilation%20%28March%202026%29_0.pdf",
+        "note": "Official code-number/name index for ingredient declarations; this index alone does not establish a current permission to use an additive."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "regulatoryGroups": [
+      "colours"
     ]
   },
   "E104": {
@@ -830,9 +846,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E131": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources",
     "researchedAt": "2026-11-25",
-    "use": "A food colourant used to add or restore blue colour or tones in foods. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this colour-purpose description is not an authorisation statement.",
+    "use": "Patent Blue V is a blue food colourant used to add or restore blue colour in food categories where it is authorised. The UK FSA lists E131 in its food-colour group. Permitted food types and levels are jurisdiction-specific; the colour classification is not a blanket approval.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -840,14 +856,14 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -1434,9 +1450,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E153": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources",
     "researchedAt": "2026-11-25",
-    "use": "A food colourant used to add or restore black colour or tones in foods. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this colour-purpose description is not an authorisation statement.",
+    "use": "Vegetable carbon (carbon black) is a black food colourant used to add or restore dark colour in specified foods where permitted. The UK FSA lists E153 in its food-colour group. Conditions and category permissions differ between jurisdictions.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -1444,14 +1460,14 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -2361,19 +2377,24 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E164": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "FSANZ code identity and colour-source cross-check",
     "researchedAt": "2026-11-25",
-    "use": "A food colourant used to add or restore red, orange colour or tones in foods. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this colour-purpose description is not an authorisation statement.",
+    "use": "Saffron contains the yellow-orange pigments crocin and crocetin, which contribute colour when saffron is used as a spice or colour-bearing food ingredient. FSANZ Schedule 8 lists code 164 as “Saffron or crocetin or crocin” for ingredient-name/code purposes. That code-number listing alone does not establish a current general permission to use an isolated colour additive under Schedule 15.",
     "sources": [
-      {
-        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
-      },
       {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Food Standards Australia New Zealand — Schedule 8 additive names and code numbers",
+        "url": "https://www.foodstandards.gov.au/sites/default/files/2026-03/Food%20Standards%20Code%20-%20Compilation%20%28March%202026%29_0.pdf",
+        "note": "Official code-number/name index for ingredient declarations; this index alone does not establish a current permission to use an additive."
+      },
+      {
+        "label": "International Association of Color Manufacturers — Saffron colour profile",
+        "url": "https://iacmcolor.org/color-profile/saffron/",
+        "note": "Describes crocin and crocetin as the colouring principles of saffron."
       }
     ],
     "functionalClasses": [
@@ -2383,7 +2404,10 @@ window.FOSCH_RESEARCH_DATA={
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "regulatoryGroups": [
+      "colours"
+    ]
   },
   "E170": {
     "researchStatus": "UK FSA grouped-use source",
@@ -2499,9 +2523,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E172": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources",
     "researchedAt": "2026-11-25",
-    "use": "A food colourant used to add or restore yellow, red, brown, black colour or tones in foods. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this colour-purpose description is not an authorisation statement.",
+    "use": "Iron oxides and hydroxides are mineral pigments used to add or restore yellow, red, brown or black shades in specified foods where permitted. The UK FSA lists E172 in its colour group; permissions are category-specific and do not imply general use in every food.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -2509,14 +2533,14 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -2535,9 +2559,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E173": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources",
     "researchedAt": "2026-11-25",
-    "use": "A food colourant used to add or restore silver, grey colour or tones in foods. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this colour-purpose description is not an authorisation statement.",
+    "use": "Aluminium is used as a metallic decorative food colourant in specified categories where permitted. Australia/New Zealand Schedule 15 includes it in defined food categories, and the UK FSA lists E173 in its colour group. This is not a general permission across foods.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -2545,14 +2569,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
       }
     ],
     "regulatoryGroups": [
@@ -2571,9 +2600,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E174": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources",
     "researchedAt": "2026-11-25",
-    "use": "A food colourant used to add or restore silver colour or tones in foods. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this colour-purpose description is not an authorisation statement.",
+    "use": "Silver is used as a metallic decorative food colourant in specified categories where permitted. Australia/New Zealand Schedule 15 includes it in defined food categories, and the UK FSA lists E174 in its colour group. This is not a general permission across foods.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -2581,14 +2610,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
       }
     ],
     "regulatoryGroups": [
@@ -2607,9 +2641,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E175": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources",
     "researchedAt": "2026-11-25",
-    "use": "A food colourant used to add or restore gold colour or tones in foods. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this colour-purpose description is not an authorisation statement.",
+    "use": "Gold is used as a metallic decorative food colourant in specified categories where permitted. Australia/New Zealand Schedule 15 includes it in defined food categories, and the UK FSA lists E175 in its colour group. This is not a general permission across foods.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -2617,14 +2651,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
       }
     ],
     "regulatoryGroups": [
@@ -2643,9 +2682,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E180": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources",
     "researchedAt": "2026-11-25",
-    "use": "A food colourant used to add or restore red colour or tones in foods. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this colour-purpose description is not an authorisation statement.",
+    "use": "Litholrubine BK is a red food colourant with a narrow permitted application in some jurisdictions. The consolidated EU additive rules list E180 for colouring edible cheese rind (food category 01.7.3); the UK FSA also groups it among colours. Do not interpret this as permission for general use throughout foods.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -2653,14 +2692,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
       }
     ],
     "regulatoryGroups": [
@@ -2863,9 +2907,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E212": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against UK FSA and EU regulatory sources",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Used as a preservative to help limit microbial spoilage and extend the shelf life of foods in which the additive is permitted. The UK FSA lists this additive in its preservative group; actual permitted food categories and maximum levels depend on the jurisdiction and product category.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -2873,14 +2917,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
       }
     ],
     "regulatoryGroups": [
@@ -2899,9 +2948,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E213": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against UK FSA and EU regulatory sources",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Used as a preservative to help limit microbial spoilage and extend the shelf life of foods in which the additive is permitted. The UK FSA lists this additive in its preservative group; actual permitted food categories and maximum levels depend on the jurisdiction and product category.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -2909,14 +2958,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
       }
     ],
     "regulatoryGroups": [
@@ -2935,9 +2989,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E214": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources; restricted category use",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Paraben preservative used to inhibit microbial spoilage in the limited food categories where authorised. The UK FSA lists the relevant paraben code in its preservative group; EU and national permissions are category- and condition-specific, so the E-number is not evidence of unrestricted use.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -2945,14 +2999,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
       }
     ],
     "regulatoryGroups": [
@@ -2971,9 +3030,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E215": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources; restricted category use",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Paraben preservative used to inhibit microbial spoilage in the limited food categories where authorised. The UK FSA lists the relevant paraben code in its preservative group; EU and national permissions are category- and condition-specific, so the E-number is not evidence of unrestricted use.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -2981,14 +3040,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
       }
     ],
     "regulatoryGroups": [
@@ -3033,9 +3097,9 @@ window.FOSCH_RESEARCH_DATA={
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E218": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources; restricted category use",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Paraben preservative used to inhibit microbial spoilage in the limited food categories where authorised. The UK FSA lists the relevant paraben code in its preservative group; EU and national permissions are category- and condition-specific, so the E-number is not evidence of unrestricted use.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -3043,14 +3107,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
       }
     ],
     "regulatoryGroups": [
@@ -3069,9 +3138,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E219": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources; restricted category use",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Paraben preservative used to inhibit microbial spoilage in the limited food categories where authorised. The UK FSA lists the relevant paraben code in its preservative group; EU and national permissions are category- and condition-specific, so the E-number is not evidence of unrestricted use.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -3079,14 +3148,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
       }
     ],
     "regulatoryGroups": [
@@ -3150,9 +3224,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E221": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sulphite food additive used for preservative purposes in specified foods where permitted; sulphites can help control microbial spoilage and oxidative or enzymatic deterioration. The UK FSA lists this code among preservatives, and the Australia/New Zealand Code contains category-specific sulphite permissions. Conditions and labelling requirements vary by food category and jurisdiction.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -3160,14 +3234,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
       }
     ],
     "regulatoryGroups": [
@@ -3186,9 +3265,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E222": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sulphite food additive used for preservative purposes in specified foods where permitted; sulphites can help control microbial spoilage and oxidative or enzymatic deterioration. The UK FSA lists this code among preservatives, and the Australia/New Zealand Code contains category-specific sulphite permissions. Conditions and labelling requirements vary by food category and jurisdiction.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -3196,14 +3275,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
       }
     ],
     "regulatoryGroups": [
@@ -3271,9 +3355,9 @@ window.FOSCH_RESEARCH_DATA={
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E226": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sulphite food additive used for preservative purposes in specified foods where permitted; sulphites can help control microbial spoilage and oxidative or enzymatic deterioration. The UK FSA lists this code among preservatives, and the Australia/New Zealand Code contains category-specific sulphite permissions. Conditions and labelling requirements vary by food category and jurisdiction.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -3281,14 +3365,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
       }
     ],
     "regulatoryGroups": [
@@ -3307,9 +3396,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E227": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Firming agent. Helps maintain firmness and texture. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sulphite food additive used for preservative purposes in specified foods where permitted; sulphites can help control microbial spoilage and oxidative or enzymatic deterioration. The UK FSA lists this code among preservatives, and the Australia/New Zealand Code contains category-specific sulphite permissions. Conditions and labelling requirements vary by food category and jurisdiction.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -3317,14 +3406,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
       }
     ],
     "regulatoryGroups": [
@@ -3334,7 +3428,7 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
     "functionalClasses": [
-      "Firming agent"
+      "Preservative"
     ],
     "purposeCrossCheck": {
       "source": "Wikipedia E number purpose table",
@@ -3343,9 +3437,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E228": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against official regulator sources",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sulphite food additive used for preservative purposes in specified foods where permitted; sulphites can help control microbial spoilage and oxidative or enzymatic deterioration. The UK FSA lists this code among preservatives, and the Australia/New Zealand Code contains category-specific sulphite permissions. Conditions and labelling requirements vary by food category and jurisdiction.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -3353,14 +3447,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
       }
     ],
     "regulatoryGroups": [
@@ -3674,9 +3773,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E249": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Australia/New Zealand Schedule 15 and EU category-use cross-check",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Nitrite preservative used in specified cured-meat products to help control microbial hazards and contribute to the characteristic cured colour. Australia/New Zealand Schedule 15 lists nitrites for defined processed-meat categories, and EU rules also set category-specific conditions and limits. This is not a general-purpose preservative or a guide to preparing cured meat.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -3684,14 +3783,24 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -3701,7 +3810,8 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
     "functionalClasses": [
-      "Preservative"
+      "Preservative",
+      "Colour retention agent"
     ],
     "purposeCrossCheck": {
       "source": "Wikipedia E number purpose table",
@@ -3710,9 +3820,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E250": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Australia/New Zealand Schedule 15 and EU category-use cross-check",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Nitrite preservative used in specified cured-meat products to help control microbial hazards and contribute to the characteristic cured colour. Australia/New Zealand Schedule 15 lists nitrites for defined processed-meat categories, and EU rules also set category-specific conditions and limits. This is not a general-purpose preservative or a guide to preparing cured meat.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -3720,14 +3830,24 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -3737,7 +3857,8 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
     "functionalClasses": [
-      "Preservative"
+      "Preservative",
+      "Colour retention agent"
     ],
     "purposeCrossCheck": {
       "source": "Wikipedia E number purpose table",
@@ -3746,9 +3867,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E251": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Australia/New Zealand Schedule 15 and EU category-use cross-check",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Nitrate preservative permitted only in specified processed-meat categories under defined conditions. Australia/New Zealand Schedule 15 lists nitrates for slow-dried cured meat categories; EU rules also set category-specific conditions and limits. This is not a general-purpose preservative or a guide to preparing cured meat.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -3756,14 +3877,24 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -3782,9 +3913,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E252": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Australia/New Zealand Schedule 15 and EU category-use cross-check",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Nitrate preservative permitted only in specified processed-meat categories under defined conditions. Australia/New Zealand Schedule 15 lists nitrates for slow-dried cured meat categories; EU rules also set category-specific conditions and limits. This is not a general-purpose preservative or a guide to preparing cured meat.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -3792,14 +3923,24 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -4215,9 +4356,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E284": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Historical preservative classification; Australian non-permission cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Historically classified as a preservative, but this is not a general-purpose food additive. Food-use permission is highly jurisdiction-specific; the NSW Food Authority states that borax and boric acid are not permitted for use in food in Australia. Do not infer current authorisation from an old E-number or historical reference.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -4225,14 +4366,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "NSW Food Authority — Borax and boric acid in food",
+        "url": "https://www.foodauthority.nsw.gov.au/consumer/food-poisoning/borax-and-boric-acid",
+        "note": "Australian food-safety guidance: borax and boric acid are not permitted as food additives in Australia."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -4251,9 +4397,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E285": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Historical preservative classification; Australian non-permission cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Preservative. Slows spoilage by microorganisms and helps extend shelf life. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Historically classified as a preservative, but this is not a general-purpose food additive. Food-use permission is highly jurisdiction-specific; the NSW Food Authority states that borax and boric acid are not permitted for use in food in Australia. Do not infer current authorisation from an old E-number or historical reference.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -4261,14 +4407,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "NSW Food Authority — Borax and boric acid in food",
+        "url": "https://www.foodauthority.nsw.gov.au/consumer/food-poisoning/borax-and-boric-acid",
+        "note": "Australian food-safety guidance: borax and boric acid are not permitted as food additives in Australia."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -4570,9 +4721,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E307": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against UK FSA antioxidant classification",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Antioxidant. Slows oxidation that can cause rancidity, colour changes or flavour deterioration. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Tocopherol antioxidant used to help protect fats and oils from oxidation, which can lead to rancidity and deterioration of flavour. The UK FSA groups this code among antioxidants; permitted foods and levels are category-specific.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -4580,14 +4731,14 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -4606,9 +4757,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E308": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against UK FSA antioxidant classification",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Antioxidant. Slows oxidation that can cause rancidity, colour changes or flavour deterioration. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Tocopherol antioxidant used to help protect fats and oils from oxidation, which can lead to rancidity and deterioration of flavour. The UK FSA groups this code among antioxidants; permitted foods and levels are category-specific.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -4616,14 +4767,14 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -4642,9 +4793,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E309": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against UK FSA antioxidant classification",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Antioxidant. Slows oxidation that can cause rancidity, colour changes or flavour deterioration. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Tocopherol antioxidant used to help protect fats and oils from oxidation, which can lead to rancidity and deterioration of flavour. The UK FSA groups this code among antioxidants; permitted foods and levels are category-specific.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -4652,14 +4803,14 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -7248,9 +7399,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E418": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex GSFA functional classes and category provisions verified",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier, Thickener, Stabiliser. Helps ingredients such as oil and water remain mixed; Increases viscosity to give a food a thicker consistency; Helps maintain a uniform dispersion or texture during storage. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Gellan gum is used as a gelling agent, stabiliser and thickener. It helps form or maintain gels, keep dispersed ingredients evenly distributed and provide the required viscosity or texture. Codex GSFA lists category-specific provisions in foods including selected beverages, dairy products, noodles and other foods; those provisions are not blanket permission for every food.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -7258,26 +7409,28 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex GSFA — Gellan gum (INS 418)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=6",
+        "note": "Codex record identifies gelling-agent, stabiliser and thickener functions and provides category-specific provisions."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "stabilizers",
+      "thickeners",
+      "gelling agents"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
     "functionalClasses": [
-      "Emulsifier",
-      "Thickener",
-      "Stabiliser"
+      "Gelling agent",
+      "Stabilizer",
+      "Thickener"
     ],
     "purposeCrossCheck": {
       "source": "Wikipedia E number purpose table",
@@ -7719,9 +7872,9 @@ window.FOSCH_RESEARCH_DATA={
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E432": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex GSFA group-level provisions cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Polysorbate used mainly as an emulsifier to help ingredients that would otherwise separate remain evenly mixed. Codex GSFA treats INS 432–436 as a group for its provisions; the listed food categories and maximum levels apply to the combined group content, not as unrestricted individual permissions.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -7729,18 +7882,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex GSFA — Polysorbates (INS 432–436), group provisions",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=b379e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Identifies participating polysorbates 432–436; provisions apply at group level to their total content, not as unrestricted individual permissions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -7755,9 +7913,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E433": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex GSFA group-level provisions cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Polysorbate used mainly as an emulsifier to help ingredients that would otherwise separate remain evenly mixed. Codex GSFA treats INS 432–436 as a group for its provisions; the listed food categories and maximum levels apply to the combined group content, not as unrestricted individual permissions.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -7765,18 +7923,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex GSFA — Polysorbates (INS 432–436), group provisions",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=b379e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Identifies participating polysorbates 432–436; provisions apply at group level to their total content, not as unrestricted individual permissions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -7791,9 +7954,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E434": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex GSFA group-level provisions cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Polysorbate used mainly as an emulsifier to help ingredients that would otherwise separate remain evenly mixed. Codex GSFA treats INS 432–436 as a group for its provisions; the listed food categories and maximum levels apply to the combined group content, not as unrestricted individual permissions.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -7801,18 +7964,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex GSFA — Polysorbates (INS 432–436), group provisions",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=b379e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Identifies participating polysorbates 432–436; provisions apply at group level to their total content, not as unrestricted individual permissions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -7827,9 +7995,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E435": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex GSFA group-level provisions cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Polysorbate used mainly as an emulsifier to help ingredients that would otherwise separate remain evenly mixed. Codex GSFA treats INS 432–436 as a group for its provisions; the listed food categories and maximum levels apply to the combined group content, not as unrestricted individual permissions.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -7837,18 +8005,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex GSFA — Polysorbates (INS 432–436), group provisions",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=b379e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Identifies participating polysorbates 432–436; provisions apply at group level to their total content, not as unrestricted individual permissions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -7863,9 +8036,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E436": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex GSFA group-level provisions cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Polysorbate used mainly as an emulsifier to help ingredients that would otherwise separate remain evenly mixed. Codex GSFA treats INS 432–436 as a group for its provisions; the listed food categories and maximum levels apply to the combined group content, not as unrestricted individual permissions.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -7873,18 +8046,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex GSFA — Polysorbates (INS 432–436), group provisions",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=b379e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Identifies participating polysorbates 432–436; provisions apply at group level to their total content, not as unrestricted individual permissions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -8709,9 +8887,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E470a": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex CXG 36-1989 functional classes verified",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier, Anti-caking agent. Helps ingredients such as oil and water remain mixed; Reduces clumping so powdered or granulated foods remain free-flowing. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Salts of fatty acids used as anticaking agents, emulsifiers and stabilisers. Depending on the food and formulation, they help powders remain free-flowing, help oil- and water-based ingredients mix, or support a uniform texture. Codex lists these functional classes; permitted foods and levels remain jurisdiction-specific.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -8719,25 +8897,33 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official Codex functional-class definitions and INS class assignments, including salts of fatty acids and glyceride esters."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "anticaking agents",
+      "emulsifiers",
+      "stabilizers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
     "functionalClasses": [
+      "Anticaking agent",
       "Emulsifier",
-      "Anti-caking agent"
+      "Stabilizer"
     ],
     "purposeCrossCheck": {
       "source": "Wikipedia E number purpose table",
@@ -8746,9 +8932,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E470b": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex CXG 36-1989 functional classes verified",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier, Anti-caking agent. Helps ingredients such as oil and water remain mixed; Reduces clumping so powdered or granulated foods remain free-flowing. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Salts of fatty acids used as anticaking agents, emulsifiers and stabilisers. Depending on the food and formulation, they help powders remain free-flowing, help oil- and water-based ingredients mix, or support a uniform texture. Codex lists these functional classes; permitted foods and levels remain jurisdiction-specific.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -8756,25 +8942,33 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official Codex functional-class definitions and INS class assignments, including salts of fatty acids and glyceride esters."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "anticaking agents",
+      "emulsifiers",
+      "stabilizers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
     "functionalClasses": [
+      "Anticaking agent",
       "Emulsifier",
-      "Anti-caking agent"
+      "Stabilizer"
     ],
     "purposeCrossCheck": {
       "source": "Wikipedia E number purpose table",
@@ -8963,9 +9157,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E472d": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex CXG 36-1989 functional classes verified",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Tartaric acid esters of mono- and diglycerides of fatty acids are assigned three Codex functions: emulsifier, stabiliser and sequestrant. They help maintain a uniform mixture or texture and can bind metal ions that otherwise affect food stability. These are technical functions, not blanket permissions for all foods.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -8973,24 +9167,33 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official Codex functional-class definitions and INS class assignments, including salts of fatty acids and glyceride esters."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers",
+      "stabilizers",
+      "sequestrants"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
     "functionalClasses": [
-      "Emulsifier"
+      "Emulsifier",
+      "Stabilizer",
+      "Sequestrant"
     ],
     "purposeCrossCheck": {
       "source": "Wikipedia E number purpose table",
@@ -9039,9 +9242,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E472f": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against UK FSA functional grouping",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Mixed acetic and tartaric acid esters of mono- and diglycerides are used as a food-texture additive within the emulsifier/stabiliser group. They help maintain a uniform mixture or product texture where authorised. The UK FSA places this code in its combined emulsifier, stabiliser, thickener and gelling-agent grouping; check the relevant category conditions rather than assuming universal permission.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -9049,24 +9252,26 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers",
+      "stabilizers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
     "functionalClasses": [
-      "Emulsifier"
+      "Emulsifier",
+      "Stabilizer"
     ],
     "purposeCrossCheck": {
       "source": "Wikipedia E number purpose table",
@@ -9075,34 +9280,39 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E472g": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex CXG 36-1989 functional classes verified",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Succinylated monoglycerides are assigned Codex functions as a sequestrant and stabiliser. They help control the availability of certain metal ions and support product stability; they should not be generically described as an emulsifier without a separate source for that function. Permissions remain food-category-specific.",
     "sources": [
-      {
-        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
-      },
       {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official Codex functional-class definitions and INS class assignments, including salts of fatty acids and glyceride esters."
       }
     ],
     "functionalClasses": [
-      "Emulsifier"
+      "Sequestrant",
+      "Stabilizer"
     ],
     "purposeCrossCheck": {
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "regulatoryGroups": [
+      "sequestrants",
+      "stabilizers"
+    ]
   },
   "E473": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "JECFA functional-use specification verified",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sucrose esters of fatty acids are used as emulsifiers to help ingredients such as oil and water remain evenly mixed. JECFA lists emulsifier as the functional use; permitted food categories and levels depend on the applicable food standard.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -9110,18 +9320,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sucrose esters of fatty acids (INS 473)",
+        "url": "https://www.fao.org/4/w6355e/w6355e11.htm",
+        "note": "JECFA specification lists emulsifier as the functional use."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -9136,9 +9351,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E474": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "JECFA functional-use classification verified",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sucroglycerides are used as emulsifiers to help maintain a uniform mixture of ingredients that would otherwise separate. JECFA identifies INS 474 as an emulsifier; permitted categories and levels depend on the applicable food standard.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -9146,18 +9361,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sucroglycerides (INS 474)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2341",
+        "note": "JECFA identifies INS 474 as an emulsifier."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -9300,9 +9520,9 @@ window.FOSCH_RESEARCH_DATA={
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E479b": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against UK FSA functional grouping",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Thermally oxidised soya bean oil interacted with mono- and diglycerides is used as a food-texture additive within the emulsifier group, helping maintain a uniform mixture of ingredients. The UK FSA includes E479b in its combined emulsifier/stabiliser/thickener/gelling-agent grouping; actual permitted food categories and levels are jurisdiction-specific.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -9310,18 +9530,18 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -9360,9 +9580,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E481": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex GSFA group-level provisions cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Stearoyl lactylate used as an emulsifier to help maintain uniform mixtures and improve the structure of specified foods. Codex GSFA groups INS 481 and 482 and lists category-specific provisions, including selected bakery, cereal, confectionery and other food categories. The provisions apply at group level and are not blanket permission for every food.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -9370,18 +9590,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex GSFA — Stearoyl lactylates (INS 481 and 482), group provisions",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=b179e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Identifies sodium stearoyl lactylate 481(i) and calcium stearoyl lactylate 482(i); lists category-specific group provisions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -9396,9 +9621,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E482": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex GSFA group-level provisions cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Stearoyl lactylate used as an emulsifier to help maintain uniform mixtures and improve the structure of specified foods. Codex GSFA groups INS 481 and 482 and lists category-specific provisions, including selected bakery, cereal, confectionery and other food categories. The provisions apply at group level and are not blanket permission for every food.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -9406,18 +9631,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex GSFA — Stearoyl lactylates (INS 481 and 482), group provisions",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=b179e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Identifies sodium stearoyl lactylate 481(i) and calcium stearoyl lactylate 482(i); lists category-specific group provisions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -9632,9 +9862,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E491": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against Codex and UK FSA functional classifications",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sorbitan ester used as an emulsifier to help ingredients that would otherwise separate remain evenly mixed. The UK FSA includes these codes in its combined emulsifier/stabiliser/thickener/gelling-agent grouping; exact permitted foods and levels are category-specific.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -9642,18 +9872,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex Alimentarius — CXG 36-1989, sorbitan ester functional classes",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Codex assigns emulsifier functions to several sorbitan esters and a stabiliser function to INS 496."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -9668,9 +9903,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E492": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against Codex and UK FSA functional classifications",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sorbitan ester used as an emulsifier to help ingredients that would otherwise separate remain evenly mixed. The UK FSA includes these codes in its combined emulsifier/stabiliser/thickener/gelling-agent grouping; exact permitted foods and levels are category-specific.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -9678,18 +9913,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex Alimentarius — CXG 36-1989, sorbitan ester functional classes",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Codex assigns emulsifier functions to several sorbitan esters and a stabiliser function to INS 496."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -9704,9 +9944,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E493": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against Codex and UK FSA functional classifications",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sorbitan ester used as an emulsifier to help ingredients that would otherwise separate remain evenly mixed. The UK FSA includes these codes in its combined emulsifier/stabiliser/thickener/gelling-agent grouping; exact permitted foods and levels are category-specific.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -9714,18 +9954,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex Alimentarius — CXG 36-1989, sorbitan ester functional classes",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Codex assigns emulsifier functions to several sorbitan esters and a stabiliser function to INS 496."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -9740,9 +9985,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E494": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against Codex and UK FSA functional classifications",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sorbitan ester used as an emulsifier to help ingredients that would otherwise separate remain evenly mixed. The UK FSA includes these codes in its combined emulsifier/stabiliser/thickener/gelling-agent grouping; exact permitted foods and levels are category-specific.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -9750,18 +9995,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex Alimentarius — CXG 36-1989, sorbitan ester functional classes",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Codex assigns emulsifier functions to several sorbitan esters and a stabiliser function to INS 496."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -9776,9 +10026,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E495": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Cross-checked against Codex and UK FSA functional classifications",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sorbitan ester used as an emulsifier to help ingredients that would otherwise separate remain evenly mixed. The UK FSA includes these codes in its combined emulsifier/stabiliser/thickener/gelling-agent grouping; exact permitted foods and levels are category-specific.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -9786,18 +10036,23 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex Alimentarius — CXG 36-1989, sorbitan ester functional classes",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Codex assigns emulsifier functions to several sorbitan esters and a stabiliser function to INS 496."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
-      "texture"
+      "emulsifiers"
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
@@ -9812,29 +10067,37 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E496": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex CXG 36-1989 functional class verified",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Emulsifier. Helps ingredients such as oil and water remain mixed. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Sorbitan trioleate is assigned a stabiliser function in the Codex functional-class list. It is used to help maintain a uniform food system or texture where permitted; do not automatically group it with all sorbitan esters as an emulsifier.",
     "sources": [
-      {
-        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
-      },
       {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex Alimentarius — CXG 36-1989, sorbitan ester functional classes",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Codex assigns emulsifier functions to several sorbitan esters and a stabiliser function to INS 496."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "functionalClasses": [
-      "Emulsifier"
+      "Stabilizer"
     ],
     "purposeCrossCheck": {
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "regulatoryGroups": [
+      "stabilizers"
+    ]
   },
   "E497": {
     "researchStatus": "Historical animal-feed use only",
@@ -13936,19 +14199,24 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E958": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "Codex functional classes and US CFR food-use context verified",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Flavour enhancer, Sweetener. Enhances the existing taste or aroma of a food; Provides sweetness, sometimes at a much lower use level than sugar. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Glycyrrhizin, a licorice-derived compound, is used as both a sweetener and a flavour enhancer. Codex assigns both functional classes; US regulations describe flavour-enhancer/flavouring uses in specified foods such as baked foods, beverages, chewing gum, candies and seasonings. These examples are jurisdiction-specific and do not imply global permission.",
     "sources": [
-      {
-        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
-      },
       {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "Codex Alimentarius — CXG 36-1989 functional classes, INS 958",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/ua/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "Codex lists glycyrrhizin (INS 958) as both a flavour enhancer and a sweetener."
+      },
+      {
+        "label": "United States Code of Federal Regulations — 21 CFR 184.1408, glycyrrhizin",
+        "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title21-vol3/xhtml/CFR-2024-title21-vol3-sec184-1408.html",
+        "note": "Lists specified US food categories and the flavour-enhancer/flavouring-agent functions; jurisdiction-specific."
       }
     ],
     "functionalClasses": [
@@ -13959,12 +14227,16 @@ window.FOSCH_RESEARCH_DATA={
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "regulatoryGroups": [
+      "sweeteners",
+      "flavour enhancers"
+    ]
   },
   "E959": {
-    "researchStatus": "Purpose cross-checked against secondary E-number reference",
+    "researchStatus": "JECFA 2026 functional class verified",
     "researchedAt": "2026-11-25",
-    "use": "Reported functional purpose: Flavour enhancer, Sweetener. Enhances the existing taste or aroma of a food; Provides sweetness, sometimes at a much lower use level than sugar. The actual permitted food categories, use levels and conditions depend on the applicable jurisdiction; this functional description is not an authorisation statement.",
+    "use": "Neohesperidin dihydrochalcone (NHDC) is a high-intensity sweetener used to provide sweetness in foods where authorised. JECFA identifies INS 959 as a sweetener; the 2026 evaluation relates to proposed uses and specified maximum levels, not unrestricted use in all foods.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -13972,14 +14244,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "Wikipedia — E number purpose table (secondary cross-check)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Used only to cross-check the code-specific reported functional purpose. It is not used to establish current authorisation, permitted food categories or maximum levels."
-      },
-      {
         "label": "Food Standards Australia New Zealand — What do food additives do?",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
         "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+      },
+      {
+        "label": "FAO/WHO JECFA — Neohesperidin dihydrochalcone (INS 959), 2026 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/6609",
+        "note": "JECFA identifies INS 959 as a sweetener; 2026 evaluation specifies proposed-use and exposure context."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       }
     ],
     "regulatoryGroups": [
@@ -13989,7 +14266,6 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
     "functionalClasses": [
-      "Flavour enhancer",
       "Sweetener"
     ],
     "purposeCrossCheck": {
