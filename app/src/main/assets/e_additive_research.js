@@ -1,8 +1,8 @@
 window.FOSCH_RESEARCH_DATA={
   "E100": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
-    "use": "Yellow to orange-yellow food colour derived from turmeric (Curcuma longa); used to colour foods. Its use as a spice also contributes dietary curcumin exposure and should be distinguished from deliberate additive use.",
+    "researchStatus": "Cross-checked against Codex GSFA subtype records",
+    "researchedAt": "2026-11-25",
+    "use": "Yellow to orange-yellow food colour derived from turmeric (Curcuma longa); used to colour foods. Its use as a spice also contributes dietary curcumin exposure and should be distinguished from deliberate additive use. Codex GSFA subtype records include Curcumin (100(i)) (100(i)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are category-specific provisions, not blanket permission.",
     "tox": "EFSA’s 2010 re-evaluation supported an ADI of 3 mg/kg body weight/day, based on reproductive-toxicity data. EFSA noted that estimated exposure at maximum permitted use levels could exceed the ADI for some children aged 1–10 years in some European countries, especially at the 95th percentile. The panel also discussed positive results in some genotoxicity tests and limitations in the evidence; do not summarise this as a blanket “risk-free” finding.",
     "intake": "EFSA ADI: 3 mg/kg bw/day (2010); JECFA ADI: 0–3 mg/kg bw/day (2004/2003 record). EFSA estimated that exposure at maximum permitted levels could exceed its ADI for some children in some countries. This is a long-term benchmark, not a per-serving maximum. Check current local category limits.",
     "sources": [
@@ -25,7 +25,44 @@ window.FOSCH_RESEARCH_DATA={
         "label": "EFSA Journal — re-evaluation of curcumin (E100), 2010",
         "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2010.1679",
         "note": "EFSA ADI 3 mg/kg bw/day; exposure at maximum permitted use levels exceeded the ADI for some children in some countries."
+      },
+      {
+        "label": "Codex GSFA — Curcumin (100(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=107",
+        "note": "Exact additive subtype record for INS 100(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
       }
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "100(i)",
+        "name": "Curcumin (100(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=107",
+        "functionalClasses": [
+          "Colour"
+        ],
+        "foodCategories": [
+          "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+          "Batters (e.g. for breading or batters for fish or poultry)",
+          "Beer and malt beverages",
+          "Bread-type products, including bread stuffing and bread crumbs",
+          "Breakfast cereals, including rolled oats"
+        ]
+      }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Batters (e.g. for breading or batters for fish or poultry)",
+      "Beer and malt beverages",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Breakfast cereals, including rolled oats"
     ]
   },
   "E101": {
@@ -1051,6 +1088,50 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E160c": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Paprika extract (160c(ii)) (160c(ii)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Batters (e.g. for breading or batters for fish or poultry)",
+      "Beverage whiteners",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Breakfast cereals, including rolled oats"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "160c(ii)",
+        "name": "Paprika extract (160c(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=420",
+        "functionalClasses": [
+          "Colour"
+        ],
+        "foodCategories": [
+          "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+          "Batters (e.g. for breading or batters for fish or poultry)",
+          "Beverage whiteners",
+          "Bread-type products, including bread stuffing and bread crumbs",
+          "Breakfast cereals, including rolled oats"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Paprika extract (160c(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=420",
+        "note": "Exact additive subtype record for INS 160c(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
   "E160D": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-27",
@@ -1197,6 +1278,70 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E161b": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Lutein esters from Tagetes erecta (161b(iii)) (161b(iii)), Lutein from Tagetes erecta (161b(i)) (161b(i)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Flavoured fluid milk drinks and Condensed milk and analogues (plain); these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues",
+      "Milk powder and cream powder and powder analogues (plain)",
+      "Dairy-based desserts (e.g. pudding, fruit or flavoured yoghurt)",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "161b(iii)",
+        "name": "Lutein esters from Tagetes erecta (161b(iii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=419",
+        "functionalClasses": [
+          "Colour"
+        ],
+        "foodCategories": [
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues",
+          "Milk powder and cream powder and powder analogues (plain)"
+        ]
+      },
+      {
+        "ins": "161b(i)",
+        "name": "Lutein from Tagetes erecta (161b(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=384",
+        "functionalClasses": [
+          "Colour"
+        ],
+        "foodCategories": [
+          "Dairy-based desserts (e.g. pudding, fruit or flavoured yoghurt)",
+          "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+          "Flavoured fluid milk drinks"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Lutein esters from Tagetes erecta (161b(iii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=419",
+        "note": "Exact additive subtype record for INS 161b(iii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Lutein from Tagetes erecta (161b(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=384",
+        "note": "Exact additive subtype record for INS 161b(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
   "E161g": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -1221,6 +1366,42 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E161h": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Zeaxanthin, synthetic (161h(i)) (161h(i)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Flavoured fluid milk drinks"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "161h(i)",
+        "name": "Zeaxanthin, synthetic (161h(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=385",
+        "functionalClasses": [
+          "Colour"
+        ],
+        "foodCategories": [
+          "Flavoured fluid milk drinks"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Zeaxanthin, synthetic (161h(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=385",
+        "note": "Exact additive subtype record for INS 161h(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
       }
     ]
   },
@@ -1259,9 +1440,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E163": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Red, purple or blue plant pigments used as colors; actual hue changes with pH, matrix and processing.",
+    "researchStatus": "Cross-checked against Codex GSFA subtype records",
+    "researchedAt": "2026-11-25",
+    "use": "Red, purple or blue plant pigments used as colors; actual hue changes with pH, matrix and processing. Codex GSFA subtype records include Grape skin extract (163(ii)) (163(ii)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Bread-type products, including bread stuffing and bread crumbs; these are category-specific provisions, not blanket permission.",
     "tox": "The JECFA entry for the broad anthocyanins group lists no ADI allocated and its old specification was withdrawn. Specific anthocyanin preparations may have different source-specific records. FOSCH does not assign a generic numeric intake limit to all anthocyanins.",
     "intake": "No ADI allocated in the cited JECFA group entry. This is not the same as “ADI not specified”; check the exact preparation and national authorization before describing its safety limit.",
     "sources": [
@@ -1279,7 +1460,44 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FSANZ — food colours and intolerance",
         "url": "https://www.foodstandards.gov.au/consumer/additives/foodcolour",
         "note": "Australian/New Zealand official overview; distinguishes food intolerance reports from a diagnosis."
+      },
+      {
+        "label": "Codex GSFA — Grape skin extract (163(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=109",
+        "note": "Exact additive subtype record for INS 163(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
       }
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "163(ii)",
+        "name": "Grape skin extract (163(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=109",
+        "functionalClasses": [
+          "Colour"
+        ],
+        "foodCategories": [
+          "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+          "Bread-type products, including bread stuffing and bread crumbs",
+          "Breakfast cereals, including rolled oats",
+          "Candied fruit",
+          "Canned or bottled (pasteurized) fruit"
+        ]
+      }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit",
+      "Canned or bottled (pasteurized) fruit"
     ]
   },
   "E170(i)": {
@@ -1486,6 +1704,50 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E234": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Nisin A (234(i)) (234(i)). The documented functions include preservative (slows microbial deterioration). Examples of Codex food-category provisions include Cereal and starch based desserts (e.g. rice pudding, tapioca pudding) and Cheese analogues; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
+      "Cheese analogues",
+      "Clear sauces (e.g. fish sauce)",
+      "Clotted cream (plain)",
+      "Dairy-based desserts (e.g. pudding, fruit or flavoured yoghurt)"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "234(i)",
+        "name": "Nisin A (234(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=1",
+        "functionalClasses": [
+          "Preservative"
+        ],
+        "foodCategories": [
+          "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
+          "Cheese analogues",
+          "Clear sauces (e.g. fish sauce)",
+          "Clotted cream (plain)",
+          "Dairy-based desserts (e.g. pudding, fruit or flavoured yoghurt)"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Nisin A (234(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=1",
+        "note": "Exact additive subtype record for INS 234(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
   "E235": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -1588,6 +1850,125 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E261": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Potassium acetate (261(i)) (261(i)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); preservative (slows microbial deterioration). Examples of Codex food-category provisions include Complementary foods for infants and young children and Fermented milks (plain), heat-treated after fermentation; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [
+      "Complementary foods for infants and young children",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "261(i)",
+        "name": "Potassium acetate (261(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=245",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Preservative"
+        ],
+        "foodCategories": [
+          "Complementary foods for infants and young children",
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Potassium acetate (261(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=245",
+        "note": "Exact additive subtype record for INS 261(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
+  "E262": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Sodium acetate (262(i)) (262(i)), Sodium diacetate (262(ii)) (262(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); preservative (slows microbial deterioration); sequestrant (controls the availability of certain metal ions). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Preservative",
+      "Sequestrant"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Bread and ordinary bakery wares",
+      "Clear sauces (e.g. fish sauce)",
+      "Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "262(i)",
+        "name": "Sodium acetate (262(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=246",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Preservative",
+          "Sequestrant"
+        ],
+        "foodCategories": [
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Complementary foods for infants and young children",
+          "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+          "Dried pastas and noodles and like products",
+          "Fermented milks (plain), heat-treated after fermentation"
+        ]
+      },
+      {
+        "ins": "262(ii)",
+        "name": "Sodium diacetate (262(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=253",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Preservative",
+          "Sequestrant"
+        ],
+        "foodCategories": [
+          "Bread and ordinary bakery wares",
+          "Clear sauces (e.g. fish sauce)",
+          "Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4",
+          "Deep fried semi-dehydrated soybean curd",
+          "Egg-based desserts (e.g. custard)"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sodium acetate (262(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=246",
+        "note": "Exact additive subtype record for INS 262(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Sodium diacetate (262(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=253",
+        "note": "Exact additive subtype record for INS 262(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
       }
     ]
   },
@@ -2147,9 +2528,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E322": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
-    "use": "Emulsifier that helps oil and water mix; commercial lecithin may come from soy, sunflower, eggs or other sources.",
+    "researchStatus": "Cross-checked against Codex GSFA subtype records",
+    "researchedAt": "2026-11-25",
+    "use": "Emulsifier that helps oil and water mix; commercial lecithin may come from soy, sunflower, eggs or other sources. Codex GSFA subtype records include Lecithin (322(i)) (322(i)), Lecithin, partially hydrolysed (322(ii)) (322(ii)). The documented functions include antioxidant (slows oxidation that can deteriorate food and shorten shelf life); emulsifier (helps maintain a uniform mixture of phases); flour treatment agent (improves flour or dough baking properties). Examples of Codex food-category provisions include Butter oil, anhydrous milkfat, ghee and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are category-specific provisions, not blanket permission.",
     "tox": "EFSA’s 2017 re-evaluation concluded that a numerical ADI was not necessary and found no safety concern at refined exposure estimates for reported uses in the assessed general population over one year of age, infants from 12 weeks to 11 months, and infants/young children consuming foods for special medical purposes. The panel also found no safety concern for choline exposure arising from lecithin at the reported uses. EFSA recommended revising EU limits for lead, mercury and arsenic impurities and introducing a cadmium limit. Commercial lecithins vary by source (including soy and egg), and residual source proteins—not the lecithin name alone—are relevant to source-specific hypersensitivity.",
     "intake": "EFSA (2017): no numerical ADI considered necessary for lecithins (E322) under the assessed conditions and reported uses. EFSA found no safety concern at its refined exposure estimates for the assessed population groups, including infants from 12 weeks of age. ‘No numerical ADI necessary’ does not mean unlimited use or override food-category permissions, specifications or source-specific allergen labelling. The evaluation does not establish a separate individual safe dose for people with soy or egg allergy.",
     "sources": [
@@ -2177,6 +2558,21 @@ window.FOSCH_RESEARCH_DATA={
         "label": "EFSA Journal — re-evaluation of lecithins (E322), 2017",
         "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2017.4742",
         "note": "EFSA additive-specific re-evaluation; consult the opinion for the conclusions and specifications concerning lecithin and residual source proteins."
+      },
+      {
+        "label": "Codex GSFA — Lecithin (322(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=77",
+        "note": "Exact additive subtype record for INS 322(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Lecithin, partially hydrolysed (322(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=414",
+        "note": "Exact additive subtype record for INS 322(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
       }
     ],
     "allergy": "EFSA reported case reports of hypersensitivity associated with both soya and egg lecithins. The concern is attributed to residual source proteins: soy-allergic people may be affected by soy-derived lecithin, and egg-allergic people may be affected by egg-derived lecithin. The source matters—E322 can also come from other materials, and not every lecithin product contains soy or egg protein at a reaction-triggering level.",
@@ -2191,6 +2587,47 @@ window.FOSCH_RESEARCH_DATA={
         "url": "https://www.canada.ca/en/health-canada/services/food-nutrition/reports-publications/food-safety/priority-food-allergen.html",
         "note": "States that soy lecithin usually contains too little protein to trigger reactions, but some highly sensitive people may still react."
       }
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "322(i)",
+        "name": "Lecithin (322(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=77",
+        "functionalClasses": [
+          "Antioxidant",
+          "Emulsifier",
+          "Flour treatment agent"
+        ],
+        "foodCategories": [
+          "Butter oil, anhydrous milkfat, ghee",
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Complementary foods for infants and young children",
+          "Cooked fish and fish products",
+          "Dried pastas and noodles and like products"
+        ]
+      },
+      {
+        "ins": "322(ii)",
+        "name": "Lecithin, partially hydrolysed (322(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=414",
+        "functionalClasses": [
+          "Antioxidant",
+          "Emulsifier"
+        ],
+        "foodCategories": []
+      }
+    ],
+    "functionalClasses": [
+      "Antioxidant",
+      "Emulsifier",
+      "Flour treatment agent"
+    ],
+    "gsfaFoodCategories": [
+      "Butter oil, anhydrous milkfat, ghee",
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products"
     ]
   },
   "E325": {
@@ -2363,9 +2800,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E331": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Acidity regulator, sequestrant and stabilizer; sodium citrate salts help control acidity and can support texture in processed foods.",
+    "researchStatus": "Cross-checked against Codex GSFA subtype records",
+    "researchedAt": "2026-11-25",
+    "use": "Acidity regulator, sequestrant and stabilizer; sodium citrate salts help control acidity and can support texture in processed foods. Codex GSFA subtype records include Sodium dihydrogen citrate (331(i)) (331(i)), Trisodium citrate (331(iii)) (331(iii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); emulsifier (helps maintain a uniform mixture of phases); emulsifying salt (helps prevent fat separation in processed cheese-style foods); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Butter oil, anhydrous milkfat, ghee and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are category-specific provisions, not blanket permission.",
     "tox": "JECFA’s evaluation of sodium citrate records “ADI not limited / not specified” within the citric-acid-and-salts group. Older JECFA terminology should not be interpreted as permission for arbitrary concentrations or as medical advice for people who must monitor sodium.",
     "intake": "JECFA: sodium citrate included in the citric acid and salts group, ADI “not limited” (1973 evaluation). No personalized limit is calculated; check local use levels and dietary sodium context.",
     "sources": [
@@ -2378,6 +2815,319 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FSANZ — Additive control and safety assessment",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additivecontrol",
         "note": "Food-additive permissions are conditional on the use assessed and food-standard requirements."
+      },
+      {
+        "label": "Codex GSFA — Sodium dihydrogen citrate (331(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=80",
+        "note": "Exact additive subtype record for INS 331(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Trisodium citrate (331(iii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=4",
+        "note": "Exact additive subtype record for INS 331(iii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "331(i)",
+        "name": "Sodium dihydrogen citrate (331(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=80",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Emulsifier",
+          "Emulsifying salt",
+          "Sequestrant",
+          "Stabilizer"
+        ],
+        "foodCategories": [
+          "Butter oil, anhydrous milkfat, ghee",
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Complementary foods for infants and young children",
+          "Dried whey and whey products, excluding whey cheeses",
+          "Fermented milks (plain), heat-treated after fermentation"
+        ]
+      },
+      {
+        "ins": "331(iii)",
+        "name": "Trisodium citrate (331(iii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=4",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Emulsifier",
+          "Emulsifying salt",
+          "Sequestrant",
+          "Stabilizer"
+        ],
+        "foodCategories": [
+          "Butter oil, anhydrous milkfat, ghee",
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Complementary foods for infants and young children",
+          "Dried whey and whey products, excluding whey cheeses",
+          "Fermented milks (plain), heat-treated after fermentation"
+        ]
+      }
+    ],
+    "functionalClasses": [
+      "Acidity regulator",
+      "Emulsifier",
+      "Emulsifying salt",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Butter oil, anhydrous milkfat, ghee",
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation"
+    ]
+  },
+  "E332": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Potassium dihydrogen citrate (332(i)) (332(i)), Tripotassium citrate (332(ii)) (332(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); antioxidant (slows oxidation that can deteriorate food and shorten shelf life); emulsifying salt (helps prevent fat separation in processed cheese-style foods); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Antioxidant",
+      "Emulsifying salt",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fluid buttermilk (plain)",
+      "Butter oil, anhydrous milkfat, ghee"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "332(i)",
+        "name": "Potassium dihydrogen citrate (332(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=78",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Emulsifying salt",
+          "Sequestrant",
+          "Stabilizer"
+        ],
+        "foodCategories": [
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Complementary foods for infants and young children",
+          "Dried whey and whey products, excluding whey cheeses",
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Fluid buttermilk (plain)"
+        ]
+      },
+      {
+        "ins": "332(ii)",
+        "name": "Tripotassium citrate (332(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=54",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Antioxidant",
+          "Emulsifying salt",
+          "Sequestrant",
+          "Stabilizer"
+        ],
+        "foodCategories": [
+          "Butter oil, anhydrous milkfat, ghee",
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Complementary foods for infants and young children",
+          "Dried whey and whey products, excluding whey cheeses",
+          "Fermented milks (plain), heat-treated after fermentation"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Potassium dihydrogen citrate (332(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=78",
+        "note": "Exact additive subtype record for INS 332(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Tripotassium citrate (332(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=54",
+        "note": "Exact additive subtype record for INS 332(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
+  "E333": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Tricalcium citrate (333(iii)) (333(iii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); antioxidant (slows oxidation that can deteriorate food and shorten shelf life); emulsifying salt (helps prevent fat separation in processed cheese-style foods); firming agent (a technological function defined by Codex); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Butter oil, anhydrous milkfat, ghee and Complementary foods for infants and young children; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Antioxidant",
+      "Emulsifying salt",
+      "Firming agent",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Butter oil, anhydrous milkfat, ghee",
+      "Complementary foods for infants and young children",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fresh meat, poultry, and game, comminuted",
+      "Frozen vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), seaweeds, and nuts and seeds"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "333(iii)",
+        "name": "Tricalcium citrate (333(iii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=195",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Antioxidant",
+          "Emulsifying salt",
+          "Firming agent",
+          "Sequestrant",
+          "Stabilizer"
+        ],
+        "foodCategories": [
+          "Butter oil, anhydrous milkfat, ghee",
+          "Complementary foods for infants and young children",
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Fresh meat, poultry, and game, comminuted",
+          "Frozen vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), seaweeds, and nuts and seeds"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Tricalcium citrate (333(iii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=195",
+        "note": "Exact additive subtype record for INS 333(iii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
+  "E350": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Sodium DL-malate (350(ii)) (350(ii)), Sodium hydrogen DL-malate (350(i)) (350(i)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); humectant (helps retain moisture). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Humectant"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Fresh pastas and noodles and like products",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "350(ii)",
+        "name": "Sodium DL-malate (350(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=287",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Humectant"
+        ],
+        "foodCategories": [
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+          "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+          "Fresh pastas and noodles and like products",
+          "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
+        ]
+      },
+      {
+        "ins": "350(i)",
+        "name": "Sodium hydrogen DL-malate (350(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=374",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Humectant"
+        ],
+        "foodCategories": [
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sodium DL-malate (350(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=287",
+        "note": "Exact additive subtype record for INS 350(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Sodium hydrogen DL-malate (350(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=374",
+        "note": "Exact additive subtype record for INS 350(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
+  "E352": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Calcium malate, D, L- (352(ii)) (352(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity). Examples of Codex food-category provisions include Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "352(ii)",
+        "name": "Calcium malate, D, L- (352(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=337",
+        "functionalClasses": [
+          "Acidity regulator"
+        ],
+        "foodCategories": [
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium malate, D, L- (352(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=337",
+        "note": "Exact additive subtype record for INS 352(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
       }
     ]
   },
@@ -3589,6 +4339,48 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E445": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Glycerol ester of wood rosin (445(iii)) (445(iii)). The documented functions include emulsifier (helps maintain a uniform mixture of phases); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Surface-treated fresh fruit and Surface-treated fresh vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), seaweeds, and nuts and seeds; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Surface-treated fresh fruit",
+      "Surface-treated fresh vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), seaweeds, and nuts and seeds",
+      "Water-based flavoured drinks, including \"sport,\" \"energy,\" or \"electrolyte\" drinks and particulated drinks"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "445(iii)",
+        "name": "Glycerol ester of wood rosin (445(iii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=262",
+        "functionalClasses": [
+          "Emulsifier",
+          "Stabilizer"
+        ],
+        "foodCategories": [
+          "Surface-treated fresh fruit",
+          "Surface-treated fresh vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), seaweeds, and nuts and seeds",
+          "Water-based flavoured drinks, including \"sport,\" \"energy,\" or \"electrolyte\" drinks and particulated drinks"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Glycerol ester of wood rosin (445(iii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=262",
+        "note": "Exact additive subtype record for INS 445(iii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
   "E459": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -3615,6 +4407,93 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E460": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Microcrystalline cellulose (Cellulose gel) (460(i)) (460(i)), Powdered cellulose (460(ii)) (460(ii)). The documented functions include anticaking agent (reduces clumping by limiting particles sticking together); bulking agent (a technological function defined by Codex); carrier (a technological function defined by Codex); emulsifier (helps maintain a uniform mixture of phases); foaming agent (a technological function defined by Codex); glazing agent (gives a surface a shiny appearance or protective coating); humectant (helps retain moisture); stabilizer (helps keep ingredients uniformly dispersed); thickener (increases viscosity for a thicker texture). Examples of Codex food-category provisions include Brown sugar excluding products of food category 11.1.3 and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Anticaking agent",
+      "Bulking agent",
+      "Carrier",
+      "Emulsifier",
+      "Foaming agent",
+      "Glazing agent",
+      "Humectant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Brown sugar excluding products of food category 11.1.3",
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "460(i)",
+        "name": "Microcrystalline cellulose (Cellulose gel) (460(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=16",
+        "functionalClasses": [
+          "Anticaking agent",
+          "Bulking agent",
+          "Carrier",
+          "Emulsifier",
+          "Foaming agent",
+          "Glazing agent",
+          "Stabilizer",
+          "Thickener"
+        ],
+        "foodCategories": [
+          "Brown sugar excluding products of food category 11.1.3",
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Cooked fish and fish products",
+          "Cooked mollusks, crustaceans, and echinoderms",
+          "Dried pastas and noodles and like products"
+        ]
+      },
+      {
+        "ins": "460(ii)",
+        "name": "Powdered cellulose (460(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=68",
+        "functionalClasses": [
+          "Anticaking agent",
+          "Bulking agent",
+          "Emulsifier",
+          "Glazing agent",
+          "Humectant",
+          "Stabilizer",
+          "Thickener"
+        ],
+        "foodCategories": [
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Cooked fish and fish products",
+          "Cooked mollusks, crustaceans, and echinoderms",
+          "Dried whey and whey products, excluding whey cheeses",
+          "Fermented milks (plain), heat-treated after fermentation"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Microcrystalline cellulose (Cellulose gel) (460(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=16",
+        "note": "Exact additive subtype record for INS 460(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Powdered cellulose (460(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=68",
+        "note": "Exact additive subtype record for INS 460(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
       }
     ]
   },
@@ -4207,9 +5086,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E500": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Sodium carbonates are acidity regulators and leavening agents; sodium bicarbonate (a related carbonate form) is commonly used in baking and pH control.",
+    "researchStatus": "Cross-checked against Codex GSFA subtype records",
+    "researchedAt": "2026-11-25",
+    "use": "Sodium carbonates are acidity regulators and leavening agents; sodium bicarbonate (a related carbonate form) is commonly used in baking and pH control. Codex GSFA subtype records include Sodium carbonate (500(i)) (500(i)), Sodium hydrogen carbonate (500(ii)) (500(ii)), Sodium sesquicarbonate (500(iii)) (500(iii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); anticaking agent (reduces clumping by limiting particles sticking together); emulsifying salt (helps prevent fat separation in processed cheese-style foods); raising agent (releases gas to increase dough or batter volume); stabilizer (helps keep ingredients uniformly dispersed); thickener (increases viscosity for a thicker texture). Examples of Codex food-category provisions include Butter and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are category-specific provisions, not blanket permission.",
     "tox": "JECFA lists ADI “not limited” for sodium carbonate in its 1965 evaluation. The historical assessment is not advice to consume unlimited quantities, and sodium-containing ingredients may be relevant to diets that need sodium restriction.",
     "intake": "JECFA: ADI “not limited” for sodium carbonate (1965). This is not a recommended intake or personal target. Follow local food uses; consider sodium content where medically relevant.",
     "sources": [
@@ -4222,13 +5101,111 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FSANZ — Additive safety assessment",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additivecontrol",
         "note": "Explains evaluation of safety under proposed food-use levels."
+      },
+      {
+        "label": "Codex GSFA — Sodium carbonate (500(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=198",
+        "note": "Exact additive subtype record for INS 500(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Sodium hydrogen carbonate (500(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=201",
+        "note": "Exact additive subtype record for INS 500(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Sodium sesquicarbonate (500(iii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=203",
+        "note": "Exact additive subtype record for INS 500(iii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
       }
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "500(i)",
+        "name": "Sodium carbonate (500(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=198",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Anticaking agent",
+          "Emulsifying salt",
+          "Raising agent",
+          "Stabilizer",
+          "Thickener"
+        ],
+        "foodCategories": [
+          "Butter",
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Complementary foods for infants and young children",
+          "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+          "Dried pastas and noodles and like products"
+        ]
+      },
+      {
+        "ins": "500(ii)",
+        "name": "Sodium hydrogen carbonate (500(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=201",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Anticaking agent",
+          "Raising agent",
+          "Stabilizer",
+          "Thickener"
+        ],
+        "foodCategories": [
+          "Butter",
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Complementary foods for infants and young children",
+          "Dried pastas and noodles and like products",
+          "Dried whey and whey products, excluding whey cheeses"
+        ]
+      },
+      {
+        "ins": "500(iii)",
+        "name": "Sodium sesquicarbonate (500(iii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=203",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Anticaking agent",
+          "Raising agent",
+          "Stabilizer",
+          "Thickener"
+        ],
+        "foodCategories": [
+          "Dried whey and whey products, excluding whey cheeses",
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+          "Herbs and spices",
+          "Pasteurized cream (plain)"
+        ]
+      }
+    ],
+    "functionalClasses": [
+      "Acidity regulator",
+      "Anticaking agent",
+      "Emulsifying salt",
+      "Raising agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Butter",
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
     ]
   },
   "E501": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Potassium carbonates are acidity regulators and may be used in leavening or pH adjustment in specified foods.",
+    "researchStatus": "Cross-checked against Codex GSFA subtype records",
+    "researchedAt": "2026-11-25",
+    "use": "Potassium carbonates are acidity regulators and may be used in leavening or pH adjustment in specified foods. Codex GSFA subtype records include Potassium carbonate (501(i)) (501(i)), Potassium hydrogen carbonate (501(ii)) (501(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); raising agent (releases gas to increase dough or batter volume); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are category-specific provisions, not blanket permission.",
     "tox": "JECFA lists ADI “not limited” for potassium carbonate in a historical 1965 evaluation. This does not mean unlimited intake, nor does it address a person’s medical need to limit potassium; use level and overall diet matter.",
     "intake": "JECFA: ADI “not limited” for potassium carbonate (1965). This is not a personal intake target; consult local permitted-use rules and medical dietary advice when potassium restriction applies.",
     "sources": [
@@ -4241,6 +5218,214 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FSANZ — Additive safety assessment",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additivecontrol",
         "note": "Official assessment and permitted-use framework."
+      },
+      {
+        "label": "Codex GSFA — Potassium carbonate (501(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=199",
+        "note": "Exact additive subtype record for INS 501(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Potassium hydrogen carbonate (501(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=200",
+        "note": "Exact additive subtype record for INS 501(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "501(i)",
+        "name": "Potassium carbonate (501(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=199",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Stabilizer"
+        ],
+        "foodCategories": [
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+          "Dried pastas and noodles and like products",
+          "Dried whey and whey products, excluding whey cheeses",
+          "Fermented milks (plain), heat-treated after fermentation"
+        ]
+      },
+      {
+        "ins": "501(ii)",
+        "name": "Potassium hydrogen carbonate (501(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=200",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Raising agent",
+          "Stabilizer"
+        ],
+        "foodCategories": [
+          "Complementary foods for infants and young children",
+          "Dried whey and whey products, excluding whey cheeses",
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Follow-up formulae",
+          "Formulae for special medical purposes for infants"
+        ]
+      }
+    ],
+    "functionalClasses": [
+      "Acidity regulator",
+      "Raising agent",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Complementary foods for infants and young children",
+      "Follow-up formulae",
+      "Formulae for special medical purposes for infants"
+    ]
+  },
+  "E503": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Ammonium carbonate (503(i)) (503(i)), Ammonium hydrogen carbonate (503(ii)) (503(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); raising agent (releases gas to increase dough or batter volume). Examples of Codex food-category provisions include Complementary foods for infants and young children and Fermented milks (plain), heat-treated after fermentation; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Raising agent"
+    ],
+    "gsfaFoodCategories": [
+      "Complementary foods for infants and young children",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "503(i)",
+        "name": "Ammonium carbonate (503(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=312",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Raising agent"
+        ],
+        "foodCategories": [
+          "Complementary foods for infants and young children",
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)"
+        ]
+      },
+      {
+        "ins": "503(ii)",
+        "name": "Ammonium hydrogen carbonate (503(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=333",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Raising agent"
+        ],
+        "foodCategories": [
+          "Complementary foods for infants and young children",
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ammonium carbonate (503(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=312",
+        "note": "Exact additive subtype record for INS 503(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Ammonium hydrogen carbonate (503(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=333",
+        "note": "Exact additive subtype record for INS 503(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
+  "E504": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Magnesium carbonate (504(i)) (504(i)), Magnesium hydroxide carbonate (504(ii)) (504(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); anticaking agent (reduces clumping by limiting particles sticking together); carrier (a technological function defined by Codex); colour retention agent (helps retain or stabilise colour); flour treatment agent (improves flour or dough baking properties). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Anticaking agent",
+      "Carrier",
+      "Colour retention agent",
+      "Flour treatment agent"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Fluid buttermilk (plain)",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "504(i)",
+        "name": "Magnesium carbonate (504(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=76",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Anticaking agent",
+          "Colour retention agent",
+          "Flour treatment agent"
+        ],
+        "foodCategories": [
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+          "Dried whey and whey products, excluding whey cheeses",
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3"
+        ]
+      },
+      {
+        "ins": "504(ii)",
+        "name": "Magnesium hydroxide carbonate (504(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=67",
+        "functionalClasses": [
+          "Acidity regulator",
+          "Anticaking agent",
+          "Carrier",
+          "Colour retention agent"
+        ],
+        "foodCategories": [
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Fluid buttermilk (plain)",
+          "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Magnesium carbonate (504(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=76",
+        "note": "Exact additive subtype record for INS 504(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Magnesium hydroxide carbonate (504(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=67",
+        "note": "Exact additive subtype record for INS 504(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
       }
     ]
   },
@@ -4403,6 +5588,114 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E514": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Sodium hydrogen sulfate (514(ii)) (514(ii)), Sodium sulfate (514(i)) (514(i)). The documented functions include acidity regulator (adjusts food acidity or alkalinity). Examples of Codex food-category provisions include Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "514(ii)",
+        "name": "Sodium hydrogen sulfate (514(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=402",
+        "functionalClasses": [
+          "Acidity regulator"
+        ],
+        "foodCategories": [
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues"
+        ]
+      },
+      {
+        "ins": "514(i)",
+        "name": "Sodium sulfate (514(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=376",
+        "functionalClasses": [
+          "Acidity regulator"
+        ],
+        "foodCategories": [
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sodium hydrogen sulfate (514(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=402",
+        "note": "Exact additive subtype record for INS 514(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Sodium sulfate (514(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=376",
+        "note": "Exact additive subtype record for INS 514(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
+  "E515": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Potassium sulfate (515(i)) (515(i)). The documented functions include acidity regulator (adjusts food acidity or alkalinity). Examples of Codex food-category provisions include Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "515(i)",
+        "name": "Potassium sulfate (515(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=368",
+        "functionalClasses": [
+          "Acidity regulator"
+        ],
+        "foodCategories": [
+          "Fermented milks (plain), heat-treated after fermentation",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Potassium sulfate (515(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=368",
+        "note": "Exact additive subtype record for INS 515(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
       }
     ]
   },
@@ -5691,6 +6984,52 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E905c": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Microcrystalline wax (905c(i)) (905c(i)). The documented functions include antifoaming agent (a technological function defined by Codex); glazing agent (gives a surface a shiny appearance or protective coating). Examples of Codex food-category provisions include Chewing gum and Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Antifoaming agent",
+      "Glazing agent"
+    ],
+    "gsfaFoodCategories": [
+      "Chewing gum",
+      "Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4",
+      "Rind of ripened cheese",
+      "Surface-treated fresh fruit",
+      "Surface-treated fresh vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), seaweeds, and nuts and seeds"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "905c(i)",
+        "name": "Microcrystalline wax (905c(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=221",
+        "functionalClasses": [
+          "Antifoaming agent",
+          "Glazing agent"
+        ],
+        "foodCategories": [
+          "Chewing gum",
+          "Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4",
+          "Rind of ripened cheese",
+          "Surface-treated fresh fruit",
+          "Surface-treated fresh vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), seaweeds, and nuts and seeds"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Microcrystalline wax (905c(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=221",
+        "note": "Exact additive subtype record for INS 905c(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
   "E907": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -6320,6 +7659,244 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1100": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include alpha-Amylase from Aspergillus oryzae var. (1100(i)) (1100(i)), alpha-Amylase from Bacillus megaterium expressed in Bacillus subtilis (1100(iv)) (1100(iv)), alpha-Amylase from Bacillus stearothermophilus (1100(ii)) (1100(ii)) and 3 further form(s). The documented functions include flour treatment agent (improves flour or dough baking properties). Examples of Codex food-category provisions include Flours and starches (including soybean powder) and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Flour treatment agent"
+    ],
+    "gsfaFoodCategories": [
+      "Flours and starches (including soybean powder)",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues",
+      "Milk powder and cream powder and powder analogues (plain)"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "1100(i)",
+        "name": "alpha-Amylase from Aspergillus oryzae var. (1100(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=295",
+        "functionalClasses": [
+          "Flour treatment agent"
+        ],
+        "foodCategories": [
+          "Flours and starches (including soybean powder)",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues"
+        ]
+      },
+      {
+        "ins": "1100(iv)",
+        "name": "alpha-Amylase from Bacillus megaterium expressed in Bacillus subtilis (1100(iv))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=349",
+        "functionalClasses": [
+          "Flour treatment agent"
+        ],
+        "foodCategories": [
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues",
+          "Milk powder and cream powder and powder analogues (plain)"
+        ]
+      },
+      {
+        "ins": "1100(ii)",
+        "name": "alpha-Amylase from Bacillus stearothermophilus (1100(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=351",
+        "functionalClasses": [
+          "Flour treatment agent"
+        ],
+        "foodCategories": [
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues",
+          "Milk powder and cream powder and powder analogues (plain)"
+        ]
+      },
+      {
+        "ins": "1100(v)",
+        "name": "alpha-Amylase from Bacillus stearothermophilus expressed in Bacillus subtilis (1100(v))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=350",
+        "functionalClasses": [
+          "Flour treatment agent"
+        ],
+        "foodCategories": [
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues",
+          "Milk powder and cream powder and powder analogues (plain)"
+        ]
+      },
+      {
+        "ins": "1100(iii)",
+        "name": "alpha-Amylase from Bacillus subtilis (1100(iii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=300",
+        "functionalClasses": [
+          "Flour treatment agent"
+        ],
+        "foodCategories": [
+          "Flours and starches (including soybean powder)",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues"
+        ]
+      },
+      {
+        "ins": "1100(vi)",
+        "name": "Carbohydrase from Bacillus licheniformis (1100(vi))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=301",
+        "functionalClasses": [
+          "Flour treatment agent"
+        ],
+        "foodCategories": [
+          "Flours and starches (including soybean powder)",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — alpha-Amylase from Aspergillus oryzae var. (1100(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=295",
+        "note": "Exact additive subtype record for INS 1100(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — alpha-Amylase from Bacillus megaterium expressed in Bacillus subtilis (1100(iv))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=349",
+        "note": "Exact additive subtype record for INS 1100(iv), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — alpha-Amylase from Bacillus stearothermophilus (1100(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=351",
+        "note": "Exact additive subtype record for INS 1100(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — alpha-Amylase from Bacillus stearothermophilus expressed in Bacillus subtilis (1100(v))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=350",
+        "note": "Exact additive subtype record for INS 1100(v), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — alpha-Amylase from Bacillus subtilis (1100(iii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=300",
+        "note": "Exact additive subtype record for INS 1100(iii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Carbohydrase from Bacillus licheniformis (1100(vi))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=301",
+        "note": "Exact additive subtype record for INS 1100(vi), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
+  "E1101": {
+    "researchStatus": "Codex GSFA subtype verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA subtype records include Bromelain (1101(iii)) (1101(iii)), Papain (1101(ii)) (1101(ii)), Protease from Aspergillus orizae var. (1101(i)) (1101(i)). The documented functions include flavour enhancer (enhances existing taste or aroma); flour treatment agent (improves flour or dough baking properties); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Fresh meat, poultry, and game, whole pieces or cuts and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer",
+      "Flour treatment agent",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Fresh meat, poultry, and game, whole pieces or cuts",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues",
+      "Milk powder and cream powder and powder analogues (plain)",
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Flours"
+    ],
+    "additionalInsForms": [
+      {
+        "ins": "1101(iii)",
+        "name": "Bromelain (1101(iii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=309",
+        "functionalClasses": [
+          "Flavour enhancer",
+          "Flour treatment agent",
+          "Stabilizer"
+        ],
+        "foodCategories": [
+          "Fresh meat, poultry, and game, whole pieces or cuts",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues"
+        ]
+      },
+      {
+        "ins": "1101(ii)",
+        "name": "Papain (1101(ii))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=296",
+        "functionalClasses": [
+          "Flavour enhancer"
+        ],
+        "foodCategories": [
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)",
+          "Cream analogues",
+          "Milk powder and cream powder and powder analogues (plain)"
+        ]
+      },
+      {
+        "ins": "1101(i)",
+        "name": "Protease from Aspergillus orizae var. (1101(i))",
+        "sourceUrl": "https://www.fao.org/gsfaonline/additives/details.html?id=297",
+        "functionalClasses": [
+          "Flavour enhancer",
+          "Flour treatment agent",
+          "Stabilizer"
+        ],
+        "foodCategories": [
+          "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+          "Flours",
+          "Flavoured fluid milk drinks",
+          "Condensed milk and analogues (plain)",
+          "Clotted cream (plain)"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Bromelain (1101(iii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=309",
+        "note": "Exact additive subtype record for INS 1101(iii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Papain (1101(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=296",
+        "note": "Exact additive subtype record for INS 1101(ii), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — Protease from Aspergillus orizae var. (1101(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=297",
+        "note": "Exact additive subtype record for INS 1101(i), including functional classes and category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions of the functional classes used above."
       }
     ]
   },
