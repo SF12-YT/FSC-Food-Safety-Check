@@ -6203,9 +6203,9 @@ window.FOSCH_RESEARCH_DATA={
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E389": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Source-backed use",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Antioxidant used to slow oxidation and rancidity in fats and oils. JECFA identifies INS 389 as an antioxidant; Codex lists thiodipropionate-group provisions for specified fats and oils, fat spreads, ready-to-eat savouries and selected drink categories. In the United States, 21 CFR 182.3280 specifies a limit tied to the total antioxidant content of the fat or oil. These are source- and jurisdiction-specific conditions, not blanket permission for every food.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -6221,8 +6221,27 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "WHO/FAO JECFA — Dilauryl thiodipropionate (INS 389)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2124",
+        "note": "Identifies INS 389 and the functional class antioxidant."
+      },
+      {
+        "label": "Codex GSFA — Thiodipropionates group provisions",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=be79e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Group-level provisions list specific food categories and maximum levels for thiodipropionates; these are Codex provisions, not universal national permissions."
+      },
+      {
+        "label": "United States Code of Federal Regulations — 21 CFR 182.3280",
+        "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title21-vol3/xhtml/CFR-2025-title21-vol3-sec182-3280.html",
+        "note": "US food-use condition limits total antioxidant content to 0.02 percent of fat or oil content and requires good manufacturing practice."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Antioxidant"
+    ],
+    "useResearchNote": "JECFA functional class, Codex group provisions and US CFR conditions cross-checked on 25 November 2026."
   },
   "E390": {
     "researchStatus": "Source-backed use",
@@ -6240,9 +6259,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E391": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Source-backed use",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Reported technological uses of phytic acid include antioxidant, chelating (sequestrant) and antimicrobial functions. FDA GRAS Notice 381 describes a specific intended use in beverages and beverage bases, milk products, processed vegetables and vegetable juices. This notice is a US-specific record for the described use; it does not establish that E391 is currently authorised in Australia/New Zealand, the EU or every other market.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -6258,8 +6277,24 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "US FDA — GRAS Notice 381: Phytic acid",
+        "url": "https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?id=381&set=grasnotices",
+        "note": "The FDA notice describes intended antioxidant, chelating and antimicrobial use in listed beverage, milk and vegetable categories, and records the FDA's no-questions response."
+      },
+      {
+        "label": "Wikipedia — E number (secondary identity cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Secondary cross-reference for the association of phytic acid with E391; not used as evidence of current market authorisation."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Antioxidant",
+      "Sequestrant",
+      "Antimicrobial agent"
+    ],
+    "useResearchNote": "A specific FDA GRAS-notice intended use is documented. E-number identity and current approval status remain jurisdiction-dependent."
   },
   "E392": {
     "researchStatus": "Codex GSFA verified",
@@ -6788,9 +6823,9 @@ window.FOSCH_RESEARCH_DATA={
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E409": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Source-backed use",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Arabinogalactan can act as an emulsifier, stabiliser, binder and bodying agent. The US regulation 21 CFR 172.610 specifies its use, at the minimum quantity needed for the intended effect, in essential oils, non-nutritive sweeteners, flavour bases, non-standardised dressings and pudding mixes. This US rule does not establish permission in other jurisdictions.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -6806,8 +6841,25 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "United States Code of Federal Regulations — 21 CFR 172.610: Arabinogalactan",
+        "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title21-vol3/xhtml/CFR-2025-title21-vol3-sec172-610.html",
+        "note": "US regulation names the technical effects and the specific food categories in which arabinogalactan may be used."
+      },
+      {
+        "label": "US FDA — Substances Added to Food: Arabinogalactan",
+        "url": "https://hfpappexternal.fda.gov/scripts/fdcc/index.cfm?id=ARABINOGALACTAN&set=FoodSubstances",
+        "note": "FDA inventory lists the technical effects associated with arabinogalactan, including emulsifier, humectant, stabiliser or thickener and texturiser."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabiliser",
+      "Binder",
+      "Bodying agent"
+    ],
+    "useResearchNote": "FDA inventory and the corresponding US regulation were matched to the exact additive identity."
   },
   "E410": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -15479,9 +15531,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E1443": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Historical use — JECFA specification withdrawn",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone. A general modified-starch function has not been substituted for an additive-specific use for this exact hydroxypropyl distarch glycerol entry.",
+    "use": "Historically evaluated as an emulsifier and thickener. The WHO/FAO JECFA record lists those functional classes for hydroxypropyl distarch glycerol, but also records that its specification was withdrawn. This is a historical functional classification, not evidence of current approval or permission for use in food.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -15497,8 +15549,23 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "WHO/FAO JECFA — Hydroxypropyl distarch glycerol",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2342",
+        "note": "Lists emulsifier and thickener as functional classes and records the specification status as withdrawn."
+      },
+      {
+        "label": "WHO/FAO JECFA — Summary of evaluations, hydroxypropyl distarch glycerol",
+        "url": "https://www.inchem.org/documents/jecfa/jecmono/v001je11.htm",
+        "note": "Historical JECFA monograph source for the additive identity and evaluation record."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Emulsifier",
+      "Thickener"
+    ],
+    "useResearchNote": "Kept as a historical record because the JECFA specification is withdrawn; not represented as currently authorised."
   },
   "E1450": {
     "researchStatus": "Codex GSFA verified",
@@ -15572,9 +15639,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E1501": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Historical use — secondary reference",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Older E-number references describe benzylated hydrocarbons (benzyl alcohol, benzyl acetate and benzyl benzoate) as flavouring and fragrance substances. This is a historical/secondary functional description, not confirmation that the E1501 group is currently authorised as a food additive in the user's market.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -15590,13 +15657,27 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "Food-Info.net — E1501: Benzylated hydrocarbons",
+        "url": "https://www.food-info.net/uk/e/e1501.htm",
+        "note": "Secondary reference identifies the component substances and describes their function as flavourings and fragrances."
+      },
+      {
+        "label": "Wikipedia — E number (secondary regulatory-status cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Secondary reference; current authorisation must be checked in the competent regulator's current database."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Flavouring agent (historical reference)"
+    ],
+    "useResearchNote": "Preserved as a historical description because the sources do not establish current authorisation across jurisdictions."
   },
   "E1502": {
     "researchStatus": "No distinct food use verified",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. JECFA evaluation of butane-1,3-diol alone does not establish a specific E1502 technological function or current authorisation, so a flavour-solvent use has not been inferred.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -15612,8 +15693,14 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "WHO/FAO JECFA — Butan-1,3-diol",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/chemical.aspx?chemID=1579",
+        "note": "Identity and evaluation record checked; no precise E1502-specific technological role was inferred from the record."
       }
-    ]
+    ],
+    "useResearchNote": "The JECFA chemical record was checked, but it does not provide an E1502-specific functional class or a sufficient food-category/use description."
   },
   "E1503": {
     "researchStatus": "Codex GSFA verified",
