@@ -147,6 +147,18 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E101a": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Riboflavin-5'-Phosphate as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E102": {
     "researchStatus": "Cross-checked against Codex GSFA",
     "researchedAt": "2026-11-25",
@@ -212,6 +224,18 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E103": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Chrysoine resorcinol as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E104": {
     "researchStatus": "Cross-checked against Codex GSFA",
     "researchedAt": "2026-11-25",
@@ -270,6 +294,30 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E105": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Fast Yellow AB as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E106": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Riboflavin-5-Sodium Phosphate as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
     ]
   },
   "E107": {
@@ -348,6 +396,18 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E111": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Orange GGN as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
     ]
   },
   "E120": {
@@ -431,6 +491,18 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E121": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Citrus Red 2 as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
     ]
   },
   "E122": {
@@ -598,6 +670,30 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E125": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Ponceau SX, Scarlet GN as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E126": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Ponceau 6R as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E127": {
     "researchStatus": "Cross-checked against Codex GSFA",
     "researchedAt": "2026-11-25",
@@ -719,6 +815,18 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E130": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Indanthrene blue RS as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
     ]
   },
   "E131": {
@@ -1235,6 +1343,18 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E152": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Black 7984 as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E153": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -1251,6 +1371,18 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E154": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Brown FK, Kipper Brown as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
     ]
   },
   "E155": {
@@ -1723,6 +1855,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E160f": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Ethyl ester of beta-apo-8'-carotenic acid (C 30) as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E161a": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
     "researchedAt": "2026-11-25",
@@ -1811,6 +1955,42 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E161c": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Cryptoxanthin as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E161d": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Rubixanthin as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E161e": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Violaxanthin as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E161f": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
     "researchedAt": "2026-11-25",
@@ -1895,6 +2075,30 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
+  "E161i": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Citranaxanthin as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E161j": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Astaxanthin as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
       }
     ]
   },
@@ -2220,6 +2424,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E182": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Orcein, Orchil as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E200": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-30",
@@ -2305,6 +2521,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E209": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Heptyl p-hydroxybenzoate as a preservative. It is therefore described as used as a preservative to help slow food spoilage. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
   },
   "E210": {
     "researchStatus": "Source-backed summary",
@@ -3217,6 +3445,42 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E264": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Ammonium acetate as a preservative. It is therefore described as used as a preservative to help slow food spoilage. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E265": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Dehydroacetic acid as a preservative. It is therefore described as used as a preservative to help slow food spoilage. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E266": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Sodium dehydroacetate as a preservative. It is therefore described as used as a preservative to help slow food spoilage. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E270": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -3649,6 +3913,18 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E303": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Potassium ascorbate as a antioxidant. It is therefore described as used as an antioxidant to slow oxidation and protect food quality. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E304": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -3665,6 +3941,18 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E305": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists (ii) Ascorbyl stearate as a antioxidant. It is therefore described as used as an antioxidant to slow oxidation and protect food quality. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
     ]
   },
   "E306": {
@@ -3925,6 +4213,30 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E317": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Erythorbin acid as a antioxidant. It is therefore described as used as an antioxidant to slow oxidation and protect food quality. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E318": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Sodium erythorbin as a antioxidant. It is therefore described as used as an antioxidant to slow oxidation and protect food quality. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E319": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -4165,6 +4477,30 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E323": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Anoxomer as a antioxidant. It is therefore described as used as an antioxidant to slow oxidation and protect food quality. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E324": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Ethoxyquin as a antioxidant. It is therefore described as used as an antioxidant to slow oxidation and protect food quality. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E325": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -4256,6 +4592,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E328": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Ammonium lactate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
       }
     ]
   },
@@ -4669,6 +5017,42 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
+  "E344": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Lecitin citrate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E345": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Magnesium citrate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E349": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Ammonium malate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E350": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
@@ -4886,6 +5270,18 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
+  "E359": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Ammonium adipate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
   "E363": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
     "researchedAt": "2026-11-25",
@@ -4923,6 +5319,42 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E366": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Potassium fumarate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E367": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Calcium fumarate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E368": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Ammonium fumarate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
       }
     ]
   },
@@ -4999,6 +5431,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E383": {
+    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "Preproom's E-number reference lists Calcium glycerylphosphate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "sources": [
+      {
+        "label": "Preproom — Biology: E Numbers",
+        "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
+        "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
       }
     ]
   },
