@@ -35,6 +35,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions of the functional classes used above."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "additionalInsForms": [
@@ -63,6 +68,12 @@ window.FOSCH_RESEARCH_DATA={
       "Beer and malt beverages",
       "Bread-type products, including bread stuffing and bread crumbs",
       "Breakfast cereals, including rolled oats"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E101": {
@@ -86,7 +97,54 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO JECFA — food-additive evaluations",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
         "note": "Search by exact riboflavin form/INS subtype; do not assume all sub-forms have identical records."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E101(i)": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E101(ii)": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E102": {
@@ -130,6 +188,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -141,6 +204,12 @@ window.FOSCH_RESEARCH_DATA={
       "Beverage whiteners",
       "Bread-type products, including bread stuffing and bread crumbs",
       "Breakfast cereals, including rolled oats"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E104": {
@@ -179,6 +248,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -190,6 +264,12 @@ window.FOSCH_RESEARCH_DATA={
       "Candied fruit",
       "Canned or bottled (pasteurized) fruit",
       "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E110": {
@@ -233,6 +313,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -244,6 +329,12 @@ window.FOSCH_RESEARCH_DATA={
       "Candied fruit",
       "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
       "Cheese analogues"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E120": {
@@ -292,6 +383,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "allergy": "Cochineal extract and carmine (E120) may provoke allergic reactions in some individuals; rare IgE-mediated reactions, including anaphylaxis, have been reported after exposure. This is a documented carmine/cochineal-specific concern.",
@@ -316,6 +412,12 @@ window.FOSCH_RESEARCH_DATA={
       "Beer and malt beverages",
       "Bread-type products, including bread stuffing and bread crumbs",
       "Breakfast cereals, including rolled oats"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E122": {
@@ -354,6 +456,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -365,6 +472,12 @@ window.FOSCH_RESEARCH_DATA={
       "Candied fruit",
       "Canned or bottled (pasteurized) fruit",
       "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E123": {
@@ -398,6 +511,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -409,6 +527,12 @@ window.FOSCH_RESEARCH_DATA={
       "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
       "Chewing gum",
       "Decorations (e.g. for fine bakery wares), toppings (non-fruit) and sweet sauces"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E124": {
@@ -437,6 +561,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -448,6 +577,12 @@ window.FOSCH_RESEARCH_DATA={
       "Canned or bottled (pasteurized) fruit",
       "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
       "Cheese analogues"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E127": {
@@ -481,6 +616,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -492,6 +632,12 @@ window.FOSCH_RESEARCH_DATA={
       "Chewing gum",
       "Decorations (e.g. for fine bakery wares), toppings (non-fruit) and sweet sauces",
       "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E129": {
@@ -525,6 +671,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -536,6 +687,30 @@ window.FOSCH_RESEARCH_DATA={
       "Candied fruit",
       "Canned or bottled (pasteurized) or retort pouch vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), and seaweeds",
       "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E131": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E132": {
@@ -569,6 +744,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -580,6 +760,12 @@ window.FOSCH_RESEARCH_DATA={
       "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
       "Cheese analogues",
       "Chewing gum"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E133": {
@@ -608,6 +794,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -619,6 +810,12 @@ window.FOSCH_RESEARCH_DATA={
       "Breakfast cereals, including rolled oats",
       "Candied fruit",
       "Canned or bottled (pasteurized) fruit"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E140": {
@@ -652,6 +849,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -663,6 +865,12 @@ window.FOSCH_RESEARCH_DATA={
       "Dried pastas and noodles and like products",
       "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
       "Fresh meat, poultry, and game, whole pieces or cuts"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E141": {
@@ -676,7 +884,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO JECFA — Copper complexes of chlorophylls / INS 141(i) (Specific JECFA record lists ADI 0–15 mg/kg bw; subtypes must be matched.)",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/630",
         "note": "FAO/WHO JECFA substance record and evaluation history."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E142": {
@@ -690,7 +909,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO JECFA — Green S / INS 142 (JECFA record says no ADI allocated; status and permissions vary by market.)",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/611",
         "note": "FAO/WHO JECFA substance record and evaluation history."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E143": {
@@ -756,7 +986,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E150A": {
@@ -807,7 +1048,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E150c": {
@@ -834,7 +1086,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E150C": {
@@ -875,7 +1138,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E150D": {
@@ -921,7 +1195,36 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E153": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E155": {
@@ -948,7 +1251,36 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E160a": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E160A": {
@@ -1058,7 +1390,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E160b(ii)": {
@@ -1085,7 +1428,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E160c": {
@@ -1129,7 +1483,36 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions of the functional classes used above."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E160d": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E160D": {
@@ -1261,7 +1644,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E160E": {
@@ -1339,7 +1733,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions of the functional classes used above."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E161g": {
@@ -1366,7 +1771,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E161h": {
@@ -1426,6 +1842,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -1437,6 +1858,12 @@ window.FOSCH_RESEARCH_DATA={
       "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
       "Fresh meat, poultry, and game, comminuted",
       "Fresh meat, poultry, and game, whole pieces or cuts"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E163": {
@@ -1470,6 +1897,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions of the functional classes used above."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "additionalInsForms": [
@@ -1498,6 +1930,30 @@ window.FOSCH_RESEARCH_DATA={
       "Breakfast cereals, including rolled oats",
       "Candied fruit",
       "Canned or bottled (pasteurized) fruit"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E170": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E170(i)": {
@@ -1556,7 +2012,111 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "marketNotes": [
+      "The FSA page states titanium dioxide (E171) is not permitted as a food additive in Northern Ireland; do not treat the group listing as authorisation there."
+    ]
+  },
+  "E172": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E173": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E174": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E175": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E180": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E181": {
@@ -1599,7 +2159,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "EFSA Journal — follow-up re-evaluation of sorbic acid (E200) and potassium sorbate (E202), 2019",
         "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2019.5625",
         "note": "Established an EFSA group ADI of 11 mg sorbic acid/kg bw/day for E200 and E202; realistic non-brand-loyal exposure estimates did not exceed it."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E202": {
@@ -1618,7 +2189,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "EFSA Journal — follow-up re-evaluation of sorbic acid (E200) and potassium sorbate (E202), 2019",
         "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2019.5625",
         "note": "Established an EFSA group ADI of 11 mg sorbic acid/kg bw/day for E200 and E202; realistic non-brand-loyal exposure estimates did not exceed it."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E210": {
@@ -1632,7 +2214,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO JECFA — Benzoic acid / INS 210",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1754",
         "note": "JECFA 2021 group assessment; group ADI expressed as benzoic-acid equivalents."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E211": {
@@ -1646,7 +2239,126 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO JECFA — Sodium benzoate / INS 211",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1098",
         "note": "JECFA 2021 record lists the group ADI 0–20 mg/kg bw as benzoic-acid equivalents."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E212": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E213": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E214": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E215": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E218": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E219": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E220": {
@@ -1680,7 +2392,144 @@ window.FOSCH_RESEARCH_DATA={
         "label": "EFSA Journal — 2016 re-evaluation of sulfur dioxide and sulfites (E220–E228)",
         "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2016.4438",
         "note": "Historical source for the temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day; superseded by the 2022 follow-up."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E221": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E222": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E223": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E224": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E226": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E227": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E228": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E230": {
@@ -1745,7 +2594,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions of the functional classes used above."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E235": {
@@ -1772,7 +2632,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E239": {
@@ -1795,7 +2666,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E242": {
@@ -1822,7 +2704,108 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E243": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E249": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E250": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E251": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E252": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E260": {
@@ -2052,7 +3035,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E281": {
@@ -2079,7 +3073,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E282": {
@@ -2106,7 +3111,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E283": {
@@ -2127,7 +3143,54 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E284": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E285": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E290": {
@@ -2237,6 +3300,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -2251,6 +3319,12 @@ window.FOSCH_RESEARCH_DATA={
       "Concentrates for fruit juice",
       "Concentrates for fruit nectar",
       "Concentrates for vegetable juice"
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E301": {
@@ -2279,6 +3353,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -2291,6 +3370,12 @@ window.FOSCH_RESEARCH_DATA={
       "Concentrates for fruit juice",
       "Concentrates for fruit nectar",
       "Dried pastas and noodles and like products"
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E302": {
@@ -2317,7 +3402,108 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E304": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as an antioxidant to slow oxidation and help protect food quality or shelf life. Permitted foods and conditions depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E306": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as an antioxidant to slow oxidation and help protect food quality or shelf life. Permitted foods and conditions depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E307": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as an antioxidant to slow oxidation and help protect food quality or shelf life. Permitted foods and conditions depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E308": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as an antioxidant to slow oxidation and help protect food quality or shelf life. Permitted foods and conditions depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E309": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as an antioxidant to slow oxidation and help protect food quality or shelf life. Permitted foods and conditions depend on the applicable regulations.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E310": {
@@ -2341,6 +3527,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -2352,6 +3543,12 @@ window.FOSCH_RESEARCH_DATA={
       "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
       "Chewing gum",
       "Cocoa products and chocolate products including imitations and chocolate substitutes"
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E314": {
@@ -2404,7 +3601,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E316": {
@@ -2431,7 +3639,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E319": {
@@ -2458,7 +3677,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E320": {
@@ -2487,6 +3717,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -2498,6 +3733,12 @@ window.FOSCH_RESEARCH_DATA={
       "Breakfast cereals, including rolled oats",
       "Butter oil, anhydrous milkfat, ghee",
       "Chewing gum"
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E321": {
@@ -2524,7 +3765,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E322": {
@@ -2573,6 +3825,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions of the functional classes used above."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "allergy": "EFSA reported case reports of hypersensitivity associated with both soya and egg lecithins. The concern is attributed to residual source proteins: soy-allergic people may be affected by soy-derived lecithin, and egg-allergic people may be affected by egg-derived lecithin. The source matters—E322 can also come from other materials, and not every lecithin product contains soy or egg protein at a reaction-triggering level.",
@@ -2628,6 +3885,12 @@ window.FOSCH_RESEARCH_DATA={
       "Complementary foods for infants and young children",
       "Cooked fish and fish products",
       "Dried pastas and noodles and like products"
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E325": {
@@ -3306,7 +4569,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E400": {
@@ -3342,7 +4616,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E401": {
@@ -3378,7 +4663,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E402": {
@@ -3414,7 +4710,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E403": {
@@ -3450,7 +4757,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E404": {
@@ -3486,7 +4804,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E405": {
@@ -3519,7 +4848,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E406": {
@@ -3548,6 +4888,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -3566,6 +4911,12 @@ window.FOSCH_RESEARCH_DATA={
       "Cooked mollusks, crustaceans, and echinoderms",
       "Dried pastas and noodles and like products",
       "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E407": {
@@ -3604,6 +4955,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "allergy": "Carrageenan has been flagged as a possible exposure for a small subset of people with alpha-gal syndrome, although expert clinical reviews describe the risk as low and reactions as uncommon. Carrageenan is seaweed-derived; this is not a shellfish-allergy warning, and individual reactions vary.",
@@ -3630,6 +4986,12 @@ window.FOSCH_RESEARCH_DATA={
       "Cooked mollusks, crustaceans, and echinoderms",
       "Dried pastas and noodles and like products",
       "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E407a": {
@@ -3663,7 +5025,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E410": {
@@ -3702,6 +5075,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "allergy": "Rare case reports describe allergic reactions, including urticaria and angioedema, after ingestion of carob/locust bean gum (E410). The evidence is limited and concerns a specific reaction to this gum; it should not be inferred solely from another plant or legume allergy.",
@@ -3729,6 +5107,12 @@ window.FOSCH_RESEARCH_DATA={
       "Cooked fish and fish products",
       "Dried pastas and noodles and like products",
       "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E412": {
@@ -3767,6 +5151,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "allergy": "Rare allergic reactions to ingested guar gum (E412), including anaphylaxis, have been reported. EFSA notes that reactions may be related to residual proteins in the gum. This is a guar-gum-specific concern, and the evidence indicates that such reactions are uncommon.",
@@ -3793,6 +5182,12 @@ window.FOSCH_RESEARCH_DATA={
       "Cooked fish and fish products",
       "Dried pastas and noodles and like products",
       "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E413": {
@@ -3821,7 +5216,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E414": {
@@ -3850,6 +5256,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -3866,6 +5277,12 @@ window.FOSCH_RESEARCH_DATA={
       "Cooked fish and fish products",
       "Cooked mollusks, crustaceans, and echinoderms",
       "Dried pastas and noodles and like products"
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E415": {
@@ -3889,6 +5306,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -3903,6 +5325,12 @@ window.FOSCH_RESEARCH_DATA={
       "Cooked fish and fish products",
       "Dried pastas and noodles and like products",
       "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E416": {
@@ -3931,7 +5359,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E417": {
@@ -3960,7 +5399,36 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E418": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E419": {
@@ -4003,7 +5471,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FSANZ — Additive safety assessment",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additivecontrol",
         "note": "Official overview of risk assessment and conditions of use."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E420(i)": {
@@ -4035,7 +5514,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E420(ii)": {
@@ -4067,7 +5557,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E421": {
@@ -4100,7 +5601,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E422": {
@@ -4191,7 +5703,36 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E426": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E427": {
@@ -4216,7 +5757,108 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E432": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E433": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E434": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E435": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E436": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E440": {
@@ -4240,6 +5882,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -4255,6 +5902,12 @@ window.FOSCH_RESEARCH_DATA={
       "Concentrates for fruit juice",
       "Concentrates for fruit nectar",
       "Concentrates for vegetable juice"
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E441": {
@@ -4312,7 +5965,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E444": {
@@ -4336,7 +6000,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E445": {
@@ -4378,7 +6053,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions of the functional classes used above."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E459": {
@@ -4494,7 +6180,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions of the functional classes used above."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E461": {
@@ -4525,7 +6222,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E462": {
@@ -4550,7 +6258,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E463": {
@@ -4581,7 +6300,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E464": {
@@ -4612,7 +6342,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E465": {
@@ -4642,7 +6383,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E466": {
@@ -4676,7 +6428,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E467": {
@@ -4733,7 +6496,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E469": {
@@ -4761,7 +6535,54 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E470a": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E470b": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E471": {
@@ -4795,6 +6616,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -4809,6 +6635,12 @@ window.FOSCH_RESEARCH_DATA={
       "Complementary foods for infants and young children",
       "Cooked fish and fish products",
       "Dried pastas and noodles and like products"
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E472a": {
@@ -4837,7 +6669,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E472b": {
@@ -4866,7 +6709,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E472c": {
@@ -4897,7 +6751,36 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E472d": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E472e": {
@@ -4926,7 +6809,72 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E472f": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E473": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E474": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E475": {
@@ -4954,7 +6902,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E476": {
@@ -4981,7 +6940,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E477": {
@@ -5008,7 +6978,36 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E479b": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E480": {
@@ -5035,6 +7034,42 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E481": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E482": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
   "E483": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -5053,7 +7088,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E484": {
@@ -5083,6 +7129,96 @@ window.FOSCH_RESEARCH_DATA={
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
       }
+    ]
+  },
+  "E491": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E492": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E493": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E494": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E495": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E500": {
@@ -6347,7 +8483,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "antioxidants"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E620": {
@@ -7210,6 +9357,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -7222,6 +9374,12 @@ window.FOSCH_RESEARCH_DATA={
       "Bread and ordinary bakery wares",
       "Breakfast cereals, including rolled oats",
       "Candied fruit"
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E951": {
@@ -7245,6 +9403,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -7257,6 +9420,30 @@ window.FOSCH_RESEARCH_DATA={
       "Bread and ordinary bakery wares",
       "Breakfast cereals, including rolled oats",
       "Candied fruit"
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E952": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a sweetener to provide or intensify sweetness, sometimes as an alternative to sugars. Permitted foods and use levels are category-specific.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E953": {
@@ -7289,7 +9476,36 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E954": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a sweetener to provide or intensify sweetness, sometimes as an alternative to sugars. Permitted foods and use levels are category-specific.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E955": {
@@ -7323,6 +9539,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
     ],
     "functionalClasses": [
@@ -7335,6 +9556,12 @@ window.FOSCH_RESEARCH_DATA={
       "Bread and ordinary bakery wares",
       "Breakfast cereals, including rolled oats",
       "Candied fruit"
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E956": {
@@ -7388,7 +9615,36 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E959": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a sweetener to provide or intensify sweetness, sometimes as an alternative to sugars. Permitted foods and use levels are category-specific.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E960": {
@@ -7403,6 +9659,60 @@ window.FOSCH_RESEARCH_DATA={
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3644",
         "note": "JECFA 2026 evaluation confirmed ADI 0–4 mg/kg bw expressed as steviol."
       }
+    ]
+  },
+  "E960a": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a sweetener to provide or intensify sweetness, sometimes as an alternative to sugars. Permitted foods and use levels are category-specific.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E960b": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a sweetener to provide or intensify sweetness, sometimes as an alternative to sugars. Permitted foods and use levels are category-specific.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E960c": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a sweetener to provide or intensify sweetness, sometimes as an alternative to sugars. Permitted foods and use levels are category-specific.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E961": {
@@ -7430,7 +9740,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E962": {
@@ -7457,7 +9778,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E964": {
@@ -7478,7 +9810,36 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E965": {
+    "researchStatus": "UK FSA grouped-use source",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a sweetener to provide or intensify sweetness, sometimes as an alternative to sugars. Permitted foods and use levels are category-specific.",
+    "sources": [
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E965(i)": {
@@ -7510,7 +9871,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E965(ii)": {
@@ -7542,7 +9914,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E966": {
@@ -7571,7 +9954,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E967": {
@@ -7602,7 +9996,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E968": {
@@ -7631,7 +10036,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E969": {
@@ -7659,7 +10075,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E1100": {
@@ -7985,7 +10412,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
+        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       }
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
   "E1200": {
