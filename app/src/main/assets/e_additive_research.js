@@ -13517,9 +13517,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E702": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Chlortetracycline as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E702 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13534,9 +13534,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E703": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Oxytetracycline as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E703 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13551,9 +13551,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E704": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Oleandomycin as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E704 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13568,9 +13568,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E705": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Penicillin G potassium as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E705 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13585,9 +13585,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E706": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Penicillin G sodium as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E706 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13602,9 +13602,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E707": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Penicillin G procaine as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E707 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13619,9 +13619,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E708": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Penicillin G benzathine as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E708 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13636,9 +13636,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E710": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Spiramycins as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E710 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13653,9 +13653,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E711": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Virginiamycins as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E711 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13670,9 +13670,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E712": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Flavomycin as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E712 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13687,9 +13687,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E713": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Tylosin as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E713 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13704,9 +13704,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E714": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Monensin A as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E714 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13721,9 +13721,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E715": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Avoparcin as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E715 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13738,9 +13738,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E716": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Salinomycin as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E716 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -13755,9 +13755,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E717": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Avilamycin as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E717 with a historical antibiotic name. The cited material does not establish that this code represents a current food additive or an authorised food use. FOSCH retains it only as a historical catalogue reference.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
