@@ -2219,6 +2219,18 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E164": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Saffron as a food colourant used to add or restore colour. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E170": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -3478,6 +3490,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      }
+    ]
+  },
+  "E267": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Buffered vinegar as a preservative used to help slow food spoilage. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
       }
     ]
   },
@@ -5004,6 +5028,18 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
+  "E342": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Ammonium phosphates (i) monoammonium phosphate (ii) diammonium phosphate as an acidity regulator used to adjust acidity or pH. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E343": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
     "researchedAt": "2026-11-25",
@@ -5559,6 +5595,18 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E399": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Calcium lactobionate as a firming agent used to help maintain food texture. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E400": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -6102,6 +6150,18 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E411": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Oat gum as a stabiliser used to help food components remain uniformly dispersed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
     ]
   },
   "E412": {
@@ -6772,6 +6832,18 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E430": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Polyoxyethene (8) stearate as a stabiliser used to help food components remain uniformly dispersed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E431": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
     "researchedAt": "2026-11-25",
@@ -7015,6 +7087,18 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E443": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Brominated vegetable oil as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
     ]
   },
   "E444": {
@@ -7916,6 +8000,18 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E472g": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Succinylated monoglycerides as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E473": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -8219,6 +8315,66 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E485": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Sodium stearoyl fumarate as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E486": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Calcium stearoyl fumarate as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E487": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Sodium laurylsulfate as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E488": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Ethoxylated mono- and diglycerides as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E489": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Methyl glucoside-coconut oil ester as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E491": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -8307,6 +8463,18 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E496": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Sorbitan trioleate as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
     ]
   },
   "E500": {
@@ -8650,6 +8818,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions of the functional classes used above."
+      }
+    ]
+  },
+  "E505": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Ferrous carbonate as an acidity regulator used to adjust acidity or pH. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
       }
     ]
   },
@@ -9007,6 +9187,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E519": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Copper(II) sulfate as a preservative used to help slow food spoilage. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E520": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -9301,6 +9493,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E537": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Ferrous hexacyanomanganate as an anti-caking agent used to reduce clumping. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E538": {
     "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
     "researchedAt": "2026-11-25",
@@ -9310,6 +9514,30 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E539": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Sodium thiosulfate as an antioxidant used to slow oxidation. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E540": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Dicalcium diphosphate as an emulsifier used to help ingredients that normally separate remain mixed; an acidity regulator used to adjust acidity or pH. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
       }
     ]
   },
@@ -9325,6 +9553,66 @@ window.FOSCH_RESEARCH_DATA={
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E542": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Bone phosphate (tribasic calcium phosphate) as an anti-caking agent used to reduce clumping. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E543": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Calcium sodium polyphosphate as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E544": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Calcium polyphosphate as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E545": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Ammonium polyphosphate as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E550": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Sodium silicates (i) sodium silicate (ii) sodium metasilicate as an anti-caking agent used to reduce clumping. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
   },
   "E551": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -9479,6 +9767,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E557": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Zinc silicate as an anti-caking agent used to reduce clumping. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E558": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
     "researchedAt": "2026-11-25",
@@ -9513,6 +9813,78 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E560": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Potassium silicate as an anti-caking agent used to reduce clumping. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E561": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Vermiculite as an anti-caking agent used to reduce clumping. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E562": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Sepiolite as an anti-caking agent used to reduce clumping. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E563": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Sepiolitic clay as an anti-caking agent used to reduce clumping. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E565": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Lignosulfonates as an anti-caking agent used to reduce clumping. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E566": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Natrolite-phonolite as an anti-caking agent used to reduce clumping. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E570": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
     "researchedAt": "2026-11-25",
@@ -9525,6 +9897,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E572": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Magnesium stearate as an anti-caking agent used to reduce clumping. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
   },
   "E574": {
     "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
@@ -10309,6 +10693,198 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E701": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Tetracyclines as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E702": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Chlortetracycline as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E703": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Oxytetracycline as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E704": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Oleandomycin as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E705": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Penicillin G potassium as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E706": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Penicillin G sodium as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E707": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Penicillin G procaine as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E708": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Penicillin G benzathine as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E710": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Spiramycins as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E711": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Virginiamycins as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E712": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Flavomycin as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E713": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Tylosin as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E714": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Monensin A as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E715": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Avoparcin as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E716": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Salinomycin as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E717": {
+    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Avilamycin as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E900": {
     "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
     "researchedAt": "2026-11-25",
@@ -10499,6 +11075,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E906": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Gum benzoic as a flavour enhancer used to intensify or modify flavour. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E907": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -10520,6 +11108,78 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E908": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Rice bran wax as a glazing agent used to provide a surface coating. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E909": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Spermaceti wax as a glazing agent used to provide a surface coating. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E910": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Wax esters as a glazing agent used to provide a surface coating. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E911": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Methyl esters of fatty acids as a glazing agent used to provide a surface coating. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E912": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Montanic acid esters (montan acid esters) as a glazing agent used to provide a surface coating. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E913": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Lanolin (sheep wool grease) as a glazing agent used to provide a surface coating. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
       }
     ]
   },
@@ -10557,6 +11217,42 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E921": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists L-cystine as a food-improving agent used to modify processing or product quality. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E922": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Potassium persulfate as a food-improving agent used to modify processing or product quality. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E923": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Ammonium persulfate as a food-improving agent used to modify processing or product quality. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
       }
     ]
   },
@@ -10640,6 +11336,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E927b": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Carbamide as a food-improving agent used to modify processing or product quality. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E928": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -10667,6 +11375,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E930": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Calcium peroxide as a bleaching agent used to lighten or whiten ingredients during processing. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E938": {
     "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
     "researchedAt": "2026-11-25",
@@ -10688,6 +11408,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E940": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Dichlorodifluoromethane as a stated [packaging gas](https://en.wikipedia.org/wiki/Packaging_gas \"Packaging gas\") function. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
       }
     ]
   },
@@ -10783,6 +11515,30 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E945": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Chloropentafluoroethane as a stated [propellant](https://en.wikipedia.org/wiki/Aerosol_propellants \"Aerosol propellants\") function. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E946": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Octafluorocyclobutane as a stated [propellant](https://en.wikipedia.org/wiki/Aerosol_propellants \"Aerosol propellants\") function. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
       }
     ]
   },
@@ -11108,6 +11864,18 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E958": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Glycyrrhizin as a flavour enhancer used to intensify or modify flavour. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E959": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -11192,6 +11960,18 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E960d": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Glucosylated steviol glycosides as a stated sweetener function. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
     ]
   },
   "E961": {
@@ -11577,6 +12357,30 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E1000": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Cholic acid as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E1001": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Choline salts and esters as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
       }
     ]
   },
@@ -12304,6 +13108,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E1411": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Distarch glycerol as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E1412": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -12420,6 +13236,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E1421": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Starch acetate esterified with vinyl acetate as a stabiliser used to help food components remain uniformly dispersed; a thickening agent used to increase viscosity. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E1422": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -12449,6 +13277,30 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E1423": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Acetylated distarch glycerol as a thickening agent used to increase viscosity. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E1430": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Distarch glycerine as a stabiliser used to help food components remain uniformly dispersed; a thickening agent used to increase viscosity. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E1440": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -12475,6 +13327,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1441": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Hydroxypropyl distarch glycerine as a stabiliser used to help food components remain uniformly dispersed; a thickening agent used to increase viscosity. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
       }
     ]
   },
@@ -12608,6 +13472,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E1504": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Ethyl acetate as a stated [flavour solvent](https://en.wikipedia.org/wiki/Flavour_solvent?action=edit&redlink=1 \"Flavour solvent (page does not exist)\") function. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
   "E1505": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -12633,6 +13509,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1516": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Glyceryl monoacetate as a stated [flavour solvent](https://en.wikipedia.org/wiki/Flavour_solvent?action=edit&redlink=1 \"Flavour solvent (page does not exist)\") function. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
       }
     ]
   },
@@ -12729,6 +13617,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1525": {
+    "researchStatus": "Secondary E-number purpose reference",
+    "researchedAt": "2026-11-25",
+    "use": "The E-number reference lists Hydroxyethyl cellulose as a thickening agent used to increase viscosity. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "sources": [
+      {
+        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
+        "url": "https://en.wikipedia.org/wiki/E_number",
+        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
       }
     ]
   }
