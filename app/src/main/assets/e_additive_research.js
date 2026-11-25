@@ -53,9 +53,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E102": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
-    "use": "Synthetic lemon-yellow food colorant (INS 102; FD&C Yellow No. 5 in the United States). Use is limited by food category and local rules.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Synthetic lemon-yellow food colorant (INS 102; FD&C Yellow No. 5 in the United States). Use is limited by food category and local rules. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Beer and malt beverages; these are examples, not blanket permission.",
     "tox": "EFSA’s 2009 re-evaluation retained an ADI of 7.5 mg/kg body weight/day. Tartrazine was negative in long-term carcinogenicity studies; the DNA-migration result reported in one mouse Comet assay was not considered likely to result in carcinogenicity. EFSA did not accept the child hyperactivity-mixture or neurodevelopment studies as grounds to revise the ADI. EFSA did report that tartrazine can elicit intolerance reactions in a small fraction of exposed people, and that sensitive individuals may react at doses within the ADI. Intolerance is not the same as an immune-mediated allergy.",
     "intake": "EFSA ADI: 0–7.5 mg/kg bw/day (2009); EFSA’s refined intake estimates at maximum reported use levels were below the ADI. JECFA later listed a separate ADI of 0–10 mg/kg bw/day (2016). These are assessor-specific evaluations, not per-serving limits. EFSA noted that some sensitive people may experience intolerance at doses within the ADI, so the population ADI does not guarantee individual tolerance. Food-category permissions and warning-label requirements differ by country.",
     "sources": [
@@ -83,13 +83,33 @@ window.FOSCH_RESEARCH_DATA={
         "label": "EFSA Journal — re-evaluation of Tartrazine (E102), 2009",
         "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2009.1331",
         "note": "Retained ADI 7.5 mg/kg bw/day; refined exposure below ADI at maximum reported use levels; notes intolerance reactions in a small fraction and possible reactions in sensitive people within the ADI."
+      },
+      {
+        "label": "Codex GSFA — Tartrazine (INS 102)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=86",
+        "note": "Additive-specific Codex GSFA record for INS 102, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Beer and malt beverages",
+      "Beverage whiteners",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Breakfast cereals, including rolled oats"
     ]
   },
   "E104": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Synthetic yellow food color; legally permitted food types and limits depend on the market.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Synthetic yellow food color; legally permitted food types and limits depend on the market. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Breakfast cereals, including rolled oats; these are examples, not blanket permission.",
     "tox": "JECFA established an ADI of 0–3 mg/kg body weight/day (2016), using toxicology data to support its assessment. Do not treat the ADI as a serving limit or as proof of authorization in every country.",
     "intake": "JECFA ADI: 0–3 mg/kg body weight/day (2016). Check current local law, including whether and where the color is permitted.",
     "sources": [
@@ -112,13 +132,33 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK FSA — colorant labelling surveillance",
         "url": "https://science.food.gov.uk/article/162217-retail-surveillance-survey-programme-2025-26",
         "note": "Official enforcement evidence for specified color warning statements."
+      },
+      {
+        "label": "Codex GSFA — Quinoline yellow (INS 104)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=132",
+        "note": "Additive-specific Codex GSFA record for INS 104, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit",
+      "Canned or bottled (pasteurized) fruit",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)"
     ]
   },
   "E110": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
-    "use": "Synthetic yellow-orange food color; called FD&C Yellow No. 6 in the United States. The illustrated swatch is representative, not an exact measurement of a finished food.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Synthetic yellow-orange food color; called FD&C Yellow No. 6 in the United States. The illustrated swatch is representative, not an exact measurement of a finished food. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Breakfast cereals, including rolled oats; these are examples, not blanket permission.",
     "tox": "EFSA’s 2009 temporary ADI of 1 mg/kg bw/day was superseded after assessment of additional data. In 2014 EFSA set an ADI of 4 mg/kg bw/day, based on a long-term rat feeding study (NOAEL 375 mg/kg bw/day) and a default uncertainty factor of 100. EFSA concluded that reported uses and use levels would not be of safety concern under the assessed exposure estimates. The earlier temporary value should not be presented as the current EFSA ADI.",
     "intake": "EFSA ADI: 4 mg/kg bw/day (2014). EFSA’s refined exposure estimates using both currently authorised EU maximum levels and reported use levels were well below this ADI for all population groups. JECFA separately lists 0–4 mg/kg bw/day. This is a long-term exposure benchmark, not a per-serving limit; national food-category permissions and labelling rules still apply.",
     "sources": [
@@ -146,13 +186,33 @@ window.FOSCH_RESEARCH_DATA={
         "label": "EFSA Journal — reconsideration of the temporary ADI and refined exposure assessment for Sunset Yellow FCF (E110), 2014",
         "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2014.3765",
         "note": "Superseded the temporary 1 mg/kg bw/day ADI with 4 mg/kg bw/day; exposure estimates based on EU maximum permitted levels and reported uses were well below the new ADI for all population groups."
+      },
+      {
+        "label": "Codex GSFA — Sunset yellow FCF (INS 110)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=124",
+        "note": "Additive-specific Codex GSFA record for INS 110, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
+      "Cheese analogues"
     ]
   },
   "E120": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
-    "use": "Red food colour obtained from cochineal insects; the food additive may be described as cochineal extract, carminic acid or carmines. It is not interchangeable with synthetic red dyes.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Red food colour obtained from cochineal insects; the food additive may be described as cochineal extract, carminic acid or carmines. It is not interchangeable with synthetic red dyes. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are examples, not blanket permission.",
     "tox": "EFSA’s 2015 re-evaluation did not identify a toxicological basis to revise the existing ADI, but specified that the value should be expressed as carminic acid. The panel also highlighted the need to reduce proteinaceous impurities because allergenic proteins can elicit reactions; purification and material specifications matter.",
     "intake": "EFSA ADI: 2.5 mg/kg bw/day expressed as carminic acid (2015; equivalent to 5 mg/kg bw/day of carmine containing about 50% carminic acid). EFSA’s refined non-brand-loyal exposure estimates were below this ADI for all population groups. This is not a permitted concentration per food; national category limits still apply.",
     "sources": [
@@ -185,6 +245,16 @@ window.FOSCH_RESEARCH_DATA={
         "label": "EFSA Journal — re-evaluation of cochineal, carminic acid and carmines (E120), 2015",
         "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2015.4288",
         "note": "Retained 5 mg/kg carmine ADI and expressed it as 2.5 mg/kg bw/day carminic acid; highlighted allergenic protein impurities and purification steps."
+      },
+      {
+        "label": "Codex GSFA — Carmine (INS 120)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=89",
+        "note": "Additive-specific Codex GSFA record for INS 120, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ],
     "allergy": "Cochineal extract and carmine (E120) may provoke allergic reactions in some individuals; rare IgE-mediated reactions, including anaphylaxis, have been reported after exposure. This is a documented carmine/cochineal-specific concern.",
@@ -199,12 +269,22 @@ window.FOSCH_RESEARCH_DATA={
         "url": "https://pubmed.ncbi.nlm.nih.gov/10624494/",
         "note": "Peer-reviewed case reports and literature review discussing likely IgE-mediated reactions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Batters (e.g. for breading or batters for fish or poultry)",
+      "Beer and malt beverages",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Breakfast cereals, including rolled oats"
     ]
   },
   "E122": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Synthetic red-to-purple food color; the same additive is also commonly called carmoisine.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Synthetic red-to-purple food color; the same additive is also commonly called carmoisine. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Breakfast cereals, including rolled oats; these are examples, not blanket permission.",
     "tox": "JECFA assigned an ADI of 0–4 mg/kg body weight/day in 1983. That historical international assessment should be read alongside the selected market’s current authorization and any newer assessment.",
     "intake": "JECFA ADI listed: 0–4 mg/kg body weight/day (1983). Current permitted use/labeling must be checked for the selected country.",
     "sources": [
@@ -227,13 +307,33 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK FSA — colorant labelling surveillance",
         "url": "https://science.food.gov.uk/article/162217-retail-surveillance-survey-programme-2025-26",
         "note": "Regulatory labeling context for specified colours."
+      },
+      {
+        "label": "Codex GSFA — Azorubine (INS 122)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=91",
+        "note": "Additive-specific Codex GSFA record for INS 122, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit",
+      "Canned or bottled (pasteurized) fruit",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)"
     ]
   },
   "E123": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Synthetic red food colorant; the actual permitted foods and maximum levels differ significantly among jurisdictions.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Synthetic red food colorant; the actual permitted foods and maximum levels differ significantly among jurisdictions. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Candied fruit; these are examples, not blanket permission.",
     "tox": "The JECFA database entry lists an ADI of 0–0.5 mg/kg body weight/day (1984). Because the assessment is old and country permissions differ, verify present national law rather than using E-number assignment as proof that the color is permitted.",
     "intake": "JECFA record lists ADI 0–0.5 mg/kg body weight/day (1984); check current country-specific authorization and food-category limits.",
     "sources": [
@@ -251,13 +351,33 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FSANZ — food colours and intolerance",
         "url": "https://www.foodstandards.gov.au/consumer/additives/foodcolour",
         "note": "Australian/New Zealand official overview; distinguishes food intolerance reports from a diagnosis."
+      },
+      {
+        "label": "Codex GSFA — Amaranth (INS 123)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=105",
+        "note": "Additive-specific Codex GSFA record for INS 123, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Candied fruit",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
+      "Chewing gum",
+      "Decorations (e.g. for fine bakery wares), toppings (non-fruit) and sweet sauces"
     ]
   },
   "E124": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Synthetic red food colorant used in specified food categories where permitted.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Synthetic red food colorant used in specified food categories where permitted. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Candied fruit; these are examples, not blanket permission.",
     "tox": "JECFA confirmed an ADI of 0–4 mg/kg body weight/day in 2011 and concluded dietary exposure did not present a health concern under the exposure assumptions it assessed. FOSCH does not estimate an individual’s intake.",
     "intake": "JECFA ADI: 0–4 mg/kg body weight/day (2011). Additional color-warning labels apply in the EU/UK; check the exact selected-market rules.",
     "sources": [
@@ -270,13 +390,33 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK FSA — 2025/26 retail labelling surveillance",
         "url": "https://science.food.gov.uk/article/162217-retail-surveillance-survey-programme-2025-26",
         "note": "Recent official surveillance discusses required warning wording for Ponceau 4R."
+      },
+      {
+        "label": "Codex GSFA — Ponceau 4R (INS 124)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=130",
+        "note": "Additive-specific Codex GSFA record for INS 124, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Candied fruit",
+      "Canned or bottled (pasteurized) fruit",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
+      "Cheese analogues"
     ]
   },
   "E127": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Pink-red food color used in limited food categories in jurisdictions where permitted.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Pink-red food color used in limited food categories in jurisdictions where permitted. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Candied fruit and Canned or bottled (pasteurized) fruit; these are examples, not blanket permission.",
     "tox": "JECFA's 1990 evaluation lists an ADI of 0–0.1 mg/kg body weight/day. Separately, the U.S. FDA has revoked FD&C Red No. 3 authorization in food with the food-use change taking effect January 15, 2027. Regulatory status differs by country and date; these are not the same as a human cancer-risk estimate.",
     "intake": "JECFA's 1990 evaluation lists an ADI of 0–0.1 mg/kg body weight/day. This is an historical toxicological benchmark; current national legal authorization and transition dates must be checked separately.",
     "sources": [
@@ -294,13 +434,33 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — EU Food Additives Database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "EU conditions are category- and level-specific; do not assume EU rules match U.S. rules."
+      },
+      {
+        "label": "Codex GSFA — Erythrosine (INS 127)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=87",
+        "note": "Additive-specific Codex GSFA record for INS 127, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Candied fruit",
+      "Canned or bottled (pasteurized) fruit",
+      "Chewing gum",
+      "Decorations (e.g. for fine bakery wares), toppings (non-fruit) and sweet sauces",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3"
     ]
   },
   "E129": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Synthetic red food color; called FD&C Red No. 40 in the United States.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Synthetic red food color; called FD&C Red No. 40 in the United States. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Breakfast cereals, including rolled oats; these are examples, not blanket permission.",
     "tox": "JECFA confirmed an ADI of 0–7 mg/kg body weight/day in 2016. The committee concluded estimated exposures were below the upper limit in its assessed scenarios; this is not a personal consumption target.",
     "intake": "JECFA ADI: 0–7 mg/kg body weight/day (2016). Country-specific permitted foods, limits and warning labels must be checked.",
     "sources": [
@@ -318,13 +478,33 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FDA — Color Additives Questions and Answers",
         "url": "https://www.fda.gov/food/color-additives-information-consumers/color-additives-questions-and-answers-consumers",
         "note": "US food-color regulatory overview."
+      },
+      {
+        "label": "Codex GSFA — Allura red AC (INS 129)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=110",
+        "note": "Additive-specific Codex GSFA record for INS 129, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit",
+      "Canned or bottled (pasteurized) or retort pouch vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), and seaweeds",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)"
     ]
   },
   "E132": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Synthetic blue food colorant, often referred to as indigo carmine.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Synthetic blue food colorant, often referred to as indigo carmine. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Candied fruit; these are examples, not blanket permission.",
     "tox": "JECFA confirmed an ADI of 0–5 mg/kg body weight/day in 2018.",
     "intake": "JECFA ADI: 0–5 mg/kg body weight/day (confirmed in 2018). Check national permissions and permitted categories.",
     "sources": [
@@ -342,13 +522,33 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FSANZ — food colours and intolerance",
         "url": "https://www.foodstandards.gov.au/consumer/additives/foodcolour",
         "note": "Australian/New Zealand official overview; distinguishes food intolerance reports from a diagnosis."
+      },
+      {
+        "label": "Codex GSFA — Indigotine (INS 132)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=96",
+        "note": "Additive-specific Codex GSFA record for INS 132, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Candied fruit",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
+      "Cheese analogues",
+      "Chewing gum"
     ]
   },
   "E133": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Synthetic blue food color; called FD&C Blue No. 1 in the United States.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Synthetic blue food color; called FD&C Blue No. 1 in the United States. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Bread-type products, including bread stuffing and bread crumbs; these are examples, not blanket permission.",
     "tox": "JECFA revised the ADI to 0–6 mg/kg body weight/day in 2017 and concluded dietary exposure did not present a health concern for the assessed age groups.",
     "intake": "JECFA ADI: 0–6 mg/kg body weight/day (2017); use and labeling remain jurisdiction-specific.",
     "sources": [
@@ -361,13 +561,33 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Health Canada / CFIA — food colours",
         "url": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives/food-colours",
         "note": "Official Canada page maps food colours to E-numbers and North American names."
+      },
+      {
+        "label": "Codex GSFA — Brilliant blue FCF (INS 133)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=111",
+        "note": "Additive-specific Codex GSFA record for INS 133, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit",
+      "Canned or bottled (pasteurized) fruit"
     ]
   },
   "E140": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Green pigments used to color foods; identity and form differ between chlorophylls and chlorophyllins.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Green pigments used to color foods; identity and form differ between chlorophylls and chlorophyllins. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Cooked fish and fish products and Dietetic foods (e.g. supplementary foods for dietary use) excluding products of food categories 13.1 - 13.4 and 13.6; these are examples, not blanket permission.",
     "tox": "The JECFA entry lists “ADI not limited” for chlorophylls (evaluation 1969). This is an older assessment shorthand, not permission to consume unlimited amounts or an approval of every preparation in every jurisdiction.",
     "intake": "JECFA record: ADI “not limited” (1969). Treat this as an assessment term, not an unlimited-dose recommendation; check current local conditions and specifications.",
     "sources": [
@@ -385,7 +605,27 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FSANZ — food colours and intolerance",
         "url": "https://www.foodstandards.gov.au/consumer/additives/foodcolour",
         "note": "Australian/New Zealand official overview; distinguishes food intolerance reports from a diagnosis."
+      },
+      {
+        "label": "Codex GSFA — Chlorophylls (INS 140)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=192",
+        "note": "Additive-specific Codex GSFA record for INS 140, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Cooked fish and fish products",
+      "Dietetic foods (e.g. supplementary foods for dietary use) excluding products of food categories 13.1 - 13.4 and 13.6",
+      "Dried pastas and noodles and like products",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Fresh meat, poultry, and game, whole pieces or cuts"
     ]
   },
   "E141": {
@@ -417,9 +657,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E143": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Synthetic green food colorant; FDA identifies it as FD&C Green No. 3 for permitted US uses.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Synthetic green food colorant; FDA identifies it as FD&C Green No. 3 for permitted US uses. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Bread-type products, including bread stuffing and bread crumbs; these are examples, not blanket permission.",
     "tox": "JECFA confirmed an ADI of 0–25 mg/kg body weight/day in 2017.",
     "intake": "JECFA ADI: 0–25 mg/kg body weight/day (2017). This international assessment is not a guarantee that the dye is permitted in the selected country.",
     "sources": [
@@ -432,6 +672,53 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FDA — color additives consumer information",
         "url": "https://www.fda.gov/food/color-additives-information-consumers/color-additives-questions-and-answers-consumers",
         "note": "US color-additive listing and common uses; national law differs."
+      },
+      {
+        "label": "Codex GSFA — Fast Green FCF (FD&C Green 3) (INS 143)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=106",
+        "note": "Additive-specific Codex GSFA record for INS 143, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Candied fruit",
+      "Canned or bottled (pasteurized) fruit",
+      "Canned or bottled (pasteurized) or retort pouch vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), and seaweeds"
+    ]
+  },
+  "E150a": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Plain caramel (INS 150a)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=193",
+        "note": "Additive-specific Codex GSFA record for INS 150a, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
   },
@@ -459,6 +746,60 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E150b": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Batters (e.g. for breading or batters for fish or poultry)",
+      "Beer and malt beverages",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Breakfast cereals, including rolled oats"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Caustic sulfite caramel (INS 150b)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=100",
+        "note": "Additive-specific Codex GSFA record for INS 150b, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E150c": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Batters (e.g. for breading or batters for fish or poultry)",
+      "Beer and malt beverages",
+      "Beverage whiteners",
+      "Bread-type products, including bread stuffing and bread crumbs"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ammonia caramel (INS 150c)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=101",
+        "note": "Additive-specific Codex GSFA record for INS 150c, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
   "E150C": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-27",
@@ -470,6 +811,33 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO JECFA — Ammonia caramel / INS 150c (JECFA record lists 0–200 mg/kg bw, 0–150 on a solids basis.)",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/436",
         "note": "FAO/WHO JECFA substance record and evaluation history."
+      }
+    ]
+  },
+  "E150d": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Batters (e.g. for breading or batters for fish or poultry)",
+      "Beer and malt beverages",
+      "Beverage whiteners",
+      "Breakfast cereals, including rolled oats"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sulphite ammonia caramel (INS 150d)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=94",
+        "note": "Additive-specific Codex GSFA record for INS 150d, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
   },
@@ -492,6 +860,60 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E151": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Breakfast cereals, including rolled oats; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Breakfast cereals, including rolled oats",
+      "Canned or bottled (pasteurized) or retort pouch vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), and seaweeds",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
+      "Cheese analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Black PN, Brilliant Black BN (INS 151)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=88",
+        "note": "Additive-specific Codex GSFA record for INS 151, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E155": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Breakfast cereals, including rolled oats; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit",
+      "Canned or bottled (pasteurized) fruit",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Brown HT (chocolate brown HT) (INS 155)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=114",
+        "note": "Additive-specific Codex GSFA record for INS 155, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
   "E160A": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-27",
@@ -508,6 +930,33 @@ window.FOSCH_RESEARCH_DATA={
         "label": "EFSA — food-colour assessments",
         "url": "https://www.efsa.europa.eu/en/topics/topic/food-colours",
         "note": "Scientific evaluation status overview."
+      }
+    ]
+  },
+  "E160a(ii)": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Batters (e.g. for breading or batters for fish or poultry)",
+      "Beverage whiteners",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Breakfast cereals, including rolled oats"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Plant carotenes (INS 160a(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=118",
+        "note": "Additive-specific Codex GSFA record for INS 160a(ii), including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
   },
@@ -548,6 +997,60 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E160b(i)": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Batters (e.g. for breading or batters for fish or poultry)",
+      "Beverage whiteners",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Breakfast cereals, including rolled oats"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Annatto bixin (INS 160b(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=391",
+        "note": "Additive-specific Codex GSFA record for INS 160b(i), including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E160b(ii)": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Batters (e.g. for breading or batters for fish or poultry)",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Breakfast cereals, including rolled oats",
+      "Cakes, cookies and pies (e.g. fruit-filled or custard types)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Annatto norbixin (INS 160b(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=392",
+        "note": "Additive-specific Codex GSFA record for INS 160b(ii), including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
   "E160D": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-27",
@@ -572,6 +1075,114 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E160d(i)": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Dried pastas and noodles and like products and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Dried pastas and noodles and like products",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Synthetic lycopene (INS 160d(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=389",
+        "note": "Additive-specific Codex GSFA record for INS 160d(i), including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E160d(ii)": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Cooked fish and fish products and Dried pastas and noodles and like products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products",
+      "Fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Frozen fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Flavoured fluid milk drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Lycopene from red tomatoes (INS 160d(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=404",
+        "note": "Additive-specific Codex GSFA record for INS 160d(ii), including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E160d(iii)": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Dried pastas and noodles and like products and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Dried pastas and noodles and like products",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Lycopene from Blakeslea trispora (INS 160d(iii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=390",
+        "note": "Additive-specific Codex GSFA record for INS 160d(iii), including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E160e": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Bread-type products, including bread stuffing and bread crumbs and Candied fruit; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Candied fruit",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
+      "Cheese powder (for reconstitution; e.g. for cheese sauces)",
+      "Chewing gum"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Beta-apo-8′-carotenal (INS 160e)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=98",
+        "note": "Additive-specific Codex GSFA record for INS 160e, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
   "E160E": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-27",
@@ -586,10 +1197,37 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E161g": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Carbonated water-based flavoured drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Carbonated water-based flavoured drinks",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
+      "Cheese analogues",
+      "Concentrates (liquid or solid) for water-based flavoured drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Canthaxanthin (INS 161g)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=95",
+        "note": "Additive-specific Codex GSFA record for INS 161g, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
   "E162": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Red to magenta color obtained from beetroot pigments; shade stability depends on the food matrix and processing.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Red to magenta color obtained from beetroot pigments; shade stability depends on the food matrix and processing. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Cooked fish and fish products and Dried pastas and noodles and like products; these are examples, not blanket permission.",
     "tox": "JECFA lists an ADI “not specified” under good manufacturing practice, subject to specifications including nitrate limits. It specifically notes keeping nitrate low in foods for infants and young children.",
     "intake": "JECFA: ADI not specified under GMP if specifications are met; nitrate impurity requirements are relevant, especially for products intended for infants and young children.",
     "sources": [
@@ -597,7 +1235,27 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO JECFA — Beetroot red / INS 162 (JECFA record discusses ADI not specified under GMP and nitrate specifications.)",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/878",
         "note": "FAO/WHO JECFA substance record and evaluation history."
+      },
+      {
+        "label": "Codex GSFA — Beetroot red (INS 162)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=196",
+        "note": "Additive-specific Codex GSFA record for INS 162, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Fresh meat, poultry, and game, comminuted",
+      "Fresh meat, poultry, and game, whole pieces or cuts"
     ]
   },
   "E163": {
@@ -624,6 +1282,108 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E170(i)": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); anticaking agent (reduces clumping by limiting particles sticking together); colour (adds or restores colour); firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels); flour treatment agent (improves flour or dough baking quality or colour); stabilizer (helps keep multiple components uniformly dispersed). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Anticaking agent",
+      "Colour",
+      "Firming agent",
+      "Flour treatment agent",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Dried whey and whey products, excluding whey cheeses"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium carbonate (INS 170(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=185",
+        "note": "Additive-specific Codex GSFA record for INS 170(i), including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E171": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Fresh meat, poultry, and game, whole pieces or cuts and Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "gsfaFoodCategories": [
+      "Fresh meat, poultry, and game, whole pieces or cuts",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Titanium dioxide (INS 171)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=184",
+        "note": "Additive-specific Codex GSFA record for INS 171, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E181": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour (adds or restores colour); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Colour",
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Tannin (INS 181)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=236",
+        "note": "Additive-specific Codex GSFA record for INS 181, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E200": {
+    "researchStatus": "Source-backed summary",
+    "researchedAt": "2026-10-30",
+    "use": "Preservative used to slow yeast and mould growth in specified foods; other sorbates are related members of the same preservative group.",
+    "tox": "JECFA’s group ADI is 0–25 mg/kg bw/day expressed as sorbic acid for the covered sorbates. Separately, EFSA’s 2019 follow-up established a group ADI of 11 mg sorbic acid/kg bw/day for sorbic acid (E200) and potassium sorbate (E202), based on an extended one-generation reproductive-toxicity study. EFSA’s most realistic non-brand-loyal exposure scenario did not exceed that 11 mg/kg bw/day group ADI. These are assessor-specific values and must not be conflated.",
+    "intake": "EFSA group ADI: 11 mg/kg bw/day expressed as sorbic acid for E200 + E202 (2019). JECFA has a separate group ADI of 0–25 mg/kg bw/day expressed as sorbic acid for the broader specified sorbate group. ADIs are chronic exposure benchmarks, not food concentration limits or recommended targets. National food-category maximums still apply.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Sorbic acid / INS 200",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2443",
+        "note": "JECFA record identifies the preservative function and group ADI; review current local maximum levels."
+      },
+      {
+        "label": "EFSA Journal — follow-up re-evaluation of sorbic acid (E200) and potassium sorbate (E202), 2019",
+        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2019.5625",
+        "note": "Established an EFSA group ADI of 11 mg sorbic acid/kg bw/day for E200 and E202; realistic non-brand-loyal exposure estimates did not exceed it."
+      }
+    ]
+  },
   "E202": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-30",
@@ -640,6 +1400,20 @@ window.FOSCH_RESEARCH_DATA={
         "label": "EFSA Journal — follow-up re-evaluation of sorbic acid (E200) and potassium sorbate (E202), 2019",
         "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2019.5625",
         "note": "Established an EFSA group ADI of 11 mg sorbic acid/kg bw/day for E200 and E202; realistic non-brand-loyal exposure estimates did not exceed it."
+      }
+    ]
+  },
+  "E210": {
+    "researchStatus": "Source-backed summary",
+    "researchedAt": "2026-10-27",
+    "use": "Preservative used in some acidic foods and drinks to inhibit growth of yeasts, moulds and some bacteria; salts such as sodium benzoate are related benzoates.",
+    "tox": "In 2021 JECFA set a group ADI of 0–20 mg/kg body weight/day as benzoic-acid equivalents for benzoic acid, benzoate salts and specified related compounds, and withdrew the earlier group ADI of 0–5. This group-based value must not be treated as food concentration.",
+    "intake": "JECFA group ADI: 0–20 mg/kg bw/day as benzoic-acid equivalents (2021), for the specifically named group. National permitted foods and maximum levels vary.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Benzoic acid / INS 210",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1754",
+        "note": "JECFA 2021 group assessment; group ADI expressed as benzoic-acid equivalents."
       }
     ]
   },
@@ -691,6 +1465,687 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E230": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as preservative (slows microbial deterioration and helps extend shelf life). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Biphenyl, diphenyl (INS 230)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=261",
+        "note": "Additive-specific Codex GSFA record for INS 230, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E235": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as preservative (slows microbial deterioration and helps extend shelf life). Codex GSFA lists category-specific provisions including Cheese analogues and Cured (including salted) and dried non-heat treated processed comminuted meat, poultry, and game products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [
+      "Cheese analogues",
+      "Cured (including salted) and dried non-heat treated processed comminuted meat, poultry, and game products",
+      "Cured (including salted) and dried non-heat treated processed meat, poultry, and game products in whole pieces or cuts",
+      "Processed cheese",
+      "Ripened cheese"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Natamycin, Pimaracin (INS 235)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=208",
+        "note": "Additive-specific Codex GSFA record for INS 235, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E239": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as preservative (slows microbial deterioration and helps extend shelf life). Codex GSFA lists category-specific provisions including Ripened cheese, includes rind; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [
+      "Ripened cheese, includes rind"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Hexamine (hexamethylene tetramine) (INS 239)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=220",
+        "note": "Additive-specific Codex GSFA record for INS 239, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E242": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as preservative (slows microbial deterioration and helps extend shelf life). Codex GSFA lists category-specific provisions including Cider and perry and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [
+      "Cider and perry",
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Fruit and vegetable juices",
+      "Fruit and vegetable nectars",
+      "Grape wines"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Dimethyl dicarbonate (INS 242)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=334",
+        "note": "Additive-specific Codex GSFA record for INS 242, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E260": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); preservative (slows microbial deterioration and helps extend shelf life). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Acetic acid (INS 260)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=170",
+        "note": "Additive-specific Codex GSFA record for INS 260, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E263": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); preservative (slows microbial deterioration and helps extend shelf life); stabilizer (helps keep multiple components uniformly dispersed). Codex GSFA lists category-specific provisions including Complementary foods for infants and young children and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Preservative",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Complementary foods for infants and young children",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium acetate (INS 263)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=317",
+        "note": "Additive-specific Codex GSFA record for INS 263, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E270": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity). Codex GSFA lists category-specific provisions including Complementary foods for infants and young children and Dried pastas and noodles and like products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "gsfaFoodCategories": [
+      "Complementary foods for infants and young children",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Follow-up formulae"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Lactic acid (INS 270)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=169",
+        "note": "Additive-specific Codex GSFA record for INS 270, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E280": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as preservative (slows microbial deterioration and helps extend shelf life). Codex GSFA lists category-specific provisions including Ripened cheese, includes rind and Whey protein cheese; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [
+      "Ripened cheese, includes rind",
+      "Whey protein cheese",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Propionic acid (INS 280)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=370",
+        "note": "Additive-specific Codex GSFA record for INS 280, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E281": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as preservative (slows microbial deterioration and helps extend shelf life). Codex GSFA lists category-specific provisions including Ripened cheese, includes rind and Whey protein cheese; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [
+      "Ripened cheese, includes rind",
+      "Whey protein cheese",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sodium propionate (INS 281)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=375",
+        "note": "Additive-specific Codex GSFA record for INS 281, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E282": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as preservative (slows microbial deterioration and helps extend shelf life). Codex GSFA lists category-specific provisions including Ripened cheese, includes rind and Whey protein cheese; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [
+      "Ripened cheese, includes rind",
+      "Whey protein cheese",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium propionate (INS 282)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=306",
+        "note": "Additive-specific Codex GSFA record for INS 282, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E283": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as preservative (slows microbial deterioration and helps extend shelf life). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Potassium propionate (INS 283)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=367",
+        "note": "Additive-specific Codex GSFA record for INS 283, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E290": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as carbonating agent (provides carbonation); foaming agent (helps form or maintain a uniform dispersion of gas in food); packaging gas (protects packaged food, for example from oxidation or spoilage); preservative (slows microbial deterioration and helps extend shelf life); propellant (expels food from a container). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Carbonating agent",
+      "Foaming agent",
+      "Packaging gas",
+      "Preservative",
+      "Propellant"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Concentrates for fruit juice",
+      "Concentrates for fruit nectar",
+      "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Carbon dioxide (INS 290)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=7",
+        "note": "Additive-specific Codex GSFA record for INS 290, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E296": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); sequestrant (controls the availability of certain metal ions). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Sequestrant"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Concentrates for fruit juice",
+      "Concentrates for fruit nectar",
+      "Concentrates for vegetable juice"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Malic acid (INS 296)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=179",
+        "note": "Additive-specific Codex GSFA record for INS 296, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E297": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Fumaric acid (INS 297)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=171",
+        "note": "Additive-specific Codex GSFA record for INS 297, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E300": {
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Antioxidant used to help limit oxidation and maintain quality; it is also vitamin C and occurs naturally in many fruits and vegetables. Codex GSFA classifies this additive as acidity regulator, antioxidant, flour treatment agent, sequestrant. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "tox": "JECFA's group ADI is 'not specified' for ascorbic acid and its sodium, potassium and calcium salts under the evaluated conditions. That term is not an unlimited-dose recommendation; concentrated powders and unusual medical circumstances are different from ordinary food use.",
+    "intake": "JECFA group ADI: 'not specified' (1981) for ascorbic acid and specified salts. This is a toxicological allocation term, not a personal intake target or blanket authorization.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Ascorbic acid / INS 300",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/59",
+        "note": "JECFA lists antioxidant function and 'ADI not specified' for the specified group."
+      },
+      {
+        "label": "Codex GSFA — Ascorbic acid (INS 300)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=241",
+        "note": "Additive-specific Codex GSFA record for INS 300, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Acidity regulator",
+      "Antioxidant",
+      "Flour treatment agent",
+      "Sequestrant"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Concentrates for fruit juice",
+      "Concentrates for fruit nectar",
+      "Concentrates for vegetable juice"
+    ]
+  },
+  "E301": {
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Antioxidant used to help limit oxidation and preserve color or quality; sodium ascorbate is also a form of vitamin C. Codex GSFA classifies this additive as antioxidant, flour treatment agent. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "tox": "JECFA lists an ADI “not specified” for ascorbic acid and its sodium, potassium and calcium salts as a group. This is an assessment category, not a claim of unlimited intake; product use and the total diet still matter.",
+    "intake": "JECFA: ADI “not specified” for the group of ascorbic acid and sodium, potassium and calcium salts (1981 evaluation for sodium ascorbate). This is not an individual daily target or per-food maximum.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Sodium ascorbate / INS 301",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2372",
+        "note": "Lists the group ADI as “not specified” for ascorbic acid and its sodium, potassium and calcium salts."
+      },
+      {
+        "label": "FSANZ — How additives are assessed",
+        "url": "https://www.foodstandards.gov.au/consumer/additives/additivecontrol",
+        "note": "Explains the risk assessment and permitted-use framework."
+      },
+      {
+        "label": "Codex GSFA — Sodium ascorbate (INS 301)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=249",
+        "note": "Additive-specific Codex GSFA record for INS 301, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Antioxidant",
+      "Flour treatment agent"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Concentrates for fruit juice",
+      "Concentrates for fruit nectar",
+      "Dried pastas and noodles and like products"
+    ]
+  },
+  "E302": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life). Codex GSFA lists category-specific provisions including Complementary foods for infants and young children and Concentrates for fruit juice; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antioxidant"
+    ],
+    "gsfaFoodCategories": [
+      "Complementary foods for infants and young children",
+      "Concentrates for fruit juice",
+      "Concentrates for fruit nectar",
+      "Dried pastas and noodles and like products",
+      "Follow-up formulae"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium ascorbate (INS 302)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=244",
+        "note": "Additive-specific Codex GSFA record for INS 302, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E310": {
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Antioxidant used to slow oxidation in selected foods containing fats or oils, helping protect flavor and shelf life. Codex GSFA classifies this additive as antioxidant. Codex GSFA lists category-specific provisions including Breakfast cereals, including rolled oats and Butter oil, anhydrous milkfat, ghee; these are examples, not blanket permission.",
+    "tox": "JECFA maintained an ADI of 0–1.4 mg/kg body weight/day for propyl gallate in 1996 (original numeric ADI from 1993). The value is a chronic total-exposure benchmark, not a product serving limit; legal uses and maximum levels vary by market.",
+    "intake": "JECFA ADI: 0–1.4 mg/kg body weight/day (1993, maintained 1996). It is not a personal target or allowable amount per food.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Propyl gallate / INS 310",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1272",
+        "note": "JECFA identifies propyl gallate as an antioxidant and lists ADI 0–1.4 mg/kg bw."
+      },
+      {
+        "label": "Codex GSFA — Propyl gallate (INS 310)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=204",
+        "note": "Additive-specific Codex GSFA record for INS 310, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Antioxidant"
+    ],
+    "gsfaFoodCategories": [
+      "Breakfast cereals, including rolled oats",
+      "Butter oil, anhydrous milkfat, ghee",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
+      "Chewing gum",
+      "Cocoa products and chocolate products including imitations and chocolate substitutes"
+    ]
+  },
+  "E314": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life). Codex GSFA lists category-specific provisions including Chewing gum and Lard, tallow, fish oil, and other animal fats; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antioxidant"
+    ],
+    "gsfaFoodCategories": [
+      "Chewing gum",
+      "Lard, tallow, fish oil, and other animal fats",
+      "Sauces and like products",
+      "Vegetable oils and fats"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Guaiac resin (INS 314)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=240",
+        "note": "Additive-specific Codex GSFA record for INS 314, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E315": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life). Codex GSFA lists category-specific provisions including Fresh meat, poultry, and game, comminuted and Fresh mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antioxidant"
+    ],
+    "gsfaFoodCategories": [
+      "Fresh meat, poultry, and game, comminuted",
+      "Fresh mollusks, crustaceans, and echinoderms",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Frozen fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Grape wines"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Erythorbic acid (INS 315)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=243",
+        "note": "Additive-specific Codex GSFA record for INS 315, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E316": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life). Codex GSFA lists category-specific provisions including Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3 and Fresh mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antioxidant"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Fresh mollusks, crustaceans, and echinoderms",
+      "Frozen fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Smoked, dried, fermented, and/or salted fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Flavoured fluid milk drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sodium erythorbate (INS 316)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=254",
+        "note": "Additive-specific Codex GSFA record for INS 316, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E319": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life). Codex GSFA lists category-specific provisions including Beverage whiteners and Bread-type products, including bread stuffing and bread crumbs; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antioxidant"
+    ],
+    "gsfaFoodCategories": [
+      "Beverage whiteners",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Breads and rolls",
+      "Butter oil, anhydrous milkfat, ghee",
+      "Chewing gum"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Tertiary-butyl hydroquinone (INS 319)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=190",
+        "note": "Additive-specific Codex GSFA record for INS 319, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E320": {
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Butylated hydroxyanisole (BHA), an antioxidant used to slow oxidation in fats and oils and protect flavor during storage. Codex GSFA classifies this additive as antioxidant. Codex GSFA lists category-specific provisions including Bakery wares and Beverage whiteners; these are examples, not blanket permission.",
+    "tox": "JECFA established an ADI of 0–0.5 mg/kg body weight/day (1988). Its 1998 intake assessment found that estimates based on draft Codex use levels and consumption data exceeded the ADI in three of the member states that submitted data; this is historical data, not a current measurement for every country. High-consuming individuals may have greater exposure.",
+    "intake": "JECFA ADI: 0–0.5 mg/kg body weight/day (1988). The older JECFA exposure analysis reported exceedances in three submitted national datasets in 1998; do not interpret this as a current country ranking.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Butylated hydroxyanisole (BHA) / INS 320",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2140",
+        "note": "Official JECFA entry includes ADI 0–0.5 mg/kg bw and a historical dietary-exposure assessment."
+      },
+      {
+        "label": "FDA — Food allergen labelling",
+        "url": "https://www.fda.gov/consumers/consumer-updates/have-food-allergies-read-label",
+        "note": "FDA list of major U.S. food allergens; this list is not an exhaustive list of every possible sensitivity."
+      },
+      {
+        "label": "Codex GSFA — Butylated hydroxyanisole (INS 320)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=186",
+        "note": "Additive-specific Codex GSFA record for INS 320, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Antioxidant"
+    ],
+    "gsfaFoodCategories": [
+      "Bakery wares",
+      "Beverage whiteners",
+      "Breakfast cereals, including rolled oats",
+      "Butter oil, anhydrous milkfat, ghee",
+      "Chewing gum"
+    ]
+  },
+  "E321": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life). Codex GSFA lists category-specific provisions including Bakery wares and Beverage whiteners; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antioxidant"
+    ],
+    "gsfaFoodCategories": [
+      "Bakery wares",
+      "Beverage whiteners",
+      "Breakfast cereals, including rolled oats",
+      "Butter oil, anhydrous milkfat, ghee",
+      "Chewing gum"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Butylated hydroxytoluene (INS 321)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=189",
+        "note": "Additive-specific Codex GSFA record for INS 321, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
   "E322": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-30",
@@ -738,10 +2193,132 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E325": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); antioxidant (slows oxidation that can deteriorate food and shorten shelf life); bulking agent (adds bulk without significantly increasing available energy); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); emulsifying salt (helps rearrange proteins in processed foods to prevent fat separation); humectant (helps prevent food from drying out by retaining moisture); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Antioxidant",
+      "Bulking agent",
+      "Emulsifier",
+      "Emulsifying salt",
+      "Humectant",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sodium lactate (INS 325)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=84",
+        "note": "Additive-specific Codex GSFA record for INS 325, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E326": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); antioxidant (slows oxidation that can deteriorate food and shorten shelf life); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); humectant (helps prevent food from drying out by retaining moisture). Codex GSFA lists category-specific provisions including Complementary foods for infants and young children and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Antioxidant",
+      "Emulsifier",
+      "Humectant"
+    ],
+    "gsfaFoodCategories": [
+      "Complementary foods for infants and young children",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fluid buttermilk (plain)",
+      "Pasteurized cream (plain)",
+      "Smoked, dried, fermented, and/or salted fish and fish products, including mollusks, crustaceans, and echinoderms"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Potassium lactate (INS 326)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=72",
+        "note": "Additive-specific Codex GSFA record for INS 326, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E327": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); emulsifying salt (helps rearrange proteins in processed foods to prevent fat separation); firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels); flour treatment agent (improves flour or dough baking quality or colour); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Emulsifying salt",
+      "Firming agent",
+      "Flour treatment agent",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium lactate (INS 327)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=194",
+        "note": "Additive-specific Codex GSFA record for INS 327, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E329": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); flour treatment agent (improves flour or dough baking quality or colour). Codex GSFA lists category-specific provisions including Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Flour treatment agent"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Magnesium lactate (INS 329)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=362",
+        "note": "Additive-specific Codex GSFA record for INS 329, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
   "E330": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Acidity regulator and flavoring acid; used to adjust pH and provide tartness and can also support processing stability.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Acidity regulator and flavoring acid; used to adjust pH and provide tartness and can also support processing stability. Codex GSFA classifies this additive as acidity regulator, antioxidant, colour retention agent, sequestrant. Codex GSFA lists category-specific provisions including Butter oil, anhydrous milkfat, ghee and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are examples, not blanket permission.",
     "tox": "Concentrated citric acid can irritate tissues; the concentration in the food and the form of exposure matter. Food-use authorization and acceptable use levels differ by jurisdiction and category.",
     "intake": "No numeric ADI is bundled in this profile. Check the exact official evaluation and food-category rules in the selected country rather than interpreting missing numeric data as unlimited intake.",
     "sources": [
@@ -759,84 +2336,492 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO JECFA — additive database",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
         "note": "Search by exact additive name and INS code for the current assessment history."
-      }
-    ]
-  },
-  "E621": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
-    "use": "Flavor enhancer that contributes savory/umami taste.",
-    "tox": "JECFA maintains a group ADI “not specified” for glutamic acid and specified glutamate salts. EFSA’s separate 2017 re-evaluation derived a group ADI of 30 mg/kg bw/day expressed as glutamic acid for E620–E625, based on a neurodevelopmental-toxicity reference point. EFSA noted that high-percentile exposure estimates exceeded the proposed ADI for population groups, and that estimates including natural dietary glutamate and nutrient uses were higher still. The EFSA group ADI and JECFA conclusion use different assessment frameworks and must be stated separately.",
-    "intake": "EFSA group ADI: 30 mg/kg bw/day expressed as glutamic acid for E620–E625 (2017). JECFA group ADI: “not specified” for glutamic acid and specified salts. These are separate assessments; EFSA noted high-percentile exposure exceedances in its assessment. ADI is not a recommended target or an amount per meal. Check current local food-category conditions.",
-    "sources": [
-      {
-        "label": "FAO/WHO JECFA — Sodium glutamate / INS 621",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2267",
-        "note": "JECFA lists the group ADI as not specified for L-glutamic acid and specified salts."
       },
       {
-        "label": "EFSA — assessment of glutamates (E 620–625)",
-        "url": "https://www.efsa.europa.eu/en/efsajournal/pub/4910",
-        "note": "European assessment; separate scientific basis from the JECFA summary."
+        "label": "Codex GSFA — Citric acid (INS 330)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=173",
+        "note": "Additive-specific Codex GSFA record for INS 330, including its functional classes and food-category provisions."
       },
       {
-        "label": "EFSA Journal — re-evaluation of glutamic acid and glutamates (E620–E625), 2017",
-        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2017.4910",
-        "note": "Derived group ADI 30 mg/kg bw/day expressed as glutamic acid; notes high-percentile exposure exceedances and the different JECFA group ADI status."
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ],
+    "functionalClasses": [
+      "Acidity regulator",
+      "Antioxidant",
+      "Colour retention agent",
+      "Sequestrant"
+    ],
+    "gsfaFoodCategories": [
+      "Butter oil, anhydrous milkfat, ghee",
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Concentrates for fruit juice",
+      "Concentrates for fruit nectar"
     ]
   },
-  "E200": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
-    "use": "Preservative used to slow yeast and mould growth in specified foods; other sorbates are related members of the same preservative group.",
-    "tox": "JECFA’s group ADI is 0–25 mg/kg bw/day expressed as sorbic acid for the covered sorbates. Separately, EFSA’s 2019 follow-up established a group ADI of 11 mg sorbic acid/kg bw/day for sorbic acid (E200) and potassium sorbate (E202), based on an extended one-generation reproductive-toxicity study. EFSA’s most realistic non-brand-loyal exposure scenario did not exceed that 11 mg/kg bw/day group ADI. These are assessor-specific values and must not be conflated.",
-    "intake": "EFSA group ADI: 11 mg/kg bw/day expressed as sorbic acid for E200 + E202 (2019). JECFA has a separate group ADI of 0–25 mg/kg bw/day expressed as sorbic acid for the broader specified sorbate group. ADIs are chronic exposure benchmarks, not food concentration limits or recommended targets. National food-category maximums still apply.",
-    "sources": [
-      {
-        "label": "FAO/WHO JECFA — Sorbic acid / INS 200",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2443",
-        "note": "JECFA record identifies the preservative function and group ADI; review current local maximum levels."
-      },
-      {
-        "label": "EFSA Journal — follow-up re-evaluation of sorbic acid (E200) and potassium sorbate (E202), 2019",
-        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2019.5625",
-        "note": "Established an EFSA group ADI of 11 mg sorbic acid/kg bw/day for E200 and E202; realistic non-brand-loyal exposure estimates did not exceed it."
-      }
-    ]
-  },
-  "E210": {
+  "E331": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-27",
-    "use": "Preservative used in some acidic foods and drinks to inhibit growth of yeasts, moulds and some bacteria; salts such as sodium benzoate are related benzoates.",
-    "tox": "In 2021 JECFA set a group ADI of 0–20 mg/kg body weight/day as benzoic-acid equivalents for benzoic acid, benzoate salts and specified related compounds, and withdrew the earlier group ADI of 0–5. This group-based value must not be treated as food concentration.",
-    "intake": "JECFA group ADI: 0–20 mg/kg bw/day as benzoic-acid equivalents (2021), for the specifically named group. National permitted foods and maximum levels vary.",
+    "use": "Acidity regulator, sequestrant and stabilizer; sodium citrate salts help control acidity and can support texture in processed foods.",
+    "tox": "JECFA’s evaluation of sodium citrate records “ADI not limited / not specified” within the citric-acid-and-salts group. Older JECFA terminology should not be interpreted as permission for arbitrary concentrations or as medical advice for people who must monitor sodium.",
+    "intake": "JECFA: sodium citrate included in the citric acid and salts group, ADI “not limited” (1973 evaluation). No personalized limit is calculated; check local use levels and dietary sodium context.",
     "sources": [
       {
-        "label": "FAO/WHO JECFA — Benzoic acid / INS 210",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1754",
-        "note": "JECFA 2021 group assessment; group ADI expressed as benzoic-acid equivalents."
+        "label": "FAO/WHO JECFA — Sodium citrate / INS 331(iii)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1649",
+        "note": "JECFA lists its acidity-regulator/sequestrant function and group ADI terminology."
+      },
+      {
+        "label": "FSANZ — Additive control and safety assessment",
+        "url": "https://www.foodstandards.gov.au/consumer/additives/additivecontrol",
+        "note": "Food-additive permissions are conditional on the use assessed and food-standard requirements."
       }
     ]
   },
-  "E300": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Antioxidant used to help limit oxidation and maintain quality; it is also vitamin C and occurs naturally in many fruits and vegetables.",
-    "tox": "JECFA's group ADI is 'not specified' for ascorbic acid and its sodium, potassium and calcium salts under the evaluated conditions. That term is not an unlimited-dose recommendation; concentrated powders and unusual medical circumstances are different from ordinary food use.",
-    "intake": "JECFA group ADI: 'not specified' (1981) for ascorbic acid and specified salts. This is a toxicological allocation term, not a personal intake target or blanket authorization.",
+  "E353": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Grape wines; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Grape wines"
+    ],
     "sources": [
       {
-        "label": "FAO/WHO JECFA — Ascorbic acid / INS 300",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/59",
-        "note": "JECFA lists antioxidant function and 'ADI not specified' for the specified group."
+        "label": "Codex GSFA — Metatartaric acid (INS 353)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=436",
+        "note": "Additive-specific Codex GSFA record for INS 353, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
+    ]
+  },
+  "E355": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity). Codex GSFA lists category-specific provisions including Dairy-based desserts (e.g. pudding, fruit or flavoured yoghurt) and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "gsfaFoodCategories": [
+      "Dairy-based desserts (e.g. pudding, fruit or flavoured yoghurt)",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flavoured fluid milk drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Adipic acid (INS 355)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=174",
+        "note": "Additive-specific Codex GSFA record for INS 355, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E365": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Monosodium fumarate (INS 365)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=285",
+        "note": "Additive-specific Codex GSFA record for INS 365, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E380": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity). Codex GSFA lists category-specific provisions including Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Triammonium citrate (INS 380)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=353",
+        "note": "Additive-specific Codex GSFA record for INS 380, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E381": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as anticaking agent (reduces clumping by limiting particles sticking together). Codex GSFA lists category-specific provisions including Concentrates (liquid or solid) for water-based flavoured drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Anticaking agent"
+    ],
+    "gsfaFoodCategories": [
+      "Concentrates (liquid or solid) for water-based flavoured drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ammonium ferric citrate (INS 381)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=318",
+        "note": "Additive-specific Codex GSFA record for INS 381, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E384": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life); preservative (slows microbial deterioration and helps extend shelf life); sequestrant (controls the availability of certain metal ions). Codex GSFA lists category-specific provisions including Cured (including salted) and dried non-heat treated processed comminuted meat, poultry, and game products and Cured (including salted) and dried non-heat treated processed meat, poultry, and game products in whole pieces or cuts; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antioxidant",
+      "Preservative",
+      "Sequestrant"
+    ],
+    "gsfaFoodCategories": [
+      "Cured (including salted) and dried non-heat treated processed comminuted meat, poultry, and game products",
+      "Cured (including salted) and dried non-heat treated processed meat, poultry, and game products in whole pieces or cuts",
+      "Fat spreads, dairy fat spreads and blended spreads",
+      "Fresh meat, poultry, and game, comminuted",
+      "Lard, tallow, fish oil, and other animal fats"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Isopropyl citrate (INS 384)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=255",
+        "note": "Additive-specific Codex GSFA record for INS 384, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E392": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Antioxidant"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Carnosic acid (INS 392)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=439",
+        "note": "Additive-specific Codex GSFA record for INS 392, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E400": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); foaming agent (helps form or maintain a uniform dispersion of gas in food); gelling agent (creates a gel texture); glazing agent (gives a food surface a shiny appearance or protective coating); humectant (helps prevent food from drying out by retaining moisture); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Carrier",
+      "Emulsifier",
+      "Foaming agent",
+      "Gelling agent",
+      "Glazing agent",
+      "Humectant",
+      "Sequestrant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Alginic acid (INS 400)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=59",
+        "note": "Additive-specific Codex GSFA record for INS 400, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E401": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); foaming agent (helps form or maintain a uniform dispersion of gas in food); gelling agent (creates a gel texture); glazing agent (gives a food surface a shiny appearance or protective coating); humectant (helps prevent food from drying out by retaining moisture); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Carrier",
+      "Emulsifier",
+      "Foaming agent",
+      "Gelling agent",
+      "Glazing agent",
+      "Humectant",
+      "Sequestrant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sodium alginate (INS 401)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=52",
+        "note": "Additive-specific Codex GSFA record for INS 401, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E402": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); foaming agent (helps form or maintain a uniform dispersion of gas in food); gelling agent (creates a gel texture); glazing agent (gives a food surface a shiny appearance or protective coating); humectant (helps prevent food from drying out by retaining moisture); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Dried pastas and noodles and like products and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Carrier",
+      "Emulsifier",
+      "Foaming agent",
+      "Gelling agent",
+      "Glazing agent",
+      "Humectant",
+      "Sequestrant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Frozen fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Potassium alginate (INS 402)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=74",
+        "note": "Additive-specific Codex GSFA record for INS 402, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E403": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); foaming agent (helps form or maintain a uniform dispersion of gas in food); gelling agent (creates a gel texture); glazing agent (gives a food surface a shiny appearance or protective coating); humectant (helps prevent food from drying out by retaining moisture); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Dried pastas and noodles and like products and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Carrier",
+      "Emulsifier",
+      "Foaming agent",
+      "Gelling agent",
+      "Glazing agent",
+      "Humectant",
+      "Sequestrant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Frozen fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ammonium alginate (INS 403)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=181",
+        "note": "Additive-specific Codex GSFA record for INS 403, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E404": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antifoaming agent (prevents or reduces foaming); bulking agent (adds bulk without significantly increasing available energy); carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); foaming agent (helps form or maintain a uniform dispersion of gas in food); gelling agent (creates a gel texture); glazing agent (gives a food surface a shiny appearance or protective coating); humectant (helps prevent food from drying out by retaining moisture); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Dried pastas and noodles and like products and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antifoaming agent",
+      "Bulking agent",
+      "Carrier",
+      "Foaming agent",
+      "Gelling agent",
+      "Glazing agent",
+      "Humectant",
+      "Sequestrant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Frozen egg products"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium alginate (INS 404)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=64",
+        "note": "Additive-specific Codex GSFA record for INS 404, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E405": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); foaming agent (helps form or maintain a uniform dispersion of gas in food); gelling agent (creates a gel texture); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Beer and malt beverages and Beverage whiteners; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Carrier",
+      "Emulsifier",
+      "Foaming agent",
+      "Gelling agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Beer and malt beverages",
+      "Beverage whiteners",
+      "Cakes, cookies and pies (e.g. fruit-filled or custard types)",
+      "Carbonated water-based flavoured drinks",
+      "Cheese analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Propane-1,2-diol alginate (propylene glycol alginate) (INS 405)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=75",
+        "note": "Additive-specific Codex GSFA record for INS 405, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E406": {
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Gelling, thickening and stabilizing agent derived from red seaweed; agar helps set jellies, desserts and other foods. Codex GSFA classifies this additive as bulking agent, carrier, emulsifier, gelling agent, glazing agent, humectant, stabilizer, thickener. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "tox": "JECFA lists an ADI of “not limited” for agar in its evaluation history. That historical term is not a serving recommendation or a substitute for relevant food-use limits; very high amounts of gelling agents may alter gastrointestinal tolerance.",
+    "intake": "JECFA record: ADI “not limited” (1973 evaluation history). It is not an unlimited-consumption recommendation; follow local food-category conditions and the product’s full ingredients.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Agar / INS 406",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1548",
+        "note": "JECFA identifies agar’s thickener/stabilizer functions and evaluation history."
+      },
+      {
+        "label": "FSANZ — Additive safety assessment",
+        "url": "https://www.foodstandards.gov.au/consumer/additives/additivecontrol",
+        "note": "Explains how safety is assessed for proposed food additive uses."
+      },
+      {
+        "label": "Codex GSFA — Agar (INS 406)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=8",
+        "note": "Additive-specific Codex GSFA record for INS 406, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Bulking agent",
+      "Carrier",
+      "Emulsifier",
+      "Gelling agent",
+      "Glazing agent",
+      "Humectant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation"
     ]
   },
   "E407": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
-    "use": "Seaweed-derived hydrocolloid used as a thickener, stabilizer, gelling agent and emulsifier; formulation and processing form matter.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Seaweed-derived hydrocolloid used as a thickener, stabilizer, gelling agent and emulsifier; formulation and processing form matter. Codex GSFA classifies this additive as bulking agent, carrier, emulsifier, gelling agent, glazing agent, humectant, stabilizer, thickener. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
     "tox": "EFSA’s 2018 re-evaluation found no genotoxicity or carcinogenicity concern in the evaluated food-grade material and reported high-dose animal NOAELs, but also identified significant uncertainties in chemistry, exposure and toxicology. It therefore retained the existing group ADI of 75 mg/kg bw/day only on a temporary basis pending better data. EFSA distinguished food-grade carrageenan from degraded carrageenan/poligeenan, which is not authorised as a food additive. Follow-up work on infant-food uses and the low-molecular-weight fraction was still being discussed by EFSA working groups in 2024.",
     "intake": "EFSA 2018: temporary group ADI of 75 mg/kg bw/day for carrageenan (E407) and processed Eucheuma seaweed (E407a), pending data gaps; not a final reaffirmation. JECFA has separately assigned ADI “not specified” for its defined carrageenan food-additive group. These assessments differ. Check exact material, specification and national use conditions; poligeenan is not the authorised food additive.",
     "sources": [
@@ -859,6 +2844,16 @@ window.FOSCH_RESEARCH_DATA={
         "label": "EFSA — 2024 Food Additives and Flavourings Panel meeting minutes",
         "url": "https://www.efsa.europa.eu/sites/default/files/2024-04/200324-m.pdf",
         "note": "Records that follow-up work was continuing on carrageenan, including low-molecular-weight material and infant-food uses."
+      },
+      {
+        "label": "Codex GSFA — Carrageenan (INS 407)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=49",
+        "note": "Additive-specific Codex GSFA record for INS 407, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ],
     "allergy": "Carrageenan has been flagged as a possible exposure for a small subset of people with alpha-gal syndrome, although expert clinical reviews describe the risk as low and reactions as uncommon. Carrageenan is seaweed-derived; this is not a shellfish-allergy warning, and individual reactions vary.",
@@ -868,168 +2863,63 @@ window.FOSCH_RESEARCH_DATA={
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8344025/",
         "note": "Discusses carrageenan as a possible source of alpha-gal exposure and describes the apparent clinical risk as low."
       }
+    ],
+    "functionalClasses": [
+      "Bulking agent",
+      "Carrier",
+      "Emulsifier",
+      "Gelling agent",
+      "Glazing agent",
+      "Humectant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation"
     ]
   },
-  "E415": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Polysaccharide thickener and stabilizer used to control viscosity and texture in foods, dressings, sauces and drinks.",
-    "tox": "JECFA's 2016 evaluation lists ADI 'not specified'. It also assessed xanthan gum use up to 1000 mg/L in infant formula or formula for special medical purposes as not of safety concern under the studied conditions. That finding is use-specific and does not replace local food-category limits.",
-    "intake": "JECFA: ADI 'not specified' (2016 record); it is not an unlimited intake recommendation. Check applicable national food uses and specific product context.",
+  "E407a": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); gelling agent (creates a gel texture); glazing agent (gives a food surface a shiny appearance or protective coating); humectant (helps prevent food from drying out by retaining moisture); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Carrier",
+      "Emulsifier",
+      "Gelling agent",
+      "Glazing agent",
+      "Humectant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation"
+    ],
     "sources": [
       {
-        "label": "FAO/WHO JECFA — Xanthan gum / INS 415",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/802",
-        "note": "JECFA's entry includes an infant-formula evaluation and an ADI 'not specified'."
-      }
-    ]
-  },
-  "E440": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Gelling agent, thickener and stabilizer used in jams, jellies, fruit preparations and other foods; pectin also occurs naturally in fruit.",
-    "tox": "JECFA lists ADI 'not specified' in its current entry, but its infant-formula history contains a use-level-specific concern: a 2014 assessment considered use up to 0.5% in infant formula of concern, while a later 2016 assessment considered a lower proposed level of 0.2% not of concern. Those findings are formulation- and population-specific.",
-    "intake": "JECFA: ADI 'not specified'; infant-formula evaluations have different conclusions at 0.2% and 0.5% proposed use levels. Do not generalize this to unrestricted use or all populations.",
-    "sources": [
-      {
-        "label": "FAO/WHO JECFA — Pectins / INS 440",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3043",
-        "note": "JECFA 2014 and 2016 evaluations note infant-formula use-level specifics."
-      }
-    ]
-  },
-  "E950": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
-    "use": "High-intensity sweetener used to provide sweetness in foods and drinks, often combined with other sweeteners.",
-    "tox": "EFSA’s re-evaluation (published 2025; amended 2026) established an ADI of 15 mg/kg bw/day, replacing the earlier SCF ADI of 9 mg/kg bw/day. EFSA found no genotoxicity concern for acesulfame K and its degradation products, and concluded that current dietary exposure estimates did not indicate a safety concern. The highest refined brand-loyal 95th-percentile estimate was 15.7 mg/kg bw/day in toddlers, while the panel’s overall risk characterisation remained that current use did not present a safety concern. EFSA identified a potential genotoxicity concern for the impurity 5-chloro-acesulfame and recommended a 0.1 mg/kg specification limit or suitable genotoxicity data; it also recommended limits for acetylacetamide, lead and mercury.",
-    "intake": "EFSA ADI: 15 mg/kg bw/day (2025 opinion, amended 26 February 2026), replacing the SCF’s previous 9 mg/kg bw/day. EFSA concluded current EU dietary exposure estimates did not indicate a safety concern at assessed uses. The ADI is a chronic lifetime-average benchmark, not a serving allowance or a food concentration limit. National permissions, use categories and maximum levels remain jurisdiction-specific.",
-    "sources": [
-      {
-        "label": "FAO/WHO JECFA — Acesulfame K / INS 950",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3613",
-        "note": "JECFA entry lists sweetener function and ADI 0–15 mg/kg bw."
+        "label": "Codex GSFA — Processed eucheuma seaweed (INS 407a)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=15",
+        "note": "Additive-specific Codex GSFA record for INS 407a, including its functional classes and food-category provisions."
       },
       {
-        "label": "EFSA Journal — re-evaluation of acesulfame K (E950), 2025; amended 2026",
-        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2025.9317",
-        "note": "Revised ADI to 15 mg/kg bw/day, replacing the SCF 9 mg/kg bw/day; no safety concern at currently assessed EU uses; recommends revised limits for 5-chloro-acesulfame, acetylacetamide, lead and mercury impurities."
-      }
-    ]
-  },
-  "E951": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "High-intensity sweetener used in reduced-sugar and sugar-free foods and drinks; it is broken down into constituent metabolites after ingestion.",
-    "tox": "JECFA reaffirmed an ADI of 0–40 mg/kg body weight/day in 2023 and concluded that the evaluated dietary exposure estimates did not present a health concern. People with phenylketonuria (PKU) must manage phenylalanine exposure; labeling requirements are separate from allergy warnings.",
-    "intake": "JECFA ADI: 0–40 mg/kg bw/day, reaffirmed 2023. The United States, EU and other jurisdictions may use different assessment values and labeling provisions; follow the selected market's current rules and PKU advice where relevant.",
-    "sources": [
-      {
-        "label": "FAO/WHO JECFA — Aspartame / INS 951",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/62",
-        "note": "JECFA 2023 evaluation; exposure conclusions and the PKU labeling issue are distinct."
-      }
-    ]
-  },
-  "E955": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
-    "use": "High-intensity, non-nutritive sweetener used in reduced-sugar and sugar-free foods and beverages; approximately 600 times sweeter than sugar by weight. Current EU permissions are limited to specified food categories and conditions.",
-    "tox": "EFSA’s 2026 re-evaluation found no safety concern for sucralose at currently authorised uses and retained the ADI of 15 mg/kg bw/day. EFSA could not conclude on the safety of a proposed extension to additional fine bakery wares because of uncertainty about possible formation of chlorinated compounds during a wide range of baking processes. The current-use conclusion must not be stretched to cover the proposed new use.",
-    "intake": "EFSA ADI: 15 mg/kg bw/day, reaffirmed in 2026. Estimated exposure under currently authorised EU uses remained below the ADI. EFSA did not confirm safety for the proposed additional fine-bakery uses. ADI is a lifelong average exposure benchmark, not a serving allowance; verify current national conditions and food-category limits.",
-    "sources": [
-      {
-        "label": "FAO/WHO JECFA — Sucralose / INS 955",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2340",
-        "note": "JECFA record lists the sweetener function and ADI 0–15 mg/kg bw."
-      },
-      {
-        "label": "EFSA Journal — re-evaluation of sucralose (E955), 2026",
-        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2026.9854",
-        "note": "Reaffirmed ADI 15 mg/kg bw/day and safety for current authorised uses; could not confirm safety of the proposed extension to fine bakery wares."
-      },
-      {
-        "label": "EFSA — sucralose remains safe at currently authorised uses, 17 February 2026",
-        "url": "https://www.efsa.europa.eu/en/news/efsa-finds-sucralose-safe-when-used-currently-authorised-cannot-confirm-safety-extending-its",
-        "note": "Plain-language summary of the distinction between existing permitted uses and the proposed extension."
-      }
-    ]
-  },
-  "E960": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "High-intensity sweetener from steviol glycosides; the exact plant source, purification and preparation can vary by product.",
-    "tox": "At its 102nd meeting in 2026, JECFA confirmed an ADI of 0–4 mg/kg body weight/day expressed as steviol. The same review evaluated exposure estimates; the ADI cannot be read as a permitted concentration for every food or as a guarantee of individual tolerance.",
-    "intake": "JECFA ADI: 0–4 mg/kg bw/day expressed as steviol; confirmed 2026. Use exact preparation and local legal conditions when interpreting the number.",
-    "sources": [
-      {
-        "label": "FAO/WHO JECFA — Dulcoside A / steviol-glycosides INS 960",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3644",
-        "note": "JECFA 2026 evaluation confirmed ADI 0–4 mg/kg bw expressed as steviol."
-      }
-    ]
-  },
-  "E301": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Antioxidant used to help limit oxidation and preserve color or quality; sodium ascorbate is also a form of vitamin C.",
-    "tox": "JECFA lists an ADI “not specified” for ascorbic acid and its sodium, potassium and calcium salts as a group. This is an assessment category, not a claim of unlimited intake; product use and the total diet still matter.",
-    "intake": "JECFA: ADI “not specified” for the group of ascorbic acid and sodium, potassium and calcium salts (1981 evaluation for sodium ascorbate). This is not an individual daily target or per-food maximum.",
-    "sources": [
-      {
-        "label": "FAO/WHO JECFA — Sodium ascorbate / INS 301",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2372",
-        "note": "Lists the group ADI as “not specified” for ascorbic acid and its sodium, potassium and calcium salts."
-      },
-      {
-        "label": "FSANZ — How additives are assessed",
-        "url": "https://www.foodstandards.gov.au/consumer/additives/additivecontrol",
-        "note": "Explains the risk assessment and permitted-use framework."
-      }
-    ]
-  },
-  "E331": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Acidity regulator, sequestrant and stabilizer; sodium citrate salts help control acidity and can support texture in processed foods.",
-    "tox": "JECFA’s evaluation of sodium citrate records “ADI not limited / not specified” within the citric-acid-and-salts group. Older JECFA terminology should not be interpreted as permission for arbitrary concentrations or as medical advice for people who must monitor sodium.",
-    "intake": "JECFA: sodium citrate included in the citric acid and salts group, ADI “not limited” (1973 evaluation). No personalized limit is calculated; check local use levels and dietary sodium context.",
-    "sources": [
-      {
-        "label": "FAO/WHO JECFA — Sodium citrate / INS 331(iii)",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1649",
-        "note": "JECFA lists its acidity-regulator/sequestrant function and group ADI terminology."
-      },
-      {
-        "label": "FSANZ — Additive control and safety assessment",
-        "url": "https://www.foodstandards.gov.au/consumer/additives/additivecontrol",
-        "note": "Food-additive permissions are conditional on the use assessed and food-standard requirements."
-      }
-    ]
-  },
-  "E406": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Gelling, thickening and stabilizing agent derived from red seaweed; agar helps set jellies, desserts and other foods.",
-    "tox": "JECFA lists an ADI of “not limited” for agar in its evaluation history. That historical term is not a serving recommendation or a substitute for relevant food-use limits; very high amounts of gelling agents may alter gastrointestinal tolerance.",
-    "intake": "JECFA record: ADI “not limited” (1973 evaluation history). It is not an unlimited-consumption recommendation; follow local food-category conditions and the product’s full ingredients.",
-    "sources": [
-      {
-        "label": "FAO/WHO JECFA — Agar / INS 406",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1548",
-        "note": "JECFA identifies agar’s thickener/stabilizer functions and evaluation history."
-      },
-      {
-        "label": "FSANZ — Additive safety assessment",
-        "url": "https://www.foodstandards.gov.au/consumer/additives/additivecontrol",
-        "note": "Explains how safety is assessed for proposed food additive uses."
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
   },
   "E410": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Thickener, stabilizer and emulsifier made from the seed endosperm of the carob tree; also called locust bean or carob bean gum.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Thickener, stabilizer and emulsifier made from the seed endosperm of the carob tree; also called locust bean or carob bean gum. Codex GSFA classifies this additive as emulsifier, gelling agent, stabilizer, thickener. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
     "tox": "JECFA historically assigned ADI “not specified”; its 2025 evaluation specifically examined infant-formula exposure. The infant assessment must be read in context: the committee noted that very young infants and specific medical-formula uses may be more sensitive to exposure. General-population conclusions should not be automatically transferred to medically vulnerable infants.",
     "intake": "JECFA’s ADI is “not specified” for ordinary food uses; its 2025 infant-formula assessment is specific to age and exposure. The numerical NOAEL in the report is not a consumer intake limit. Consult pediatric clinicians for special medical formulas.",
     "sources": [
@@ -1052,6 +2942,16 @@ window.FOSCH_RESEARCH_DATA={
         "label": "EFSA — Re-evaluation of locust bean gum (E 410)",
         "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2017.4646",
         "note": "European scientific review of toxicology, exposure and specific uses."
+      },
+      {
+        "label": "Codex GSFA — Locust bean gum (INS 410)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=50",
+        "note": "Additive-specific Codex GSFA record for INS 410, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ],
     "allergy": "Rare case reports describe allergic reactions, including urticaria and angioedema, after ingestion of carob/locust bean gum (E410). The evidence is limited and concerns a specific reaction to this gum; it should not be inferred solely from another plant or legume allergy.",
@@ -1066,12 +2966,25 @@ window.FOSCH_RESEARCH_DATA={
         "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2023.7775",
         "note": "European scientific assessment notes a small number of adult case reports of allergy after oral ingestion and discusses uncertainties in the evidence."
       }
+    ],
+    "functionalClasses": [
+      "Emulsifier",
+      "Gelling agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation"
     ]
   },
   "E412": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Thickener, stabilizer and emulsifier made from guar seeds; commonly helps provide viscosity and texture.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Thickener, stabilizer and emulsifier made from guar seeds; commonly helps provide viscosity and texture. Codex GSFA classifies this additive as emulsifier, stabilizer, thickener. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
     "tox": "JECFA historical summaries assign ADI “not specified” to guar gum complying with its specifications. This does not mean every formulation, impurity profile or dose has been assessed as identical, and very high fibre/gum loads can affect gastrointestinal tolerance.",
     "intake": "JECFA historical ADI: “not specified” (1975 evaluation). No personal intake target is inferred. National permitted food uses, specifications and product concentration still apply.",
     "sources": [
@@ -1094,6 +3007,16 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Authorised guar gum (E 412)",
         "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-412",
         "note": "Great Britain authorization register and conditions referencing the applicable food-additive legislation."
+      },
+      {
+        "label": "Codex GSFA — Guar gum (INS 412)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=9",
+        "note": "Additive-specific Codex GSFA record for INS 412, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ],
     "allergy": "Rare allergic reactions to ingested guar gum (E412), including anaphylaxis, have been reported. EFSA notes that reactions may be related to residual proteins in the gum. This is a guar-gum-specific concern, and the evidence indicates that such reactions are uncommon.",
@@ -1108,12 +3031,53 @@ window.FOSCH_RESEARCH_DATA={
         "url": "https://pubmed.ncbi.nlm.nih.gov/36134088/",
         "note": "Peer-reviewed report of two rare cases of anaphylaxis associated with guar gum ingestion."
       }
+    ],
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation"
+    ]
+  },
+  "E413": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Tragacanth (INS 413)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=55",
+        "note": "Additive-specific Codex GSFA record for INS 413, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
     ]
   },
   "E414": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Acacia gum (gum arabic), used as a stabilizer, emulsifier and thickener in beverages, coatings and confectionery.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Acacia gum (gum arabic), used as a stabilizer, emulsifier and thickener in beverages, coatings and confectionery. Codex GSFA classifies this additive as bulking agent, carrier, emulsifier, glazing agent, stabilizer, thickener. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
     "tox": "JECFA lists an ADI “not specified” for gum arabic complying with its identity/specification. The term is not a statement that any dose or non-compliant product is safe; conditions of use and food-category rules still apply.",
     "intake": "JECFA: ADI “not specified” (1989 evaluation). No personal target or unlimited-intake advice is provided; assess actual use, specifications and local rules.",
     "sources": [
@@ -1126,6 +3090,150 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO JECFA evaluation archive — Gum arabic",
         "url": "https://www.inchem.org/documents/jecfa/jeceval/jec_948.htm",
         "note": "Historical evaluation summary and specifications."
+      },
+      {
+        "label": "Codex GSFA — Gum arabic (INS 414)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=63",
+        "note": "Additive-specific Codex GSFA record for INS 414, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Bulking agent",
+      "Carrier",
+      "Emulsifier",
+      "Glazing agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products"
+    ]
+  },
+  "E415": {
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Polysaccharide thickener and stabilizer used to control viscosity and texture in foods, dressings, sauces and drinks. Codex GSFA classifies this additive as emulsifier, foaming agent, stabilizer, thickener. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "tox": "JECFA's 2016 evaluation lists ADI 'not specified'. It also assessed xanthan gum use up to 1000 mg/L in infant formula or formula for special medical purposes as not of safety concern under the studied conditions. That finding is use-specific and does not replace local food-category limits.",
+    "intake": "JECFA: ADI 'not specified' (2016 record); it is not an unlimited intake recommendation. Check applicable national food uses and specific product context.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Xanthan gum / INS 415",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/802",
+        "note": "JECFA's entry includes an infant-formula evaluation and an ADI 'not specified'."
+      },
+      {
+        "label": "Codex GSFA — Xanthan gum (INS 415)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=48",
+        "note": "Additive-specific Codex GSFA record for INS 415, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Emulsifier",
+      "Foaming agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation"
+    ]
+  },
+  "E416": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Karaya gum (INS 416)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=5",
+        "note": "Additive-specific Codex GSFA record for INS 416, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E417": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as gelling agent (creates a gel texture); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Gelling agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Tara gum (INS 417)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=17",
+        "note": "Additive-specific Codex GSFA record for INS 417, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E419": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Carrier",
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Gum ghatti (INS 419)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=422",
+        "note": "Additive-specific Codex GSFA record for INS 419, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
   },
@@ -1146,6 +3254,257 @@ window.FOSCH_RESEARCH_DATA={
         "url": "https://www.foodstandards.gov.au/consumer/additives/additivecontrol",
         "note": "Official overview of risk assessment and conditions of use."
       }
+    ]
+  },
+  "E420(i)": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); humectant (helps prevent food from drying out by retaining moisture); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed); sweetener (imparts a sweet taste); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms and Frozen minced and creamed fish products, including mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Humectant",
+      "Sequestrant",
+      "Stabilizer",
+      "Sweetener",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Frozen minced and creamed fish products, including mollusks, crustaceans, and echinoderms",
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)",
+      "Seasonings and condiments",
+      "Smoked, dried, fermented, and/or salted fish and fish products, including mollusks, crustaceans, and echinoderms"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sorbitol (INS 420(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=183",
+        "note": "Additive-specific Codex GSFA record for INS 420(i), including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E420(ii)": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); humectant (helps prevent food from drying out by retaining moisture); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed); sweetener (imparts a sweet taste); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Cooked mollusks, crustaceans, and echinoderms and Frozen egg products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Humectant",
+      "Sequestrant",
+      "Stabilizer",
+      "Sweetener",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Frozen egg products",
+      "Frozen minced and creamed fish products, including mollusks, crustaceans, and echinoderms",
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)",
+      "Seasonings and condiments"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sorbitol syrup (INS 420(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=393",
+        "note": "Additive-specific Codex GSFA record for INS 420(ii), including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E421": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as anticaking agent (reduces clumping by limiting particles sticking together); bulking agent (adds bulk without significantly increasing available energy); carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); humectant (helps prevent food from drying out by retaining moisture); stabilizer (helps keep multiple components uniformly dispersed); sweetener (imparts a sweet taste); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Complementary foods for infants and young children and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Anticaking agent",
+      "Bulking agent",
+      "Carrier",
+      "Humectant",
+      "Stabilizer",
+      "Sweetener",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products",
+      "Follow-up formulae",
+      "Formulae for special medical purposes for infants"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Mannitol (INS 421)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=182",
+        "note": "Additive-specific Codex GSFA record for INS 421, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E422": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as humectant (helps prevent food from drying out by retaining moisture); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Humectant",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Fresh meat, poultry, and game, comminuted",
+      "Fresh meat, poultry, and game, whole pieces or cuts"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Glycerol (INS 422)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=62",
+        "note": "Additive-specific Codex GSFA record for INS 422, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E424": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels); gelling agent (creates a gel texture); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Fresh pastas and noodles and like products and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Firming agent",
+      "Gelling agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Fresh pastas and noodles and like products",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Curdlan (INS 424)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=307",
+        "note": "Additive-specific Codex GSFA record for INS 424, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E425": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); gelling agent (creates a gel texture); glazing agent (gives a food surface a shiny appearance or protective coating); humectant (helps prevent food from drying out by retaining moisture); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Carrier",
+      "Emulsifier",
+      "Gelling agent",
+      "Glazing agent",
+      "Humectant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Konjac (i) konjac gum (ii) konjac glucomannane (INS 425)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=10",
+        "note": "Additive-specific Codex GSFA record for INS 425, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E427": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); gelling agent (creates a gel texture); humectant (helps prevent food from drying out by retaining moisture); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Gelling agent",
+      "Humectant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Cassia gum (INS 427)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=408",
+        "note": "Additive-specific Codex GSFA record for INS 427, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E440": {
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Gelling agent, thickener and stabilizer used in jams, jellies, fruit preparations and other foods; pectin also occurs naturally in fruit. Codex GSFA classifies this additive as emulsifier, gelling agent, glazing agent, stabilizer, thickener. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "tox": "JECFA lists ADI 'not specified' in its current entry, but its infant-formula history contains a use-level-specific concern: a 2014 assessment considered use up to 0.5% in infant formula of concern, while a later 2016 assessment considered a lower proposed level of 0.2% not of concern. Those findings are formulation- and population-specific.",
+    "intake": "JECFA: ADI 'not specified'; infant-formula evaluations have different conclusions at 0.2% and 0.5% proposed use levels. Do not generalize this to unrestricted use or all populations.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Pectins / INS 440",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3043",
+        "note": "JECFA 2014 and 2016 evaluations note infant-formula use-level specifics."
+      },
+      {
+        "label": "Codex GSFA — Pectins (INS 440)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=21",
+        "note": "Additive-specific Codex GSFA record for INS 440, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Emulsifier",
+      "Gelling agent",
+      "Glazing agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Concentrates for fruit juice",
+      "Concentrates for fruit nectar",
+      "Concentrates for vegetable juice"
     ]
   },
   "E441": {
@@ -1180,10 +3539,356 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E442": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate). Codex GSFA lists category-specific provisions including Cocoa and chocolate products and Cocoa mixes (powders) and cocoa mass/cake; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier"
+    ],
+    "gsfaFoodCategories": [
+      "Cocoa and chocolate products",
+      "Cocoa mixes (powders) and cocoa mass/cake",
+      "Dairy-based desserts (e.g. pudding, fruit or flavoured yoghurt)",
+      "Imitation chocolate, chocolate substitute products"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ammonium phosphatides (INS 442)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=126",
+        "note": "Additive-specific Codex GSFA record for INS 442, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E444": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed). Codex GSFA lists category-specific provisions including Water-based flavoured drinks, including \"sport,\" \"energy,\" or \"electrolyte\" drinks and particulated drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Water-based flavoured drinks, including \"sport,\" \"energy,\" or \"electrolyte\" drinks and particulated drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sucrose acetate isobutyrate (INS 444)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=335",
+        "note": "Additive-specific Codex GSFA record for INS 444, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E459": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Chewing gum and Dairy-based desserts (e.g. pudding, fruit or flavoured yoghurt); these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Carrier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Chewing gum",
+      "Dairy-based desserts (e.g. pudding, fruit or flavoured yoghurt)",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Flavoured fluid milk drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Beta-cyclodextrin (INS 459)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=289",
+        "note": "Additive-specific Codex GSFA record for INS 459, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E461": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); glazing agent (gives a food surface a shiny appearance or protective coating); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Emulsifier",
+      "Glazing agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Methyl cellulose (INS 461)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=83",
+        "note": "Additive-specific Codex GSFA record for INS 461, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E462": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); glazing agent (gives a food surface a shiny appearance or protective coating); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Carrier",
+      "Glazing agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ethyl cellulose (INS 462)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=356",
+        "note": "Additive-specific Codex GSFA record for INS 462, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E463": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); foaming agent (helps form or maintain a uniform dispersion of gas in food); glazing agent (gives a food surface a shiny appearance or protective coating); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Foaming agent",
+      "Glazing agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Hydroxypropyl cellulose (INS 463)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=57",
+        "note": "Additive-specific Codex GSFA record for INS 463, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E464": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); glazing agent (gives a food surface a shiny appearance or protective coating); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Emulsifier",
+      "Glazing agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Hypromellose (hydroxypropyl methylcellulose) (INS 464)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=65",
+        "note": "Additive-specific Codex GSFA record for INS 464, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E465": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); foaming agent (helps form or maintain a uniform dispersion of gas in food); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Foaming agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Fresh meat, poultry, and game, comminuted"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ethyl methyl cellulose (INS 465)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=85",
+        "note": "Additive-specific Codex GSFA record for INS 465, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E466": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels); gelling agent (creates a gel texture); glazing agent (gives a food surface a shiny appearance or protective coating); humectant (helps prevent food from drying out by retaining moisture); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Emulsifier",
+      "Firming agent",
+      "Gelling agent",
+      "Glazing agent",
+      "Humectant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Carboxymethyl cellulose (INS 466)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=51",
+        "note": "Additive-specific Codex GSFA record for INS 466, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E467": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Fermented milks (plain), heat-treated after fermentation and Fermented milks (plain), not heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ethyl hydroxyethyl cellulose (INS 467)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=357",
+        "note": "Additive-specific Codex GSFA record for INS 467, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E468": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Fermented milks (plain), heat-treated after fermentation and Fermented milks (plain), not heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Crosslinked sodium carboxymethyl cellulose (croscarmellose) (INS 468)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=346",
+        "note": "Additive-specific Codex GSFA record for INS 468, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E469": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Fermented milks (plain), heat-treated after fermentation and Fermented milks (plain), not heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Enzymically hydrolysed carboxymethylcellulose (INS 469)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=372",
+        "note": "Additive-specific Codex GSFA record for INS 469, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
   "E471": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Mono- and diglycerides of fatty acids act mainly as emulsifiers to help fats and water remain mixed and improve texture or softness.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Mono- and diglycerides of fatty acids act mainly as emulsifiers to help fats and water remain mixed and improve texture or softness. Codex GSFA classifies this additive as antifoaming agent, emulsifier, glazing agent, stabilizer. Codex GSFA lists category-specific provisions including Butter oil, anhydrous milkfat, ghee and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are examples, not blanket permission.",
     "tox": "JECFA’s historical evaluation describes an ADI “not limited” for this class. The wording is not a consumer recommendation or a blanket approval for every formulation; check current food-category limits and specifications in the selected country.",
     "intake": "JECFA historical evaluation lists ADI “not limited.” This is not an unlimited-consumption recommendation; follow locally permitted uses and product labeling.",
     "sources": [
@@ -1201,6 +3906,303 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FDA — Reading labels for food allergies",
         "url": "https://www.fda.gov/consumers/consumer-updates/have-food-allergies-read-label",
         "note": "Source disclosure examples and major allergen labeling context."
+      },
+      {
+        "label": "Codex GSFA — Mono- and diglycerides of fatty acids (INS 471)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=19",
+        "note": "Additive-specific Codex GSFA record for INS 471, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Antifoaming agent",
+      "Emulsifier",
+      "Glazing agent",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Butter oil, anhydrous milkfat, ghee",
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products"
+    ]
+  },
+  "E472a": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Acetic acid esters of mono- and diglycerides of fatty acids (INS 472a)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=56",
+        "note": "Additive-specific Codex GSFA record for INS 472a, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E472b": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Lactic acid esters of mono- and diglycerides of fatty acids (INS 472b)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=70",
+        "note": "Additive-specific Codex GSFA record for INS 472b, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E472c": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); flour treatment agent (improves flour or dough baking quality or colour); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antioxidant",
+      "Emulsifier",
+      "Flour treatment agent",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Citric acid esters of mono- and diglycerides of fatty acids (INS 472c)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=58",
+        "note": "Additive-specific Codex GSFA record for INS 472c, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E472e": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Batters (e.g. for breading or batters for fish or poultry)",
+      "Beverage whiteners",
+      "Bread and ordinary bakery wares",
+      "Candied fruit"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Diacetyl tartaric acid esters of mono- and diglycerides of fatty acids (INS 472e)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=61",
+        "note": "Additive-specific Codex GSFA record for INS 472e, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E475": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Beverage whiteners; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Beverage whiteners",
+      "Bread-type products, including bread stuffing and bread crumbs",
+      "Breads and rolls",
+      "Breakfast cereals, including rolled oats"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Polyglycerol esters of fatty acids (INS 475)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=128",
+        "note": "Additive-specific Codex GSFA record for INS 475, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E476": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate). Codex GSFA lists category-specific provisions including Cereal and starch based desserts (e.g. rice pudding, tapioca pudding) and Chewing gum; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier"
+    ],
+    "gsfaFoodCategories": [
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
+      "Chewing gum",
+      "Cocoa and chocolate products",
+      "Cocoa mixes (powders) and cocoa mass/cake",
+      "Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Polyglycerol polyricinoleate (INS 476)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=191",
+        "note": "Additive-specific Codex GSFA record for INS 476, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E477": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate). Codex GSFA lists category-specific provisions including Bakery wares and Beverage whiteners; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier"
+    ],
+    "gsfaFoodCategories": [
+      "Bakery wares",
+      "Beverage whiteners",
+      "Cereal and starch based desserts (e.g. rice pudding, tapioca pudding)",
+      "Chewing gum",
+      "Cocoa mixes (powders) and cocoa mass/cake"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Propane-1,2-diol esters of fatty acids (propylene glycol esters of fatty acids) (INS 477)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=127",
+        "note": "Additive-specific Codex GSFA record for INS 477, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E480": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); humectant (helps prevent food from drying out by retaining moisture). Codex GSFA lists category-specific provisions including Fruit-based desserts, including fruit-flavoured water-based desserts; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Humectant"
+    ],
+    "gsfaFoodCategories": [
+      "Fruit-based desserts, including fruit-flavoured water-based desserts"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Dioctyl sodium sulfosuccinate (INS 480)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=112",
+        "note": "Additive-specific Codex GSFA record for INS 480, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E483": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flour treatment agent (improves flour or dough baking quality or colour). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Flour treatment agent"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Stearyl tartrate (INS 483)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=235",
+        "note": "Additive-specific Codex GSFA record for INS 483, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E484": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); sequestrant (controls the availability of certain metal ions). Codex GSFA lists category-specific provisions including Chewing gum and Fat spreads, dairy fat spreads and blended spreads; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antioxidant",
+      "Emulsifier",
+      "Sequestrant"
+    ],
+    "gsfaFoodCategories": [
+      "Chewing gum",
+      "Fat spreads, dairy fat spreads and blended spreads",
+      "Lard, tallow, fish oil, and other animal fats",
+      "Vegetable oils and fats",
+      "Water-based flavoured drinks, including \"sport,\" \"energy,\" or \"electrolyte\" drinks and particulated drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Stearyl citrate (INS 484)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=248",
+        "note": "Additive-specific Codex GSFA record for INS 484, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
   },
@@ -1242,43 +4244,477 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
-  "E310": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Antioxidant used to slow oxidation in selected foods containing fats or oils, helping protect flavor and shelf life.",
-    "tox": "JECFA maintained an ADI of 0–1.4 mg/kg body weight/day for propyl gallate in 1996 (original numeric ADI from 1993). The value is a chronic total-exposure benchmark, not a product serving limit; legal uses and maximum levels vary by market.",
-    "intake": "JECFA ADI: 0–1.4 mg/kg body weight/day (1993, maintained 1996). It is not a personal target or allowable amount per food.",
+  "E507": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity). Codex GSFA lists category-specific provisions including Complementary foods for infants and young children and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "gsfaFoodCategories": [
+      "Complementary foods for infants and young children",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
     "sources": [
       {
-        "label": "FAO/WHO JECFA — Propyl gallate / INS 310",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1272",
-        "note": "JECFA identifies propyl gallate as an antioxidant and lists ADI 0–1.4 mg/kg bw."
+        "label": "Codex GSFA — Hydrochloric acid (INS 507)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=178",
+        "note": "Additive-specific Codex GSFA record for INS 507, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
   },
-  "E320": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Butylated hydroxyanisole (BHA), an antioxidant used to slow oxidation in fats and oils and protect flavor during storage.",
-    "tox": "JECFA established an ADI of 0–0.5 mg/kg body weight/day (1988). Its 1998 intake assessment found that estimates based on draft Codex use levels and consumption data exceeded the ADI in three of the member states that submitted data; this is historical data, not a current measurement for every country. High-consuming individuals may have greater exposure.",
-    "intake": "JECFA ADI: 0–0.5 mg/kg body weight/day (1988). The older JECFA exposure analysis reported exceedances in three submitted national datasets in 1998; do not interpret this as a current country ranking.",
+  "E508": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels); flavour enhancer (enhances a food's existing taste or aroma); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Dried pastas and noodles and like products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Firming agent",
+      "Flavour enhancer",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Dried pastas and noodles and like products",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
     "sources": [
       {
-        "label": "FAO/WHO JECFA — Butylated hydroxyanisole (BHA) / INS 320",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2140",
-        "note": "Official JECFA entry includes ADI 0–0.5 mg/kg bw and a historical dietary-exposure assessment."
+        "label": "Codex GSFA — Potassium chloride (INS 508)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=202",
+        "note": "Additive-specific Codex GSFA record for INS 508, including its functional classes and food-category provisions."
       },
       {
-        "label": "FDA — Food allergen labelling",
-        "url": "https://www.fda.gov/consumers/consumer-updates/have-food-allergies-read-label",
-        "note": "FDA list of major U.S. food allergens; this list is not an exhaustive list of every possible sensitivity."
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E509": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Firming agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium chloride (INS 509)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=197",
+        "note": "Additive-specific Codex GSFA record for INS 509, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E510": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flour treatment agent (improves flour or dough baking quality or colour). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Flour treatment agent"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ammonium chloride (INS 510)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=279",
+        "note": "Additive-specific Codex GSFA record for INS 510, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E511": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour retention agent (helps stabilise, retain or intensify food colour); firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels); stabilizer (helps keep multiple components uniformly dispersed). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour retention agent",
+      "Firming agent",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Fresh meat, poultry, and game, comminuted"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Magnesium chloride (INS 511)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=73",
+        "note": "Additive-specific Codex GSFA record for INS 511, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E512": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life); colour retention agent (helps stabilise, retain or intensify food colour). Codex GSFA lists category-specific provisions including Canned or bottled (pasteurized) fruit and Canned or bottled (pasteurized) or retort pouch vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), and seaweeds; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antioxidant",
+      "Colour retention agent"
+    ],
+    "gsfaFoodCategories": [
+      "Canned or bottled (pasteurized) fruit",
+      "Canned or bottled (pasteurized) or retort pouch vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), and seaweeds",
+      "Water-based flavoured drinks, including \"sport,\" \"energy,\" or \"electrolyte\" drinks and particulated drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Stannous chloride (INS 512)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=272",
+        "note": "Additive-specific Codex GSFA record for INS 512, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E516": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); colour (adds or restores colour); firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels); flour treatment agent (improves flour or dough baking quality or colour); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed). Codex GSFA lists category-specific provisions including Dried pastas and noodles and like products and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Colour",
+      "Firming agent",
+      "Flour treatment agent",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flours",
+      "Fortified grape wine, grape liquor wine, and sweet grape wine",
+      "Frozen vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), seaweeds, and nuts and seeds"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium sulphate (INS 516)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=274",
+        "note": "Additive-specific Codex GSFA record for INS 516, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E518": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels); flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Salt Substitutes and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Firming agent",
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Magnesium sulfate (Epsom salts) (INS 518)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=400",
+        "note": "Additive-specific Codex GSFA record for INS 518, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E520": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Firming agent"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Aluminium sulfate (INS 520)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=410",
+        "note": "Additive-specific Codex GSFA record for INS 520, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E523": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); colour retention agent (helps stabilise, retain or intensify food colour); firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels); raising agent (releases gas to increase dough or batter volume); stabilizer (helps keep multiple components uniformly dispersed). Codex GSFA lists category-specific provisions including Cooked mollusks, crustaceans, and echinoderms and Crackers, excluding sweet crackers; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Colour retention agent",
+      "Firming agent",
+      "Raising agent",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Cooked mollusks, crustaceans, and echinoderms",
+      "Crackers, excluding sweet crackers",
+      "Fresh pastas and noodles and like products",
+      "Mixes for bread and ordinary bakery wares",
+      "Other ordinary bakery products (e.g. bagels, pita, English muffins)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Aluminium ammonium sulfate (INS 523)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=273",
+        "note": "Additive-specific Codex GSFA record for INS 523, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E524": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity). Codex GSFA lists category-specific provisions including Butter and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "gsfaFoodCategories": [
+      "Butter",
+      "Complementary foods for infants and young children",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Follow-up formulae"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sodium hydroxide (INS 524)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=256",
+        "note": "Additive-specific Codex GSFA record for INS 524, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E525": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity). Codex GSFA lists category-specific provisions including Complementary foods for infants and young children and Dried whey and whey products, excluding whey cheeses; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "gsfaFoodCategories": [
+      "Complementary foods for infants and young children",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Follow-up formulae",
+      "Formulae for special medical purposes for infants"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Potassium hydroxide (INS 525)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=311",
+        "note": "Additive-specific Codex GSFA record for INS 525, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E526": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels). Codex GSFA lists category-specific provisions including Butter and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Firming agent"
+    ],
+    "gsfaFoodCategories": [
+      "Butter",
+      "Complementary foods for infants and young children",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Follow-up formulae"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium hydroxide (INS 526)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=257",
+        "note": "Additive-specific Codex GSFA record for INS 526, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E527": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity). Codex GSFA lists category-specific provisions including Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ammonium hydroxide (INS 527)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=380",
+        "note": "Additive-specific Codex GSFA record for INS 527, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E528": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); colour retention agent (helps stabilise, retain or intensify food colour). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Colour retention agent"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fluid buttermilk (plain)",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Magnesium hydroxide (INS 528)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=82",
+        "note": "Additive-specific Codex GSFA record for INS 528, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E529": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); flour treatment agent (improves flour or dough baking quality or colour). Codex GSFA lists category-specific provisions including Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Flour treatment agent"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium oxide (INS 529)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=310",
+        "note": "Additive-specific Codex GSFA record for INS 529, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E530": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); anticaking agent (reduces clumping by limiting particles sticking together). Codex GSFA lists category-specific provisions including Dried whey and whey products, excluding whey cheeses and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Anticaking agent"
+    ],
+    "gsfaFoodCategories": [
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Herbs and spices",
+      "Milk powder and cream powder (plain)",
+      "Salt"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Magnesium oxide (INS 530)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=322",
+        "note": "Additive-specific Codex GSFA record for INS 530, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
   },
   "E551": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Silicon dioxide (silica) is used as an anti-caking agent to keep powdered ingredients free-flowing and reduce clumping.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Silicon dioxide (silica) is used as an anti-caking agent to keep powdered ingredients free-flowing and reduce clumping. Codex GSFA classifies this additive as anticaking agent, antifoaming agent, carrier. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
     "tox": "JECFA established an ADI “not specified” for silicon dioxide and certain silicates in 1985; later meetings considered specifications. “Not specified” is a regulatory toxicological category, not a recommendation for unlimited intake, and applies to the evaluated substance meeting specifications.",
     "intake": "JECFA: ADI “not specified” for silicon dioxide and certain silicates (1985, with later specification reviews). No consumer intake target is inferred; local food-use rules apply.",
     "sources": [
@@ -1291,13 +4727,762 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FSANZ — Additive control and safety assessment",
         "url": "https://www.foodstandards.gov.au/consumer/additives/additivecontrol",
         "note": "Official overview of additive assessment and permissible-use conditions."
+      },
+      {
+        "label": "Codex GSFA — Silicon dioxide (INS 551)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=284",
+        "note": "Additive-specific Codex GSFA record for INS 551, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Anticaking agent",
+      "Antifoaming agent",
+      "Carrier"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Follow-up formulae",
+      "Formulae for special medical purposes for infants"
+    ]
+  },
+  "E552": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as anticaking agent (reduces clumping by limiting particles sticking together). Codex GSFA lists category-specific provisions including Dried whey and whey products, excluding whey cheeses and Herbs and spices; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Anticaking agent"
+    ],
+    "gsfaFoodCategories": [
+      "Dried whey and whey products, excluding whey cheeses",
+      "Herbs and spices",
+      "Milk powder and cream powder (plain)",
+      "Powdered sugar, powdered dextrose",
+      "Ripened cheese, includes rind"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium silicate (INS 552)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=315",
+        "note": "Additive-specific Codex GSFA record for INS 552, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E554": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as anticaking agent (reduces clumping by limiting particles sticking together). Codex GSFA lists category-specific provisions including Beverage whiteners and Chewing gum; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Anticaking agent"
+    ],
+    "gsfaFoodCategories": [
+      "Beverage whiteners",
+      "Chewing gum",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Milk and cream powder analogues",
+      "Milk powder and cream powder (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sodium aluminosilicate (INS 554)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=298",
+        "note": "Additive-specific Codex GSFA record for INS 554, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E556": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as anticaking agent (reduces clumping by limiting particles sticking together). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Anticaking agent"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium aluminosilicate (INS 556)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=293",
+        "note": "Additive-specific Codex GSFA record for INS 556, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E559": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as anticaking agent (reduces clumping by limiting particles sticking together). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Anticaking agent"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Aluminium silicate (kaolin) (INS 559)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=294",
+        "note": "Additive-specific Codex GSFA record for INS 559, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E575": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); raising agent (releases gas to increase dough or batter volume); sequestrant (controls the availability of certain metal ions). Codex GSFA lists category-specific provisions including Complementary foods for infants and young children and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Raising agent",
+      "Sequestrant"
+    ],
+    "gsfaFoodCategories": [
+      "Complementary foods for infants and young children",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fresh pastas and noodles and like products",
+      "Whey protein cheese",
+      "Flavoured fluid milk drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Glucono-delta-lactone (INS 575)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=172",
+        "note": "Additive-specific Codex GSFA record for INS 575, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E576": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Dried pastas and noodles and like products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Sequestrant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Dried pastas and noodles and like products",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Processed fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Salt Substitutes"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Sodium gluconate (INS 576)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=286",
+        "note": "Additive-specific Codex GSFA record for INS 576, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E577": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); sequestrant (controls the availability of certain metal ions). Codex GSFA lists category-specific provisions including Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Sequestrant"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Potassium gluconate (INS 577)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=364",
+        "note": "Additive-specific Codex GSFA record for INS 577, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E578": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels); sequestrant (controls the availability of certain metal ions). Codex GSFA lists category-specific provisions including Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Firming agent",
+      "Sequestrant"
+    ],
+    "gsfaFoodCategories": [
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium gluconate (INS 578)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=275",
+        "note": "Additive-specific Codex GSFA record for INS 578, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E579": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour retention agent (helps stabilise, retain or intensify food colour). Codex GSFA lists category-specific provisions including Vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), and seaweeds in vinegar, oil, brine, or soybean sauce; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour retention agent"
+    ],
+    "gsfaFoodCategories": [
+      "Vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), and seaweeds in vinegar, oil, brine, or soybean sauce"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ferrous gluconate (INS 579)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=277",
+        "note": "Additive-specific Codex GSFA record for INS 579, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E580": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); firming agent (helps keep fruit or vegetable tissues firm and crisp, or strengthens gels); flavour enhancer (enhances a food's existing taste or aroma). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Firming agent",
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Magnesium gluconate (INS 580)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=361",
+        "note": "Additive-specific Codex GSFA record for INS 580, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E585": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour retention agent (helps stabilise, retain or intensify food colour). Codex GSFA lists category-specific provisions including Vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), and seaweeds in vinegar, oil, brine, or soybean sauce; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Colour retention agent"
+    ],
+    "gsfaFoodCategories": [
+      "Vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), and seaweeds in vinegar, oil, brine, or soybean sauce"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ferrous lactate (INS 585)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=278",
+        "note": "Additive-specific Codex GSFA record for INS 585, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E586": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life); colour retention agent (helps stabilise, retain or intensify food colour). Codex GSFA lists category-specific provisions including Fresh mollusks, crustaceans, and echinoderms and Frozen fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antioxidant",
+      "Colour retention agent"
+    ],
+    "gsfaFoodCategories": [
+      "Fresh mollusks, crustaceans, and echinoderms",
+      "Frozen fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — 4-Hexylresorcinol (INS 586)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=434",
+        "note": "Additive-specific Codex GSFA record for INS 586, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E620": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Salt Substitutes and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Glutamic acid (INS 620)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=325",
+        "note": "Additive-specific Codex GSFA record for INS 620, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E621": {
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Flavor enhancer that contributes savory/umami taste. Codex GSFA classifies this additive as flavour enhancer. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
+    "tox": "JECFA maintains a group ADI “not specified” for glutamic acid and specified glutamate salts. EFSA’s separate 2017 re-evaluation derived a group ADI of 30 mg/kg bw/day expressed as glutamic acid for E620–E625, based on a neurodevelopmental-toxicity reference point. EFSA noted that high-percentile exposure estimates exceeded the proposed ADI for population groups, and that estimates including natural dietary glutamate and nutrient uses were higher still. The EFSA group ADI and JECFA conclusion use different assessment frameworks and must be stated separately.",
+    "intake": "EFSA group ADI: 30 mg/kg bw/day expressed as glutamic acid for E620–E625 (2017). JECFA group ADI: “not specified” for glutamic acid and specified salts. These are separate assessments; EFSA noted high-percentile exposure exceedances in its assessment. ADI is not a recommended target or an amount per meal. Check current local food-category conditions.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Sodium glutamate / INS 621",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2267",
+        "note": "JECFA lists the group ADI as not specified for L-glutamic acid and specified salts."
+      },
+      {
+        "label": "EFSA — assessment of glutamates (E 620–625)",
+        "url": "https://www.efsa.europa.eu/en/efsajournal/pub/4910",
+        "note": "European assessment; separate scientific basis from the JECFA summary."
+      },
+      {
+        "label": "EFSA Journal — re-evaluation of glutamic acid and glutamates (E620–E625), 2017",
+        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2017.4910",
+        "note": "Derived group ADI 30 mg/kg bw/day expressed as glutamic acid; notes high-percentile exposure exceedances and the different JECFA group ADI status."
+      },
+      {
+        "label": "Codex GSFA — Monosodium glutamate (INS 621)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=276",
+        "note": "Additive-specific Codex GSFA record for INS 621, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Fresh meat, poultry, and game"
+    ]
+  },
+  "E622": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms and Salt Substitutes; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Monopotassium glutamate (INS 622)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=313",
+        "note": "Additive-specific Codex GSFA record for INS 622, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E623": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Salt Substitutes and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium diglutamate (INS 623)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=323",
+        "note": "Additive-specific Codex GSFA record for INS 623, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E624": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Fresh meat, poultry, and game and Salt Substitutes; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Fresh meat, poultry, and game",
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Monoammonium glutamate (INS 624)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=308",
+        "note": "Additive-specific Codex GSFA record for INS 624, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E625": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Salt Substitutes and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Magnesium diglutamate (INS 625)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=331",
+        "note": "Additive-specific Codex GSFA record for INS 625, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E626": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Salt Substitutes and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Guanylic acid (INS 626)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=328",
+        "note": "Additive-specific Codex GSFA record for INS 626, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E627": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Fresh meat, poultry, and game"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Disodium guanylate (INS 627)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=281",
+        "note": "Additive-specific Codex GSFA record for INS 627, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E628": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Salt Substitutes and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Dipotassium guanylate (INS 628)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=324",
+        "note": "Additive-specific Codex GSFA record for INS 628, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E629": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Salt Substitutes and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium guanylate (INS 629)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=327",
+        "note": "Additive-specific Codex GSFA record for INS 629, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E630": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Salt Substitutes and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Inosinic acid (INS 630)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=329",
+        "note": "Additive-specific Codex GSFA record for INS 630, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E631": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Fresh meat, poultry, and game"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Disodium inosinate (INS 631)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=283",
+        "note": "Additive-specific Codex GSFA record for INS 631, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E632": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Salt Substitutes and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Dipotassium inosinate (INS 632)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=326",
+        "note": "Additive-specific Codex GSFA record for INS 632, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E633": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Salt Substitutes and Flavoured fluid milk drinks; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)",
+      "Cream analogues"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium inosinate (INS 633)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=330",
+        "note": "Additive-specific Codex GSFA record for INS 633, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E634": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Dried pastas and noodles and like products and Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Dried pastas and noodles and like products",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Calcium 5'-ribonucleotides (INS 634)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=282",
+        "note": "Additive-specific Codex GSFA record for INS 634, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
   },
   "E635": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Flavor enhancer made from disodium inosinate and disodium guanylate; contributes savory/umami flavor and is often used with other flavor enhancers.",
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "Flavor enhancer made from disodium inosinate and disodium guanylate; contributes savory/umami flavor and is often used with other flavor enhancers. Codex GSFA classifies this additive as flavour enhancer. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
     "tox": "JECFA lists an ADI “not specified” in its 1974 evaluation history. This does not mean all food uses are unrestricted or that dietary context is irrelevant; conditions of use are controlled by national rules.",
     "intake": "JECFA: ADI “not specified” (1974 evaluation). This is not an unlimited-intake recommendation or product-specific maximum.",
     "sources": [
@@ -1310,6 +5495,1662 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FDA — Reading labels for food allergies",
         "url": "https://www.fda.gov/consumers/consumer-updates/have-food-allergies-read-label",
         "note": "Official source-based allergen labeling overview."
+      },
+      {
+        "label": "Codex GSFA — Disodium 5′-ribonucleotides (INS 635)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=280",
+        "note": "Additive-specific Codex GSFA record for INS 635, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Dried pastas and noodles and like products",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
+    ]
+  },
+  "E636": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Chewing gum and Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Chewing gum",
+      "Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4",
+      "Dairy-based desserts (e.g. pudding, fruit or flavoured yoghurt)",
+      "Edible ices, including sherbet and sorbet",
+      "Flavoured fluid milk drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Maltol (INS 636)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=125",
+        "note": "Additive-specific Codex GSFA record for INS 636, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E637": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Codex GSFA lists category-specific provisions including Chewing gum and Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [
+      "Chewing gum",
+      "Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4",
+      "Dairy-based desserts (e.g. pudding, fruit or flavoured yoghurt)",
+      "Edible ices, including sherbet and sorbet",
+      "Flavoured fluid milk drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Ethyl maltol (INS 637)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=102",
+        "note": "Additive-specific Codex GSFA record for INS 637, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E901": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); glazing agent (gives a food surface a shiny appearance or protective coating); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Chewing gum and Cocoa and chocolate products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Carrier",
+      "Emulsifier",
+      "Glazing agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Chewing gum",
+      "Cocoa and chocolate products",
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4",
+      "Decorations (e.g. for fine bakery wares), toppings (non-fruit) and sweet sauces"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Beeswax (INS 901)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=265",
+        "note": "Additive-specific Codex GSFA record for INS 901, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E902": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); glazing agent (gives a food surface a shiny appearance or protective coating); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Chewing gum and Cocoa and chocolate products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Carrier",
+      "Emulsifier",
+      "Glazing agent",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Chewing gum",
+      "Cocoa and chocolate products",
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4",
+      "Decorations (e.g. for fine bakery wares), toppings (non-fruit) and sweet sauces"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Candelilla wax (INS 902)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=263",
+        "note": "Additive-specific Codex GSFA record for INS 902, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E903": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as acidity regulator (adjusts food acidity or alkalinity); anticaking agent (reduces clumping by limiting particles sticking together); bulking agent (adds bulk without significantly increasing available energy); carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); glazing agent (gives a food surface a shiny appearance or protective coating). Codex GSFA lists category-specific provisions including Bakery wares and Chewing gum; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Anticaking agent",
+      "Bulking agent",
+      "Carrier",
+      "Glazing agent"
+    ],
+    "gsfaFoodCategories": [
+      "Bakery wares",
+      "Chewing gum",
+      "Cocoa and chocolate products",
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Carnauba wax (INS 903)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=264",
+        "note": "Additive-specific Codex GSFA record for INS 903, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E904": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as glazing agent (gives a food surface a shiny appearance or protective coating). Codex GSFA lists category-specific provisions including Chewing gum and Cocoa and chocolate products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Glazing agent"
+    ],
+    "gsfaFoodCategories": [
+      "Chewing gum",
+      "Cocoa and chocolate products",
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4",
+      "Decorations (e.g. for fine bakery wares), toppings (non-fruit) and sweet sauces"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Shellac (INS 904)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=271",
+        "note": "Additive-specific Codex GSFA record for INS 904, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E907": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as glazing agent (gives a food surface a shiny appearance or protective coating). Codex GSFA lists category-specific provisions including Dried fruit and Soft candy; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Glazing agent"
+    ],
+    "gsfaFoodCategories": [
+      "Dried fruit",
+      "Soft candy"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Crystalline wax (INS 907)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=338",
+        "note": "Additive-specific Codex GSFA record for INS 907, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E925": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flour treatment agent (improves flour or dough baking quality or colour). Codex GSFA lists category-specific provisions including Flours; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flour treatment agent"
+    ],
+    "gsfaFoodCategories": [
+      "Flours"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Chlorine (INS 925)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=302",
+        "note": "Additive-specific Codex GSFA record for INS 925, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E927a": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flour treatment agent (improves flour or dough baking quality or colour). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Flour treatment agent"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Azodicarbonamide (INS 927a)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=304",
+        "note": "Additive-specific Codex GSFA record for INS 927a, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E928": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bleaching agent (decolourises food during processing); flour treatment agent (improves flour or dough baking quality or colour); preservative (slows microbial deterioration and helps extend shelf life). Codex GSFA lists category-specific provisions including Dried whey and whey products, excluding whey cheeses and Flours; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bleaching agent",
+      "Flour treatment agent",
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [
+      "Dried whey and whey products, excluding whey cheeses",
+      "Flours",
+      "Liquid whey and whey products, excluding whey cheeses"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Benzoyl peroxide (INS 928)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=219",
+        "note": "Additive-specific Codex GSFA record for INS 928, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E941": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as foaming agent (helps form or maintain a uniform dispersion of gas in food); packaging gas (protects packaged food, for example from oxidation or spoilage); propellant (expels food from a container). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Foaming agent",
+      "Packaging gas",
+      "Propellant"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fluid milk (plain)",
+      "Follow-up formulae"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Nitrogen (INS 941)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=47",
+        "note": "Additive-specific Codex GSFA record for INS 941, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E942": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life); foaming agent (helps form or maintain a uniform dispersion of gas in food); packaging gas (protects packaged food, for example from oxidation or spoilage); propellant (expels food from a container). Codex GSFA lists category-specific provisions including Dried pastas and noodles and like products and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antioxidant",
+      "Foaming agent",
+      "Packaging gas",
+      "Propellant"
+    ],
+    "gsfaFoodCategories": [
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fresh mollusks, crustaceans, and echinoderms",
+      "Frozen fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Nitrous oxide (INS 942)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=18",
+        "note": "Additive-specific Codex GSFA record for INS 942, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E950": {
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "High-intensity sweetener used to provide sweetness in foods and drinks, often combined with other sweeteners. Codex GSFA classifies this additive as flavour enhancer, sweetener. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Beverage whiteners; these are examples, not blanket permission.",
+    "tox": "EFSA’s re-evaluation (published 2025; amended 2026) established an ADI of 15 mg/kg bw/day, replacing the earlier SCF ADI of 9 mg/kg bw/day. EFSA found no genotoxicity concern for acesulfame K and its degradation products, and concluded that current dietary exposure estimates did not indicate a safety concern. The highest refined brand-loyal 95th-percentile estimate was 15.7 mg/kg bw/day in toddlers, while the panel’s overall risk characterisation remained that current use did not present a safety concern. EFSA identified a potential genotoxicity concern for the impurity 5-chloro-acesulfame and recommended a 0.1 mg/kg specification limit or suitable genotoxicity data; it also recommended limits for acetylacetamide, lead and mercury.",
+    "intake": "EFSA ADI: 15 mg/kg bw/day (2025 opinion, amended 26 February 2026), replacing the SCF’s previous 9 mg/kg bw/day. EFSA concluded current EU dietary exposure estimates did not indicate a safety concern at assessed uses. The ADI is a chronic lifetime-average benchmark, not a serving allowance or a food concentration limit. National permissions, use categories and maximum levels remain jurisdiction-specific.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Acesulfame K / INS 950",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3613",
+        "note": "JECFA entry lists sweetener function and ADI 0–15 mg/kg bw."
+      },
+      {
+        "label": "EFSA Journal — re-evaluation of acesulfame K (E950), 2025; amended 2026",
+        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2025.9317",
+        "note": "Revised ADI to 15 mg/kg bw/day, replacing the SCF 9 mg/kg bw/day; no safety concern at currently assessed EU uses; recommends revised limits for 5-chloro-acesulfame, acetylacetamide, lead and mercury impurities."
+      },
+      {
+        "label": "Codex GSFA — Acesulfame K (INS 950)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=104",
+        "note": "Additive-specific Codex GSFA record for INS 950, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Flavour enhancer",
+      "Sweetener"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Beverage whiteners",
+      "Bread and ordinary bakery wares",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit"
+    ]
+  },
+  "E951": {
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "High-intensity sweetener used in reduced-sugar and sugar-free foods and drinks; it is broken down into constituent metabolites after ingestion. Codex GSFA classifies this additive as flavour enhancer, sweetener. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Beverage whiteners; these are examples, not blanket permission.",
+    "tox": "JECFA reaffirmed an ADI of 0–40 mg/kg body weight/day in 2023 and concluded that the evaluated dietary exposure estimates did not present a health concern. People with phenylketonuria (PKU) must manage phenylalanine exposure; labeling requirements are separate from allergy warnings.",
+    "intake": "JECFA ADI: 0–40 mg/kg bw/day, reaffirmed 2023. The United States, EU and other jurisdictions may use different assessment values and labeling provisions; follow the selected market's current rules and PKU advice where relevant.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Aspartame / INS 951",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/62",
+        "note": "JECFA 2023 evaluation; exposure conclusions and the PKU labeling issue are distinct."
+      },
+      {
+        "label": "Codex GSFA — Aspartame (INS 951)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=90",
+        "note": "Additive-specific Codex GSFA record for INS 951, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Flavour enhancer",
+      "Sweetener"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Beverage whiteners",
+      "Bread and ordinary bakery wares",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit"
+    ]
+  },
+  "E953": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as anticaking agent (reduces clumping by limiting particles sticking together); bulking agent (adds bulk without significantly increasing available energy); flavour enhancer (enhances a food's existing taste or aroma); glazing agent (gives a food surface a shiny appearance or protective coating); stabilizer (helps keep multiple components uniformly dispersed); sweetener (imparts a sweet taste); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Cooked fish and fish products and Herbs and spices; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Anticaking agent",
+      "Bulking agent",
+      "Flavour enhancer",
+      "Glazing agent",
+      "Stabilizer",
+      "Sweetener",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Cooked fish and fish products",
+      "Herbs and spices",
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)",
+      "Seasonings and condiments",
+      "Flavoured fluid milk drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Isomalt (INS 953)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=180",
+        "note": "Additive-specific Codex GSFA record for INS 953, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E955": {
+    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchedAt": "2026-11-25",
+    "use": "High-intensity, non-nutritive sweetener used in reduced-sugar and sugar-free foods and beverages; approximately 600 times sweeter than sugar by weight. Current EU permissions are limited to specified food categories and conditions. Codex GSFA classifies this additive as flavour enhancer, sweetener. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Beverage whiteners; these are examples, not blanket permission.",
+    "tox": "EFSA’s 2026 re-evaluation found no safety concern for sucralose at currently authorised uses and retained the ADI of 15 mg/kg bw/day. EFSA could not conclude on the safety of a proposed extension to additional fine bakery wares because of uncertainty about possible formation of chlorinated compounds during a wide range of baking processes. The current-use conclusion must not be stretched to cover the proposed new use.",
+    "intake": "EFSA ADI: 15 mg/kg bw/day, reaffirmed in 2026. Estimated exposure under currently authorised EU uses remained below the ADI. EFSA did not confirm safety for the proposed additional fine-bakery uses. ADI is a lifelong average exposure benchmark, not a serving allowance; verify current national conditions and food-category limits.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Sucralose / INS 955",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2340",
+        "note": "JECFA record lists the sweetener function and ADI 0–15 mg/kg bw."
+      },
+      {
+        "label": "EFSA Journal — re-evaluation of sucralose (E955), 2026",
+        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2026.9854",
+        "note": "Reaffirmed ADI 15 mg/kg bw/day and safety for current authorised uses; could not confirm safety of the proposed extension to fine bakery wares."
+      },
+      {
+        "label": "EFSA — sucralose remains safe at currently authorised uses, 17 February 2026",
+        "url": "https://www.efsa.europa.eu/en/news/efsa-finds-sucralose-safe-when-used-currently-authorised-cannot-confirm-safety-extending-its",
+        "note": "Plain-language summary of the distinction between existing permitted uses and the proposed extension."
+      },
+      {
+        "label": "Codex GSFA — Sucralose (INS 955)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=137",
+        "note": "Additive-specific Codex GSFA record for INS 955, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ],
+    "functionalClasses": [
+      "Flavour enhancer",
+      "Sweetener"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Beverage whiteners",
+      "Bread and ordinary bakery wares",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit"
+    ]
+  },
+  "E956": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as sweetener (imparts a sweet taste). Codex GSFA lists category-specific provisions including Chewing gum and Edible ices, including sherbet and sorbet; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Sweetener"
+    ],
+    "gsfaFoodCategories": [
+      "Chewing gum",
+      "Edible ices, including sherbet and sorbet",
+      "Table-top sweeteners, including those containing high-intensity sweeteners",
+      "Water-based flavoured drinks, including \"sport,\" \"energy,\" or \"electrolyte\" drinks and particulated drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Alitame (INS 956)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=108",
+        "note": "Additive-specific Codex GSFA record for INS 956, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E957": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma); sweetener (imparts a sweet taste). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer",
+      "Sweetener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)",
+      "Salt Substitutes",
+      "Flavoured fluid milk drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Thaumatin (INS 957)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=145",
+        "note": "Additive-specific Codex GSFA record for INS 957, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E960": {
+    "researchStatus": "Source-backed summary",
+    "researchedAt": "2026-10-27",
+    "use": "High-intensity sweetener from steviol glycosides; the exact plant source, purification and preparation can vary by product.",
+    "tox": "At its 102nd meeting in 2026, JECFA confirmed an ADI of 0–4 mg/kg body weight/day expressed as steviol. The same review evaluated exposure estimates; the ADI cannot be read as a permitted concentration for every food or as a guarantee of individual tolerance.",
+    "intake": "JECFA ADI: 0–4 mg/kg bw/day expressed as steviol; confirmed 2026. Use exact preparation and local legal conditions when interpreting the number.",
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Dulcoside A / steviol-glycosides INS 960",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3644",
+        "note": "JECFA 2026 evaluation confirmed ADI 0–4 mg/kg bw expressed as steviol."
+      }
+    ]
+  },
+  "E961": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma); sweetener (imparts a sweet taste). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Beverage whiteners; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer",
+      "Sweetener"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Beverage whiteners",
+      "Bread and ordinary bakery wares",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Neotame (INS 961)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=340",
+        "note": "Additive-specific Codex GSFA record for INS 961, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E962": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as sweetener (imparts a sweet taste). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Beverage whiteners; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Sweetener"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Beverage whiteners",
+      "Bread and ordinary bakery wares",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Aspartame-acesulfame salt (INS 962)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=383",
+        "note": "Additive-specific Codex GSFA record for INS 962, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E964": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as sweetener (imparts a sweet taste). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Sweetener"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Polyglycitol syrup (INS 964)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=363",
+        "note": "Additive-specific Codex GSFA record for INS 964, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E965(i)": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); humectant (helps prevent food from drying out by retaining moisture); stabilizer (helps keep multiple components uniformly dispersed); sweetener (imparts a sweet taste); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings); these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Emulsifier",
+      "Humectant",
+      "Stabilizer",
+      "Sweetener",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)",
+      "Seasonings and condiments",
+      "Smoked, dried, fermented, and/or salted fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Flavoured fluid milk drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Maltitol (INS 965(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=159",
+        "note": "Additive-specific Codex GSFA record for INS 965(i), including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E965(ii)": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); humectant (helps prevent food from drying out by retaining moisture); stabilizer (helps keep multiple components uniformly dispersed); sweetener (imparts a sweet taste); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Frozen egg products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Emulsifier",
+      "Humectant",
+      "Stabilizer",
+      "Sweetener",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Frozen egg products",
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)",
+      "Seasonings and condiments",
+      "Smoked, dried, fermented, and/or salted fish and fish products, including mollusks, crustaceans, and echinoderms"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Maltitol syrup (INS 965(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=399",
+        "note": "Additive-specific Codex GSFA record for INS 965(ii), including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E966": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); sweetener (imparts a sweet taste); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings) and Seasonings and condiments; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Sweetener",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)",
+      "Seasonings and condiments",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Lactitol (INS 966)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=156",
+        "note": "Additive-specific Codex GSFA record for INS 966, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E967": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); humectant (helps prevent food from drying out by retaining moisture); stabilizer (helps keep multiple components uniformly dispersed); sweetener (imparts a sweet taste); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings) and Seasonings and condiments; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Humectant",
+      "Stabilizer",
+      "Sweetener",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)",
+      "Seasonings and condiments",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Xylitol (INS 967)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=146",
+        "note": "Additive-specific Codex GSFA record for INS 967, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E968": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma); humectant (helps prevent food from drying out by retaining moisture); sweetener (imparts a sweet taste). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Seasonings and condiments; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer",
+      "Humectant",
+      "Sweetener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Seasonings and condiments",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)",
+      "Clotted cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Erythritol (INS 968)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=153",
+        "note": "Additive-specific Codex GSFA record for INS 968, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E969": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma); sweetener (imparts a sweet taste). Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Beverage whiteners; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Flavour enhancer",
+      "Sweetener"
+    ],
+    "gsfaFoodCategories": [
+      "Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers)",
+      "Beverage whiteners",
+      "Bread and ordinary bakery wares",
+      "Breakfast cereals, including rolled oats",
+      "Candied fruit"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Advantame (INS 969)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=416",
+        "note": "Additive-specific Codex GSFA record for INS 969, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1102": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antioxidant (slows oxidation that can deteriorate food and shorten shelf life). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Antioxidant"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Glucose oxidase (INS 1102)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=305",
+        "note": "Additive-specific Codex GSFA record for INS 1102, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1103": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as stabilizer (helps keep multiple components uniformly dispersed). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Invertase (INS 1103)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=339",
+        "note": "Additive-specific Codex GSFA record for INS 1103, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1104": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as flavour enhancer (enhances a food's existing taste or aroma). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Lipases (INS 1104)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=359",
+        "note": "Additive-specific Codex GSFA record for INS 1104, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1105": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as preservative (slows microbial deterioration and helps extend shelf life). Codex GSFA lists category-specific provisions including Cider and perry and Grape wines; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "gsfaFoodCategories": [
+      "Cider and perry",
+      "Grape wines",
+      "Ripened cheese"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Lysozyme (INS 1105)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=218",
+        "note": "Additive-specific Codex GSFA record for INS 1105, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1200": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as bulking agent (adds bulk without significantly increasing available energy); glazing agent (gives a food surface a shiny appearance or protective coating); humectant (helps prevent food from drying out by retaining moisture); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Cooked fish and fish products and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Bulking agent",
+      "Glazing agent",
+      "Humectant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Cooked fish and fish products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Fried fish and fish products, including mollusks, crustaceans, and echinoderms",
+      "Frozen egg products"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Polydextrose (INS 1200)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=20",
+        "note": "Additive-specific Codex GSFA record for INS 1200, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1201": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); glazing agent (gives a food surface a shiny appearance or protective coating); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Beer and malt beverages and Chewing gum; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Glazing agent",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Beer and malt beverages",
+      "Chewing gum",
+      "Cider and perry",
+      "Concentrates (liquid or solid) for water-based flavoured drinks",
+      "Food supplements"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Polyvinylpyrrolidone (INS 1201)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=266",
+        "note": "Additive-specific Codex GSFA record for INS 1201, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1202": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as colour retention agent (helps stabilise, retain or intensify food colour); stabilizer (helps keep multiple components uniformly dispersed). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Colour retention agent",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Polyvinylpolypyrrolidone (INS 1202)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=358",
+        "note": "Additive-specific Codex GSFA record for INS 1202, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1203": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as glazing agent (gives a food surface a shiny appearance or protective coating); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Food supplements; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Glazing agent",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Food supplements"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Polyvinyl alcohol (INS 1203)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=341",
+        "note": "Additive-specific Codex GSFA record for INS 1203, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1204": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as glazing agent (gives a food surface a shiny appearance or protective coating); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Glazing agent",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products",
+      "Fermented vegetable (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera) and seaweed products, excluding fermented soybean products of food categories 06.8.6, 06.8.7, 12.9.1, 12.9.2.1 and 12.9.2.3",
+      "Flours"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Pullulan (INS 1204)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=382",
+        "note": "Additive-specific Codex GSFA record for INS 1204, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1400": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked fish and fish products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Carrier",
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Dextrin (INS 1400)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=148",
+        "note": "Additive-specific Codex GSFA record for INS 1400, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1401": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Modified starch (INS 1401)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=149",
+        "note": "Additive-specific Codex GSFA record for INS 1401, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1402": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Alkaline modified starch (INS 1402)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=147",
+        "note": "Additive-specific Codex GSFA record for INS 1402, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1403": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)",
+      "Renneted milk (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Bleached starch (INS 1403)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=151",
+        "note": "Additive-specific Codex GSFA record for INS 1403, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1404": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Oxidised starch (INS 1404)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=69",
+        "note": "Additive-specific Codex GSFA record for INS 1404, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1405": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Other sugars and syrups (e.g. xylose, maple syrup, sugar toppings)",
+      "Renneted milk (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Enzyme treated starch (INS 1405)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=155",
+        "note": "Additive-specific Codex GSFA record for INS 1405, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1410": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Monostarch phosphate (INS 1410)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=160",
+        "note": "Additive-specific Codex GSFA record for INS 1410, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1412": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Distarch phosphate (INS 1412)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=154",
+        "note": "Additive-specific Codex GSFA record for INS 1412, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1413": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Phosphated distarch phosphate (INS 1413)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=157",
+        "note": "Additive-specific Codex GSFA record for INS 1413, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1414": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Acetylated distarch phosphate (INS 1414)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=60",
+        "note": "Additive-specific Codex GSFA record for INS 1414, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1420": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Complementary foods for infants and young children and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Complementary foods for infants and young children",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms",
+      "Pasteurized cream (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Starch acetate (INS 1420)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=161",
+        "note": "Additive-specific Codex GSFA record for INS 1420, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1422": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Dried pastas and noodles and like products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Acetylated distarch adipate (INS 1422)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=152",
+        "note": "Additive-specific Codex GSFA record for INS 1422, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1440": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Cooked fish and fish products",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Hydroxypropyl starch (INS 1440)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=66",
+        "note": "Additive-specific Codex GSFA record for INS 1440, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1442": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as anticaking agent (reduces clumping by limiting particles sticking together); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Dried whey and whey products, excluding whey cheeses; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Anticaking agent",
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Dried whey and whey products, excluding whey cheeses",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Hydroxy propyl distarch phosphate (INS 1442)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=150",
+        "note": "Additive-specific Codex GSFA record for INS 1442, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1450": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Carrier",
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa",
+      "Complementary foods for infants and young children",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Follow-up formulae"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Starch sodium octenyl succinate (INS 1450)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=158",
+        "note": "Additive-specific Codex GSFA record for INS 1450, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1451": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); stabilizer (helps keep multiple components uniformly dispersed); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Complementary foods for infants and young children and Fermented milks (plain), heat-treated after fermentation; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Complementary foods for infants and young children",
+      "Fermented milks (plain), heat-treated after fermentation",
+      "Fermented milks (plain), not heat-treated after fermentation",
+      "Flavoured fluid milk drinks",
+      "Condensed milk and analogues (plain)"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Acetylated oxidised starch (INS 1451)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=348",
+        "note": "Additive-specific Codex GSFA record for INS 1451, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1503": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as anticaking agent (reduces clumping by limiting particles sticking together); carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); glazing agent (gives a food surface a shiny appearance or protective coating). Codex GSFA lists category-specific provisions including Chewing gum and Cocoa and chocolate products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Anticaking agent",
+      "Carrier",
+      "Emulsifier",
+      "Glazing agent"
+    ],
+    "gsfaFoodCategories": [
+      "Chewing gum",
+      "Cocoa and chocolate products",
+      "Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4",
+      "Food supplements"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Castor oil (INS 1503)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=288",
+        "note": "Additive-specific Codex GSFA record for INS 1503, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1505": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep multiple components uniformly dispersed). Codex GSFA lists category-specific provisions including Dried and/or heat coagulated egg products and Liquid egg products; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Carrier",
+      "Emulsifier",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "gsfaFoodCategories": [
+      "Dried and/or heat coagulated egg products",
+      "Liquid egg products",
+      "Water-based flavoured drinks, including \"sport,\" \"energy,\" or \"electrolyte\" drinks and particulated drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Triethyl citrate (INS 1505)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=314",
+        "note": "Additive-specific Codex GSFA record for INS 1505, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1518": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); humectant (helps prevent food from drying out by retaining moisture). Permissions and conditions must be checked against the applicable local food category rules.",
+    "functionalClasses": [
+      "Carrier",
+      "Emulsifier",
+      "Humectant"
+    ],
+    "gsfaFoodCategories": [],
+    "sources": [
+      {
+        "label": "Codex GSFA — Glyceryl triacetate (INS 1518)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=378",
+        "note": "Additive-specific Codex GSFA record for INS 1518, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1520": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); glazing agent (gives a food surface a shiny appearance or protective coating); humectant (helps prevent food from drying out by retaining moisture). Codex GSFA lists category-specific provisions including Bread and ordinary bakery wares and Chewing gum; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Carrier",
+      "Emulsifier",
+      "Glazing agent",
+      "Humectant"
+    ],
+    "gsfaFoodCategories": [
+      "Bread and ordinary bakery wares",
+      "Chewing gum",
+      "Cocoa-based spreads, including fillings",
+      "Emulsified sauces and dips (e.g. mayonnaise, salad dressing, onion dip)",
+      "Fine bakery wares (sweet, salty, savoury) and mixes"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Propylene glycol (INS 1520)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=214",
+        "note": "Additive-specific Codex GSFA record for INS 1520, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1521": {
+    "researchStatus": "Codex GSFA verified",
+    "researchedAt": "2026-11-25",
+    "use": "Codex GSFA identifies this additive as antifoaming agent (prevents or reduces foaming); carrier (helps dissolve, dilute or disperse another additive or nutrient without changing its function); emulsifier (helps form or maintain a uniform mixture of phases that would otherwise separate); glazing agent (gives a food surface a shiny appearance or protective coating); thickener (increases food viscosity for a thicker texture). Codex GSFA lists category-specific provisions including Chewing gum and Food supplements; these are examples, not blanket permission.",
+    "functionalClasses": [
+      "Antifoaming agent",
+      "Carrier",
+      "Emulsifier",
+      "Glazing agent",
+      "Thickener"
+    ],
+    "gsfaFoodCategories": [
+      "Chewing gum",
+      "Food supplements",
+      "Surface-treated fresh fruit",
+      "Table-top sweeteners, including those containing high-intensity sweeteners",
+      "Water-based flavoured drinks, including \"sport,\" \"energy,\" or \"electrolyte\" drinks and particulated drinks"
+    ],
+    "sources": [
+      {
+        "label": "Codex GSFA — Polyethylene glycol 8000 (INS 1521)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=270",
+        "note": "Additive-specific Codex GSFA record for INS 1521, including its functional classes and food-category provisions."
+      },
+      {
+        "label": "Codex GSFA — food-additive functional-class definitions",
+        "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
+        "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
   }
