@@ -1657,17 +1657,28 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E160b": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex GSFA colour function and category provisions verified",
     "researchedAt": "2026-11-25",
-    "use": "Food colour whose colour ranges from red to brown depending on the solvent used for extraction. Examples include Many different products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Annatto extracts are natural food colourants derived from annatto seed pigments. Codex treats bixin-based and norbixin-based annatto extracts as colours and lists category-specific provisions in foods such as dairy-based desserts, spreads, bakery products, sauces and selected beverages. These examples are not blanket permission for all food categories.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e160b.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex GSFA — Annatto extracts, bixin-based (INS 160b(i))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=391",
+        "note": "Codex identifies the additive as a colour and lists category-specific food provisions."
+      },
+      {
+        "label": "Codex GSFA — Annatto extracts, norbixin-based (INS 160b(ii))",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=392",
+        "note": "Codex identifies the additive as a colour and lists category-specific food provisions."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ]
   },
   "E160B": {
     "researchStatus": "Source-backed summary",
@@ -2789,17 +2800,28 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E201": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "JECFA preservative function verified; current permissions jurisdiction-specific",
     "researchedAt": "2026-11-25",
-    "use": "Sorbic acid is a preservative, mainly against fungi and yeasts. It is not effective against bacteria. Optimal activity is at pH values below 6.5 (acid and slightly acid foods). Sodium sorbate is often used, as it is better soluble; its activity is similar to that of sorbic acid. Examples include Sodium sorbate is used in the same range of products as sorbic acid, for example, yoghurt and other fermented dairy products, fruit salads, confectionery, lemonade, cheese, rye bread, cakes and bakery products, pizza, shellfish, lemon juice, wine, cider and soups. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Sorbate salt used as a preservative to inhibit the growth of moulds and yeasts and help extend the shelf life of foods where permitted. JECFA classifies this additive as a preservative; national authorisation and food-category limits must be checked separately.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e201.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "FAO/WHO JECFA — Sodium sorbate (INS 201)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/4755",
+        "note": "JECFA identifies sodium sorbate as a preservative; its evaluation history is distinct from current national authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ]
   },
   "E202": {
     "researchStatus": "Source-backed summary",
@@ -2832,17 +2854,28 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E203": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "JECFA preservative function verified; current permissions jurisdiction-specific",
     "researchedAt": "2026-11-25",
-    "use": "Sorbic acid is a preservative, mainly against fungi and yeasts. It is not effective against bacteria. Optimal activity is at pH values below 6.5 (acid and slightly acid foods). Calcium sorbate is used mainly in dairy products; its activity is similar to that of sorbic acid. Examples include Calcium sorbate is used mainly in dairy products and rye bread. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Sorbate salt used as a preservative to inhibit the growth of moulds and yeasts and help extend the shelf life of foods where permitted. JECFA classifies this additive as a preservative; national authorisation and food-category limits must be checked separately.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e203.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "FAO/WHO JECFA — Calcium sorbate (INS 203)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2088",
+        "note": "JECFA identifies calcium sorbate as a preservative; its evaluation history is distinct from current national authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "regulatoryGroups": [
+      "preservatives"
+    ]
   },
   "E209": {
     "researchStatus": "Preproom educational technical-purpose reference",
@@ -3342,17 +3375,30 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E225": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Official regulator classification cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "It is a white non-stable powder, which reacts with oxygen to potassium sulphate. In acidic conditions it forms sulphurous acid, which acts as a preservative. It is used as a preservative and may be used as a bleaching agent in sugar production. It is used for the production of sulphite-caramel ( E150d). Examples include Up to 0.7 mg/kg body weight. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Potassium sulphite is a sulphite preservative used in defined food categories to help limit microbial spoilage and protect product quality. UK FSA and Australia/New Zealand standards group sulphites within category-specific additive permissions; permitted food types, conditions and declaration requirements are not universal.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e225.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
+      },
+      {
+        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Current Australia/New Zealand food-category permissions, maximum permitted levels and conditions."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Preservative",
+      "Antioxidant"
+    ],
+    "regulatoryGroups": [
+      "preservatives",
+      "antioxidants"
+    ]
   },
   "E226": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -5702,108 +5748,263 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E334": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex tartrate group function and category provisions verified",
     "researchedAt": "2026-11-25",
-    "use": "Acidity regulator and taste enhancer of fruits and fruity flavours, as well as stabiliser of colour in fruits and fruit products. Examples include Many products, mainly confectionery, soft drinks, wine, and marmalade. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "L-(+)-Tartaric acid is used mainly as an acidity regulator to adjust or maintain food acidity. Codex also lists broader technical functions for the tartrate group, but these depend on the additive subtype and food application. Codex GSFA category provisions are specific and should not be read as permission for unrestricted use.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e334.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "FAO/WHO Codex — Tartrates (INS 334–337), GSFA food-category provisions",
+        "url": "https://www.fao.org/4/y0474e/y0474e1q.htm",
+        "note": "Codex groups tartaric acid and its sodium/potassium salts and lists the food categories and conditions for the group."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "regulatoryGroups": [
+      "acidity regulators"
+    ]
   },
   "E335": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex tartrate group functions and category provisions verified",
     "researchedAt": "2026-11-25",
-    "use": "Sodium tartarate is an acidity regulator and anti-oxidant. Examples include Many products, mainly confectionery, marmalade and sausages. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Tartrate salts are used to regulate acidity and, depending on the salt and food, may also function as emulsifying salts, sequestrants or stabilisers. Codex groups these tartrates in its food-additive provisions; the applicable food categories and conditions are specific rather than universal.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e335.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "FAO/WHO Codex — Tartrates (INS 334–337), GSFA food-category provisions",
+        "url": "https://www.fao.org/4/y0474e/y0474e1q.htm",
+        "note": "Codex groups tartaric acid and its sodium/potassium salts and lists the food categories and conditions for the group."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Emulsifying salt",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "regulatoryGroups": [
+      "acidity regulators",
+      "emulsifying salts",
+      "sequestrants",
+      "stabilizers"
+    ]
   },
   "E336": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex tartrate group functions and category provisions verified",
     "researchedAt": "2026-11-25",
-    "use": "Potassium tartarate is an acidity regulator and anti-oxidant. Also used in producing baking powder and as emulsifier. Examples include Many products, mainly confectionery and bakery products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Tartrate salts are used to regulate acidity and, depending on the salt and food, may also function as emulsifying salts, sequestrants or stabilisers. Codex groups these tartrates in its food-additive provisions; the applicable food categories and conditions are specific rather than universal.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e336.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "FAO/WHO Codex — Tartrates (INS 334–337), GSFA food-category provisions",
+        "url": "https://www.fao.org/4/y0474e/y0474e1q.htm",
+        "note": "Codex groups tartaric acid and its sodium/potassium salts and lists the food categories and conditions for the group."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Emulsifying salt",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "regulatoryGroups": [
+      "acidity regulators",
+      "emulsifying salts",
+      "sequestrants",
+      "stabilizers"
+    ]
   },
   "E337": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex tartrate group functions and category provisions verified",
     "researchedAt": "2026-11-25",
-    "use": "Acidity regulator and anti-oxidant. Also used as a stabiliser and emulsifier. Examples include Many products, mainly meat and cheese products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Tartrate salts are used to regulate acidity and, depending on the salt and food, may also function as emulsifying salts, sequestrants or stabilisers. Codex groups these tartrates in its food-additive provisions; the applicable food categories and conditions are specific rather than universal.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e337.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "FAO/WHO Codex — Tartrates (INS 334–337), GSFA food-category provisions",
+        "url": "https://www.fao.org/4/y0474e/y0474e1q.htm",
+        "note": "Codex groups tartaric acid and its sodium/potassium salts and lists the food categories and conditions for the group."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Emulsifying salt",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "regulatoryGroups": [
+      "acidity regulators",
+      "emulsifying salts",
+      "sequestrants",
+      "stabilizers"
+    ]
   },
   "E338": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex functional classes verified",
     "researchedAt": "2026-11-25",
-    "use": "Acidity regulator and chelating agent (used to bind metal ions). Several other very specific functions are: it increases the permeability of salt in meats and acts as an anti-oxidant. Examples include Many products, mainly cola, meat and cheese products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Phosphoric acid is used as an acidity regulator and can also serve as an antioxidant synergist and sequestrant in specified food applications. Its actual permitted uses and levels depend on the applicable food category and jurisdiction.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e338.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "Codex GSFA — Phosphates (INS 338–341 and related phosphate salts)",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=a679e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Codex identifies participating phosphate salts and their category-specific provisions."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Antioxidant",
+      "Sequestrant"
+    ],
+    "regulatoryGroups": [
+      "acidity regulators",
+      "antioxidants",
+      "sequestrants"
+    ]
   },
   "E339": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex functional classes and phosphate-group provisions verified",
     "researchedAt": "2026-11-25",
-    "use": "Sodium phosphate is an acidity regulator and chelating agent (used to bind metal ions). It prevents desiccation and is used as an acid stabiliser in powders as well as to prevent formation of clumps. It increases the activity of antioxidants. Examples include Many different products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Sodium phosphates have several technological functions depending on the subtype and food: acidity regulation, emulsification, emulsifying-salt action, moisture retention, raising, sequestration, stabilisation and thickening. Codex identifies individual sodium-phosphate subtypes and food-category provisions; the functions and permissions are not identical in every food.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e339.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "Codex GSFA — Phosphates (INS 338–341 and related phosphate salts)",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=a679e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Codex identifies participating phosphate salts and their category-specific provisions."
+      },
+      {
+        "label": "Food Standards Australia New Zealand — Phosphate additives, category and level comparison",
+        "url": "https://www.foodstandards.gov.au/sites/default/files/2024-06/CP1%20P1028.pdf",
+        "note": "FSANZ document compares phosphate additives and selected Codex/EU food-category conditions; not a stand-alone current permission."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Emulsifier",
+      "Emulsifying salt",
+      "Humectant",
+      "Raising agent",
+      "Sequestrant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "regulatoryGroups": [
+      "acidity regulators",
+      "emulsifiers",
+      "emulsifying salts",
+      "humectants",
+      "raising agents",
+      "sequestrants",
+      "stabilizers",
+      "thickeners"
+    ]
   },
   "E340": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex functional classes and phosphate-group provisions verified",
     "researchedAt": "2026-11-25",
-    "use": "Potassium phosphate is an acidity regulator and chelating agent (used to bind metal ions). It prevents desiccation and is used as an acid stabiliser in powders as well as to prevent formation of clumps. It increases the activity of antioxidants. Examples include Many different products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Potassium phosphates are used for acidity regulation and, depending on the subtype and food, may also act as emulsifiers, humectants, sequestrants, stabilisers or thickeners. Codex identifies individual potassium-phosphate subtypes and category-specific provisions; this is not blanket permission in all foods.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e340.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "Codex GSFA — Phosphates (INS 338–341 and related phosphate salts)",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=a679e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Codex identifies participating phosphate salts and their category-specific provisions."
+      },
+      {
+        "label": "Food Standards Australia New Zealand — Phosphate additives, category and level comparison",
+        "url": "https://www.foodstandards.gov.au/sites/default/files/2024-06/CP1%20P1028.pdf",
+        "note": "FSANZ document compares phosphate additives and selected Codex/EU food-category conditions; not a stand-alone current permission."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Emulsifier",
+      "Humectant",
+      "Sequestrant",
+      "Stabilizer",
+      "Thickener"
+    ],
+    "regulatoryGroups": [
+      "acidity regulators",
+      "emulsifiers",
+      "humectants",
+      "sequestrants",
+      "stabilizers",
+      "thickeners"
+    ]
   },
   "E341": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex phosphate-group provisions and functional-class reference cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Calcium phosphate is an acidity regulator, used in baking powder and acts as a bread enhancer. It also binds metal ions, increases the activity of antioxidants and stabilises the texture of canned vegetables. E341 (ii) is used as polishing material in toothpaste. E341 (iii) is mainly used in powders to avoid formation of clumps. Examples include Many different products, mainly bakery products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Calcium phosphates are used for food-texture and processing functions that vary by subtype, including acidity regulation, anticaking, raising and stabilisation. Codex lists calcium-phosphate subtypes and category-specific provisions; the permitted functions and levels depend on the food and jurisdiction.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e341.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "Codex GSFA — Phosphates (INS 338–341 and related phosphate salts)",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=a679e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Codex identifies participating phosphate salts and their category-specific provisions."
+      },
+      {
+        "label": "Food Standards Australia New Zealand — Phosphate additives, category and level comparison",
+        "url": "https://www.foodstandards.gov.au/sites/default/files/2024-06/CP1%20P1028.pdf",
+        "note": "FSANZ document compares phosphate additives and selected Codex/EU food-category conditions; not a stand-alone current permission."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Anticaking agent",
+      "Raising agent",
+      "Stabilizer"
+    ],
+    "regulatoryGroups": [
+      "acidity regulators",
+      "anticaking agents",
+      "raising agents",
+      "stabilizers"
+    ]
   },
   "E342": {
     "researchStatus": "Purpose cross-checked against secondary E-number reference",
@@ -5831,17 +6032,32 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E343": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex phosphate-group functional-class reference cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Magnesium phosphate is used as an emulsifier; it also increases the activity of antioxidants. It prevents clumping in powders. Also used as a magnesium salt in functional foods and food supplements. Examples include Few bakery products, food supplements. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Magnesium phosphates are phosphate additives used for acidity and formulation control; their technical role can include stabilising or anticaking functions depending on the specific salt and food. Codex and national food standards distinguish additive subtypes and category-specific conditions, so this summary is not a blanket approval.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e343.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "Codex GSFA — Phosphates (INS 338–341 and related phosphate salts)",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=a679e6b8-249a-f111-b8dc-70a8a5613865",
+        "note": "Codex identifies participating phosphate salts and their category-specific provisions."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Anticaking agent",
+      "Stabilizer"
+    ],
+    "regulatoryGroups": [
+      "acidity regulators",
+      "anticaking agents",
+      "stabilizers"
+    ]
   },
   "E344": {
     "researchStatus": "Preproom educational technical-purpose reference",
@@ -6302,30 +6518,66 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E385": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex GSFA EDTA-group functions verified",
     "researchedAt": "2026-11-25",
-    "use": "Metal scavenger, stabiliser (also used after heavy metal intoxication to remove metals from the body). Examples include Many different products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "EDTA additive used as a sequestrant: it binds certain metal ions that can otherwise promote oxidation, colour changes or product deterioration. Codex lists the EDTA group with antioxidant, colour-retention, preservative and sequestrant functions; exact permissions are limited to specified food categories and conditions.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e385.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex GSFA — Calcium disodium EDTA (INS 385)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=259",
+        "note": "Codex identifies antioxidant, colour-retention, preservative and sequestrant functions."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Antioxidant",
+      "Colour retention agent",
+      "Preservative",
+      "Sequestrant"
+    ],
+    "regulatoryGroups": [
+      "antioxidants",
+      "colour retention agents",
+      "preservatives",
+      "sequestrants"
+    ]
   },
   "E386": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex GSFA EDTA-group functions verified",
     "researchedAt": "2026-11-25",
-    "use": "Metal scavenger, stabiliser (also used after heavy metal intoxication to remove metals from the body). Examples include Many different products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "EDTA additive used as a sequestrant: it binds certain metal ions that can otherwise promote oxidation, colour changes or product deterioration. Codex lists the EDTA group with antioxidant, colour-retention, preservative and sequestrant functions; exact permissions are limited to specified food categories and conditions.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e386.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex GSFA — Disodium EDTA (INS 386)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=260",
+        "note": "Codex identifies antioxidant, colour-retention, preservative, sequestrant and stabiliser functions for the EDTA additive group."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Antioxidant",
+      "Colour retention agent",
+      "Preservative",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "regulatoryGroups": [
+      "antioxidants",
+      "colour retention agents",
+      "preservatives",
+      "sequestrants",
+      "stabilizers"
+    ]
   },
   "E387": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
@@ -8368,17 +8620,40 @@ window.FOSCH_RESEARCH_DATA={
     "useResearchNote": "The US provision is specific and should not be generalised to other markets."
   },
   "E450": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex diphosphate functional classes cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Buffers and emulsifiers. E450 (iii) also binds metals and prevents discoloration due to metals. E450 (vi) is also used as bread enhancer and calcium supplement. Examples include Many different products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Diphosphates are a family of phosphate salts used for several technical purposes, depending on the specific salt and food: acidity regulation, raising, emulsification or emulsifying-salt action, moisture retention, sequestration and stabilisation. Codex assigns functions to individual diphosphate subtypes; food-category permissions and combinations are controlled by the applicable standard.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e450.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Emulsifier",
+      "Emulsifying salt",
+      "Humectant",
+      "Raising agent",
+      "Sequestrant",
+      "Stabilizer"
+    ],
+    "regulatoryGroups": [
+      "acidity regulators",
+      "emulsifiers",
+      "emulsifying salts",
+      "humectants",
+      "raising agents",
+      "sequestrants",
+      "stabilizers"
+    ]
   },
   "E451": {
     "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
@@ -11324,17 +11599,28 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E541": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex GSFA group provisions verified",
     "researchedAt": "2026-11-25",
-    "use": "The acid form is used in baking powder for slow baking processes at low temperature; the alkaline form is used as an emulsifier in processed cheese. Examples include bakery products, processed cheese This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Sodium aluminium phosphate is used as a leavening or raising-acid ingredient in specified bakery and flour applications, and also has defined permitted uses in selected other categories such as processed cheese. Codex publishes provisions for the acidic and basic forms as a group; the listed categories and maximum levels are specific, not universal.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e541.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex GSFA — Sodium aluminium phosphates (INS 541(i) and 541(ii)), group provisions",
+        "url": "https://www.fao.org/gsfaonline/groups/details.html?id=154",
+        "note": "Codex lists category-specific provisions for selected bakery products, batters, flour and processed cheese; provisions apply at group level."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Raising agent"
+    ],
+    "regulatoryGroups": [
+      "raising agents"
+    ]
   },
   "E542": {
     "researchStatus": "Purpose cross-checked against secondary E-number reference",
@@ -11581,17 +11867,30 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E555": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex CXG 36-1989 functional class verified",
     "researchedAt": "2026-11-25",
-    "use": "Used as anti-caking agent. Examples include Dry products, but hardly used. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Potassium aluminium silicate is used as an anticaking agent to help powdered or granulated foods remain free-flowing and resist clumping. Codex also identifies a carrier function; permitted applications depend on the food category and local standard.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e555.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Anticaking agent",
+      "Carrier"
+    ],
+    "regulatoryGroups": [
+      "anticaking agents",
+      "carriers"
+    ]
   },
   "E556": {
     "researchStatus": "Codex GSFA verified",
@@ -11640,17 +11939,28 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E558": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex CXG 36-1989 functional class verified",
     "researchedAt": "2026-11-25",
-    "use": "Used as anti-caking agent and emulsifier. Also used as clarifying agent in fruit juice preparations. Examples include Fruit juices, aromas. Main use, however, is in cosmetics. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Bentonite is used as an anticaking agent to reduce clumping and help powdered ingredients remain free-flowing. Codex identifies this technical function; its permission and conditions depend on the relevant food category and jurisdiction.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e558.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Anticaking agent"
+    ],
+    "regulatoryGroups": [
+      "anticaking agents"
+    ]
   },
   "E559": {
     "researchStatus": "Codex GSFA verified",
@@ -11811,17 +12121,32 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E570": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex CXG 36-1989 functional classes verified",
     "researchedAt": "2026-11-25",
-    "use": "Used as anti-caking agent and plasticizer in chewing gum. Also used in flavours. Examples include Chewing gum, butter aroma/flavour, bakery products. Also used in cosmetics and pharmaceutical preparations. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Food-grade fatty acids have several technological roles, including antifoaming, glazing and foam-stabilising functions. The precise function depends on the product and formulation; Codex lists these functional classes and applicable food-category permissions remain jurisdiction-specific.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e570.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https://workspace.fao.org/sites/codex/Standards/CXG+36-1989/CXG_036e.pdf",
+        "note": "Official functional class definitions for additive groups and numbered subtypes."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Antifoaming agent",
+      "Glazing agent",
+      "Stabilizer"
+    ],
+    "regulatoryGroups": [
+      "antifoaming agents",
+      "glazing agents",
+      "stabilizers"
+    ]
   },
   "E572": {
     "researchStatus": "Purpose cross-checked against secondary E-number reference",
@@ -13027,17 +13352,30 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E905": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "JECFA functional uses verified",
     "researchedAt": "2026-11-25",
-    "use": "Coating, lubricant, solvent, anti-foaming agent and in chewing gum. Examples include Many different products, also in pharmaceutical and cosmetic preparations. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Microcrystalline wax is used as a component of chewing-gum base and for protective surface coatings or finishes; JECFA also lists antifoaming and surface-finishing functions. These uses are subject to food-category and specification controls and are not general permission for every food.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e905.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+        "label": "FAO/WHO JECFA — Microcrystalline wax (INS 905c)",
+        "url": "https://www.fao.org/4/w6355e/w6355e0m.htm",
+        "note": "JECFA describes its functional uses as a chewing-gum-base component, protective coating, antifoaming agent and surface-finishing agent."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Antifoaming agent",
+      "Glazing agent"
+    ],
+    "regulatoryGroups": [
+      "antifoaming agents",
+      "glazing agents"
+    ]
   },
   "E905a": {
     "researchStatus": "Source-backed use",
