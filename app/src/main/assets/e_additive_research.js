@@ -1,8 +1,8 @@
 window.FOSCH_RESEARCH_DATA={
   "E100": {
-    "researchStatus": "Cross-checked against Codex GSFA subtype records",
+    "researchStatus": "Codex GSFA subtype record and category-specific provisions cross-checked; no blanket authorisation inferred",
     "researchedAt": "2026-11-25",
-    "use": "Yellow to orange-yellow food colour derived from turmeric (Curcuma longa); used to colour foods. Its use as a spice also contributes dietary curcumin exposure and should be distinguished from deliberate additive use. Codex GSFA subtype records include Curcumin (100(i)) (100(i)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are category-specific provisions, not blanket permission.",
+    "use": "Yellow to orange-yellow food colour derived from turmeric (Curcuma longa); used to colour foods. Its use as a spice also contributes dietary curcumin exposure and should be distinguished from deliberate additive use. Codex GSFA subtype record 100(i) classifies curcumin as a colour and includes category-specific provisions; those examples are not blanket permission.",
     "tox": "EFSA’s 2010 re-evaluation supported an ADI of 3 mg/kg body weight/day, based on reproductive-toxicity data. EFSA noted that estimated exposure at maximum permitted use levels could exceed the ADI for some children aged 1–10 years in some European countries, especially at the 95th percentile. The panel also discussed positive results in some genotoxicity tests and limitations in the evidence; do not summarise this as a blanket “risk-free” finding.",
     "intake": "EFSA ADI: 3 mg/kg bw/day (2010); JECFA ADI: 0–3 mg/kg bw/day (2004/2003 record). EFSA estimated that exposure at maximum permitted levels could exceed its ADI for some children in some countries. This is a long-term benchmark, not a per-serving maximum. Check current local category limits.",
     "sources": [
@@ -148,14 +148,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E101a": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Riboflavin-5'-Phosphate as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Riboflavin-5′-phosphate is listed in older educational E-number references as a colour-related form of riboflavin. The source does not establish current permission for E101a as a distinct food additive in Great Britain; do not infer current authorisation from the historical code label.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E101a does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -313,33 +318,43 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E105": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Fast Yellow AB as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Fast Yellow AB is listed in older educational E-number references as a colourant. This is a historical code association only; it is not confirmation of current permission in Great Britain or any other jurisdiction.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E105 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
   "E106": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Riboflavin-5-Sodium Phosphate as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Riboflavin-5-sodium phosphate is listed in older educational E-number references as a colour-related riboflavin form. This is a historical code association only; the old code label does not establish current permission as a distinct food additive.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E106 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
   "E107": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Historical technical colour-use reference; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Yellow food colour. Very soluble in water. Product(s): Mayonnaise This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Yellow 2G is described in older technical references as a yellow food colour. This is a historical/technical classification only; the checked current Great Britain approved-additives list does not include E107. Do not interpret the old product examples as current permission in Great Britain or as a global status finding.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
@@ -420,14 +435,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E111": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Orange GGN as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Orange GGN is listed in older educational E-number references as a colourant. This is a historical code association only, not confirmation of current approval in any particular market.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E111 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -714,14 +734,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E126": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Ponceau 6R as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Ponceau 6R is listed in older educational E-number references as a colourant. This is a historical code association only, not confirmation of current approval in any particular market.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E126 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -781,14 +806,24 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E128": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "EFSA EU market-withdrawal history cross-checked; current GB approved-additives list also checked",
     "researchedAt": "2026-11-25",
-    "use": "Red food colour. Very soluble in water. Examples include Restricted use in confectionery and meat products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Red 2G (E128) is a historical red food-colour designation. EFSA records that it was withdrawn from the EU market in 2007 after safety concerns. This is an EU-specific status; the historical confectionery/meat examples in older references are not current permission.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e128.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "European Food Safety Authority — Re-evaluation of food colours: Red 2G market withdrawal",
+        "url": "https://www.efsa.europa.eu/en/press/news/160914-0",
+        "note": "EFSA states that Red 2G (E128) was withdrawn from the EU market in 2007 after new evidence raised safety concerns. This is an EU-specific historical status, not a global authorisation finding."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E128 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -849,14 +884,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E130": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Indanthrene blue RS as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Indanthrene blue RS is listed in older educational E-number references as a colourant. This is a historical code association only, not confirmation of current approval in any particular market.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E130 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -1088,6 +1128,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food Colour Additives: A Synoptical Overview (2022)",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
         "note": "Peer-reviewed review covering chlorophyllins and their food-colour applications."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E140(ii) does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -1596,6 +1641,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food Colour Additives: A Synoptical Overview (2022)",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
         "note": "Identifies E160a(i) as beta-carotene, describes its orange colour and discusses fat staining and emulsified preparations."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E160a(i) does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -2266,26 +2316,36 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E161i": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Citranaxanthin as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Citranaxanthin is listed in older educational E-number references as a colourant. This is a historical code association only; the cited source does not establish current food-additive permission.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E161i does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
   "E161j": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Astaxanthin as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Astaxanthin is listed in older educational E-number references as a colourant. This is a historical code association only; the cited source does not establish current food-additive permission.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E161j does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -2777,14 +2837,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E182": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Orcein, Orchil as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Orcein/orchil is listed in older educational E-number references as a colourant. This is a historical code association only; the cited source does not establish current food-additive permission.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E182 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -3128,22 +3193,32 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E216": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Australia–New Zealand Schedule 15 category-0 permission cross-checked; GB list checked; broad direct-food claim narrowed",
     "researchedAt": "2026-11-25",
-    "use": "Benzoic acid and benzoates are used as preservatives against both yeasts and fungi. They are not very effective against bacteria. Activity does not depend on acidity. Benzoic acid esters are poorly soluble, which limits application. Examples include Benzoic acid esters are used in a wide range of food products and cosmetics. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Propyl p-hydroxybenzoate (propylparaben) is described in older technical references as a preservative. The Australia–New Zealand Food Standards Code lists INS 216 only under preparations of food additives, not as an unrestricted direct-use additive for ordinary finished foods. The checked GB approved-additives list does not include E216; the old claim of use across a wide range of foods and cosmetics is not retained as a current permission claim.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e216.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "Federal Register of Legislation — Australia New Zealand Food Standards Code, Schedule 15 (30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Official Australia–New Zealand Food Standards Code, Schedule 15, compilation effective 30 April 2026. It contains food-additive permissions and conditions; the cited entry is limited to the scope described in the accompanying note. INS 216 is listed under preparations of food additives, not as an unrestricted direct-use additive in ordinary finished foods."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E216 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E217": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Historical technical preservative classification only; no E217 permission established by checked AU/NZ or GB sources",
     "researchedAt": "2026-11-25",
-    "use": "Benzoic acid and benzoates are used as preservatives against both yeasts and fungi. They are not very effective against bacteria. Activity does not depend on acidity. Benzoic acid esters are poorly soluble, which limits application. Examples include Benzoic acid esters are used in a wide range of food products and cosmetics. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Sodium propyl p-hydroxybenzoate is associated with a preservative function in older technical references. The separate E217 salt is not the same Schedule 15 entry as INS 216: the checked Australia–New Zealand table lists propylparaben (216) in food-additive preparations, but does not establish a permission for E217. The current GB approved-additives list does not include E217.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
@@ -3154,6 +3229,16 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "Federal Register of Legislation — Australia New Zealand Food Standards Code, Schedule 15 (30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Official Australia–New Zealand Food Standards Code, Schedule 15, compilation effective 30 April 2026. It contains food-additive permissions and conditions; the cited entry is limited to the scope described in the accompanying note. The table lists INS 216 (propylparaben) in food-additive preparations; it does not list the separate E217 sodium salt in that entry."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E217 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -3574,9 +3659,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E231": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Historical treatment classification only; no current general food-additive permission inferred",
     "researchedAt": "2026-11-25",
-    "use": "White, water-insoluble powder used particularly against _Penicillium_ fungi growing on citrus fruits, apples and pears. It slowly penetrates the peel and may be present in the fruit itself. Examples include Citrus fruits, apples, pears. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Orthophenyl phenol appears in older technical references as a post-harvest treatment substance. This is not a general food-ingredient permission. FOSCH does not describe application methods or infer current permission from the historical E-number reference; legal treatment and residue rules are jurisdiction-specific.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
@@ -3592,9 +3677,9 @@ window.FOSCH_RESEARCH_DATA={
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E232": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Historical treatment classification only; no current general food-additive permission inferred",
     "researchedAt": "2026-11-25",
-    "use": "White powder used especially against _Penicillium_ fungi growing on citrus fruits, apples and pears. It is very soluble in water, and used for spraying or dipping fruits. It slowly penetrates the skin and may be present in the fruit itself. Examples include C itrus fruits, apples, pears. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Sodium orthophenyl phenol appears in older technical references as a post-harvest treatment substance. This is not a general food-ingredient permission. FOSCH does not describe application methods or infer current permission from the historical E-number reference; legal treatment and residue rules are jurisdiction-specific.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
@@ -3610,9 +3695,9 @@ window.FOSCH_RESEARCH_DATA={
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E233": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Historical treatment classification only; no current general food-additive permission inferred",
     "researchedAt": "2026-11-25",
-    "use": "A widely used fungicide, particularly on fruits. It is mainly sprayed on fruits; it could also be a component of an aqueous solution, in which fruits are submerged. It may only be used on the outer surface of fruits. Examples include Fruits This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Thiabendazole appears in older technical references as a substance associated with post-harvest fruit treatment. This is not a general food-ingredient permission. FOSCH does not describe application methods or infer current permission from the historical E-number reference; legal treatment and residue rules are jurisdiction-specific.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
@@ -3809,9 +3894,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E240": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Historical code association only; source does not support use as a food ingredient",
     "researchedAt": "2026-11-25",
-    "use": "Formaldehyde is a gas used as a preservative against bacteria. It is not used in foods, but used to disinfect containers, pipes and vessels in the food industry. It is widely used in cosmetics. Examples include None (only cosmetics). This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Formaldehyde appears in older E-number references, but the cited profile itself does not describe it as a food ingredient. FOSCH records this as a historical code association only; it must not be interpreted as a current or permitted food-additive use.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
@@ -4305,14 +4390,29 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E267": {
-    "researchStatus": "Secondary E-number purpose reference",
+    "researchStatus": "EU specification and Group I listing cross-checked; GB approved-additives list checked; jurisdiction scope distinguished",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Buffered vinegar as a preservative used to help slow food spoilage. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "use": "Buffered vinegar (E267) has a defined identity/specification in EU law and appears in the EU Group I food-additive listing. That does not mean it is authorised in every food category or jurisdiction. The checked GB approved-additives list does not include E267; use status must therefore be stated by market rather than as a universal permission.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "European Union — Commission Regulation (EU) 2023/2086, E267 buffered vinegar specification",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32023R2086",
+        "note": "Official EU regulation added the identity/specification for E267 buffered vinegar. A specification defines identity and purity; it does not by itself grant unrestricted permission in every food category."
+      },
+      {
+        "label": "EUR-Lex — Regulation (EC) No 1333/2008, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Official consolidated EU food-additives legislation lists E267 Buffered vinegar in Group I. Individual food-category provisions and conditions still apply."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E267 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -5174,26 +5274,36 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E317": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Erythorbin acid as a antioxidant. It is therefore described as used as an antioxidant to slow oxidation and protect food quality. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Erythorbic acid is listed in older educational E-number references with an antioxidant classification. The cited source does not establish current food-additive permission for this code; do not confuse a historical code entry with a currently approved additive.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E317 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
   "E318": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Sodium erythorbin as a antioxidant. It is therefore described as used as an antioxidant to slow oxidation and protect food quality. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Sodium erythorbate is listed in older educational E-number references with an antioxidant classification. The cited source does not establish current food-additive permission for this code; do not confuse a historical code entry with a currently approved additive.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E318 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -5455,9 +5565,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E324": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical code association only; current GB approved-additives list checked; no human-food permission established",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Ethoxyquin as a antioxidant. It is therefore described as used as an antioxidant to slow oxidation and protect food quality. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Ethoxyquin is associated with an antioxidant classification in older E-number references. The checked current Great Britain approved food-additives list does not include E324, and the research sources do not establish a current human-food additive permission. FOSCH treats this only as a historical code association, not a permitted food ingredient.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
@@ -6188,38 +6298,58 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E344": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Lecitin citrate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Lecithin citrate is listed in older educational E-number references with an acidity-regulator classification. The cited source does not establish current permission or permitted food categories for this code.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E344 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
   "E345": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Magnesium citrate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Magnesium citrate is listed in older educational E-number references with an acidity-regulator classification. The cited source does not establish current permission or permitted food categories for this code.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E345 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
   "E349": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical technical-purpose reference; FSANZ US/EU comparison caveat added; jurisdiction scope retained",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Ammonium malate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Ammonium malate is listed in an older technical reference as an acidity regulator. FSANZ's comparison table records 'no permission sought' for E349 in the EU column; this does not mean it is banned worldwide and does not establish permission in Australia–New Zealand. Its historical function should not be presented as current global authorisation.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "Food Standards Australia New Zealand — Table of food-additive permissions in the US and Europe",
+        "url": "https://www.foodstandards.gov.au/consumer/additives/tableoffoodadditivep5753",
+        "note": "FSANZ's comparison table notes that 'no permission sought' is not the same as a ban. The table concerns the named US and EU legal frameworks only and does not establish status in every jurisdiction. FSANZ's table records 'no permission sought' for ammonium malate (E349) in the EU column. This does not mean worldwide prohibition and does not determine Australia–New Zealand permission."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E349 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -6425,27 +6555,37 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E356": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Historical functional description plus current GB approved-list inclusion; category conditions not inferred",
     "researchedAt": "2026-11-25",
-    "use": "Acidity regulator. Examples include Herbal salts This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Sodium adipate is described in older technical references as an acidity regulator. The current Great Britain FSA approved-additives list includes E356; that confirms listing in Great Britain, not unrestricted use in every food. Specific food categories and conditions must be checked in the applicable legislation.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e356.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. This list includes E356; the listing does not specify every permitted food category or maximum level."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E357": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Historical functional description plus current GB approved-list inclusion; category conditions not inferred",
     "researchedAt": "2026-11-25",
-    "use": "Acidity regulator. Examples include H erbal salts for low-sodium products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Potassium adipate is described in older technical references as an acidity regulator. The current Great Britain FSA approved-additives list includes E357; that confirms listing in Great Britain, not unrestricted use in every food. Specific food categories and conditions must be checked in the applicable legislation.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e357.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. This list includes E357; the listing does not specify every permitted food category or maximum level."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -6582,14 +6722,19 @@ window.FOSCH_RESEARCH_DATA={
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E375": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Nutrient identity distinguished from historical additive-purpose listing; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Anti-oxidant and colour stabiliser. Examples include B read, cereals, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Niacin (vitamin B3) is a nutrient. Older technical references associate E375 with antioxidant or colour-stabilising functions, but the checked current Great Britain approved-additives list does not include E375. FOSCH does not treat that historical description as confirmation of a current technological food-additive permission; nutrient-fortification rules are a separate question.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e375.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E375 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -6645,14 +6790,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E383": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Calcium glycerylphosphate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Calcium glycerylphosphate is listed in older educational E-number references with an acidity-regulator classification. The cited source does not establish current permission or permitted food categories for this code.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E383 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -6748,14 +6898,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E387": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Metal scavenger and stabiliser (to prevent crystallisation in fats and oils). Examples include Oils and fats, sugar, yeast products, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Oxystearin is described in an older technical profile with a stabilising/metal-scavenging function. The profile is historical and does not establish current permission or permitted food categories.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e387.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E387 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -7386,14 +7541,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E408": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "Thickening agent, stabiliser and emulsifier. Examples include Products for diabetics. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Bakers yeast glycan is described in an older technical profile with thickening, stabilising or emulsifying functions. The profile does not establish current permission or permitted food categories.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e408.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E408 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -10264,14 +10424,19 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E487": {
-    "researchStatus": "Secondary E-number purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Sodium laurylsulfate as an emulsifier used to help ingredients that normally separate remain mixed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "use": "Sodium lauryl sulfate is associated with an emulsifier function in a secondary E-number list. The secondary listing does not establish current food-additive permission or permitted categories.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E487 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -11838,14 +12003,19 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E540": {
-    "researchStatus": "Secondary E-number purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Dicalcium diphosphate as an emulsifier used to help ingredients that normally separate remain mixed; an acidity regulator used to adjust acidity or pH. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "use": "Dicalcium diphosphate is associated with technological functions in a secondary E-number list. The secondary listing does not establish current food-additive permission or permitted categories.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E540 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -12084,14 +12254,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E553b": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "Technical function reference plus current GB approved-list inclusion; category conditions not inferred",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Talc as Anti-caking agent, bulking agent, glazing agent. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "Talc is described in technical references as having anticaking, bulking or glazing functions. The current Great Britain FSA approved-additives list includes E553b, but this confirms only that the additive is listed there; specific food categories and conditions remain governed by the relevant legislation.",
     "sources": [
       {
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. This list includes E553b; the listing does not specify every permitted food category or maximum level."
       }
     ]
   },
@@ -12240,14 +12415,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E560": {
-    "researchStatus": "Secondary E-number purpose reference",
+    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Potassium silicate as an anti-caking agent used to reduce clumping. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "use": "Potassium silicate is associated with an anticaking function in a secondary E-number list. The secondary listing does not establish current food-additive permission or permitted categories.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E560 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13320,14 +13500,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E701": {
-    "researchStatus": "Historical E-number purpose reference — antibiotic classification",
+    "researchStatus": "Historical secondary code association only; no current GB food-additive listing or food-use permission established",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Tetracyclines as an antibiotic classification historically associated with the code. This describes a reported technological or historical function, not current authorisation. It is not confirmation of routine use in food; verify whether the historical code referred to food, animal feed or another context.",
+    "use": "Older secondary E-number lists associate E701 with an antibiotic name. The cited material does not establish a current food-additive use or permission. FOSCH records this as an unverified historical code association only, not as a permitted food ingredient.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E701 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13340,6 +13525,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E702 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13352,6 +13542,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E703 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13364,6 +13559,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E704 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13376,6 +13576,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E705 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13388,6 +13593,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E706 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13400,6 +13610,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E707 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13412,6 +13627,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E708 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13424,6 +13644,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E710 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13436,6 +13661,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E711 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13448,6 +13678,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E712 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13460,6 +13695,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E713 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13472,6 +13712,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E714 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13484,6 +13729,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E715 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13496,6 +13746,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E716 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13508,6 +13763,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E717 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -13943,6 +14203,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. This list includes E914; the listing does not specify every permitted food category or maximum level."
       }
     ]
   },
@@ -13965,9 +14230,9 @@ window.FOSCH_RESEARCH_DATA={
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E916": {
-    "researchStatus": "Source-backed use",
+    "researchStatus": "Secondary historical classification only; current food-additive permission not established",
     "researchedAt": "2026-11-25",
-    "use": "A secondary additive reference classifies calcium iodate as a flour-treatment agent, but the profile provides no detailed food-category application or technological mechanism. Treat this as a reported/historical classification only; current authorisation was not established by the source.",
+    "use": "Calcium iodate appears in a secondary historical E-number reference under a flour-treatment classification. The source does not establish a current food-additive permission or food-category use. FOSCH records only the historical classification and does not present it as an approved food use.",
     "sources": [
       {
         "label": "ProE — E916 Calcium iodate",
@@ -13982,9 +14247,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E917": {
-    "researchStatus": "JECFA monograph and historical flour-treatment recommendation cross-checked; no current permission inferred",
+    "researchStatus": "JECFA historical evaluation checked; prior flour-treatment use not recommended; current permission not inferred",
     "researchedAt": "2026-11-25",
-    "use": "JECFA identifies potassium iodate (INS 917) with flour-treatment and oxidising functions, but its monograph explicitly records that use as a flour-treatment agent was not recommended by the 9th JECFA (1965). The functional classification must not be read as a recommendation or current authorisation. Any proposed food use must be checked against the applicable jurisdiction's current standards.",
+    "use": "Potassium iodate has a historical JECFA functional classification, but JECFA explicitly records that flour-treatment use was not recommended by the 9th JECFA (1965). This classification must not be read as a recommendation or current food-additive permission. FOSCH does not describe practical use.",
     "sources": [
       {
         "label": "ProE — E917 Potassium iodate",
@@ -14183,26 +14448,36 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E924": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "Historical code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Potassium bromateÊ as Oxidising agent, improver, and bleaching agent; Manufactured synthetically. Examples of use include Added to flour; No longer approved in EU. The page notes an EU restriction; verify the current legal position with the relevant regulator before treating this as authorised.",
+    "use": "Potassium bromate appears in older E-number references, but the checked current Great Britain approved-additives list does not include E924. FOSCH does not present the historical technical description as a current food use or permission.",
     "sources": [
       {
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E924 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
   "E924b": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "Historical code association only; current GB approved-additives list checked; no current GB listing identified",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Calcium bromateÊ as Maturing agent and flour improver. Examples of use include Used in bread; Banned in the EU. The page notes an EU restriction; verify the current legal position with the relevant regulator before treating this as authorised.",
+    "use": "Calcium bromate appears in older E-number references, but the checked current Great Britain approved-additives list does not include E924b. FOSCH does not present the historical technical description as a current food use or permission.",
     "sources": [
       {
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E924b does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -14230,9 +14505,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E926": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "Historical technical code association only; current food-additive permission not established",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Chlorine dioxide as Synthetically prepared additive, similar to chlorine; Also used as a water purifier and oxidising agent. Examples of use include Similar to chlorine. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "Chlorine dioxide appears in an older technical E-number reference. That source does not establish a current general food-additive permission or permitted food-category use. FOSCH records only the historical code association and does not describe practical applications.",
     "sources": [
       {
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
@@ -14320,9 +14595,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E929": {
-    "researchStatus": "Source-backed use",
+    "researchStatus": "Secondary historical code association only; current food-additive permission not established",
     "researchedAt": "2026-11-25",
-    "use": "A secondary E-number reference lists acetone peroxide under the flour-treatment-agent group, but the source does not provide a detailed food application or current authorisation basis. FOSCH records this as a reported historical classification, not as a currently permitted flour improver.",
+    "use": "Acetone peroxide appears in a secondary historical E-number reference. The cited material does not establish a current food-additive permission or permitted food-category use. FOSCH records only the historical code association and does not present it as a permitted flour-treatment use.",
     "sources": [
       {
         "label": "ProE — E929 Acetone peroxide",
@@ -14337,9 +14612,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E930": {
-    "researchStatus": "Secondary E-number purpose reference",
+    "researchStatus": "Secondary historical code association only; current food-additive permission not established",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Calcium peroxide as a bleaching agent used to lighten or whiten ingredients during processing. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "use": "Calcium peroxide appears in a secondary historical E-number reference with a technical-purpose classification. The source does not establish current food-additive authorisation or permitted food categories. FOSCH records only the historical classification, not a current approved food use.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -14362,6 +14637,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. This list includes E938; the listing does not specify every permitted food category or maximum level."
       }
     ]
   },
@@ -14374,6 +14654,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. This list includes E939; the listing does not specify every permitted food category or maximum level."
       }
     ]
   },
@@ -14571,6 +14856,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. This list includes E948; the listing does not specify every permitted food category or maximum level."
       }
     ]
   },
@@ -16680,14 +16970,19 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E1430": {
-    "researchStatus": "Secondary E-number purpose reference",
+    "researchStatus": "Secondary historical functional classification only; no current GB approved-additives listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Distarch glycerine as a stabiliser used to help food components remain uniformly dispersed; a thickening agent used to increase viscosity. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "use": "Older secondary E-number lists associate E1430 with starch-related stabilising or thickening functions. The cited source does not establish a current food-additive permission or permitted food categories. Treat the description as historical/secondary, not current authorisation.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E1430 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -16721,14 +17016,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E1441": {
-    "researchStatus": "Secondary E-number purpose reference",
+    "researchStatus": "Secondary historical functional classification only; no current GB approved-additives listing identified",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Hydroxypropyl distarch glycerine as a stabiliser used to help food components remain uniformly dispersed; a thickening agent used to increase viscosity. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "use": "Older secondary E-number lists associate E1441 with starch-related stabilising or thickening functions. The cited source does not establish a current food-additive permission or permitted food categories. Treat the description as historical/secondary, not current authorisation.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E1441 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -16969,14 +17269,24 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E1504": {
-    "researchStatus": "Secondary E-number purpose reference",
+    "researchStatus": "Australia–New Zealand flavourings-preparation provision cross-checked; current GB list checked; historical E-code scope distinguished",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Ethyl acetate as a stated [flavour solvent](https://en.wikipedia.org/wiki/Flavour_solvent?action=edit&redlink=1 \"Flavour solvent (page does not exist)\") function. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "use": "Ethyl acetate is listed in the Australia–New Zealand Food Standards Code within flavouring preparations at GMP. This is a scoped flavourings provision; it does not establish general-purpose authorisation for the historical E1504 code in all foods. The checked current Great Britain approved-additives list does not include E1504.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "Federal Register of Legislation — Australia New Zealand Food Standards Code, Schedule 15 (30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Official Australia–New Zealand Food Standards Code, Schedule 15, compilation effective 30 April 2026. It contains food-additive permissions and conditions; the cited entry is limited to the scope described in the accompanying note. The flavourings section lists ethyl acetate within flavouring preparations at GMP. This is a scoped flavourings provision, not a general-purpose permission for the historical E1504 code in all foods."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E1504 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ]
   },
@@ -17059,6 +17369,16 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "Federal Register of Legislation — Australia New Zealand Food Standards Code, Schedule 15 (30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Official Australia–New Zealand Food Standards Code, Schedule 15, compilation effective 30 April 2026. It contains food-additive permissions and conditions; the cited entry is limited to the scope described in the accompanying note. The flavourings section lists glycerol diacetate (diacetin) at GMP. This is a flavourings-preparation context; category-specific rules still apply."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. This list includes E1517; the listing does not specify every permitted food category or maximum level."
       }
     ]
   },
@@ -17086,9 +17406,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E1519": {
-    "researchStatus": "EU Regulation 1333/2008 and Great Britain FSA authorisation register cross-checked; Codex INS carrier classification added",
+    "researchStatus": "EFSA/JECFA and EU/GB/AU-NZ flavouring-carrier scope cross-checked; no unrestricted-use claim",
     "researchedAt": "2026-11-25",
-    "use": "The EU consolidated Regulation (EC) No 1333/2008 (31 July 2025) lists E1519 benzyl alcohol in Annex III for specified flavouring applications, with maximum levels of 100 mg/L in the listed liqueur/aromatised-wine group and 250 mg/kg for the listed confectionery, chocolate and fine-bakery group. The Great Britain FSA register lists E1519 as authorised in England, Scotland and Wales and links its terms to assimilated Regulation 1333/2008 Annexes II and III. Codex INS 1519 identifies it as a carrier. These are scoped uses, not unrestricted permission as a general-purpose preservative or flavouring.",
+    "use": "Benzyl alcohol is listed in food-additive law for specified flavouring/carrier applications, subject to category-specific conditions. The Australia–New Zealand Code lists it in flavouring preparations with conditions, and the GB FSA approved-additives list includes E1519. These are scoped permissions, not unrestricted use as a general-purpose preservative or flavouring.",
     "sources": [
       {
         "label": "EFSA — Re-evaluation of benzyl alcohol (E1519) as a food additive (2019)",
@@ -17109,6 +17429,16 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Great Britain food-additive authorisation: E1519",
         "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-1519",
         "note": "Official Great Britain authorisation register lists benzyl alcohol (E1519) as authorised in England, Scotland and Wales, and identifies assimilated Regulation (EC) No 1333/2008 Annexes II and III as the terms of authorisation. Register last updated 1 April 2025."
+      },
+      {
+        "label": "Federal Register of Legislation — Australia New Zealand Food Standards Code, Schedule 15 (30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Official Australia–New Zealand Food Standards Code, Schedule 15, compilation effective 30 April 2026. It contains food-additive permissions and conditions; the cited entry is limited to the scope described in the accompanying note. The flavourings section lists benzyl alcohol subject to a maximum level in the final food. This is a scoped flavourings provision, not unrestricted use as a general-purpose preservative."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. This list includes E1519; the listing does not specify every permitted food category or maximum level."
       }
     ]
   },
