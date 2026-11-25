@@ -2572,7 +2572,7 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E171": {
-    "researchStatus": "Codex GSFA verified",
+    "researchStatus": "Codex GSFA function; Great Britain authorisation and Northern Ireland prohibition cross-checked",
     "researchedAt": "2026-11-25",
     "use": "Codex GSFA identifies this additive as colour (adds or restores colour). Codex GSFA lists category-specific provisions including Fresh meat, poultry, and game, whole pieces or cuts and Frozen battered fish, fish fillets, and fish products, including mollusks, crustaceans, and echinoderms; these are examples, not blanket permission.",
     "functionalClasses": [
@@ -2597,9 +2597,14 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official definitions used to explain the additive's technological functions."
       },
       {
-        "label": "UK Food Standards Agency — Approved additives and E numbers",
-        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
-        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official FSA page applies to England, Northern Ireland and Wales, lists E171 under colours, and explicitly states that it is not permitted for food manufacture in Northern Ireland. The list must be read with the applicable legislation and is not a blanket permission."
+      },
+      {
+        "label": "UK Food Standards Agency — Great Britain food-additive authorisation register: E171",
+        "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-171",
+        "note": "The Great Britain register lists titanium dioxide as authorised in England, Scotland and Wales in Group II food colours, subject to Annex II and Annex III conditions. The entry was last updated 1 April 2025; this is distinct from the Northern Ireland prohibition."
       }
     ],
     "regulatoryGroups": [
@@ -2609,7 +2614,7 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
     "marketNotes": [
-      "The FSA page states titanium dioxide (E171) is not permitted as a food additive in Northern Ireland; do not treat the group listing as authorisation there."
+      "Jurisdiction split: the Great Britain authorisation register lists E171 as authorised in England, Scotland and Wales (last updated 1 April 2025, subject to conditions). The FSA states that it is not permitted for food manufacture in Northern Ireland from 7 February 2022. The FSA page's colour grouping must not be read as a single UK-wide permission."
     ]
   },
   "E172": {
@@ -4590,29 +4595,24 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E284": {
-    "researchStatus": "Historical preservative classification; Australian non-permission cross-checked",
+    "researchStatus": "UK FSA 2026 list inclusion and Australia–New Zealand Schedule 15 comparison cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Historically classified as a preservative, but this is not a general-purpose food additive. Food-use permission is highly jurisdiction-specific; the NSW Food Authority states that borax and boric acid are not permitted for use in food in Australia. Do not infer current authorisation from an old E-number or historical reference.",
+    "use": "Historically classified as a preservative. The UK Food Standards Agency's approved-additives page published 25 June 2026 lists E284 under preservatives for England, Northern Ireland and Wales; the page cautions that permitted food categories and quantitative limits are set by the applicable legislation. The checked Australia–New Zealand Food Standards Code Schedule 15 compilation (30 April 2026) does not list INS 284 in its permitted food-additive table. The UK grouping must not be treated as permission in Australia or New Zealand, or as unrestricted use.",
     "sources": [
       {
-        "label": "UK Food Standards Agency — Approved additives and E numbers",
-        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
-        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official FSA page applies to England, Northern Ireland and Wales and lists E284 under preservatives. It cautions that the permitted food categories and quantitative limits are governed by the applicable legislation."
       },
       {
-        "label": "Food Standards Australia New Zealand — What do food additives do?",
-        "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
-        "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+        "label": "Federal Register of Legislation — Australia New Zealand Food Standards Code, Schedule 15 (30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Official in-force Australia–New Zealand Schedule 15 compilation containing the permitted food-additive table and associated conditions. INS 284 is not listed in the schedule."
       },
       {
         "label": "NSW Food Authority — Borax and boric acid in food",
         "url": "https://www.foodauthority.nsw.gov.au/consumer/food-poisoning/borax-and-boric-acid",
-        "note": "Australian food-safety guidance: borax and boric acid are not permitted as food additives in Australia."
-      },
-      {
-        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
-        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
-        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+        "note": "The page covers borax and boric acid; it explicitly states that borax must not be used as food. The Australia–New Zealand Schedule 15 check is the direct current-code evidence used for INS 284."
       }
     ],
     "regulatoryGroups": [
@@ -4631,29 +4631,24 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E285": {
-    "researchStatus": "Historical preservative classification; Australian non-permission cross-checked",
+    "researchStatus": "UK FSA 2026 list inclusion, Australia–New Zealand Schedule 15 comparison and NSW borax restriction cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Historically classified as a preservative, but this is not a general-purpose food additive. Food-use permission is highly jurisdiction-specific; the NSW Food Authority states that borax and boric acid are not permitted for use in food in Australia. Do not infer current authorisation from an old E-number or historical reference.",
+    "use": "Historically classified as a preservative. The UK Food Standards Agency's approved-additives page published 25 June 2026 lists E285 (sodium tetraborate/borax) under preservatives for England, Northern Ireland and Wales; the page cautions that permitted food categories and quantitative limits are set by the applicable legislation. The checked Australia–New Zealand Food Standards Code Schedule 15 compilation (30 April 2026) does not list INS 285; the NSW Food Authority also states that borax is not permitted for use as food or a food ingredient in NSW. The UK grouping must not be treated as permission in Australia or New Zealand, or as unrestricted use.",
     "sources": [
       {
-        "label": "UK Food Standards Agency — Approved additives and E numbers",
-        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
-        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official FSA page applies to England, Northern Ireland and Wales and lists E285 under preservatives. It cautions that the permitted food categories and quantitative limits are governed by the applicable legislation."
       },
       {
-        "label": "Food Standards Australia New Zealand — What do food additives do?",
-        "url": "https://www.foodstandards.gov.au/consumer/additives/additiveinfo",
-        "note": "Primary regulator explanation of the technological function classes named in the purpose description; it provides class definitions, not an individual approval for this E-number."
+        "label": "Federal Register of Legislation — Australia New Zealand Food Standards Code, Schedule 15 (30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Official in-force Australia–New Zealand Schedule 15 compilation containing the permitted food-additive table and associated conditions. INS 285 is not listed in the schedule."
       },
       {
         "label": "NSW Food Authority — Borax and boric acid in food",
         "url": "https://www.foodauthority.nsw.gov.au/consumer/food-poisoning/borax-and-boric-acid",
-        "note": "Australian food-safety guidance: borax and boric acid are not permitted as food additives in Australia."
-      },
-      {
-        "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
-        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
-        "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+        "note": "NSW Food Authority states that the Food Standards Code does not permit borax in foods and that sale or use of borax as a food or food ingredient is not permitted in NSW."
       }
     ],
     "regulatoryGroups": [
@@ -15451,23 +15446,29 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E960d": {
-    "researchStatus": "Source-backed use",
+    "researchStatus": "EU amendment and Northern Ireland-only application cross-checked against current FSA guidance",
     "researchedAt": "2026-11-25",
-    "use": "High-intensity sweetener in the steviol-glycoside group. European Union rules cover steviol glycosides E960a–E960d under specified food categories and maximum levels; this is not unrestricted use, and permissions differ by jurisdiction.",
+    "use": "High-intensity sweetener in the steviol-glycoside group. Commission Regulation (EU) No 2023/447 added E960d to the EU food-additive framework. The UK Food Standards Agency states that this authorisation applies in Northern Ireland but not Great Britain. Permitted food categories and maximum levels remain jurisdiction-specific; this is not unrestricted use.",
     "sources": [
-      {
-        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
-      },
       {
         "label": "European Commission — Commission Regulation (EU) 2025/652",
         "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500652",
         "note": "EU regulation places E960a–E960d steviol glycosides in a combined food-category and maximum-level framework."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "The FSA identifies E960d as an additional steviol glycoside authorised under Commission Regulation (EU) No 2023/447 and explicitly states that the change applies in Northern Ireland but not Great Britain."
       }
     ],
     "functionalClasses": [
       "Sweetener"
+    ],
+    "regulatoryGroups": [
+      "sweeteners"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "Northern Ireland (Commission Regulation (EU) No 2023/447; not Great Britain)"
     ]
   },
   "E961": {
