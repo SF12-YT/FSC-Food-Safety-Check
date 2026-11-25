@@ -8300,7 +8300,7 @@ window.FOSCH_RESEARCH_DATA={
   "E440": {
     "researchStatus": "Codex GSFA functional classes and category-specific provisions cross-checked; subtype descriptions consolidated under E440",
     "researchedAt": "2026-11-25",
-    "use": "Pectins (E440), including non-amidated and amidated forms (often distinguished as E440a and E440b), are used as gelling, thickening, stabilising and emulsifying agents. They help form gels and control texture in products such as jams, jellies, fruit preparations and dairy foods. Codex GSFA groups amidated and non-amidated pectins under INS 440 and lists food-category-specific provisions and limits; this is not blanket permission for every food.",
+    "use": "Pectins (E440), including non-amidated and amidated forms (often distinguished as E440a and E440b), are used as gelling, thickening, stabilising and emulsifying agents. They help form gels and control texture in products such as jams, jellies, fruit preparations and dairy foods. Codex GSFA groups amidated and non-amidated pectins under INS 440 and lists category-specific provisions and limits. Australia–New Zealand Schedule 15 is much narrower: it lists pectins in specified infant and special-purpose food categories with conditions and maximum levels; the category 13.1 infant-formula entry is limited to follow-on formula products. General technological uses do not imply permission in every food.",
     "tox": "JECFA lists ADI 'not specified' in its current entry, but its infant-formula history contains a use-level-specific concern: a 2014 assessment considered use up to 0.5% in infant formula of concern, while a later 2016 assessment considered a lower proposed level of 0.2% not of concern. Those findings are formulation- and population-specific.",
     "intake": "JECFA: ADI 'not specified'; infant-formula evaluations have different conclusions at 0.2% and 0.5% proposed use levels. Do not generalize this to unrestricted use or all populations.",
     "sources": [
@@ -8328,6 +8328,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FSANZ — Australia New Zealand Food Standards Code, Schedule 15 (current 30 April 2026 compilation)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Official Schedule 15 table lists pectins (INS 440) in specified infant and special-purpose food categories with category-specific maximum levels and conditions; the category 13.1 infant-formula entry is restricted to follow-on formula products."
       }
     ],
     "functionalClasses": [
@@ -8348,6 +8353,7 @@ window.FOSCH_RESEARCH_DATA={
       "texture"
     ],
     "regulatoryGroupJurisdictions": [
+      "Australia and New Zealand (Schedule 15, specified infant/special-purpose food categories)",
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
@@ -15705,6 +15711,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — Regulation (EU) No 1129/2011",
         "url": "https://www.legislation.gov.uk/eur/2011/1129/adopted/data.xht",
         "note": "Official amendment authorising E1205 as a glazing/coating agent for solid food supplements, subject to the Annex II conditions."
+      },
+      {
+        "label": "UK Food Standards Agency — Great Britain food-additive authorisation: E1205",
+        "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-1205",
+        "note": "Official GB register lists basic methacrylate copolymer as authorised and links to the applicable conditions of use."
       }
     ],
     "regulatoryGroups": [
@@ -15732,6 +15743,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — Regulation (EU) No 816/2013",
         "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0816",
         "note": "Official regulation describes the intended sustained-release glazing use in solid food supplements and authorises E1206 subject to the specified conditions."
+      },
+      {
+        "label": "UK Food Standards Agency — Great Britain food-additive authorisation: E1206",
+        "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-1206",
+        "note": "Official GB register lists neutral methacrylate copolymer as authorised and links to the applicable conditions of use."
       }
     ],
     "regulatoryGroups": [
@@ -15759,6 +15775,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — Regulation (EU) No 816/2013",
         "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0816",
         "note": "Official regulation describes the intended protective glazing use in solid food supplements and authorises E1207 subject to the specified conditions."
+      },
+      {
+        "label": "UK Food Standards Agency — Great Britain food-additive authorisation: E1207",
+        "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-1207",
+        "note": "Official GB register lists anionic methacrylate copolymer as authorised and links to the applicable conditions of use."
       }
     ],
     "regulatoryGroups": [
@@ -15797,7 +15818,7 @@ window.FOSCH_RESEARCH_DATA={
   "E1209": {
     "researchStatus": "JECFA specification and EU/GB use scope cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Polyvinyl alcohol–polyethylene glycol graft copolymer is used as an aqueous film-coating/glazing agent, stabiliser and binder for tablets in the preparation and formulation of food supplements. JECFA describes this use under GMP and with compliance to its specifications; it is not a general-purpose food use.",
+    "use": "Polyvinyl alcohol–polyethylene glycol graft copolymer is used as an aqueous film-coating/glazing agent, stabiliser and binder for tablets in the preparation and formulation of food supplements. JECFA describes these specified functions under GMP and subject to its specifications. EU Regulation (EU) No 685/2014 permits it in solid food supplements, including capsules, tablets and similar forms but excluding chewable forms, with a maximum level of 100,000 mg/kg. It is not a general-purpose food use.",
     "functionalClasses": [
       "Glazing agent",
       "Stabilizer",
@@ -15813,6 +15834,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — Regulation (EU) No 685/2014",
         "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0685",
         "note": "Official amendment introducing the E1209 specification and conditions for its use in food supplements."
+      },
+      {
+        "label": "UK Food Standards Agency — Great Britain food-additive authorisation: E1209",
+        "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-1209",
+        "note": "Official GB register lists PVA–PEG graft copolymer as authorised and links to the applicable conditions of use."
       }
     ],
     "regulatoryGroups": [
