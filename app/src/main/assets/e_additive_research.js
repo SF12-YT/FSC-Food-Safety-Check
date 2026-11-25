@@ -272,6 +272,19 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E107": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Yellow food colour. Very soluble in water. Product(s): Mayonnaise This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e107.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E110": {
     "researchStatus": "Cross-checked against Codex GSFA",
     "researchedAt": "2026-11-25",
@@ -639,6 +652,19 @@ window.FOSCH_RESEARCH_DATA={
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
+  },
+  "E128": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Red food colour. Very soluble in water. Examples include Restricted use in confectionery and meat products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e128.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E129": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -1329,6 +1355,19 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E160b": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Food colour whose colour ranges from red to brown depending on the solvent used for extraction. Examples include Many different products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e160b.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E160B": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-27",
@@ -1672,6 +1711,19 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E161a": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Yellow food colour. Slightly soluble in water. Examples include Rarely used. If used only in confectionary. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e161a.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E161b": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
@@ -1746,6 +1798,19 @@ window.FOSCH_RESEARCH_DATA={
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
+  },
+  "E161f": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Yellow food colour. Slightly soluble in water. Examples include Rarely used. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e161f.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E161g": {
     "researchStatus": "Codex GSFA verified",
@@ -2173,6 +2238,19 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E201": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Sorbic acid is a preservative, mainly against fungi and yeasts. It is not effective against bacteria. Optimal activity is at pH values below 6.5 (acid and slightly acid foods). Sodium sorbate is often used, as it is better soluble; its activity is similar to that of sorbic acid. Examples include Sodium sorbate is used in the same range of products as sorbic acid, for example, yoghurt and other fermented dairy products, fruit salads, confectionery, lemonade, cheese, rye bread, cakes and bakery products, pizza, shellfish, lemon juice, wine, cider and soups. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e201.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E202": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-30",
@@ -2202,6 +2280,19 @@ window.FOSCH_RESEARCH_DATA={
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
+  },
+  "E203": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Sorbic acid is a preservative, mainly against fungi and yeasts. It is not effective against bacteria. Optimal activity is at pH values below 6.5 (acid and slightly acid foods). Calcium sorbate is used mainly in dairy products; its activity is similar to that of sorbic acid. Examples include Calcium sorbate is used mainly in dairy products and rye bread. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e203.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E210": {
     "researchStatus": "Source-backed summary",
@@ -2324,6 +2415,32 @@ window.FOSCH_RESEARCH_DATA={
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
+  },
+  "E216": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Benzoic acid and benzoates are used as preservatives against both yeasts and fungi. They are not very effective against bacteria. Activity does not depend on acidity. Benzoic acid esters are poorly soluble, which limits application. Examples include Benzoic acid esters are used in a wide range of food products and cosmetics. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e216.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E217": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Benzoic acid and benzoates are used as preservatives against both yeasts and fungi. They are not very effective against bacteria. Activity does not depend on acidity. Benzoic acid esters are poorly soluble, which limits application. Examples include Benzoic acid esters are used in a wide range of food products and cosmetics. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e217.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E218": {
     "researchStatus": "UK FSA grouped-use source",
@@ -2478,6 +2595,19 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E225": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "It is a white non-stable powder, which reacts with oxygen to potassium sulphate. In acidic conditions it forms sulphurous acid, which acts as a preservative. It is used as a preservative and may be used as a bleaching agent in sugar production. It is used for the production of sulphite-caramel ( E150d). Examples include Up to 0.7 mg/kg body weight. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e225.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E226": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -2552,6 +2682,45 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
+  },
+  "E231": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "White, water-insoluble powder used particularly against _Penicillium_ fungi growing on citrus fruits, apples and pears. It slowly penetrates the peel and may be present in the fruit itself. Examples include Citrus fruits, apples, pears. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e231.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E232": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "White powder used especially against _Penicillium_ fungi growing on citrus fruits, apples and pears. It is very soluble in water, and used for spraying or dipping fruits. It slowly penetrates the skin and may be present in the fruit itself. Examples include C itrus fruits, apples, pears. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e232.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E233": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "A widely used fungicide, particularly on fruits. It is mainly sprayed on fruits; it could also be a component of an aqueous solution, in which fruits are submerged. It may only be used on the outer surface of fruits. Examples include Fruits This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e233.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E234": {
     "researchStatus": "Codex GSFA subtype verified",
@@ -2646,6 +2815,32 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E236": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative against many micro-organisms. Due to its smell, use is very limited. Examples include Beverages, sweets, bakery products, icecream This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e236.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E238": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative against microorganisms. Examples include Fruit juices, non-alcoholic drinks, preserved vegetables, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e238.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E239": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -2679,6 +2874,19 @@ window.FOSCH_RESEARCH_DATA={
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
+  },
+  "E240": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Formaldehyde is a gas used as a preservative against bacteria. It is not used in foods, but used to disinfect containers, pipes and vessels in the food industry. It is widely used in cosmetics. Examples include None (only cosmetics). This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e240.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E242": {
     "researchStatus": "Codex GSFA verified",
@@ -3551,6 +3759,32 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E311": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Anti-oxidant in fatty products, especially added to prevent rancidity. Examples include Oils and fats, margarine, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e311.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E313": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Anti-oxidant in fatty products, especially added to prevent rancidity. Examples include Oils and fats, (cosmetics). This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e313.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E314": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -4280,6 +4514,97 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E334": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Acidity regulator and taste enhancer of fruits and fruity flavours, as well as stabiliser of colour in fruits and fruit products. Examples include Many products, mainly confectionery, soft drinks, wine, and marmalade. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e334.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E335": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Sodium tartarate is an acidity regulator and anti-oxidant. Examples include Many products, mainly confectionery, marmalade and sausages. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e335.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E336": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Potassium tartarate is an acidity regulator and anti-oxidant. Also used in producing baking powder and as emulsifier. Examples include Many products, mainly confectionery and bakery products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e336.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E338": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Acidity regulator and chelating agent (used to bind metal ions). Several other very specific functions are: it increases the permeability of salt in meats and acts as an anti-oxidant. Examples include Many products, mainly cola, meat and cheese products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e338.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E339": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Sodium phosphate is an acidity regulator and chelating agent (used to bind metal ions). It prevents desiccation and is used as an acid stabiliser in powders as well as to prevent formation of clumps. It increases the activity of antioxidants. Examples include Many different products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e339.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E340": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Potassium phosphate is an acidity regulator and chelating agent (used to bind metal ions). It prevents desiccation and is used as an acid stabiliser in powders as well as to prevent formation of clumps. It increases the activity of antioxidants. Examples include Many different products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e340.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E343": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Magnesium phosphate is used as an emulsifier; it also increases the activity of antioxidants. It prevents clumping in powders. Also used as a magnesium salt in functional foods and food supplements. Examples include Few bakery products, food supplements. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e343.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E350": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
@@ -4349,6 +4674,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official definitions of the functional classes used above."
       }
     ]
+  },
+  "E351": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Potassium malate is used as a buffer and flavouring. Examples include Ice cream, fried products, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e351.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E352": {
     "researchStatus": "Codex GSFA subtype verified",
@@ -4420,6 +4758,19 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E354": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Acidity regulator and preservative. Examples include Fish and fruit preserves, seaweed products, pharmaceuticals, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e354.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E355": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -4444,6 +4795,45 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
+  },
+  "E356": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Acidity regulator. Examples include Herbal salts This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e356.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E357": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Acidity regulator. Examples include H erbal salts for low-sodium products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e357.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E363": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Acidity regulator and flavour enhancer. Examples include Confectionery, bakery products, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e363.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E365": {
     "researchStatus": "Codex GSFA verified",
@@ -4471,6 +4861,32 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
+  },
+  "E370": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Acidity regulator and flavouring. Examples include Coconut-, nut- and vanilla flavour. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e370.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E375": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Anti-oxidant and colour stabiliser. Examples include B read, cereals, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e375.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E380": {
     "researchStatus": "Codex GSFA verified",
@@ -4550,6 +4966,45 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
+  },
+  "E385": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Metal scavenger, stabiliser (also used after heavy metal intoxication to remove metals from the body). Examples include Many different products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e385.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E386": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Metal scavenger, stabiliser (also used after heavy metal intoxication to remove metals from the body). Examples include Many different products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e386.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E388": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Anti-oxidant. Examples include Oils and fats, but used mainly in cosmetics. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e388.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E392": {
     "researchStatus": "Codex GSFA verified",
@@ -5038,6 +5493,19 @@ window.FOSCH_RESEARCH_DATA={
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
+  },
+  "E408": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Thickening agent, stabiliser and emulsifier. Examples include Products for diabetics. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e408.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E410": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -5771,6 +6239,19 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E431": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Emulsifier. Examples include Bakery products, puddings, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e431.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E432": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -6066,6 +6547,19 @@ window.FOSCH_RESEARCH_DATA={
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
+  },
+  "E450": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Buffers and emulsifiers. E450 (iii) also binds metals and prevents discoloration due to metals. E450 (vi) is also used as bread enhancer and calcium supplement. Examples include Many different products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e450.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E459": {
     "researchStatus": "Codex GSFA verified",
@@ -6992,6 +7486,19 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E478": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Emulsifiers and stabilisers. Examples include Bakery products This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e478.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E479b": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -7916,6 +8423,19 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E521": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "It strengthens the structure of vegetables during processing. It is used as acidity regulator and bleaching agent in flour. Examples include Flour, cheese, confectionary This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e521.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E523": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -8140,6 +8660,19 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E541": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "The acid form is used in baking powder for slow baking processes at low temperature; the alkaline form is used as an emulsifier in processed cheese. Examples include bakery products, processed cheese This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e541.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E551": {
     "researchStatus": "Cross-checked against Codex GSFA",
     "researchedAt": "2026-11-25",
@@ -8235,6 +8768,19 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E555": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Used as anti-caking agent. Examples include Dry products, but hardly used. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e555.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E556": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -8256,6 +8802,19 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E558": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Used as anti-caking agent and emulsifier. Also used as clarifying agent in fruit juice preparations. Examples include Fruit juices, aromas. Main use, however, is in cosmetics. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e558.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E559": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -8276,6 +8835,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
+  },
+  "E570": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Used as anti-caking agent and plasticizer in chewing gum. Also used in flavours. Examples include Chewing gum, butter aroma/flavour, bakery products. Also used in cosmetics and pharmaceutical preparations. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e570.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E575": {
     "researchStatus": "Codex GSFA verified",
@@ -9200,6 +9772,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
+  },
+  "E915": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Stabiliser, used as a flavour and in chewing gum. Examples include Chewing gum. Citrus flavours. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e915.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E925": {
     "researchStatus": "Codex GSFA verified",
