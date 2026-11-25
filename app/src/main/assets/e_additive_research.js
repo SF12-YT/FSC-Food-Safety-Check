@@ -2828,6 +2828,19 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
+  "E237": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Used as a preservative against microorganisms. Examples include Fruit juices, non-alcoholic drinks, preserved vegetables, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e237.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E238": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
     "researchedAt": "2026-11-25",
@@ -3772,6 +3785,19 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
+  "E312": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Anti-oxidant in fatty products, especially added to prevent rancidity. Examples include Oils and fats, margarine, soups, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e312.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E313": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
     "researchedAt": "2026-11-25",
@@ -4553,6 +4579,19 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
+  "E337": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Acidity regulator and anti-oxidant. Also used as a stabiliser and emulsifier. Examples include Many products, mainly meat and cheese products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e337.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
   "E338": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
     "researchedAt": "2026-11-25",
@@ -4587,6 +4626,19 @@ window.FOSCH_RESEARCH_DATA={
       {
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e340.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E341": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Calcium phosphate is an acidity regulator, used in baking powder and acts as a bread enhancer. It also binds metal ions, increases the activity of antioxidants and stabilises the texture of canned vegetables. E341 (ii) is used as polishing material in toothpaste. E341 (iii) is mainly used in powders to avoid formation of clumps. Examples include Many different products, mainly bakery products. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e341.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
       }
     ],
@@ -4988,6 +5040,19 @@ window.FOSCH_RESEARCH_DATA={
       {
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e386.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E387": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Metal scavenger and stabiliser (to prevent crystallisation in fats and oils). Examples include Oils and fats, sugar, yeast products, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e387.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
       }
     ],
@@ -9702,6 +9767,19 @@ window.FOSCH_RESEARCH_DATA={
         "note": "Official definitions used to explain the additive's technological functions."
       }
     ]
+  },
+  "E905": {
+    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchedAt": "2026-11-25",
+    "use": "Coating, lubricant, solvent, anti-foaming agent and in chewing gum. Examples include Many different products, also in pharmaceutical and cosmetic preparations. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "sources": [
+      {
+        "label": "Food-Info.net — individual E-number profile",
+        "url": "https://www.food-info.net/uk/e/e905.htm",
+        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      }
+    ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
   "E905c": {
     "researchStatus": "Codex GSFA subtype verified",
