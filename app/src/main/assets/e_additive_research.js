@@ -1849,7 +1849,7 @@ window.FOSCH_RESEARCH_DATA={
   "E160c": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Paprika extract (160c(ii)) (160c(ii)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Paprika extract (160c(ii)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Batters (e.g. for breading or batters for fish or poultry); these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Colour"
     ],
@@ -2100,7 +2100,7 @@ window.FOSCH_RESEARCH_DATA={
   "E161b": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Lutein esters from Tagetes erecta (161b(iii)) (161b(iii)), Lutein from Tagetes erecta (161b(i)) (161b(i)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Flavoured fluid milk drinks and Condensed milk and analogues (plain); these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Lutein esters from Tagetes erecta (161b(iii)), Lutein from Tagetes erecta (161b(i)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Flavoured fluid milk drinks and Condensed milk and analogues (plain); these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Colour"
     ],
@@ -2282,7 +2282,7 @@ window.FOSCH_RESEARCH_DATA={
   "E161h": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Zeaxanthin, synthetic (161h(i)) (161h(i)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Zeaxanthin, synthetic (161h(i)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Colour"
     ],
@@ -2397,7 +2397,7 @@ window.FOSCH_RESEARCH_DATA={
   "E163": {
     "researchStatus": "Cross-checked against Codex GSFA subtype records",
     "researchedAt": "2026-11-25",
-    "use": "Red, purple or blue plant pigments used as colors; actual hue changes with pH, matrix and processing. Codex GSFA subtype records include Grape skin extract (163(ii)) (163(ii)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Bread-type products, including bread stuffing and bread crumbs; these are category-specific provisions, not blanket permission.",
+    "use": "Red, purple or blue plant pigments used as colors; actual hue changes with pH, matrix and processing. Codex GSFA subtype records include Grape skin extract (163(ii)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Bread-type products, including bread stuffing and bread crumbs; these are category-specific provisions, not blanket permission.",
     "tox": "The JECFA entry for the broad anthocyanins group lists no ADI allocated and its old specification was withdrawn. Specific anthocyanin preparations may have different source-specific records. FOSCH does not assign a generic numeric intake limit to all anthocyanins.",
     "intake": "No ADI allocated in the cited JECFA group entry. This is not the same as “ADI not specified”; check the exact preparation and national authorization before describing its safety limit.",
     "sources": [
@@ -3720,7 +3720,7 @@ window.FOSCH_RESEARCH_DATA={
   "E234": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Nisin A (234(i)) (234(i)). The documented functions include preservative (slows microbial deterioration). Examples of Codex food-category provisions include Cereal and starch based desserts (e.g. rice pudding, tapioca pudding) and Cheese analogues; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Nisin A (234(i)). The documented functions include preservative (slows microbial deterioration). Examples of Codex food-category provisions include Cereal and starch based desserts (e.g. rice pudding, tapioca pudding) and Cheese analogues; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Preservative"
     ],
@@ -4198,7 +4198,7 @@ window.FOSCH_RESEARCH_DATA={
   "E261": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Potassium acetate (261(i)) (261(i)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); preservative (slows microbial deterioration). Examples of Codex food-category provisions include Complementary foods for infants and young children and Fermented milks (plain), heat-treated after fermentation; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Potassium acetate (261(i)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); preservative (slows microbial deterioration). Examples of Codex food-category provisions include Complementary foods for infants and young children and Fermented milks (plain), heat-treated after fermentation; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Acidity regulator",
       "Preservative"
@@ -4244,7 +4244,7 @@ window.FOSCH_RESEARCH_DATA={
   "E262": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Sodium acetate (262(i)) (262(i)), Sodium diacetate (262(ii)) (262(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); preservative (slows microbial deterioration); sequestrant (controls the availability of certain metal ions). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Sodium acetate (262(i)), Sodium diacetate (262(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); preservative (slows microbial deterioration); sequestrant (controls the availability of certain metal ions). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Acidity regulator",
       "Preservative",
@@ -5431,7 +5431,7 @@ window.FOSCH_RESEARCH_DATA={
   "E322": {
     "researchStatus": "Cross-checked against Codex GSFA subtype records",
     "researchedAt": "2026-11-25",
-    "use": "Emulsifier that helps oil and water mix; commercial lecithin may come from soy, sunflower, eggs or other sources. Codex GSFA subtype records include Lecithin (322(i)) (322(i)), Lecithin, partially hydrolysed (322(ii)) (322(ii)). The documented functions include antioxidant (slows oxidation that can deteriorate food and shorten shelf life); emulsifier (helps maintain a uniform mixture of phases); flour treatment agent (improves flour or dough baking properties). Examples of Codex food-category provisions include Butter oil, anhydrous milkfat, ghee and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are category-specific provisions, not blanket permission.",
+    "use": "Emulsifier that helps oil and water mix; commercial lecithin may come from soy, sunflower, eggs or other sources. Codex GSFA subtype records include Lecithin (322(i)), Lecithin, partially hydrolysed (322(ii)). The documented functions include antioxidant (slows oxidation that can deteriorate food and shorten shelf life); emulsifier (helps maintain a uniform mixture of phases); flour treatment agent (improves flour or dough baking properties). Examples of Codex food-category provisions include Butter oil, anhydrous milkfat, ghee and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are category-specific provisions, not blanket permission.",
     "tox": "EFSA’s 2017 re-evaluation concluded that a numerical ADI was not necessary and found no safety concern at refined exposure estimates for reported uses in the assessed general population over one year of age, infants from 12 weeks to 11 months, and infants/young children consuming foods for special medical purposes. The panel also found no safety concern for choline exposure arising from lecithin at the reported uses. EFSA recommended revising EU limits for lead, mercury and arsenic impurities and introducing a cadmium limit. Commercial lecithins vary by source (including soy and egg), and residual source proteins—not the lecithin name alone—are relevant to source-specific hypersensitivity.",
     "intake": "EFSA (2017): no numerical ADI considered necessary for lecithins (E322) under the assessed conditions and reported uses. EFSA found no safety concern at its refined exposure estimates for the assessed population groups, including infants from 12 weeks of age. ‘No numerical ADI necessary’ does not mean unlimited use or override food-category permissions, specifications or source-specific allergen labelling. The evaluation does not establish a separate individual safe dose for people with soy or egg allergy.",
     "sources": [
@@ -5765,7 +5765,7 @@ window.FOSCH_RESEARCH_DATA={
   "E331": {
     "researchStatus": "Cross-checked against Codex GSFA subtype records",
     "researchedAt": "2026-11-25",
-    "use": "Acidity regulator, sequestrant and stabilizer; sodium citrate salts help control acidity and can support texture in processed foods. Codex GSFA subtype records include Sodium dihydrogen citrate (331(i)) (331(i)), Trisodium citrate (331(iii)) (331(iii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); emulsifier (helps maintain a uniform mixture of phases); emulsifying salt (helps prevent fat separation in processed cheese-style foods); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Butter oil, anhydrous milkfat, ghee and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are category-specific provisions, not blanket permission.",
+    "use": "Acidity regulator, sequestrant and stabilizer; sodium citrate salts help control acidity and can support texture in processed foods. Codex GSFA subtype records include Sodium dihydrogen citrate (331(i)), Trisodium citrate (331(iii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); emulsifier (helps maintain a uniform mixture of phases); emulsifying salt (helps prevent fat separation in processed cheese-style foods); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Butter oil, anhydrous milkfat, ghee and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are category-specific provisions, not blanket permission.",
     "tox": "JECFA’s evaluation of sodium citrate records “ADI not limited / not specified” within the citric-acid-and-salts group. Older JECFA terminology should not be interpreted as permission for arbitrary concentrations or as medical advice for people who must monitor sodium.",
     "intake": "JECFA: sodium citrate included in the citric acid and salts group, ADI “not limited” (1973 evaluation). No personalized limit is calculated; check local use levels and dietary sodium context.",
     "sources": [
@@ -5853,7 +5853,7 @@ window.FOSCH_RESEARCH_DATA={
   "E332": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Potassium dihydrogen citrate (332(i)) (332(i)), Tripotassium citrate (332(ii)) (332(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); antioxidant (slows oxidation that can deteriorate food and shorten shelf life); emulsifying salt (helps prevent fat separation in processed cheese-style foods); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Potassium dihydrogen citrate (332(i)), Tripotassium citrate (332(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); antioxidant (slows oxidation that can deteriorate food and shorten shelf life); emulsifying salt (helps prevent fat separation in processed cheese-style foods); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Acidity regulator",
       "Antioxidant",
@@ -5929,7 +5929,7 @@ window.FOSCH_RESEARCH_DATA={
   "E333": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Tricalcium citrate (333(iii)) (333(iii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); antioxidant (slows oxidation that can deteriorate food and shorten shelf life); emulsifying salt (helps prevent fat separation in processed cheese-style foods); firming agent (a technological function defined by Codex); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Butter oil, anhydrous milkfat, ghee and Complementary foods for infants and young children; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Tricalcium citrate (333(iii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); antioxidant (slows oxidation that can deteriorate food and shorten shelf life); emulsifying salt (helps prevent fat separation in processed cheese-style foods); firming agent (a technological function defined by Codex); sequestrant (controls the availability of certain metal ions); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Butter oil, anhydrous milkfat, ghee and Complementary foods for infants and young children; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Acidity regulator",
       "Antioxidant",
@@ -6351,7 +6351,7 @@ window.FOSCH_RESEARCH_DATA={
   "E350": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Sodium DL-malate (350(ii)) (350(ii)), Sodium hydrogen DL-malate (350(i)) (350(i)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); humectant (helps retain moisture). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Sodium DL-malate (350(ii)), Sodium hydrogen DL-malate (350(i)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); humectant (helps retain moisture). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Acidity regulator",
       "Humectant"
@@ -6439,7 +6439,7 @@ window.FOSCH_RESEARCH_DATA={
   "E352": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Calcium malate, D, L- (352(ii)) (352(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity). Examples of Codex food-category provisions include Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Calcium malate, D, L- (352(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity). Examples of Codex food-category provisions include Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Acidity regulator"
     ],
@@ -8889,7 +8889,7 @@ window.FOSCH_RESEARCH_DATA={
   "E445": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Glycerol ester of wood rosin (445(iii)) (445(iii)). The documented functions include emulsifier (helps maintain a uniform mixture of phases); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Surface-treated fresh fruit and Surface-treated fresh vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), seaweeds, and nuts and seeds; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Glycerol ester of wood rosin (445(iii)). The documented functions include emulsifier (helps maintain a uniform mixture of phases); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Surface-treated fresh fruit and Surface-treated fresh vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), seaweeds, and nuts and seeds; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Emulsifier",
       "Stabilizer"
@@ -9077,7 +9077,7 @@ window.FOSCH_RESEARCH_DATA={
   "E460": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Microcrystalline cellulose (Cellulose gel) (460(i)) (460(i)), Powdered cellulose (460(ii)) (460(ii)). The documented functions include anticaking agent (reduces clumping by limiting particles sticking together); bulking agent (a technological function defined by Codex); carrier (a technological function defined by Codex); emulsifier (helps maintain a uniform mixture of phases); foaming agent (a technological function defined by Codex); glazing agent (gives a surface a shiny appearance or protective coating); humectant (helps retain moisture); stabilizer (helps keep ingredients uniformly dispersed); thickener (increases viscosity for a thicker texture). Examples of Codex food-category provisions include Brown sugar excluding products of food category 11.1.3 and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Microcrystalline cellulose (Cellulose gel) (460(i)), Powdered cellulose (460(ii)). The documented functions include anticaking agent (reduces clumping by limiting particles sticking together); bulking agent (a technological function defined by Codex); carrier (a technological function defined by Codex); emulsifier (helps maintain a uniform mixture of phases); foaming agent (a technological function defined by Codex); glazing agent (gives a surface a shiny appearance or protective coating); humectant (helps retain moisture); stabilizer (helps keep ingredients uniformly dispersed); thickener (increases viscosity for a thicker texture). Examples of Codex food-category provisions include Brown sugar excluding products of food category 11.1.3 and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Anticaking agent",
       "Bulking agent",
@@ -10861,7 +10861,7 @@ window.FOSCH_RESEARCH_DATA={
   "E500": {
     "researchStatus": "Cross-checked against Codex GSFA subtype records",
     "researchedAt": "2026-11-25",
-    "use": "Sodium carbonates are acidity regulators and leavening agents; sodium bicarbonate (a related carbonate form) is commonly used in baking and pH control. Codex GSFA subtype records include Sodium carbonate (500(i)) (500(i)), Sodium hydrogen carbonate (500(ii)) (500(ii)), Sodium sesquicarbonate (500(iii)) (500(iii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); anticaking agent (reduces clumping by limiting particles sticking together); emulsifying salt (helps prevent fat separation in processed cheese-style foods); raising agent (releases gas to increase dough or batter volume); stabilizer (helps keep ingredients uniformly dispersed); thickener (increases viscosity for a thicker texture). Examples of Codex food-category provisions include Butter and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are category-specific provisions, not blanket permission.",
+    "use": "Sodium carbonates are acidity regulators and leavening agents; sodium bicarbonate (a related carbonate form) is commonly used in baking and pH control. Codex GSFA subtype records include Sodium carbonate (500(i)), Sodium hydrogen carbonate (500(ii)), Sodium sesquicarbonate (500(iii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); anticaking agent (reduces clumping by limiting particles sticking together); emulsifying salt (helps prevent fat separation in processed cheese-style foods); raising agent (releases gas to increase dough or batter volume); stabilizer (helps keep ingredients uniformly dispersed); thickener (increases viscosity for a thicker texture). Examples of Codex food-category provisions include Butter and Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa; these are category-specific provisions, not blanket permission.",
     "tox": "JECFA lists ADI “not limited” for sodium carbonate in its 1965 evaluation. The historical assessment is not advice to consume unlimited quantities, and sodium-containing ingredients may be relevant to diets that need sodium restriction.",
     "intake": "JECFA: ADI “not limited” for sodium carbonate (1965). This is not a recommended intake or personal target. Follow local food uses; consider sodium content where medically relevant.",
     "sources": [
@@ -10978,7 +10978,7 @@ window.FOSCH_RESEARCH_DATA={
   "E501": {
     "researchStatus": "Cross-checked against Codex GSFA subtype records",
     "researchedAt": "2026-11-25",
-    "use": "Potassium carbonates are acidity regulators and may be used in leavening or pH adjustment in specified foods. Codex GSFA subtype records include Potassium carbonate (501(i)) (501(i)), Potassium hydrogen carbonate (501(ii)) (501(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); raising agent (releases gas to increase dough or batter volume); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are category-specific provisions, not blanket permission.",
+    "use": "Potassium carbonates are acidity regulators and may be used in leavening or pH adjustment in specified foods. Codex GSFA subtype records include Potassium carbonate (501(i)), Potassium hydrogen carbonate (501(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); raising agent (releases gas to increase dough or batter volume); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are category-specific provisions, not blanket permission.",
     "tox": "JECFA lists ADI “not limited” for potassium carbonate in a historical 1965 evaluation. This does not mean unlimited intake, nor does it address a person’s medical need to limit potassium; use level and overall diet matter.",
     "intake": "JECFA: ADI “not limited” for potassium carbonate (1965). This is not a personal intake target; consult local permitted-use rules and medical dietary advice when potassium restriction applies.",
     "sources": [
@@ -11062,7 +11062,7 @@ window.FOSCH_RESEARCH_DATA={
   "E503": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Ammonium carbonate (503(i)) (503(i)), Ammonium hydrogen carbonate (503(ii)) (503(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); raising agent (releases gas to increase dough or batter volume). Examples of Codex food-category provisions include Complementary foods for infants and young children and Fermented milks (plain), heat-treated after fermentation; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Ammonium carbonate (503(i)), Ammonium hydrogen carbonate (503(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); raising agent (releases gas to increase dough or batter volume). Examples of Codex food-category provisions include Complementary foods for infants and young children and Fermented milks (plain), heat-treated after fermentation; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Acidity regulator",
       "Raising agent"
@@ -11129,7 +11129,7 @@ window.FOSCH_RESEARCH_DATA={
   "E504": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Magnesium carbonate (504(i)) (504(i)), Magnesium hydroxide carbonate (504(ii)) (504(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); anticaking agent (reduces clumping by limiting particles sticking together); carrier (a technological function defined by Codex); colour retention agent (helps retain or stabilise colour); flour treatment agent (improves flour or dough baking properties). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Magnesium carbonate (504(i)), Magnesium hydroxide carbonate (504(ii)). The documented functions include acidity regulator (adjusts food acidity or alkalinity); anticaking agent (reduces clumping by limiting particles sticking together); carrier (a technological function defined by Codex); colour retention agent (helps retain or stabilise colour); flour treatment agent (improves flour or dough baking properties). Examples of Codex food-category provisions include Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Cooked and/or fried fish and fish products, including mollusks, crustaceans, and echinoderms; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Acidity regulator",
       "Anticaking agent",
@@ -11409,7 +11409,7 @@ window.FOSCH_RESEARCH_DATA={
   "E514": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Sodium hydrogen sulfate (514(ii)) (514(ii)), Sodium sulfate (514(i)) (514(i)). The documented functions include acidity regulator (adjusts food acidity or alkalinity). Examples of Codex food-category provisions include Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Sodium hydrogen sulfate (514(ii)), Sodium sulfate (514(i)). The documented functions include acidity regulator (adjusts food acidity or alkalinity). Examples of Codex food-category provisions include Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Acidity regulator"
     ],
@@ -11473,7 +11473,7 @@ window.FOSCH_RESEARCH_DATA={
   "E515": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Potassium sulfate (515(i)) (515(i)). The documented functions include acidity regulator (adjusts food acidity or alkalinity). Examples of Codex food-category provisions include Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Potassium sulfate (515(i)). The documented functions include acidity regulator (adjusts food acidity or alkalinity). Examples of Codex food-category provisions include Fermented milks (plain), heat-treated after fermentation and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Acidity regulator"
     ],
@@ -13955,7 +13955,7 @@ window.FOSCH_RESEARCH_DATA={
   "E905c": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Microcrystalline wax (905c(i)) (905c(i)). The documented functions include antifoaming agent (a technological function defined by Codex); glazing agent (gives a surface a shiny appearance or protective coating). Examples of Codex food-category provisions include Chewing gum and Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Microcrystalline wax (905c(i)). The documented functions include antifoaming agent (a technological function defined by Codex); glazing agent (gives a surface a shiny appearance or protective coating). Examples of Codex food-category provisions include Chewing gum and Confectionery including hard and soft candy, nougats, etc. other than food categories 05.1, 05.3 and 05.4; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Antifoaming agent",
       "Glazing agent"
@@ -15920,7 +15920,7 @@ window.FOSCH_RESEARCH_DATA={
   "E1100": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include alpha-Amylase from Aspergillus oryzae var. (1100(i)) (1100(i)), alpha-Amylase from Bacillus megaterium expressed in Bacillus subtilis (1100(iv)) (1100(iv)), alpha-Amylase from Bacillus stearothermophilus (1100(ii)) (1100(ii)) and 3 further form(s). The documented functions include flour treatment agent (improves flour or dough baking properties). Examples of Codex food-category provisions include Flours and starches (including soybean powder) and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include alpha-Amylase from Aspergillus oryzae var. (1100(i)), alpha-Amylase from Bacillus megaterium expressed in Bacillus subtilis (1100(iv)), alpha-Amylase from Bacillus stearothermophilus (1100(ii)) and 3 further form(s). The documented functions include flour treatment agent (improves flour or dough baking properties). Examples of Codex food-category provisions include Flours and starches (including soybean powder) and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Flour treatment agent"
     ],
@@ -16065,7 +16065,7 @@ window.FOSCH_RESEARCH_DATA={
   "E1101": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
-    "use": "Codex GSFA subtype records include Bromelain (1101(iii)) (1101(iii)), Papain (1101(ii)) (1101(ii)), Protease from Aspergillus orizae var. (1101(i)) (1101(i)). The documented functions include flavour enhancer (enhances existing taste or aroma); flour treatment agent (improves flour or dough baking properties); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Fresh meat, poultry, and game, whole pieces or cuts and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
+    "use": "Codex GSFA subtype records include Bromelain (1101(iii)), Papain (1101(ii)), Protease from Aspergillus orizae var. (1101(i)). The documented functions include flavour enhancer (enhances existing taste or aroma); flour treatment agent (improves flour or dough baking properties); stabilizer (helps keep ingredients uniformly dispersed). Examples of Codex food-category provisions include Fresh meat, poultry, and game, whole pieces or cuts and Flavoured fluid milk drinks; these are category-specific provisions, not blanket permission.",
     "functionalClasses": [
       "Flavour enhancer",
       "Flour treatment agent",
