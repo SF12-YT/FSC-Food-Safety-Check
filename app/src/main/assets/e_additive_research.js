@@ -1007,6 +1007,36 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E140(i)": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "A green food colourant made from plant chlorophylls. Chlorophyll pigments are used to add or restore green colour in foods; the review describes their sensitivity to light, oxygen, heat and pH, which affects where they are suitable.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "sources": [
+      {
+        "label": "Food Colour Additives: A Synoptical Overview on Their Chemical Properties, Applications in Food Products, and Health Side Effects (2022)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
+        "note": "Peer-reviewed review covering chlorophylls, chlorophyllins and their copper complexes as food colourants and discussing stability and food applications."
+      }
+    ]
+  },
+  "E140(ii)": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "A green food colourant consisting of chlorophyll derivatives (chlorophyllins). It is used to add or restore green colour in foods; performance depends on formulation conditions such as pH, light and oxygen.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "sources": [
+      {
+        "label": "Food Colour Additives: A Synoptical Overview (2022)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
+        "note": "Peer-reviewed review covering chlorophyllins and their food-colour applications."
+      }
+    ]
+  },
   "E141": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-27",
@@ -1030,6 +1060,36 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E141(i)": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "A copper-complex green colourant based on chlorophyll. Copper complexation is used to produce a more stable green pigment than uncomplexed chlorophyll, for colouring suitable food products.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "sources": [
+      {
+        "label": "Food Colour Additives: A Synoptical Overview (2022)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
+        "note": "Peer-reviewed review describes copper complexes of chlorophylls as food colourants and discusses pigment stability."
+      }
+    ]
+  },
+  "E141(ii)": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "A copper-complex green colourant based on chlorophyllins. It is used to add or retain green colour in food products; the copper-complex form is discussed as a more stable green pigment than uncomplexed chlorophyll.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "sources": [
+      {
+        "label": "Food Colour Additives: A Synoptical Overview (2022)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
+        "note": "Peer-reviewed review describes copper complexes of chlorophyllins as food colourants."
+      }
     ]
   },
   "E142": {
@@ -1472,6 +1532,21 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E160a(i)": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "Beta-carotene is an orange-yellow food colourant. Because it dissolves in fats rather than water, the review identifies fat-based foods such as margarine as suitable applications; emulsified preparations can broaden its use in other food systems.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "sources": [
+      {
+        "label": "Food Colour Additives: A Synoptical Overview (2022)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
+        "note": "Identifies E160a(i) as beta-carotene, describes its orange colour and discusses fat staining and emulsified preparations."
+      }
+    ]
+  },
   "E160a(ii)": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -1496,6 +1571,36 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E160a(iii)": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "Beta-carotene produced by fermentation using Blakeslea trispora is an orange food colourant. It is used to add orange-yellow colour to suitable foods; its fat solubility makes fat-based applications and emulsified preparations relevant.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "sources": [
+      {
+        "label": "Food Colour Additives: A Synoptical Overview (2022)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
+        "note": "Explicitly identifies E160a(iii) as beta-carotene from Blakeslea trispora and describes its food-colour function."
+      }
+    ]
+  },
+  "E160a(iv)": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "Algal carotenes obtained from Dunaliella salina are orange food colourants. They are used to add orange-yellow colour to suitable foods; the review notes their fat solubility and the use of emulsified preparations to disperse them.",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "sources": [
+      {
+        "label": "Food Colour Additives: A Synoptical Overview (2022)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
+        "note": "Explicitly identifies E160a(iv) as algal carotenes and describes their colour and food-use characteristics."
       }
     ]
   },
@@ -2278,6 +2383,28 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E170(ii)": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone. This is the calcium hydrogen carbonate sub-form; the role of calcium carbonate (E170(i)) has not been copied across to it.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
       }
     ]
   },
@@ -5563,6 +5690,65 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
+  "E389": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
+    ]
+  },
+  "E390": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "Distearyl thiodipropionate is described in the FAO/WHO JECFA additive database as an antioxidant. Antioxidants are used to slow oxidation in food systems; its permitted use, if any, depends on the applicable jurisdiction and food category.",
+    "functionalClasses": [
+      "Antioxidant"
+    ],
+    "sources": [
+      {
+        "label": "FAO/WHO JECFA — Distearyl thiodipropionate / INS 390",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/588",
+        "note": "JECFA additive record for the substance; used here for identity and antioxidant function, not as proof of current authorisation in every market."
+      }
+    ]
+  },
+  "E391": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
+    ]
+  },
   "E392": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -6075,6 +6261,28 @@ window.FOSCH_RESEARCH_DATA={
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E409": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
+    ]
   },
   "E410": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -6832,6 +7040,44 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E428": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "Gelatin is a protein-based gelling agent used to form or strengthen gels and provide texture. Common food applications include jelly-style desserts and confectionery; the exact use depends on the product formulation.",
+    "functionalClasses": [
+      "Gelling agent",
+      "Stabilizer"
+    ],
+    "sources": [
+      {
+        "label": "Hydrocolloids in food processing — review",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3551143/",
+        "note": "Peer-reviewed review covering gelatin and hydrocolloids used to form gels and modify food texture."
+      }
+    ]
+  },
+  "E429": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
+    ]
+  },
   "E430": {
     "researchStatus": "Secondary E-number purpose reference",
     "researchedAt": "2026-11-25",
@@ -7187,6 +7433,28 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E446": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
     ]
   },
   "E450": {
@@ -8375,6 +8643,33 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E490": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone. The catalogue name is propane-1,2-diol, but current EU additive references identify propane-1,2-diol as E1520. No separate authorised food-additive use under the exact code E490 was verified.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "Commission Regulation (EU) No 231/2012 — specifications for food additives",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0231",
+        "note": "EU specification identifies propane-1,2-diol as food additive E1520; this supports the code distinction and does not establish an E490 authorisation."
+      }
+    ]
+  },
   "E491": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -8474,6 +8769,72 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      }
+    ]
+  },
+  "E497": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
+    ]
+  },
+  "E498": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
+    ]
+  },
+  "E499": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
       }
     ]
   },
@@ -10142,6 +10503,50 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E598": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
+    ]
+  },
+  "E599": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
+    ]
+  },
   "E620": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -11029,6 +11434,30 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
+  "E905a": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "Food-grade white mineral oil has narrowly specified processing uses in the United States, including as a defoamer, as a release agent/lubricant in bakery products, and as a protective coating on raw fruit and vegetables. These are substance-specific U.S. permissions under 21 CFR 172.878; they do not establish blanket permission for every mineral-oil product or in other markets.",
+    "sources": [
+      {
+        "label": "U.S. eCFR — 21 CFR §172.878, White mineral oil",
+        "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-172/section-172.878",
+        "note": "Official U.S. regulation sets out narrow food uses and quantitative/Good Manufacturing Practice conditions for white mineral oil. It does not itself establish the E905a designation."
+      }
+    ]
+  },
+  "E905b": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "Petrolatum has narrowly specified food-processing uses in the United States: as a release agent/lubricant in bakery products, as a release and sealing/polishing agent in confectionery, and in limited release-agent, protective-coating and defoaming applications. These are substance-specific U.S. permissions under 21 CFR 172.880, not blanket permission in other markets.",
+    "sources": [
+      {
+        "label": "U.S. eCFR — 21 CFR §172.880, Petrolatum",
+        "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-172/section-172.880",
+        "note": "Official U.S. regulation specifies food-category uses and concentration/GMP conditions for petrolatum. It does not itself establish the E905b designation."
+      }
+    ]
+  },
   "E905c": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
@@ -11208,6 +11637,79 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
   },
+  "E916": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "A secondary additive reference classifies calcium iodate as a flour-treatment agent, but the profile provides no detailed food-category application or technological mechanism. Treat this as a reported/historical classification only; current authorisation was not established by the source.",
+    "sources": [
+      {
+        "label": "ProE — E916 Calcium iodate",
+        "url": "https://proe.info/en/additives/e916",
+        "note": "Secondary reference classifies E916 under flour-treatment agents and links to Codex numbering; the short profile does not substantiate detailed current permissions."
+      }
+    ]
+  },
+  "E917": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "Potassium iodate is described as a flour-treatment agent in baking, where it can strengthen dough gluten structure and improve dough elasticity and stability. It is also used for salt iodisation as a source of iodine; that nutritional-fortification use is distinct from a general food-additive permission. The cited reference notes it is not listed in the EU food-additive list.",
+    "sources": [
+      {
+        "label": "ProE — E917 Potassium iodate",
+        "url": "https://proe.info/en/additives/e917",
+        "note": "Secondary technical profile describes baking/flour-treatment use and salt iodisation, and notes it is not listed in Regulation (EC) No 1333/2008."
+      },
+      {
+        "label": "Codex Alimentarius — Class names and international numbering system for food additives",
+        "url": "https://proe.info/en/documents/codex-alimentarius-cxg-36-1989",
+        "note": "International additive numbering cross-reference linked from the E917 profile."
+      }
+    ]
+  },
+  "E918": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
+    ]
+  },
+  "E919": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
+    ]
+  },
   "E920": {
     "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
     "researchedAt": "2026-11-25",
@@ -11372,6 +11874,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E929": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "A secondary E-number reference lists acetone peroxide under the flour-treatment-agent group, but the source does not provide a detailed food application or current authorisation basis. FOSCH records this as a reported historical classification, not as a currently permitted flour improver.",
+    "sources": [
+      {
+        "label": "ProE — E929 Acetone peroxide",
+        "url": "https://proe.info/en/additives/e929",
+        "note": "Secondary reference categorises E929 under flour-treatment agents but gives no detailed use conditions; current authorisation was not verified."
       }
     ]
   },
@@ -11944,6 +12458,21 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E960b(i)": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "A high-intensity sweetener: rebaudioside M produced by fermentation using Yarrowia lipolytica. EU law groups steviol glycosides E960a–E960d and permits the fermentation-derived form in the same food categories and at the same maximum levels as the other group members; this is category- and level-specific, not unrestricted use.",
+    "functionalClasses": [
+      "Sweetener"
+    ],
+    "sources": [
+      {
+        "label": "European Commission — Commission Regulation (EU) 2025/652",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500652",
+        "note": "EU regulation establishes E960b as steviol glycosides from fermentation, specifies E960b(i) rebaudioside M from Yarrowia lipolytica, and places it in the E960a–E960d group under existing category limits."
+      }
+    ]
+  },
   "E960c": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -11960,6 +12489,66 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ]
+  },
+  "E960c(i)": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "An enzymatically produced steviol glycoside sweetener. EU law includes E960c within the steviol-glycosides group E960a–E960d, whose use is restricted to the food categories and maximum levels set in the Union list.",
+    "functionalClasses": [
+      "Sweetener"
+    ],
+    "sources": [
+      {
+        "label": "European Commission — Commission Regulation (EU) 2025/652",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500652",
+        "note": "Identifies E960c as enzymatically produced steviol glycosides and confirms the combined E960a–E960d group and category/maximum-level framework."
+      }
+    ]
+  },
+  "E960c(ii)": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "An enzymatically modified rebaudioside M sweetener derived from highly purified rebaudioside A from Stevia leaf extracts. Its use is as a high-intensity sweetener within the food categories and maximum levels permitted for the E960a–E960d steviol-glycoside group.",
+    "functionalClasses": [
+      "Sweetener"
+    ],
+    "sources": [
+      {
+        "label": "European Commission — Commission Regulation (EU) 2025/652",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500652",
+        "note": "Establishes E960c as enzymatically produced steviol glycosides and the E960a–E960d group authorisation framework. The exact sub-form description is taken from the FOSCH catalogue identity."
+      }
+    ]
+  },
+  "E960c(iii)": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "An enzymatically converted rebaudioside D sweetener derived from highly purified rebaudioside A from Stevia leaf extracts. Its food use is as a high-intensity sweetener within the categories and maximum levels permitted for the E960a–E960d steviol-glycoside group.",
+    "functionalClasses": [
+      "Sweetener"
+    ],
+    "sources": [
+      {
+        "label": "European Commission — Commission Regulation (EU) 2025/652",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500652",
+        "note": "Establishes E960c as enzymatically produced steviol glycosides and the E960a–E960d group authorisation framework. The exact sub-form description is taken from the FOSCH catalogue identity."
+      }
+    ]
+  },
+  "E960c(iv)": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "An enzymatically converted rebaudioside AM sweetener derived from highly purified stevioside from Stevia leaf extracts. Its food use is as a high-intensity sweetener within the categories and maximum levels permitted for the E960a–E960d steviol-glycoside group.",
+    "functionalClasses": [
+      "Sweetener"
+    ],
+    "sources": [
+      {
+        "label": "European Commission — Commission Regulation (EU) 2025/652",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500652",
+        "note": "Establishes E960c as enzymatically produced steviol glycosides and the E960a–E960d group authorisation framework. The exact sub-form description is taken from the FOSCH catalogue identity."
+      }
     ]
   },
   "E960d": {
@@ -13372,6 +13961,28 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E1443": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone. A general modified-starch function has not been substituted for an additive-specific use for this exact hydroxypropyl distarch glycerol entry.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
+    ]
+  },
   "E1450": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -13440,6 +14051,50 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E1501": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      }
+    ]
+  },
+  "E1502": {
+    "researchStatus": "No distinct food use verified",
+    "researchedAt": "2026-11-25",
+    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "sources": [
+      {
+        "label": "Codex GSFA Online — food additive index",
+        "url": "https://www.fao.org/gsfaonline/additives/index.html",
+        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+      },
+      {
+        "label": "FAO/WHO JECFA — food additives database",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
+      },
+      {
+        "label": "European Commission — food additives database",
+        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
+        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
       }
     ]
   },
@@ -13512,6 +14167,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E1510": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "Ethanol can be used as an extraction solvent in the production of foodstuffs and food ingredients, helping extract target components from raw materials. EU Directive 2009/32/EC lists ethanol among extraction solvents used in food production; this is a processing/extraction role, not a claim that ethanol is authorised as a direct additive in every food.",
+    "sources": [
+      {
+        "label": "Directive 2009/32/EC — Extraction solvents used in the production of foodstuffs and food ingredients",
+        "url": "https://eur-lex.europa.eu/eli/dir/2009/32/oj/eng",
+        "note": "EU legislation lists ethanol as an extraction solvent under the directive's specified framework; it is a processing role and should not be conflated with direct addition."
+      }
+    ]
+  },
   "E1516": {
     "researchStatus": "Secondary E-number purpose reference",
     "researchedAt": "2026-11-25",
@@ -13556,6 +14223,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1519": {
+    "researchStatus": "Source-backed use",
+    "researchedAt": "2026-11-25",
+    "use": "Benzyl alcohol is authorised in the EU as a food additive under Annex III to Regulation (EC) No 1333/2008, including use as a carrier solvent in specified food-additive/flavouring preparations. Its presence in final foods is governed by carry-over and category-specific conditions; it is not an unrestricted general-purpose preservative or flavouring.",
+    "sources": [
+      {
+        "label": "EFSA — Re-evaluation of benzyl alcohol (E1519) as a food additive (2019)",
+        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2019.5876",
+        "note": "EFSA states benzyl alcohol is authorised under Annex III and discusses its use as a carrier solvent and carry-over into food categories."
       }
     ]
   },
