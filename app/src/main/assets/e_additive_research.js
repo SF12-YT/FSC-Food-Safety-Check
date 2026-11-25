@@ -345,6 +345,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e107.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -518,6 +523,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -695,6 +705,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -1053,6 +1068,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food Colour Additives: A Synoptical Overview on Their Chemical Properties, Applications in Food Products, and Health Side Effects (2022)",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
         "note": "Peer-reviewed review covering chlorophylls, chlorophyllins and their copper complexes as food colourants and discussing stability and food applications."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -1108,6 +1128,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food Colour Additives: A Synoptical Overview (2022)",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
         "note": "Peer-reviewed review describes copper complexes of chlorophylls as food colourants and discusses pigment stability."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -1123,6 +1148,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food Colour Additives: A Synoptical Overview (2022)",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
         "note": "Peer-reviewed review describes copper complexes of chlorophyllins as food colourants."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -1425,6 +1455,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -1473,6 +1508,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -1598,6 +1638,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food Colour Additives: A Synoptical Overview (2022)",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
         "note": "Explicitly identifies E160a(iii) as beta-carotene from Blakeslea trispora and describes its food-colour function."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -1613,6 +1658,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food Colour Additives: A Synoptical Overview (2022)",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8834239/",
         "note": "Explicitly identifies E160a(iv) as algal carotenes and describes their colour and food-use characteristics."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -1971,6 +2021,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -1983,6 +2038,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e161a.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -2071,6 +2131,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -2083,6 +2148,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -2095,6 +2165,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -2107,6 +2182,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e161f.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -2825,6 +2905,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -3064,6 +3149,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e217.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -3492,6 +3582,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e231.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -3505,6 +3600,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e232.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -3518,6 +3618,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e233.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -3624,6 +3729,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e236.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -3637,6 +3747,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e237.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -3650,6 +3765,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e238.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -3697,6 +3817,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e240.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -4129,14 +4254,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E264": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Codex INS functional-purpose classification cross-checked; INS listing is not authorisation",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Ammonium acetate as a preservative. It is therefore described as used as a preservative to help slow food spoilage. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Ammonium acetate (INS 264) is identified in the Codex INS as an acidity regulator. This is a technological-purpose classification, not evidence of current authorisation in a particular food or jurisdiction; permitted categories and conditions must be checked separately.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -4149,6 +4279,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -4161,6 +4296,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -4663,6 +4803,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -4693,6 +4838,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -4876,6 +5026,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e311.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -4889,6 +5044,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e312.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -4902,6 +5062,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e313.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -5281,6 +5446,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -5293,6 +5463,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -5399,6 +5574,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -6122,6 +6302,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e351.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -6205,6 +6390,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e354.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -6269,6 +6459,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -6281,6 +6476,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e363.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -6321,6 +6521,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -6333,6 +6538,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -6345,18 +6555,28 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Preproom — Biology: E Numbers",
         "url": "https://www.preproom.org/info-library/default.aspx?t1=3&t2=15&t3=0&t4=0",
         "note": "Educational reference table listing E-number names and broad technical purposes; described use is not evidence of current authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
   "E370": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex INS identity/functional-purpose entry cross-checked; current use permission not inferred",
     "researchedAt": "2026-11-25",
-    "use": "Acidity regulator and flavouring. Examples include Coconut-, nut- and vanilla flavour. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "1,4-Heptonolactone (INS 370) is listed in the Codex INS. Its inclusion identifies the additive and its technological-purpose classification; it does not establish current permission in any specific food category or jurisdiction. Check the relevant current food-additive standard before describing a permitted use.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e370.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -6549,6 +6769,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e388.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -7289,14 +7514,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E411": {
-    "researchStatus": "Secondary E-number purpose reference",
+    "researchStatus": "Codex INS functional-purpose classification cross-checked; INS listing is not authorisation",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Oat gum as a stabiliser used to help food components remain uniformly dispersed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "use": "Oat gum (INS 411) is listed in the Codex INS with thickening and emulsifying technological purposes. This classification describes what the substance can do in food formulations; it does not itself establish current authorisation or permitted food categories in any jurisdiction.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -8024,6 +8254,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Hydrocolloids in food processing — review",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3551143/",
         "note": "Peer-reviewed review covering gelatin and hydrocolloids used to form gels and modify food texture."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -8068,26 +8303,36 @@ window.FOSCH_RESEARCH_DATA={
     "useResearchNote": "The exact additive identity was matched to FDA's peptones entry and the corresponding GRAS regulation."
   },
   "E430": {
-    "researchStatus": "Secondary E-number purpose reference",
+    "researchStatus": "Codex INS functional-purpose classification cross-checked; INS listing is not authorisation",
     "researchedAt": "2026-11-25",
-    "use": "The E-number reference lists Polyoxyethene (8) stearate as a stabiliser used to help food components remain uniformly dispersed. This describes a reported technological or historical function, not current authorisation. Check the relevant regulator's permitted food categories and conditions for the current market.",
+    "use": "Polyoxyethylene (8) stearate (INS 430) is identified in the Codex INS as an emulsifier. This describes its technological function, not current permission to use it in any particular food or jurisdiction; check the relevant current additive provisions.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
   "E431": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
+    "researchStatus": "Codex INS functional-purpose classification cross-checked; INS listing is not authorisation",
     "researchedAt": "2026-11-25",
-    "use": "Emulsifier. Examples include Bakery products, puddings, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Polyoxyethylene (40) stearate (INS 431) is identified in the Codex INS as an emulsifier. This describes its technological function, not current permission to use it in any particular food or jurisdiction; check the relevant current additive provisions.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e431.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -8620,6 +8865,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -8632,6 +8882,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -9746,6 +10001,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e478.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -10978,6 +11238,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -11130,6 +11395,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -11216,6 +11486,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e521.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -11229,6 +11504,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -11465,6 +11745,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -11477,6 +11762,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -11514,6 +11804,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -11772,14 +12067,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E553a": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "Codex INS subtype and functional-purpose classification cross-checked; INS listing is not authorisation",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes (i) Magnesium silicate (ii) Magnesium trisilicate as Salt of silicon dioxide with similar functions. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "Magnesium silicate and magnesium trisilicate (INS 553(i)/(ii)) are listed in the Codex INS for anticaking/dusting technological purposes. This is a functional classification, not blanket authorisation; permitted food categories, levels and conditions depend on the applicable jurisdiction.",
     "sources": [
       {
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -12138,6 +12438,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -12957,6 +13262,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -13001,6 +13311,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -13197,14 +13512,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E900": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "Codex GSFA functional classes and category-specific provisions cross-checked (INS 900a)",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Dimethylpolysiloxane as Anti-foaming agent. Examples of use include Fats and oils. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "Dimethylpolysiloxane corresponds to Codex INS 900a. The current Codex GSFA database lists anticaking, antifoaming and emulsifier functions and provides food-category-specific provisions and maximum levels. These Codex provisions are not blanket permission across all foods or jurisdictions.",
     "sources": [
       {
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "Codex GSFA Online — Polydimethylsiloxane (INS 900a)",
+        "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=f4e9e6be-249a-f111-b8dc-70a8a5613865",
+        "note": "Current Codex GSFA database entry for Polydimethylsiloxane (INS 900a). It lists the functional classes anticaking agent, antifoaming agent and emulsifier, together with food-category-specific provisions and maximum levels. These Codex provisions are not automatic authorisation in every national jurisdiction."
       }
     ]
   },
@@ -13556,6 +13876,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -13630,6 +13955,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Food-Info.net — individual E-number profile",
         "url": "https://www.food-info.net/uk/e/e915.htm",
         "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
@@ -13643,13 +13973,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "ProE — E916 Calcium iodate",
         "url": "https://proe.info/en/additives/e916",
         "note": "Secondary reference classifies E916 under flour-treatment agents and links to Codex numbering; the short profile does not substantiate detailed current permissions."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
   "E917": {
-    "researchStatus": "Source-backed use",
+    "researchStatus": "JECFA monograph and historical flour-treatment recommendation cross-checked; no current permission inferred",
     "researchedAt": "2026-11-25",
-    "use": "Potassium iodate is described as a flour-treatment agent in baking, where it can strengthen dough gluten structure and improve dough elasticity and stability. It is also used for salt iodisation as a source of iodine; that nutritional-fortification use is distinct from a general food-additive permission. The cited reference notes it is not listed in the EU food-additive list.",
+    "use": "JECFA identifies potassium iodate (INS 917) with flour-treatment and oxidising functions, but its monograph explicitly records that use as a flour-treatment agent was not recommended by the 9th JECFA (1965). The functional classification must not be read as a recommendation or current authorisation. Any proposed food use must be checked against the applicable jurisdiction's current standards.",
     "sources": [
       {
         "label": "ProE — E917 Potassium iodate",
@@ -13660,6 +13995,16 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex Alimentarius — Class names and international numbering system for food additives",
         "url": "https://proe.info/en/documents/codex-alimentarius-cxg-36-1989",
         "note": "International additive numbering cross-reference linked from the E917 profile."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium iodate (INS 917), specifications monograph",
+        "url": "https://www.fao.org/fileadmin/user_upload/jecfa_additives/docs/Monograph1/Additive-340.pdf",
+        "note": "FAO/WHO JECFA monograph for potassium iodate (INS 917). It lists flour-treatment and oxidising functions, but explicitly records: 'Use not recommended as Flour treatment agent' by the 9th JECFA (1965). Functional classification is not a recommendation or current authorisation."
       }
     ]
   },
@@ -13736,14 +14081,29 @@ window.FOSCH_RESEARCH_DATA={
     "useResearchNote": "Functional class is source-backed; current country-specific permission and commercial use are separate questions."
   },
   "E920": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "Australia–New Zealand Food Standards Code Schedules 15 and 18 cross-checked; additive and processing-aid permissions distinguished",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes L-cysteine as Amino acid. Examples of use include Bread enhancer. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "Australia–New Zealand permissions distinguish two uses of L-cysteine. Schedule 15 permits L-cysteine monohydrochloride at GMP in specified peeled/cut root and tuber vegetables, and in avocados and bananas. Separately, Schedule 18 lists L-cysteine (or its hydrochloride salt) as a dough-conditioning processing aid at a maximum level of 75 mg/kg. The processing-aid permission should not be described as unrestricted use as an additive in finished bread.",
     "sources": [
       {
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "Federal Register of Legislation — Australia New Zealand Food Standards Code, Schedule 15 (30 April 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Official Australia–New Zealand Food Standards Code, Schedule 15, compilation effective 30 April 2026. It lists L-cysteine monohydrochloride (INS 920) at GMP for specified peeled/cut root and tuber vegetables, and for avocados and bananas. This is a category-limited food-additive permission."
+      },
+      {
+        "label": "Federal Register of Legislation — Australia New Zealand Food Standards Code, Schedule 18 (16 July 2026)",
+        "url": "https://www.legislation.gov.au/F2015L00452/2026-07-16/2026-07-16/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Official Australia–New Zealand Food Standards Code, Schedule 18, compilation effective 16 July 2026. It lists L-cysteine or its hydrochloride salt as a dough-conditioning processing aid with a maximum level of 75 mg/kg. This is a processing-aid permission and should not be presented as unrestricted use as an additive in finished bread."
       }
     ]
   },
@@ -13878,6 +14238,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -13963,6 +14328,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "ProE — E929 Acetone peroxide",
         "url": "https://proe.info/en/additives/e929",
         "note": "Secondary reference categorises E929 under flour-treatment agents but gives no detailed use conditions; current authorisation was not verified."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -13975,6 +14345,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
         "url": "https://en.wikipedia.org/wiki/E_number",
         "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -14095,6 +14470,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -14107,6 +14487,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -14119,6 +14504,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -14193,6 +14583,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -15160,14 +15555,24 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E999": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "Codex INS functions and GSFA category-specific provisions cross-referenced; no blanket authorisation inferred",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Quillaia extract as Stabiliser, surfactant. Examples of use include Humectant in baked goods; Soft drink foaming agent. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "Quillaia extracts (INS 999) are identified in the Codex INS as emulsifiers and foaming agents. The Codex GSFA database provides food-category-specific provisions that must be checked for the intended product; the functional classification does not mean general permission in all foods or jurisdictions.",
     "sources": [
       {
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "Codex GSFA Online — Quillaia extracts (INS 999)",
+        "url": "https://www.fao.org/gsfaonline/additives/details.html?id=336",
+        "note": "FAO/WHO Codex GSFA Online entry for Quillaia extracts (INS 999). Consult the current database provisions for permitted food categories, levels and notes; the INS functional classification itself does not confer authorisation."
       }
     ]
   },
@@ -16462,6 +16867,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -16644,6 +17054,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
         "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
         "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ]
   },
@@ -16671,14 +17086,24 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E1519": {
-    "researchStatus": "Source-backed use",
+    "researchStatus": "EU Regulation 1333/2008 and Codex INS carrier classification cross-checked; scoped use only",
     "researchedAt": "2026-11-25",
-    "use": "Benzyl alcohol is authorised in the EU as a food additive under Annex III to Regulation (EC) No 1333/2008, including use as a carrier solvent in specified food-additive/flavouring preparations. Its presence in final foods is governed by carry-over and category-specific conditions; it is not an unrestricted general-purpose preservative or flavouring.",
+    "use": "Under the EU's consolidated Regulation (EC) No 1333/2008, E1519 benzyl alcohol is listed in Annex III for specified flavouring applications, subject to category-specific maximum levels and conditions. Codex INS 1519 identifies it as a carrier. These are scoped uses, not unrestricted permission as a general-purpose preservative or flavouring.",
     "sources": [
       {
         "label": "EFSA — Re-evaluation of benzyl alcohol (E1519) as a food additive (2019)",
         "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2019.5876",
         "note": "EFSA states benzyl alcohol is authorised under Annex III and discusses its use as a carrier solvent and carry-over into food categories."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "EUR-Lex — Regulation (EC) No 1333/2008, consolidated 18 August 2026",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "Official consolidated EU Regulation (EC) No 1333/2008, version dated 18 August 2026. Annex III lists E1519 benzyl alcohol for specified flavouring applications subject to category-specific maximum levels and conditions; it is not a blanket permission for general-purpose use."
       }
     ]
   },
