@@ -1291,6 +1291,18 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E160": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Carotenoids as Plant pigments derived from carrots, tomatoes, apricots, oranges, rosehip and green leafy vegetables; Now mostly manufactured. Examples of use include Provide a range of colours from yellow to red. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
   "E160a": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -6176,6 +6188,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E423": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Octenyl succinic acid modified gum arabic as Emulsifier; Chemical modification of gum arabic. Examples of use include Processed meat, cheeses, jam, snacks, chewing gum. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
   "E424": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -6456,6 +6480,30 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E440a": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Pectin as Occurs naturally in fruits, roots, and stems of plants. Examples of use include Used as a stabiliser and gelling agent; Added to preserves, jellies, and mint sauce. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E440b": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Amidated pectin as Chemically treated pectin used as an emulsifier and gelling agent. Examples of use include Preserves and jellies. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
   "E441": {
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-27",
@@ -6625,6 +6673,30 @@ window.FOSCH_RESEARCH_DATA={
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E451": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Triphosphates as Preservatives, emulsifiers, stabilisers; Potassium and sodium triphosphates. Examples of use include Many different products. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E452": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Polyphosphates as Stabilisers, emulsifiers; Polyphosphates of potassium, calcium, ammonium, sodium. Examples of use include Many different products. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
   },
   "E459": {
     "researchStatus": "Codex GSFA verified",
@@ -8299,6 +8371,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E513": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Sulphuric acid as Acidity regulator. Examples of use include Beer preparation and dairy products. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
   "E514": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
@@ -8439,6 +8523,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E517": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Ammonium sulphate as Acidity regulator; Ammonium salt of sulphuric acid. Examples of use include Used in dough, baked products. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
   "E518": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -8500,6 +8596,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E522": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Aluminium potassium sulphate as Acidity regulator, raising agent. Examples of use include Baking products. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
   },
   "E523": {
     "researchStatus": "Codex GSFA verified",
@@ -8725,6 +8833,42 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E535": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Sodium ferrocyanide as Anti-caking agent. Examples of use include Added to table salt. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E536": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Potassium ferrocyanide as Anti-caking agent. Examples of use include In table salts. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E538": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Calcium ferrocyanide as Anti-caking agent. Examples of use include In table salts. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
   "E541": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
     "researchedAt": "2026-11-25",
@@ -8803,6 +8947,30 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E553a": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes (i) Magnesium silicate (ii) Magnesium trisilicate as Salt of silicon dioxide with similar functions. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E553b": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Talc as Anti-caking agent, bulking agent, glazing agent. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
       }
     ]
   },
@@ -8913,6 +9081,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E574": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Gluconic acid as Acidity regulator. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
   },
   "E575": {
     "researchStatus": "Codex GSFA verified",
@@ -9649,6 +9829,54 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E640": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Glycine and its sodium salt as Glycine is an amino acid; Used as flavour enhancer and sweetener. Examples of use include Bread enhancer; Also used in food supplements and protein drinks. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E641": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes L-leucine as Flavouring agent; Amino acid. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E650": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Zinc acetate as Flavour enhancer. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E900": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Dimethylpolysiloxane as Anti-foaming agent. Examples of use include Fats and oils. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
   "E901": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -9851,6 +10079,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E914": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Oxidised polyethylene wax as Glazing / coating agent. Examples of use include Fruit. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
   "E915": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
     "researchedAt": "2026-11-25",
@@ -9863,6 +10103,42 @@ window.FOSCH_RESEARCH_DATA={
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+  },
+  "E920": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes L-cysteine as Amino acid. Examples of use include Bread enhancer. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E924": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Potassium bromateÊ as Oxidising agent, improver, and bleaching agent; Manufactured synthetically. Examples of use include Added to flour; No longer approved in EU. The page notes an EU restriction; verify the current legal position with the relevant regulator before treating this as authorised.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E924b": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Calcium bromateÊ as Maturing agent and flour improver. Examples of use include Used in bread; Banned in the EU. The page notes an EU restriction; verify the current legal position with the relevant regulator before treating this as authorised.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
   },
   "E925": {
     "researchStatus": "Codex GSFA verified",
@@ -9884,6 +10160,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E926": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Chlorine dioxide as Synthetically prepared additive, similar to chlorine; Also used as a water purifier and oxidising agent. Examples of use include Similar to chlorine. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
       }
     ]
   },
@@ -9932,6 +10220,30 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E938": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Argon as Packaging gas. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E939": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Helium as Packaging gas. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
       }
     ]
   },
@@ -9991,6 +10303,66 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E943a": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Butane as Aerosol spray propellant. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E943b": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Iso-butane as Aerosol spray propellant. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E944": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Propane as Aerosol spray propellant. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E948": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Oxygen as Packaging gas. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E949": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Hydrogen as Packaging gas. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
       }
     ]
   },
@@ -10752,6 +11124,18 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
+  "E999": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Quillaia extract as Stabiliser, surfactant. Examples of use include Humectant in baked goods; Soft drink foaming agent. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
   "E1100": {
     "researchStatus": "Codex GSFA subtype verified",
     "researchedAt": "2026-11-25",
@@ -11224,6 +11608,54 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E1205": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Basic methacrylate copolymer as Glazing/coating agent. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E1206": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Neutral methacrylate copolymer as Glazing agent. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E1207": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Anionic methacrylate copolymer as Glazing/coating agent. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
+  "E1209": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Polyvinyl alcohol-polyethylene glycol-graft copolymer; PVA-PEG graft copolymer as Glazing agent, stabiliser. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
   "E1400": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -11691,6 +12123,18 @@ window.FOSCH_RESEARCH_DATA={
       }
     ]
   },
+  "E1452": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Starch aluminium Octenyl succinate as Anti-caking, thickening, emulsifying, and glazing roles. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+      }
+    ]
+  },
   "E1503": {
     "researchStatus": "Codex GSFA verified",
     "researchedAt": "2026-11-25",
@@ -11745,6 +12189,18 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      }
+    ]
+  },
+  "E1517": {
+    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchedAt": "2026-11-25",
+    "use": "DermNet NZ describes Glyceryl diacetate; diacetin as Solvent for other additives. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "sources": [
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
       }
     ]
   },
