@@ -1219,22 +1219,7 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
-      }
-    ],
-    "regulatoryGroups": [
-      "colours"
-    ],
-    "regulatoryGroupJurisdictions": [
-      "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
-  },
-  "E150A": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Brown color made by controlled heating of carbohydrate materials without ammonium or sulfite compounds in the caramelization process.",
-    "tox": "JECFA allocated an ADI “not specified” to caramel color I provided it complies with specifications. “ADI not specified” is a risk-assessment term under specified conditions, not a recommendation for unlimited consumption.",
-    "intake": "JECFA: ADI not specified for plain caramel under its specified conditions (1985). This is not a personal daily limit; check category-specific local permissions.",
-    "sources": [
+      },
       {
         "label": "FAO/WHO JECFA — Plain caramel / INS 150a (JECFA lists ADI not specified subject to specifications.)",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/337",
@@ -1250,7 +1235,15 @@ window.FOSCH_RESEARCH_DATA={
         "url": "https://www.foodstandards.gov.au/consumer/additives/foodcolour",
         "note": "Australian/New Zealand official overview; distinguishes food intolerance reports from a diagnosis."
       }
-    ]
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "tox": "JECFA allocated an ADI “not specified” to caramel color I provided it complies with specifications. “ADI not specified” is a risk-assessment term under specified conditions, not a recommendation for unlimited consumption.",
+    "intake": "JECFA: ADI not specified for plain caramel under its specified conditions (1985). This is not a personal daily limit; check category-specific local permissions."
   },
   "E150b": {
     "researchStatus": "Codex GSFA verified",
@@ -1319,6 +1312,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Ammonia caramel / INS 150c (JECFA record lists 0–200 mg/kg bw, 0–150 on a solids basis.)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/436",
+        "note": "FAO/WHO JECFA substance record and evaluation history."
       }
     ],
     "regulatoryGroups": [
@@ -1326,21 +1324,9 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
-  },
-  "E150C": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Brown food color produced using ammonia compounds during manufacture.",
+    ],
     "tox": "JECFA lists an ADI of 0–200 mg/kg body weight/day (up to 0–150 mg/kg bw on a solids basis) for ammonia caramel in the cited assessment. The solids-basis condition matters when comparing a preparation with the ADI.",
-    "intake": "JECFA ADI: 0–200 mg/kg bw/day, noted as 0–150 mg/kg bw/day on a solids basis (1985); check specifications and local permitted uses.",
-    "sources": [
-      {
-        "label": "FAO/WHO JECFA — Ammonia caramel / INS 150c (JECFA record lists 0–200 mg/kg bw, 0–150 on a solids basis.)",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/436",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
-      }
-    ]
+    "intake": "JECFA ADI: 0–200 mg/kg bw/day, noted as 0–150 mg/kg bw/day on a solids basis (1985); check specifications and local permitted uses."
   },
   "E150d": {
     "researchStatus": "Codex GSFA verified",
@@ -1371,22 +1357,7 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
-      }
-    ],
-    "regulatoryGroups": [
-      "colours"
-    ],
-    "regulatoryGroupJurisdictions": [
-      "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
-  },
-  "E150D": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Dark brown food color produced using sulfite and ammonia compounds during manufacture.",
-    "tox": "JECFA lists an ADI of 0–200 mg/kg body weight/day (0–150 mg/kg bw on a solids basis) for caramel color Class IV in the cited evaluation. Product specification and actual additive quantity matter.",
-    "intake": "JECFA ADI: 0–200 mg/kg bw/day (0–150 on a solids basis; 1985 assessment). Check current national use limits and any applicable sulphite declaration requirements.",
-    "sources": [
+      },
       {
         "label": "FAO/WHO JECFA — Caramel colour Class IV / INS 150d (JECFA record lists ADI 0–200 mg/kg bw, 0–150 on a solids basis.)",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1668",
@@ -1397,7 +1368,15 @@ window.FOSCH_RESEARCH_DATA={
         "url": "https://data.food.gov.uk/codes/alerts/def/allergen/sulphur",
         "note": "Official food-allergen reference notes higher risk of sulphite reaction in people with asthma."
       }
-    ]
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "tox": "JECFA lists an ADI of 0–200 mg/kg body weight/day (0–150 mg/kg bw on a solids basis) for caramel color Class IV in the cited evaluation. Product specification and actual additive quantity matter.",
+    "intake": "JECFA ADI: 0–200 mg/kg bw/day (0–150 on a solids basis; 1985 assessment). Check current national use limits and any applicable sulphite declaration requirements."
   },
   "E151": {
     "researchStatus": "Codex GSFA verified",
@@ -1535,18 +1514,6 @@ window.FOSCH_RESEARCH_DATA={
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ]
   },
-  "E160": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Carotenoids as Plant pigments derived from carrots, tomatoes, apricots, oranges, rosehip and green leafy vegetables; Now mostly manufactured. Examples of use include Provide a range of colours from yellow to red. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
-    "sources": [
-      {
-        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
-        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
-        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
-      }
-    ]
-  },
   "E160a": {
     "researchStatus": "UK FSA grouped-use source",
     "researchedAt": "2026-11-25",
@@ -1556,22 +1523,7 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
-      }
-    ],
-    "regulatoryGroups": [
-      "colours"
-    ],
-    "regulatoryGroupJurisdictions": [
-      "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
-  },
-  "E160A": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Yellow-orange food colors from carotene pigments, including specific synthetic, plant and algal forms. The exact sub-form changes the assessment.",
-    "tox": "JECFA’s 2019 evaluation withdrew earlier group ADIs for specified beta-carotene forms; its 2026 entry considered dietary exposure but did not establish a new ADI. This does not mean the additive is classified as toxic; it means a numeric ADI is not currently available from that evaluation.",
-    "intake": "Latest JECFA entry: no current numeric ADI established in the 2026 assessment; earlier group ADIs were withdrawn in 2019. Match the exact E160a sub-form and current assessment before reporting a limit.",
-    "sources": [
+      },
       {
         "label": "FAO/WHO JECFA — Synthetic beta-carotene / INS 160a(i) (JECFA 2019 record says earlier group ADIs were withdrawn; the 2026 entry considered dietary exposure without establishing a new ADI.)",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1514",
@@ -1582,7 +1534,15 @@ window.FOSCH_RESEARCH_DATA={
         "url": "https://www.efsa.europa.eu/en/topics/topic/food-colours",
         "note": "Scientific evaluation status overview."
       }
-    ]
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "tox": "JECFA’s 2019 evaluation withdrew earlier group ADIs for specified beta-carotene forms; its 2026 entry considered dietary exposure but did not establish a new ADI. This does not mean the additive is classified as toxic; it means a numeric ADI is not currently available from that evaluation.",
+    "intake": "Latest JECFA entry: no current numeric ADI established in the 2026 assessment; earlier group ADIs were withdrawn in 2019. Match the exact E160a sub-form and current assessment before reporting a limit."
   },
   "E160a(i)": {
     "researchStatus": "Source-backed use",
@@ -1670,23 +1630,7 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA — Annatto extracts, norbixin-based (INS 160b(ii))",
         "url": "https://www.fao.org/gsfaonline/additives/details.html?id=392",
         "note": "Codex identifies the additive as a colour and lists category-specific food provisions."
-      }
-    ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
-    "functionalClasses": [
-      "Colour"
-    ],
-    "regulatoryGroups": [
-      "colours"
-    ]
-  },
-  "E160B": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Yellow-orange to orange food color from annatto seeds; bixin and norbixin forms differ.",
-    "tox": "JECFA’s values are form-specific: ADI 0–12 mg/kg body weight/day for qualifying bixin extracts; group ADI 0–0.6 mg/kg bw/day for norbixin and its sodium/potassium salts expressed as norbixin. Product specifications and exact form are essential.",
-    "intake": "JECFA: bixin 0–12 mg/kg bw/day; norbixin/salts group ADI 0–0.6 mg/kg bw/day expressed as norbixin (2006, for specified conforming extracts). Identify exact sub-form before applying either value.",
-    "sources": [
+      },
       {
         "label": "PubMed — review of natural colour additives and food allergy",
         "url": "https://pubmed.ncbi.nlm.nih.gov/11285683/",
@@ -1703,6 +1647,15 @@ window.FOSCH_RESEARCH_DATA={
         "note": "FAO/WHO JECFA substance record and evaluation history."
       }
     ],
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Colour"
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "tox": "JECFA’s values are form-specific: ADI 0–12 mg/kg body weight/day for qualifying bixin extracts; group ADI 0–0.6 mg/kg bw/day for norbixin and its sodium/potassium salts expressed as norbixin. Product specifications and exact form are essential.",
+    "intake": "JECFA: bixin 0–12 mg/kg bw/day; norbixin/salts group ADI 0–0.6 mg/kg bw/day expressed as norbixin (2006, for specified conforming extracts). Identify exact sub-form before applying either value.",
     "allergy": "Rare allergic reactions to annatto (E160b), including urticaria, angioedema and a reported case of anaphylaxis, have been described. Residual seed proteins may be involved; the evidence is limited and applies to annatto-specific reactions.",
     "allergySources": [
       {
@@ -1857,22 +1810,7 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
-      }
-    ],
-    "regulatoryGroups": [
-      "colours"
-    ],
-    "regulatoryGroupJurisdictions": [
-      "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
-  },
-  "E160D": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Red food color found in tomatoes and other sources; available forms include synthetic, tomato-derived and fungal-derived lycopene.",
-    "tox": "JECFA lists a group ADI “not specified” for compliant lycopene from all sources when used as a food color under good manufacturing practice (2009 record). Some form-specific database entries have separate histories; do not mix them without checking the exact subtype.",
-    "intake": "JECFA group ADI “not specified” for compliant lycopene used as food color under GMP (2009). Match the exact E160d subtype and current record.",
-    "sources": [
+      },
       {
         "label": "FAO/WHO JECFA — Lycopene / INS 160d (JECFA group ADI not specified for compliant forms used as a food color under GMP.)",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2876",
@@ -1888,7 +1826,15 @@ window.FOSCH_RESEARCH_DATA={
         "url": "https://www.foodstandards.gov.au/consumer/additives/foodcolour",
         "note": "Australian/New Zealand official overview; distinguishes food intolerance reports from a diagnosis."
       }
-    ]
+    ],
+    "regulatoryGroups": [
+      "colours"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "tox": "JECFA lists a group ADI “not specified” for compliant lycopene from all sources when used as a food color under good manufacturing practice (2009 record). Some form-specific database entries have separate histories; do not mix them without checking the exact subtype.",
+    "intake": "JECFA group ADI “not specified” for compliant lycopene used as food color under GMP (2009). Match the exact E160d subtype and current record."
   },
   "E160d(i)": {
     "researchStatus": "Codex GSFA verified",
@@ -2000,6 +1946,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Beta-apo-8′-carotenal / INS 160e (JECFA record gives ADI 0–0.3 mg/kg bw/day and summarizes 2026 exposure review.)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/941",
+        "note": "FAO/WHO JECFA substance record and evaluation history."
       }
     ],
     "regulatoryGroups": [
@@ -2007,21 +1958,9 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
-  },
-  "E160E": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
-    "use": "Orange food color from a carotenoid compound.",
+    ],
     "tox": "JECFA’s earlier evaluation set an ADI of 0–0.3 mg/kg body weight/day (2019). Its 2026 evaluation noted high estimated exposure for toddlers could exceed that ADI in the exposure model. An exceedance estimate is a population-risk signal requiring context, not proof that a particular serving will cause harm.",
-    "intake": "JECFA ADI listed: 0–0.3 mg/kg bw/day (2019); JECFA’s 2026 review noted some high exposure estimates for toddlers exceeded it. Verify current national permissions and avoid presenting this as a per-serving threshold.",
-    "sources": [
-      {
-        "label": "FAO/WHO JECFA — Beta-apo-8′-carotenal / INS 160e (JECFA record gives ADI 0–0.3 mg/kg bw/day and summarizes 2026 exposure review.)",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/941",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
-      }
-    ]
+    "intake": "JECFA ADI listed: 0–0.3 mg/kg bw/day (2019); JECFA’s 2026 review noted some high exposure estimates for toddlers exceeded it. Verify current national permissions and avoid presenting this as a per-serving threshold."
   },
   "E160f": {
     "researchStatus": "Preproom educational technical-purpose reference",
@@ -3801,21 +3740,30 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E243": {
-    "researchStatus": "UK FSA grouped-use source",
+    "researchStatus": "FSANZ Schedule 15 and GB authorisation cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "use": "Ethyl lauroyl arginate is used as a preservative to control microbial growth in specified foods. Australia–New Zealand Schedule 15 permits it only in defined categories, including certain cheeses, peeled or cut fruit and vegetables, cooked rice, cooked pasta/noodles and some meat and fish products, with category-specific maximum levels and conditions. These provisions are not general permission for all foods.",
+    "functionalClasses": [
+      "Preservative"
+    ],
     "sources": [
       {
-        "label": "UK Food Standards Agency — Approved additives and E numbers",
-        "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
-        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+        "label": "FSANZ — Australia New Zealand Food Standards Code, Schedule 15 (current 30 April 2026 compilation)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Official permissions table identifies INS 243 as ethyl lauroyl arginate and specifies food-category limits and conditions, including cheese, prepared produce, rice, pasta/noodles and meat/fish products."
+      },
+      {
+        "label": "UK Food Standards Agency — Great Britain food-additive authorisation: E243",
+        "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-243",
+        "note": "Official GB register lists ethyl lauroyl arginate as authorised subject to the relevant food-additive regulations."
       }
     ],
     "regulatoryGroups": [
       "preservatives"
     ],
     "regulatoryGroupJurisdictions": [
-      "England, Northern Ireland and Wales (UK FSA page scope)"
+      "Australia and New Zealand (Schedule 15)",
+      "England, Scotland and Wales (Great Britain authorisation register)"
     ]
   },
   "E249": {
@@ -7903,15 +7851,36 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E423": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "Codex INS functional classes, JECFA identity and EU use conditions cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Octenyl succinic acid modified gum arabic as Emulsifier; Chemical modification of gum arabic. Examples of use include Processed meat, cheeses, jam, snacks, chewing gum. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "Octenyl succinic acid modified gum arabic (OSA-modified gum arabic) is used as an emulsifier, particularly to stabilise flavouring-oil emulsions. EU legislation specifies the food categories and maximum levels for these flavouring emulsions; it is not a blanket authorisation to add it directly to any food.",
+    "functionalClasses": [
+      "Emulsifier",
+      "Firming agent",
+      "Gelling agent"
+    ],
     "sources": [
       {
-        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
-        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
-        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+        "label": "European Commission — Regulation (EU) No 817/2013",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0817",
+        "note": "Official amendment introducing E423 and specifying uses in defined flavouring-oil emulsions and food categories, with maximum levels."
+      },
+      {
+        "label": "FAO/WHO JECFA — Octenyl succinic acid modified gum arabic",
+        "url": "https://www.fao.org/food/food-safety-quality/scientific-advice/jecfa/jecfa-additives/detail/en/c/507/",
+        "note": "JECFA identity/specification record; identifies INS 423 and the additive's accepted synonyms."
+      },
+      {
+        "label": "Codex — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
+        "note": "Codex INS table lists the functional classes associated with INS 423; inclusion in the INS alone does not imply approval for use."
       }
+    ],
+    "regulatoryGroups": [
+      "texture"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "European Union (specified flavouring-emulsion uses)"
     ]
   },
   "E424": {
@@ -8329,9 +8298,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E440": {
-    "researchStatus": "Cross-checked against Codex GSFA",
+    "researchStatus": "Codex GSFA functional classes and category-specific provisions cross-checked; subtype descriptions consolidated under E440",
     "researchedAt": "2026-11-25",
-    "use": "Gelling agent, thickener and stabilizer used in jams, jellies, fruit preparations and other foods; pectin also occurs naturally in fruit. Codex GSFA classifies this additive as emulsifier, gelling agent, glazing agent, stabilizer, thickener. Codex GSFA lists category-specific provisions including Coffee, coffee substitutes, tea, herbal infusions, and other hot cereal and grain beverages, excluding cocoa and Complementary foods for infants and young children; these are examples, not blanket permission.",
+    "use": "Pectins (E440), including non-amidated and amidated forms (often distinguished as E440a and E440b), are used as gelling, thickening, stabilising and emulsifying agents. They help form gels and control texture in products such as jams, jellies, fruit preparations and dairy foods. Codex GSFA groups amidated and non-amidated pectins under INS 440 and lists food-category-specific provisions and limits; this is not blanket permission for every food.",
     "tox": "JECFA lists ADI 'not specified' in its current entry, but its infant-formula history contains a use-level-specific concern: a 2014 assessment considered use up to 0.5% in infant formula of concern, while a later 2016 assessment considered a lower proposed level of 0.2% not of concern. Those findings are formulation- and population-specific.",
     "intake": "JECFA: ADI 'not specified'; infant-formula evaluations have different conclusions at 0.2% and 0.5% proposed use levels. Do not generalize this to unrestricted use or all populations.",
     "sources": [
@@ -8354,6 +8323,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
+        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
+        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
       }
     ],
     "functionalClasses": [
@@ -8375,30 +8349,6 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
-  },
-  "E440a": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Pectin as Occurs naturally in fruits, roots, and stems of plants. Examples of use include Used as a stabiliser and gelling agent; Added to preserves, jellies, and mint sauce. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
-    "sources": [
-      {
-        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
-        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
-        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
-      }
-    ]
-  },
-  "E440b": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Amidated pectin as Chemically treated pectin used as an emulsifier and gelling agent. Examples of use include Preserves and jellies. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
-    "sources": [
-      {
-        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
-        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
-        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
-      }
     ]
   },
   "E441": {
@@ -13005,15 +12955,35 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E641": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "Codex functional class and FSANZ Schedule 15 use cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes L-leucine as Flavouring agent; Amino acid. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "L-leucine is listed by Codex as a flavour enhancer. The explicit Australia–New Zealand Schedule 15 permission is at GMP in tabletop sweeteners (food category 11.4); this limited provision should not be read as general permission for use in every food.",
+    "functionalClasses": [
+      "Flavour enhancer"
+    ],
     "sources": [
       {
-        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
-        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
-        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+        "label": "Codex — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
+        "note": "Codex INS table lists L-leucine (INS 641) as a flavour enhancer; INS inclusion does not itself imply approval."
+      },
+      {
+        "label": "FSANZ — Australia New Zealand Food Standards Code, Schedule 15 (current 30 April 2026 compilation)",
+        "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
+        "note": "Lists L-leucine at GMP under tabletop sweeteners, food category 11.4."
+      },
+      {
+        "label": "UK Food Standards Agency — Approved additives and E numbers",
+        "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+        "note": "Official UK list identifies E641 as L-leucine."
       }
+    ],
+    "regulatoryGroups": [
+      "flavour-enhancers"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "Australia and New Zealand (Schedule 15, food category 11.4)",
+      "United Kingdom (FSA approved-additives list)"
     ]
   },
   "E650": {
@@ -15718,51 +15688,138 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E1205": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "JECFA evaluation and EU/GB use scope cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Basic methacrylate copolymer as Glazing/coating agent. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "Basic methacrylate copolymer is used as a coating or glazing agent for solid food supplements. JECFA also evaluated its specified use in foods for special medical purposes and in micronutrient encapsulation for food fortification. These are specialised, condition-specific applications, not general use in ordinary foods.",
+    "functionalClasses": [
+      "Release agent",
+      "Glazing agent"
+    ],
     "sources": [
       {
-        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
-        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
-        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+        "label": "FAO/WHO JECFA — Basic methacrylate copolymer (INS 1205)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/6474",
+        "note": "JECFA describes use as a coating/glazing agent for solid food supplements, foods for special medical purposes and micronutrient encapsulation for fortification."
+      },
+      {
+        "label": "European Commission — Regulation (EU) No 1129/2011",
+        "url": "https://www.legislation.gov.uk/eur/2011/1129/adopted/data.xht",
+        "note": "Official amendment authorising E1205 as a glazing/coating agent for solid food supplements, subject to the Annex II conditions."
       }
+    ],
+    "regulatoryGroups": [
+      "glazing-agents"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "European Union / Great Britain (specified solid food supplement uses)"
     ]
   },
   "E1206": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "JECFA evaluation and EU/GB use scope cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Neutral methacrylate copolymer as Glazing agent. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "Neutral methacrylate copolymer is used as a glazing or coating agent in solid food supplements designed for sustained release. The coating is intended to control the release of nutrients over time; this is a specialised supplement application, not a general food use.",
+    "functionalClasses": [
+      "Release agent",
+      "Glazing agent"
+    ],
     "sources": [
       {
-        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
-        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
-        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+        "label": "FAO/WHO JECFA — Neutral methacrylate copolymer (INS 1206)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/6472",
+        "note": "JECFA identifies INS 1206 and records the evaluation history for use as a coating/glazing agent in solid food supplements."
+      },
+      {
+        "label": "European Commission — Regulation (EU) No 816/2013",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0816",
+        "note": "Official regulation describes the intended sustained-release glazing use in solid food supplements and authorises E1206 subject to the specified conditions."
       }
+    ],
+    "regulatoryGroups": [
+      "glazing-agents"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "European Union / Great Britain (specified solid food supplement uses)"
     ]
   },
   "E1207": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "JECFA evaluation and EU/GB use scope cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Anionic methacrylate copolymer as Glazing/coating agent. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "Anionic methacrylate copolymer is used as a glazing or coating agent in solid food supplements. Its intended purpose is to protect the stomach from irritating ingredients and/or protect sensitive nutrients from breakdown by gastric acid. This is a specialised supplement application, not a general food use.",
+    "functionalClasses": [
+      "Release agent",
+      "Glazing agent"
+    ],
     "sources": [
       {
-        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
-        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
-        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+        "label": "FAO/WHO JECFA — Anionic methacrylate copolymer (INS 1207)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/6473",
+        "note": "JECFA identifies INS 1207 and records the evaluation history for the additive."
+      },
+      {
+        "label": "European Commission — Regulation (EU) No 816/2013",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0816",
+        "note": "Official regulation describes the intended protective glazing use in solid food supplements and authorises E1207 subject to the specified conditions."
       }
+    ],
+    "regulatoryGroups": [
+      "glazing-agents"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "European Union / Great Britain (specified solid food supplement uses)"
+    ]
+  },
+  "E1208": {
+    "researchStatus": "EU authorisation and GB food-additive register cross-checked",
+    "researchedAt": "2026-11-25",
+    "use": "Polyvinylpyrrolidone-vinyl acetate copolymer is used as a glazing agent to coat solid food supplements. EU legislation introduced it for this specialised application because it improves coating strength, application and film adhesion; it is not a general-purpose food additive.",
+    "functionalClasses": [
+      "Glazing agent"
+    ],
+    "sources": [
+      {
+        "label": "European Commission — Regulation (EU) No 264/2014",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0264",
+        "note": "Official regulation authorises E1208 as a glazing agent in solid food supplements and explains the coating function."
+      },
+      {
+        "label": "UK Food Standards Agency — Great Britain food-additive authorisation: E1208",
+        "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-1208",
+        "note": "Official register identifies polyvinylpyrrolidone-vinyl acetate copolymer as E1208 and lists its authorisation terms."
+      }
+    ],
+    "regulatoryGroups": [
+      "glazing-agents"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "European Union / Great Britain (specified solid food supplement uses)"
     ]
   },
   "E1209": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
+    "researchStatus": "JECFA specification and EU/GB use scope cross-checked",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Polyvinyl alcohol-polyethylene glycol-graft copolymer; PVA-PEG graft copolymer as Glazing agent, stabiliser. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "Polyvinyl alcohol–polyethylene glycol graft copolymer is used as an aqueous film-coating/glazing agent, stabiliser and binder for tablets in the preparation and formulation of food supplements. JECFA describes this use under GMP and with compliance to its specifications; it is not a general-purpose food use.",
+    "functionalClasses": [
+      "Glazing agent",
+      "Stabilizer",
+      "Binder"
+    ],
     "sources": [
       {
-        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
-        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
-        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+        "label": "FAO/WHO JECFA — Polyvinyl alcohol–polyethylene glycol graft copolymer (INS 1209)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/6192",
+        "note": "JECFA specifies the evaluated functions as glazing agent, stabilizer and binder for tablets in food-supplement preparation/formulation under GMP."
+      },
+      {
+        "label": "European Commission — Regulation (EU) No 685/2014",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0685",
+        "note": "Official amendment introducing the E1209 specification and conditions for its use in food supplements."
       }
+    ],
+    "regulatoryGroups": [
+      "glazing-agents"
+    ],
+    "regulatoryGroupJurisdictions": [
+      "European Union / Great Britain (specified food-supplement uses)"
     ]
   },
   "E1400": {
