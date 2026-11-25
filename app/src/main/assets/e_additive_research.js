@@ -7654,9 +7654,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E429": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Source-backed use",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Peptones are used in food as nutrient supplements and processing aids, and can act as surface-active agents. The US FDA inventory also lists flavour-enhancer and flavouring-agent/adjuvant technical effects. The US GRAS regulation specifies good-manufacturing-practice use; these records do not establish permission in other jurisdictions.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -7672,8 +7672,26 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "US FDA — Substances Added to Food: Peptones",
+        "url": "https://hfpappexternal.fda.gov/Scripts/Fdcc/index.cfm?id=PEPTONES&set=FoodSubstances",
+        "note": "Lists flavour enhancer and flavouring agent/adjuvant as technical effects for peptones."
+      },
+      {
+        "label": "United States Code of Federal Regulations — 21 CFR 184.1553: Peptones",
+        "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title21-vol3/xhtml/CFR-2024-title21-vol3-sec184-1553.html",
+        "note": "Describes permitted GMP conditions and uses as nutrient supplements, processing aids and surface-active agents."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Nutrient supplement",
+      "Processing aid",
+      "Surface-active agent",
+      "Flavour enhancer",
+      "Flavouring agent / adjuvant"
+    ],
+    "useResearchNote": "The exact additive identity was matched to FDA's peptones entry and the corresponding GRAS regulation."
   },
   "E430": {
     "researchStatus": "Secondary E-number purpose reference",
@@ -8136,9 +8154,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E446": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Source-backed use",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Succistearin is used as an emulsifier in or with shortenings and edible oils intended for cakes, cake mixes, fillings, icings, pastries and toppings. The US regulation specifies the substance identity, composition and good-manufacturing-practice conditions. This is a US-specific food-use provision, not a global authorisation.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -8154,8 +8172,22 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "United States Code of Federal Regulations — 21 CFR 172.765: Succistearin",
+        "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title21-vol3/xhtml/CFR-2025-title21-vol3-sec172-765.html",
+        "note": "Specific US food-use regulation: emulsifier in shortening and edible oils for designated cake and pastry products."
+      },
+      {
+        "label": "Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Codex numbering and functional-class reference; it does not itself establish national authorisation for this substance."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Emulsifier"
+    ],
+    "useResearchNote": "The US provision is specific and should not be generalised to other markets."
   },
   "E450": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
@@ -9805,9 +9837,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E497": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Historical animal-feed use only",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Historical UK animal-feed regulations listed polyoxypropylene–polyoxyethylene polymers (molecular weight 6,800–9,000) as an additive in feeding stuffs, with a specified maximum level. The record reviewed does not establish a direct human-food technological function, so FOSCH should not describe E497 as a human-food emulsifier or stabiliser.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -9823,13 +9855,27 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "UK Feeding Stuffs Regulations 1988 — Schedule 4",
+        "url": "https://www.legislation.gov.uk/uksi/1988/396/schedule/4/made/data.xht?view=snippet&wrap=true",
+        "note": "Historical feedstuff schedule lists E497 polyoxypropylene–polyoxyethylene polymers and a maximum concentration for feeding stuffs."
+      },
+      {
+        "label": "UK Feeding Stuffs Regulations 1995",
+        "url": "https://www.legislation.gov.uk/uksi/1995/1412/made",
+        "note": "Additional historical feedstuff schedule cross-check; animal-feed listing is not evidence of human-food authorisation."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Historical animal-feed additive — function not verified"
+    ],
+    "useResearchNote": "Animal-feed listing is kept separate from human-food additive use. No human-food technical function is assigned."
   },
   "E498": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Historical animal-feed use only",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Historical UK animal-feed regulations listed partial polyglycerol esters of polycondensed fatty acids of castor oil (polyglycerol polyricinoleate) for use in dog feeding stuffs. The available record does not establish a direct human-food function for this E498 entry; it should not be conflated with the separately numbered human-food additive E476.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -9845,13 +9891,27 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "UK Feeding Stuffs Regulations 1988 — Schedule 4",
+        "url": "https://www.legislation.gov.uk/uksi/1988/396/schedule/4/made/data.xht?view=snippet&wrap=true",
+        "note": "Lists the E498 material for dog feeding stuffs; this is an animal-feed provision, not a human-food additive permission."
+      },
+      {
+        "label": "UK Feeding Stuffs Regulations 1991",
+        "url": "https://www.legislation.gov.uk/uksi/1991/2840/made/data.xht?view=snippet&wrap=true",
+        "note": "Historical schedule repeats the E498 material name and dog-feed category."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Historical animal-feed additive — function not verified"
+    ],
+    "useResearchNote": "Do not substitute E476's human-food emulsifier use for this different E498 catalogue entry."
   },
   "E499": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Source-backed use — narrow category authorisation",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Stigmasterol-rich plant sterols are authorised in the EU as a stabiliser only in the specified ready-to-freeze alcoholic-cocktail category and under defined conditions. Great Britain's regulated-products register also lists E499 as authorised with its Annex II and Annex III conditions. This is a narrow category-specific stabiliser use, not a general-purpose additive permission.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -9867,8 +9927,22 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "European Commission — Regulation (EU) No 739/2013",
+        "url": "https://eur-lex.europa.eu/eli/reg/2013/739",
+        "note": "Assigns E499 and authorises its use as a stabiliser in ready-to-freeze alcoholic cocktails under specified conditions."
+      },
+      {
+        "label": "UK Food Standards Agency — Regulated Products Register: E499",
+        "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-499",
+        "note": "Lists stigmasterol-rich plant sterols as authorised in Great Britain, with conditions under the relevant food-additive regulations."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Stabiliser"
+    ],
+    "useResearchNote": "The approved category is narrow and jurisdiction-specific; do not imply unrestricted use."
   },
   "E500": {
     "researchStatus": "Cross-checked against Codex GSFA subtype records",
@@ -11744,9 +11818,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E598": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Historical animal-feed use only",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Synthetic calcium aluminates were historically listed in UK feeding-stuffs rules among permitted binders, anti-caking agents and coagulants for specified animal-feed uses. The schedule lists feed categories and maximum contents. This is an animal-feed use, not a human-food additive function or authorisation.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -11762,13 +11836,27 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "UK Feeding Stuffs Regulations 1995",
+        "url": "https://www.legislation.gov.uk/uksi/1995/1412/made",
+        "note": "Lists E598 synthetic calcium aluminates in animal feeding stuffs, with specified species and maximum contents."
+      },
+      {
+        "label": "UK Feeding Stuffs (Amendment) Regulations 1993",
+        "url": "https://www.legislation.gov.uk/uksi/1993/1442/made",
+        "note": "Amendment explicitly inserts E598 for synthetic calcium aluminates in the feedstuff schedule."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Historical animal-feed binder"
+    ],
+    "useResearchNote": "Retained as historical feed-use information only; no human-food use is inferred."
   },
   "E599": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Historical animal-feed use only",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Perlite was historically listed in UK feeding-stuffs rules as a permitted animal-feed binder, anti-caking agent or coagulant for feeding stuffs. The schedule does not establish a human-food use for this E599 listing, so FOSCH keeps it separate from direct human-food additive functions.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -11784,8 +11872,22 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "UK Feeding Stuffs Regulations 1995",
+        "url": "https://www.legislation.gov.uk/uksi/1995/1412/made",
+        "note": "Lists E599 perlite for all species of animals in feeding stuffs."
+      },
+      {
+        "label": "UK Feeding Stuffs Regulations 1988 — Schedule 4",
+        "url": "https://www.legislation.gov.uk/uksi/1988/396/schedule/4/made/data.xht?view=snippet&wrap=true",
+        "note": "Lists perlite in the animal-feed regulatory schedule, separate from direct food-additive provisions."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Historical animal-feed binder / anti-caking material"
+    ],
+    "useResearchNote": "Animal-feed use only in the cited historical schedules; not a human-food authorisation."
   },
   "E620": {
     "researchStatus": "Codex GSFA verified",
@@ -12985,9 +13087,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E918": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Source-backed functional classification",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Nitrogen oxides are listed in the Codex INS system as a flour-treatment agent. This is a functional classification describing the technological purpose associated with the substance; it does not establish that the substance is authorised in every country or that it is currently used in ordinary commercial flour milling.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -13003,13 +13105,27 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Lists INS 918 Nitrogen oxides under the functional class and technological purpose flour treatment agent."
+      },
+      {
+        "label": "Codex Alimentarius — CX/FAC 05/37/12-Add.1",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FShared%2BDocuments%2FArchive%2FMeetings%2FCCFAC%2Fccfac37%2FFA3712ae.pdf",
+        "note": "Earlier Codex technical-function list also identifies INS 918 as a flour-treatment agent."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Flour treatment agent"
+    ],
+    "useResearchNote": "Functional class is source-backed; current country-specific permission and commercial use are separate questions."
   },
   "E919": {
-    "researchStatus": "No distinct food use verified",
+    "researchStatus": "Source-backed functional classification",
     "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone.",
+    "use": "Nitrosyl chloride is listed in the Codex INS system as a flour-treatment agent. This is a functional classification, not proof of current approval or routine commercial use. Do not infer permitted food categories or use levels from the functional class alone.",
     "sources": [
       {
         "label": "Codex GSFA Online — food additive index",
@@ -13025,8 +13141,22 @@ window.FOSCH_RESEARCH_DATA={
         "label": "European Commission — food additives database",
         "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
         "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+      },
+      {
+        "label": "Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG%2B36-1989%2FCXG_036e.pdf",
+        "note": "Lists INS 919 Nitrosyl chloride under the functional class and technological purpose flour treatment agent."
+      },
+      {
+        "label": "Codex Alimentarius — CX/FAC 05/37/12-Add.1",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FShared%2BDocuments%2FArchive%2FMeetings%2FCCFAC%2Fccfac37%2FFA3712ae.pdf",
+        "note": "Earlier Codex technical-function list also identifies INS 919 as a flour-treatment agent."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Flour treatment agent"
+    ],
+    "useResearchNote": "Functional class is source-backed; current country-specific permission and commercial use are separate questions."
   },
   "E920": {
     "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
