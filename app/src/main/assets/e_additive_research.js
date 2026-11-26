@@ -112,14 +112,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E101(i)": {
-    "researchStatus": "UK FSA grouped-use source",
-    "researchedAt": "2026-11-25",
-    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "researchStatus": "Exact INS 101(i) functional class cross-checked against Codex CXG 36-1989",
+    "researchedAt": "2026-11-26",
+    "use": "Riboflavin is used as a yellow food colour. The INS distinguishes riboflavin (101(i)) from riboflavin-5′-phosphate (101(ii)); permitted food categories and conditions depend on the applicable market.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 101(i) entry identifies riboflavin and lists the Colour functional class."
       }
     ],
     "regulatoryGroups": [
@@ -127,17 +132,25 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "functionalClasses": [
+      "Colour"
     ]
   },
   "E101(ii)": {
-    "researchStatus": "UK FSA grouped-use source",
-    "researchedAt": "2026-11-25",
-    "use": "Used as a food colouring agent to add or restore colour in foods where permitted. Permitted food categories and conditions depend on the market.",
+    "researchStatus": "Exact INS 101(ii) functional class cross-checked against Codex CXG 36-1989",
+    "researchedAt": "2026-11-26",
+    "use": "Riboflavin-5′-phosphate is used as a yellow food colour. It is a distinct form from riboflavin (101(i)); permitted food categories and conditions depend on the applicable market.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 101(ii) entry identifies riboflavin-5′-phosphate and lists the Colour functional class."
       }
     ],
     "regulatoryGroups": [
@@ -145,6 +158,9 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "functionalClasses": [
+      "Colour"
     ]
   },
   "E101a": {
@@ -352,8 +368,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E107": {
-    "researchStatus": "Historical technical colour-use reference; current GB approved-additives list checked; no current GB listing identified",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Historical colour function verified against exact Codex INS 107 entry; current GB listing remains separately checked",
+    "researchedAt": "2026-11-26",
     "use": "Yellow 2G is described in older technical references as a yellow food colour. This is a historical/technical classification only; the checked current Great Britain approved-additives list does not include E107. Do not interpret the old product examples as current permission in Great Britain or as a global status finding.",
     "sources": [
       {
@@ -365,9 +381,17 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 107 entry identifies Yellow 2G and lists Colour. This supports the historical/technical function only, not current authorisation."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Colour"
+    ]
   },
   "E110": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -535,8 +559,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E121": {
-    "researchStatus": "Preproom educational technical-purpose reference",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Historical colour function verified against exact Codex INS 121 entry; no current authorisation inferred",
+    "researchedAt": "2026-11-26",
     "use": "Preproom's E-number reference lists Citrus Red 2 as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
     "sources": [
       {
@@ -548,7 +572,15 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 121 entry identifies Citrus Red 2 and lists Colour. This supports the technical function only, not current authorisation."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
     ]
   },
   "E122": {
@@ -717,8 +749,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E125": {
-    "researchStatus": "Preproom educational technical-purpose reference",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Historical colour function verified against exact Codex INS 125 entry; no current authorisation inferred",
+    "researchedAt": "2026-11-26",
     "use": "Preproom's E-number reference lists Ponceau SX, Scarlet GN as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
     "sources": [
       {
@@ -730,7 +762,15 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 125 entry identifies Ponceau SX and lists Colour. This supports the technical function only, not current authorisation."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
     ]
   },
   "E126": {
@@ -1202,8 +1242,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E142": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
+    "researchStatus": "Exact INS 142 colour function cross-checked against Codex CXG 36-1989",
+    "researchedAt": "2026-11-26",
     "use": "Synthetic green food colorant.",
     "tox": "The JECFA record states no ADI was allocated in the cited evaluation; this is not a numeric safe intake and does not establish approval. Confirm current legal status for the selected country.",
     "intake": "JECFA record: no ADI allocated in the cited evaluation. This is not equivalent to “unlimited” or a declaration of safety at any dose; check present national law.",
@@ -1217,6 +1257,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 142 entry identifies Green S and lists Colour."
       }
     ],
     "regulatoryGroups": [
@@ -1224,6 +1269,9 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "functionalClasses": [
+      "Colour"
     ]
   },
   "E143": {
@@ -1492,8 +1540,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E152": {
-    "researchStatus": "Preproom educational technical-purpose reference",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Historical colour function verified against exact Codex INS 152 entry; current authorisation not inferred",
+    "researchedAt": "2026-11-26",
     "use": "Preproom's E-number reference lists Black 7984 as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
     "sources": [
       {
@@ -1505,7 +1553,15 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 152 entry identifies carbon black (hydrocarbon) and lists Colour. This is a technical classification, not current market permission."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
     ]
   },
   "E153": {
@@ -1545,8 +1601,8 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E154": {
-    "researchStatus": "Preproom educational technical-purpose reference",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Historical colour function verified against exact Codex INS 154 entry; current authorisation not inferred",
+    "researchedAt": "2026-11-26",
     "use": "Preproom's E-number reference lists Brown FK, Kipper Brown as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
     "sources": [
       {
@@ -1558,7 +1614,15 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 154 entry identifies Brown FK and lists Colour. This is a technical classification, not current market permission."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
     ]
   },
   "E155": {
@@ -2063,8 +2127,8 @@ window.FOSCH_RESEARCH_DATA={
     "intake": "JECFA ADI listed: 0–0.3 mg/kg bw/day (2019); JECFA’s 2026 review noted some high exposure estimates for toddlers exceeded it. Verify current national permissions and avoid presenting this as a per-serving threshold."
   },
   "E160f": {
-    "researchStatus": "Preproom educational technical-purpose reference",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 160f colour function cross-checked against Codex CXG 36-1989",
+    "researchedAt": "2026-11-26",
     "use": "Preproom's E-number reference lists Ethyl ester of beta-apo-8'-carotenic acid (C 30) as a food colouring. It is therefore described as used as a food colourant to add or restore colour. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
     "sources": [
       {
@@ -2076,13 +2140,21 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 160f entry identifies ethyl ester of beta-apo-8′-carotenic acid and lists Colour. This functional classification is not an authorisation statement."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
     ]
   },
   "E161a": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
-    "researchedAt": "2026-11-25",
-    "use": "Yellow food colour. Slightly soluble in water. Examples include Rarely used. If used only in confectionary. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "researchStatus": "Exact INS 161a colour function confirmed in Codex; low-confidence product examples removed",
+    "researchedAt": "2026-11-26",
+    "use": "Flavoxanthin (INS 161a) is listed by Codex as a food colour. The older profile's example-use wording is not treated as evidence of current commercial use or permission; market-specific authorisation must be checked separately.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
@@ -2093,9 +2165,17 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 161a entry identifies flavoxanthin and lists Colour; it does not substantiate the old profile's example-use claims."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Colour"
+    ]
   },
   "E161b": {
     "researchStatus": "Codex GSFA subtype verified",
@@ -2840,9 +2920,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E182": {
-    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
-    "researchedAt": "2026-11-25",
-    "use": "Orcein/orchil is listed in older educational E-number references as a colourant. This is a historical code association only; the cited source does not establish current food-additive permission.",
+    "researchStatus": "Codex INS 182 colour function applies to orchil; combined legacy catalogue naming explicitly qualified",
+    "researchedAt": "2026-11-26",
+    "use": "The Codex INS entry for orchil (INS 182) assigns the Colour function. The catalogue groups the names 'Orcein' and 'Orchil'; this technical classification should not be treated as proof that every substance covered by that combined label has current food-use permission.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
@@ -2853,12 +2933,20 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E182 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 182 entry identifies orchil and lists Colour. The catalogue's combined label also says orcein, so the record explicitly limits the source match to orchil."
       }
+    ],
+    "functionalClasses": [
+      "Colour"
     ]
   },
   "E200": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
+    "researchStatus": "Exact INS 200 preservative function cross-checked against Codex CXG 36-1989",
+    "researchedAt": "2026-11-26",
     "use": "Preservative used to slow yeast and mould growth in specified foods; other sorbates are related members of the same preservative group.",
     "tox": "JECFA’s group ADI is 0–25 mg/kg bw/day expressed as sorbic acid for the covered sorbates. Separately, EFSA’s 2019 follow-up established a group ADI of 11 mg sorbic acid/kg bw/day for sorbic acid (E200) and potassium sorbate (E202), based on an extended one-generation reproductive-toxicity study. EFSA’s most realistic non-brand-loyal exposure scenario did not exceed that 11 mg/kg bw/day group ADI. These are assessor-specific values and must not be conflated.",
     "intake": "EFSA group ADI: 11 mg/kg bw/day expressed as sorbic acid for E200 + E202 (2019). JECFA has a separate group ADI of 0–25 mg/kg bw/day expressed as sorbic acid for the broader specified sorbate group. ADIs are chronic exposure benchmarks, not food concentration limits or recommended targets. National food-category maximums still apply.",
@@ -2877,6 +2965,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 200 entry identifies sorbic acid and lists Preservative."
       }
     ],
     "regulatoryGroups": [
@@ -2884,6 +2977,9 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "functionalClasses": [
+      "Preservative"
     ]
   },
   "E201": {
@@ -2911,8 +3007,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E202": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
+    "researchStatus": "Exact INS 202 preservative function cross-checked against Codex CXG 36-1989",
+    "researchedAt": "2026-11-26",
     "use": "Preservative used to inhibit yeasts and moulds in specified foods.",
     "tox": "JECFA’s group ADI is 0–25 mg/kg bw/day expressed as sorbic acid for the covered sorbates. Separately, EFSA’s 2019 follow-up established a group ADI of 11 mg sorbic acid/kg bw/day for sorbic acid (E200) and potassium sorbate (E202), based on an extended one-generation reproductive-toxicity study. EFSA’s most realistic non-brand-loyal exposure scenario did not exceed that 11 mg/kg bw/day group ADI. These are assessor-specific values and must not be conflated.",
     "intake": "EFSA group ADI: 11 mg/kg bw/day expressed as sorbic acid for E200 + E202 (2019). JECFA has a separate group ADI of 0–25 mg/kg bw/day expressed as sorbic acid for the broader specified sorbate group. ADIs are chronic exposure benchmarks, not food concentration limits or recommended targets. National food-category maximums still apply.",
@@ -2931,6 +3027,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 202 entry identifies potassium sorbate and lists Preservative."
       }
     ],
     "regulatoryGroups": [
@@ -2938,6 +3039,9 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "functionalClasses": [
+      "Preservative"
     ]
   },
   "E203": {
@@ -2965,8 +3069,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E209": {
-    "researchStatus": "Preproom educational technical-purpose reference",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 209 preservative function cross-checked; historical code caveat retained",
+    "researchedAt": "2026-11-26",
     "use": "Preproom's E-number reference lists Heptyl p-hydroxybenzoate as a preservative. It is therefore described as used as a preservative to help slow food spoilage. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
     "sources": [
       {
@@ -2978,12 +3082,20 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 209 entry identifies heptyl para-hydroxybenzoate and lists Preservative. The functional classification does not establish current permission."
       }
+    ],
+    "functionalClasses": [
+      "Preservative"
     ]
   },
   "E210": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
+    "researchStatus": "Exact INS 210 preservative function cross-checked against Codex CXG 36-1989",
+    "researchedAt": "2026-11-26",
     "use": "Preservative used in some acidic foods and drinks to inhibit growth of yeasts, moulds and some bacteria; salts such as sodium benzoate are related benzoates.",
     "tox": "In 2021 JECFA set a group ADI of 0–20 mg/kg body weight/day as benzoic-acid equivalents for benzoic acid, benzoate salts and specified related compounds, and withdrew the earlier group ADI of 0–5. This group-based value must not be treated as food concentration.",
     "intake": "JECFA group ADI: 0–20 mg/kg bw/day as benzoic-acid equivalents (2021), for the specifically named group. National permitted foods and maximum levels vary.",
@@ -2997,6 +3109,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 210 entry identifies benzoic acid and lists Preservative."
       }
     ],
     "regulatoryGroups": [
@@ -3004,11 +3121,14 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "functionalClasses": [
+      "Preservative"
     ]
   },
   "E211": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-27",
+    "researchStatus": "Exact INS 211 preservative function cross-checked against Codex CXG 36-1989",
+    "researchedAt": "2026-11-26",
     "use": "Preservative used to control microbial growth, particularly in acidic foods and drinks.",
     "tox": "JECFA established a group ADI of 0–20 mg/kg body weight/day expressed as benzoic-acid equivalents in 2021 for benzoic acid and specified benzoates/related compounds. EFSA or national rules may use a different assessment or exposure assumptions.",
     "intake": "JECFA group ADI: 0–20 mg/kg bw/day as benzoic-acid equivalents (2021), covering a defined group of compounds. This is not the permitted concentration for an individual food.",
@@ -3022,6 +3142,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 211 entry identifies sodium benzoate and lists Preservative."
       }
     ],
     "regulatoryGroups": [
@@ -3029,6 +3154,9 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "functionalClasses": [
+      "Preservative"
     ]
   },
   "E212": {
@@ -3196,8 +3324,8 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E216": {
-    "researchStatus": "Australia–New Zealand Schedule 15 category-0 permission cross-checked; GB list checked; broad direct-food claim narrowed",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 216 preservative function cross-checked; Australia–New Zealand and GB permissions remain narrowly described",
+    "researchedAt": "2026-11-26",
     "use": "Propyl p-hydroxybenzoate (propylparaben) is described in older technical references as a preservative. The Australia–New Zealand Food Standards Code lists INS 216 only under preparations of food additives, not as an unrestricted direct-use additive for ordinary finished foods. The checked GB approved-additives list does not include E216; the old claim of use across a wide range of foods and cosmetics is not retained as a current permission claim.",
     "sources": [
       {
@@ -3214,13 +3342,21 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E216 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 216 entry identifies propyl para-hydroxybenzoate and lists Preservative. This technical classification does not expand the restricted Schedule 15 preparation permission or establish GB approval."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Preservative"
+    ]
   },
   "E217": {
-    "researchStatus": "Historical technical preservative classification only; no E217 permission established by checked AU/NZ or GB sources",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 217 preservative function cross-checked; no E217 permission inferred from E216",
+    "researchedAt": "2026-11-26",
     "use": "Sodium propyl p-hydroxybenzoate is associated with a preservative function in older technical references. The separate E217 salt is not the same Schedule 15 entry as INS 216: the checked Australia–New Zealand table lists propylparaben (216) in food-additive preparations, but does not establish a permission for E217. The current GB approved-additives list does not include E217.",
     "sources": [
       {
@@ -3242,9 +3378,17 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E217 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 217 entry identifies sodium propyl para-hydroxybenzoate and lists Preservative. The functional classification does not establish current permission."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Preservative"
+    ]
   },
   "E218": {
     "researchStatus": "Cross-checked against official regulator sources; restricted category use",
@@ -3329,9 +3473,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E220": {
-    "researchStatus": "Source-backed summary",
-    "researchedAt": "2026-10-30",
-    "use": "Preservative and antioxidant used to control microbial spoilage and oxidation in specified foods and beverages, including some dried fruit and wines. Sulfur dioxide and sulfite forms interconvert in food and after ingestion. Permitted foods, maximum levels and mandatory declarations depend on jurisdiction and food category.",
+    "researchStatus": "All four functional classes for INS 220 cross-checked against Codex; market limits and declarations remain separate",
+    "researchedAt": "2026-11-26",
+    "use": "Sulfur dioxide (INS 220) functions as a preservative and antioxidant; Codex also lists bleaching-agent and flour-treatment-agent functions. Actual use depends on the process, food category and applicable market rules.",
     "tox": "EFSA’s 2022 follow-up found the toxicology database inadequate to derive an ADI and withdrew the temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day set in 2016. EFSA instead used a margin-of-exposure approach with a reference MOE of 80; its exposure estimates produced MOEs below 80 in the evaluated refined and maximum-permitted-level scenarios, which EFSA considered a safety concern. Sulfite sensitivity and asthma-related reactions are separate from ordinary toxicological ADI assessment.",
     "intake": "There is no current EFSA group ADI for sulfur dioxide–sulfites E220–E228: the temporary 0.7 mg SO2 equivalents/kg bw/day group ADI was withdrawn in the 2022 follow-up. EFSA used a margin-of-exposure reference of 80 and identified concern at estimated exposures. Do not present 0.7 as a current ADI or derive a personal safe dose from this assessment. Check local maximum levels and declaration thresholds.",
     "sources": [
@@ -3364,6 +3508,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 220 entry lists Antioxidant, Bleaching agent, Flour treatment agent and Preservative."
       }
     ],
     "regulatoryGroups": [
@@ -3371,6 +3520,12 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "functionalClasses": [
+      "Antioxidant",
+      "Bleaching agent",
+      "Flour treatment agent",
+      "Preservative"
     ]
   },
   "E221": {
@@ -3456,14 +3611,19 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E223": {
-    "researchStatus": "UK FSA grouped-use source",
-    "researchedAt": "2026-11-25",
-    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "researchStatus": "All four functional classes for INS 223 cross-checked against Codex",
+    "researchedAt": "2026-11-26",
+    "use": "Sodium metabisulfite (INS 223) is classified by Codex as an antioxidant, bleaching agent, flour-treatment agent and preservative. The actual role and permitted conditions depend on the food and applicable regulations.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 223 entry lists Antioxidant, Bleaching agent, Flour treatment agent and Preservative."
       }
     ],
     "regulatoryGroups": [
@@ -3471,17 +3631,28 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "functionalClasses": [
+      "Antioxidant",
+      "Bleaching agent",
+      "Flour treatment agent",
+      "Preservative"
     ]
   },
   "E224": {
-    "researchStatus": "UK FSA grouped-use source",
-    "researchedAt": "2026-11-25",
-    "use": "Used as a preservative to help limit microbial spoilage and extend food shelf life. Permitted foods and use levels depend on the applicable regulations.",
+    "researchStatus": "All four functional classes for INS 224 cross-checked against Codex",
+    "researchedAt": "2026-11-26",
+    "use": "Potassium metabisulfite (INS 224) is classified by Codex as an antioxidant, bleaching agent, flour-treatment agent and preservative. The actual role and permitted conditions depend on the food and applicable regulations.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 224 entry lists Antioxidant, Bleaching agent, Flour treatment agent and Preservative."
       }
     ],
     "regulatoryGroups": [
@@ -3489,6 +3660,12 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "functionalClasses": [
+      "Antioxidant",
+      "Bleaching agent",
+      "Flour treatment agent",
+      "Preservative"
     ]
   },
   "E225": {
@@ -3809,8 +3986,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E236": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 236 preservative function cross-checked against Codex; current permission not inferred",
+    "researchedAt": "2026-11-26",
     "use": "Used as a preservative against many micro-organisms. Due to its smell, use is very limited. Examples include Beverages, sweets, bakery products, icecream This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
     "sources": [
       {
@@ -3822,13 +3999,21 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 236 entry identifies formic acid and lists Preservative. This functional class does not prove current permission in a particular food category or jurisdiction."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Preservative"
+    ]
   },
   "E237": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 237 preservative function cross-checked against Codex; current permission not inferred",
+    "researchedAt": "2026-11-26",
     "use": "Used as a preservative against microorganisms. Examples include Fruit juices, non-alcoholic drinks, preserved vegetables, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
     "sources": [
       {
@@ -3840,13 +4025,21 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 237 entry identifies sodium formate and lists Preservative. This functional class does not prove current permission in a particular food category or jurisdiction."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Preservative"
+    ]
   },
   "E238": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 238 preservative function cross-checked against Codex; current permission not inferred",
+    "researchedAt": "2026-11-26",
     "use": "Used as a preservative against microorganisms. Examples include Fruit juices, non-alcoholic drinks, preserved vegetables, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
     "sources": [
       {
@@ -3858,9 +4051,17 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 238 entry identifies calcium formate and lists Preservative. This functional class does not prove current permission in a particular food category or jurisdiction."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Preservative"
+    ]
   },
   "E239": {
     "researchStatus": "Codex GSFA verified",
@@ -5110,8 +5311,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E311": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 311 antioxidant function cross-checked against Codex",
+    "researchedAt": "2026-11-26",
     "use": "Anti-oxidant in fatty products, especially added to prevent rancidity. Examples include Oils and fats, margarine, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
     "sources": [
       {
@@ -5123,13 +5324,21 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 311 entry identifies octyl gallate and lists Antioxidant; this technical function does not establish current permitted food categories."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Antioxidant"
+    ]
   },
   "E312": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 312 antioxidant function cross-checked against Codex",
+    "researchedAt": "2026-11-26",
     "use": "Anti-oxidant in fatty products, especially added to prevent rancidity. Examples include Oils and fats, margarine, soups, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
     "sources": [
       {
@@ -5141,13 +5350,21 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 312 entry identifies dodecyl gallate and lists Antioxidant; this technical function does not establish current permitted food categories."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Antioxidant"
+    ]
   },
   "E313": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 313 antioxidant function cross-checked against Codex",
+    "researchedAt": "2026-11-26",
     "use": "Anti-oxidant in fatty products, especially added to prevent rancidity. Examples include Oils and fats, (cosmetics). This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
     "sources": [
       {
@@ -5159,9 +5376,17 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 313 entry identifies ethyl gallate and lists Antioxidant; this technical function does not establish current permitted food categories."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Antioxidant"
+    ]
   },
   "E314": {
     "researchStatus": "Codex GSFA verified",
@@ -6504,9 +6729,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E354": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
-    "researchedAt": "2026-11-25",
-    "use": "Acidity regulator and preservative. Examples include Fish and fruit preserves, seaweed products, pharmaceuticals, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "researchStatus": "Corrected to the exact INS 354 class; unsupported preservative function removed",
+    "researchedAt": "2026-11-26",
+    "use": "Calcium tartrate (INS 354) is listed by Codex as an acidity regulator. The older educational profile also described preservative use, but the exact Codex functional-class entry supports acidity regulation only; current category permissions must be checked separately.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
@@ -6517,9 +6742,17 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 354 entry identifies calcium tartrate DL and lists Acidity regulator; it does not list Preservative."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Acidity regulator"
+    ]
   },
   "E355": {
     "researchStatus": "Codex GSFA verified",
@@ -6600,9 +6833,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E363": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
-    "researchedAt": "2026-11-25",
-    "use": "Acidity regulator and flavour enhancer. Examples include Confectionery, bakery products, etc. This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "researchStatus": "Corrected to the exact INS 363 class; flavour-enhancer function not transferred from related succinate salts",
+    "researchedAt": "2026-11-26",
+    "use": "Succinic acid (INS 363) is listed by Codex as an acidity regulator. Flavour-enhancer functions listed for related succinate salts are not transferred to succinic acid itself; applicable food-category conditions are separate.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
@@ -6613,9 +6846,17 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 363 entry identifies succinic acid and lists Acidity regulator. Flavour-enhancer functions are listed for related succinate salts, not this exact INS entry."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Acidity regulator"
+    ]
   },
   "E365": {
     "researchStatus": "Codex GSFA verified",
@@ -6662,8 +6903,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E367": {
-    "researchStatus": "Preproom educational technical-purpose reference",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 367 acidity-regulator function cross-checked against Codex",
+    "researchedAt": "2026-11-26",
     "use": "Preproom's E-number reference lists Calcium fumarate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
     "sources": [
       {
@@ -6675,12 +6916,20 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 367 entry identifies calcium fumarate and lists Acidity regulator."
       }
+    ],
+    "functionalClasses": [
+      "Acidity regulator"
     ]
   },
   "E368": {
-    "researchStatus": "Preproom educational technical-purpose reference",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 368 acidity-regulator function cross-checked against Codex",
+    "researchedAt": "2026-11-26",
     "use": "Preproom's E-number reference lists Ammonium fumarate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
     "sources": [
       {
@@ -6692,7 +6941,15 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 368 entry identifies ammonium fumarate and lists Acidity regulator."
       }
+    ],
+    "functionalClasses": [
+      "Acidity regulator"
     ]
   },
   "E370": {
@@ -6712,9 +6969,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E375": {
-    "researchStatus": "Nutrient identity distinguished from historical additive-purpose listing; no current GB listing identified",
-    "researchedAt": "2026-11-25",
-    "use": "Niacin (vitamin B3) is a nutrient. Older technical references associate E375 with antioxidant or colour-stabilising functions, but the checked current Great Britain approved-additives list does not include E375. FOSCH does not treat that historical description as confirmation of a current technological food-additive permission; nutrient-fortification rules are a separate question.",
+    "researchStatus": "Exact INS 375 colour-retention classification added; nutrient identity distinguished from technological function",
+    "researchedAt": "2026-11-26",
+    "use": "Nicotinic acid (INS 375) is listed by Codex as a colour-retention agent. It is also vitamin B3 (niacin), so its nutritional role should be distinguished from its listed technological function. This classification does not establish current food-additive permission in any market.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
@@ -6725,9 +6982,17 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E375 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 375 entry identifies nicotinic acid and lists Colour-retention agent. This is a technological classification, not evidence of current market permission."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClasses": [
+      "Colour retention agent"
+    ]
   },
   "E380": {
     "researchStatus": "Codex GSFA verified",
@@ -6780,9 +7045,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E383": {
-    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
-    "researchedAt": "2026-11-25",
-    "use": "Calcium glycerylphosphate is listed in older educational E-number references with an acidity-regulator classification. The cited source does not establish current permission or permitted food categories for this code.",
+    "researchStatus": "Corrected to the exact INS 383 classes; unsupported acidity-regulator description removed",
+    "researchedAt": "2026-11-26",
+    "use": "Calcium glycerophosphate (INS 383) is listed by Codex as a gelling agent, stabilizer and thickener. The older acidity-regulator description is not supported by the exact INS functional-class entry.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
@@ -6793,7 +7058,17 @@ window.FOSCH_RESEARCH_DATA={
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E383 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 383 entry identifies calcium glycerophosphate and lists Gelling agent, Stabilizer and Thickener."
       }
+    ],
+    "functionalClasses": [
+      "Gelling agent",
+      "Stabilizer",
+      "Thickener"
     ]
   },
   "E384": {
@@ -7664,9 +7939,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E411": {
-    "researchStatus": "Codex INS functional-purpose classification cross-checked; INS listing is not authorisation",
-    "researchedAt": "2026-11-25",
-    "use": "Oat gum (INS 411) is listed in the Codex INS with thickening and emulsifying technological purposes. This classification describes what the substance can do in food formulations; it does not itself establish current authorisation or permitted food categories in any jurisdiction.",
+    "researchStatus": "Corrected to exact INS 411 functions; unsupported emulsifier claim removed",
+    "researchedAt": "2026-11-26",
+    "use": "Oat gum (INS 411) is listed by Codex as a stabilizer and thickener. The earlier emulsifier claim came from a secondary purpose list and is not supported by the exact Codex entry, so it has been removed.",
     "sources": [
       {
         "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
@@ -7677,7 +7952,16 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 411 entry for oat gum lists Stabilizer and Thickener only; it does not list Emulsifier."
       }
+    ],
+    "functionalClasses": [
+      "Stabilizer",
+      "Thickener"
     ]
   },
   "E412": {
@@ -11907,8 +12191,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E535": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 535 anticaking function cross-checked against Codex",
+    "researchedAt": "2026-11-26",
     "use": "DermNet NZ describes Sodium ferrocyanide as Anti-caking agent. Examples of use include Added to table salt. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
     "sources": [
       {
@@ -11920,12 +12204,20 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 535 entry identifies sodium ferrocyanide and lists Anticaking agent."
       }
+    ],
+    "functionalClasses": [
+      "Anticaking agent"
     ]
   },
   "E536": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 536 anticaking function cross-checked against Codex",
+    "researchedAt": "2026-11-26",
     "use": "DermNet NZ describes Potassium ferrocyanide as Anti-caking agent. Examples of use include In table salts. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
     "sources": [
       {
@@ -11937,7 +12229,15 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 536 entry identifies potassium ferrocyanide and lists Anticaking agent."
       }
+    ],
+    "functionalClasses": [
+      "Anticaking agent"
     ]
   },
   "E537": {
@@ -12262,8 +12562,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E553a": {
-    "researchStatus": "Codex INS subtype and functional-purpose classification cross-checked; INS listing is not authorisation",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Both listed magnesium-silicate subtypes share Codex anticaking/dusting functions; group-level class mapping is explicitly limited to those two entries",
+    "researchedAt": "2026-11-26",
     "use": "Magnesium silicate and magnesium trisilicate (INS 553(i)/(ii)) are listed in the Codex INS for anticaking/dusting technological purposes. This is a functional classification, not blanket authorisation; permitted food categories, levels and conditions depend on the applicable jurisdiction.",
     "sources": [
       {
@@ -12275,7 +12575,16 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The INS 553(i) magnesium silicate (synthetic) and 553(ii) magnesium trisilicate entries each list Anticaking agent and Dusting agent. Both subtypes represented by this E553a group therefore share these functions."
       }
+    ],
+    "functionalClasses": [
+      "Anticaking agent",
+      "Dusting agent"
     ]
   },
   "E553b": {
@@ -12635,9 +12944,9 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E574": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Gluconic acid as Acidity regulator. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "researchStatus": "Both exact INS 574 functional classes cross-checked against Codex",
+    "researchedAt": "2026-11-26",
+    "use": "D-gluconic acid (INS 574) is listed by Codex as an acidity regulator and raising agent. These are technological classifications, not blanket permission for use in every food or jurisdiction.",
     "sources": [
       {
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
@@ -12648,7 +12957,16 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 574 entry identifies D-gluconic acid and lists Acidity regulator and Raising agent."
       }
+    ],
+    "functionalClasses": [
+      "Acidity regulator",
+      "Raising agent"
     ]
   },
   "E575": {
@@ -13459,9 +13777,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E640": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Glycine and its sodium salt as Glycine is an amino acid; Used as flavour enhancer and sweetener. Examples of use include Bread enhancer; Also used in food supplements and protein drinks. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "researchStatus": "Corrected to exact INS 640 function; unsupported sweetener classification removed",
+    "researchedAt": "2026-11-26",
+    "use": "Glycine and its sodium salt (INS 640) are listed by Codex as flavour enhancers. The earlier sweetener description is not supported by the exact INS functional-class entry and has been removed.",
     "sources": [
       {
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
@@ -13472,7 +13790,15 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 640 entry identifies glycine and lists Flavour enhancer; it does not list Sweetener."
       }
+    ],
+    "functionalClasses": [
+      "Flavour enhancer"
     ]
   },
   "E641": {
@@ -13508,8 +13834,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E650": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 650 flavour-enhancer function cross-checked against Codex",
+    "researchedAt": "2026-11-26",
     "use": "DermNet NZ describes Zinc acetate as Flavour enhancer. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
     "sources": [
       {
@@ -13521,7 +13847,15 @@ window.FOSCH_RESEARCH_DATA={
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 650 entry identifies zinc acetate and lists Flavour enhancer."
       }
+    ],
+    "functionalClasses": [
+      "Flavour enhancer"
     ]
   },
   "E701": {
@@ -14376,8 +14710,8 @@ window.FOSCH_RESEARCH_DATA={
     "useResearchNote": "Functional class is source-backed; current country-specific permission and commercial use are separate questions."
   },
   "E920": {
-    "researchStatus": "Australia–New Zealand Food Standards Code Schedules 15 and 18 cross-checked; additive and processing-aid permissions distinguished",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Exact INS 920 flour-treatment function added; Australia–New Zealand additive and processing-aid conditions remain separately described",
+    "researchedAt": "2026-11-26",
     "use": "Australia–New Zealand permissions distinguish two uses of L-cysteine. Schedule 15 permits L-cysteine monohydrochloride at GMP in specified peeled/cut root and tuber vegetables, and in avocados and bananas. Separately, Schedule 18 lists L-cysteine (or its hydrochloride salt) as a dough-conditioning processing aid at a maximum level of 75 mg/kg. The processing-aid permission should not be described as unrestricted use as an additive in finished bread.",
     "sources": [
       {
@@ -14399,7 +14733,15 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Federal Register of Legislation — Australia New Zealand Food Standards Code, Schedule 18 (16 July 2026)",
         "url": "https://www.legislation.gov.au/F2015L00452/2026-07-16/2026-07-16/text/original/epub/OEBPS/document_1/document_1.html",
         "note": "Official Australia–New Zealand Food Standards Code, Schedule 18, compilation effective 16 July 2026. It lists L-cysteine or its hydrochloride salt as a dough-conditioning processing aid with a maximum level of 75 mg/kg. This is a processing-aid permission and should not be presented as unrestricted use as an additive in finished bread."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The exact INS 920 entry identifies L-cysteine and salts and lists Flour treatment agent. This does not alter the separate Australia–New Zealand permissions already described."
       }
+    ],
+    "functionalClasses": [
+      "Flour treatment agent"
     ]
   },
   "E921": {
@@ -14659,8 +15001,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E938": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Technical function described from secondary profile; 2026 Codex INS revision proposal noted but not treated as adopted functional-class evidence",
+    "researchedAt": "2026-11-26",
     "use": "DermNet NZ describes Argon as Packaging gas. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
     "sources": [
       {
@@ -14676,8 +15018,8 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E939": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Technical function described from secondary profile; 2026 Codex INS revision proposal noted but not treated as adopted functional-class evidence",
+    "researchedAt": "2026-11-26",
     "use": "DermNet NZ describes Helium as Packaging gas. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
     "sources": [
       {
@@ -14878,8 +15220,8 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E948": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
+    "researchStatus": "Technical function described from secondary profile; 2026 Codex INS revision proposal noted but not treated as adopted functional-class evidence",
+    "researchedAt": "2026-11-26",
     "use": "DermNet NZ describes Oxygen as Packaging gas. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
     "sources": [
       {
@@ -15886,9 +16228,9 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E999": {
-    "researchStatus": "Codex INS functions and GSFA category-specific provisions cross-referenced; no blanket authorisation inferred",
-    "researchedAt": "2026-11-25",
-    "use": "Quillaia extracts (INS 999) are identified in the Codex INS as emulsifiers and foaming agents. The Codex GSFA database provides food-category-specific provisions that must be checked for the intended product; the functional classification does not mean general permission in all foods or jurisdictions.",
+    "researchStatus": "Parent-group scope corrected: emulsifier and foaming-agent classes apply to named INS 999 subtypes, not automatically to the unqualified group entry",
+    "researchedAt": "2026-11-26",
+    "use": "Quillaia extracts (INS 999) are a group entry. Codex assigns no single functional class to the undifferentiated parent entry; the specific subtypes INS 999(i) and 999(ii) are each listed as emulsifiers and foaming agents. Category-specific provisions must be checked for the intended product and jurisdiction.",
     "sources": [
       {
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
@@ -15904,6 +16246,11 @@ window.FOSCH_RESEARCH_DATA={
         "label": "Codex GSFA Online — Quillaia extracts (INS 999)",
         "url": "https://www.fao.org/gsfaonline/additives/details.html?id=336",
         "note": "FAO/WHO Codex GSFA Online entry for Quillaia extracts (INS 999). Consult the current database provisions for permitted food categories, levels and notes; the INS functional classification itself does not confer authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
+        "note": "The Codex table does not assign a functional class to the undifferentiated parent INS 999 entry; the specific 999(i) and 999(ii) subtypes each list Emulsifier and Foaming agent."
       }
     ]
   },
