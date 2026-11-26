@@ -1294,13 +1294,13 @@ window.FOSCH_RESEARCH_DATA=
     "researchStatus": "Cross-checked against Codex GSFA",
     "researchedAt": "2026-11-25",
     "use": "Green pigments used to color foods; identity and form differ between chlorophylls and chlorophyllins. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Cooked fish and fish products and Dietetic foods (e.g. supplementary foods for dietary use) excluding products of food categories 13.1 - 13.4 and 13.6; these are examples, not blanket permission.",
-    "tox": "The JECFA entry lists “ADI not limited” for chlorophylls (evaluation 1969). This is an older assessment shorthand, not permission to consume unlimited amounts or an approval of every preparation in every jurisdiction.",
-    "intake": "JECFA record: ADI “not limited” (1969). Treat this as an assessment term, not an unlimited-dose recommendation; check current local conditions and specifications.",
+    "tox": "JECFA's 1969 evaluation record for chlorophylls (the magnesium complexes of chlorophyll a and b) uses the historical term ADI “not limited”. This should be reported as the wording of that older assessment, not translated into advice to consume unlimited quantities or into blanket authorisation for every chlorophyll extract. It also does not apply automatically to E141 copper complexes or E140-related chlorophyllins, which are chemically distinct entries and have separate assessments. The JECFA record dates from 1969; do not imply it is a recent EFSA re-evaluation.",
+    "intake": "JECFA historical record: ADI “not limited” (1969) for the chlorophyll a/b substances in that record. This is not an unlimited-intake recommendation, a per-serving allowance or automatic approval for every preparation; check current local rules and exact additive identity.",
     "sources": [
       {
-        "label": "FAO/WHO JECFA — Chlorophylls / INS 140 (1969. JECFA record says ADI “not limited”; the entry is historical and not an unlimited-consumption recommendation.)",
+        "label": "FAO/WHO JECFA — Chlorophylls (INS 140), 1969 evaluation",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/369",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
+        "note": "JECFA's historical record lists an ADI of “not limited” from 1969 for the specific chlorophylls defined in that record; this is not a consumption recommendation or a legal authorisation."
       },
       {
         "label": "EFSA — food-colour safety reassessments",
@@ -1326,6 +1326,11 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "JECFA evaluation archive — Chlorophylls (INS 140)",
+        "url": "https://inchem.org/documents/jecfa/jeceval/jec_405.htm",
+        "note": "Historical evaluation summary identifying the 1969 “ADI not limited” decision and the specific chlorophyll a/b chemical identity."
       }
     ],
     "functionalClasses": [
@@ -1343,7 +1348,9 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against the exact JECFA INS 140 record; historical “not limited” wording is qualified and explicitly not transferred to copper complexes or other chlorophyll-derived substances.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E140(i)": {
     "researchStatus": "Source-backed use",
@@ -1389,8 +1396,8 @@ window.FOSCH_RESEARCH_DATA=
     "researchStatus": "Source-backed summary",
     "researchedAt": "2026-10-27",
     "use": "Green food colorants made by forming copper complexes of chlorophyll-derived pigments; sub-form matters.",
-    "tox": "JECFA lists an ADI of 0–15 mg/kg body weight/day for copper complexes of chlorophylls (INS 141(i)) in the record cited here. This should not be assumed to apply automatically to every sub-form or preparation.",
-    "intake": "JECFA ADI for the specifically identified INS 141(i) form: 0–15 mg/kg body weight/day (1969). Do not generalize to other forms without checking their records.",
+    "tox": "E141 covers two distinct copper-containing food colours, which must not be treated as interchangeable. JECFA's separate historical records list an ADI of 0–15 mg/kg body weight for copper chlorophylls (INS 141(i), 1969) and 0–15 mg/kg body weight for copper chlorophyllins (INS 141(ii), 1978). EFSA's 2015 re-evaluation reached a more cautionary conclusion: reliable data on absorption, distribution, metabolism and excretion, genotoxicity, chronic toxicity, carcinogenicity, and reproductive/developmental toxicity were lacking; safety could not be assessed and EFSA considered that the current ADI should be withdrawn. EFSA also said data for 141(ii) could not be read across to 141(i), because the substances differ in purity, chemistry, stability and manufacture. The old JECFA values should therefore not be presented as a settled, current safety clearance for the undifferentiated E141 parent entry.",
+    "intake": "Historical JECFA values: 0–15 mg/kg bw for the specifically identified 141(i) form (1969) and 0–15 mg/kg bw for the distinct 141(ii) form (1978). EFSA's 2015 assessment concluded that safety could not be assessed and recommended withdrawal of the current ADI because of major data gaps. Do not apply either old subtype value indiscriminately to all E141 preparations or present it as a current universal intake target.",
     "sources": [
       {
         "label": "FAO/WHO JECFA — Copper complexes of chlorophylls / INS 141(i) (Specific JECFA record lists ADI 0–15 mg/kg bw; subtypes must be matched.)",
@@ -1401,6 +1408,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Copper chlorophyll (INS 141(i)), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2825",
+        "note": "Specific JECFA record for copper complexes of chlorophylls (141(i)); lists a 0–15 mg/kg bw ADI from 1969."
+      },
+      {
+        "label": "FAO/WHO JECFA — Copper chlorophyllins, sodium and potassium salts (INS 141(ii)), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/953",
+        "note": "Separate JECFA record for copper complexes of chlorophyllins (141(ii)); lists a 0–15 mg/kg bw ADI from 1978. This is not the same chemical entry as 141(i)."
+      },
+      {
+        "label": "EFSA — Re-evaluation of copper complexes of chlorophylls (E141(i)) and chlorophyllins (E141(ii)), 2015",
+        "url": "https://doi.org/10.2903/j.efsa.2015.4151",
+        "note": "EFSA concluded reliable ADME, genotoxicity, chronic toxicity, carcinogenicity and reproductive/developmental data were lacking, safety could not be assessed, and the current ADI should be withdrawn."
       }
     ],
     "regulatoryGroups": [
@@ -1409,7 +1431,9 @@ window.FOSCH_RESEARCH_DATA=
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
-    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex functional classes are attached to the specific copper-complex chlorophyll/chlorophyllin subforms rather than the undifferentiated E141 parent entry."
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex functional classes are attached to the specific copper-complex chlorophyll/chlorophyllin subforms rather than the undifferentiated E141 parent entry.",
+    "toxicityResearchStatus": "Reviewed against the two separate JECFA subtype records and EFSA's 2015 re-evaluation; subtype identity, read-across limitations and EFSA's ADI-withdrawal conclusion are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E141(i)": {
     "researchStatus": "Source-backed use",
@@ -1455,13 +1479,13 @@ window.FOSCH_RESEARCH_DATA=
     "researchStatus": "Exact INS 142 colour function cross-checked against Codex CXG 36-1989",
     "researchedAt": "2026-11-26",
     "use": "Synthetic green food colorant.",
-    "tox": "The JECFA record states no ADI was allocated in the cited evaluation; this is not a numeric safe intake and does not establish approval. Confirm current legal status for the selected country.",
-    "intake": "JECFA record: no ADI allocated in the cited evaluation. This is not equivalent to “unlimited” or a declaration of safety at any dose; check present national law.",
+    "tox": "JECFA's database lists no ADI allocated at its 1974 evaluation and says a previous temporary ADI was withdrawn; the database's displayed history records that temporary value as 0–5 mg/kg bw in 1969. EFSA's 2010 opinion, however, describes the earlier JECFA temporary value as 25 mg/kg bw/day in 1970 before withdrawal. These historical sources disagree on the temporary figure, so it should not be repeated as a settled JECFA value without checking the original meeting records. Separately, the EU Scientific Committee for Food established an ADI of 5 mg/kg bw/day in 1984, which EFSA maintained in 2010. EFSA noted that adequate genotoxicity data were lacking, while carcinogenicity and reproductive-toxicity studies were negative. At maximum-use assumptions, high-percentile children's estimates exceeded the EU ADI in Tier 2 but not in the refined Tier 3 assessment; adults' estimates did not exceed it in either tier.",
+    "intake": "JECFA: no ADI allocated at the 1974 evaluation; its current database displays a previous temporary value of 0–5 mg/kg bw (1969), while EFSA's 2010 opinion reports 25 mg/kg bw/day for the earlier temporary JECFA value. This historical discrepancy remains unresolved. EU SCF/EFSA: ADI 5 mg/kg bw/day (1984/2010). EFSA exposure estimates for high-consuming children were above that ADI in Tier 2 but below it in refined Tier 3; adults' estimates were below it in both tiers.",
     "sources": [
       {
-        "label": "FAO/WHO JECFA — Green S / INS 142 (JECFA record says no ADI allocated; status and permissions vary by market.)",
+        "label": "FAO/WHO JECFA — Green S (INS 142), evaluation history",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/611",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
+        "note": "JECFA's database lists no ADI at the 1974 evaluation and says the previous temporary ADI was withdrawn. Its displayed history records 0–5 mg/kg bw as the 1969 temporary value."
       },
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
@@ -1472,6 +1496,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 142 entry identifies Green S and lists Colour."
+      },
+      {
+        "label": "EFSA — Re-evaluation of Green S (E142), 2010",
+        "url": "https://doi.org/10.2903/j.efsa.2010.1851",
+        "note": "EFSA maintained the EU SCF ADI of 5 mg/kg bw/day; it noted inadequate genotoxicity data, negative carcinogenicity and reproductive-toxicity results, and child exposure above the ADI under Tier 2 maximum-use assumptions but not under refined Tier 3 estimates."
+      },
+      {
+        "label": "JECFA evaluation archive — Green S",
+        "url": "https://inchem.org/documents/jecfa/jeceval/jec_939.htm",
+        "note": "Evaluation history for Green S. The JECFA database and EFSA's 2010 narrative differ on the numerical historical temporary ADI; the current JECFA database display is retained as the database record, and the discrepancy is not silently resolved."
       }
     ],
     "regulatoryGroups": [
@@ -1482,19 +1516,21 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against the JECFA 1974 database history and EFSA's 2010 re-evaluation; the conflicting historical temporary ADI figures are flagged rather than silently harmonised.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E143": {
     "researchStatus": "Cross-checked against Codex GSFA",
     "researchedAt": "2026-11-25",
     "use": "Synthetic green food colorant; FDA identifies it as FD&C Green No. 3 for permitted US uses. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Bread-type products, including bread stuffing and bread crumbs; these are examples, not blanket permission.",
-    "tox": "JECFA confirmed an ADI of 0–25 mg/kg body weight/day in 2017.",
-    "intake": "JECFA ADI: 0–25 mg/kg body weight/day (2017). This international assessment is not a guarantee that the dye is permitted in the selected country.",
+    "tox": "JECFA confirmed the ADI of 0–25 mg/kg body weight/day for Fast Green FCF in 2017. The ADI was based on a long-term rat dietary study in which 5% Fast Green FCF, equivalent to 2,500 mg/kg bw/day, was the highest concentration tested and the NOAEL. JECFA considered new data and found no reason to revise the earlier ADI. Its conservative dietary exposure estimate was 12 mg/kg bw/day at the 95th percentile for adolescents, below the ADI upper bound; JECFA concluded that estimated dietary exposure for adolescents and other age groups did not present a health concern. This conclusion is tied to the exposure assessment and specified material, not a recommendation to consume the dye.",
+    "intake": "JECFA ADI: 0–25 mg/kg bw/day (confirmed 2017). The long-term rat study's NOAEL was 2,500 mg/kg bw/day at the highest concentration tested; the conservative adolescent 95th-percentile exposure estimate was 12 mg/kg bw/day. This is a long-term benchmark, not a consumption target.",
     "sources": [
       {
-        "label": "FAO/WHO JECFA — Fast Green FCF / INS 143 (2017. JECFA confirmed ADI 0–25 mg/kg bw.)",
+        "label": "FAO/WHO JECFA — Fast Green FCF (INS 143), 2017 evaluation",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1356",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
+        "note": "JECFA confirmed the ADI of 0–25 mg/kg bw in 2017; a long-term rat dietary study identified a NOAEL equivalent to 2,500 mg/kg bw/day at the highest concentration tested, and the conservative 95th-percentile adolescent exposure estimate was 12 mg/kg bw/day."
       },
       {
         "label": "FDA — color additives consumer information",
@@ -1521,7 +1557,9 @@ window.FOSCH_RESEARCH_DATA=
       "Candied fruit",
       "Canned or bottled (pasteurized) fruit",
       "Canned or bottled (pasteurized) or retort pouch vegetables (including mushrooms and fungi, roots and tubers, pulses and legumes, and aloe vera), and seaweeds"
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against JECFA's 2017 evaluation and intake estimate; the study basis and population exposure estimate are retained.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E150a": {
     "researchStatus": "Codex GSFA verified",
