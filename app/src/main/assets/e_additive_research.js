@@ -878,9 +878,28 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E126 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Ponceau 6R (EEC serial E126), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3822",
+        "note": "JECFA record: no ADI allocated in 1974, decision postponed in 1977, and specification withdrawn in 1984."
+      },
+      {
+        "label": "WHO/JECFA — Ponceau 6R toxicological monograph (Food Additives Series 6, 1975)",
+        "url": "https://inchem.org/documents/jecfa/jecmono/v06je27.htm",
+        "note": "Primary historical monograph describing limited mutagenicity testing, inadequate long-term studies, missing reproductive/developmental data, reported human sensitisation, and the conclusion that evaluation was not possible on the data provided."
+      },
+      {
+        "label": "JECFA evaluation archive — Ponceau 6R",
+        "url": "https://inchem.org/documents/jecfa/jeceval/jec_1960.htm",
+        "note": "Evaluation-history summary records the 1977 postponed decision and 1984 specification withdrawal."
       }
     ],
-    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical colour-code reference only; no exact current Codex INS entry was verified for Ponceau 6R."
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical colour-code reference only; no exact current Codex INS entry was verified for Ponceau 6R.",
+    "tox": "JECFA's 1974 monograph concluded that Ponceau 6R could not be evaluated on the data provided. The long-term studies were inadequate for assessing long-term toxicity; reproductive and embryotoxicity data, including teratogenicity, were absent apart from a limited mouse teratology study. The monograph also records reports of sensitisation in humans after oral intake. A single older bacterial mutagenicity test was negative, but that isolated result does not resolve the wider data gaps. JECFA postponed its decision in 1977, allocated no ADI, and the specification was withdrawn in 1984. This is an insufficient-evidence conclusion, not proof of safety or proof of a specific human harm.",
+    "intake": "No ADI was allocated. JECFA's 1977 decision was postponed after the earlier evaluation found the evidence inadequate; the specification was withdrawn in 1984. No numerical safe daily intake can be inferred from this record.",
+    "toxicityResearchStatus": "Reviewed against the JECFA 1974 monograph and 1977 evaluation history; the postponed decision and evidence gaps are distinguished from a completed safety assessment.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E127": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -956,10 +975,39 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E128 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Red 2G (INS 128), evaluation history including 2018 status",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/228",
+        "note": "JECFA's historical record lists the 1981 ADI of 0–0.1 mg/kg bw; its 2018 note says it was not re-evaluated because provisions for Red 2G had been withdrawn at CCFA50."
+      },
+      {
+        "label": "EFSA — Red 2G (E128): 2007 safety concern and ADI withdrawal",
+        "url": "https://www.efsa.europa.eu/en/news/efsa-re-evaluates-safety-food-colours-and-adopts-first-opinion-food-colour-red",
+        "note": "EFSA explains that Red 2G is extensively metabolised to aniline and that genotoxic carcinogenic potential could not be excluded; EFSA withdrew its ADI."
+      },
+      {
+        "label": "European Commission — Commission Regulation (EC) No 884/2007",
+        "url": "https://eur-lex.europa.eu/eli/reg/2007/884/oj",
+        "note": "Official EU regulation suspending use of Red 2G in food and the placing on the market or import of food containing it."
+      },
+      {
+        "label": "EFSA — AFC Panel minutes, 24th plenary meeting, adopted 25 September 2007",
+        "url": "https://www.efsa.europa.eu/sites/default/files/event/afc070703de-m.pdf",
+        "note": "Primary EFSA meeting record: describes aniline metabolism, in-vivo genotoxicity findings for aniline in rodents, concern that a genotoxic mechanism could not be excluded, and withdrawal of EFSA's ADI."
+      },
+      {
+        "label": "WHO/JECFA — Red 2G toxicological monograph (Food Additives Series 16, 1981)",
+        "url": "https://inchem.org/documents/jecfa/jecmono/v16je20.htm",
+        "note": "Historical JECFA monograph associated with the 1981 evaluation; it should be read alongside later EFSA findings and the subsequent regulatory action."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021",
-    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Red 2G is retained as a historical colour designation with EU withdrawal history; no matching current Codex INS functional-class entry was verified."
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Red 2G is retained as a historical colour designation with EU withdrawal history; no matching current Codex INS functional-class entry was verified.",
+    "tox": "JECFA's historical evaluation lists an ADI of 0–0.1 mg/kg body weight/day in 1981. This must not be presented as an unqualified current safety recommendation: EFSA's 2007 re-evaluation found that Red 2G is extensively metabolised to aniline, and considered that aniline's carcinogenic potential could not be excluded because a genotoxic mechanism could not be ruled out. EFSA therefore withdrew its ADI. The European Commission subsequently suspended the use of E128 in food and the placing on the market or import of food containing it under Regulation (EC) No 884/2007. JECFA's database notes in 2018 that Red 2G was not re-evaluated because its provisions had been withdrawn at CCFA50. These are distinct scientific and regulatory records; EU action is not a statement of worldwide legal status.",
+    "intake": "Historical JECFA ADI: 0–0.1 mg/kg bw/day (1981). EFSA withdrew its ADI in 2007; EU use and market placement were suspended under Regulation (EC) No 884/2007. Do not use the old JECFA value as a current intake target or infer that regulatory status is identical in every country.",
+    "toxicityResearchStatus": "Reviewed against JECFA's 1981/2018 record, EFSA's 2007 safety conclusion, and the EU's 2007 regulation; historical ADI, later scientific reassessment, and jurisdiction-specific suspension are kept separate.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E129": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -1030,9 +1078,28 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E130 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Indanthrene Blue RS (historical EEC serial E130), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2558",
+        "note": "JECFA record: no ADI allocated in 1974 after withdrawal of the previous temporary ADI; specification withdrawn in 1984."
+      },
+      {
+        "label": "WHO/JECFA — Indanthrene Blue RS toxicological monograph (Food Additives Series 6, 1975)",
+        "url": "https://inchem.org/documents/jecfa/jecmono/v06je21.htm",
+        "note": "Primary historical monograph: says the long-term rat study was inadequate and metabolism, reproduction, embryotoxicity and teratogenicity information was unavailable; required data had not been provided."
+      },
+      {
+        "label": "JECFA evaluation archive — Indanthrene Blue RS",
+        "url": "https://www.inchem.org/documents/jecfa/jeceval/jec_1116.htm",
+        "note": "Evaluation-history summary records the prior temporary ADI of 0–1 mg/kg bw, its withdrawal, no ADI allocated in 1974, and specification withdrawal in 1984."
       }
     ],
-    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The historical E130 identity Indanthrene blue RS does not match current Codex INS 130 (Manascorubin); no class is transferred across this identity mismatch."
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The historical E130 identity Indanthrene blue RS does not match current Codex INS 130 (Manascorubin); no class is transferred across this identity mismatch.",
+    "tox": "JECFA's 1974 monograph judged the available long-term rat study inadequate because it examined only selected parameters. Information on metabolism, reproduction, embryotoxicity and teratogenicity was unavailable. A temporary ADI had previously been assigned subject to further essential information, but the requested information had not been supplied; JECFA withdrew that temporary ADI and allocated no ADI in 1974. Its specification was withdrawn in 1984. The older studies reporting no increased tumour incidence do not overcome the stated study limitations or establish a safe intake. The absence of an ADI here reflects an insufficient evidence base, not a conclusive finding that the substance is harmless.",
+    "intake": "No ADI was allocated in the 1974 JECFA evaluation. The earlier temporary ADI of 0–1 mg/kg bw (1969) was withdrawn because essential supporting data were not provided; the specification was withdrawn in 1984. No numerical safe daily intake is established by this record.",
+    "toxicityResearchStatus": "Reviewed against the JECFA 1969–1974 evaluation history and 1974 toxicological monograph; the withdrawn temporary ADI and the specific missing-data rationale are stated separately.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E131": {
     "researchStatus": "Cross-checked against official regulator sources",
