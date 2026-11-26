@@ -2550,25 +2550,23 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E170(ii)": {
-    "researchStatus": "No distinct food use verified",
-    "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone. This is the calcium hydrogen carbonate sub-form; the role of calcium carbonate (E170(i)) has not been copied across to it.",
+    "researchStatus": "Codex CXG 36-1989 (amended 2025) confirms the exact INS 170(ii) functional classes; no function is inferred from E170(i), and INS inclusion is not treated as authorisation",
+    "researchedAt": "2026-11-26",
+    "use": "Codex lists calcium hydrogen carbonate (INS 170(ii)) with technological functions as an acidity regulator, anticaking agent, colour, firming agent, flour treatment agent and stabilizer. These are functional classifications; inclusion in the INS does not itself approve use in a particular food or jurisdiction.",
     "sources": [
       {
-        "label": "Codex GSFA Online — food additive index",
-        "url": "https://www.fao.org/gsfaonline/additives/index.html",
-        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
-      },
-      {
-        "label": "FAO/WHO JECFA — food additives database",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
-        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
-      },
-      {
-        "label": "European Commission — food additives database",
-        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
-        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989, amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
+        "note": "The exact INS 170(ii) entry identifies calcium hydrogen carbonate and lists its functional classes. Codex states that inclusion in the INS does not imply approval for use as a food additive."
       }
+    ],
+    "functionalClasses": [
+      "Acidity regulator",
+      "Anticaking agent",
+      "Colour",
+      "Firming agent",
+      "Flour treatment agent",
+      "Stabilizer"
     ]
   },
   "E171": {
@@ -4395,30 +4393,29 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E267": {
-    "researchStatus": "EU specification and Group I listing cross-checked; GB approved-additives list checked; jurisdiction scope distinguished",
-    "researchedAt": "2026-11-25",
-    "use": "Buffered vinegar (E267) has a defined identity/specification in EU law and appears in the EU Group I food-additive listing. That does not mean it is authorised in every food category or jurisdiction. The checked GB approved-additives list does not include E267; use status must therefore be stated by market rather than as a universal permission.",
+    "researchStatus": "Commission Regulation (EU) 2023/2086 confirms buffered vinegar's preservative and acidity-regulator functions; EU Group I status and GB list scope are kept separate from the general Uses description",
+    "researchedAt": "2026-11-26",
+    "use": "Buffered vinegar is used as a preservative and acidity regulator. Its buffering system helps control acidity while providing a preservation function in food formulations. The technological role does not imply unrestricted use; permitted categories and conditions depend on the applicable jurisdiction.",
     "sources": [
       {
-        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
-      },
-      {
-        "label": "European Union — Commission Regulation (EU) 2023/2086, E267 buffered vinegar specification",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32023R2086",
-        "note": "Official EU regulation added the identity/specification for E267 buffered vinegar. A specification defines identity and purity; it does not by itself grant unrestricted permission in every food category."
+        "label": "European Commission — Commission Regulation (EU) 2023/2086",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R2086",
+        "note": "The regulation expressly concerns use of buffered vinegar as a preservative and acidity regulator; it inserts E267 into the EU Union list and Group I. This is EU-specific."
       },
       {
         "label": "EUR-Lex — Regulation (EC) No 1333/2008, consolidated 18 August 2026",
         "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
-        "note": "Official consolidated EU food-additives legislation lists E267 Buffered vinegar in Group I. Individual food-category provisions and conditions still apply."
+        "note": "Lists E267 buffered vinegar in EU Group I. The Union list and applicable food-category conditions are jurisdiction-specific."
       },
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
-        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E267 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+        "note": "GB regulatory cross-check only. The list does not show E267; this does not determine authorisation outside the covered UK jurisdictions."
       }
+    ],
+    "functionalClasses": [
+      "Preservative",
+      "Acidity regulator"
     ]
   },
   "E270": {
@@ -6699,22 +6696,20 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E370": {
-    "researchStatus": "Codex INS identity/functional-purpose entry cross-checked; current use permission not inferred",
-    "researchedAt": "2026-11-25",
-    "use": "1,4-Heptonolactone (INS 370) is listed in the Codex INS. Its inclusion identifies the additive and its technological-purpose classification; it does not establish current permission in any specific food category or jurisdiction. Check the relevant current food-additive standard before describing a permitted use.",
+    "researchStatus": "Codex CXG 36-1989 (amended 2025) identifies INS 370 as 1,4-heptonolactone and lists acidity-regulator and sequestrant functions; no food-category permission is inferred",
+    "researchedAt": "2026-11-26",
+    "use": "1,4-Heptonolactone (INS 370) is listed by Codex as an acidity regulator and sequestrant in food formulations. These are functional classifications; an INS listing alone does not establish authorisation in a particular food category or jurisdiction.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e370.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
-      },
-      {
-        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989, amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
-        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+        "note": "The exact INS 370 entry names 1,4-heptonolactone and lists acidity regulator and sequestrant functions. Codex states that INS inclusion does not imply approval for use."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "functionalClasses": [
+      "Acidity regulator",
+      "Sequestrant"
+    ]
   },
   "E375": {
     "researchStatus": "Nutrient identity distinguished from historical additive-purpose listing; no current GB listing identified",
@@ -8343,14 +8338,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E426": {
-    "researchStatus": "UK FSA grouped-use source",
-    "researchedAt": "2026-11-25",
-    "use": "Used in food formulations for structure and texture: members of this group may emulsify, stabilise, thicken or form gels. The FSA list groups these functions together and does not assign one exact role to every additive; check the substance-specific function and food-category conditions.",
+    "researchStatus": "Codex CXG 36-1989 (amended 2025) verifies the functions for soybean hemicellulose itself, replacing the previous broad grouped-function wording",
+    "researchedAt": "2026-11-26",
+    "use": "Soybean hemicellulose (INS 426) is listed by Codex as an anticaking agent, emulsifier, stabilizer and thickener. These are functional classifications; permitted food categories and use levels must be checked separately for the relevant jurisdiction.",
     "sources": [
+      {
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989, amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
+        "note": "The exact INS 426 entry for soybean hemicellulose lists anticaking agent, emulsifier, stabilizer and thickener."
+      },
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
-        "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+        "note": "Regulatory reference retained for the record's market-status context; it is not used to assign the substance-specific technological functions."
       }
     ],
     "regulatoryGroups": [
@@ -8358,6 +8358,12 @@ window.FOSCH_RESEARCH_DATA={
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
+    ],
+    "functionalClasses": [
+      "Anticaking agent",
+      "Emulsifier",
+      "Stabilizer",
+      "Thickener"
     ]
   },
   "E427": {
@@ -9012,37 +9018,46 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E451": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Triphosphates as Preservatives, emulsifiers, stabilisers; Potassium and sodium triphosphates. Examples of use include Many different products. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "researchStatus": "Codex CXG 36-1989 (amended 2025) cross-checks both listed triphosphate salts; their functional classes are stated without implying blanket authorisation",
+    "researchedAt": "2026-11-26",
+    "use": "The listed triphosphates (pentasodium and pentapotassium triphosphate) are used as acidity regulators, emulsifiers, emulsifying salts, humectants, sequestrants, stabilizers and thickeners. Codex lists these functions for INS 451(i) and 451(ii); this classification does not grant blanket permission across foods or jurisdictions.",
     "sources": [
       {
-        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
-        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
-        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
-      },
-      {
-        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989, amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
-        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+        "note": "The exact INS 451(i) and 451(ii) entries list acidity regulator, emulsifier, emulsifying salt, humectant, sequestrant, stabilizer and thickener functions. INS classification is not an authorisation register."
       }
+    ],
+    "functionalClasses": [
+      "Acidity regulator",
+      "Emulsifier",
+      "Emulsifying salt",
+      "Humectant",
+      "Sequestrant",
+      "Stabilizer",
+      "Thickener"
     ]
   },
   "E452": {
-    "researchStatus": "DermNet NZ technical profile (reviewed June 2026)",
-    "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Polyphosphates as Stabilisers, emulsifiers; Polyphosphates of potassium, calcium, ammonium, sodium. Examples of use include Many different products. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "researchStatus": "Codex CXG 36-1989 (amended 2025) checked across the listed polyphosphate salts; group-level wording explicitly notes that not every function applies to every salt",
+    "researchedAt": "2026-11-26",
+    "use": "Across the listed polyphosphate salts, Codex identifies functions including acidity regulation, emulsification, emulsifying salts, moisture retention, raising, sequestration, stabilization and thickening. The exact functions vary by salt form, so not every role applies to every member of the group; authorisation must be checked separately.",
     "sources": [
       {
-        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
-        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
-        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
-      },
-      {
-        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989, amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
-        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+        "note": "The listed INS 452(i)–(v) entries show the relevant functional classes; the classes vary between individual salts. The group-level description uses the union of those listed functions and does not imply each function applies to every salt."
       }
+    ],
+    "functionalClasses": [
+      "Acidity regulator",
+      "Emulsifier",
+      "Emulsifying salt",
+      "Humectant",
+      "Raising agent",
+      "Sequestrant",
+      "Stabilizer",
+      "Thickener"
     ]
   },
   "E459": {
@@ -10148,22 +10163,19 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E478": {
-    "researchStatus": "Food-Info.net technical profile (historical/functional use)",
-    "researchedAt": "2026-11-25",
-    "use": "Emulsifiers and stabilisers. Examples include Bakery products This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "researchStatus": "Codex CXG 36-1989 (amended 2025) confirms the specific INS 478 function as emulsifier; broader stabilizer claim removed",
+    "researchedAt": "2026-11-26",
+    "use": "Lactylated fatty acid esters of glycerol and propylene glycol (INS 478) function as emulsifiers, helping ingredients that do not readily mix remain dispersed. Codex lists emulsifier as the functional class; this does not establish permission in every food category or jurisdiction.",
     "sources": [
       {
-        "label": "Food-Info.net — individual E-number profile",
-        "url": "https://www.food-info.net/uk/e/e478.htm",
-        "note": "Educational profile describing function/characteristics and example products. Last updated Sunday 5 September, 2021; not a current authorisation register."
-      },
-      {
-        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989, amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
-        "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+        "note": "The exact INS 478 entry lists emulsifier as its functional class."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "functionalClasses": [
+      "Emulsifier"
+    ]
   },
   "E479b": {
     "researchStatus": "Cross-checked against UK FSA functional grouping",
@@ -10486,30 +10498,28 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E490": {
-    "researchStatus": "No distinct food use verified",
-    "researchedAt": "2026-11-25",
-    "use": "No distinct food-use function could be verified for this exact catalogue entry from the sources reviewed. This does not prove the substance has no use, but a food application should not be inferred from the E-number or chemical name alone. The catalogue name is propane-1,2-diol, but current EU additive references identify propane-1,2-diol as E1520. No separate authorised food-additive use under the exact code E490 was verified.",
+    "researchStatus": "Propane-1,2-diol technical effects checked against the US FDA substance record; the catalogue's E490 number is distinguished from the EU identifier E1520",
+    "researchedAt": "2026-11-26",
+    "use": "Propane-1,2-diol (propylene glycol) is used as a solvent or vehicle and humectant. Depending on the formulation, the FDA also lists technical effects including anticaking/free-flow, antimicrobial, antioxidant, drying, emulsifying, flavour-enhancing and formulation-aid functions. These are technical effects, not a statement that every use is permitted in every market.",
     "sources": [
       {
-        "label": "Codex GSFA Online — food additive index",
-        "url": "https://www.fao.org/gsfaonline/additives/index.html",
-        "note": "Checked for an additive-specific INS record and functional-class/food-category entry; no distinct use for this exact catalogue code was verified in this review."
+        "label": "U.S. Food and Drug Administration — Substances Added to Food: Propylene Glycol",
+        "url": "https://hfpappexternal.fda.gov/scripts/fdcc/index.cfm?id=PROPYLENEGLYCOL&set=FoodSubstances",
+        "note": "Identifies propane-1,2-diol as propylene glycol and lists its technical effects, including solvent/vehicle, humectant, anticaking, antimicrobial, antioxidant, drying, emulsifier, flavour-related and formulation-aid functions. This is a US technical-effects reference, not global authorisation."
       },
       {
-        "label": "FAO/WHO JECFA — food additives database",
-        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
-        "note": "Cross-reference for additive identity and evaluations; no additive-specific food-use description for this exact code was confirmed in this review."
-      },
-      {
-        "label": "European Commission — food additives database",
-        "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/database_en",
-        "note": "Regulatory cross-check; the database is jurisdiction-specific and lack of a matching code here does not prove the substance has no use elsewhere."
-      },
-      {
-        "label": "Commission Regulation (EU) No 231/2012 — specifications for food additives",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0231",
-        "note": "EU specification identifies propane-1,2-diol as food additive E1520; this supports the code distinction and does not establish an E490 authorisation."
+        "label": "EFSA — Re-evaluation of propane-1,2-diol (E 1520) as a food additive",
+        "url": "https://doi.org/10.2903/j.efsa.2018.5235",
+        "note": "Confirms the EU additive identifier for this substance is E1520 and discusses its specific EU regulatory context. This is retained to distinguish the catalogue's E490 number from the EU identifier."
       }
+    ],
+    "functionalClasses": [
+      "Anticaking agent",
+      "Antimicrobial agent",
+      "Antioxidant",
+      "Emulsifier",
+      "Humectant",
+      "Flavour enhancer"
     ]
   },
   "E491": {
@@ -11998,20 +12008,40 @@ window.FOSCH_RESEARCH_DATA={
     }
   },
   "E540": {
-    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
-    "researchedAt": "2026-11-25",
-    "use": "Dicalcium diphosphate is associated with technological functions in a secondary E-number list. The secondary listing does not establish current food-additive permission or permitted categories.",
+    "researchStatus": "The E540-to-dicalcium-diphosphate mapping is retained as a legacy/reference code; Codex verifies the substance's INS 450(vi) functions, while current EU nomenclature uses E450(vi)",
+    "researchedAt": "2026-11-26",
+    "use": "Dicalcium diphosphate (Codex INS 450(vi)) can function as an acidity regulator and buffering agent, emulsifier, emulsifying salt, firming agent, raising agent, sequestrant, stabilizer and thickener. These are technological functions; the legacy E540 code does not establish current authorisation in any jurisdiction.",
     "sources": [
       {
-        "label": "Wikipedia — E number (purpose column; secondary cross-reference)",
-        "url": "https://en.wikipedia.org/wiki/E_number",
-        "note": "Only the purpose column was used to describe function. Regulatory-status claims were not imported and should be checked against relevant authorities."
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989, amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
+        "note": "The exact INS 450(vi) entry identifies dicalcium diphosphate and lists its functional classes, including acidity regulator/buffering agent, emulsifier, emulsifying salt, firming agent, raising agent, sequestrant, stabilizer and thickener."
+      },
+      {
+        "label": "Majlis Ugama Islam Singapura — Food Additive Listing (13 September 2016)",
+        "url": "https://isomer-user-content.by.gov.sg/48/15766cc5-7b0d-4df0-938e-e61f1cb2b91e/FOOD%20ADDITIVE%20LISTING%205.pdf",
+        "note": "The reference list maps E-code 540 to dicalcium diphosphate and describes it as a buffer. It is an older reference list, not a current universal authorisation register."
+      },
+      {
+        "label": "European Commission — Regulation (EU) No 231/2012, specifications for food additives",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012R0231",
+        "note": "The EU specification identifies dicalcium diphosphate as E450(vi), distinguishing the current EU identifier from the E540 code used in some older/reference lists."
       },
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
-        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E540 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+        "note": "GB market-status cross-check only; the approved-additives list does not show E540. This does not establish status in other jurisdictions."
       }
+    ],
+    "functionalClasses": [
+      "Acidity regulator",
+      "Emulsifier",
+      "Emulsifying salt",
+      "Firming agent",
+      "Raising agent",
+      "Sequestrant",
+      "Stabilizer",
+      "Thickener"
     ]
   },
   "E541": {
@@ -13767,20 +13797,25 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E900": {
-    "researchStatus": "Codex GSFA functional classes and category-specific provisions cross-checked (INS 900a)",
-    "researchedAt": "2026-11-25",
-    "use": "Dimethylpolysiloxane corresponds to Codex INS 900a. The current Codex GSFA database lists anticaking, antifoaming and emulsifier functions and provides food-category-specific provisions and maximum levels. These Codex provisions are not blanket permission across all foods or jurisdictions.",
+    "researchStatus": "Codex CXG 36-1989 (amended 2025) confirms the exact INS 900a functions; Codex GSFA category provisions remain separate from general function",
+    "researchedAt": "2026-11-26",
+    "use": "Dimethylpolysiloxane (Codex INS 900a) functions as an anticaking agent, antifoaming agent and emulsifier. These are Codex functional classifications; they do not establish permission in every food category or jurisdiction.",
     "sources": [
       {
-        "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
-        "url": "https://dermnetnz.org/topics/food-additives-and-e-numbers",
-        "note": "Peer-reviewed educational reference table with additive descriptions and example uses; not a regulator authorisation list."
+        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989, amended 2025)",
+        "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
+        "note": "The exact INS 900a entry for polydimethylsiloxane lists anticaking agent, antifoaming agent and emulsifier functions."
       },
       {
         "label": "Codex GSFA Online — Polydimethylsiloxane (INS 900a)",
         "url": "https://codex.fao.org/codex-texts/codex-online-databases/gsfa/food-additives-list/food-additive-details?additiveId=f4e9e6be-249a-f111-b8dc-70a8a5613865",
-        "note": "Current Codex GSFA database entry for Polydimethylsiloxane (INS 900a). It lists the functional classes anticaking agent, antifoaming agent and emulsifier, together with food-category-specific provisions and maximum levels. These Codex provisions are not automatic authorisation in every national jurisdiction."
+        "note": "Current Codex GSFA source for food-category-specific provisions and maximum levels. These are not blanket national authorisations."
       }
+    ],
+    "functionalClasses": [
+      "Anticaking agent",
+      "Antifoaming agent",
+      "Emulsifier"
     ]
   },
   "E901": {
@@ -15345,17 +15380,17 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E960b(i)": {
-    "researchStatus": "Source-backed use",
-    "researchedAt": "2026-11-25",
-    "use": "A high-intensity sweetener: rebaudioside M produced by fermentation using Yarrowia lipolytica. EU law groups steviol glycosides E960a–E960d and permits the fermentation-derived form in the same food categories and at the same maximum levels as the other group members; this is category- and level-specific, not unrestricted use.",
+    "researchStatus": "Commission Regulation (EU) 2025/652 confirms E960b(i) identity and sweetener classification; the general Uses statement no longer repeats food-category and maximum-level conditions",
+    "researchedAt": "2026-11-26",
+    "use": "A high-intensity sweetener used to provide sweetness in food formulations. This sub-form is rebaudioside M produced by fermentation using Yarrowia lipolytica; its production route identifies the substance, while the technological function is sweetening.",
     "functionalClasses": [
       "Sweetener"
     ],
     "sources": [
       {
         "label": "European Commission — Commission Regulation (EU) 2025/652",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500652",
-        "note": "EU regulation establishes E960b as steviol glycosides from fermentation, specifies E960b(i) rebaudioside M from Yarrowia lipolytica, and places it in the E960a–E960d group under existing category limits."
+        "url": "https://eur-lex.europa.eu/eli/reg/2025/652/oj/eng",
+        "note": "Establishes E960b as steviol glycosides from fermentation, identifies E960b(i) as rebaudioside M from Yarrowia lipolytica, and adds the additive to the EU sweetener group. EU category conditions remain separate from the Uses description."
       }
     ]
   },
@@ -15386,62 +15421,67 @@ window.FOSCH_RESEARCH_DATA={
     ]
   },
   "E960c(i)": {
-    "researchStatus": "Source-backed use",
-    "researchedAt": "2026-11-25",
-    "use": "An enzymatically produced steviol glycoside sweetener. EU law includes E960c within the steviol-glycosides group E960a–E960d, whose use is restricted to the food categories and maximum levels set in the Union list.",
+    "researchStatus": "Commission Regulation (EU) 2021/1156 confirms E960c as an enzymatically produced steviol-glycoside sweetener; Uses text is separated from category and maximum-level conditions",
+    "researchedAt": "2026-11-26",
+    "use": "A high-intensity sweetener used to impart sweetness in food formulations. This is an enzymatically produced steviol glycoside; the exact glycoside and production route are identified by the catalogue sub-entry. The technological function is sweetening, while permitted categories and use levels are a separate regulatory question.",
     "functionalClasses": [
       "Sweetener"
     ],
     "sources": [
       {
-        "label": "European Commission — Commission Regulation (EU) 2025/652",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500652",
-        "note": "Identifies E960c as enzymatically produced steviol glycosides and confirms the combined E960a–E960d group and category/maximum-level framework."
+        "label": "European Commission — Commission Regulation (EU) 2021/1156",
+        "url": "https://eur-lex.europa.eu/eli/reg/2021/1156/oj/eng/pdf",
+        "note": "Adds E960c enzymatically produced steviol glycosides to the EU sweetener list. This supports the group's sweetener function; it is not a statement of unrestricted food-category permission."
       }
     ]
   },
   "E960c(ii)": {
-    "researchStatus": "Source-backed use",
-    "researchedAt": "2026-11-25",
-    "use": "An enzymatically modified rebaudioside M sweetener derived from highly purified rebaudioside A from Stevia leaf extracts. Its use is as a high-intensity sweetener within the food categories and maximum levels permitted for the E960a–E960d steviol-glycoside group.",
+    "researchStatus": "EU sweetener classification and the October 2026 specification update checked; Uses text is limited to the technological sweetening function",
+    "researchedAt": "2026-11-26",
+    "use": "A high-intensity sweetener used to impart sweetness in food formulations. This is an enzymatically produced steviol glycoside; the exact glycoside and production route are identified by the catalogue sub-entry. The technological function is sweetening, while permitted categories and use levels are a separate regulatory question.",
     "functionalClasses": [
       "Sweetener"
     ],
     "sources": [
       {
-        "label": "European Commission — Commission Regulation (EU) 2025/652",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500652",
-        "note": "Establishes E960c as enzymatically produced steviol glycosides and the E960a–E960d group authorisation framework. The exact sub-form description is taken from the FOSCH catalogue identity."
+        "label": "European Commission — Commission Regulation (EU) 2021/1156",
+        "url": "https://eur-lex.europa.eu/eli/reg/2021/1156/oj/eng/pdf",
+        "note": "Adds E960c enzymatically produced steviol glycosides to the EU sweetener list. This supports the group's sweetener function; it is not a statement of unrestricted food-category permission."
+      },
+      {
+        "label": "European Commission — Commission Regulation (EU) 2026/2309",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A32026R2309",
+        "note": "Updates the specification for E960c(ii) to include rebaudioside M produced by enzymatic conversion using an additional yeast production route. It supports identity/process details, not a separate technological function."
       }
     ]
   },
   "E960c(iii)": {
-    "researchStatus": "Source-backed use",
-    "researchedAt": "2026-11-25",
-    "use": "An enzymatically converted rebaudioside D sweetener derived from highly purified rebaudioside A from Stevia leaf extracts. Its food use is as a high-intensity sweetener within the categories and maximum levels permitted for the E960a–E960d steviol-glycoside group.",
+    "researchStatus": "Commission Regulation (EU) 2021/1156 confirms E960c as an enzymatically produced steviol-glycoside sweetener; Uses text is separated from category and maximum-level conditions",
+    "researchedAt": "2026-11-26",
+    "use": "A high-intensity sweetener used to impart sweetness in food formulations. This is an enzymatically produced steviol glycoside; the exact glycoside and production route are identified by the catalogue sub-entry. The technological function is sweetening, while permitted categories and use levels are a separate regulatory question.",
     "functionalClasses": [
       "Sweetener"
     ],
     "sources": [
       {
-        "label": "European Commission — Commission Regulation (EU) 2025/652",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500652",
-        "note": "Establishes E960c as enzymatically produced steviol glycosides and the E960a–E960d group authorisation framework. The exact sub-form description is taken from the FOSCH catalogue identity."
+        "label": "European Commission — Commission Regulation (EU) 2021/1156",
+        "url": "https://eur-lex.europa.eu/eli/reg/2021/1156/oj/eng/pdf",
+        "note": "Adds E960c enzymatically produced steviol glycosides to the EU sweetener list. This supports the group's sweetener function; it is not a statement of unrestricted food-category permission."
       }
     ]
   },
   "E960c(iv)": {
-    "researchStatus": "Source-backed use",
-    "researchedAt": "2026-11-25",
-    "use": "An enzymatically converted rebaudioside AM sweetener derived from highly purified stevioside from Stevia leaf extracts. Its food use is as a high-intensity sweetener within the categories and maximum levels permitted for the E960a–E960d steviol-glycoside group.",
+    "researchStatus": "Commission Regulation (EU) 2021/1156 confirms E960c as an enzymatically produced steviol-glycoside sweetener; Uses text is separated from category and maximum-level conditions",
+    "researchedAt": "2026-11-26",
+    "use": "A high-intensity sweetener used to impart sweetness in food formulations. This is an enzymatically produced steviol glycoside; the exact glycoside and production route are identified by the catalogue sub-entry. The technological function is sweetening, while permitted categories and use levels are a separate regulatory question.",
     "functionalClasses": [
       "Sweetener"
     ],
     "sources": [
       {
-        "label": "European Commission — Commission Regulation (EU) 2025/652",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500652",
-        "note": "Establishes E960c as enzymatically produced steviol glycosides and the E960a–E960d group authorisation framework. The exact sub-form description is taken from the FOSCH catalogue identity."
+        "label": "European Commission — Commission Regulation (EU) 2021/1156",
+        "url": "https://eur-lex.europa.eu/eli/reg/2021/1156/oj/eng/pdf",
+        "note": "Adds E960c enzymatically produced steviol glycosides to the EU sweetener list. This supports the group's sweetener function; it is not a statement of unrestricted food-category permission."
       }
     ]
   },
