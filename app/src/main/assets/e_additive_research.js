@@ -127,6 +127,11 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 101(i) entry identifies riboflavin and lists the Colour functional class."
+      },
+      {
+        "label": "FAO/WHO JECFA — Riboflavin (INS 101(i)), 2021 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/4091",
+        "note": "JECFA lists a group ADI of “not specified” for riboflavin and specified related forms, and records withdrawal of the earlier 0–0.5 mg/kg bw group ADI."
       }
     ],
     "regulatoryGroups": [
@@ -137,7 +142,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "JECFA's 2021 evaluation established a group ADI of “not specified” for riboflavin, riboflavin-5′-phosphate and specified fermentation-derived riboflavin preparations, expressed as riboflavin. This replaced the earlier group ADI of 0–0.5 mg/kg body weight. “ADI not specified” is an assessment term, not an unlimited-intake recommendation or proof that every use is permitted.",
+    "intake": "JECFA group ADI: “not specified” (2021) for riboflavin and the specified 5′-phosphate and fermentation-derived forms, expressed as riboflavin. The previous group ADI of 0–0.5 mg/kg bw was withdrawn. This is not a recommended intake target.",
+    "toxicityResearchStatus": "Reviewed against the JECFA 2021 group evaluation; identity and group scope retained.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E101(ii)": {
     "researchStatus": "Exact INS 101(ii) functional class cross-checked against Codex CXG 36-1989",
@@ -153,6 +162,11 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 101(ii) entry identifies riboflavin-5′-phosphate and lists the Colour functional class."
+      },
+      {
+        "label": "FAO/WHO JECFA — Riboflavin 5′-phosphate sodium (INS 101(ii)), 2021 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/4093",
+        "note": "Exact form-specific JECFA record; establishes the group ADI of “not specified” and records withdrawal of the earlier 0–0.5 mg/kg bw group ADI."
       }
     ],
     "regulatoryGroups": [
@@ -163,7 +177,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "JECFA's 2021 evaluation established a group ADI of “not specified” for riboflavin, riboflavin-5′-phosphate and specified fermentation-derived riboflavin preparations, expressed as riboflavin. This replaced the earlier group ADI of 0–0.5 mg/kg body weight. “ADI not specified” is an assessment term, not an unlimited-intake recommendation or proof that every use is permitted.",
+    "intake": "JECFA group ADI: “not specified” (2021) for riboflavin and the specified 5′-phosphate and fermentation-derived forms, expressed as riboflavin. The previous group ADI of 0–0.5 mg/kg bw was withdrawn. This is not a recommended intake target.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA 101(ii) chemical record and 2021 group evaluation.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E101a": {
     "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
@@ -179,9 +197,18 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E101a does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Riboflavin 5′-phosphate sodium (INS 101(ii)), 2021 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/4093",
+        "note": "Used only as a conditional comparison: JECFA's group assessment includes riboflavin-5′-phosphate. It does not independently confirm the historical E101a code mapping."
       }
     ],
-    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. This is a historical E-code association and the reviewed sources do not establish a current exact INS 101a entry or a current authorised additive under this distinct code."
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. This is a historical E-code association and the reviewed sources do not establish a current exact INS 101a entry or a current authorised additive under this distinct code.",
+    "tox": "This historical E-number entry is described in the catalogue as riboflavin-5′-phosphate. JECFA's 2021 group evaluation gives an ADI of “not specified” for riboflavin-5′-phosphate, expressed as riboflavin. That conclusion applies only if the historical E101a entry refers to the same specified chemical form; the old code-to-form mapping has not been independently confirmed here.",
+    "intake": "No separate ADI is allocated specifically to the historical E101a designation in the source checked. If the entry is chemically identical to JECFA's riboflavin-5′-phosphate sodium (INS 101(ii)), the 2021 JECFA group ADI is “not specified”. Treat the mapping as provisional until the exact form is confirmed.",
+    "toxicityResearchStatus": "Qualified: JECFA 2021 assessment added conditionally; historical E101a identity mapping remains provisional.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E102": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -274,7 +301,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroups": [
       "colours"
-    ]
+    ],
+    "tox": "JECFA's 1977 record for alkannin (INS 103) lists no ADI allocated, states that a toxicological monograph was not prepared, and records that its specification was withdrawn in 1984. This is an incomplete historical assessment record, not evidence that the substance is harmless or that a safe intake was established.",
+    "intake": "No ADI was allocated by JECFA in its 1977 evaluation. No numerical safe daily intake can be inferred from the absence of an ADI; the JECFA specification was withdrawn in 1984.",
+    "toxicityResearchStatus": "Reviewed against the JECFA 1977 evaluation history; no numeric ADI inferred.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E104": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -350,9 +381,18 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E105 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Fast Yellow AB (historical EEC serial E105)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1570",
+        "note": "JECFA explicitly states that data were limited or deficient and inadequate for a toxicity assessment; decision postponed, no monograph prepared and specification withdrawn in 1984."
       }
     ],
-    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The historical name Fast Yellow AB does not match the current Codex INS 105 identity (Carthamus yellow); no class is transferred across the identity mismatch."
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The historical name Fast Yellow AB does not match the current Codex INS 105 identity (Carthamus yellow); no class is transferred across the identity mismatch.",
+    "tox": "JECFA's 1977 evaluation of Fast Yellow AB recorded that the available toxicity data were limited or deficient and did not permit an adequate assessment. The decision was postponed, no toxicological monograph was prepared, and the specification was withdrawn in 1984. The record does not establish a safe intake.",
+    "intake": "No ADI was established by JECFA. Its 1977 decision was postponed because the toxicity data were inadequate for assessment; the specification was withdrawn in 1984. Do not use the historical temporary or unevaluated status as a current intake limit.",
+    "toxicityResearchStatus": "Reviewed against the JECFA historical evaluation; insufficient evidence is stated explicitly.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E106": {
     "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
@@ -368,9 +408,18 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E106 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Riboflavin 5′-phosphate sodium (INS 101(ii)), 2021 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/4093",
+        "note": "Supports the safety assessment for the chemically defined INS 101(ii) form; does not by itself validate historical E106 code usage."
       }
     ],
-    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The stated historical riboflavin-5-sodium-phosphate identity is not established as an exact current Codex INS 106 entry by the reviewed source."
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The stated historical riboflavin-5-sodium-phosphate identity is not established as an exact current Codex INS 106 entry by the reviewed source.",
+    "tox": "This historical entry is mapped in the catalogue to riboflavin-5′-phosphate sodium. JECFA's current record for the chemically defined form (INS 101(ii)) includes it in a 2021 group ADI of “not specified”, expressed as riboflavin. This assessment applies only if the E106 entry represents that same chemical form; the legacy E-number association is not itself a separate toxicological evaluation.",
+    "intake": "No separate current ADI is assigned to the historical E106 code. For the chemically defined riboflavin-5′-phosphate sodium form (INS 101(ii)), JECFA's 2021 group ADI is “not specified”, expressed as riboflavin. This link is conditional on the substance identity matching.",
+    "toxicityResearchStatus": "Qualified: mapped to JECFA 101(ii) only on the stated chemical identity; legacy code equivalence remains to be independently confirmed.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E107": {
     "researchStatus": "Historical colour function verified against exact Codex INS 107 entry; current GB listing remains separately checked",
@@ -391,12 +440,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 107 entry identifies Yellow 2G and lists Colour. This supports the historical/technical function only, not current authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Yellow 2G (INS 107), 1979 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3225",
+        "note": "Exact record shows no ADI allocated in 1979, the historical temporary 1977 ADI of 0–0.025 mg/kg bw, and specification withdrawal in 1984."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021",
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "JECFA's 1979 evaluation of Yellow 2G lists no ADI allocated and records that its specification was withdrawn in 1984. The record shows an earlier temporary ADI of 0–0.025 mg/kg bw in 1977, but that value was not retained in the 1979 evaluation. It should not be presented as a current acceptable intake.",
+    "intake": "No ADI was allocated in JECFA's 1979 evaluation. A temporary ADI of 0–0.025 mg/kg bw appeared in the 1977 history but was not retained; the specification was withdrawn in 1984. No current numerical intake limit is established by this record.",
+    "toxicityResearchStatus": "Reviewed against JECFA's 1977–1979 history; temporary ADI clearly marked as historical.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E110": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -477,9 +535,18 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E111 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Orange GGN (historical EEC serial E111)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2260",
+        "note": "JECFA record documents the postponed 1977 decision, no ADI in the earlier evaluation and withdrawal of the specification in 1984."
       }
     ],
-    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical colour-code reference only; no exact current Codex INS entry was verified for Orange GGN."
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical colour-code reference only; no exact current Codex INS entry was verified for Orange GGN.",
+    "tox": "JECFA's 1977 evaluation of Orange GGN records “decision postponed”; its earlier 1974 entry recorded no ADI allocated, and the specification was withdrawn in 1984. The evaluation history does not provide a completed acceptable daily intake or a positive safety conclusion.",
+    "intake": "No established ADI is recorded. JECFA's 1977 decision was postponed; the 1974 evaluation also listed no ADI, and the specification was withdrawn in 1984. No numeric safe daily intake should be inferred.",
+    "toxicityResearchStatus": "Reviewed against the JECFA evaluation history; no ADI inferred from a postponed decision.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E120": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -583,11 +650,20 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 121 entry identifies Citrus Red 2 and lists Colour. This supports the technical function only, not current authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Citrus Red No. 2 (INS 121), 1969 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1457",
+        "note": "JECFA states carcinogenic activity had been demonstrated, available data were inadequate to determine a safe limit, status “not to be used”, and specification withdrawn in 1990."
       }
     ],
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "JECFA's 1969 evaluation of Citrus Red No. 2 recorded carcinogenic activity and judged the available toxicological data inadequate to determine a safe limit. It assigned the status “not to be used” and the specification was withdrawn in 1990. This is a specific historical JECFA safety conclusion, not a general statement about all food colours.",
+    "intake": "No ADI was established. JECFA's 1969 evaluation stated “not to be used” because carcinogenic activity had been reported and the available data could not establish a safe limit. The specification was withdrawn in 1990.",
+    "toxicityResearchStatus": "Reviewed against the JECFA 1969 toxicological conclusion; the recorded “not to be used” status is retained verbatim.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E122": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -773,11 +849,20 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 125 entry identifies Ponceau SX and lists Colour. This supports the technical function only, not current authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Ponceau SX (INS 125), 1980 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/223",
+        "note": "JECFA records that requested multigeneration reproduction/teratology and dog studies were unavailable, no ADI could be established and the specification was withdrawn in 1984."
       }
     ],
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "JECFA's 1980 evaluation of Ponceau SX lists no ADI allocated. The multigeneration reproduction/teratology study and dog studies requested by JECFA were not available, so an acceptable daily intake could not be established. Its specification was withdrawn in 1984. This is an evidence gap, not a finding of safety.",
+    "intake": "No ADI was allocated by JECFA in 1980 because requested multigeneration reproductive/teratology and dog studies were unavailable. The specification was withdrawn in 1984; no numerical safe daily intake is established in this record.",
+    "toxicityResearchStatus": "Reviewed against the JECFA 1980 evaluation and its explicitly stated data gaps.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E126": {
     "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",

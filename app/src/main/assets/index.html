@@ -461,11 +461,24 @@ html[data-theme=dark],html[data-theme=dark] body{background:#000000!important}
 .dietary-option-icon .dietary-vector-icon{display:block;width:20px;height:20px}
 .diet-icon{display:inline-grid;place-items:center;min-width:18px;height:20px;padding:0 1px;color:var(--blue)}
 .diet-icon .dietary-vector-icon{display:block;width:16px;height:16px}
-.onboarding-shot-row{gap:14px;scroll-snap-type:x mandatory}
-.onboarding-shot{flex:0 0 200px;width:200px;scroll-snap-align:start}
-.onboarding-shot img{width:200px;height:390px;object-fit:cover;object-position:center 50%;border:2px solid var(--panel);border-radius:14px}
+.onboarding-shot-row{gap:14px;scroll-snap-type:x mandatory;align-items:flex-start}
+.onboarding-shot{flex:0 0 248px;width:248px;max-width:80vw;scroll-snap-align:start}
+.onboarding-shot img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;object-position:center;border:2px solid var(--panel);border-radius:14px;background:var(--panel)}
 .onboarding-shot figcaption{font-size:12px;line-height:1.35}
-.nutrition-subsection>summary>.nutrition-parent-row{grid-column:2;display:grid;width:100%;min-width:0;box-sizing:border-box}
+
+/* Read-only expandable nutrient rows: the parent cells share the exact grid tracks
+   used by the header and ordinary nutrient rows. The chevron is an overlay, not
+   an additional grid column, so Fat / Total and its values stay column-aligned. */
+.nutrition-read-table{--nutrition-read-columns:minmax(0,1.15fr) minmax(0,.9fr) minmax(0,.95fr) minmax(0,.9fr);grid-template-columns:var(--nutrition-read-columns)}
+.nutrition-read-table>.nutrition-subsection:not(.nutrition-category){grid-column:1/-1;min-width:0;width:100%;margin:0;overflow:visible}
+.nutrition-read-table>.nutrition-subsection:not(.nutrition-category)>summary{position:relative;display:grid;grid-template-columns:var(--nutrition-read-columns);gap:5px;align-items:center;width:100%;min-width:0;padding:5px 0 5px 9px!important;margin:0;box-sizing:border-box;background:transparent!important;border:0!important;color:var(--text)!important;font:inherit;text-align:left}
+.nutrition-read-table>.nutrition-subsection:not(.nutrition-category)>summary::before{position:absolute;left:0;top:50%;transform:translateY(-50%) rotate(-45deg);justify-self:auto}
+.nutrition-read-table>.nutrition-subsection:not(.nutrition-category)[open]>summary::before{transform:translateY(-50%) rotate(45deg)}
+.nutrition-read-table>.nutrition-subsection:not(.nutrition-category)>summary>.nutrient-name,
+.nutrition-read-table>.nutrition-subsection:not(.nutrition-category)>summary>div{min-width:0}
+.nutrition-read-table>.nutrition-subsection:not(.nutrition-category)>summary>.nutrient-name{text-align:left;overflow-wrap:anywhere}
+.nutrition-read-table>.nutrition-subsection:not(.nutrition-category)>summary>div:not(.nutrient-name){text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.nutrition-read-table>.nutrition-subsection:not(.nutrition-category)>.nutrition-subgrid-read{grid-template-columns:var(--nutrition-read-columns);gap:5px;width:100%;min-width:0;padding:0 0 6px 9px;box-sizing:border-box}
 </style></head><body><main class="app" id="app"></main><nav class="nav hidden" aria-label="Main navigation">
 <button class="scan" aria-label="Scan barcode" onclick="navigateBottomTab('scan')"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7V4h4M17 4h4v3M21 17v3h-4M7 20H3v-3" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 8v8M9 8v8M12 8v8M15 8v8M18 8v8" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg></button>
 <button id="navHome" aria-label="Home" onclick="navigateBottomTab('home')"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 2.1 10.9v1.6h2v7.4c0 .9.7 1.6 1.6 1.6h12.6c.9 0 1.6-.7 1.6-1.6v-7.4h2v-1.6L12 2.8Z" fill="currentColor"/><path d="M10 21.5v-6.2h4v6.2" fill="var(--panel)"/></svg></span></button>
@@ -1315,7 +1328,7 @@ function nutritionReadRowsMarkup(n){
   const children=nutritionNutrients.filter(child=>child.parent===f.key&&nutritionFieldHasValue(n,child));
   const parentHas=nutritionFieldHasValue(n,f);
   const parentRow=(parentHas||children.length)?nutritionReadFieldMarkup(f,n):'';
-  if(children.length)return '<details class="nutrition-subsection"><summary><div class="nutrition-parent-row">'+parentRow+'</div></summary><div class="nutrition-subgrid nutrition-subgrid-read">'+children.map(child=>nutritionReadFieldMarkup(child,n)).join('')+'</div></details>';
+  if(children.length)return '<details class="nutrition-subsection"><summary>'+parentRow+'</summary><div class="nutrition-subgrid nutrition-subgrid-read">'+children.map(child=>nutritionReadFieldMarkup(child,n)).join('')+'</div></details>';
   return parentRow;
  }).join('');
  return regular+categories.map(category=>nutritionCategoryRowsMarkup(n,category,true)).join('');
