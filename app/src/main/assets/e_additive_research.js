@@ -3495,12 +3495,17 @@ window.FOSCH_RESEARCH_DATA=
       {
         "label": "Food Standards Australia New Zealand — Schedule 8 additive names and code numbers",
         "url": "https://www.foodstandards.gov.au/sites/default/files/2026-03/Food%20Standards%20Code%20-%20Compilation%20%28March%202026%29_0.pdf",
-        "note": "Official code-number/name index for ingredient declarations; this index alone does not establish a current permission to use an additive."
+        "note": "Schedule 8 name/code index lists “Saffron or crocetin or crocin” as code 164 for ingredient declarations; this is not by itself an authorisation to use purified crocin/crocetin as a general food-colour additive."
       },
       {
         "label": "International Association of Color Manufacturers — Saffron colour profile",
         "url": "https://iacmcolor.org/color-profile/saffron/",
-        "note": "Describes crocin and crocetin as the colouring principles of saffron."
+        "note": "Identifies crocin and crocetin as saffron's colouring principles; informational identity source rather than a toxicological evaluation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Saffron (crocin/crocetin), 1985 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3912",
+        "note": "JECFA classified saffron as a food ingredient rather than a food additive; no ADI was allocated, and no toxicological monograph was prepared."
       }
     ],
     "functionalClasses": [
@@ -3513,7 +3518,11 @@ window.FOSCH_RESEARCH_DATA=
     },
     "regulatoryGroups": [
       "colours"
-    ]
+    ],
+    "tox": "JECFA's 1985 record classifies saffron (whose colouring principles include crocin and crocetin) as a food ingredient rather than as a food additive. It therefore did not allocate an ADI and did not prepare a toxicological monograph for E164 as a colour additive. This must not be rewritten as either “ADI not specified” or a completed safety assessment of isolated crocin/crocetin concentrates. Australia's Schedule 8 code/name index includes “saffron or crocetin or crocin” for ingredient declaration purposes, but that index alone does not establish a general permission for isolated colour additives under Schedule 15. The record should remain a food-ingredient identity entry; any concentrated extract or purified pigment needs its own identity- and use-specific assessment.",
+    "intake": "JECFA status: classified as a food ingredient, not a food additive (1985); no additive ADI was allocated and no toxicological monograph was prepared. This is not an ADI “not specified” determination and should not be extrapolated to purified or concentrated crocin/crocetin preparations.",
+    "toxicityResearchStatus": "Reviewed against JECFA's exact saffron record and FSANZ's Schedule 8 identity index; food-ingredient classification is distinguished from a completed food-additive safety assessment.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E170": {
     "researchStatus": "UK FSA grouped-use source",
@@ -3582,8 +3591,27 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "FAO/WHO JECFA — Calcium carbonate (INS 170(i)), 1965 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/457",
+        "note": "JECFA's historical ADI was “not limited”, conditional on assessing whether the extra dietary calcium contribution was acceptable."
+      },
+      {
+        "label": "EFSA — Re-evaluation of calcium carbonate (E170), 2011",
+        "url": "https://doi.org/10.2903/j.efsa.2011.2318",
+        "note": "EFSA found no need for a numerical ADI and no concern from reported uses/use levels for calcium carbonate itself, while identifying unavoidable aluminium impurity as a concern."
+      },
+      {
+        "label": "EFSA — Follow-up and infant-food assessment of calcium carbonate (E170), 2023",
+        "url": "https://doi.org/10.2903/j.efsa.2023.8106",
+        "note": "EFSA found rapid gastric dissolution of the tested ground and precipitated calcium carbonate materials and no concern from small particles, including nanoparticles, at the tested concentrations."
       }
-    ]
+    ],
+    "tox": "For calcium carbonate (INS 170(i)), JECFA's 1965 evaluation used the historical term ADI “not limited”, but explicitly required that the additive's contribution to total dietary calcium be assessed and considered acceptable. EFSA's 2011 re-evaluation concluded that a numerical ADI was unnecessary and that the reported food-additive uses/use levels did not raise a safety concern for calcium carbonate itself; it separately flagged the unavoidable presence of aluminium as an impurity requiring attention to specifications. EFSA's 2023 follow-up found that the tested ground and precipitated preparations dissolved rapidly under simulated gastric conditions and that exposure to small particles, including nanoparticles, at the tested concentrations was not a concern; a nano-specific risk assessment was not required. These conclusions concern specified calcium carbonate preparations and reported/tested use levels, not all calcium salts or unlimited calcium intake.",
+    "intake": "JECFA: historical ADI “not limited” (1965), conditional on acceptable contribution to dietary calcium. EFSA: no numerical ADI needed (2011); reported uses not of concern for calcium carbonate itself, with aluminium impurity controls needed. EFSA 2023: no concern from small particles in the tested materials/concentrations.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA 170(i) record and EFSA's 2011/2023 opinions; the dietary-calcium condition, impurity concern and nanoparticle follow-up are retained.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E170(ii)": {
     "researchStatus": "Codex CXG 36-1989 (amended 2025) confirms the exact INS 170(ii) functional classes; no function is inferred from E170(i), and INS inclusion is not treated as authorisation",
@@ -3591,9 +3619,14 @@ window.FOSCH_RESEARCH_DATA=
     "use": "Codex lists calcium hydrogen carbonate (INS 170(ii)) with technological functions as an acidity regulator, anticaking agent, colour, firming agent, flour treatment agent and stabilizer. These are functional classifications; inclusion in the INS does not itself approve use in a particular food or jurisdiction.",
     "sources": [
       {
-        "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989, amended 2025)",
+        "label": "FAO/WHO Codex — CXG 36-1989, Class Names and the International Numbering System for Food Additives",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
-        "note": "The exact INS 170(ii) entry identifies calcium hydrogen carbonate and lists its functional classes. Codex states that inclusion in the INS does not imply approval for use as a food additive."
+        "note": "Codex identifies INS 170(ii) as calcium hydrogen carbonate and lists its functional classes; inclusion in the INS is not an authorisation for use in a food or jurisdiction."
+      },
+      {
+        "label": "FAO/WHO JECFA — Calcium hydrogen carbonate (INS 170(ii)), 1985 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1528",
+        "note": "JECFA allocated no ADI because it had no information about the manufacture of calcium hydrogen carbonate or the use of food-grade material; no specification was prepared."
       }
     ],
     "functionalClasses": [
@@ -3603,7 +3636,11 @@ window.FOSCH_RESEARCH_DATA=
       "Firming agent",
       "Flour treatment agent",
       "Stabilizer"
-    ]
+    ],
+    "tox": "Calcium hydrogen carbonate (INS 170(ii)) is a separate substance record from calcium carbonate (INS 170(i)). JECFA's 1985 evaluation allocated no ADI because it had no information about how calcium hydrogen carbonate was manufactured or how the food-grade material was used; no specification was prepared. This is an inability-to-evaluate conclusion caused by missing identity/manufacturing/use information, not the same assessment as the historical “ADI not limited” status for calcium carbonate. EFSA's 2011/2023 assessments of calcium carbonate E170 should not be transferred automatically to calcium hydrogen carbonate without evidence that the materials are equivalent.",
+    "intake": "No ADI allocated by JECFA (1985), because manufacturing and food-grade use information were unavailable. Do not borrow the separate INS 170(i) calcium-carbonate ADI or EFSA conclusion.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA INS 170(ii) record and the Codex identity entry; the data-gap rationale and distinction from calcium carbonate are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E171": {
     "researchStatus": "Codex GSFA function; Great Britain authorisation and Northern Ireland prohibition cross-checked",
@@ -3759,6 +3796,26 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
         "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
         "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
+      },
+      {
+        "label": "FAO/WHO JECFA — Aluminium powder (INS 173), 1977 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1756",
+        "note": "JECFA allocated no separate ADI; it noted that aluminium powder was used in very limited amounts as silvering decoration on certain confectionery and did not consider that limited use to present a hazard."
+      },
+      {
+        "label": "FAO/WHO JECFA — Aluminium-containing food additives, 2011 PTWI",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/6179",
+        "note": "JECFA established a PTWI of 2 mg/kg bw/week for aluminium from all sources in food, including food additives; high child exposure estimates from aluminium-containing additives could exceed it by up to two-fold."
+      },
+      {
+        "label": "EFSA — Safety of aluminium from dietary intake, 2008",
+        "url": "https://www.efsa.europa.eu/en/news/efsa-advises-safety-aluminium-food",
+        "note": "EFSA established a total-aluminium TWI of 1 mg/kg bw/week, applicable to aluminium from all sources in food, including additives."
+      },
+      {
+        "label": "FAO/WHO JECFA — Aluminium, 2011 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/298",
+        "note": "JECFA's aluminium record includes the 2011 PTWI and the NOAEL of 30 mg/kg bw/day used to derive it."
       }
     ],
     "regulatoryGroups": [
@@ -3774,7 +3831,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "JECFA's 1977 evaluation of aluminium powder (INS 173) did not allocate a separate ADI. It noted that the material was used in very limited quantities as a silvering decoration on certain confectionery and did not consider that limited use to present a hazard. This historical comment is specific to that narrow use and is not a general safety assessment of high aluminium exposure. Total dietary aluminium is subject to broader health-based guidance values: EFSA established a TWI of 1 mg aluminium/kg body weight/week in 2008, and JECFA later established a PTWI of 2 mg aluminium/kg bw/week in 2011, withdrawing its earlier lower PTWI. JECFA explicitly states that the 2 mg PTWI applies to all aluminium compounds in food, including food additives. JECFA also noted that estimated dietary exposure to aluminium-containing additives among children, including high consumers, could exceed the PTWI by up to two-fold. These weekly values concern total aluminium from all dietary sources and should not be presented as a specific allowance for E173. The individual additive identity and the jurisdiction's narrow permitted food categories still matter.",
+    "intake": "No separate ADI allocated for aluminium powder (INS 173). Total aluminium has a separate health-based guidance value: EFSA TWI 1 mg Al/kg bw/week (2008); JECFA PTWI 2 mg Al/kg bw/week (2011), applying to all aluminium compounds in food including additives. High child exposure estimates from aluminium-containing additives could exceed the JECFA PTWI by up to two-fold.",
+    "toxicityResearchStatus": "Reviewed against JECFA's exact aluminium-powder record and the EFSA/JECFA total-aluminium guidance values; the limited decorative use and all-source weekly limits are kept distinct.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E174": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -3966,14 +4027,28 @@ window.FOSCH_RESEARCH_DATA=
       {
         "label": "Codex GSFA — Tannin (INS 181)",
         "url": "https://www.fao.org/gsfaonline/additives/details.html?id=236",
-        "note": "Additive-specific Codex GSFA record for INS 181, including its functional classes and food-category provisions."
+        "note": "INS 181 functional-class entry; technological classification does not replace the specific JECFA conditions for its ADI or establish a general permission for every use."
       },
       {
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "FAO/WHO JECFA — Tannic acid (INS 181), 1989 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3751",
+        "note": "JECFA ADI “not specified” only for use as a filtering aid where good manufacturing practice ensures tannic acid is removed from food after use."
+      },
+      {
+        "label": "FAO/WHO JECFA — Oenological tannins, 2017 evaluation and 2023 status",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/6465",
+        "note": "Separate group entry for tannins used in winemaking: JECFA could not evaluate them in 2017 because specifications and product identities were absent; in 2023 CCFA53 noted that there was no support to provide requested data to finalise the assessment."
       }
-    ]
+    ],
+    "tox": "JECFA's 1989 evaluation of tannic acid (INS 181) assigned an ADI “not specified” only for its use as a filtering aid where good manufacturing practice ensures that it is removed from the food after processing. This is a processing-aid condition, not a blanket conclusion for direct use as a colour, emulsifier, stabiliser or thickener in the finished food. A separate JECFA record for oenological tannins used in winemaking received no ADI in 2017 because the products in commerce were not sufficiently identified and specifications were unavailable; at CCFA53 in 2023, it was noted that there was no support to provide the information needed to complete that assessment. These are related tannin materials but not interchangeable evaluations. Do not extend the filtering-aid “not specified” status to wine-making tannin preparations or all tannin-containing extracts.",
+    "intake": "JECFA ADI “not specified” (1989) applies only to tannic acid used as a filtering aid when GMP ensures it is removed from food. Separate oenological tannins: no ADI allocated (2017) because product identities/specifications were missing; assessment remained unfinished in 2023.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA INS 181 record, the separate oenological-tannins entry and the Codex functional-class entry; processing-aid removal conditions are explicit and not generalised.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E182": {
     "researchStatus": "Codex INS 182 colour function applies to orchil; combined legacy catalogue naming explicitly qualified",
@@ -3988,17 +4063,21 @@ window.FOSCH_RESEARCH_DATA=
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
-        "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E182 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+        "note": "Current GB approved-additives list; E182 is not listed among approved additives. This is a jurisdiction-specific list and does not establish worldwide regulatory status."
       },
       {
-        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
+        "label": "FAO/WHO Codex — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
-        "note": "The exact INS 182 entry identifies orchil and lists Colour. The catalogue's combined label also says orcein, so the record explicitly limits the source match to orchil."
+        "note": "Codex identifies INS 182 as orchil and gives its functional class as Colour; this nomenclature entry is not a toxicological evaluation or authorisation."
       }
     ],
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "The historical catalogue label combines “orcein” and “orchil”, but the Codex INS 182 entry identifies orchil specifically. No substance-specific JECFA toxicological evaluation/ADI or EFSA food-colour re-evaluation for the combined E182 catalogue entry was identified in the official sources checked for this review. The Codex functional-class entry supports the identity and colour function of orchil only; it is not a safety assessment or regulatory authorisation. The current Great Britain approved-additives list does not list E182. No numerical safe intake can be inferred, and findings for other natural pigments or for laboratory orcein dyes must not be transferred to this entry.",
+    "intake": "No identity-matched ADI or completed food-additive safety assessment identified for the combined E182 catalogue entry. Codex INS 182 identifies orchil, while the catalogue also mentions orcein; the identities must not be conflated. GB approved-additives list checked, with no E182 listing.",
+    "toxicityResearchStatus": "Reviewed against Codex INS identity and the current GB approved-additives list; no substance-specific tox evaluation was located for E182, and no ADI or safety conclusion is inferred from related pigments.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E200": {
     "researchStatus": "Exact INS 200 preservative function cross-checked against Codex CXG 36-1989",
