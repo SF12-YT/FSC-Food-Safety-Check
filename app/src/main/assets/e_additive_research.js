@@ -1369,8 +1369,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "EFSA — Re-evaluation of chlorophylls (E140(i)), 2015",
+        "url": "https://doi.org/10.2903/j.efsa.2015.4089",
+        "note": "EFSA found the toxicological database inadequate for establishing an ADI, but concluded that at reported use levels chlorophylls were not of safety concern for their current use as food additives. The extract identity and up-to-90% unidentified non-colour components required improved specifications."
+      },
+      {
+        "label": "FAO/WHO JECFA — Chlorophylls (INS 140), 1969 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/369",
+        "note": "JECFA historical record for chlorophyll a and b lists an ADI “not limited” in 1969; this is distinct from EFSA's later conclusion that a numerical ADI could not be established."
       }
-    ]
+    ],
+    "tox": "EFSA's 2015 re-evaluation found the available toxicological studies limited and not compliant with current OECD/regulatory requirements, so a numerical ADI could not be established. The extract may contain up to 90% unidentified material, and EFSA recommended better specifications, including controls for pesticides, mycotoxins, biologically active plant constituents and toxic elements. The limited biological data suggested chlorophylls are poorly absorbed and are not metabolised to chlorophyllins. Importantly, EFSA nevertheless concluded that, at reported use levels, E140(i) was not of safety concern for its current use as a food additive; that conclusion is tied to the reported uses and does not mean a numerical ADI was established. JECFA's older 1969 database entry separately uses the wording ADI “not limited”; that historical wording should not be confused with EFSA's 2015 assessment.",
+    "intake": "No numerical ADI established by EFSA in 2015 because the toxicological database was inadequate. EFSA concluded that the reported current use levels were not of safety concern. JECFA's historical 1969 record says ADI “not limited”; this is a different assessment and not a recommendation for unlimited intake.",
+    "toxicityResearchStatus": "Reviewed against EFSA's 2015 re-evaluation and the exact JECFA 140 record; distinguishes no numerical ADI, EFSA's reported-use conclusion and JECFA's historical “not limited” wording.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E140(ii)": {
     "researchStatus": "Source-backed use",
@@ -1389,8 +1403,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E140(ii) does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "EFSA — Re-evaluation of chlorophyllins (E140(ii)), 2015",
+        "url": "https://doi.org/10.2903/j.efsa.2015.4085",
+        "note": "EFSA found no ADME or toxicity data for E140(ii), noted that many studies labelled chlorophyllins actually used copper chlorophyllins (E141(ii)), and concluded read-across from E140(i) was not justified because they are not human metabolites of one another and differ in physicochemical properties."
+      },
+      {
+        "label": "European Commission — EFSA opinions on chlorophylls and chlorophyllins",
+        "url": "https://food.ec.europa.eu/system/files/2019-01/fs_food-improvement-agents_reeval_call_20170407_e140-e141_data.pdf",
+        "note": "Commission-hosted compilation summarises EFSA's E140(ii) finding: absence of ADME/toxicity data, uncertainty in identity and need to characterise the marketed material before a safety assessment."
       }
-    ]
+    ],
+    "tox": "EFSA's 2015 re-evaluation found no data on absorption, distribution, metabolism and excretion (ADME) or toxicity for E140(ii). It also noted that many studies described as chlorophyllins actually used the copper-complex additive E141(ii), not E140(ii). E140(ii) is not a human metabolite of E140(i), and the two have different physicochemical properties, so EFSA concluded that toxicity data could not be read across from E140(i). The additive's identity and composition in marketed material also needed better characterisation. Consequently, EFSA could not assess the safety of E140(ii) on the available evidence. This is a data insufficiency conclusion, not evidence that it is safe and not a demonstration of a particular harmful effect.",
+    "intake": "No numerical ADI could be established from the available data. EFSA could not assess E140(ii) safety because ADME and toxicity data were absent and material identity was insufficiently characterised. The ADI and safety assessment for E140(i) must not be transferred to E140(ii).",
+    "toxicityResearchStatus": "Reviewed against EFSA's 2015 E140(ii) opinion and European Commission summary; no-read-across limitation and absence of direct toxicity data are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E141": {
     "researchStatus": "Source-backed summary",
@@ -1452,8 +1480,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO JECFA — Copper chlorophyll (INS 141(i)), 1969 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2825",
+        "note": "Exact JECFA record for copper chlorophyll / copper phaeophytins: historical ADI 0–15 mg/kg bw in 1969."
+      },
+      {
+        "label": "EFSA — Re-evaluation of copper complexes of chlorophylls (E141(i)) and chlorophyllins (E141(ii)), 2015",
+        "url": "https://doi.org/10.2903/j.efsa.2015.4151",
+        "note": "EFSA found the available database inadequate to assess safety and said the current ADI should be withdrawn; it also said the two chemically distinct subforms cannot be assessed by read-across from one another."
       }
-    ]
+    ],
+    "tox": "The JECFA record for the specific copper chlorophyll form (INS 141(i), copper phaeophytins) lists a historical ADI of 0–15 mg/kg body weight/day from 1969. EFSA's 2015 re-evaluation later found that very few studies had used Cu-chlorophylls and that reliable data on absorption, distribution, metabolism and excretion, genotoxicity, chronic toxicity, carcinogenicity and reproductive/developmental toxicity were lacking. EFSA concluded that safety could not be assessed and that the current ADI should be withdrawn. EFSA also cautioned that E141(ii) data could not be used to fill the gaps for E141(i), because the preparations differ in purity, chemical properties, stability and manufacturing process. The older JECFA number is therefore a historical assessment, not an unqualified current safety clearance.",
+    "intake": "Historical JECFA ADI: 0–15 mg/kg bw/day (1969) for the specifically identified INS 141(i) form. EFSA's 2015 assessment concluded safety could not be assessed and recommended withdrawal of the current ADI. Do not substitute the separate E141(ii) evaluation or treat the older number as a current universal intake recommendation.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA 141(i) record and EFSA's 2015 opinion; the JECFA historical value, EFSA data-gap conclusion and no-read-across warning are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E141(ii)": {
     "researchStatus": "Source-backed use",
@@ -1472,8 +1514,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO JECFA — Copper chlorophyllins, sodium and potassium salts (INS 141(ii)), 1978 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/953",
+        "note": "Exact JECFA record for copper chlorophyllin sodium and potassium salts: ADI 0–15 mg/kg bw in 1978, following earlier temporary evaluations."
+      },
+      {
+        "label": "EFSA — Re-evaluation of copper complexes of chlorophylls (E141(i)) and chlorophyllins (E141(ii)), 2015",
+        "url": "https://doi.org/10.2903/j.efsa.2015.4151",
+        "note": "EFSA found the available database inadequate to assess safety and said the current ADI should be withdrawn; E141(ii) findings cannot be transferred to E141(i)."
       }
-    ]
+    ],
+    "tox": "JECFA's record for copper chlorophyllins, sodium and potassium salts (INS 141(ii)) lists an ADI of 0–15 mg/kg body weight/day at the 22nd JECFA in 1978, following earlier temporary evaluations. EFSA's 2015 re-evaluation later concluded that reliable data on absorption, distribution, metabolism and excretion, genotoxicity, chronic toxicity, carcinogenicity and reproductive/developmental toxicity were lacking; it said the safety of use could not be assessed and recommended withdrawal of the current ADI. EFSA noted some components of Cu-chlorophyllins can be systemically absorbed, and that genotoxicity and carcinogenicity evidence contained gaps and uncertainties requiring further evaluation. E141(ii) is distinct from E141(i); EFSA said data could not be read across between them because of differences in purity, chemical properties, stability and manufacturing process. The older JECFA ADI is a historical assessment and should not be shown as an uncomplicated current clearance.",
+    "intake": "Historical JECFA ADI: 0–15 mg/kg bw/day (1978) for the specifically identified INS 141(ii) sodium and potassium salts. EFSA's 2015 assessment concluded safety could not be assessed and recommended withdrawal of the current ADI. Do not apply this historical value to E141(i) or present it as a current universal intake recommendation.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA 141(ii) record and EFSA's 2015 opinion; the subtype-specific JECFA history, EFSA's conclusions and no-read-across restriction are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E142": {
     "researchStatus": "Exact INS 142 colour function cross-checked against Codex CXG 36-1989",
