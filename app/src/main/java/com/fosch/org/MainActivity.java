@@ -228,6 +228,19 @@ public class MainActivity extends Activity {
                 }
             });
         }
+        @JavascriptInterface public void showSearchKeyboard() {
+            runOnUiThread(() -> {
+                if (view == null) return;
+                view.requestFocus();
+                view.post(() -> {
+                    android.view.inputmethod.InputMethodManager keyboard =
+                            (android.view.inputmethod.InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                    if (keyboard != null) {
+                        keyboard.showSoftInput(view, android.view.inputmethod.InputMethodManager.SHOW_IMPLICIT);
+                    }
+                });
+            });
+        }
         // Synchronous so the UI always gets an immediate answer instead of waiting on a JS callback.
         @JavascriptInterface public boolean checkInternetConnection() {
             return hasValidatedInternet();

@@ -44,11 +44,6 @@
                 android:resource="@xml/fosch_search_widget_info" />
         </receiver>
         <activity
-            android:name=".FOSCHWidgetSearchActivity"
-            android:exported="false"
-            android:theme="@style/FOSCHWidgetSearchDialogTheme"
-            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
-        <activity
             android:name=".FOSCHScanTilePreferencesActivity"
             android:exported="true"
             android:excludeFromRecents="true"

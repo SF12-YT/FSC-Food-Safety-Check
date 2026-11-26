@@ -1,5 +1,5 @@
 <resources>
-    <color name="ic_launcher_background">#215D43</color>
+    <color name="ic_launcher_background">#000000</color>
     <color name="fosch_widget_surface">#EDF5F9</color>
     <color name="fosch_widget_field">#FFFFFF</color>
     <color name="fosch_widget_action">#007D9E</color>

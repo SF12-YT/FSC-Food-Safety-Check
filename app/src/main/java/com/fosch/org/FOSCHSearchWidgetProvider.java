@@ -40,11 +40,12 @@ public final class FOSCHSearchWidgetProvider extends AppWidgetProvider {
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
         views.setOnClickPendingIntent(R.id.widget_scan_button, scanPending);
 
-        Intent openSearch = new Intent(context, FOSCHWidgetSearchActivity.class);
-        openSearch.putExtra(FOSCHWidgetSearchActivity.EXTRA_INITIAL_QUERY, savedQuery(context));
+        Intent openSearch = new Intent(context, MainActivity.class);
+        openSearch.putExtra(MainActivity.EXTRA_WIDGET_SEARCH_QUERY, savedQuery(context));
         openSearch.setAction("com.fosch.org.widget.OPEN_SEARCH." + id);
         openSearch.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                | Intent.FLAG_ACTIVITY_CLEAR_TOP
+                | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent searchPending = PendingIntent.getActivity(context, id * 10 + 2, openSearch,
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
         views.setOnClickPendingIntent(R.id.widget_search_field, searchPending);
