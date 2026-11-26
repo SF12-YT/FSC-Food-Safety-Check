@@ -1313,7 +1313,7 @@ function renderNutritionInfo(value){
  return '<details class="info nutrition-view product-collapsible"><summary><b>Nutrition information (as provided)</b><span class="arrow">›</span></summary><div class="product-collapsible-content">'+
  (n.servings?'<p class="nutrition-origin">Servings: '+esc(n.servings)+'</p>':'')+
  (n.servingSize?'<p class="nutrition-origin">Serving size: '+esc(n.servingSize)+'</p>':'')+
- (rows?'<div class="nutrition-table-wrap"><p class="nutrition-scroll-hint" aria-hidden="true">Swipe horizontally to view all columns</p><div class="nutrition-read-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Per <span class="nutrition-per-100-basis">'+esc(nutrition100BasisLabel(n.servingSize))+'</span></div>'+rows+'</div></div>':'')+'</div></details>';
+ (rows?'<div class="nutrition-table-wrap"><div class="nutrition-read-table"><div class="nutrition-head">Nutrient</div><div class="nutrition-head">Per serving</div><div class="nutrition-head">% DI per Serving</div><div class="nutrition-head">Per <span class="nutrition-per-100-basis">'+esc(nutrition100BasisLabel(n.servingSize))+'</span></div>'+rows+'</div></div>':'')+'</div></details>';
 }
 function renderProductClaims(value){
  const claims=value&&value.claims&&typeof value.claims==="object"?value.claims:{};
