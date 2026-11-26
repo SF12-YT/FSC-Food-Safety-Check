@@ -196,7 +196,39 @@
 
   const data = window.FOSCH_RESEARCH_DATA;
   if (!data) {
-    window.FOSCH_RESEARCH_USES_AUDIT = {
+  
+  const unassignedUseNotes = {
+    "E240": "This is retained as a legacy additive-code identity. The reviewed source set does not establish a sufficiently specific practical food-processing application, so no direct food use is assigned in this description.",
+    "E701": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E702": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E703": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E704": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E705": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E706": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E707": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E708": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E710": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E711": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E712": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E713": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E714": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E715": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E716": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E717": "No direct human-food processing function is assigned to this legacy antibiotic designation. Antimicrobial activity alone is not treated as evidence of a food-preservative function.",
+    "E924": "This is retained as a legacy additive-code identity. A practical food-processing use is not assigned in this review; the existing record should not be read as a current-use recommendation.",
+    "E924b": "This is retained as a legacy additive-code identity. A distinct practical food-processing use is not assigned because the reviewed sources do not establish one for this specific substance."
+  };
+
+  for (const [code, use] of Object.entries(unassignedUseNotes)) {
+    const record = data[code];
+    if (!record || typeof record !== "object") continue;
+    record.use = use;
+    record.researchedAt = "2026-11-26";
+    record.researchStatus = "Uses reviewed for direct food-technological relevance; no specific direct food-processing function is assigned from the reviewed evidence.";
+    updatedCodes.push(code);
+  }
+
+  window.FOSCH_RESEARCH_USES_AUDIT = {
       reviewedAt: "2026-11-26",
       status: "failed",
       reason: "FOSCH_RESEARCH_DATA was unavailable when the Uses override loaded."
