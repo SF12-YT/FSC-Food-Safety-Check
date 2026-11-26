@@ -545,9 +545,11 @@ function countryChangeLedger(){try{const old=JSON.parse(localStorage.getItem("fo
 function changeMarketCountry(next){if(!next||next===marketCountry)return;const ledger=countryChangeLedger();if(ledger.count>=2){alert("You have used both country changes for this month. You can change your market again next month.");render();return}const previous=marketCountry;marketCountry=next;loadMarketProductIndex(marketCountry);localStorage.setItem("fosch-market-country",marketCountry);localStorage.setItem("fosch-country-change-ledger",JSON.stringify({month:ledger.month,count:ledger.count+1}));lastProductLookupResult=null;lookupIssuedKey="";productLookupStatus="idle";productLookupMessage="";render();showInformationPopup("Country has changed from "+countryName(previous)+" to "+countryName(next))}
 function countryChangesRemaining(){return Math.max(0,2-countryChangeLedger().count)}
 const FOSCH_ONBOARDING_KEY="fosch-onboarding-complete-v1";
-if(localStorage.getItem("fosch-market-country")&&localStorage.getItem(FOSCH_ONBOARDING_KEY)===null){
+const FOSCH_ONBOARDING_PROGRESS_KEY="fosch-onboarding-in-progress";
+if(localStorage.getItem("fosch-market-country")&&localStorage.getItem(FOSCH_ONBOARDING_KEY)===null&&localStorage.getItem(FOSCH_ONBOARDING_PROGRESS_KEY)!=="true"){
  localStorage.setItem(FOSCH_ONBOARDING_KEY,"true");
 }
+let onboardingReplayMode=localStorage.getItem("fosch-onboarding-replay")==="true";
 let onboardingStep=0;
 let contributions=JSON.parse(localStorage.getItem("fosch-contrib")||"[]"),page=localStorage.getItem(FOSCH_ONBOARDING_KEY)==="true"?(localStorage.getItem("fosch-market-country")?"home":"countrySetup"):"onboarding",query="",selected=null,browseCategory=null,editingDraftId=null,viewingDraftId=null;
 let searchCategoryFilter="all",favoritesOnly=false,searchFiltersExpanded=false;
@@ -599,6 +601,10 @@ function previousOnboardingStep(){
  if(onboardingStep>0){onboardingStep--;render()}
 }
 function replayOnboarding(){
+ onboardingReplayMode=true;
+ localStorage.setItem("fosch-onboarding-replay","true");
+ localStorage.setItem(FOSCH_ONBOARDING_PROGRESS_KEY,"true");
+ localStorage.removeItem(FOSCH_ONBOARDING_KEY);
  onboardingStep=0;page="onboarding";pageHistory=[];suppressNextHistoryPush=true;render();
 }
 function nextOnboardingStep(){
@@ -606,6 +612,9 @@ function nextOnboardingStep(){
  if(onboardingStep===0){
   const region=document.getElementById("onboardingRegion");
   if(!region||!region.value){showInformationPopup("Choose the country or region where you usually buy food.");return}
+  const previousMarket=localStorage.getItem("fosch-market-country")||"";
+  if(onboardingReplayMode&&previousMarket&&previousMarket!==region.value){showInformationPopup("To change your market, use Country / market in Settings. Your monthly change limit still applies.");return}
+  localStorage.setItem(FOSCH_ONBOARDING_PROGRESS_KEY,"true");
   marketCountry=region.value;
   loadMarketProductIndex(marketCountry);
   localStorage.setItem("fosch-market-country",marketCountry);
@@ -614,6 +623,9 @@ function nextOnboardingStep(){
  if(onboardingStep>=7){
   save();
   localStorage.setItem(FOSCH_ONBOARDING_KEY,"true");
+  localStorage.removeItem(FOSCH_ONBOARDING_PROGRESS_KEY);
+  localStorage.removeItem("fosch-onboarding-replay");
+  onboardingReplayMode=false;
   page="home";onboardingStep=0;pageHistory=[];suppressNextHistoryPush=true;render();return;
  }
  onboardingStep++;
