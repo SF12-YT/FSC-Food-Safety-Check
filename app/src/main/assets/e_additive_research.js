@@ -3345,13 +3345,13 @@ window.FOSCH_RESEARCH_DATA=
     "researchStatus": "Cross-checked against Codex GSFA",
     "researchedAt": "2026-11-25",
     "use": "Red to magenta color obtained from beetroot pigments; shade stability depends on the food matrix and processing. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Cooked fish and fish products and Dried pastas and noodles and like products; these are examples, not blanket permission.",
-    "tox": "JECFA lists an ADI “not specified” under good manufacturing practice, subject to specifications including nitrate limits. It specifically notes keeping nitrate low in foods for infants and young children.",
-    "intake": "JECFA: ADI not specified under GMP if specifications are met; nitrate impurity requirements are relevant, especially for products intended for infants and young children.",
+    "tox": "JECFA's 1987 evaluation assigned an ADI “not specified” for beetroot red under good manufacturing practice, provided the additive meets its specifications for nitrate. JECFA specifically highlighted the need to keep nitrate levels controlled in foods intended for infants and young children. EFSA's 2015 re-evaluation reached a different but complementary conclusion: the available toxicological database was inadequate to establish a numerical ADI, because studies were limited for acute/short-term toxicity, genotoxicity, chronic toxicity/carcinogenicity and reproductive/developmental toxicity. Nevertheless, EFSA noted that betanin is a natural dietary constituent and that exposure from E162 at reported use levels was in the same range as exposure from the normal diet; it concluded that those current reported uses were not of safety concern. The EFSA conclusion is conditional on the reported use levels and material identity/specifications; it is not the same as establishing a numerical ADI. The JECFA “not specified” status is also not unlimited consumption advice, and the nitrate specification is especially relevant for infant and young-child foods.",
+    "intake": "JECFA: ADI “not specified” under GMP (1987), conditional on nitrate specification compliance. EFSA: no numerical ADI established (2015) because of toxicological data gaps; current reported uses were not of safety concern because betanin exposure was in the same range as normal dietary exposure. Nitrate controls remain important, especially for infant/young-child foods.",
     "sources": [
       {
-        "label": "FAO/WHO JECFA — Beetroot red / INS 162 (JECFA record discusses ADI not specified under GMP and nitrate specifications.)",
+        "label": "FAO/WHO JECFA — Beetroot red (INS 162), 1987 evaluation",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/878",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
+        "note": "JECFA ADI “not specified” under good manufacturing practice, conditional on compliance with nitrate specifications; it specifically noted the need to limit nitrate in foods intended for infants and young children."
       },
       {
         "label": "Codex GSFA — Beetroot red (INS 162)",
@@ -3367,6 +3367,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "EFSA — Re-evaluation of beetroot red (E162), 2015",
+        "url": "https://doi.org/10.2903/j.efsa.2015.4318",
+        "note": "EFSA concluded that the toxicological database was inadequate to establish an ADI; however, at reported use levels, exposure to betanin from the additive was in the same range as exposure from the normal diet, so current food-additive uses were not considered a safety concern. Data gaps included genotoxicity, chronic toxicity/carcinogenicity and reproductive/developmental toxicity."
+      },
+      {
+        "label": "EFSA — Food colours: assessment history for E162",
+        "url": "https://www.efsa.europa.eu/en/topics/topic/food-colours",
+        "note": "EFSA records the E162 re-evaluation completed in 2015 and the proposed extension-of-use assessment completed in 2016."
       }
     ],
     "functionalClasses": [
@@ -3384,19 +3394,21 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against the JECFA 1987 record and EFSA's 2015 re-evaluation; the GMP/nitrate condition, absence of a numerical EFSA ADI and EFSA's reported-use conclusion are stated separately.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E163": {
     "researchStatus": "Cross-checked against Codex GSFA subtype records",
     "researchedAt": "2026-11-25",
     "use": "Red, purple or blue plant pigments used as colors; actual hue changes with pH, matrix and processing. Codex GSFA subtype records include Grape skin extract (163(ii)). The documented functions include colour (adds or restores colour). Examples of Codex food-category provisions include Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Bread-type products, including bread stuffing and bread crumbs; these are category-specific provisions, not blanket permission.",
-    "tox": "The JECFA entry for the broad anthocyanins group lists no ADI allocated and its old specification was withdrawn. Specific anthocyanin preparations may have different source-specific records. FOSCH does not assign a generic numeric intake limit to all anthocyanins.",
-    "intake": "No ADI allocated in the cited JECFA group entry. This is not the same as “ADI not specified”; check the exact preparation and national authorization before describing its safety limit.",
+    "tox": "E163 covers a large and chemically varied group of anthocyanin pigments, so the source and extraction method matter. JECFA's broad INS 163 “Anthocyanins” record allocated no ADI and its specification was withdrawn in 1984. Separately, JECFA's source-specific grape-skin extract entry (INS 163(ii)) established an ADI of 0–2.5 mg/kg body weight/day in 1982; that value is not a group ADI for every anthocyanin extract. EFSA's 2013 re-evaluation found that E163's overall composition and source were insufficiently characterised and the toxicological database was inadequate to establish a numerical ADI. EFSA nevertheless considered current uses of aqueous grape-skin and blackcurrant extracts unlikely to be of safety concern where exposure was comparable to normal dietary intake. It did not extend that conclusion to poorly characterised extracts from other sources or non-aqueous extraction methods. EFSA also noted that refined exposure estimates for anthocyanins as additives were higher than normal dietary anthocyanin intakes and did not include exposure from colouring foods, recommending better characterisation and toxicological data. Do not display the grape-skin extract ADI as the universal E163 limit or portray the EFSA current-use conclusion as covering every possible extract.",
+    "intake": "Broad JECFA anthocyanins group (INS 163): no ADI allocated; specification withdrawn in 1984. JECFA grape-skin extract (INS 163(ii)): 0–2.5 mg/kg bw/day (1982), only for that source-specific entry. EFSA 2013: no numerical ADI established; current aqueous grape-skin/blackcurrant extract uses considered unlikely to raise concern when exposure was comparable to the diet; not generalised to other or poorly characterised extracts.",
     "sources": [
       {
-        "label": "FAO/WHO JECFA — Anthocyanins / INS 163 (JECFA entry lists no ADI allocated and an old withdrawn specification; individual source-specific entries may differ.)",
+        "label": "FAO/WHO JECFA — Anthocyanins (INS 163), 1982 evaluation",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1491",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
+        "note": "Broad anthocyanins entry: no ADI allocated; specification withdrawn in 1984."
       },
       {
         "label": "EFSA — food-colour safety reassessments",
@@ -3422,6 +3434,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "EFSA — Re-evaluation of anthocyanins (E163), 2013",
+        "url": "https://doi.org/10.2903/j.efsa.2013.3145",
+        "note": "EFSA could not establish a numerical ADI because the additive's composition and source were poorly characterised and the toxicological database was inadequate. For aqueous extracts of edible fruits/vegetables with exposure comparable to the natural diet, the older SCF conclusion was considered applicable; current uses of aqueous grape-skin and blackcurrant extracts were unlikely to be of safety concern. The conclusion was not extended to poorly characterised extracts from other sources or non-aqueous extraction methods."
+      },
+      {
+        "label": "FAO/WHO JECFA — Grape-skin extract (INS 163(ii)), 1982 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1445",
+        "note": "Distinct source-specific JECFA record for grape-skin extract; ADI 0–2.5 mg/kg bw/day. This value must not be applied to the whole E163 anthocyanins group."
       }
     ],
     "additionalInsForms": [
@@ -3456,7 +3478,9 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against EFSA's 2013 re-evaluation and the two distinct JECFA records; the grape-skin extract ADI is kept separate from the broad anthocyanins group, and EFSA's source/extraction qualifications are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E164": {
     "researchStatus": "FSANZ code identity and colour-source cross-check",
@@ -3500,6 +3524,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Calcium carbonate (INS 170(i)), 1965 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/457",
+        "note": "JECFA recorded an ADI “not limited” in 1965, conditional on the contribution of the additive to total dietary calcium being assessed and considered acceptable; the historical wording is not an instruction to consume unlimited amounts."
+      },
+      {
+        "label": "EFSA — Re-evaluation of calcium carbonate (E170), 2011",
+        "url": "https://doi.org/10.2903/j.efsa.2011.2318",
+        "note": "EFSA concluded that a numerical ADI was unnecessary and reported uses/use levels did not raise a safety concern regarding calcium carbonate itself; the unavoidable presence of aluminium was identified as a concern and specifications/impurity limits required attention."
+      },
+      {
+        "label": "EFSA — Follow-up and infant-food assessment of calcium carbonate (E170), 2023",
+        "url": "https://doi.org/10.2903/j.efsa.2023.8106",
+        "note": "EFSA concluded that the tested E170 materials rapidly dissolved under simulated gastric conditions and there was no concern from small particles, including nanoparticles, at the tested concentrations; a nano-specific risk assessment was not needed. EFSA also addressed calcium exposure and the unavoidable aluminium impurity issue."
       }
     ],
     "regulatoryGroups": [
@@ -3508,7 +3547,11 @@ window.FOSCH_RESEARCH_DATA=
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
-    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex functional classes are listed for the calcium carbonate/hydrogen carbonate subforms; this parent entry is not given an unqualified class list."
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex functional classes are listed for the calcium carbonate/hydrogen carbonate subforms; this parent entry is not given an unqualified class list.",
+    "tox": "JECFA's 1965 record used the historical term ADI “not limited” for calcium carbonate, but explicitly conditioned its conclusion on assessing whether the extra dietary calcium from its use was acceptable. This wording is not advice for unlimited consumption. EFSA's 2011 re-evaluation concluded that a numerical ADI was unnecessary and that the reported uses/use levels did not raise a safety concern for calcium carbonate itself; however, EFSA identified the unavoidable presence of aluminium in the additive as a concern requiring attention to specifications and impurity limits. In its 2023 follow-up, including assessment of uses in foods for infants below 16 weeks of age, EFSA found that the tested ground and precipitated calcium carbonate preparations dissolved rapidly under simulated gastric conditions. It concluded that exposure to small particles, including nanoparticles, at the concentrations tested was not a concern and a nano-specific risk assessment was not required. EFSA also considered the contribution of E170 to overall calcium intake, separately from the calcium itself and from calcium used in supplements. A “not limited” ADI entry must not be presented as an unrestricted dose recommendation or detached from the dietary-calcium and material-quality context.",
+    "intake": "JECFA: historical ADI “not limited” (1965), conditional on acceptable total dietary calcium contribution. EFSA: no numerical ADI needed (2011); reported uses did not raise concern for calcium carbonate itself, but unavoidable aluminium impurities required attention. EFSA's 2023 follow-up found no concern from small particles, including nanoparticles, in the tested materials/concentrations.",
+    "toxicityResearchStatus": "Reviewed against JECFA's 1965 record and EFSA's 2011/2023 opinions; the dietary-calcium condition, aluminium impurity concern and particle-dissolution follow-up are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E170(i)": {
     "researchStatus": "Codex GSFA verified",
@@ -3595,7 +3638,22 @@ window.FOSCH_RESEARCH_DATA=
       {
         "label": "UK Food Standards Agency — Great Britain food-additive authorisation register: E171",
         "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-171",
-        "note": "The Great Britain register lists titanium dioxide as authorised in England, Scotland and Wales in Group II food colours, subject to Annex II and Annex III conditions. The entry was last updated 1 April 2025; this is distinct from the Northern Ireland prohibition."
+        "note": "Great Britain authorisation register: E171 remains authorised in England, Scotland and Wales subject to the applicable conditions; the entry was last updated 1 April 2025."
+      },
+      {
+        "label": "EFSA — Safety assessment of titanium dioxide (E171), 2021",
+        "url": "https://doi.org/10.2903/j.efsa.2021.6585",
+        "note": "EFSA concluded that a concern for genotoxicity of TiO2 particles present in E171 could not be ruled out; given the uncertainties, E171 could no longer be considered safe as a food additive and an ADI could not be established."
+      },
+      {
+        "label": "European Commission — Commission Regulation (EU) 2022/63",
+        "url": "https://eur-lex.europa.eu/eli/reg/2022/63/oj",
+        "note": "EU regulation removing authorisation for E171 in food from 7 August 2022 after the EFSA 2021 opinion. Medicinal-product uses are treated separately."
+      },
+      {
+        "label": "UK Committee on Toxicity — Statement on the safety of titanium dioxide (E171) as a food additive, 2024",
+        "url": "https://cot.food.gov.uk/Statement%20on%20the%20safety%20of%20Titanium%20Dioxide%20%28E171%29%20as%20a%20Food%20Additive",
+        "note": "UK expert-committee statement reviews the EFSA genotoxicity concern and UK context. It records the EU/NI prohibition since August 2022 and continued Great Britain authorisation; it should not be interpreted as removing the EFSA scientific concern."
       }
     ],
     "regulatoryGroups": [
@@ -3606,7 +3664,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "marketNotes": [
       "Jurisdiction split: the Great Britain authorisation register lists E171 as authorised in England, Scotland and Wales (last updated 1 April 2025, subject to conditions). The FSA states that it is not permitted for food manufacture in Northern Ireland from 7 February 2022. The FSA page's colour grouping must not be read as a single UK-wide permission."
-    ]
+    ],
+    "tox": "EFSA's 2021 safety assessment concluded that a concern for genotoxicity of titanium dioxide particles that may be present in food-grade E171 could not be ruled out. Although oral absorption is low, EFSA noted that particles may accumulate in the body; the available data included indications of DNA strand breaks and chromosomal damage, while the Panel could not identify a particle-size cut-off below which genotoxicity concern could be excluded. Because of the uncertainties and the unresolved genotoxicity concern, EFSA concluded that E171 could no longer be considered safe as a food additive and that an ADI could not be established. This is a food-additive assessment and should not be conflated with titanium dioxide used in medicines or other products. The EU subsequently removed its authorisation for use in foods under Regulation (EU) 2022/63, with the phase-out completed on 7 August 2022. Regulatory status differs in the UK: the Great Britain register continues to list E171 as authorised in England, Scotland and Wales subject to conditions, while it is not permitted for food manufacture in Northern Ireland under EU rules. This jurisdictional difference does not change the underlying EFSA scientific assessment.",
+    "intake": "No ADI established. EFSA (2021) concluded that genotoxicity concern could not be ruled out and E171 could no longer be considered safe as a food additive. EU food authorisation was removed from 7 August 2022; Great Britain continues to authorise it subject to conditions, while Northern Ireland follows the EU prohibition.",
+    "toxicityResearchStatus": "Reviewed against EFSA's 2021 scientific opinion, EU Regulation 2022/63 and current UK FSA/COT sources; no-ADI status, the basis of EFSA's concern and the EU/GB/NI regulatory split are stated separately.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E172": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -3627,6 +3689,31 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Iron oxides (INS 172), 1999 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/949",
+        "note": "JECFA established an ADI of 0–0.5 mg/kg bw for iron oxides and concluded, on the basis of national standards, that intake was unlikely to exceed the ADI."
+      },
+      {
+        "label": "FAO/WHO JECFA — Iron oxide red (INS 172(ii)), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/947",
+        "note": "Specific red iron oxide entry lists 0–0.5 mg/kg bw from the 1979 evaluation; earlier temporary “ADI not specified” was replaced."
+      },
+      {
+        "label": "FAO/WHO JECFA — Iron oxide yellow (INS 172(iii)), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/948",
+        "note": "Specific yellow iron oxide entry lists 0–0.5 mg/kg bw from the 1979 evaluation; earlier temporary “ADI not specified” was replaced."
+      },
+      {
+        "label": "EFSA — Re-evaluation of iron oxides and hydroxides (E172), 2015",
+        "url": "https://doi.org/10.2903/j.efsa.2015.4317",
+        "note": "EFSA concluded that an adequate safety assessment could not be carried out because the biological and toxicological database was insufficient. Genotoxicity of red and black forms could not be evaluated; read-across between forms with different redox states was not justified. Refined exposure estimates reached 3.7 mg/kg bw/day mean and 9.5 mg/kg bw/day 95th percentile in toddlers."
+      },
+      {
+        "label": "EFSA — Food colours: current assessment inventory",
+        "url": "https://www.efsa.europa.eu/en/topics/topic/food-colours",
+        "note": "EFSA lists the E172 follow-up as ongoing after the 2015 re-evaluation; the status should not be treated as a completed follow-up safety conclusion."
       }
     ],
     "regulatoryGroups": [
@@ -3642,7 +3729,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "JECFA's 1999 evaluation established an ADI of 0–0.5 mg/kg body weight/day for iron oxides and hydroxides; the specific red and yellow forms also show this value in their individual JECFA records. EFSA's 2015 re-evaluation did not confirm safety or derive a new ADI: it concluded that an adequate assessment could not be carried out because the available biological and toxicological database was insufficient. Red and black iron oxides produced positive results in some in-vitro genotoxicity assays in mammalian cells, but the Panel could not evaluate genotoxicity from the available data, and it considered read-across between different iron oxides unjustified because their redox states differ. A NOAEL of 1,000 mg/kg bw/day for red iron oxide was identified in limited subacute/subchronic studies, but this alone could not establish overall safety. Refined exposure estimates ranged from 0.03 mg/kg bw/day for infants to 3.7 mg/kg bw/day for toddlers at the mean and from 0.1 to 9.5 mg/kg bw/day at the 95th percentile in the non-brand-loyal scenario. EFSA's current assessment inventory continues to show the E172 follow-up as ongoing; the older JECFA 0.5 ADI must therefore be labelled as a JECFA assessment, not as EFSA confirmation.",
+    "intake": "JECFA ADI: 0–0.5 mg/kg bw/day (1999; specific red/yellow forms have earlier records). EFSA (2015): could not complete a safety assessment or derive/confirm an ADI due to insufficient toxicological data; estimated 95th-percentile toddler exposure reached 9.5 mg/kg bw/day in the non-brand-loyal scenario. EFSA follow-up is still listed as ongoing.",
+    "toxicityResearchStatus": "Reviewed against the JECFA group and subtype records, EFSA's 2015 re-evaluation and EFSA's current follow-up inventory; different agency conclusions, redox-dependent forms, exposure ranges and ongoing follow-up are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E173": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -3709,6 +3800,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
         "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
         "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
+      },
+      {
+        "label": "EFSA — Re-evaluation of silver (E174), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4364",
+        "note": "EFSA concluded that the available information was insufficient to assess the safety of silver as a food additive, mainly because the material was inadequately characterised (including nanoparticle content and silver-ion release) and toxicological-study relevance could not be established."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of silver (E174), 2025",
+        "url": "https://doi.org/10.2903/j.efsa.2025.9316",
+        "note": "EFSA again could not conclude on safety: particle characterisation across commercial silver types remained inadequate, no data were provided on silver-ion release, genotoxicity studies were unreliable for regulatory assessment and the subchronic study was insufficient. EFSA stated that nanoscale risk assessment is required to complement conventional assessment."
+      },
+      {
+        "label": "FAO/WHO JECFA — Silver (INS 174), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3411",
+        "note": "JECFA's 1977 decision was postponed; no ADI was established. The record notes the provisions for silver were withdrawn at CCFA50 in 2018."
       }
     ],
     "regulatoryGroups": [
@@ -3724,7 +3830,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "JECFA's 1977 evaluation of silver (INS 174) postponed its decision and did not allocate an ADI; the JECFA record states that provisions for silver were withdrawn at CCFA50 in 2018. EFSA's 2016 re-evaluation concluded that the available information was insufficient to assess the safety of silver used as a food additive, mainly because the material was not adequately characterised, including the quantity of nanoparticles and the release of silver ions. EFSA's 2025 follow-up did not resolve these gaps. The submitted technical data did not adequately characterise all types of silver used as E174 on the EU market; no data were supplied on silver-ion release; the genotoxicity studies used a method not validated for regulatory risk assessment and were considered unreliable; and the single subchronic study was insufficient to assess possible inflammatory effects or the relevance of particle aggregation in food. EFSA concluded that E174 requires assessment at the nanoscale to complement conventional risk assessment and could not conclude on its safety. This is an insufficient-evidence outcome, not a finding that all forms of silver have demonstrated harm, and it should not be turned into an assumed safe dose.",
+    "intake": "No ADI established by JECFA (1977 decision postponed) or EFSA (2016/2025). EFSA's 2025 follow-up remained unable to conclude because of inadequate characterisation, missing silver-ion-release data, unreliable genotoxicity studies and insufficient subchronic toxicity data; nanoscale assessment is required.",
+    "toxicityResearchStatus": "Reviewed against JECFA's evaluation history and EFSA's 2016 and 2025 opinions; the unresolved particle, ion-release, genotoxicity and subchronic-data gaps are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E175": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -3750,6 +3860,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
         "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
         "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
+      },
+      {
+        "label": "EFSA — Re-evaluation of gold (E175), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4362",
+        "note": "EFSA concluded that the available ADME information was limited and toxicological data on elemental gold used as a food additive were absent; no ADI was established and the database was too limited for a risk assessment. Low solubility suggests low systemic availability, but local ionic gold release in tissues remains possible."
+      },
+      {
+        "label": "FAO/WHO JECFA — Gold, metallic (INS 175), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1287",
+        "note": "JECFA in 1977 allocated no ADI, noting very limited use and that it was not considered to present a hazard; no toxicological monograph or specification was prepared. In 2018 the Codex provisions were withdrawn."
+      },
+      {
+        "label": "EFSA — Food colours: current assessment inventory",
+        "url": "https://www.efsa.europa.eu/en/topics/topic/food-colours",
+        "note": "EFSA lists E175 follow-up as ongoing after the 2016 re-evaluation; it should not be described as a completed safety reassessment."
       }
     ],
     "regulatoryGroups": [
@@ -3765,7 +3890,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "JECFA's 1977 entry for metallic gold (INS 175) allocated no ADI and commented that its use was very limited and not considered to present a hazard; however, JECFA prepared neither a toxicological monograph nor a specification. The record notes that Codex provisions for gold were withdrawn at CCFA50 in 2018. EFSA's 2016 re-evaluation was more explicit about the evidence gaps: information on absorption, distribution, metabolism and excretion was limited, and toxicological data on elemental gold used as a food additive were absent. EFSA therefore considered the database too limited to perform a risk assessment and did not establish an ADI. The Panel expected low systemic availability because elemental gold has very low solubility, but noted that ionic gold can be released in contact with tissues and produce high local concentrations. No subchronic, chronic-toxicity or genotoxicity studies of elemental gold were available. EFSA recommended particle-size and nanoscale-fraction information in specifications. Its exposure estimates reached 1.32 micrograms/kg bw/day in a maximum-level scenario and 0.33 micrograms/kg bw/day in a refined non-brand-loyal scenario. EFSA's current food-colour inventory lists follow-up as ongoing. The historical JECFA “not considered to present a hazard” comment must not be used as a modern, data-rich safety conclusion.",
+    "intake": "No ADI established. JECFA (1977) noted very limited use and did not consider it a hazard, but prepared no tox monograph/specification. EFSA (2016) found no toxicological data for elemental gold food-additive use and could not perform a risk assessment; follow-up remains listed as ongoing.",
+    "toxicityResearchStatus": "Reviewed against JECFA's exact metallic-gold record, EFSA's 2016 re-evaluation and EFSA's current follow-up inventory; limited historical use, absent toxicology data, local ion release and ongoing follow-up are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E180": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -3791,6 +3920,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
         "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
         "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
+      },
+      {
+        "label": "EFSA — Re-evaluation of Litholrubine BK (E180), 2010",
+        "url": "https://doi.org/10.2903/j.efsa.2010.1586",
+        "note": "EFSA concluded the database was too limited to support or derive an ADI and withdrew the old SCF ADI of 0–1.5 mg/kg bw/day. However, the highest anticipated exposure under the single authorised EU use in edible cheese rinds was 1,700-fold below an identified rat effect level; EFSA considered a significant concern from that current use unlikely."
+      },
+      {
+        "label": "FAO/WHO JECFA — Litholrubine BK (INS 180), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1447",
+        "note": "JECFA's 1987 record did not establish an ADI; the specification was withdrawn. The former EU SCF ADI was 0–1.5 mg/kg bw/day and was withdrawn by EFSA in 2010."
       }
     ],
     "regulatoryGroups": [
@@ -3806,7 +3945,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "JECFA's latest evaluation of Litholrubine BK (INS 180) in 1987 did not establish an ADI. The EU Scientific Committee for Food had previously set an ADI of 0–1.5 mg/kg body weight/day in 1983, but EFSA's 2010 re-evaluation concluded that the toxicological database was too limited to continue supporting that value or establish a new one; EFSA therefore recommended withdrawing the SCF ADI. The available repeated-dose/reproductive study did not provide a suitable NOAEL, LOAEL or benchmark dose. EFSA nevertheless assessed the authorised EU use at that time, which was limited to colouring edible cheese rinds, and estimated the highest anticipated exposure to be 1,700-fold below an identified rat effect level of 100 mg/kg bw/day; it considered a significant safety concern from that single current use unlikely. EFSA could not draw a conclusion on possible hypersensitivity because the evidence was limited. The no-ADI status and the narrow current-use conclusion are both important: the latter does not extend to general use in other foods or to higher exposure scenarios.",
+    "intake": "JECFA: no ADI established (1987). EU SCF's former ADI of 0–1.5 mg/kg bw/day (1983) was withdrawn by EFSA in 2010 because the database could not support it. EFSA considered a significant concern unlikely for the then-authorised single use in edible cheese rinds, with highest anticipated exposure around 1,700-fold below the identified rat effect level; this is not a general-use safety clearance.",
+    "toxicityResearchStatus": "Reviewed against JECFA's 1987 record and EFSA's 2010 opinion; withdrawn SCF ADI, narrow cheese-rind exposure assessment and unresolved hypersensitivity evidence are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E181": {
     "researchStatus": "Codex GSFA verified",
