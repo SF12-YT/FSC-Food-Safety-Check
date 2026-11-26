@@ -5998,9 +5998,9 @@ window.FOSCH_RESEARCH_DATA=
     ]
   },
   "E328": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Exact INS functional-class entry cross-checked against FAO/WHO Codex CXG 36-1989; technological classification only, not authorisation",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Ammonium lactate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Ammonium lactate (INS 328) is classified by Codex as an acidity regulator and flour treatment agent. These are technological-purpose classifications, not a statement of current permission in every food category or jurisdiction.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
@@ -6011,8 +6011,18 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (2026 edition)",
+        "url": "https://openknowledge.fao.org/server/api/core/bitstreams/4b45b280-e32e-4a0d-ace4-c4c1b8770142/content",
+        "note": "Current Codex CXG 36-1989 entry verified for INS 328: Acidity regulator, Flour treatment agent. This is a functional-class entry, not an authorisation or food-category permission."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Acidity regulator",
+      "Flour treatment agent"
+    ],
+    "functionalClassAuditNote": "Exact Codex group/subtype distinction checked for E328: Acidity regulator, Flour treatment agent. INS functional classification does not itself establish jurisdiction-specific permission."
   },
   "E329": {
     "researchStatus": "Codex GSFA verified",
@@ -6620,9 +6630,9 @@ window.FOSCH_RESEARCH_DATA=
     ]
   },
   "E344": {
-    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
+    "researchStatus": "Exact INS functional-class entry cross-checked against FAO/WHO Codex CXG 36-1989; technological classification only, not authorisation",
     "researchedAt": "2026-11-25",
-    "use": "Lecithin citrate is listed in older educational E-number references with an acidity-regulator classification. The cited source does not establish current permission or permitted food categories for this code.",
+    "use": "Lecithin citrate (INS 344) is classified by Codex as a preservative. This is a technological-purpose classification, not evidence of current authorisation for any particular food or jurisdiction.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
@@ -6633,13 +6643,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E344 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (2026 edition)",
+        "url": "https://openknowledge.fao.org/server/api/core/bitstreams/4b45b280-e32e-4a0d-ace4-c4c1b8770142/content",
+        "note": "Current Codex CXG 36-1989 entry verified for INS 344: Preservative. This is a functional-class entry, not an authorisation or food-category permission."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Preservative"
+    ],
+    "functionalClassAuditNote": "Exact Codex group/subtype distinction checked for E344: Preservative. INS functional classification does not itself establish jurisdiction-specific permission."
   },
   "E345": {
-    "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
+    "researchStatus": "Exact INS functional-class entry cross-checked against FAO/WHO Codex CXG 36-1989; technological classification only, not authorisation",
     "researchedAt": "2026-11-25",
-    "use": "Magnesium citrate is listed in older educational E-number references with an acidity-regulator classification. The cited source does not establish current permission or permitted food categories for this code.",
+    "use": "Magnesium citrate (INS 345) is classified by Codex as an acidity regulator. This is a technological-purpose classification, not a statement of current permission in every food category or jurisdiction.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
@@ -6650,8 +6669,17 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E345 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (2026 edition)",
+        "url": "https://openknowledge.fao.org/server/api/core/bitstreams/4b45b280-e32e-4a0d-ace4-c4c1b8770142/content",
+        "note": "Current Codex CXG 36-1989 entry verified for INS 345: Acidity regulator. This is a functional-class entry, not an authorisation or food-category permission."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "functionalClassAuditNote": "Exact Codex group/subtype distinction checked for E345: Acidity regulator. INS functional classification does not itself establish jurisdiction-specific permission."
   },
   "E349": {
     "researchStatus": "Historical technical-purpose reference; FSANZ US/EU comparison caveat added; jurisdiction scope retained",
@@ -7023,9 +7051,9 @@ window.FOSCH_RESEARCH_DATA=
     ]
   },
   "E366": {
-    "researchStatus": "Preproom educational technical-purpose reference",
+    "researchStatus": "Exact INS functional-class entry cross-checked against FAO/WHO Codex CXG 36-1989; technological classification only, not authorisation",
     "researchedAt": "2026-11-25",
-    "use": "Preproom's E-number reference lists Potassium fumarate as a acidity regulator. It is therefore described as used to regulate acidity and help control pH. This is a technical or historical purpose description, not a statement of current authorisation; check the relevant regulator's permitted food categories and conditions.",
+    "use": "Potassium fumarates (INS 366) are classified by Codex as acidity regulators. This is a technological-purpose classification, not a statement of current permission in every food category or jurisdiction.",
     "sources": [
       {
         "label": "Preproom — Biology: E Numbers",
@@ -7036,8 +7064,17 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (2026 edition)",
+        "url": "https://openknowledge.fao.org/server/api/core/bitstreams/4b45b280-e32e-4a0d-ace4-c4c1b8770142/content",
+        "note": "Current Codex CXG 36-1989 entry verified for INS 366: Acidity regulator. This is a functional-class entry, not an authorisation or food-category permission."
       }
-    ]
+    ],
+    "functionalClasses": [
+      "Acidity regulator"
+    ],
+    "functionalClassAuditNote": "Exact Codex group/subtype distinction checked for E366: Acidity regulator. INS functional classification does not itself establish jurisdiction-specific permission."
   },
   "E367": {
     "researchStatus": "Exact INS 367 acidity-regulator function cross-checked against Codex",
@@ -16323,14 +16360,19 @@ window.FOSCH_RESEARCH_DATA=
     ]
   },
   "E965": {
-    "researchStatus": "UK FSA grouped-use source",
+    "researchStatus": "Exact INS functional-class entry cross-checked against FAO/WHO Codex CXG 36-1989; technological classification only, not authorisation",
     "researchedAt": "2026-11-25",
-    "use": "Used as a sweetener to provide or intensify sweetness, sometimes as an alternative to sugars. Permitted foods and use levels are category-specific.",
+    "use": "Maltitols (INS 965) are listed by Codex at group level with bulking-agent, emulsifier and humectant functions. The specific subtypes INS 965(i) maltitol and INS 965(ii) maltitol syrup also have subtype-specific functions, including sweetener; those subtype classes should not automatically be treated as a single uniform parent-group classification. Check jurisdiction-specific permissions separately.",
     "sources": [
       {
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (2026 edition)",
+        "url": "https://openknowledge.fao.org/server/api/core/bitstreams/4b45b280-e32e-4a0d-ace4-c4c1b8770142/content",
+        "note": "Current Codex CXG 36-1989 entry verified for INS 965: Bulking agent, Emulsifier, Humectant. This is a functional-class entry, not an authorisation or food-category permission."
       }
     ],
     "regulatoryGroups": [
@@ -16338,7 +16380,13 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "functionalClasses": [
+      "Bulking agent",
+      "Emulsifier",
+      "Humectant"
+    ],
+    "functionalClassAuditNote": "Exact Codex group/subtype distinction checked for E965: Bulking agent, Emulsifier, Humectant. INS functional classification does not itself establish jurisdiction-specific permission."
   },
   "E965(i)": {
     "researchStatus": "Codex GSFA verified",
