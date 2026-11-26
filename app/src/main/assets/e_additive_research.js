@@ -4083,13 +4083,13 @@ window.FOSCH_RESEARCH_DATA=
     "researchStatus": "Exact INS 200 preservative function cross-checked against Codex CXG 36-1989",
     "researchedAt": "2026-11-26",
     "use": "Preservative used to slow yeast and mould growth in specified foods; other sorbates are related members of the same preservative group.",
-    "tox": "JECFA’s group ADI is 0–25 mg/kg bw/day expressed as sorbic acid for the covered sorbates. Separately, EFSA’s 2019 follow-up established a group ADI of 11 mg sorbic acid/kg bw/day for sorbic acid (E200) and potassium sorbate (E202), based on an extended one-generation reproductive-toxicity study. EFSA’s most realistic non-brand-loyal exposure scenario did not exceed that 11 mg/kg bw/day group ADI. These are assessor-specific values and must not be conflated.",
-    "intake": "EFSA group ADI: 11 mg/kg bw/day expressed as sorbic acid for E200 + E202 (2019). JECFA has a separate group ADI of 0–25 mg/kg bw/day expressed as sorbic acid for the broader specified sorbate group. ADIs are chronic exposure benchmarks, not food concentration limits or recommended targets. National food-category maximums still apply.",
+    "tox": "JECFA's group ADI for sorbic acid and its calcium, potassium and sodium salts is 0–25 mg/kg body weight/day, expressed as sorbic acid. EFSA's 2015 re-evaluation did not retain the older 25 mg/kg bw/day value used in Europe; on the reproductive/developmental dataset then available, it set a temporary group ADI of 3 mg sorbic acid/kg bw/day for sorbic acid and potassium sorbate, based on a rat reproductive-toxicity NOAEL of 300 mg/kg bw/day and uncertainty factor 100. In its 2019 follow-up, after reviewing new extended one-generation reproductive toxicity data, EFSA set a revised group ADI of 11 mg sorbic acid/kg bw/day for E200 and E202, based on a BMDL of 1,110 mg/kg bw/day and uncertainty factor 100. In the refined non-brand-loyal exposure scenario, the highest child estimates were 1.7 mg/kg bw/day at the mean and 3.7 mg/kg bw/day at the 95th percentile, below the revised group ADI. JECFA's 25 and EFSA's 11 are different committee conclusions, with different evidence dates; both are expressed as sorbic acid equivalents and should not be treated as food concentration limits.",
+    "intake": "JECFA group ADI: 0–25 mg/kg bw/day as sorbic acid for the covered sorbates. EFSA group ADI: 11 mg sorbic acid/kg bw/day for E200 + E202 (2019), replacing its temporary 3 mg/kg bw/day value from 2015. Refined high-child exposure estimate was 3.7 mg/kg bw/day, below the 2019 ADI.",
     "sources": [
       {
-        "label": "FAO/WHO JECFA — Sorbic acid / INS 200",
+        "label": "FAO/WHO JECFA — Sorbic acid (INS 200), evaluation history",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2443",
-        "note": "JECFA record identifies the preservative function and group ADI; review current local maximum levels."
+        "note": "JECFA group ADI 0–25 mg/kg bw/day expressed as sorbic acid, covering sorbic acid and calcium, potassium and sodium sorbates."
       },
       {
         "label": "EFSA Journal — follow-up re-evaluation of sorbic acid (E200) and potassium sorbate (E202), 2019",
@@ -4105,6 +4105,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 200 entry identifies sorbic acid and lists Preservative."
+      },
+      {
+        "label": "EFSA — Re-evaluation of sorbic acid (E200), potassium sorbate (E202) and calcium sorbate (E203), 2015",
+        "url": "https://doi.org/10.2903/j.efsa.2015.4144",
+        "note": "EFSA established a temporary group ADI of 3 mg sorbic acid/kg bw/day for E200 and E202, based on a two-generation rat reproductive-toxicity NOAEL of 300 mg/kg bw/day and uncertainty factor 100. Calcium sorbate was excluded from this group ADI because of missing genotoxicity data; sodium sorbate data included positive genotoxicity findings."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of sorbic acid (E200) and potassium sorbate (E202), 2019",
+        "url": "https://doi.org/10.2903/j.efsa.2019.5625",
+        "note": "New extended one-generation reproductive toxicity data supported an ADI of 11 mg sorbic acid/kg bw/day for E200 and E202. Refined non-brand-loyal exposure estimates were below this ADI; calcium sorbate was not included in the revised group ADI."
       }
     ],
     "regulatoryGroups": [
@@ -4115,7 +4125,9 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "functionalClasses": [
       "Preservative"
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against JECFA's group evaluation and EFSA's 2015/2019 opinions; the temporary-to-final EFSA ADI revision, basis and refined exposure estimate are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E201": {
     "researchStatus": "JECFA preservative function verified; current permissions jurisdiction-specific",
@@ -4131,6 +4143,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sorbic acid (INS 200), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2443",
+        "note": "JECFA group ADI 0–25 mg/kg bw/day expressed as sorbic acid, covering sorbic acid and calcium, potassium and sodium sorbates."
+      },
+      {
+        "label": "EFSA — Re-evaluation of sorbic acid (E200), potassium sorbate (E202) and calcium sorbate (E203), 2015",
+        "url": "https://doi.org/10.2903/j.efsa.2015.4144",
+        "note": "EFSA established a temporary group ADI of 3 mg sorbic acid/kg bw/day for E200 and E202, based on a two-generation rat reproductive-toxicity NOAEL of 300 mg/kg bw/day and uncertainty factor 100. Calcium sorbate was excluded from this group ADI because of missing genotoxicity data; sodium sorbate data included positive genotoxicity findings."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of sorbic acid (E200) and potassium sorbate (E202), 2019",
+        "url": "https://doi.org/10.2903/j.efsa.2019.5625",
+        "note": "New extended one-generation reproductive toxicity data supported an ADI of 11 mg sorbic acid/kg bw/day for E200 and E202. Refined non-brand-loyal exposure estimates were below this ADI; calcium sorbate was not included in the revised group ADI."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021",
@@ -4139,14 +4166,18 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroups": [
       "preservatives"
-    ]
+    ],
+    "tox": "JECFA's 1985 evaluation record for sodium sorbate (INS 201) carries the group ADI of 0–25 mg/kg body weight/day expressed as the sum of sorbic acid and its calcium, potassium and sodium salts, calculated as sorbic acid. EFSA's 2015 re-evaluation did not establish an ADI that could be transferred to sodium sorbate: the Panel reported positive genotoxicity data for sodium sorbate and limited its temporary 3 mg/kg bw/day group ADI to sorbic acid and potassium sorbate (E200/E202). EFSA's 2019 follow-up raised that E200/E202 group ADI to 11 mg/kg bw/day after new reproductive-toxicity data, but it did not add sodium sorbate to the group. The JECFA historical group value and EFSA's narrower EU assessment should therefore remain separate; the sodium salt should not inherit EFSA's 11 mg/kg bw/day value.",
+    "intake": "JECFA historical group ADI: 0–25 mg/kg bw/day as sorbic acid for sorbic acid and calcium, potassium and sodium sorbates. EFSA's 2015/2019 group ADI applies only to E200 and E202; sodium sorbate was not included because positive genotoxicity data were noted.",
+    "toxicityResearchStatus": "Reviewed against JECFA's sodium-sorbate record and EFSA's 2015/2019 sorbate opinions; sodium sorbate is explicitly excluded from the EFSA E200/E202 ADI.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E202": {
     "researchStatus": "Exact INS 202 preservative function cross-checked against Codex CXG 36-1989",
     "researchedAt": "2026-11-26",
     "use": "Preservative used to inhibit yeasts and moulds in specified foods.",
-    "tox": "JECFA’s group ADI is 0–25 mg/kg bw/day expressed as sorbic acid for the covered sorbates. Separately, EFSA’s 2019 follow-up established a group ADI of 11 mg sorbic acid/kg bw/day for sorbic acid (E200) and potassium sorbate (E202), based on an extended one-generation reproductive-toxicity study. EFSA’s most realistic non-brand-loyal exposure scenario did not exceed that 11 mg/kg bw/day group ADI. These are assessor-specific values and must not be conflated.",
-    "intake": "EFSA group ADI: 11 mg/kg bw/day expressed as sorbic acid for E200 + E202 (2019). JECFA has a separate group ADI of 0–25 mg/kg bw/day expressed as sorbic acid for the broader specified sorbate group. ADIs are chronic exposure benchmarks, not food concentration limits or recommended targets. National food-category maximums still apply.",
+    "tox": "JECFA's group ADI for sorbic acid and its calcium, potassium and sodium salts is 0–25 mg/kg body weight/day, expressed as sorbic acid. EFSA's 2015 re-evaluation set a temporary group ADI of 3 mg sorbic acid/kg bw/day for E200 and E202, based on a two-generation rat reproductive-toxicity NOAEL of 300 mg/kg bw/day and uncertainty factor 100. In its 2019 follow-up, new extended one-generation reproductive-toxicity data supported a revised group ADI of 11 mg sorbic acid/kg bw/day for sorbic acid and potassium sorbate. The BMDL was 1,110 mg/kg bw/day and EFSA applied the default uncertainty factor of 100. Refined non-brand-loyal exposure estimates were below the 11 mg/kg bw/day ADI in all groups; the highest child estimate was 3.7 mg/kg bw/day at the 95th percentile. The JECFA value of 25 and EFSA value of 11 reflect different agency reviews and dates. Both are expressed as sorbic acid equivalents and are long-term benchmarks, not permitted concentrations in an individual food.",
+    "intake": "JECFA group ADI: 0–25 mg/kg bw/day as sorbic acid. EFSA group ADI: 11 mg sorbic acid/kg bw/day for E200 + E202 (2019), replacing the temporary 3 mg/kg bw/day value from 2015. Highest refined child exposure estimate: 3.7 mg/kg bw/day at the 95th percentile.",
     "sources": [
       {
         "label": "FAO/WHO JECFA — Potassium sorbate / INS 202",
@@ -4167,6 +4198,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 202 entry identifies potassium sorbate and lists Preservative."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sorbic acid (INS 200), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2443",
+        "note": "JECFA group ADI 0–25 mg/kg bw/day expressed as sorbic acid, covering sorbic acid and calcium, potassium and sodium sorbates."
+      },
+      {
+        "label": "EFSA — Re-evaluation of sorbic acid (E200), potassium sorbate (E202) and calcium sorbate (E203), 2015",
+        "url": "https://doi.org/10.2903/j.efsa.2015.4144",
+        "note": "EFSA established a temporary group ADI of 3 mg sorbic acid/kg bw/day for E200 and E202, based on a two-generation rat reproductive-toxicity NOAEL of 300 mg/kg bw/day and uncertainty factor 100. Calcium sorbate was excluded from this group ADI because of missing genotoxicity data; sodium sorbate data included positive genotoxicity findings."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of sorbic acid (E200) and potassium sorbate (E202), 2019",
+        "url": "https://doi.org/10.2903/j.efsa.2019.5625",
+        "note": "New extended one-generation reproductive toxicity data supported an ADI of 11 mg sorbic acid/kg bw/day for E200 and E202. Refined non-brand-loyal exposure estimates were below this ADI; calcium sorbate was not included in the revised group ADI."
       }
     ],
     "regulatoryGroups": [
@@ -4177,7 +4223,9 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "functionalClasses": [
       "Preservative"
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against JECFA's group evaluation and EFSA's 2015/2019 opinions; the group scope, temporary ADI revision, study basis and refined exposure are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E203": {
     "researchStatus": "JECFA preservative function verified; current permissions jurisdiction-specific",
@@ -4193,6 +4241,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sorbic acid (INS 200), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2443",
+        "note": "JECFA group ADI 0–25 mg/kg bw/day expressed as sorbic acid, covering sorbic acid and calcium, potassium and sodium sorbates."
+      },
+      {
+        "label": "EFSA — Re-evaluation of sorbic acid (E200), potassium sorbate (E202) and calcium sorbate (E203), 2015",
+        "url": "https://doi.org/10.2903/j.efsa.2015.4144",
+        "note": "EFSA established a temporary group ADI of 3 mg sorbic acid/kg bw/day for E200 and E202, based on a two-generation rat reproductive-toxicity NOAEL of 300 mg/kg bw/day and uncertainty factor 100. Calcium sorbate was excluded from this group ADI because of missing genotoxicity data; sodium sorbate data included positive genotoxicity findings."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of sorbic acid (E200) and potassium sorbate (E202), 2019",
+        "url": "https://doi.org/10.2903/j.efsa.2019.5625",
+        "note": "New extended one-generation reproductive toxicity data supported an ADI of 11 mg sorbic acid/kg bw/day for E200 and E202. Refined non-brand-loyal exposure estimates were below this ADI; calcium sorbate was not included in the revised group ADI."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021",
@@ -4201,7 +4264,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroups": [
       "preservatives"
-    ]
+    ],
+    "tox": "JECFA's earlier group ADI for sorbic acid and its calcium, potassium and sodium salts was 0–25 mg/kg body weight/day expressed as sorbic acid. EFSA's 2015 re-evaluation excluded calcium sorbate from its temporary group ADI because genotoxicity data were lacking; the same opinion also noted positive genotoxicity data for sodium sorbate and therefore limited its ADI to sorbic acid and potassium sorbate. The 2019 EFSA follow-up established 11 mg sorbic acid/kg bw/day for E200 and E202 only, not E203. Calcium sorbate was subsequently removed from the EU food-additive lists under Commission Regulation (EU) 2018/98. Thus, the old JECFA group number must not be presented as a current EFSA safety conclusion for E203 or as evidence of present authorisation in every jurisdiction.",
+    "intake": "JECFA historical group ADI: 0–25 mg/kg bw/day as sorbic acid, covering calcium sorbate. EFSA did not include E203 in its 2015 temporary or 2019 revised group ADI because genotoxicity data were lacking; calcium sorbate was removed from EU additive lists in 2018.",
+    "toxicityResearchStatus": "Reviewed against JECFA and EFSA sorbate evaluations plus EU Regulation 2018/98; EFSA's exclusion of calcium sorbate and later EU removal are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E209": {
     "researchStatus": "Exact INS 209 preservative function cross-checked; historical code caveat retained",
@@ -4232,8 +4299,8 @@ window.FOSCH_RESEARCH_DATA=
     "researchStatus": "Exact INS 210 preservative function cross-checked against Codex CXG 36-1989",
     "researchedAt": "2026-11-26",
     "use": "Preservative used in some acidic foods and drinks to inhibit growth of yeasts, moulds and some bacteria; salts such as sodium benzoate are related benzoates.",
-    "tox": "In 2021 JECFA set a group ADI of 0–20 mg/kg body weight/day as benzoic-acid equivalents for benzoic acid, benzoate salts and specified related compounds, and withdrew the earlier group ADI of 0–5. This group-based value must not be treated as food concentration.",
-    "intake": "JECFA group ADI: 0–20 mg/kg bw/day as benzoic-acid equivalents (2021), for the specifically named group. National permitted foods and maximum levels vary.",
+    "tox": "EFSA's 2016 re-evaluation established a group ADI of 5 mg/kg body weight/day expressed as benzoic acid, based on a four-generation rat reproductive-toxicity study with a NOAEL of 500 mg/kg bw/day and uncertainty factor 100. EFSA found low toxicity in short-term/subchronic studies and no genotoxicity concern for benzoic acid and sodium/potassium benzoates; it considered read-across appropriate for calcium benzoate. However, modelled exposure exceeded the EFSA ADI in high-consuming toddlers and children, particularly in brand-loyal flavoured-drink scenarios; accounting for carry-over could increase high-level exposure by a further two- to three-fold, with unprocessed fruit/vegetables and flavoured drinks contributing to estimates. JECFA's 2021 re-evaluation later established a different group ADI of 0–20 mg/kg bw/day, expressed as benzoic acid equivalents, for benzoic acid, calcium/potassium/sodium benzoates and specified related compounds (benzaldehyde, benzyl acetate, benzyl alcohol and benzyl benzoate), using a chemical-specific adjustment factor of 2 and withdrawing its previous 0–5 group ADI. The EFSA 5 and JECFA 20 values are separate committee assessments and the JECFA group scope is broader; both values must be displayed with their agency, date and expression basis.",
+    "intake": "EFSA group ADI: 5 mg/kg bw/day as benzoic acid (2016); high-consumer child scenarios exceeded it. JECFA group ADI: 0–20 mg/kg bw/day as benzoic acid equivalents (2021), covering benzoic acid, calcium/potassium/sodium benzoates and specified related compounds. Different agencies and group scopes; not food concentration limits.",
     "sources": [
       {
         "label": "FAO/WHO JECFA — Benzoic acid / INS 210",
@@ -4249,6 +4316,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 210 entry identifies benzoic acid and lists Preservative."
+      },
+      {
+        "label": "FAO/WHO JECFA — Benzoates group, 2021 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1227",
+        "note": "JECFA established a group ADI of 0–20 mg/kg bw/day, expressed as benzoic acid equivalents, for benzoic acid, calcium/potassium/sodium benzoates, benzaldehyde, benzyl acetate, benzyl alcohol and benzyl benzoate; it withdrew the earlier group ADI of 0–5."
+      },
+      {
+        "label": "EFSA — Re-evaluation of benzoic acid (E210) and sodium, potassium and calcium benzoates (E211–E213), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4433",
+        "note": "EFSA established a group ADI of 5 mg/kg bw/day expressed as benzoic acid based on a four-generation rat reproductive-toxicity NOAEL of 500 mg/kg bw/day and uncertainty factor 100. Modelled exposure exceeded this ADI in high-consuming toddlers and children, especially with flavoured drinks and carry-over."
       }
     ],
     "regulatoryGroups": [
@@ -4259,14 +4336,16 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "functionalClasses": [
       "Preservative"
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against EFSA's 2016 re-evaluation and JECFA's 2021 group re-evaluation; committee-specific ADIs, group scopes, expression basis and EFSA high-consumer exposure caveat are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E211": {
     "researchStatus": "Exact INS 211 preservative function cross-checked against Codex CXG 36-1989",
     "researchedAt": "2026-11-26",
     "use": "Preservative used to control microbial growth, particularly in acidic foods and drinks.",
-    "tox": "JECFA established a group ADI of 0–20 mg/kg body weight/day expressed as benzoic-acid equivalents in 2021 for benzoic acid and specified benzoates/related compounds. EFSA or national rules may use a different assessment or exposure assumptions.",
-    "intake": "JECFA group ADI: 0–20 mg/kg bw/day as benzoic-acid equivalents (2021), covering a defined group of compounds. This is not the permitted concentration for an individual food.",
+    "tox": "EFSA's 2016 re-evaluation established a group ADI of 5 mg/kg body weight/day expressed as benzoic acid, based on a four-generation rat reproductive-toxicity study with a NOAEL of 500 mg/kg bw/day and uncertainty factor 100. EFSA found low toxicity in short-term/subchronic studies and no genotoxicity concern for benzoic acid and sodium/potassium benzoates; it considered read-across appropriate for calcium benzoate. However, modelled exposure exceeded the EFSA ADI in high-consuming toddlers and children, particularly in brand-loyal flavoured-drink scenarios; accounting for carry-over could increase high-level exposure by a further two- to three-fold, with unprocessed fruit/vegetables and flavoured drinks contributing to estimates. JECFA's 2021 re-evaluation later established a different group ADI of 0–20 mg/kg bw/day, expressed as benzoic acid equivalents, for benzoic acid, calcium/potassium/sodium benzoates and specified related compounds (benzaldehyde, benzyl acetate, benzyl alcohol and benzyl benzoate), using a chemical-specific adjustment factor of 2 and withdrawing its previous 0–5 group ADI. The EFSA 5 and JECFA 20 values are separate committee assessments and the JECFA group scope is broader; both values must be displayed with their agency, date and expression basis.",
+    "intake": "EFSA group ADI: 5 mg/kg bw/day as benzoic acid (2016); high-consumer child scenarios exceeded it. JECFA group ADI: 0–20 mg/kg bw/day as benzoic acid equivalents (2021), covering benzoic acid, calcium/potassium/sodium benzoates and specified related compounds. Different agencies and group scopes; not food concentration limits.",
     "sources": [
       {
         "label": "FAO/WHO JECFA — Sodium benzoate / INS 211",
@@ -4282,6 +4361,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 211 entry identifies sodium benzoate and lists Preservative."
+      },
+      {
+        "label": "FAO/WHO JECFA — Benzoates group, 2021 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1227",
+        "note": "JECFA established a group ADI of 0–20 mg/kg bw/day, expressed as benzoic acid equivalents, for benzoic acid, calcium/potassium/sodium benzoates, benzaldehyde, benzyl acetate, benzyl alcohol and benzyl benzoate; it withdrew the earlier group ADI of 0–5."
+      },
+      {
+        "label": "EFSA — Re-evaluation of benzoic acid (E210) and sodium, potassium and calcium benzoates (E211–E213), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4433",
+        "note": "EFSA established a group ADI of 5 mg/kg bw/day expressed as benzoic acid based on a four-generation rat reproductive-toxicity NOAEL of 500 mg/kg bw/day and uncertainty factor 100. Modelled exposure exceeded this ADI in high-consuming toddlers and children, especially with flavoured drinks and carry-over."
       }
     ],
     "regulatoryGroups": [
@@ -4292,7 +4381,9 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "functionalClasses": [
       "Preservative"
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against EFSA's 2016 re-evaluation and JECFA's 2021 group re-evaluation; committee-specific ADIs, group scopes, expression basis and EFSA high-consumer exposure caveat are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E212": {
     "researchStatus": "Cross-checked against UK FSA and EU regulatory sources",
@@ -4318,6 +4409,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
         "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
         "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Benzoates group, 2021 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1227",
+        "note": "JECFA established a group ADI of 0–20 mg/kg bw/day, expressed as benzoic acid equivalents, for benzoic acid, calcium/potassium/sodium benzoates, benzaldehyde, benzyl acetate, benzyl alcohol and benzyl benzoate; it withdrew the earlier group ADI of 0–5."
+      },
+      {
+        "label": "EFSA — Re-evaluation of benzoic acid (E210) and sodium, potassium and calcium benzoates (E211–E213), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4433",
+        "note": "EFSA established a group ADI of 5 mg/kg bw/day expressed as benzoic acid based on a four-generation rat reproductive-toxicity NOAEL of 500 mg/kg bw/day and uncertainty factor 100. Modelled exposure exceeded this ADI in high-consuming toddlers and children, especially with flavoured drinks and carry-over."
       }
     ],
     "regulatoryGroups": [
@@ -4333,7 +4434,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "EFSA's 2016 re-evaluation established a group ADI of 5 mg/kg body weight/day expressed as benzoic acid, based on a four-generation rat reproductive-toxicity study with a NOAEL of 500 mg/kg bw/day and uncertainty factor 100. EFSA found low toxicity in short-term/subchronic studies and no genotoxicity concern for benzoic acid and sodium/potassium benzoates; it considered read-across appropriate for calcium benzoate. However, modelled exposure exceeded the EFSA ADI in high-consuming toddlers and children, particularly in brand-loyal flavoured-drink scenarios; accounting for carry-over could increase high-level exposure by a further two- to three-fold, with unprocessed fruit/vegetables and flavoured drinks contributing to estimates. JECFA's 2021 re-evaluation later established a different group ADI of 0–20 mg/kg bw/day, expressed as benzoic acid equivalents, for benzoic acid, calcium/potassium/sodium benzoates and specified related compounds (benzaldehyde, benzyl acetate, benzyl alcohol and benzyl benzoate), using a chemical-specific adjustment factor of 2 and withdrawing its previous 0–5 group ADI. The EFSA 5 and JECFA 20 values are separate committee assessments and the JECFA group scope is broader; both values must be displayed with their agency, date and expression basis.",
+    "intake": "EFSA group ADI: 5 mg/kg bw/day as benzoic acid (2016); high-consumer child scenarios exceeded it. JECFA group ADI: 0–20 mg/kg bw/day as benzoic acid equivalents (2021), covering benzoic acid, calcium/potassium/sodium benzoates and specified related compounds. Different agencies and group scopes; not food concentration limits.",
+    "toxicityResearchStatus": "Reviewed against EFSA's 2016 re-evaluation and JECFA's 2021 group re-evaluation; committee-specific ADIs, group scopes, expression basis and EFSA high-consumer exposure caveat are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E213": {
     "researchStatus": "Cross-checked against UK FSA and EU regulatory sources",
@@ -4359,6 +4464,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
         "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
         "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Benzoates group, 2021 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1227",
+        "note": "JECFA established a group ADI of 0–20 mg/kg bw/day, expressed as benzoic acid equivalents, for benzoic acid, calcium/potassium/sodium benzoates, benzaldehyde, benzyl acetate, benzyl alcohol and benzyl benzoate; it withdrew the earlier group ADI of 0–5."
+      },
+      {
+        "label": "EFSA — Re-evaluation of benzoic acid (E210) and sodium, potassium and calcium benzoates (E211–E213), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4433",
+        "note": "EFSA established a group ADI of 5 mg/kg bw/day expressed as benzoic acid based on a four-generation rat reproductive-toxicity NOAEL of 500 mg/kg bw/day and uncertainty factor 100. Modelled exposure exceeded this ADI in high-consuming toddlers and children, especially with flavoured drinks and carry-over."
       }
     ],
     "regulatoryGroups": [
@@ -4374,7 +4489,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "EFSA's 2016 re-evaluation established a group ADI of 5 mg/kg body weight/day expressed as benzoic acid, based on a four-generation rat reproductive-toxicity study with a NOAEL of 500 mg/kg bw/day and uncertainty factor 100. EFSA found low toxicity in short-term/subchronic studies and no genotoxicity concern for benzoic acid and sodium/potassium benzoates; it considered read-across appropriate for calcium benzoate. However, modelled exposure exceeded the EFSA ADI in high-consuming toddlers and children, particularly in brand-loyal flavoured-drink scenarios; accounting for carry-over could increase high-level exposure by a further two- to three-fold, with unprocessed fruit/vegetables and flavoured drinks contributing to estimates. JECFA's 2021 re-evaluation later established a different group ADI of 0–20 mg/kg bw/day, expressed as benzoic acid equivalents, for benzoic acid, calcium/potassium/sodium benzoates and specified related compounds (benzaldehyde, benzyl acetate, benzyl alcohol and benzyl benzoate), using a chemical-specific adjustment factor of 2 and withdrawing its previous 0–5 group ADI. The EFSA 5 and JECFA 20 values are separate committee assessments and the JECFA group scope is broader; both values must be displayed with their agency, date and expression basis.",
+    "intake": "EFSA group ADI: 5 mg/kg bw/day as benzoic acid (2016); high-consumer child scenarios exceeded it. JECFA group ADI: 0–20 mg/kg bw/day as benzoic acid equivalents (2021), covering benzoic acid, calcium/potassium/sodium benzoates and specified related compounds. Different agencies and group scopes; not food concentration limits.",
+    "toxicityResearchStatus": "Reviewed against EFSA's 2016 re-evaluation and JECFA's 2021 group re-evaluation; committee-specific ADIs, group scopes, expression basis and EFSA high-consumer exposure caveat are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E214": {
     "researchStatus": "Cross-checked against official regulator sources; restricted category use",
@@ -4397,9 +4516,29 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       },
       {
-        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "label": "European Commission — Regulation (EC) No 1129/2011 and consolidated Regulation (EC) No 1333/2008",
         "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
-        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
+        "note": "EU list identifies the retained E214, E215, E218 and E219 codes in category-specific additive provisions; this is not blanket authorisation. Propyl-paraben codes E216/E217 are not included in the corresponding retained list."
+      },
+      {
+        "label": "EFSA — Advice on the safety of paraben usage in food (E214–E219), 2004",
+        "url": "https://www.efsa.europa.eu/en/news/efsa-advises-safety-paraben-usage-food",
+        "note": "EFSA established a group ADI of 0–10 mg/kg bw/day for methyl and ethyl parabens and their sodium salts; propyl paraben was excluded because of effects on reproductive parameters in male rats, and EFSA could not set a specific ADI for it."
+      },
+      {
+        "label": "FAO/WHO JECFA — Ethylparaben (INS 214), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3244",
+        "note": "JECFA 1973 group ADI of 0–10 mg/kg bw/day as the sum of ethyl and methyl esters of p-hydroxybenzoic acid; propylparaben excluded in 2006."
+      },
+      {
+        "label": "FAO/WHO JECFA — Methylparaben (INS 218), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3204",
+        "note": "JECFA 1973 group ADI of 0–10 mg/kg bw/day for methyl and ethyl p-hydroxybenzoates together."
+      },
+      {
+        "label": "FAO/WHO JECFA — Propylparaben (INS 216), 2006 ADI withdrawal",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/330",
+        "note": "JECFA withdrew propylparaben from the parabens group ADI in 2006 due to adverse effects in male rat reproductive tissues at doses from 10 mg/kg bw/day and no identified NOEL."
       }
     ],
     "regulatoryGroups": [
@@ -4415,7 +4554,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "EFSA's 2004 assessment established a group ADI of 0–10 mg/kg body weight/day for methyl and ethyl parabens and their sodium salts, expressed as the sum of the relevant p-hydroxybenzoate esters. JECFA's historical record also carries a group ADI of 0–10 mg/kg bw/day for the methyl and ethyl esters together. This value is not an individual allowance for each paraben separately; the combined intake of the covered compounds is the relevant group quantity. EFSA explicitly excluded propyl paraben from the group because studies in male rats showed adverse effects in reproductive parameters; it could not recommend a specific ADI for propyl paraben from the available evidence. JECFA withdrew propylparaben from the group ADI in 2006 because reproductive-tissue effects had been observed at doses down to 10 mg/kg bw/day, within the old group ADI range, and no NOEL had been identified. The EFSA/JECFA finding concerns food-additive exposure and animal-study evidence; it should not be generalized into claims about all parabens in other product types.",
+    "intake": "EFSA/JECFA group ADI: 0–10 mg/kg bw/day for the sum of methyl and ethyl p-hydroxybenzoates and their sodium salts. The group value applies collectively, not separately to each compound.",
+    "toxicityResearchStatus": "Reviewed against EFSA's 2004 paraben opinion and JECFA's ethyl/methyl paraben records; the combined group scope and exclusion of propyl paraben are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E215": {
     "researchStatus": "Cross-checked against official regulator sources; restricted category use",
@@ -4438,9 +4581,29 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       },
       {
-        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "label": "European Commission — Regulation (EC) No 1129/2011 and consolidated Regulation (EC) No 1333/2008",
         "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
-        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
+        "note": "EU list identifies the retained E214, E215, E218 and E219 codes in category-specific additive provisions; this is not blanket authorisation. Propyl-paraben codes E216/E217 are not included in the corresponding retained list."
+      },
+      {
+        "label": "EFSA — Advice on the safety of paraben usage in food (E214–E219), 2004",
+        "url": "https://www.efsa.europa.eu/en/news/efsa-advises-safety-paraben-usage-food",
+        "note": "EFSA established a group ADI of 0–10 mg/kg bw/day for methyl and ethyl parabens and their sodium salts; propyl paraben was excluded because of effects on reproductive parameters in male rats, and EFSA could not set a specific ADI for it."
+      },
+      {
+        "label": "FAO/WHO JECFA — Ethylparaben (INS 214), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3244",
+        "note": "JECFA 1973 group ADI of 0–10 mg/kg bw/day as the sum of ethyl and methyl esters of p-hydroxybenzoic acid; propylparaben excluded in 2006."
+      },
+      {
+        "label": "FAO/WHO JECFA — Methylparaben (INS 218), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3204",
+        "note": "JECFA 1973 group ADI of 0–10 mg/kg bw/day for methyl and ethyl p-hydroxybenzoates together."
+      },
+      {
+        "label": "FAO/WHO JECFA — Propylparaben (INS 216), 2006 ADI withdrawal",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/330",
+        "note": "JECFA withdrew propylparaben from the parabens group ADI in 2006 due to adverse effects in male rat reproductive tissues at doses from 10 mg/kg bw/day and no identified NOEL."
       }
     ],
     "regulatoryGroups": [
@@ -4456,7 +4619,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "EFSA's 2004 assessment established a group ADI of 0–10 mg/kg body weight/day for methyl and ethyl parabens and their sodium salts, expressed as the sum of the relevant p-hydroxybenzoate esters. JECFA's historical record also carries a group ADI of 0–10 mg/kg bw/day for the methyl and ethyl esters together. This value is not an individual allowance for each paraben separately; the combined intake of the covered compounds is the relevant group quantity. EFSA explicitly excluded propyl paraben from the group because studies in male rats showed adverse effects in reproductive parameters; it could not recommend a specific ADI for propyl paraben from the available evidence. JECFA withdrew propylparaben from the group ADI in 2006 because reproductive-tissue effects had been observed at doses down to 10 mg/kg bw/day, within the old group ADI range, and no NOEL had been identified. The EFSA/JECFA finding concerns food-additive exposure and animal-study evidence; it should not be generalized into claims about all parabens in other product types.",
+    "intake": "EFSA/JECFA group ADI: 0–10 mg/kg bw/day for the sum of methyl and ethyl p-hydroxybenzoates and their sodium salts. The group value applies collectively, not separately to each compound.",
+    "toxicityResearchStatus": "Reviewed against EFSA's 2004 paraben opinion and JECFA's ethyl/methyl paraben records; the combined group scope and exclusion of propyl paraben are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E216": {
     "researchStatus": "Exact INS 216 preservative function cross-checked; Australia–New Zealand and GB permissions remain narrowly described",
@@ -4482,12 +4649,41 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 216 entry identifies propyl para-hydroxybenzoate and lists Preservative. This technical classification does not expand the restricted Schedule 15 preparation permission or establish GB approval."
+      },
+      {
+        "label": "EFSA — Advice on the safety of paraben usage in food (E214–E219), 2004",
+        "url": "https://www.efsa.europa.eu/en/news/efsa-advises-safety-paraben-usage-food",
+        "note": "EFSA established a group ADI of 0–10 mg/kg bw/day for methyl and ethyl parabens and their sodium salts; propyl paraben was excluded because of effects on reproductive parameters in male rats, and EFSA could not set a specific ADI for it."
+      },
+      {
+        "label": "FAO/WHO JECFA — Ethylparaben (INS 214), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3244",
+        "note": "JECFA 1973 group ADI of 0–10 mg/kg bw/day as the sum of ethyl and methyl esters of p-hydroxybenzoic acid; propylparaben excluded in 2006."
+      },
+      {
+        "label": "FAO/WHO JECFA — Methylparaben (INS 218), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3204",
+        "note": "JECFA 1973 group ADI of 0–10 mg/kg bw/day for methyl and ethyl p-hydroxybenzoates together."
+      },
+      {
+        "label": "FAO/WHO JECFA — Propylparaben (INS 216), 2006 ADI withdrawal",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/330",
+        "note": "JECFA withdrew propylparaben from the parabens group ADI in 2006 due to adverse effects in male rat reproductive tissues at doses from 10 mg/kg bw/day and no identified NOEL."
+      },
+      {
+        "label": "European Commission — Regulation (EC) No 1129/2011 and consolidated Regulation (EC) No 1333/2008",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "EU list identifies the retained E214, E215, E218 and E219 codes in category-specific additive provisions; this is not blanket authorisation. Propyl-paraben codes E216/E217 are not included in the corresponding retained list."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021",
     "functionalClasses": [
       "Preservative"
-    ]
+    ],
+    "tox": "EFSA's 2004 assessment did not include propyl paraben in the 0–10 mg/kg bw/day group ADI for methyl and ethyl parabens. The Panel cited studies showing adverse effects on reproductive parameters in male rats and could not recommend a specific ADI for propyl paraben on the available evidence. JECFA formally withdrew propylparaben (INS 216) from the group ADI in 2006 because adverse effects in male rat reproductive tissues had been observed at dietary doses as low as 10 mg/kg bw/day, within the old group ADI range, and no NOEL had been identified. The same toxicological exclusion applies to the sodium propyl salt (INS 217); the numeric methyl/ethyl group ADI must not be applied to either propyl-paraben form. Regulatory authorisation is separate from toxicological evaluation: the current EU additive list retains specified methyl/ethyl paraben provisions but does not include E216/E217 in the corresponding retained list; GB and Australia/New Zealand permissions must be checked separately.",
+    "intake": "No ADI established; propyl paraben was excluded from the methyl/ethyl paraben group ADI because of male-rat reproductive effects. JECFA withdrew propylparaben from the group in 2006; no numerical safe intake is established for E216/E217 by these evaluations.",
+    "toxicityResearchStatus": "Reviewed against EFSA's 2004 paraben assessment and JECFA's 2006 propylparaben decision; propyl forms are separated from the methyl/ethyl group ADI and jurisdictional authorisation is not inferred from toxicology.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E217": {
     "researchStatus": "Exact INS 217 preservative function cross-checked; no E217 permission inferred from E216",
@@ -4518,12 +4714,41 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 217 entry identifies sodium propyl para-hydroxybenzoate and lists Preservative. The functional classification does not establish current permission."
+      },
+      {
+        "label": "EFSA — Advice on the safety of paraben usage in food (E214–E219), 2004",
+        "url": "https://www.efsa.europa.eu/en/news/efsa-advises-safety-paraben-usage-food",
+        "note": "EFSA established a group ADI of 0–10 mg/kg bw/day for methyl and ethyl parabens and their sodium salts; propyl paraben was excluded because of effects on reproductive parameters in male rats, and EFSA could not set a specific ADI for it."
+      },
+      {
+        "label": "FAO/WHO JECFA — Ethylparaben (INS 214), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3244",
+        "note": "JECFA 1973 group ADI of 0–10 mg/kg bw/day as the sum of ethyl and methyl esters of p-hydroxybenzoic acid; propylparaben excluded in 2006."
+      },
+      {
+        "label": "FAO/WHO JECFA — Methylparaben (INS 218), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3204",
+        "note": "JECFA 1973 group ADI of 0–10 mg/kg bw/day for methyl and ethyl p-hydroxybenzoates together."
+      },
+      {
+        "label": "FAO/WHO JECFA — Propylparaben (INS 216), 2006 ADI withdrawal",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/330",
+        "note": "JECFA withdrew propylparaben from the parabens group ADI in 2006 due to adverse effects in male rat reproductive tissues at doses from 10 mg/kg bw/day and no identified NOEL."
+      },
+      {
+        "label": "European Commission — Regulation (EC) No 1129/2011 and consolidated Regulation (EC) No 1333/2008",
+        "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
+        "note": "EU list identifies the retained E214, E215, E218 and E219 codes in category-specific additive provisions; this is not blanket authorisation. Propyl-paraben codes E216/E217 are not included in the corresponding retained list."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021",
     "functionalClasses": [
       "Preservative"
-    ]
+    ],
+    "tox": "EFSA's 2004 assessment did not include propyl paraben in the 0–10 mg/kg bw/day group ADI for methyl and ethyl parabens. The Panel cited studies showing adverse effects on reproductive parameters in male rats and could not recommend a specific ADI for propyl paraben on the available evidence. JECFA formally withdrew propylparaben (INS 216) from the group ADI in 2006 because adverse effects in male rat reproductive tissues had been observed at dietary doses as low as 10 mg/kg bw/day, within the old group ADI range, and no NOEL had been identified. The same toxicological exclusion applies to the sodium propyl salt (INS 217); the numeric methyl/ethyl group ADI must not be applied to either propyl-paraben form. Regulatory authorisation is separate from toxicological evaluation: the current EU additive list retains specified methyl/ethyl paraben provisions but does not include E216/E217 in the corresponding retained list; GB and Australia/New Zealand permissions must be checked separately.",
+    "intake": "No ADI established; propyl paraben was excluded from the methyl/ethyl paraben group ADI because of male-rat reproductive effects. JECFA withdrew propylparaben from the group in 2006; no numerical safe intake is established for E216/E217 by these evaluations.",
+    "toxicityResearchStatus": "Reviewed against EFSA's 2004 paraben assessment and JECFA's 2006 propylparaben decision; propyl forms are separated from the methyl/ethyl group ADI and jurisdictional authorisation is not inferred from toxicology.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E218": {
     "researchStatus": "Cross-checked against official regulator sources; restricted category use",
@@ -4546,9 +4771,29 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       },
       {
-        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "label": "European Commission — Regulation (EC) No 1129/2011 and consolidated Regulation (EC) No 1333/2008",
         "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
-        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
+        "note": "EU list identifies the retained E214, E215, E218 and E219 codes in category-specific additive provisions; this is not blanket authorisation. Propyl-paraben codes E216/E217 are not included in the corresponding retained list."
+      },
+      {
+        "label": "EFSA — Advice on the safety of paraben usage in food (E214–E219), 2004",
+        "url": "https://www.efsa.europa.eu/en/news/efsa-advises-safety-paraben-usage-food",
+        "note": "EFSA established a group ADI of 0–10 mg/kg bw/day for methyl and ethyl parabens and their sodium salts; propyl paraben was excluded because of effects on reproductive parameters in male rats, and EFSA could not set a specific ADI for it."
+      },
+      {
+        "label": "FAO/WHO JECFA — Ethylparaben (INS 214), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3244",
+        "note": "JECFA 1973 group ADI of 0–10 mg/kg bw/day as the sum of ethyl and methyl esters of p-hydroxybenzoic acid; propylparaben excluded in 2006."
+      },
+      {
+        "label": "FAO/WHO JECFA — Methylparaben (INS 218), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3204",
+        "note": "JECFA 1973 group ADI of 0–10 mg/kg bw/day for methyl and ethyl p-hydroxybenzoates together."
+      },
+      {
+        "label": "FAO/WHO JECFA — Propylparaben (INS 216), 2006 ADI withdrawal",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/330",
+        "note": "JECFA withdrew propylparaben from the parabens group ADI in 2006 due to adverse effects in male rat reproductive tissues at doses from 10 mg/kg bw/day and no identified NOEL."
       }
     ],
     "regulatoryGroups": [
@@ -4564,7 +4809,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "EFSA's 2004 assessment established a group ADI of 0–10 mg/kg body weight/day for methyl and ethyl parabens and their sodium salts, expressed as the sum of the relevant p-hydroxybenzoate esters. JECFA's historical record also carries a group ADI of 0–10 mg/kg bw/day for the methyl and ethyl esters together. This value is not an individual allowance for each paraben separately; the combined intake of the covered compounds is the relevant group quantity. EFSA explicitly excluded propyl paraben from the group because studies in male rats showed adverse effects in reproductive parameters; it could not recommend a specific ADI for propyl paraben from the available evidence. JECFA withdrew propylparaben from the group ADI in 2006 because reproductive-tissue effects had been observed at doses down to 10 mg/kg bw/day, within the old group ADI range, and no NOEL had been identified. The EFSA/JECFA finding concerns food-additive exposure and animal-study evidence; it should not be generalized into claims about all parabens in other product types.",
+    "intake": "EFSA/JECFA group ADI: 0–10 mg/kg bw/day for the sum of methyl and ethyl p-hydroxybenzoates and their sodium salts. The group value applies collectively, not separately to each compound.",
+    "toxicityResearchStatus": "Reviewed against EFSA's 2004 paraben opinion and JECFA's ethyl/methyl paraben records; the combined group scope and exclusion of propyl paraben are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E219": {
     "researchStatus": "Cross-checked against official regulator sources; restricted category use",
@@ -4587,9 +4836,29 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
       },
       {
-        "label": "European Union — Regulation (EC) No 1333/2008 on food additives, consolidated 18 August 2026",
+        "label": "European Commission — Regulation (EC) No 1129/2011 and consolidated Regulation (EC) No 1333/2008",
         "url": "https://eur-lex.europa.eu/eli/reg/2008/1333/2026-08-18/eng",
-        "note": "Current consolidated EU framework and Annex II category-specific additive conditions; EU authorisation is not global authorisation."
+        "note": "EU list identifies the retained E214, E215, E218 and E219 codes in category-specific additive provisions; this is not blanket authorisation. Propyl-paraben codes E216/E217 are not included in the corresponding retained list."
+      },
+      {
+        "label": "EFSA — Advice on the safety of paraben usage in food (E214–E219), 2004",
+        "url": "https://www.efsa.europa.eu/en/news/efsa-advises-safety-paraben-usage-food",
+        "note": "EFSA established a group ADI of 0–10 mg/kg bw/day for methyl and ethyl parabens and their sodium salts; propyl paraben was excluded because of effects on reproductive parameters in male rats, and EFSA could not set a specific ADI for it."
+      },
+      {
+        "label": "FAO/WHO JECFA — Ethylparaben (INS 214), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3244",
+        "note": "JECFA 1973 group ADI of 0–10 mg/kg bw/day as the sum of ethyl and methyl esters of p-hydroxybenzoic acid; propylparaben excluded in 2006."
+      },
+      {
+        "label": "FAO/WHO JECFA — Methylparaben (INS 218), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3204",
+        "note": "JECFA 1973 group ADI of 0–10 mg/kg bw/day for methyl and ethyl p-hydroxybenzoates together."
+      },
+      {
+        "label": "FAO/WHO JECFA — Propylparaben (INS 216), 2006 ADI withdrawal",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/330",
+        "note": "JECFA withdrew propylparaben from the parabens group ADI in 2006 due to adverse effects in male rat reproductive tissues at doses from 10 mg/kg bw/day and no identified NOEL."
       }
     ],
     "regulatoryGroups": [
@@ -4605,7 +4874,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "EFSA's 2004 assessment established a group ADI of 0–10 mg/kg body weight/day for methyl and ethyl parabens and their sodium salts, expressed as the sum of the relevant p-hydroxybenzoate esters. JECFA's historical record also carries a group ADI of 0–10 mg/kg bw/day for the methyl and ethyl esters together. This value is not an individual allowance for each paraben separately; the combined intake of the covered compounds is the relevant group quantity. EFSA explicitly excluded propyl paraben from the group because studies in male rats showed adverse effects in reproductive parameters; it could not recommend a specific ADI for propyl paraben from the available evidence. JECFA withdrew propylparaben from the group ADI in 2006 because reproductive-tissue effects had been observed at doses down to 10 mg/kg bw/day, within the old group ADI range, and no NOEL had been identified. The EFSA/JECFA finding concerns food-additive exposure and animal-study evidence; it should not be generalized into claims about all parabens in other product types.",
+    "intake": "EFSA/JECFA group ADI: 0–10 mg/kg bw/day for the sum of methyl and ethyl p-hydroxybenzoates and their sodium salts. The group value applies collectively, not separately to each compound.",
+    "toxicityResearchStatus": "Reviewed against EFSA's 2004 paraben opinion and JECFA's ethyl/methyl paraben records; the combined group scope and exclusion of propyl paraben are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E220": {
     "researchStatus": "All four functional classes for INS 220 cross-checked against Codex; market limits and declarations remain separate",
