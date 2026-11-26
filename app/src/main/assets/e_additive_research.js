@@ -1648,9 +1648,9 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "FAO/WHO JECFA — Plain caramel / INS 150a (JECFA lists ADI not specified subject to specifications.)",
+        "label": "FAO/WHO JECFA — Plain caramel (INS 150a), 1985 evaluation",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/337",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
+        "note": "JECFA allocated an ADI “not specified” for Class I plain caramel, conditional on compliance with its specifications."
       },
       {
         "label": "EFSA — food-colour safety reassessments",
@@ -1661,6 +1661,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FSANZ — food colours and intolerance",
         "url": "https://www.foodstandards.gov.au/consumer/additives/foodcolour",
         "note": "Australian/New Zealand official overview; distinguishes food intolerance reports from a diagnosis."
+      },
+      {
+        "label": "EFSA — Re-evaluation of caramel colours E150a, E150b, E150c and E150d, 2011",
+        "url": "https://doi.org/10.2903/j.efsa.2011.2004",
+        "note": "EFSA established a group ADI of 300 mg/kg bw/day for the four caramel colours, with a separate individual ADI of 100 mg/kg bw/day for Class III (E150c) because of THI immunotoxicity. It found class-specific exposure concerns and identified uncertainties around THI, 5-HMF and furan."
+      },
+      {
+        "label": "EFSA — Refined consumer exposure to caramel colours, 2012",
+        "url": "https://www.efsa.europa.eu/en/press/news/121219",
+        "note": "EFSA revised exposure estimates for E150a, E150c and E150d downward; in most cases estimates were below the 2011 ADIs, though very high intake for toddlers and adults could still exceed the E150c ADI."
       }
     ],
     "regulatoryGroups": [
@@ -1669,8 +1679,10 @@ window.FOSCH_RESEARCH_DATA=
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
-    "tox": "JECFA allocated an ADI “not specified” to caramel color I provided it complies with specifications. “ADI not specified” is a risk-assessment term under specified conditions, not a recommendation for unlimited consumption.",
-    "intake": "JECFA: ADI not specified for plain caramel under its specified conditions (1985). This is not a personal daily limit; check category-specific local permissions."
+    "tox": "JECFA allocated an ADI “not specified” to Class I plain caramel in 1985, conditional on compliance with its specifications. EFSA's 2011 re-evaluation established a group ADI of 300 mg/kg body weight/day for caramel colours E150a–d, using a NOAEL of 30 g/kg bw/day and an uncertainty factor of 100. Under the exposure assumptions used in 2011, some estimated exposures to Classes I, III and IV could exceed the relevant ADIs; EFSA's 2012 refinement using new occurrence and consumption data found exposure lower, with estimates below the ADIs in most cases. The group assessment also identified the need to control constituents such as 5-HMF and furan and to clarify remaining questions about THI. The JECFA “not specified” ADI is not an unlimited-consumption recommendation.",
+    "intake": "JECFA: ADI “not specified” for Class I, conditional on specifications (1985). EFSA: group ADI 300 mg/kg bw/day for E150a–d (2011). EFSA's 2012 refined exposure estimates were below the ADIs in most cases. These are long-term assessment benchmarks, not personal intake targets.",
+    "toxicityResearchStatus": "Reviewed as part of the coordinated 2011 EFSA assessment of all four caramel classes and its 2012 refined exposure update; JECFA's class-specific “not specified” status is kept distinct.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E150b": {
     "researchStatus": "Codex GSFA verified",
@@ -1701,6 +1713,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "EFSA — Re-evaluation of caramel colours E150a, E150b, E150c and E150d, 2011",
+        "url": "https://doi.org/10.2903/j.efsa.2011.2004",
+        "note": "EFSA established a group ADI of 300 mg/kg bw/day for the four caramel colours, with a separate individual ADI of 100 mg/kg bw/day for Class III (E150c) because of THI immunotoxicity. It found class-specific exposure concerns and identified uncertainties around THI, 5-HMF and furan."
+      },
+      {
+        "label": "EFSA — Refined consumer exposure to caramel colours, 2012",
+        "url": "https://www.efsa.europa.eu/en/press/news/121219",
+        "note": "EFSA revised exposure estimates for E150a, E150c and E150d downward; in most cases estimates were below the 2011 ADIs, though very high intake for toddlers and adults could still exceed the E150c ADI."
+      },
+      {
+        "label": "FAO/WHO JECFA — Caustic sulfite caramel (INS 150b), 2000 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1389",
+        "note": "JECFA established an ADI of 0–160 mg/kg bw/day for Class II based on a rat 90-day NOEL of 16 g/kg bw/day and a 100-fold safety factor."
       }
     ],
     "regulatoryGroups": [
@@ -1708,7 +1735,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "tox": "JECFA established a Class II caustic sulphite caramel ADI of 0–160 mg/kg body weight/day in 2000, based on a 90-day rat NOEL of 16 g/kg bw/day and a 100-fold safety factor. EFSA's 2011 re-evaluation established a group ADI of 300 mg/kg bw/day for Classes I–IV, based on the shared toxicological database. In EFSA's assessment, estimated dietary exposure to Class II was below the group ADI, unlike the exposure concerns identified for some other caramel classes. EFSA also noted that THI, 4-MEI and sulphur dioxide exposure estimates were not of concern in the assessed scenarios, while uncertainties around THI immunotoxicity and possible levels of 5-HMF and furan warranted further work and improved specifications. The JECFA and EFSA ADIs are from different evaluations and should be shown with their source and year.",
+    "intake": "JECFA Class II ADI: 0–160 mg/kg bw/day (2000). EFSA group ADI: 300 mg/kg bw/day for E150a–d (2011); its estimated Class II exposure was below that group ADI. This is a long-term assessment benchmark, not a recommended intake target.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA Class II record and EFSA's 2011 group assessment; the class-specific JECFA ADI and group EFSA ADI are kept separate.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E150c": {
     "researchStatus": "Codex GSFA verified",
@@ -1744,6 +1775,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO JECFA — Ammonia caramel / INS 150c (JECFA record lists 0–200 mg/kg bw, 0–150 on a solids basis.)",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/436",
         "note": "FAO/WHO JECFA substance record and evaluation history."
+      },
+      {
+        "label": "EFSA — Re-evaluation of caramel colours E150a, E150b, E150c and E150d, 2011",
+        "url": "https://doi.org/10.2903/j.efsa.2011.2004",
+        "note": "EFSA established a group ADI of 300 mg/kg bw/day for the four caramel colours, with a separate individual ADI of 100 mg/kg bw/day for Class III (E150c) because of THI immunotoxicity. It found class-specific exposure concerns and identified uncertainties around THI, 5-HMF and furan."
+      },
+      {
+        "label": "EFSA — Refined consumer exposure to caramel colours, 2012",
+        "url": "https://www.efsa.europa.eu/en/press/news/121219",
+        "note": "EFSA revised exposure estimates for E150a, E150c and E150d downward; in most cases estimates were below the 2011 ADIs, though very high intake for toddlers and adults could still exceed the E150c ADI."
+      },
+      {
+        "label": "FAO/WHO JECFA — Ammonia caramel (INS 150c), 1985 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/498",
+        "note": "JECFA established 0–200 mg/kg bw/day, with a solids-basis value of 0–150 mg/kg bw/day; EFSA later established a lower individual ADI for Class III because of THI."
       }
     ],
     "regulatoryGroups": [
@@ -1752,8 +1798,10 @@ window.FOSCH_RESEARCH_DATA=
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
-    "tox": "JECFA lists an ADI of 0–200 mg/kg body weight/day (up to 0–150 mg/kg bw on a solids basis) for ammonia caramel in the cited assessment. The solids-basis condition matters when comparing a preparation with the ADI.",
-    "intake": "JECFA ADI: 0–200 mg/kg bw/day, noted as 0–150 mg/kg bw/day on a solids basis (1985); check specifications and local permitted uses."
+    "tox": "JECFA's 1985 evaluation lists an ADI of 0–200 mg/kg body weight/day for Class III ammonia caramel, with 0–150 mg/kg bw/day on a solids basis. EFSA's 2011 assessment established a group ADI of 300 mg/kg bw/day for the four caramel classes but set a separate, lower individual ADI of 100 mg/kg bw/day for Class III because of new information about immunotoxicity of 2-acetyl-4-tetrahydroxybutylimidazole (THI). EFSA's 2011 exposure estimates suggested that some child and adult populations could exceed the relevant ADI. Its 2012 refinement found exposure estimates were lower than in 2011, but very high intakes among toddlers and adults could still exceed the E150c ADI. EFSA identified remaining uncertainty around THI's immune effects and recommended controls for constituents including 5-HMF and furan. The JECFA value is historical and should not replace the later EFSA Class III-specific value when describing the EU assessment.",
+    "intake": "JECFA: 0–200 mg/kg bw/day (1985), or 0–150 mg/kg bw/day on a solids basis. EFSA: individual E150c ADI 100 mg/kg bw/day (2011), within a group ADI of 300 mg/kg bw/day. EFSA's 2012 refined exposure estimates could still exceed the E150c ADI for very high-intake toddlers and adults.",
+    "toxicityResearchStatus": "Reviewed against JECFA's Class III evaluation and EFSA's 2011/2012 opinions; the lower E150c-specific ADI due to THI and the refined high-consumer exposure caveat are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E150d": {
     "researchStatus": "Codex GSFA verified",
@@ -1786,14 +1834,24 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "FAO/WHO JECFA — Caramel colour Class IV / INS 150d (JECFA record lists ADI 0–200 mg/kg bw, 0–150 on a solids basis.)",
+        "label": "FAO/WHO JECFA — Sulphite ammonia caramel (INS 150d), 1985 evaluation",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1668",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
+        "note": "JECFA established 0–200 mg/kg bw/day, with a solids-basis value of 0–150 mg/kg bw/day."
       },
       {
         "label": "UK Food Standards Agency — sulphur dioxide/sulphites",
         "url": "https://data.food.gov.uk/codes/alerts/def/allergen/sulphur",
         "note": "Official food-allergen reference notes higher risk of sulphite reaction in people with asthma."
+      },
+      {
+        "label": "EFSA — Re-evaluation of caramel colours E150a, E150b, E150c and E150d, 2011",
+        "url": "https://doi.org/10.2903/j.efsa.2011.2004",
+        "note": "EFSA established a group ADI of 300 mg/kg bw/day for the four caramel colours, with a separate individual ADI of 100 mg/kg bw/day for Class III (E150c) because of THI immunotoxicity. It found class-specific exposure concerns and identified uncertainties around THI, 5-HMF and furan."
+      },
+      {
+        "label": "EFSA — Refined consumer exposure to caramel colours, 2012",
+        "url": "https://www.efsa.europa.eu/en/press/news/121219",
+        "note": "EFSA revised exposure estimates for E150a, E150c and E150d downward; in most cases estimates were below the 2011 ADIs, though very high intake for toddlers and adults could still exceed the E150c ADI."
       }
     ],
     "regulatoryGroups": [
@@ -1802,8 +1860,10 @@ window.FOSCH_RESEARCH_DATA=
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
-    "tox": "JECFA lists an ADI of 0–200 mg/kg body weight/day (0–150 mg/kg bw on a solids basis) for caramel color Class IV in the cited evaluation. Product specification and actual additive quantity matter.",
-    "intake": "JECFA ADI: 0–200 mg/kg bw/day (0–150 on a solids basis; 1985 assessment). Check current national use limits and any applicable sulphite declaration requirements."
+    "tox": "JECFA's 1985 evaluation lists an ADI of 0–200 mg/kg body weight/day for Class IV sulphite ammonia caramel, with 0–150 mg/kg bw/day on a solids basis. EFSA's 2011 re-evaluation established a group ADI of 300 mg/kg bw/day for all four caramel classes and found that exposure estimates for some child and adult consumers could exceed the relevant ADI under the assumptions used. EFSA's 2012 refinement lowered exposure estimates for E150d and found estimates below the ADIs in most cases. EFSA also reviewed exposure to THI, 4-MEI and sulphur dioxide, which was not of concern in the assessed scenarios, while noting potential concerns about other constituents such as 5-HMF and furan and recommending improved specifications. Sulphite content and any applicable food-labelling requirements are a separate regulatory matter from this toxicological ADI.",
+    "intake": "JECFA: 0–200 mg/kg bw/day (1985), or 0–150 mg/kg bw/day on a solids basis. EFSA: group ADI 300 mg/kg bw/day for E150a–d (2011); refined exposure estimates for E150d were below the ADI in most cases in 2012. This is not a personal intake target.",
+    "toxicityResearchStatus": "Reviewed against JECFA's Class IV evaluation and EFSA's 2011/2012 opinions; the solids-basis JECFA value, group EFSA ADI and refined exposure findings are separated.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E151": {
     "researchStatus": "Codex GSFA verified",
@@ -1834,6 +1894,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Brilliant Black PN (INS 151), 2019 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/399",
+        "note": "JECFA retained the ADI of 0–1 mg/kg bw in 2019, stating that new information did not give reason to revise it; the database notes the ADI was based on a short-term pig toxicity study."
+      },
+      {
+        "label": "EFSA — Re-evaluation of Brilliant Black BN (E151), 2010",
+        "url": "https://doi.org/10.2903/j.efsa.2010.1540",
+        "note": "EFSA retained the EU SCF ADI of 5 mg/kg bw/day. Refined exposure estimates were generally below it, but the 95th-percentile upper-end estimate in children under 10 reached 6.9 mg/kg bw/day."
       }
     ],
     "regulatoryGroups": [
@@ -1841,7 +1911,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "tox": "JECFA's current record states that it retained an ADI of 0–1 mg/kg body weight in 2019, with no reason to revise the value based on newly available information; the record says the ADI was based on a short-term toxicity study in pigs. EFSA's 2010 EU re-evaluation reached a different benchmark: it retained the Scientific Committee on Food ADI of 5 mg/kg bw/day, based on a long-term rat carcinogenicity/toxicity study. EFSA reported that refined intake estimates were generally below 5 mg/kg bw/day, but the upper end of the 95th-percentile estimate for children under 10 years reached 6.9 mg/kg bw/day. The two committee values must not be collapsed into a single universal ADI; exposure estimates refer to modelled consumption under particular national datasets and use-level assumptions.",
+    "intake": "JECFA: 0–1 mg/kg bw (retained 2019). EFSA/SCF: 5 mg/kg bw/day (EFSA reaffirmed 2010); the upper-end 95th-percentile estimate for children under 10 reached 6.9 mg/kg bw/day. These are committee-specific benchmarks, not individual consumption advice.",
+    "toxicityResearchStatus": "Reviewed against JECFA's 2019 evaluation record and EFSA's 2010 opinion; the difference between the JECFA and EU SCF/EFSA ADIs is deliberately retained.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E152": {
     "researchStatus": "Historical colour function verified against exact Codex INS 152 entry; current authorisation not inferred",
@@ -1862,11 +1936,25 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 152 entry identifies carbon black (hydrocarbon) and lists Colour. This is a technical classification, not current market permission."
+      },
+      {
+        "label": "FAO/WHO JECFA — Black 7984 (historical EEC serial E152), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1105",
+        "note": "JECFA identifies Black 7984 as the historical EEC serial E152; no ADI was allocated in 1977 and its specification was withdrawn in 1984."
+      },
+      {
+        "label": "WHO/JECFA — Black 7984 toxicological monograph (Food Additives Series 12, 1977)",
+        "url": "https://www.inchem.org/documents/jecfa/jecmono/v12je06.htm",
+        "note": "Primary historical monograph describing the evidence considered in 1977. The JECFA evaluation still allocated no ADI and withdrew the specification in 1984."
       }
     ],
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "The historical E-number E152 referred to Black 7984, a synthetic disazo dye. JECFA's 1977 evaluation allocated no ADI and recorded that its specification was withdrawn in 1984. The historical toxicological monograph described limited animal studies, including long-term rat studies with mixed findings and incomplete pathology; the evaluation did not establish a numerical safe intake. Important identity caution: this historical E152/Black 7984 entry is not the same substance as the current Codex INS 152 entry for carbon black from hydrocarbon sources. The number alone must not be used to transfer toxicology or authorisation between these chemically different materials.",
+    "intake": "No ADI was allocated in JECFA's 1977 evaluation; its specification was withdrawn in 1984. No numerical safe daily intake is established by that historical record. This E152/Black 7984 assessment must not be transferred to the distinct INS 152 carbon black entry.",
+    "toxicityResearchStatus": "Reviewed against JECFA's exact Black 7984 record and 1977 monograph; the historic E152 identity is explicitly distinguished from INS 152 carbon black.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E153": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -1887,6 +1975,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Vegetable carbon (INS 153), 1987 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2323",
+        "note": "JECFA allocated no ADI in 1987 and did not prepare a toxicological monograph; the record shows the decision had previously been postponed."
+      },
+      {
+        "label": "EFSA — Re-evaluation of vegetable carbon (E153), 2012",
+        "url": "https://doi.org/10.2903/j.efsa.2012.2592",
+        "note": "EFSA could not establish an ADI because the toxicological data were limited, but concluded that vegetable carbon at reported use levels was not of safety concern when residual carcinogenic PAHs were below 1.0 µg/kg expressed as benzo[a]pyrene."
+      },
+      {
+        "label": "EFSA — Amendment of specifications for vegetable carbon (E153), 2026",
+        "url": "https://doi.org/10.2903/j.efsa.2026.9855",
+        "note": "The 2026 opinion supports updating EU limits for selected toxic elements and PAHs, but concluded the submitted particle-characterisation data were insufficient; EFSA reported small particles including nanoparticles in analysed samples and said the 2012 risk assessment should be complemented with nanoscale considerations."
       }
     ],
     "regulatoryGroups": [
@@ -1902,7 +2005,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "JECFA's 1987 evaluation allocated no ADI and did not prepare a toxicological monograph; its earlier decision had been postponed. EFSA's 2012 re-evaluation also considered the toxicological database too limited to establish an ADI, but concluded that vegetable carbon at reported food-additive uses was not of safety concern when residual carcinogenic polycyclic aromatic hydrocarbons (PAHs) were below 1.0 µg/kg expressed as benzo[a]pyrene. This conclusion relied in part on the material being essentially not absorbed from the gastrointestinal tract and on contaminant control. EFSA's 2026 opinion on specifications supported amendments to limits for certain toxic elements and PAHs, but found the submitted particle-characterisation data insufficient to fully characterise the material. It reported a fraction of small particles, including nanoparticles, in all analysed samples and stated that the 2012 risk assessment should be complemented with nanoscale considerations. The 2026 opinion does not itself establish that the additive causes harm; it identifies unresolved characterisation and assessment needs. Vegetable carbon E153 must also not be confused with the separate historical E152/Black 7984 dye or hydrocarbon-source carbon black.",
+    "intake": "No numerical ADI established by JECFA (1987) or EFSA (2012), because the toxicological database was insufficient. EFSA's 2012 conclusion of no safety concern applied at reported use levels to material with residual carcinogenic PAHs below 1.0 µg/kg as benzo[a]pyrene. EFSA's 2026 specification opinion identified particle-characterisation gaps and the need to complement the earlier assessment with nanoscale considerations.",
+    "toxicityResearchStatus": "Reviewed against JECFA 1987, EFSA 2012 and EFSA 2026; no-ADI status, the conditional 2012 use-level conclusion, and 2026 particle-characterisation gaps are separately recorded.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E154": {
     "researchStatus": "Historical colour function verified against exact Codex INS 154 entry; current authorisation not inferred",
@@ -1923,11 +2030,25 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 154 entry identifies Brown FK and lists Colour. This is a technical classification, not current market permission."
+      },
+      {
+        "label": "FAO/WHO JECFA — Brown FK (INS 154), 1986 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1274",
+        "note": "JECFA lists no ADI allocated in 1986; a temporary ADI of 0–0.075 mg/kg bw from 1985 was not retained, and the specification had been withdrawn in 1984."
+      },
+      {
+        "label": "EFSA — Re-evaluation of Brown FK (E154), 2010",
+        "url": "https://doi.org/10.2903/j.efsa.2010.1535",
+        "note": "EFSA could not conclude on safety because of deficiencies in the toxicity database, including uncertainty in reported NOAELs and incomplete histopathology of lower-dose groups. EFSA described the permitted EU use as kippers up to 20 mg/kg and estimated exposure near the SCF ADI in some scenarios."
       }
     ],
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "JECFA's 1986 evaluation allocated no ADI to Brown FK. Its previous temporary ADI of 0–0.075 mg/kg body weight/day (1985) was not retained, and the specification had already been withdrawn in 1984. The EU Scientific Committee for Food had separately established an ADI of 0.15 mg/kg bw/day in 1983. In its 2010 re-evaluation, EFSA could not conclude on the safety of Brown FK because of important deficiencies in the toxicological database: the reported NOAELs in chronic toxicity and carcinogenicity studies were uncertain, treatment-related changes occurred at the highest dose in the carcinogenicity study, and histopathological examination of the lower dose groups had not been carried out. EFSA described the permitted EU use at that time as kippers up to 20 mg/kg and estimated 95th-percentile child and adult exposure up to 0.14 mg/kg bw/day. The inability to conclude is an evidence-quality issue, not a quantified finding of harm.",
+    "intake": "JECFA: no ADI allocated in 1986; temporary 0–0.075 mg/kg bw/day (1985) not retained. EU SCF: 0.15 mg/kg bw/day (1983). EFSA in 2010 could not conclude on safety owing to database deficiencies; its estimated 95th-percentile exposure reached 0.14 mg/kg bw/day in some child/adult scenarios.",
+    "toxicityResearchStatus": "Reviewed against JECFA's 1985–1986 history and EFSA's 2010 opinion; the withdrawn temporary ADI, separate SCF ADI and EFSA's inability-to-conclude outcome are distinguished.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E155": {
     "researchStatus": "Codex GSFA verified",
@@ -1958,6 +2079,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Brown HT (INS 155), 1984 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3815",
+        "note": "JECFA established an ADI of 0–1.5 mg/kg bw in 1984; the prior temporary values were lower and later history is shown in the record."
+      },
+      {
+        "label": "EFSA — Re-evaluation of Brown HT (E155), 2010",
+        "url": "https://www.efsa.europa.eu/en/press/news/ans100421",
+        "note": "EFSA halved the previous ADI to 1.5 mg/kg bw/day after adverse effects including slightly reduced weight gain at lower levels in long-term animal exposure; high consumers among adults and children could exceed the ADI under maximum permitted-use estimates."
       }
     ],
     "regulatoryGroups": [
@@ -1965,7 +2096,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "tox": "JECFA's 1984 evaluation lists an ADI of 0–1.5 mg/kg body weight/day for Brown HT. EFSA's 2010 re-evaluation also set the ADI at 1.5 mg/kg bw/day, halving the previous EU value because adverse effects, including slightly reduced weight gain, were observed in animals at lower exposure levels than those underlying earlier assessments. Using maximum permitted use levels and food-consumption data, EFSA estimated that exposure could exceed the new ADI in adults and children who regularly consumed large amounts of foods containing Brown HT. The example given by EFSA was a 15 kg child consuming more than 1.125 litres of soft drink at the maximum reported use level daily. This is an exposure-model illustration, not an individual prediction; the ADI is a long-term benchmark.",
+    "intake": "JECFA ADI: 0–1.5 mg/kg bw/day (1984). EFSA ADI: 1.5 mg/kg bw/day (2010), lowered from the previous EU value because of adverse effects in long-term animal studies. EFSA's high-consumer exposure scenarios could exceed this benchmark for adults and children.",
+    "toxicityResearchStatus": "Reviewed against JECFA's 1984 evaluation and EFSA's 2010 re-evaluation; the reason for lowering the EU ADI and high-consumer exposure caveat are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160a": {
     "researchStatus": "UK FSA grouped-use source",
