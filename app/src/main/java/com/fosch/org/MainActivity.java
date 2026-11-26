@@ -69,6 +69,7 @@ public class MainActivity extends Activity {
     private static final int SCANNER_REQUEST = 843;
     private static final int PHOTO_CAPTURE_REQUEST = 844;
     private static final int ADMIN_IMAGE_PICK_REQUEST = 845;
+    private static final int ONBOARDING_CAMERA_PERMISSION_REQUEST = 846;
     private static final int NO_CAMERA_ACTION = 0;
     private static final int CAMERA_ACTION_SCAN = 1;
     private static final int CAMERA_ACTION_PHOTO = 2;
@@ -212,6 +213,20 @@ public class MainActivity extends Activity {
         @JavascriptInterface public String getSystemTheme() {
             int mode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
             return mode == Configuration.UI_MODE_NIGHT_YES ? "dark" : "light";
+        }
+        @JavascriptInterface public boolean hasCameraPermission() {
+            return Build.VERSION.SDK_INT < Build.VERSION_CODES.M ||
+                    checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
+        }
+        @JavascriptInterface public void requestOnboardingCameraPermission() {
+            runOnUiThread(() -> {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
+                        checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                    requestPermissions(new String[]{Manifest.permission.CAMERA}, ONBOARDING_CAMERA_PERMISSION_REQUEST);
+                } else if (view != null) {
+                    view.evaluateJavascript("window.onFOSCHOnboardingPermissionChanged && window.onFOSCHOnboardingPermissionChanged(true)", null);
+                }
+            });
         }
         // Synchronous so the UI always gets an immediate answer instead of waiting on a JS callback.
         @JavascriptInterface public boolean checkInternetConnection() {
@@ -647,6 +662,13 @@ public class MainActivity extends Activity {
 
     @Override public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == ONBOARDING_CAMERA_PERMISSION_REQUEST) {
+            boolean granted = grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
+            if (view != null) {
+                view.evaluateJavascript("window.onFOSCHOnboardingPermissionChanged && window.onFOSCHOnboardingPermissionChanged(" + granted + ")", null);
+            }
+            return;
+        }
         if (requestCode == CAMERA_PERMISSION_REQUEST) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 if (pendingCameraAction == CAMERA_ACTION_PHOTO) launchProductPhotoCapture();
