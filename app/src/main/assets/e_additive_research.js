@@ -1,4 +1,4 @@
-window.FOSCH_RESEARCH_DATA =
+window.FOSCH_RESEARCH_DATA=
 {
   "E100": {
     "researchStatus": "Codex GSFA subtype record and category-specific provisions cross-checked; no blanket authorisation inferred",
@@ -12111,9 +12111,9 @@ window.FOSCH_RESEARCH_DATA =
     ]
   },
   "E521": {
-    "researchStatus": "Codex INS entry cross-checked; exact functional-class tagging held because the source tables and individual JECFA functional-use record are not fully aligned",
+    "researchStatus": "Official Codex CXG 36-1989 functional-class entry verified; technological classification only, not authorisation",
     "researchedAt": "2026-11-25",
-    "use": "It strengthens the structure of vegetables during processing. It is used as acidity regulator and bleaching agent in flour. Examples include Flour, cheese, confectionary This profile describes technical uses; current authorisation and permitted food categories must be checked separately.",
+    "use": "Aluminium sodium sulfate (INS 521) is classified by Codex as an acidity regulator and firming agent. This is a technological-purpose classification, not a statement of current authorisation in any jurisdiction or food category.",
     "sources": [
       {
         "label": "Food-Info.net — individual E-number profile",
@@ -12124,15 +12124,24 @@ window.FOSCH_RESEARCH_DATA =
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989 (official Codex copy, amended 2015)",
+        "url": "https://www.fao.org/input/download/standards/13341/CXG_036e_2015.pdf",
+        "note": "Official Codex CXG 36-1989 table row for INS 521 confirms the exact functional classes: Acidity regulator, Firming agent. INS classification does not imply approval for use."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021",
-    "functionalClassAuditNote": "No functionalClasses tag assigned in this pass: the exact Codex row-to-class mapping needs an unambiguous primary-source transcription. Do not infer a class from the secondary technical description."
+    "functionalClassAuditNote": "The official Codex table lists INS 521 Aluminium sodium sulfate as Acidity regulator and Firming agent.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Firming agent"
+    ]
   },
   "E522": {
-    "researchStatus": "Codex INS entry cross-checked; exact functional-class tagging held because the Codex functional-class table and individual JECFA functional-use record differ",
+    "researchStatus": "Official Codex CXG 36-1989 functional-class entry verified; technological classification only, not authorisation",
     "researchedAt": "2026-11-25",
-    "use": "DermNet NZ describes Aluminium potassium sulphate as Acidity regulator, raising agent. Examples of use include Baking products. This is a technical description, not a statement of current authorisation; permitted foods and use levels depend on the relevant jurisdiction.",
+    "use": "Aluminium potassium sulfate (INS 522) is classified by Codex as an acidity regulator and stabilizer. This is a technological-purpose classification, not a statement of current authorisation in any jurisdiction or food category.",
     "sources": [
       {
         "label": "DermNet NZ — Food additives and E numbers (reviewed June 2026)",
@@ -12143,9 +12152,18 @@ window.FOSCH_RESEARCH_DATA =
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO Codex Alimentarius — CXG 36-1989 (official Codex copy, amended 2015)",
+        "url": "https://www.fao.org/input/download/standards/13341/CXG_036e_2015.pdf",
+        "note": "Official Codex CXG 36-1989 table row for INS 522 confirms the exact functional classes: Acidity regulator, Stabilizer. INS classification does not imply approval for use."
       }
     ],
-    "functionalClassAuditNote": "No functionalClasses tag assigned in this pass: Codex and JECFA list different functions for INS 522. The record retains its source-backed use wording, but this audit does not merge unlike classification systems."
+    "functionalClassAuditNote": "The official Codex table lists INS 522 Aluminium potassium sulfate as Acidity regulator and Stabilizer.",
+    "functionalClasses": [
+      "Acidity regulator",
+      "Stabilizer"
+    ]
   },
   "E523": {
     "researchStatus": "Codex GSFA verified",
