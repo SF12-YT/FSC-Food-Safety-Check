@@ -550,7 +550,7 @@ if(localStorage.getItem("fosch-market-country")&&localStorage.getItem(FOSCH_ONBO
  localStorage.setItem(FOSCH_ONBOARDING_KEY,"true");
 }
 let onboardingReplayMode=localStorage.getItem("fosch-onboarding-replay")==="true";
-let onboardingStep=0;
+let onboardingStep=localStorage.getItem(FOSCH_ONBOARDING_PROGRESS_KEY)==="true"?Math.max(0,Math.min(7,parseInt(localStorage.getItem("fosch-onboarding-step")||"0",10)||0)):0;
 let contributions=JSON.parse(localStorage.getItem("fosch-contrib")||"[]"),page=localStorage.getItem(FOSCH_ONBOARDING_KEY)==="true"?(localStorage.getItem("fosch-market-country")?"home":"countrySetup"):"onboarding",query="",selected=null,browseCategory=null,editingDraftId=null,viewingDraftId=null;
 let searchCategoryFilter="all",favoritesOnly=false,searchFiltersExpanded=false;
 let favoriteCodes=new Set();try{const rawFavs=JSON.parse(localStorage.getItem("fosch-favorites")||"[]");if(Array.isArray(rawFavs))favoriteCodes=new Set(rawFavs.map(x=>String(x).toUpperCase()))}catch(e){}
@@ -598,14 +598,14 @@ window.onFOSCHOnboardingPermissionChanged=function(){if(page==="onboarding"&&onb
 function setOnboardingDietary(key,enabled){prefs[key]=!!enabled;save()}
 function previousOnboardingStep(){
  if(page!=="onboarding")return;
- if(onboardingStep>0){onboardingStep--;render()}
+ if(onboardingStep>0){onboardingStep--;localStorage.setItem("fosch-onboarding-step",String(onboardingStep));render()}
 }
 function replayOnboarding(){
  onboardingReplayMode=true;
  localStorage.setItem("fosch-onboarding-replay","true");
  localStorage.setItem(FOSCH_ONBOARDING_PROGRESS_KEY,"true");
  localStorage.removeItem(FOSCH_ONBOARDING_KEY);
- onboardingStep=0;page="onboarding";pageHistory=[];suppressNextHistoryPush=true;render();
+ onboardingStep=0;localStorage.setItem("fosch-onboarding-step","0");page="onboarding";pageHistory=[];suppressNextHistoryPush=true;render();
 }
 function nextOnboardingStep(){
  if(page!=="onboarding")return;
@@ -624,11 +624,13 @@ function nextOnboardingStep(){
   save();
   localStorage.setItem(FOSCH_ONBOARDING_KEY,"true");
   localStorage.removeItem(FOSCH_ONBOARDING_PROGRESS_KEY);
+  localStorage.removeItem("fosch-onboarding-step");
   localStorage.removeItem("fosch-onboarding-replay");
   onboardingReplayMode=false;
   page="home";onboardingStep=0;pageHistory=[];suppressNextHistoryPush=true;render();return;
  }
  onboardingStep++;
+ localStorage.setItem("fosch-onboarding-step",String(onboardingStep));
  render();
 }
 function renderOnboarding(a){
