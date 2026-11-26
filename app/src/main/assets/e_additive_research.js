@@ -2113,14 +2113,19 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "FAO/WHO JECFA — Synthetic beta-carotene / INS 160a(i) (JECFA 2019 record says earlier group ADIs were withdrawn; the 2026 entry considered dietary exposure without establishing a new ADI.)",
+        "label": "FAO/WHO JECFA — Beta-carotene (synthetic; INS 160a(i)), 2026 evaluation",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1514",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
+        "note": "JECFA's 2026 evaluation considered dietary exposure only. It reports that the upper end of estimated exposure was higher than at the 87th meeting and says the toxicological relevance cannot be characterized in the absence of an ADI. The 2019 evaluation withdrew previous group ADIs."
       },
       {
         "label": "EFSA — food-colour assessments",
         "url": "https://www.efsa.europa.eu/en/topics/topic/food-colours",
         "note": "Scientific evaluation status overview."
+      },
+      {
+        "label": "EFSA — Re-evaluation of mixed carotenes and beta-carotene, 2012",
+        "url": "https://doi.org/10.2903/j.efsa.2012.2593",
+        "note": "EFSA could not establish ADIs from the available database. It considered certain food-colour uses not of safety concern only where intake from additive and supplements did not exceed the amount likely from regular consumption of the relevant foods (about 5–10 mg/day); it could not conclude on the safety of mixed carotenes."
       }
     ],
     "regulatoryGroups": [
@@ -2129,9 +2134,11 @@ window.FOSCH_RESEARCH_DATA=
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
-    "tox": "JECFA’s 2019 evaluation withdrew earlier group ADIs for specified beta-carotene forms; its 2026 entry considered dietary exposure but did not establish a new ADI. This does not mean the additive is classified as toxic; it means a numeric ADI is not currently available from that evaluation.",
-    "intake": "Latest JECFA entry: no current numeric ADI established in the 2026 assessment; earlier group ADIs were withdrawn in 2019. Match the exact E160a sub-form and current assessment before reporting a limit.",
-    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex lists classes against specific beta-carotene subtypes; this parent record is not assigned a blanket class without subtype scope."
+    "tox": "The E160a parent entry covers chemically and regulatorily distinct beta-carotene and mixed-carotene sources, so a single historic ADI should not be displayed as applying to every preparation. EFSA's 2012 re-evaluation could not establish numerical ADIs for mixed carotenes or beta-carotene; it considered certain food-colour uses not of safety concern only under a condition limiting combined additive and supplement intake to the amount likely from regular consumption of the relevant foods (about 5–10 mg/day), and could not conclude on the safety of mixed carotenes. JECFA withdrew earlier group ADIs of 0–5 mg/kg bw for specified synthetic/Blakeslea beta-carotene groups in 2019 because rats were considered inappropriate for deriving an ADI due to lower beta-carotene bioavailability than in humans. JECFA's 2026 evaluation considered beta-carotene dietary exposure only and reported higher upper-end exposure estimates than at its 87th meeting; in the absence of an ADI, it said the toxicological relevance could not be characterised. Other forms have separate historical outcomes: mixed carotenes had an ADI “not specified” in 1993 only if use did not exceed levels normally found in vegetables; algal beta-carotene from Dunaliella salina had an ADI “not specified” in 2017 for specified food-colour use, not supplements. The EU E160a(i)/(ii) suffix mapping in EFSA's opinion does not match the Codex INS subtype suffix mapping used by the subrecords here.",
+    "intake": "No current numeric ADI can be applied across the E160a parent group. JECFA withdrew specified beta-carotene group ADIs in 2019 and assessed exposure only in 2026; the toxicological relevance of higher exposure estimates could not be characterised without an ADI. Earlier “ADI not specified” determinations were source-specific and conditional. EFSA's 2012 use conclusion had a specific food-and-supplement exposure condition and cannot be treated as a general daily allowance.",
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex lists classes against specific beta-carotene subtypes; this parent record is not assigned a blanket class without subtype scope.",
+    "toxicityResearchStatus": "Reviewed against JECFA source-specific records through its 2026 meeting and EFSA's 2012 re-evaluation; plant/mixed, synthetic, Blakeslea-derived and algal carotene histories are distinguished, with EU-versus-INS suffix-mapping limitation noted.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160a(i)": {
     "researchStatus": "Source-backed use",
@@ -2150,8 +2157,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E160a(i) does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Beta-carotene (synthetic; INS 160a(i)), evaluation history including 2026",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1514",
+        "note": "JECFA withdrew previous group ADIs in 2019 because rodent bioavailability is not representative of humans; its 2026 entry is exposure-only and says the toxicological relevance of higher exposure estimates cannot be characterised without an ADI."
+      },
+      {
+        "label": "EFSA — Re-evaluation of mixed carotenes and beta-carotene, 2012",
+        "url": "https://doi.org/10.2903/j.efsa.2012.2593",
+        "note": "EFSA could not establish an ADI for beta-carotene; the opinion's EU subtype nomenclature differs from Codex INS subtype suffixes, so the chemical identity, not the suffix, is matched here."
       }
-    ]
+    ],
+    "tox": "For the synthetic beta-carotene form identified here by Codex INS 160a(i), JECFA's earlier group ADI of 0–5 mg/kg body weight was withdrawn in 2019. JECFA stated that rats were not an appropriate model for deriving an ADI because beta-carotene bioavailability is relatively low in rats compared with humans, and it could not establish a replacement group ADI covering the general population. At its 102nd meeting in 2026, JECFA considered dietary exposure only: estimated upper-end exposure was higher than the range considered at its 87th meeting, but JECFA said that without an ADI the toxicological relevance could not be characterised. EFSA's 2012 European assessment also could not establish an ADI for beta-carotene, but considered certain food-colour uses not of safety concern only under a specific condition limiting combined intake from food additive and supplements to the amount expected from normal food consumption. Note that EFSA's E160a suffix designations differ from Codex INS suffixes; this record is matched by chemical identity (synthetic beta-carotene), not by the suffix.",
+    "intake": "JECFA's former group ADI of 0–5 mg/kg bw was withdrawn in 2019; no replacement ADI was established. JECFA's 2026 evaluation considered exposure only and could not characterise its toxicological significance without an ADI. EFSA's 2012 opinion also did not establish an ADI and provided only a conditional conclusion for specified food-use levels.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA synthetic beta-carotene record and EFSA's 2012 opinion; 2019 ADI withdrawal, 2026 exposure-only status and suffix mapping are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160a(ii)": {
     "researchStatus": "Codex GSFA verified",
@@ -2177,8 +2198,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "FAO/WHO JECFA — Mixed carotenes (INS 160a(ii)), evaluation history including 2026",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/743",
+        "note": "JECFA's 1993 record listed an ADI “not specified” only provided use did not exceed levels normally found in vegetables; its 2026 entry considered dietary exposure only and stated that the toxicological relevance of higher exposure estimates could not be characterised in the absence of an ADI."
+      },
+      {
+        "label": "EFSA — Re-evaluation of mixed carotenes and beta-carotene, 2012",
+        "url": "https://doi.org/10.2903/j.efsa.2012.2593",
+        "note": "EFSA could not establish an ADI for mixed carotenes and could not conclude on their safety in use; its EU E160a(i) label for mixed carotenes differs from Codex INS suffix mapping."
       }
-    ]
+    ],
+    "tox": "The Codex INS 160a(ii) entry here refers to mixed carotenes from plant sources. JECFA's 1993 evaluation listed an ADI “not specified”, conditional on use not exceeding the levels normally found in vegetables. Its 2026 database entry considered dietary exposure only and states that estimates at the upper end were higher than those considered at the 87th meeting; in the absence of an ADI for beta-carotenes, JECFA said the toxicological relevance of this increase could not be characterised. EFSA's 2012 re-evaluation could not establish an ADI for mixed carotenes and could not conclude on their safety in use because of the available data limitations. The EFSA opinion's European subtype labels call mixed carotenes E160a(i), whereas the Codex INS subtype for plant carotenes used in this data record is 160a(ii); the substances must be matched by identity, not suffix.",
+    "intake": "JECFA's historical ADI “not specified” (1993) was conditional on use not exceeding the levels normally found in vegetables. The 2026 JECFA entry considered exposure only and could not characterise the toxicological relevance of higher exposure estimates without an ADI. EFSA could not establish an ADI for mixed carotenes in 2012.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA mixed-carotenes record and EFSA's 2012 opinion; historical conditional status and the 2026 exposure-only evaluation are distinguished.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160a(iii)": {
     "researchStatus": "Source-backed use",
@@ -2197,8 +2232,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO JECFA — Beta-carotene from Blakeslea trispora (INS 160a(iii)), 2026 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/65",
+        "note": "JECFA withdrew the former group ADI of 0–5 mg/kg bw in 2019 and considered only dietary exposure in 2026; it said the toxicological relevance of higher upper-end exposure estimates could not be characterised without an ADI."
+      },
+      {
+        "label": "EFSA — Re-evaluation of mixed carotenes and beta-carotene, 2012",
+        "url": "https://doi.org/10.2903/j.efsa.2012.2593",
+        "note": "EFSA's 2012 beta-carotene assessment included fermentation-derived beta-carotene from Blakeslea trispora; it could not establish a numerical ADI and set a conditional food-use conclusion."
       }
-    ]
+    ],
+    "tox": "For beta-carotene produced by fermentation using Blakeslea trispora, JECFA's earlier group ADI of 0–5 mg/kg body weight was withdrawn in 2019 along with the group value for synthetic beta-carotene. JECFA cited the relatively low bioavailability of beta-carotene in rats compared with humans and said a group ADI could not be established for the general population. Its 2026 evaluation considered dietary exposure only; upper-end estimates were higher than in the 87th meeting, but in the absence of an ADI JECFA could not characterise the toxicological relevance. EFSA's 2012 beta-carotene re-evaluation included the Blakeslea-derived form and could not establish an ADI; its conditional food-colour conclusion should not be applied to supplement exposures without the stated conditions.",
+    "intake": "The former JECFA group ADI of 0–5 mg/kg bw was withdrawn in 2019; no replacement ADI was established. JECFA's 2026 exposure-only evaluation could not characterise the toxicological relevance of higher exposure estimates without an ADI.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA Blakeslea trispora beta-carotene record and EFSA's 2012 assessment; withdrawn group ADI and 2026 exposure-only review are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160a(iv)": {
     "researchStatus": "Source-backed use",
@@ -2217,8 +2266,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — Class Names and the International Numbering System for Food Additives (CXG 36-1989)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
+      },
+      {
+        "label": "FAO/WHO JECFA — Carotenes from algae (Dunaliella salina; INS 160a(iv)), 2026 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/742",
+        "note": "JECFA's 2017 entry listed an ADI “not specified” and found no health concern for the specified extract when used as a food colour, not a supplement; its 2026 entry considered exposure only and stated that the toxicological relevance of higher exposure estimates could not be characterised in the absence of an ADI."
+      },
+      {
+        "label": "EFSA — Re-evaluation of mixed carotenes and beta-carotene, 2012",
+        "url": "https://doi.org/10.2903/j.efsa.2012.2593",
+        "note": "EFSA's 2012 mixed-carotene assessment included algae-derived carotenes; its EU E160a(i) suffix differs from Codex INS subtype suffix mapping."
       }
-    ]
+    ],
+    "tox": "For beta-carotene-rich extract from Dunaliella salina, JECFA's 2017 evaluation listed an ADI “not specified” and concluded that use of the specified extract as a food colour did not pose a health concern; it explicitly said that conclusion did not apply to use as a food supplement. JECFA's 2026 exposure-only evaluation reported higher estimates at the upper end of the exposure range than those considered at the 87th meeting, and said that in the absence of an ADI the toxicological relevance could not be characterised. This is a different source and assessment history from synthetic beta-carotene and Blakeslea-derived beta-carotene; do not apply the 2019 withdrawal or another subtype's earlier ADI without matching the precise JECFA record.",
+    "intake": "JECFA 2017: ADI “not specified” for the specified Dunaliella extract used as a food colour, with no health concern for that specified use; not applicable to supplements. JECFA 2026: exposure-only review; no ADI available to characterise the toxicological relevance of higher estimates.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA algae-carotene record through 2026; the 2017 food-colour conclusion and its exclusion of supplement use are retained.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160b": {
     "researchStatus": "Codex GSFA colour function and category provisions verified",
@@ -2246,9 +2309,19 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Reports a severe reaction with positive testing to annatto and evidence consistent with IgE-mediated hypersensitivity to residual seed proteins."
       },
       {
-        "label": "FAO/WHO JECFA — Annatto extracts / INS 160b (JECFA distinguishes bixin and norbixin forms and gives separate ADIs and specifications.)",
+        "label": "FAO/WHO JECFA — Annatto extracts (INS 160b), 2006 evaluation",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2706",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
+        "note": "JECFA established separate form-specific values: bixin 0–12 mg/kg bw/day, and a group ADI of 0–0.6 mg/kg bw/day for norbixin and its sodium/potassium salts, expressed as norbixin. The values apply only to extracts meeting specified compositions and specifications."
+      },
+      {
+        "label": "EFSA — Safety of annatto extracts (E160b), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4544",
+        "note": "EFSA established ADIs of 6 mg/kg bw/day for bixin and 0.3 mg/kg bw/day for norbixin for specified assessed extracts, but could not assess the safety of then-authorised E160b extracts under existing EU specifications owing to gaps in identity and toxicological data."
+      },
+      {
+        "label": "EFSA — Annatto E and exposure to bixin/norbixin, 2019",
+        "url": "https://doi.org/10.2903/j.efsa.2019.5626",
+        "note": "EFSA concluded annatto E did not raise genotoxicity concern after an additional in-vivo comet assay; bixin/norbixin ADIs remained 6 and 0.3 mg/kg bw/day. Exposures at proposed uses were below the bixin ADI; some high-percentile norbixin scenarios reached or exceeded the ADI, with likely overestimation noted."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021",
@@ -2258,8 +2331,8 @@ window.FOSCH_RESEARCH_DATA=
     "regulatoryGroups": [
       "colours"
     ],
-    "tox": "JECFA’s values are form-specific: ADI 0–12 mg/kg body weight/day for qualifying bixin extracts; group ADI 0–0.6 mg/kg bw/day for norbixin and its sodium/potassium salts expressed as norbixin. Product specifications and exact form are essential.",
-    "intake": "JECFA: bixin 0–12 mg/kg bw/day; norbixin/salts group ADI 0–0.6 mg/kg bw/day expressed as norbixin (2006, for specified conforming extracts). Identify exact sub-form before applying either value.",
+    "tox": "JECFA's 2006 re-evaluation established separate ADIs for specified annatto extracts: 0–12 mg/kg body weight/day for bixin and a group ADI of 0–0.6 mg/kg bw/day for norbixin and its sodium/potassium salts, expressed as norbixin. These JECFA values are conditional on the precise extract composition and specifications; the bixin value did not apply to oil-processed bixin. EFSA's 2016 assessment established lower ADIs for specifically characterised extracts—6 mg/kg bw/day for bixin and 0.3 mg/kg bw/day for norbixin—but could not assess the safety of the then-authorised E160b extracts under existing EU specifications because identity and toxicological data were inadequate. EFSA's 2019 follow-up evaluated additional information for annatto E, concluded that it did not raise a genotoxicity concern, and retained the bixin/norbixin ADIs. Exposure to bixin was below its ADI across assessed refined scenarios; some high-percentile norbixin scenarios reached or exceeded the ADI, although EFSA considered the exceedance likely overestimated because of one food-category contribution. Annatto-specific allergic reactions have also been described rarely; those reports are separate from the ADI-based toxicological assessment and the evidence is limited.",
+    "intake": "JECFA 2006: bixin 0–12 mg/kg bw/day; norbixin/sodium/potassium salts group ADI 0–0.6 mg/kg bw/day, expressed as norbixin, for specified extracts. EFSA 2016/2019: bixin 6 mg/kg bw/day; norbixin 0.3 mg/kg bw/day for specified assessed extracts. Do not use these numbers without matching the precise extract and specification.",
     "allergy": "Rare allergic reactions to annatto (E160b), including urticaria, angioedema and a reported case of anaphylaxis, have been described. Residual seed proteins may be involved; the evidence is limited and applies to annatto-specific reactions.",
     "allergySources": [
       {
@@ -2272,7 +2345,9 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://pubmed.ncbi.nlm.nih.gov/11285683/",
         "note": "Critical review describes annatto reactions as rare and discusses the limited case evidence."
       }
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against JECFA 2006 and EFSA 2016/2019; bixin/norbixin split, extract specifications, EU authorised-extract evidence gap, exposure caveat and limited allergy reports are separated.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160b(i)": {
     "researchStatus": "Codex GSFA verified",
@@ -2303,6 +2378,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Annatto extracts (INS 160b), 2006 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2706",
+        "note": "JECFA established separate form-specific values: bixin 0–12 mg/kg bw/day, and a group ADI of 0–0.6 mg/kg bw/day for norbixin and its sodium/potassium salts, expressed as norbixin. The values apply only to extracts meeting specified compositions and specifications."
+      },
+      {
+        "label": "EFSA — Safety of annatto extracts (E160b), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4544",
+        "note": "EFSA established ADIs of 6 mg/kg bw/day for bixin and 0.3 mg/kg bw/day for norbixin for specified assessed extracts, but could not assess the safety of then-authorised E160b extracts under existing EU specifications owing to gaps in identity and toxicological data."
+      },
+      {
+        "label": "EFSA — Annatto E and exposure to bixin/norbixin, 2019",
+        "url": "https://doi.org/10.2903/j.efsa.2019.5626",
+        "note": "EFSA concluded annatto E did not raise genotoxicity concern after an additional in-vivo comet assay; bixin/norbixin ADIs remained 6 and 0.3 mg/kg bw/day. Exposures at proposed uses were below the bixin ADI; some high-percentile norbixin scenarios reached or exceeded the ADI, with likely overestimation noted."
       }
     ],
     "regulatoryGroups": [
@@ -2310,7 +2400,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "tox": "This record represents the bixin-based annatto colour principle in the Codex INS subtype mapping. JECFA's 2006 ADI for bixin was 0–12 mg/kg body weight/day, but it applied only to specified solvent-extracted and aqueous-processed extracts with defined bixin/norbixin composition and did not apply to oil-processed bixin. EFSA's 2016 assessment established an ADI of 6 mg/kg bw/day for specified bixin extracts, based on a 90-day study and an uncertainty factor of 200; refined exposure estimates were below the ADI for all assessed population groups. EFSA could not assess the safety of some then-authorised annatto extracts under existing EU specifications because of gaps in identity and toxicology, so the ADI must not be transferred automatically to every commercial extract. In its 2019 follow-up, EFSA concluded that new in-vivo data resolved the genotoxicity concern for annatto E and that the bixin ADI could be applied to it; all assessed bixin exposure estimates remained below the ADI. EFSA's E160b EU subtype descriptions do not map exactly onto the Codex INS suffixes, so exact extract identity and specifications remain decisive.",
+    "intake": "JECFA bixin ADI: 0–12 mg/kg bw/day (2006) for specified compliant extracts. EFSA ADI: 6 mg/kg bw/day (2016/2019) for specified bixin extracts; exposure estimates remained below this ADI in all assessed scenarios. Oil-processed bixin and insufficiently characterised extracts are not covered automatically.",
+    "toxicityResearchStatus": "Reviewed against JECFA's bixin conditions and EFSA's 2016/2019 opinions; the form-specific specification conditions and EU/Codex subtype mapping are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160b(ii)": {
     "researchStatus": "Codex GSFA verified",
@@ -2341,6 +2435,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Annatto extracts (INS 160b), 2006 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2706",
+        "note": "JECFA established separate form-specific values: bixin 0–12 mg/kg bw/day, and a group ADI of 0–0.6 mg/kg bw/day for norbixin and its sodium/potassium salts, expressed as norbixin. The values apply only to extracts meeting specified compositions and specifications."
+      },
+      {
+        "label": "EFSA — Safety of annatto extracts (E160b), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4544",
+        "note": "EFSA established ADIs of 6 mg/kg bw/day for bixin and 0.3 mg/kg bw/day for norbixin for specified assessed extracts, but could not assess the safety of then-authorised E160b extracts under existing EU specifications owing to gaps in identity and toxicological data."
+      },
+      {
+        "label": "EFSA — Annatto E and exposure to bixin/norbixin, 2019",
+        "url": "https://doi.org/10.2903/j.efsa.2019.5626",
+        "note": "EFSA concluded annatto E did not raise genotoxicity concern after an additional in-vivo comet assay; bixin/norbixin ADIs remained 6 and 0.3 mg/kg bw/day. Exposures at proposed uses were below the bixin ADI; some high-percentile norbixin scenarios reached or exceeded the ADI, with likely overestimation noted."
       }
     ],
     "regulatoryGroups": [
@@ -2348,7 +2457,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "tox": "This record represents the norbixin-based annatto colour principle in the Codex INS subtype mapping. JECFA's 2006 group ADI was 0–0.6 mg/kg body weight/day for norbixin and its sodium/potassium salts, expressed as norbixin, and applied only to specified extracts meeting the relevant composition criteria. EFSA's 2016 assessment established an ADI of 0.3 mg/kg bw/day for specified norbixin extracts. Under then-current reported uses, refined exposure estimates were below the ADI; in proposed extension-of-use scenarios, some 95th-percentile brand-loyal estimates for infants, toddlers and children exceeded it, with EFSA noting likely overestimation from at least one food category. EFSA could not assess the safety of the then-authorised E160b extracts under existing EU specifications because of identity and toxicology data gaps; the specified new extracts assessed in the opinion should not be treated as automatically equivalent to every marketed preparation. EFSA's EU E160b subtype designations differ from Codex INS suffixes, so use the chemical form and extract specification rather than relying on the suffix alone.",
+    "intake": "JECFA norbixin group ADI: 0–0.6 mg/kg bw/day (2006), expressed as norbixin, for specified compliant extracts. EFSA ADI: 0.3 mg/kg bw/day (2016/2019) for specified norbixin extracts. Some proposed-use high-percentile scenarios exceeded this benchmark, but EFSA considered the exceedance likely overestimated.",
+    "toxicityResearchStatus": "Reviewed against JECFA's norbixin group assessment and EFSA's 2016/2019 opinions; specified-extract conditions, high-consumer exposure caveat and EU/Codex suffix mismatch are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160c": {
     "researchStatus": "Codex GSFA subtype verified",
@@ -2396,6 +2509,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Paprika extract (INS 160c(ii)), 2014 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/5866",
+        "note": "JECFA established an ADI of 0–1.5 mg/kg bw/day expressed as total carotenoids. The estimated 95th-percentile exposure was 0.1–0.2 mg/kg bw/day, below the ADI; no health concern was identified for food-colour use."
+      },
+      {
+        "label": "EFSA — Re-evaluation of paprika extract (E160c), 2015/2017 corrected version",
+        "url": "https://doi.org/10.2903/j.efsa.2015.4320",
+        "note": "EFSA found no genotoxic concern for the specified extract and established an ADI of 24 mg/kg bw/day for paprika extract, equivalent to 1.7 mg total carotenoids/kg bw/day for a preparation with 7.1% total carotenoids. Reproductive/developmental data were unavailable and were addressed by read-across."
       }
     ],
     "regulatoryGroups": [
@@ -2403,7 +2526,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "tox": "JECFA's 2014 evaluation of the specifically identified paprika extract INS 160c(ii) established an ADI of 0–1.5 mg/kg body weight/day expressed as total carotenoids. The estimated highest 95th-percentile exposure was 0.1–0.2 mg/kg bw/day, below the ADI, and JECFA concluded that use as a food colour did not present a health concern. EFSA's 2015/2017 re-evaluation of paprika extract E160c found no genotoxic concern for the specified extract tested and no evidence of carcinogenicity at the dose levels studied; it established an ADI of 24 mg/kg bw/day for the paprika extract, corresponding to 1.7 mg total carotenoids/kg bw/day for the characterised extract containing 7.1% total carotenoids. No reproductive/developmental toxicity studies were available, so EFSA used read-across. These ADIs use different expression bases and should not be compared as if both were the same mass of pure carotenoid. The JECFA record is for INS 160c(ii); the 160c(i) paprika oleoresin entry is a separate flavour/spice-oriented assessment and should not inherit this value automatically.",
+    "intake": "JECFA INS 160c(ii): 0–1.5 mg/kg bw/day expressed as total carotenoids (2014); 95th-percentile exposure estimate 0.1–0.2 mg/kg bw/day. EFSA: 24 mg/kg bw/day for the specified paprika extract, equivalent to 1.7 mg total carotenoids/kg bw/day at 7.1% carotenoids. The two values use different expression bases.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA 160c(ii) record and EFSA's corrected 2015/2017 opinion; specified-extract identity, expression basis and read-across limitation are stated.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160d": {
     "researchStatus": "UK FSA grouped-use source",
@@ -2416,9 +2543,9 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "FAO/WHO JECFA — Lycopene / INS 160d (JECFA group ADI not specified for compliant forms used as a food color under GMP.)",
+        "label": "FAO/WHO JECFA — Lycopene from all sources (INS 160d), 2009 evaluation",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2876",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
+        "note": "JECFA established a group ADI “not specified” for compliant synthetic lycopene, Blakeslea-derived lycopene and tomato lycopene used as a food colour under GMP; it withdrew the earlier group ADI of 0–0.5 mg/kg bw."
       },
       {
         "label": "EFSA — food-colour safety reassessments",
@@ -2429,6 +2556,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FSANZ — food colours and intolerance",
         "url": "https://www.foodstandards.gov.au/consumer/additives/foodcolour",
         "note": "Australian/New Zealand official overview; distinguishes food intolerance reports from a diagnosis."
+      },
+      {
+        "label": "EFSA — Lycopene as a food colour, 2008",
+        "url": "https://www.efsa.europa.eu/en/news/efsa-assesses-safety-lycopene-foods",
+        "note": "EFSA established an ADI of 0.5 mg/kg bw/day from all sources and noted that high consumers, particularly preschool and school children, might exceed it."
+      },
+      {
+        "label": "EFSA — Extension of use of lycopene (E160d), 2017",
+        "url": "https://doi.org/10.2903/j.efsa.2017.5064",
+        "note": "EFSA retained the 0.5 mg/kg bw/day ADI. At maximum permitted-use scenarios, mean exposure in toddlers reached 0.82 mg/kg bw/day and high exposure reached 1.39 mg/kg bw/day; EFSA noted uncertainty and recommended refined exposure assessment."
       }
     ],
     "regulatoryGroups": [
@@ -2437,9 +2574,11 @@ window.FOSCH_RESEARCH_DATA=
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
-    "tox": "JECFA lists a group ADI “not specified” for compliant lycopene from all sources when used as a food color under good manufacturing practice (2009 record). Some form-specific database entries have separate histories; do not mix them without checking the exact subtype.",
-    "intake": "JECFA group ADI “not specified” for compliant lycopene used as food color under GMP (2009). Match the exact E160d subtype and current record.",
-    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex lists classes against specific lycopene subtypes; this parent record is not assigned a blanket class without subtype scope."
+    "tox": "Lycopene has materially different JECFA and EFSA assessment histories. JECFA's 2009 group evaluation established an ADI “not specified” for compliant synthetic lycopene, Blakeslea-derived lycopene and tomato lycopene when used as a food colour under good manufacturing practice, and withdrew its earlier group ADI of 0–0.5 mg/kg bw. EFSA's 2008 assessment instead established an ADI of 0.5 mg/kg bw/day for lycopene from all sources and noted that high consumers, especially preschool and school-age children, might exceed it. EFSA's 2017 extension-of-use opinion retained the 0.5 mg/kg bw/day ADI; at maximum permitted-use assumptions, mean toddler exposure reached 0.82 mg/kg bw/day and high exposure 1.39 mg/kg bw/day, although the Panel noted substantial uncertainty and recommended refined exposure estimates. The source-specific JECFA database entries for synthetic and Blakeslea lycopene separately display a 2023 group ADI of 0–0.5 mg/kg bw, with that meeting considering specifications only; the tomato lycopene entry remains within the 2009 group ADI “not specified” record. These records should be presented side-by-side rather than collapsed into one universal value.",
+    "intake": "JECFA 2009: group ADI “not specified” for compliant lycopene from all sources used as food colour under GMP. JECFA 2023 source-specific records: 0–0.5 mg/kg bw group ADI for synthetic and Blakeslea sources (specifications-only evaluation). EFSA: 0.5 mg/kg bw/day for lycopene from all sources (2008; retained 2017). High-use toddler exposure estimates in 2017 reached 0.82 mean and 1.39 mg/kg bw/day high exposure in maximum-use scenario; uncertainty was noted.",
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex lists classes against specific lycopene subtypes; this parent record is not assigned a blanket class without subtype scope.",
+    "toxicityResearchStatus": "Reviewed against JECFA's 2009 all-source evaluation, 2023 synthetic/Blakeslea records and EFSA's 2008/2017 assessments; differing committee outcomes, source-specific records and exposure assumptions are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160d(i)": {
     "researchStatus": "Codex GSFA verified",
@@ -2465,8 +2604,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "FAO/WHO JECFA — Synthetic lycopene (INS 160d(i)), 2023 specification evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/5572",
+        "note": "JECFA's 2023 record lists a group ADI of 0–0.5 mg/kg bw for synthetic lycopene and lycopene from Blakeslea trispora; the 2023 meeting considered specifications only."
+      },
+      {
+        "label": "EFSA — Lycopene as a food colour, 2008",
+        "url": "https://www.efsa.europa.eu/en/news/efsa-assesses-safety-lycopene-foods",
+        "note": "EFSA established a total-sources ADI of 0.5 mg/kg bw/day and noted potential exceedance in high-consuming preschool and school-age children."
       }
-    ]
+    ],
+    "tox": "For synthetic lycopene (Codex INS 160d(i)), JECFA's 2023 database record lists a group ADI of 0–0.5 mg/kg body weight for synthetic lycopene and lycopene from Blakeslea trispora; the 2023 meeting considered specifications only. This source-specific entry sits alongside JECFA's broader 2009 group assessment of compliant lycopene from all sources, including tomato, which used the wording ADI “not specified” under good manufacturing practice and withdrew an earlier 0–0.5 mg/kg group value. EFSA's assessment differs: it established an ADI of 0.5 mg/kg bw/day for lycopene from all sources in 2008 and noted high consumers, particularly children, could exceed it. EFSA's 2017 extension-of-use assessment retained that value and estimated that toddler exposure in a maximum-permitted-level scenario could exceed the ADI; substantial uncertainty was noted. Do not interpret the 2023 specification-only JECFA record as a new full toxicological re-evaluation.",
+    "intake": "JECFA 2023 source-specific group ADI: 0–0.5 mg/kg bw for synthetic and Blakeslea lycopene (specifications-only review). JECFA 2009 all-source assessment: ADI “not specified” under GMP. EFSA: 0.5 mg/kg bw/day from all sources (2008, retained 2017); maximum-use toddler exposure estimates could exceed it.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA synthetic lycopene record and EFSA's 2008/2017 opinions; scope and difference between specification review and full toxicological assessment are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160d(ii)": {
     "researchStatus": "Codex GSFA verified",
@@ -2492,8 +2645,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "FAO/WHO JECFA — Lycopene extract from tomato (INS 160d(ii)), 2009 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/5880",
+        "note": "JECFA included compliant tomato lycopene in its 2009 group ADI “not specified” for lycopene from all sources used as a food colour under GMP."
+      },
+      {
+        "label": "EFSA — Lycopene as a food colour, 2008",
+        "url": "https://www.efsa.europa.eu/en/news/efsa-assesses-safety-lycopene-foods",
+        "note": "EFSA established an ADI of 0.5 mg/kg bw/day for lycopene from all sources, including natural dietary sources, and noted high-consumer exceedance potential."
       }
-    ]
+    ],
+    "tox": "For lycopene extract from tomatoes (Codex INS 160d(ii)), JECFA's 2009 evaluation included compliant tomato lycopene in a group ADI “not specified” for lycopene from all sources when used as a food colour under good manufacturing practice. EFSA's 2008 opinion took a different approach and established an ADI of 0.5 mg/kg body weight/day for lycopene from all sources, including natural dietary sources; it warned that high consumers, particularly preschool and school-age children, might exceed the ADI. EFSA's 2017 extension-of-use assessment retained the 0.5 mg/kg bw/day value and noted possible exceedance in maximum-use exposure scenarios, especially for toddlers, while identifying substantial uncertainty and recommending refined exposure assessment. The JECFA 2009 group wording and EFSA's numerical ADI are different committee conclusions and should not be merged.",
+    "intake": "JECFA: group ADI “not specified” for compliant tomato lycopene used as a food colour under GMP (2009). EFSA: ADI 0.5 mg/kg bw/day for lycopene from all sources (2008, retained 2017); high consumers, particularly children, may exceed it under maximum-use assumptions.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA tomato-lycopene record and EFSA's 2008/2017 opinions; source identity, committee divergence and high-consumer caveat are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160d(iii)": {
     "researchStatus": "Codex GSFA verified",
@@ -2519,8 +2686,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions used to explain the additive's technological functions."
+      },
+      {
+        "label": "FAO/WHO JECFA — Lycopene from Blakeslea trispora (INS 160d(iii)), 2023 specification evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/5573",
+        "note": "JECFA's 2023 record lists a group ADI of 0–0.5 mg/kg bw for synthetic lycopene and Blakeslea-derived lycopene; the 2023 meeting considered specifications only."
+      },
+      {
+        "label": "EFSA — Extension of use of lycopene (E160d), 2017",
+        "url": "https://doi.org/10.2903/j.efsa.2017.5064",
+        "note": "EFSA retained an ADI of 0.5 mg/kg bw/day for lycopene from all sources and found maximum-use exposure estimates could exceed it for toddlers, though uncertainty was substantial."
       }
-    ]
+    ],
+    "tox": "For lycopene derived from Blakeslea trispora (Codex INS 160d(iii)), JECFA's 2023 database record lists a group ADI of 0–0.5 mg/kg body weight for this form together with synthetic lycopene; the 2023 meeting considered specifications only. This source-specific listing should be read alongside JECFA's 2009 broader group ADI “not specified” for compliant lycopene from all sources, including tomato, when used as a food colour under GMP. EFSA's 2008 assessment established a total-sources ADI of 0.5 mg/kg bw/day, and its 2017 extension-of-use opinion retained it; at maximum permitted-use assumptions, estimated toddler exposure could exceed the ADI, although EFSA noted significant uncertainty and recommended refined exposure assessment.",
+    "intake": "JECFA 2023 source-specific group ADI: 0–0.5 mg/kg bw for synthetic and Blakeslea-derived lycopene (specifications-only review). JECFA 2009 all-source ADI: “not specified” under GMP. EFSA: 0.5 mg/kg bw/day from all sources (2008, retained 2017); high-use toddler estimates could exceed the ADI in the maximum-use scenario.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA Blakeslea lycopene record and EFSA's 2008/2017 opinions; source-specific and all-source records are distinguished.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160e": {
     "researchStatus": "Codex GSFA verified",
