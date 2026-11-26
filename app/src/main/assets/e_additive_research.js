@@ -110,7 +110,8 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex assigns functional classes to specific INS 101 forms, not the undifferentiated parent entry. The form-specific records are reviewed separately."
   },
   "E101(i)": {
     "researchStatus": "Exact INS 101(i) functional class cross-checked against Codex CXG 36-1989",
@@ -179,7 +180,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E101a does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. This is a historical E-code association and the reviewed sources do not establish a current exact INS 101a entry or a current authorised additive under this distinct code."
   },
   "E102": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -349,7 +351,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E105 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The historical name Fast Yellow AB does not match the current Codex INS 105 identity (Carthamus yellow); no class is transferred across the identity mismatch."
   },
   "E106": {
     "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
@@ -366,7 +369,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E106 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The stated historical riboflavin-5-sodium-phosphate identity is not established as an exact current Codex INS 106 entry by the reviewed source."
   },
   "E107": {
     "researchStatus": "Historical colour function verified against exact Codex INS 107 entry; current GB listing remains separately checked",
@@ -474,7 +478,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E111 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical colour-code reference only; no exact current Codex INS entry was verified for Orange GGN."
   },
   "E120": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -789,7 +794,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E126 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical colour-code reference only; no exact current Codex INS entry was verified for Ponceau 6R."
   },
   "E127": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -867,7 +873,8 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E128 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Red 2G is retained as a historical colour designation with EU withdrawal history; no matching current Codex INS functional-class entry was verified."
   },
   "E129": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -939,7 +946,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E130 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The historical E130 identity Indanthrene blue RS does not match current Codex INS 130 (Manascorubin); no class is transferred across this identity mismatch."
   },
   "E131": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -1200,7 +1208,8 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex functional classes are attached to the specific copper-complex chlorophyll/chlorophyllin subforms rather than the undifferentiated E141 parent entry."
   },
   "E141(i)": {
     "researchStatus": "Source-backed use",
@@ -1692,7 +1701,8 @@ window.FOSCH_RESEARCH_DATA=
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
     "tox": "JECFA’s 2019 evaluation withdrew earlier group ADIs for specified beta-carotene forms; its 2026 entry considered dietary exposure but did not establish a new ADI. This does not mean the additive is classified as toxic; it means a numeric ADI is not currently available from that evaluation.",
-    "intake": "Latest JECFA entry: no current numeric ADI established in the 2026 assessment; earlier group ADIs were withdrawn in 2019. Match the exact E160a sub-form and current assessment before reporting a limit."
+    "intake": "Latest JECFA entry: no current numeric ADI established in the 2026 assessment; earlier group ADIs were withdrawn in 2019. Match the exact E160a sub-form and current assessment before reporting a limit.",
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex lists classes against specific beta-carotene subtypes; this parent record is not assigned a blanket class without subtype scope."
   },
   "E160a(i)": {
     "researchStatus": "Source-backed use",
@@ -1999,7 +2009,8 @@ window.FOSCH_RESEARCH_DATA=
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
     "tox": "JECFA lists a group ADI “not specified” for compliant lycopene from all sources when used as a food color under good manufacturing practice (2009 record). Some form-specific database entries have separate histories; do not mix them without checking the exact subtype.",
-    "intake": "JECFA group ADI “not specified” for compliant lycopene used as food color under GMP (2009). Match the exact E160d subtype and current record."
+    "intake": "JECFA group ADI “not specified” for compliant lycopene used as food color under GMP (2009). Match the exact E160d subtype and current record.",
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex lists classes against specific lycopene subtypes; this parent record is not assigned a blanket class without subtype scope."
   },
   "E160d(i)": {
     "researchStatus": "Codex GSFA verified",
@@ -2443,7 +2454,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E161i does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical Citranaxanthin E-code association; no exact current Codex INS functional-class entry was verified for this code."
   },
   "E161j": {
     "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
@@ -2460,7 +2472,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E161j does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical Astaxanthin E-code association; no exact current Codex INS functional-class entry was verified for this code."
   },
   "E162": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -2628,7 +2641,8 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex functional classes are listed for the calcium carbonate/hydrogen carbonate subforms; this parent entry is not given an unqualified class list."
   },
   "E170(i)": {
     "researchStatus": "Codex GSFA verified",
@@ -4170,7 +4184,8 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClassAuditNote": "Pass 6 disposition: intentionally untagged. The source record does not support formaldehyde as a food ingredient or a current food-additive use; the historical code association is not converted into a functional class."
   },
   "E242": {
     "researchStatus": "Codex GSFA verified",
@@ -4639,7 +4654,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The preservative function is reported by a historical/educational source, but an exact current Codex INS functional-class entry and current market authorisation were not established."
   },
   "E266": {
     "researchStatus": "Preproom educational technical-purpose reference",
@@ -4656,7 +4672,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXG+36-1989%2FCXG_036e.pdf",
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The preservative function is reported by a historical/educational source, but an exact current Codex INS functional-class entry and current market authorisation were not established."
   },
   "E267": {
     "researchStatus": "Commission Regulation (EU) 2023/2086 confirms buffered vinegar's preservative and acidity-regulator functions; EU Group I status and GB list scope are kept separate from the general Uses description",
@@ -5244,7 +5261,8 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The general antioxidant description is supported by the grouped UK FSA source, but no exact INS 306 functional-class row was identified in the current Codex CXG 36-1989 table reviewed for this audit."
   },
   "E307": {
     "researchStatus": "Cross-checked against UK FSA antioxidant classification",
@@ -5594,7 +5612,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E317 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The dataset identity erythorbic acid does not match Codex INS 317 (potassium isoascorbate); a functional class is not transferred solely because the numeric code matches."
   },
   "E318": {
     "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
@@ -5611,7 +5630,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E318 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The dataset identity sodium erythorbate does not match Codex INS 318 (calcium isoascorbate); a functional class is not transferred solely because the numeric code matches."
   },
   "E319": {
     "researchStatus": "Codex GSFA verified",
@@ -6797,7 +6817,8 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Codex CXG 36-1989 identifies this additive by its International Numbering System (INS) entry and lists the associated functional class or technological purpose. Codex explicitly states that inclusion in the INS does not imply approval for use as a food additive. This source supports nomenclature/functional classification only, not authorisation or permitted food categories in any jurisdiction."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex applies functional classes to specific potassium-malate subtypes; this parent record is not assigned a blanket class."
   },
   "E352": {
     "researchStatus": "Codex GSFA subtype verified",
@@ -7352,7 +7373,8 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E387 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The stabilising/metal-scavenging description is historical and secondary; no exact current Codex INS functional-class entry was verified."
   },
   "E388": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
@@ -8003,7 +8025,8 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E408 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
     ],
-    "foodInfoUpdatedAt": "Sunday 5 September, 2021"
+    "foodInfoUpdatedAt": "Sunday 5 September, 2021",
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The reported thickening/stabilising/emulsifying roles come from an older technical profile; no exact current Codex INS functional-class entry was verified."
   },
   "E409": {
     "researchStatus": "Source-backed use",
@@ -8536,7 +8559,8 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex assigns functions to the separate sorbitol and sorbitol-syrup subtypes; the parent code is not assigned a composite list in this dataset."
   },
   "E420(i)": {
     "researchStatus": "Codex GSFA verified",
@@ -9275,7 +9299,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.cdc.gov/alpha-gal-syndrome/data-research/products-containing-alpha-gal/index.html",
         "note": "Lists beef- or pork-derived gelatin among products that may contain alpha-gal and notes that individual reactions vary."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The substance is gelatin, but the Codex entry is INS 428, not E441. The functional classes for INS 428 are not automatically transferred to this differently numbered historical E-code."
   },
   "E442": {
     "researchStatus": "Codex GSFA verified",
@@ -10927,7 +10952,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E487 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The emulsifier description is based on a secondary historical E-number reference; no exact current Codex INS functional-class entry was verified."
   },
   "E488": {
     "researchStatus": "Purpose cross-checked against secondary E-number reference",
@@ -13018,7 +13044,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E560 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The anticaking description is based on a secondary historical E-number reference; no exact current Codex INS functional-class entry was verified."
   },
   "E561": {
     "researchStatus": "Purpose cross-checked against secondary E-number reference",
@@ -14128,7 +14155,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E701 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E702": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14145,7 +14173,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E702 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E703": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14162,7 +14191,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E703 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E704": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14179,7 +14209,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E704 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E705": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14196,7 +14227,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E705 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E706": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14213,7 +14245,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E706 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E707": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14230,7 +14263,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E707 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E708": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14247,7 +14281,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E708 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E710": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14264,7 +14299,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E710 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E711": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14281,7 +14317,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E711 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E712": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14298,7 +14335,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E712 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E713": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14315,7 +14353,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E713 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E714": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14332,7 +14371,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E714 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E715": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14349,7 +14389,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E715 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E716": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14366,7 +14407,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E716 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E717": {
     "researchStatus": "Historical secondary code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -14383,7 +14425,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E717 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical antibiotic-code association only; no current food-additive identity, exact Codex INS class, or food-use permission was established."
   },
   "E900": {
     "researchStatus": "Codex CXG 36-1989 (amended 2025) confirms the exact INS 900a functions; Codex GSFA category provisions remain separate from general function",
@@ -15147,7 +15190,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E924 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The historical potassium-bromate E-code has no corresponding entry in the Codex CXG 36-1989 table checked and the current GB list reviewed does not show it; historical use descriptions are not treated as present permission."
   },
   "E924b": {
     "researchStatus": "Historical code association only; current GB approved-additives list checked; no current GB listing identified",
@@ -15164,7 +15208,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E924b does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The historical calcium-bromate E-code has no corresponding entry in the Codex CXG 36-1989 table checked and the current GB list reviewed does not show it; historical use descriptions are not treated as present permission."
   },
   "E925": {
     "researchStatus": "Codex GSFA verified",
@@ -15843,7 +15888,8 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex classifies the named saccharin subtypes (954(i)–(iv)) as sweeteners; this parent-group row itself has no direct functional-class entry."
   },
   "E955": {
     "researchStatus": "Cross-checked against Codex GSFA",
@@ -16054,7 +16100,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3644",
         "note": "JECFA 2026 evaluation confirmed ADI 0–4 mg/kg bw expressed as steviol."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex classifies the named steviol-glycoside preparations/subtypes; the parent-group record is not assigned a blanket functional class."
   },
   "E960a": {
     "researchStatus": "Purpose cross-checked against secondary E-number reference",
@@ -16660,7 +16707,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The Codex table does not assign a functional class to the undifferentiated parent INS 999 entry; the specific 999(i) and 999(ii) subtypes each list Emulsifier and Foaming agent."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained as an untagged parent-group record. Codex assigns emulsifier and foaming-agent classes to the named INS 999(i) and 999(ii) subtypes, not to the undifferentiated parent entry."
   },
   "E1000": {
     "researchStatus": "Purpose cross-checked against secondary E-number reference",
@@ -17780,7 +17828,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E1430 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The stabilising/thickening description is secondary and historical; no exact current Codex INS entry or current GB approved-additive listing was verified for E1430."
   },
   "E1440": {
     "researchStatus": "Codex GSFA verified",
@@ -17826,7 +17875,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E1441 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The starch-related description is secondary and historical; no exact current Codex INS entry or current GB approved-additive listing was verified for E1441."
   },
   "E1442": {
     "researchStatus": "Codex GSFA verified",
@@ -18044,7 +18094,8 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Identity and evaluation record checked; no precise E1502-specific technological role was inferred from the record."
       }
     ],
-    "useResearchNote": "The JECFA chemical record was checked, but it does not provide an E1502-specific functional class or a sufficient food-category/use description."
+    "useResearchNote": "The JECFA chemical record was checked, but it does not provide an E1502-specific functional class or a sufficient food-category/use description.",
+    "functionalClassAuditNote": "Pass 6 disposition: intentionally untagged. The source review did not verify a distinct food-use function for this exact catalogue entry; an unrelated or broader chemical evaluation is not enough to assign one."
   },
   "E1503": {
     "researchStatus": "Codex GSFA verified",
@@ -18095,7 +18146,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E1504 does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. The Australia–New Zealand source concerns ethyl acetate in flavouring preparations; this is not an exact Codex INS additive class or blanket direct-additive permission for the historical E1504 code."
   },
   "E1505": {
     "researchStatus": "Codex GSFA verified",
@@ -18135,7 +18187,8 @@ window.FOSCH_RESEARCH_DATA=
         "url": "https://eur-lex.europa.eu/eli/dir/2009/32/oj/eng",
         "note": "EU legislation lists ethanol as an extraction solvent under the directive's specified framework; it is a processing role and should not be conflated with direct addition."
       }
-    ]
+    ],
+    "functionalClassAuditNote": "Pass 6 disposition: intentionally untagged. Ethanol's cited role is an extraction solvent in food production, a processing function rather than a direct food-additive functional class in this dataset."
   },
   "E1516": {
     "researchStatus": "Purpose cross-checked against secondary E-number reference",
