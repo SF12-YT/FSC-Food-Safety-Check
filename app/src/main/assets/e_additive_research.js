@@ -2818,12 +2818,36 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 161a entry identifies flavoxanthin and lists Colour; it does not substantiate the old profile's example-use claims."
+      },
+      {
+        "label": "FAO/WHO JECFA — Evaluation database, updated through 102nd meeting (June 2026)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Official searchable JECFA index covering all published additive evaluations through the 102nd meeting. No compound-specific food-additive evaluation/ADI for the individual legacy pigment was identified in this review."
+      },
+      {
+        "label": "EFSA — Food colours: current EU assessment inventory (last reviewed January 2026)",
+        "url": "https://www.efsa.europa.eu/en/topics/topic/food-colours",
+        "note": "EFSA's current food-colour assessment inventory lists E161b (lutein) and E161g (canthaxanthin) among this group; it does not list these legacy codes as EU-authorised food colours."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008, consolidated to 18 August 2026",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?qid=1788808629864&uri=CELEX%3A02008R1333-20260818",
+        "note": "Current consolidated EU food-additive legislation; its permitted food-colour entries include E161b and E161g but not E161a, E161c, E161d, E161e or E161f. This is EU-only regulatory status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Xanthophylls / lutein from Tagetes (INS 161b), 1977 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2179",
+        "note": "Important identity distinction: this historic entry is specifically lutein/Tagetes extract (INS 161b), and says no ADI was allocated due to absent toxicity data. It is not a generic evaluation of every xanthophyll pigment and must not be applied to E161a/c/d/e/f."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021",
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "Flavoxanthin is a distinct carotenoid pigment. No compound-specific food-additive toxicological evaluation or ADI for INS 161a was identified in the JECFA database and EFSA food-colour sources checked for this review. A similarly named JECFA “Xanthophylls” evaluation from 1977 is specifically for lutein/Tagetes extract (INS 161b), not a group assessment of all xanthophylls; its “no ADI allocated” finding because toxicity data were unavailable must not be transferred to INS 161a. EFSA's current food-colour inventory and the EU consolidated additive list (August 2026) identify E161b and E161g in this colourant range but do not list E161a. This establishes only the EU authorisation position in the sources checked; it does not prove that the pigment is unsafe or establish its regulatory status worldwide. In the absence of an identity-matched assessment, no safety conclusion or numerical intake limit should be inferred.",
+    "intake": "No compound-specific ADI identified for Flavoxanthin (INS 161a) in the official JECFA/EFSA food-additive sources checked. Do not borrow the JECFA lutein/Tagetes (INS 161b) result or the separate zeaxanthin/canthaxanthin assessments. No safe daily intake can be calculated from the information recorded here.",
+    "toxicityResearchStatus": "Research outcome: no identity-matched JECFA ADI or EFSA food-colour re-evaluation located; legacy pigment identity retained, with an explicit warning against transferring the 1977 lutein-only JECFA assessment. Current EU authorised-colour lists checked through August 2026; no global status inferred.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E161b": {
     "researchStatus": "Codex GSFA subtype verified",
@@ -2943,11 +2967,35 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (2026 edition)",
         "url": "https://openknowledge.fao.org/server/api/core/bitstreams/4b45b280-e32e-4a0d-ace4-c4c1b8770142/content",
         "note": "Exact Codex INS functional-class entry verified for INS 161c: Colour. INS functional class is a technological-purpose classification only and does not itself establish authorisation for any jurisdiction or food category."
+      },
+      {
+        "label": "FAO/WHO JECFA — Evaluation database, updated through 102nd meeting (June 2026)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Official searchable JECFA index covering all published additive evaluations through the 102nd meeting. No compound-specific food-additive evaluation/ADI for the individual legacy pigment was identified in this review."
+      },
+      {
+        "label": "EFSA — Food colours: current EU assessment inventory (last reviewed January 2026)",
+        "url": "https://www.efsa.europa.eu/en/topics/topic/food-colours",
+        "note": "EFSA's current food-colour assessment inventory lists E161b (lutein) and E161g (canthaxanthin) among this group; it does not list these legacy codes as EU-authorised food colours."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008, consolidated to 18 August 2026",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?qid=1788808629864&uri=CELEX%3A02008R1333-20260818",
+        "note": "Current consolidated EU food-additive legislation; its permitted food-colour entries include E161b and E161g but not E161a, E161c, E161d, E161e or E161f. This is EU-only regulatory status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Xanthophylls / lutein from Tagetes (INS 161b), 1977 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2179",
+        "note": "Important identity distinction: this historic entry is specifically lutein/Tagetes extract (INS 161b), and says no ADI was allocated due to absent toxicity data. It is not a generic evaluation of every xanthophyll pigment and must not be applied to E161a/c/d/e/f."
       }
     ],
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "Cryptoxanthin is a distinct carotenoid pigment. No compound-specific food-additive toxicological evaluation or ADI for INS 161c was identified in the JECFA database and EFSA food-colour sources checked for this review. A similarly named JECFA “Xanthophylls” evaluation from 1977 is specifically for lutein/Tagetes extract (INS 161b), not a group assessment of all xanthophylls; its “no ADI allocated” finding because toxicity data were unavailable must not be transferred to INS 161c. EFSA's current food-colour inventory and the EU consolidated additive list (August 2026) identify E161b and E161g in this colourant range but do not list E161c. This establishes only the EU authorisation position in the sources checked; it does not prove that the pigment is unsafe or establish its regulatory status worldwide. In the absence of an identity-matched assessment, no safety conclusion or numerical intake limit should be inferred.",
+    "intake": "No compound-specific ADI identified for Cryptoxanthin (INS 161c) in the official JECFA/EFSA food-additive sources checked. Do not borrow the JECFA lutein/Tagetes (INS 161b) result or the separate zeaxanthin/canthaxanthin assessments. No safe daily intake can be calculated from the information recorded here.",
+    "toxicityResearchStatus": "Research outcome: no identity-matched JECFA ADI or EFSA food-colour re-evaluation located; legacy pigment identity retained, with an explicit warning against transferring the 1977 lutein-only JECFA assessment. Current EU authorised-colour lists checked through August 2026; no global status inferred.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E161d": {
     "researchStatus": "Preproom educational technical-purpose reference",
@@ -2968,11 +3016,35 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (2026 edition)",
         "url": "https://openknowledge.fao.org/server/api/core/bitstreams/4b45b280-e32e-4a0d-ace4-c4c1b8770142/content",
         "note": "Exact Codex INS functional-class entry verified for INS 161d: Colour. INS functional class is a technological-purpose classification only and does not itself establish authorisation for any jurisdiction or food category."
+      },
+      {
+        "label": "FAO/WHO JECFA — Evaluation database, updated through 102nd meeting (June 2026)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Official searchable JECFA index covering all published additive evaluations through the 102nd meeting. No compound-specific food-additive evaluation/ADI for the individual legacy pigment was identified in this review."
+      },
+      {
+        "label": "EFSA — Food colours: current EU assessment inventory (last reviewed January 2026)",
+        "url": "https://www.efsa.europa.eu/en/topics/topic/food-colours",
+        "note": "EFSA's current food-colour assessment inventory lists E161b (lutein) and E161g (canthaxanthin) among this group; it does not list these legacy codes as EU-authorised food colours."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008, consolidated to 18 August 2026",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?qid=1788808629864&uri=CELEX%3A02008R1333-20260818",
+        "note": "Current consolidated EU food-additive legislation; its permitted food-colour entries include E161b and E161g but not E161a, E161c, E161d, E161e or E161f. This is EU-only regulatory status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Xanthophylls / lutein from Tagetes (INS 161b), 1977 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2179",
+        "note": "Important identity distinction: this historic entry is specifically lutein/Tagetes extract (INS 161b), and says no ADI was allocated due to absent toxicity data. It is not a generic evaluation of every xanthophyll pigment and must not be applied to E161a/c/d/e/f."
       }
     ],
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "Rubixanthin is a distinct carotenoid pigment. No compound-specific food-additive toxicological evaluation or ADI for INS 161d was identified in the JECFA database and EFSA food-colour sources checked for this review. A similarly named JECFA “Xanthophylls” evaluation from 1977 is specifically for lutein/Tagetes extract (INS 161b), not a group assessment of all xanthophylls; its “no ADI allocated” finding because toxicity data were unavailable must not be transferred to INS 161d. EFSA's current food-colour inventory and the EU consolidated additive list (August 2026) identify E161b and E161g in this colourant range but do not list E161d. This establishes only the EU authorisation position in the sources checked; it does not prove that the pigment is unsafe or establish its regulatory status worldwide. In the absence of an identity-matched assessment, no safety conclusion or numerical intake limit should be inferred.",
+    "intake": "No compound-specific ADI identified for Rubixanthin (INS 161d) in the official JECFA/EFSA food-additive sources checked. Do not borrow the JECFA lutein/Tagetes (INS 161b) result or the separate zeaxanthin/canthaxanthin assessments. No safe daily intake can be calculated from the information recorded here.",
+    "toxicityResearchStatus": "Research outcome: no identity-matched JECFA ADI or EFSA food-colour re-evaluation located; legacy pigment identity retained, with an explicit warning against transferring the 1977 lutein-only JECFA assessment. Current EU authorised-colour lists checked through August 2026; no global status inferred.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E161e": {
     "researchStatus": "Preproom educational technical-purpose reference",
@@ -2993,11 +3065,35 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (2026 edition)",
         "url": "https://openknowledge.fao.org/server/api/core/bitstreams/4b45b280-e32e-4a0d-ace4-c4c1b8770142/content",
         "note": "Exact Codex INS functional-class entry verified for INS 161e: Colour. INS functional class is a technological-purpose classification only and does not itself establish authorisation for any jurisdiction or food category."
+      },
+      {
+        "label": "FAO/WHO JECFA — Evaluation database, updated through 102nd meeting (June 2026)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Official searchable JECFA index covering all published additive evaluations through the 102nd meeting. No compound-specific food-additive evaluation/ADI for the individual legacy pigment was identified in this review."
+      },
+      {
+        "label": "EFSA — Food colours: current EU assessment inventory (last reviewed January 2026)",
+        "url": "https://www.efsa.europa.eu/en/topics/topic/food-colours",
+        "note": "EFSA's current food-colour assessment inventory lists E161b (lutein) and E161g (canthaxanthin) among this group; it does not list these legacy codes as EU-authorised food colours."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008, consolidated to 18 August 2026",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?qid=1788808629864&uri=CELEX%3A02008R1333-20260818",
+        "note": "Current consolidated EU food-additive legislation; its permitted food-colour entries include E161b and E161g but not E161a, E161c, E161d, E161e or E161f. This is EU-only regulatory status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Xanthophylls / lutein from Tagetes (INS 161b), 1977 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2179",
+        "note": "Important identity distinction: this historic entry is specifically lutein/Tagetes extract (INS 161b), and says no ADI was allocated due to absent toxicity data. It is not a generic evaluation of every xanthophyll pigment and must not be applied to E161a/c/d/e/f."
       }
     ],
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "Violaxanthin is a distinct carotenoid pigment. No compound-specific food-additive toxicological evaluation or ADI for INS 161e was identified in the JECFA database and EFSA food-colour sources checked for this review. A similarly named JECFA “Xanthophylls” evaluation from 1977 is specifically for lutein/Tagetes extract (INS 161b), not a group assessment of all xanthophylls; its “no ADI allocated” finding because toxicity data were unavailable must not be transferred to INS 161e. EFSA's current food-colour inventory and the EU consolidated additive list (August 2026) identify E161b and E161g in this colourant range but do not list E161e. This establishes only the EU authorisation position in the sources checked; it does not prove that the pigment is unsafe or establish its regulatory status worldwide. In the absence of an identity-matched assessment, no safety conclusion or numerical intake limit should be inferred.",
+    "intake": "No compound-specific ADI identified for Violaxanthin (INS 161e) in the official JECFA/EFSA food-additive sources checked. Do not borrow the JECFA lutein/Tagetes (INS 161b) result or the separate zeaxanthin/canthaxanthin assessments. No safe daily intake can be calculated from the information recorded here.",
+    "toxicityResearchStatus": "Research outcome: no identity-matched JECFA ADI or EFSA food-colour re-evaluation located; legacy pigment identity retained, with an explicit warning against transferring the 1977 lutein-only JECFA assessment. Current EU authorised-colour lists checked through August 2026; no global status inferred.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E161f": {
     "researchStatus": "Food-Info.net technical profile (historical/functional use)",
@@ -3018,12 +3114,36 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (2026 edition)",
         "url": "https://openknowledge.fao.org/server/api/core/bitstreams/4b45b280-e32e-4a0d-ace4-c4c1b8770142/content",
         "note": "Exact Codex INS functional-class entry verified for INS 161f: Colour. INS functional class is a technological-purpose classification only and does not itself establish authorisation for any jurisdiction or food category."
+      },
+      {
+        "label": "FAO/WHO JECFA — Evaluation database, updated through 102nd meeting (June 2026)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/",
+        "note": "Official searchable JECFA index covering all published additive evaluations through the 102nd meeting. No compound-specific food-additive evaluation/ADI for the individual legacy pigment was identified in this review."
+      },
+      {
+        "label": "EFSA — Food colours: current EU assessment inventory (last reviewed January 2026)",
+        "url": "https://www.efsa.europa.eu/en/topics/topic/food-colours",
+        "note": "EFSA's current food-colour assessment inventory lists E161b (lutein) and E161g (canthaxanthin) among this group; it does not list these legacy codes as EU-authorised food colours."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008, consolidated to 18 August 2026",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?qid=1788808629864&uri=CELEX%3A02008R1333-20260818",
+        "note": "Current consolidated EU food-additive legislation; its permitted food-colour entries include E161b and E161g but not E161a, E161c, E161d, E161e or E161f. This is EU-only regulatory status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Xanthophylls / lutein from Tagetes (INS 161b), 1977 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2179",
+        "note": "Important identity distinction: this historic entry is specifically lutein/Tagetes extract (INS 161b), and says no ADI was allocated due to absent toxicity data. It is not a generic evaluation of every xanthophyll pigment and must not be applied to E161a/c/d/e/f."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021",
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "Rhodoxanthin is a distinct carotenoid pigment. No compound-specific food-additive toxicological evaluation or ADI for INS 161f was identified in the JECFA database and EFSA food-colour sources checked for this review. A similarly named JECFA “Xanthophylls” evaluation from 1977 is specifically for lutein/Tagetes extract (INS 161b), not a group assessment of all xanthophylls; its “no ADI allocated” finding because toxicity data were unavailable must not be transferred to INS 161f. EFSA's current food-colour inventory and the EU consolidated additive list (August 2026) identify E161b and E161g in this colourant range but do not list E161f. This establishes only the EU authorisation position in the sources checked; it does not prove that the pigment is unsafe or establish its regulatory status worldwide. In the absence of an identity-matched assessment, no safety conclusion or numerical intake limit should be inferred.",
+    "intake": "No compound-specific ADI identified for Rhodoxanthin (INS 161f) in the official JECFA/EFSA food-additive sources checked. Do not borrow the JECFA lutein/Tagetes (INS 161b) result or the separate zeaxanthin/canthaxanthin assessments. No safe daily intake can be calculated from the information recorded here.",
+    "toxicityResearchStatus": "Research outcome: no identity-matched JECFA ADI or EFSA food-colour re-evaluation located; legacy pigment identity retained, with an explicit warning against transferring the 1977 lutein-only JECFA assessment. Current EU authorised-colour lists checked through August 2026; no global status inferred.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E161g": {
     "researchStatus": "Codex GSFA verified",
@@ -3141,9 +3261,33 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E161i does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "FAO/WHO JECFA — Citranaxanthin, evaluation history (1987)",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1418",
+        "note": "JECFA's 31st meeting (1987) allocated no ADI for citranaxanthin; an earlier 1977 evaluation was also recorded."
+      },
+      {
+        "label": "WHO/JECFA — Citranaxanthin toxicological monograph (Food Additives Series 22, 1987)",
+        "url": "https://www.inchem.org/documents/jecfa/jecmono/v22je11.htm",
+        "note": "Primary JECFA monograph: direct food-colour use could not be fully evaluated because the data were not sufficiently comprehensive (only one lifetime feeding study was available); further data were required. Evaluation of animal-feed use also could not be made because residue and good-practice use-level information was missing."
+      },
+      {
+        "label": "FAO/JECFA — Citranaxanthin identity/specifications",
+        "url": "https://www.fao.org/fileadmin/user_upload/jecfa_additives/docs/Monograph1/Additive-134.pdf",
+        "note": "Specification applies to synthetic citranaxanthin and notes that no ADI was allocated at the 31st JECFA in 1987."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008, consolidated to 18 August 2026",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?qid=1788808629864&uri=CELEX%3A02008R1333-20260818",
+        "note": "Current EU food-additive legislation; E161i is not listed among authorised food colours in the consolidated text. This is an EU-specific authorisation check, not a global legal conclusion."
       }
     ],
-    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical Citranaxanthin E-code association; no exact current Codex INS functional-class entry was verified for this code."
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical Citranaxanthin E-code association; no exact current Codex INS functional-class entry was verified for this code.",
+    "tox": "Citranaxanthin was evaluated by JECFA in 1987, which allocated no ADI. The primary JECFA monograph explains why: although several animal studies were available, the database was not sufficiently comprehensive to evaluate direct use as a food colouring; only one lifetime feeding study was available and further data were required. JECFA also could not evaluate its animal-feed use because information was missing on the nature of residues in foods of animal origin and on use levels consistent with good animal husbandry practice. The monograph records a three-generation rat reproduction study and a two-year rat study with no treatment-related effects reported, but these did not resolve the stated evidence gaps for direct food use. The 1987 no-ADI outcome is therefore an inability-to-evaluate conclusion, not an established safe intake and not a finding of proven harm. The August 2026 consolidated EU food-additive list does not list E161i as an authorised EU food colour; this does not establish worldwide regulatory status.",
+    "intake": "JECFA: no ADI allocated (1987). No numerical safe daily intake was established for direct food-colour use. The Committee's monograph explicitly said the evidence was insufficient for a full evaluation of direct food use and also could not assess animal-feed use because residue/use-level data were missing.",
+    "toxicityResearchStatus": "Reviewed against JECFA's 1987 evaluation and primary toxicological monograph; the no-ADI rationale, distinction between direct food and feed use, and EU-specific authorisation status are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E161j": {
     "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
@@ -3159,9 +3303,43 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (published 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official approved-additives list applying to England, Northern Ireland and Wales. The FSA states that most additives are restricted to specified food categories and quantities, so this list must be read with the applicable legislation. It is not a global authorisation register. E161j does not appear in the list's E-number entries. This supports only that the current GB list does not show it as an approved food additive; it does not establish worldwide status."
+      },
+      {
+        "label": "EFSA — Safety of astaxanthin for use as a novel food in food supplements, 2020",
+        "url": "https://doi.org/10.2903/j.efsa.2020.5993",
+        "note": "EFSA adopted the updated ADI of 0.2 mg/kg bw/day from its 2019 FEEDAP assessment. Combined background dietary intake plus 8 mg/day supplemental astaxanthin was considered safe for adults; the ADI was reached in 14–<18-year-olds and exceeded in younger groups, leading to age-related use restrictions."
+      },
+      {
+        "label": "EFSA — Re-evaluation of astaxanthin for feed use (FEEDAP), 2026",
+        "url": "https://doi.org/10.2903/j.efsa.2026.10036",
+        "note": "Recent EFSA FEEDAP assessment maintained an ADI of 0.2 mg/kg bw/day, based on a LOAEL of 40 mg/kg bw/day for increased multinucleated hepatocytes in female rats and an overall uncertainty factor of 200; maximum chronic consumer exposure from fish/seafood residues was estimated at 0.15 mg/kg bw/day (73% of ADI) for toddlers."
+      },
+      {
+        "label": "Food Standards Agency and Food Standards Scotland — Astaxanthin-rich oleoresin from Haematococcus pluvialis algae used as a novel food, 2026",
+        "url": "https://doi.org/10.46756/001c.155718",
+        "note": "GB risk assessment for a change to novel-food specifications. It records the change from the 2014 ADI of 0.034 to the updated 0.2 mg/kg bw/day, and concludes the specified oleoresin is safe under the proposed novel-food conditions. It is a novel-food/supplement assessment, not authorisation as an E-number colour."
+      },
+      {
+        "label": "European Commission — Implementing Regulation (EU) 2023/1581, astaxanthin-rich oleoresin novel food",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32023R1581",
+        "note": "EU novel-food authorisation conditions for astaxanthin-rich oleoresin from Haematococcus pluvialis algae; use is confined to food supplements with age-specific conditions and maximum daily levels. This is not a food-colour additive authorisation."
+      },
+      {
+        "label": "European Union — Regulation (EC) No 1333/2008, consolidated to 18 August 2026",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?qid=1788808629864&uri=CELEX%3A02008R1333-20260818",
+        "note": "Current EU food-additive legislation contains no E161j entry among authorised food colours; the separately authorised astaxanthin-rich novel food should not be described as an E-number colour additive."
+      },
+      {
+        "label": "EFSA — Call for data on astaxanthin safety, 2018",
+        "url": "https://www.efsa.europa.eu/sites/default/files/consultation/callsfordata/Call_for_data-safety_assessment_of_Astaxanthin.pdf",
+        "note": "Documents the original 2014 ADI of 0.034 mg/kg bw/day and the rat liver hypertrophy/carcinogenicity study basis; useful for the regulatory history but superseded by the 2019/2020 ADI of 0.2."
       }
     ],
-    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical Astaxanthin E-code association; no exact current Codex INS functional-class entry was verified for this code."
+    "functionalClassAuditNote": "Pass 6 disposition: retained untagged. Historical Astaxanthin E-code association; no exact current Codex INS functional-class entry was verified for this code.",
+    "tox": "Astaxanthin has a distinct and more recent safety record, but the historical E161j label must not be confused with a current EU food-colour authorisation. The 2014 EFSA FEEDAP assessment established an ADI of 0.034 mg/kg body weight/day from a benchmark-dose lower confidence limit of 3.4 mg/kg bw/day for liver hypertrophy in female rats, divided by an uncertainty factor of 100. EFSA later reassessed the toxicological profile: its 2019 FEEDAP opinion derived a new ADI of 0.2 mg/kg bw/day, which the EFSA NDA Panel adopted for astaxanthin in food supplements in 2020. The 2026 FEEDAP re-evaluation maintained 0.2 mg/kg bw/day, based on a LOAEL of 40 mg/kg bw/day for increased multinucleated hepatocytes in female rats and an overall uncertainty factor of 200. EFSA's 2020 combined-exposure assessment found that background diet plus 8 mg/day from supplements was safe for adults, reached the ADI in older adolescents and exceeded it in younger groups; the EU novel-food conditions were therefore age-restricted. The 2026 FSA/FSS review of a change to the *Haematococcus pluvialis* oleoresin specifications also concluded the novel food was safe under its proposed conditions. These are feed-additive and novel-food/supplement assessments, not a specific toxicological evaluation or authorisation of E161j as a food-colour additive. The current EU food-additive regulation does not list E161j among permitted food colours; the novel-food route is separate.",
+    "intake": "Astaxanthin ADI: 0.2 mg/kg bw/day (EFSA FEEDAP 2019, adopted by EFSA NDA 2020 and maintained in the 2026 FEEDAP re-evaluation). The earlier 2014 ADI of 0.034 mg/kg bw/day is superseded. This ADI is relevant to astaxanthin safety in the specified feed/novel-food contexts; it is not evidence that E161j is authorised as a colour additive. EFSA's combined background diet + 8 mg/day supplement scenario exceeded the ADI for younger groups and was safe for adults.",
+    "toxicityResearchStatus": "Reviewed against EFSA FEEDAP 2014/2019/2026, EFSA NDA 2020, the 2026 GB FSA/FSS novel-food assessment and the EU 2023/2026 regulatory lists; revised ADI and novel-food versus food-colour distinction are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E162": {
     "researchStatus": "Cross-checked against Codex GSFA",
