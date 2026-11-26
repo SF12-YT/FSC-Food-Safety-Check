@@ -2734,9 +2734,19 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
       },
       {
-        "label": "FAO/WHO JECFA — Beta-apo-8′-carotenal / INS 160e (JECFA record gives ADI 0–0.3 mg/kg bw/day and summarizes 2026 exposure review.)",
+        "label": "FAO/WHO JECFA — Beta-apo-8′-carotenal (INS 160e), 2019 evaluation and 2026 exposure review",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/941",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
+        "note": "JECFA established an ADI of 0–0.3 mg/kg bw in 2019 from a rat 13-week NOAEL of 30 mg/kg bw/day with uncertainty factor 100. In 2026 it considered dietary exposure only and estimated high toddler exposures up to 0.45 mg/kg bw/day, above the JECFA ADI."
+      },
+      {
+        "label": "EFSA — Re-evaluation of β-apo-8′-carotenal (E160e), 2012",
+        "url": "https://doi.org/10.2903/j.efsa.2012.2499",
+        "note": "EFSA established a lower ADI of 0.05 mg/kg bw/day based on a rat 13-week LOAEL of 10 mg/kg bw/day (kidney eosinophilic droplets) and uncertainty factor 200. Its Tier 3 estimates reached the ADI for adults on average and exceeded it for adults at the 95th percentile and children."
+      },
+      {
+        "label": "EFSA — Reconsideration of the ADI and refined exposure assessment for β-apo-8′-carotenal (E160e), 2014",
+        "url": "https://doi.org/10.2903/j.efsa.2014.3492",
+        "note": "EFSA considered revised use levels and refined exposure estimates, while retaining the 0.05 mg/kg bw/day ADI established in 2012."
       }
     ],
     "regulatoryGroups": [
@@ -2745,8 +2755,10 @@ window.FOSCH_RESEARCH_DATA=
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
     ],
-    "tox": "JECFA’s earlier evaluation set an ADI of 0–0.3 mg/kg body weight/day (2019). Its 2026 evaluation noted high estimated exposure for toddlers could exceed that ADI in the exposure model. An exceedance estimate is a population-risk signal requiring context, not proof that a particular serving will cause harm.",
-    "intake": "JECFA ADI listed: 0–0.3 mg/kg bw/day (2019); JECFA’s 2026 review noted some high exposure estimates for toddlers exceeded it. Verify current national permissions and avoid presenting this as a per-serving threshold."
+    "tox": "EFSA's 2012 re-evaluation established an ADI of 0.05 mg/kg body weight/day. It based this on a 13-week rat study in which increased eosinophilic droplets in kidney tubules gave a LOAEL of 10 mg/kg bw/day; EFSA applied an uncertainty factor of 200. The same assessment found no genotoxicity concern from the available in-vitro and in-vivo studies and noted reproductive/developmental studies with a NOAEL of 500 mg/kg bw/day. EFSA's Tier 3 exposure estimates reached the new ADI for adults on average and exceeded it for adults at the 95th percentile and children at the mean and high percentiles. EFSA's 2014 follow-up considered revised use levels and refined exposure estimates while retaining the 0.05 mg/kg bw/day ADI. JECFA's 2019 re-evaluation established a different ADI of 0–0.3 mg/kg bw/day from a rat 13-week NOAEL of 30 mg/kg bw/day and uncertainty factor 100. At its 102nd meeting in 2026, JECFA considered exposure only and reported high toddler estimates up to 0.45 mg/kg bw/day, above its own 0.3 ADI. The JECFA and EFSA values must be shown with their issuing committee and year; they are not interchangeable.",
+    "intake": "EFSA ADI: 0.05 mg/kg bw/day (2012, retained in 2014); EFSA's older Tier 3 estimates reached or exceeded it for several child/adult groups. JECFA ADI: 0–0.3 mg/kg bw/day (2019); its 2026 high toddler exposure estimate reached 0.45 mg/kg bw/day, exceeding the JECFA ADI. These are long-term assessment values, not per-serving limits.",
+    "toxicityResearchStatus": "Reviewed against EFSA's 2012 and 2014 opinions and JECFA's 2019/2026 record; the five-to-six-fold difference between committee ADIs and the 2026 exposure exceedance are explicitly distinguished.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E160f": {
     "researchStatus": "Exact INS 160f colour function cross-checked against Codex CXG 36-1989",
@@ -2767,11 +2779,25 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 160f entry identifies ethyl ester of beta-apo-8′-carotenic acid and lists Colour. This functional classification is not an authorisation statement."
+      },
+      {
+        "label": "FAO/WHO JECFA — β-apo-8′-carotenoic acid methyl and ethyl esters (INS 160f), 2019 ADI withdrawal",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/375",
+        "note": "JECFA withdrew the prior group ADI of 0–5 mg/kg bw in 2019. The group covered synthetic beta-carotene, beta-apo-8′-carotenal and the methyl/ethyl esters; no replacement group ADI was established because rats were not an appropriate model for deriving an ADI for the general population."
+      },
+      {
+        "label": "JECFA evaluation archive — β-apo-8′-carotenoic acid methyl and ethyl esters",
+        "url": "https://inchem.org/documents/jecfa/jeceval/jec_375.htm",
+        "note": "Historical 1974 group ADI of 0–5 mg/kg bw (sum of beta-carotene, beta-apo-8′-carotenal and the acid methyl/ethyl esters), later withdrawn by JECFA in 2019."
       }
     ],
     "functionalClasses": [
       "Colour"
-    ]
+    ],
+    "tox": "JECFA's 1974 evaluation included the methyl and ethyl esters of beta-apo-8′-carotenoic acid in a group ADI of 0–5 mg/kg body weight/day, expressed as the sum of beta-carotene, beta-apo-8′-carotenal and the relevant methyl/ethyl esters. At its 87th meeting in 2019, JECFA withdrew that group ADI. The Committee concluded that rats were not an appropriate model for deriving an ADI for beta-carotene and related compounds because beta-carotene bioavailability is relatively low in rats compared with humans; it was unable to establish a new group ADI applicable to the general population, which includes heavy smokers. The withdrawal is not a finding that the ester is intrinsically harmful, but it means the previous 0–5 group ADI is no longer current. EFSA's current food-colour assessment table lists E160e but does not list E160f among EU-authorised food colours; that EU-specific absence does not establish the legal status in every jurisdiction.",
+    "intake": "Historical JECFA group ADI: 0–5 mg/kg bw/day (1974), expressed as the sum of the group carotenoids. Withdrawn by JECFA in 2019; no replacement group ADI established. Do not continue to display 0–5 as a current ADI or transfer the separate E160e EFSA ADI to this ester.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA INS 160f record and evaluation history; prior group ADI withdrawal and absence of a replacement value are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E161a": {
     "researchStatus": "Exact INS 161a colour function confirmed in Codex; low-confidence product examples removed",
@@ -2865,6 +2891,26 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Lutein from Tagetes erecta (INS 161b(i)), 2018 group ADI",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/4904",
+        "note": "JECFA's 86th meeting established a group ADI “not specified” for lutein from Tagetes erecta, lutein esters from Tagetes erecta and synthetic zeaxanthin based on absence of toxicity in a wide range of studies."
+      },
+      {
+        "label": "FAO/WHO JECFA — Lutein esters from Tagetes erecta, 2018 group ADI",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/6198",
+        "note": "Exact record for lutein esters; included in the same 2018 group ADI “not specified” with lutein from Tagetes erecta and synthetic zeaxanthin."
+      },
+      {
+        "label": "EFSA — Re-evaluation of lutein (E161b), 2010",
+        "url": "https://doi.org/10.2903/j.efsa.2010.1678",
+        "note": "EFSA established an ADI of 1 mg/kg bw/day for Tagetes-derived lutein with at least 80% total carotenoids (79% lutein, 5% zeaxanthin); exposure estimates at the upper end of Tier 3 were above the ADI."
+      },
+      {
+        "label": "EFSA — Re-evaluation of lutein preparations other than high-concentration saponified carotenoids, 2011",
+        "url": "https://doi.org/10.2903/j.efsa.2011.2144",
+        "note": "EFSA extended the 1 mg/kg bw/day ADI to specified Tagetes-derived ester preparations containing at least 60% total carotenoid esters, while saying the database was too limited to conclude that the ADI applied to lower-purity or other-source preparations."
       }
     ],
     "regulatoryGroups": [
@@ -2872,7 +2918,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "tox": "JECFA's 2018 evaluation established a group ADI “not specified” for lutein from Tagetes erecta, lutein esters from Tagetes erecta and synthetic zeaxanthin, based on absence of toxicity in a wide range of studies. EFSA's EU re-evaluation took a preparation-specific approach: its 2010 ADI was 1 mg/kg body weight/day for Tagetes-derived lutein containing at least 80% total carotenoids (about 79% lutein and 5% zeaxanthin). A 2011 follow-up extended that ADI to specified Tagetes-derived ester preparations with at least 60% total carotenoid esters, but concluded that the toxicological database was too limited to extend the ADI to lower-purity or other-source preparations. EFSA's 2010 exposure assessment found upper-end Tier 3 estimates above the ADI. These are different committee conclusions with different material specifications: JECFA's group ADI “not specified” must not be used to imply that EFSA's narrower EU material scope is unrestricted.",
+    "intake": "JECFA: group ADI “not specified” (2018) for specified Tagetes lutein, Tagetes lutein esters and synthetic zeaxanthin. EFSA: 1 mg/kg bw/day for specified high-purity Tagetes lutein and defined ester preparations (2010/2011); not established for lower-purity or other-source preparations. Upper-end Tier 3 exposure estimates exceeded the EFSA ADI.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA 161b(i) and lutein-ester records and EFSA's 2010/2011 opinions; preparation-specific scope and the different JECFA/EFSA ADI conclusions are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E161c": {
     "researchStatus": "Preproom educational technical-purpose reference",
@@ -3004,6 +3054,16 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Canthaxanthin (INS 161g), 1995 evaluation and intake assessment",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1268",
+        "note": "JECFA established an ADI of 0–0.03 mg/kg bw in 1995. Its 1999 exposure assessment noted that feed use was a major indirect source; although the draft food-use exposure estimate exceeded the ADI, long-term intake was considered unlikely to exceed it."
+      },
+      {
+        "label": "EFSA — Re-evaluation of canthaxanthin (E161g), 2010",
+        "url": "https://doi.org/10.2903/j.efsa.2010.1852",
+        "note": "EFSA established the same ADI of 0.03 mg/kg bw/day using a point of departure of 0.30 mg/kg bw/day and uncertainty factor 10, based on visual function/retinal crystal evidence in humans. Combined exposure from food and feed was considered unlikely to exceed the ADI."
       }
     ],
     "regulatoryGroups": [
@@ -3011,7 +3071,11 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "tox": "JECFA established an ADI of 0–0.03 mg/kg body weight/day in 1995. Its 1999 intake evaluation noted that exposure estimates based on draft food-use levels exceeded the ADI, with indirect exposure from canthaxanthin used in animal feed representing a major source in foods; JECFA nevertheless concluded that long-term intake was unlikely to exceed the ADI. EFSA's 2010 re-evaluation derived the same ADI of 0.03 mg/kg bw/day from a point of departure of 0.30 mg/kg bw/day and an uncertainty factor of 10. The assessment relied on changes in visual function and crystalline deposits in the retina observed in humans and monkeys at higher exposure; the human visual-function change cited as a NOAEL was 0.25 mg/kg bw/day, with no impairment of vision reported in that study. EFSA concluded that combined exposure from food and feed additive uses was unlikely to exceed the ADI for adults or children. This is a low ADI with a specific retinal endpoint, not a general assertion that all carotenoids share the same toxicity profile.",
+    "intake": "JECFA and EFSA ADI: 0–0.03 mg/kg bw/day (JECFA 1995; EFSA 2010). EFSA's point of departure was 0.30 mg/kg bw/day with uncertainty factor 10. JECFA's 1999 scenario estimated draft food-use exposure above the ADI, but concluded long-term exposure was unlikely to exceed it; EFSA considered combined food/feed exposure unlikely to exceed the ADI.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA record and EFSA's 2010 opinion; retinal deposits/visual-function basis and the distinct JECFA and EFSA exposure scenarios are noted.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E161h": {
     "researchStatus": "Codex GSFA subtype verified",
@@ -3046,8 +3110,22 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Codex GSFA — food-additive functional-class definitions",
         "url": "https://www.fao.org/gsfaonline/reference/techfuncs.html",
         "note": "Official definitions of the functional classes used above."
+      },
+      {
+        "label": "FAO/WHO JECFA — Zeaxanthin (synthetic; INS 161h(i)), 2018 group ADI",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/4907",
+        "note": "JECFA's 86th meeting established a group ADI “not specified” for synthetic zeaxanthin with lutein and lutein esters from Tagetes erecta, based on absence of toxicity in a wide range of studies."
+      },
+      {
+        "label": "WHO/FAO — JECFA 86th meeting report (TRS 1014), 2018",
+        "url": "https://www.inchem.org/documents/jecfa/jecmono/v1014je01.pdf",
+        "note": "Primary JECFA report explains the group ADI “not specified” and notes estimated dietary exposure was of the same order as intake from naturally occurring foods; meso-zeaxanthin was excluded because specifications were not available."
       }
-    ]
+    ],
+    "tox": "The exact Codex subtype INS 161h(i) is synthetic zeaxanthin. JECFA's 2004 evaluation established an older group ADI of 0–2 mg/kg body weight/day for lutein from Tagetes erecta and synthetic zeaxanthin. At its 86th meeting in 2018, JECFA replaced that numerical group ADI with a group ADI “not specified” for lutein from Tagetes erecta, lutein esters from Tagetes erecta and synthetic zeaxanthin, based on the absence of toxicity in a wide range of studies. The Committee reported NOAELs of approximately 87.5–500 mg/kg bw/day for zeaxanthin and estimated dietary exposures up to 2.4 mg/kg bw/day, noting that intakes were in the same order of magnitude as naturally occurring food intakes. Meso-zeaxanthin was not included because specifications were not available. This JECFA group assessment is not automatically transferable to uncharacterised natural-origin zeaxanthin preparations or every extract sold as a supplement.",
+    "intake": "JECFA group ADI: “not specified” (2018) for synthetic zeaxanthin together with Tagetes-derived lutein and lutein esters. The older 0–2 mg/kg bw group ADI (2004) was superseded. The group assessment excluded meso-zeaxanthin because specifications were unavailable.",
+    "toxicityResearchStatus": "Reviewed against the exact JECFA synthetic-zeaxanthin record and the primary 86th meeting report; group scope, NOAEL range and exclusion of meso-zeaxanthin are explicit.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E161i": {
     "researchStatus": "Historical/secondary technical-purpose reference only; current GB approved-additives list checked; no current GB listing identified",
