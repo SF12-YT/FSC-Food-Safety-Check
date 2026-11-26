@@ -727,7 +727,7 @@ const dietarySettings=[
  {key:"Plant-Based",description:"Flag ingredients that may be animal-derived."},
  {key:"Low Carb",description:"Flag carbohydrate and sugar content."}
 ];
-const dietIconMap={Halal:{label:"Halal"},Vegan:{label:"Vegan"},Vegetarian:{label:"Vegetarian"},Pescetarian:{label:"Pescetarian"},Kosher:{label:"Kosher"},"No/Low Sugar":{label:"No/Low Sugar"},"Dairy/Lactose Free":{label:"Dairy/Lactose Free"},"Egg Free":{label:"Egg Free"},Keto:{label:"Keto"},"Nut Free":{label:"Nut Free"},Paleo:{label:"Paleo"},"Gluten Free":{label:"Gluten Free"},FODMAP:{label:"FODMAP"},"Plant-Based":{label:"Plant-Based"},"Low Carb":{label:"Low Carb"}};
+
 // Positive icons are deliberately conservative: absence of a known animal-derived source is not proof of compliance.
 const dietIconMap=Object.fromEntries(dietarySettings.map(function(item){return [item.key,{label:item.key}]}));
 const dietaryIconArt={
