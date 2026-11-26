@@ -1120,6 +1120,26 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers (updated 25 June 2026)",
         "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
         "note": "Official UK list of additive groupings; the FSA cautions that permissions and maximum levels are food-category-specific and should be checked against the legislation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Patent Blue V (INS 131), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2513",
+        "note": "JECFA record lists no ADI allocated at the 1982 evaluation; the earlier temporary ADI of 0–1 mg/kg bw was withdrawn in 1974."
+      },
+      {
+        "label": "JECFA evaluation archive — Patent Blue V",
+        "url": "https://inchem.org/documents/jecfa/jeceval/jec_1822.htm",
+        "note": "Evaluation-history summary showing the temporary 1969 ADI, its withdrawal in 1974 because required studies had not been submitted, and no ADI allocated at the 1974 and 1982 evaluations."
+      },
+      {
+        "label": "WHO — JECFA 26th meeting report (TRS 683, 1982)",
+        "url": "https://iris.who.int/bitstream/handle/10665/41546/WHO_TRS_683.pdf",
+        "note": "Primary meeting report explains that Patent Blue V's temporary ADI was withdrawn because required study results had not been submitted; only limited further information was provided at the 1982 meeting."
+      },
+      {
+        "label": "EFSA — Re-evaluation of Patent Blue V (E131), 2013",
+        "url": "https://doi.org/10.2903/j.efsa.2013.2818",
+        "note": "EFSA established an ADI of 5 mg/kg bw/day from a chronic mouse study NOAEL of 500 mg/kg bw/day using an uncertainty factor of 100; high consumers at maximum permitted levels exceeded the ADI among toddlers and children, while estimates at maximum reported use levels were below it."
       }
     ],
     "regulatoryGroups": [
@@ -1135,14 +1155,18 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "JECFA's earlier temporary ADI of 0–1 mg/kg body weight/day (1969) was withdrawn in 1974 because required study results had not been submitted; the 1982 JECFA evaluation still allocated no ADI. EFSA's 2013 re-evaluation later established an ADI of 5 mg/kg bw/day, using a NOAEL of 500 mg/kg bw/day from a chronic mouse study and an uncertainty factor of 100. EFSA's exposure assessment was scenario-dependent: estimates for high consumers at maximum permitted levels were above the ADI for toddlers and children, whereas estimates using maximum reported use levels were below the ADI for all population groups assessed. The EFSA ADI must not be confused with a JECFA ADI, and its exposure scenarios should not be presented as measured individual intake.",
+    "intake": "JECFA: no ADI allocated in the 1982 evaluation (the temporary 1969 ADI of 0–1 mg/kg bw/day had been withdrawn in 1974). EFSA: ADI of 5 mg/kg bw/day (2013). EFSA estimated that high consumers could exceed this under maximum permitted-use assumptions for toddlers and children, but not under maximum reported-use assumptions. This is an assessment benchmark, not a personal intake target.",
+    "toxicityResearchStatus": "Reviewed against JECFA's historical evaluations and EFSA's 2013 re-evaluation; the different committee outcomes and exposure assumptions are retained separately.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E132": {
     "researchStatus": "Cross-checked against Codex GSFA",
     "researchedAt": "2026-11-25",
     "use": "Synthetic blue food colorant, often referred to as indigo carmine. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Candied fruit; these are examples, not blanket permission.",
-    "tox": "JECFA confirmed an ADI of 0–5 mg/kg body weight/day in 2018.",
-    "intake": "JECFA ADI: 0–5 mg/kg body weight/day (confirmed in 2018). Check national permissions and permitted categories.",
+    "tox": "JECFA confirmed the ADI of 0–5 mg/kg body weight/day in 2018. Its conservative dietary exposure estimate for children and toddlers (95th percentile) was 0.8 mg/kg bw/day, below the ADI upper bound; JECFA concluded that exposure for the assessed age groups did not present a health concern. EFSA's 2014 opinion had limited the ADI's applicability to material of at least 93% purity made using the same or equivalent manufacturing process as the material in the supporting toxicology studies, and identified a need to address an earlier reported testis effect and impurity specifications. In its 2023 follow-up, after reviewing additional technical and toxicological data, EFSA confirmed the ADI of 5 mg/kg bw/day for indigotine disodium salts meeting the revised specifications (at least 85% colouring matter) and found no safety concern at the reported use levels and analytical data it assessed. The purity/specification conditions are important; the ADI should not be detached from the material to which the assessment applies.",
+    "intake": "JECFA ADI: 0–5 mg/kg bw/day (confirmed 2018); its conservative 95th-percentile exposure estimate for children and toddlers was 0.8 mg/kg bw/day. EFSA's 2023 follow-up confirmed 5 mg/kg bw/day for disodium salt material meeting its revised specifications. This is a long-term assessment benchmark, not a consumption target; the material identity and purity conditions matter.",
     "sources": [
       {
         "label": "FAO/WHO JECFA — Indigo Carmine / INS 132 (2018. JECFA confirmed ADI 0–5 mg/kg bw.)",
@@ -1173,6 +1197,21 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "FAO/WHO JECFA — Indigotine (INS 132), 2018 evaluation",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2109",
+        "note": "Current JECFA database record: confirms the ADI of 0–5 mg/kg bw and records a conservative exposure estimate of 0.8 mg/kg bw/day at the 95th percentile for children and toddlers, below the ADI upper bound."
+      },
+      {
+        "label": "WHO — JECFA 86th meeting summary and conclusions (2018)",
+        "url": "https://cdn.who.int/media/docs/default-source/food-safety/jecfa/summary-and-conclusions/jecfa86_12-21-june-2018_summary-and-conclusion.pdf",
+        "note": "Primary meeting summary confirming the 0–5 mg/kg bw ADI and concluding that the conservative dietary exposure estimate did not present a health concern for any age group assessed."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of indigo carmine (E132), 2023",
+        "url": "https://doi.org/10.2903/j.efsa.2023.8103",
+        "note": "EFSA follow-up addresses the 2014 purity/manufacturing scope and the previously raised testis finding; it confirms the 5 mg/kg bw/day ADI for disodium salts meeting the revised specifications, and finds no safety concern at reported use levels and submitted analytical data."
       }
     ],
     "functionalClasses": [
@@ -1190,19 +1229,21 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against JECFA's 2018 evaluation and EFSA's 2014 and 2023 opinions; the purity/manufacturing qualification and later follow-up are both retained.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E133": {
     "researchStatus": "Cross-checked against Codex GSFA",
     "researchedAt": "2026-11-25",
     "use": "Synthetic blue food color; called FD&C Blue No. 1 in the United States. Codex GSFA classifies this additive as colour. Codex GSFA lists category-specific provisions including Aromatized alcoholic beverages (e.g. beer, wine and spirituous cooler-type beverages, low alcoholic refreshers) and Bread-type products, including bread stuffing and bread crumbs; these are examples, not blanket permission.",
-    "tox": "JECFA revised the ADI to 0–6 mg/kg body weight/day in 2017 and concluded dietary exposure did not present a health concern for the assessed age groups.",
-    "intake": "JECFA ADI: 0–6 mg/kg body weight/day (2017); use and labeling remain jurisdiction-specific.",
+    "tox": "JECFA revised the ADI for Brilliant Blue FCF to 0–6 mg/kg body weight/day in 2017. It identified a NOAEL of 631 mg/kg bw/day in a long-term rat toxicity study; at 1,318 mg/kg bw/day, mean terminal body weight was reduced by 15% and female survival decreased. JECFA applied an uncertainty factor of 100. EFSA had independently established the same ADI of 6 mg/kg bw/day in 2010. EFSA's exposure results depended on the assessment tier: refined Tier 3 estimates at maximum reported use levels were below the ADI, while the less-refined Tier 2 95th-percentile estimate was above the ADI for children. This difference in scenarios should be preserved rather than simplified to an unqualified “safe” or “unsafe” statement.",
+    "intake": "JECFA ADI: 0–6 mg/kg bw/day (2017), based on a long-term rat-study NOAEL of 631 mg/kg bw/day and an uncertainty factor of 100. EFSA also established 6 mg/kg bw/day (2010); its refined Tier 3 exposure estimates were below the ADI, but the less-refined Tier 2 95th-percentile estimate exceeded it for children. This is a long-term benchmark, not a recommended intake target.",
     "sources": [
       {
-        "label": "FAO/WHO JECFA — Brilliant Blue FCF / INS 133 (2017. JECFA revised ADI to 0–6 mg/kg bw.)",
+        "label": "FAO/WHO JECFA — Brilliant Blue FCF (INS 133), 2017 evaluation",
         "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3309",
-        "note": "FAO/WHO JECFA substance record and evaluation history."
+        "note": "JECFA revised the ADI to 0–6 mg/kg bw using a long-term rat-study NOAEL of 631 mg/kg bw/day and an uncertainty factor of 100."
       },
       {
         "label": "Health Canada / CFIA — food colours",
@@ -1223,6 +1264,11 @@ window.FOSCH_RESEARCH_DATA=
         "label": "UK Food Standards Agency — Approved additives and E numbers",
         "url": "https://www.food.gov.uk/business-guidance/approved-additives-and-e-numbers",
         "note": "Official UK list grouping additives by colour, preservative, antioxidant, sweetener, and texture-related functions. The FSA states most additives are restricted to specified food categories and quantities; this list is not global authorisation."
+      },
+      {
+        "label": "EFSA — Re-evaluation of Brilliant Blue FCF (E133), 2010",
+        "url": "https://doi.org/10.2903/j.efsa.2010.1853",
+        "note": "EFSA established an ADI of 6 mg/kg bw/day. Refined Tier 3 exposure estimates were below the ADI, while the less-refined Tier 2 95th-percentile estimates exceeded it for children."
       }
     ],
     "functionalClasses": [
@@ -1240,7 +1286,9 @@ window.FOSCH_RESEARCH_DATA=
     ],
     "regulatoryGroupJurisdictions": [
       "England, Northern Ireland and Wales (UK FSA page scope)"
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against JECFA's 2017 evaluation and EFSA's 2010 re-evaluation; the study basis and exposure-scenario differences are stated.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E140": {
     "researchStatus": "Cross-checked against Codex GSFA",
