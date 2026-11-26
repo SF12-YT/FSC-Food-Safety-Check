@@ -4884,13 +4884,13 @@ window.FOSCH_RESEARCH_DATA=
     "researchStatus": "All four functional classes for INS 220 cross-checked against Codex; market limits and declarations remain separate",
     "researchedAt": "2026-11-26",
     "use": "Sulfur dioxide (INS 220) functions as a preservative and antioxidant; Codex also lists bleaching-agent and flour-treatment-agent functions. Actual use depends on the process, food category and applicable market rules.",
-    "tox": "EFSA’s 2022 follow-up found the toxicology database inadequate to derive an ADI and withdrew the temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day set in 2016. EFSA instead used a margin-of-exposure approach with a reference MOE of 80; its exposure estimates produced MOEs below 80 in the evaluated refined and maximum-permitted-level scenarios, which EFSA considered a safety concern. Sulfite sensitivity and asthma-related reactions are separate from ordinary toxicological ADI assessment.",
-    "intake": "There is no current EFSA group ADI for sulfur dioxide–sulfites E220–E228: the temporary 0.7 mg SO2 equivalents/kg bw/day group ADI was withdrawn in the 2022 follow-up. EFSA used a margin-of-exposure reference of 80 and identified concern at estimated exposures. Do not present 0.7 as a current ADI or derive a personal safe dose from this assessment. Check local maximum levels and declaration thresholds.",
+    "tox": "JECFA's group ADI is 0–0.7 mg/kg body weight/day, expressed as sulfur dioxide, for sulfur dioxide and the specified sulfite salts. This is a JECFA group value and should not be mistaken for the current EFSA position. EFSA's 2016 re-evaluation of E220, E221, E222, E223, E224, E226, E227 and E228 set a temporary group ADI at the same 0.7 mg SO2 equivalents/kg bw/day, based on a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, but flagged important toxicology data gaps. In its 2022 follow-up, EFSA found that no suitable new biological or toxicological data had resolved those gaps and withdrew the temporary ADI. It instead used a margin-of-exposure approach: a BMDL of 38 mg SO2 equivalents/kg bw/day was derived from prolonged visual-evoked-potential latency, and an MOE of at least 80 was identified as the reference for no safety concern. Under the refined exposure scenario, MOEs at the maximum of the 95th-percentile ranges were below 80 for all population groups except adolescents; at maximum permitted use levels, MOEs fell below 80 across all groups at the maximum mean range and for most groups at the 95th percentile. EFSA concluded that these modelled exposures raise a safety concern, particularly for high consumers. This is an uncertainty- and exposure-based population assessment, not a prediction that a given serving will cause harm. EFSA also recommended lower specification limits for arsenic, lead and mercury and a new maximum limit for cadmium. It reiterated that further work is needed to characterise hypersensitivity/intolerance in sensitive consumers; such reactions are separate from the general toxicological exposure assessment.",
+    "intake": "JECFA group ADI: 0–0.7 mg/kg bw/day expressed as SO2 for specified sulfites. EFSA's 2016 temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day was withdrawn in 2022 because the toxicology database remained inadequate. EFSA now uses a BMDL of 38 mg SO2 equivalents/kg bw/day and reference MOE of 80; estimated high-consumer MOEs below 80 raised a safety concern. Do not show 0.7 as a current EFSA ADI.",
     "sources": [
       {
-        "label": "UK Food Standards Agency — sulfur dioxide and/or sulfites",
+        "label": "UK Food Standards Agency — Sulphur dioxide and/or sulphites allergen reference",
         "url": "https://data.food.gov.uk/codes/alerts/def/allergen/sulphur",
-        "note": "Official allergen reference notes use in foods and higher reaction risk for people with asthma."
+        "note": "Official allergen reference for sulphur dioxide/sulphites; labelling and sensitivity considerations are separate from the group toxicological assessment."
       },
       {
         "label": "EFSA — food-colour safety reassessments",
@@ -4921,6 +4921,41 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 220 entry lists Antioxidant, Bleaching agent, Flour treatment agent and Preservative."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sulfur dioxide (INS 220), group ADI evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/985",
+        "note": "JECFA's current record carries a group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide for sulfur dioxide and specified sulfite salts, including calcium, potassium and sodium forms."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium sulfite (INS 225), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2483",
+        "note": "Exact JECFA INS 225 record: potassium sulfite; group ADI 0–0.7 mg/kg bw/day expressed as sulfur dioxide; latest full evaluation 1998."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium hydrogen sulfite (INS 228), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2445",
+        "note": "Exact JECFA INS 228 record: potassium hydrogen sulfite; the 2026 entry considered specifications only and retained the group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide."
+      },
+      {
+        "label": "EFSA — Re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4438",
+        "note": "Established a temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day from a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, while identifying uncertainties and requiring follow-up."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2022",
+        "url": "https://doi.org/10.2903/j.efsa.2022.7594",
+        "note": "No new suitable toxicological data resolved the gaps; EFSA withdrew the temporary 0.7 group ADI, used a BMDL of 38 mg SO2 equivalents/kg bw/day based on prolonged visual evoked potential latency, and set a reference MOE of 80. Exposure scenarios produced MOEs below 80 and raised a safety concern; EFSA also recommended stricter limits for toxic-element impurities."
+      },
+      {
+        "label": "EFSA — Sulfites: safety concern for high consumers, but data lacking, 24 November 2022",
+        "url": "https://www.efsa.europa.eu/en/news/sulfites-safety-concern-high-consumers-data-lacking",
+        "note": "Public summary explains withdrawal of the temporary ADI, concern for high consumers under modelled scenarios, and remaining uncertainty around hypersensitivity/intolerance in sensitive consumers."
+      },
+      {
+        "label": "Codex Alimentarius — Sulfites group provisions, GSFA online",
+        "url": "https://www.fao.org/gsfaonline/groups/details.html?d-3586470-o=1&d-3586470-s=5&id=161&lang=&print=true",
+        "note": "Codex defines sulfite provisions at the additive-group level; the maximum level applies to total sulfite content from participating additives in each food category, rather than as separate full limits for every member."
       }
     ],
     "regulatoryGroups": [
@@ -4934,7 +4969,9 @@ window.FOSCH_RESEARCH_DATA=
       "Bleaching agent",
       "Flour treatment agent",
       "Preservative"
-    ]
+    ],
+    "toxicityResearchStatus": "Reviewed against JECFA's current group ADI record and EFSA's 2016 and 2022 group opinions; the EFSA temporary ADI withdrawal, MOE basis, high-consumer concern, impurity-specification recommendations and sensitivity-data gap are explicit. EFSA's follow-up scope is E220, E221, E222, E223, E224, E226, E227 and E228.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E221": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -4960,6 +4997,46 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
         "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
         "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sulfur dioxide (INS 220), group ADI evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/985",
+        "note": "JECFA's current record carries a group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide for sulfur dioxide and specified sulfite salts, including calcium, potassium and sodium forms."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium sulfite (INS 225), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2483",
+        "note": "Exact JECFA INS 225 record: potassium sulfite; group ADI 0–0.7 mg/kg bw/day expressed as sulfur dioxide; latest full evaluation 1998."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium hydrogen sulfite (INS 228), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2445",
+        "note": "Exact JECFA INS 228 record: potassium hydrogen sulfite; the 2026 entry considered specifications only and retained the group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide."
+      },
+      {
+        "label": "EFSA — Re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4438",
+        "note": "Established a temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day from a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, while identifying uncertainties and requiring follow-up."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2022",
+        "url": "https://doi.org/10.2903/j.efsa.2022.7594",
+        "note": "No new suitable toxicological data resolved the gaps; EFSA withdrew the temporary 0.7 group ADI, used a BMDL of 38 mg SO2 equivalents/kg bw/day based on prolonged visual evoked potential latency, and set a reference MOE of 80. Exposure scenarios produced MOEs below 80 and raised a safety concern; EFSA also recommended stricter limits for toxic-element impurities."
+      },
+      {
+        "label": "EFSA — Sulfites: safety concern for high consumers, but data lacking, 24 November 2022",
+        "url": "https://www.efsa.europa.eu/en/news/sulfites-safety-concern-high-consumers-data-lacking",
+        "note": "Public summary explains withdrawal of the temporary ADI, concern for high consumers under modelled scenarios, and remaining uncertainty around hypersensitivity/intolerance in sensitive consumers."
+      },
+      {
+        "label": "UK Food Standards Agency — Sulphur dioxide and/or sulphites allergen reference",
+        "url": "https://data.food.gov.uk/codes/alerts/def/allergen/sulphur",
+        "note": "Official allergen reference for sulphur dioxide/sulphites; labelling and sensitivity considerations are separate from the group toxicological assessment."
+      },
+      {
+        "label": "Codex Alimentarius — Sulfites group provisions, GSFA online",
+        "url": "https://www.fao.org/gsfaonline/groups/details.html?d-3586470-o=1&d-3586470-s=5&id=161&lang=&print=true",
+        "note": "Codex defines sulfite provisions at the additive-group level; the maximum level applies to total sulfite content from participating additives in each food category, rather than as separate full limits for every member."
       }
     ],
     "regulatoryGroups": [
@@ -4975,7 +5052,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "JECFA's group ADI is 0–0.7 mg/kg body weight/day, expressed as sulfur dioxide, for sulfur dioxide and the specified sulfite salts. This is a JECFA group value and should not be mistaken for the current EFSA position. EFSA's 2016 re-evaluation of E220, E221, E222, E223, E224, E226, E227 and E228 set a temporary group ADI at the same 0.7 mg SO2 equivalents/kg bw/day, based on a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, but flagged important toxicology data gaps. In its 2022 follow-up, EFSA found that no suitable new biological or toxicological data had resolved those gaps and withdrew the temporary ADI. It instead used a margin-of-exposure approach: a BMDL of 38 mg SO2 equivalents/kg bw/day was derived from prolonged visual-evoked-potential latency, and an MOE of at least 80 was identified as the reference for no safety concern. Under the refined exposure scenario, MOEs at the maximum of the 95th-percentile ranges were below 80 for all population groups except adolescents; at maximum permitted use levels, MOEs fell below 80 across all groups at the maximum mean range and for most groups at the 95th percentile. EFSA concluded that these modelled exposures raise a safety concern, particularly for high consumers. This is an uncertainty- and exposure-based population assessment, not a prediction that a given serving will cause harm. EFSA also recommended lower specification limits for arsenic, lead and mercury and a new maximum limit for cadmium. It reiterated that further work is needed to characterise hypersensitivity/intolerance in sensitive consumers; such reactions are separate from the general toxicological exposure assessment.",
+    "intake": "JECFA group ADI: 0–0.7 mg/kg bw/day expressed as SO2 for specified sulfites. EFSA's 2016 temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day was withdrawn in 2022 because the toxicology database remained inadequate. EFSA now uses a BMDL of 38 mg SO2 equivalents/kg bw/day and reference MOE of 80; estimated high-consumer MOEs below 80 raised a safety concern. Do not show 0.7 as a current EFSA ADI.",
+    "toxicityResearchStatus": "Reviewed against JECFA's current group ADI record and EFSA's 2016 and 2022 group opinions; the EFSA temporary ADI withdrawal, MOE basis, high-consumer concern, impurity-specification recommendations and sensitivity-data gap are explicit. EFSA's follow-up scope is E220, E221, E222, E223, E224, E226, E227 and E228.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E222": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -5001,6 +5082,46 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
         "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
         "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sulfur dioxide (INS 220), group ADI evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/985",
+        "note": "JECFA's current record carries a group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide for sulfur dioxide and specified sulfite salts, including calcium, potassium and sodium forms."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium sulfite (INS 225), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2483",
+        "note": "Exact JECFA INS 225 record: potassium sulfite; group ADI 0–0.7 mg/kg bw/day expressed as sulfur dioxide; latest full evaluation 1998."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium hydrogen sulfite (INS 228), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2445",
+        "note": "Exact JECFA INS 228 record: potassium hydrogen sulfite; the 2026 entry considered specifications only and retained the group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide."
+      },
+      {
+        "label": "EFSA — Re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4438",
+        "note": "Established a temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day from a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, while identifying uncertainties and requiring follow-up."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2022",
+        "url": "https://doi.org/10.2903/j.efsa.2022.7594",
+        "note": "No new suitable toxicological data resolved the gaps; EFSA withdrew the temporary 0.7 group ADI, used a BMDL of 38 mg SO2 equivalents/kg bw/day based on prolonged visual evoked potential latency, and set a reference MOE of 80. Exposure scenarios produced MOEs below 80 and raised a safety concern; EFSA also recommended stricter limits for toxic-element impurities."
+      },
+      {
+        "label": "EFSA — Sulfites: safety concern for high consumers, but data lacking, 24 November 2022",
+        "url": "https://www.efsa.europa.eu/en/news/sulfites-safety-concern-high-consumers-data-lacking",
+        "note": "Public summary explains withdrawal of the temporary ADI, concern for high consumers under modelled scenarios, and remaining uncertainty around hypersensitivity/intolerance in sensitive consumers."
+      },
+      {
+        "label": "UK Food Standards Agency — Sulphur dioxide and/or sulphites allergen reference",
+        "url": "https://data.food.gov.uk/codes/alerts/def/allergen/sulphur",
+        "note": "Official allergen reference for sulphur dioxide/sulphites; labelling and sensitivity considerations are separate from the group toxicological assessment."
+      },
+      {
+        "label": "Codex Alimentarius — Sulfites group provisions, GSFA online",
+        "url": "https://www.fao.org/gsfaonline/groups/details.html?d-3586470-o=1&d-3586470-s=5&id=161&lang=&print=true",
+        "note": "Codex defines sulfite provisions at the additive-group level; the maximum level applies to total sulfite content from participating additives in each food category, rather than as separate full limits for every member."
       }
     ],
     "regulatoryGroups": [
@@ -5016,7 +5137,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "JECFA's group ADI is 0–0.7 mg/kg body weight/day, expressed as sulfur dioxide, for sulfur dioxide and the specified sulfite salts. This is a JECFA group value and should not be mistaken for the current EFSA position. EFSA's 2016 re-evaluation of E220, E221, E222, E223, E224, E226, E227 and E228 set a temporary group ADI at the same 0.7 mg SO2 equivalents/kg bw/day, based on a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, but flagged important toxicology data gaps. In its 2022 follow-up, EFSA found that no suitable new biological or toxicological data had resolved those gaps and withdrew the temporary ADI. It instead used a margin-of-exposure approach: a BMDL of 38 mg SO2 equivalents/kg bw/day was derived from prolonged visual-evoked-potential latency, and an MOE of at least 80 was identified as the reference for no safety concern. Under the refined exposure scenario, MOEs at the maximum of the 95th-percentile ranges were below 80 for all population groups except adolescents; at maximum permitted use levels, MOEs fell below 80 across all groups at the maximum mean range and for most groups at the 95th percentile. EFSA concluded that these modelled exposures raise a safety concern, particularly for high consumers. This is an uncertainty- and exposure-based population assessment, not a prediction that a given serving will cause harm. EFSA also recommended lower specification limits for arsenic, lead and mercury and a new maximum limit for cadmium. It reiterated that further work is needed to characterise hypersensitivity/intolerance in sensitive consumers; such reactions are separate from the general toxicological exposure assessment.",
+    "intake": "JECFA group ADI: 0–0.7 mg/kg bw/day expressed as SO2 for specified sulfites. EFSA's 2016 temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day was withdrawn in 2022 because the toxicology database remained inadequate. EFSA now uses a BMDL of 38 mg SO2 equivalents/kg bw/day and reference MOE of 80; estimated high-consumer MOEs below 80 raised a safety concern. Do not show 0.7 as a current EFSA ADI.",
+    "toxicityResearchStatus": "Reviewed against JECFA's current group ADI record and EFSA's 2016 and 2022 group opinions; the EFSA temporary ADI withdrawal, MOE basis, high-consumer concern, impurity-specification recommendations and sensitivity-data gap are explicit. EFSA's follow-up scope is E220, E221, E222, E223, E224, E226, E227 and E228.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E223": {
     "researchStatus": "All four functional classes for INS 223 cross-checked against Codex",
@@ -5032,6 +5157,46 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 223 entry lists Antioxidant, Bleaching agent, Flour treatment agent and Preservative."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sulfur dioxide (INS 220), group ADI evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/985",
+        "note": "JECFA's current record carries a group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide for sulfur dioxide and specified sulfite salts, including calcium, potassium and sodium forms."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium sulfite (INS 225), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2483",
+        "note": "Exact JECFA INS 225 record: potassium sulfite; group ADI 0–0.7 mg/kg bw/day expressed as sulfur dioxide; latest full evaluation 1998."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium hydrogen sulfite (INS 228), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2445",
+        "note": "Exact JECFA INS 228 record: potassium hydrogen sulfite; the 2026 entry considered specifications only and retained the group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide."
+      },
+      {
+        "label": "EFSA — Re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4438",
+        "note": "Established a temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day from a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, while identifying uncertainties and requiring follow-up."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2022",
+        "url": "https://doi.org/10.2903/j.efsa.2022.7594",
+        "note": "No new suitable toxicological data resolved the gaps; EFSA withdrew the temporary 0.7 group ADI, used a BMDL of 38 mg SO2 equivalents/kg bw/day based on prolonged visual evoked potential latency, and set a reference MOE of 80. Exposure scenarios produced MOEs below 80 and raised a safety concern; EFSA also recommended stricter limits for toxic-element impurities."
+      },
+      {
+        "label": "EFSA — Sulfites: safety concern for high consumers, but data lacking, 24 November 2022",
+        "url": "https://www.efsa.europa.eu/en/news/sulfites-safety-concern-high-consumers-data-lacking",
+        "note": "Public summary explains withdrawal of the temporary ADI, concern for high consumers under modelled scenarios, and remaining uncertainty around hypersensitivity/intolerance in sensitive consumers."
+      },
+      {
+        "label": "UK Food Standards Agency — Sulphur dioxide and/or sulphites allergen reference",
+        "url": "https://data.food.gov.uk/codes/alerts/def/allergen/sulphur",
+        "note": "Official allergen reference for sulphur dioxide/sulphites; labelling and sensitivity considerations are separate from the group toxicological assessment."
+      },
+      {
+        "label": "Codex Alimentarius — Sulfites group provisions, GSFA online",
+        "url": "https://www.fao.org/gsfaonline/groups/details.html?d-3586470-o=1&d-3586470-s=5&id=161&lang=&print=true",
+        "note": "Codex defines sulfite provisions at the additive-group level; the maximum level applies to total sulfite content from participating additives in each food category, rather than as separate full limits for every member."
       }
     ],
     "regulatoryGroups": [
@@ -5045,7 +5210,11 @@ window.FOSCH_RESEARCH_DATA=
       "Bleaching agent",
       "Flour treatment agent",
       "Preservative"
-    ]
+    ],
+    "tox": "JECFA's group ADI is 0–0.7 mg/kg body weight/day, expressed as sulfur dioxide, for sulfur dioxide and the specified sulfite salts. This is a JECFA group value and should not be mistaken for the current EFSA position. EFSA's 2016 re-evaluation of E220, E221, E222, E223, E224, E226, E227 and E228 set a temporary group ADI at the same 0.7 mg SO2 equivalents/kg bw/day, based on a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, but flagged important toxicology data gaps. In its 2022 follow-up, EFSA found that no suitable new biological or toxicological data had resolved those gaps and withdrew the temporary ADI. It instead used a margin-of-exposure approach: a BMDL of 38 mg SO2 equivalents/kg bw/day was derived from prolonged visual-evoked-potential latency, and an MOE of at least 80 was identified as the reference for no safety concern. Under the refined exposure scenario, MOEs at the maximum of the 95th-percentile ranges were below 80 for all population groups except adolescents; at maximum permitted use levels, MOEs fell below 80 across all groups at the maximum mean range and for most groups at the 95th percentile. EFSA concluded that these modelled exposures raise a safety concern, particularly for high consumers. This is an uncertainty- and exposure-based population assessment, not a prediction that a given serving will cause harm. EFSA also recommended lower specification limits for arsenic, lead and mercury and a new maximum limit for cadmium. It reiterated that further work is needed to characterise hypersensitivity/intolerance in sensitive consumers; such reactions are separate from the general toxicological exposure assessment.",
+    "intake": "JECFA group ADI: 0–0.7 mg/kg bw/day expressed as SO2 for specified sulfites. EFSA's 2016 temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day was withdrawn in 2022 because the toxicology database remained inadequate. EFSA now uses a BMDL of 38 mg SO2 equivalents/kg bw/day and reference MOE of 80; estimated high-consumer MOEs below 80 raised a safety concern. Do not show 0.7 as a current EFSA ADI.",
+    "toxicityResearchStatus": "Reviewed against JECFA's current group ADI record and EFSA's 2016 and 2022 group opinions; the EFSA temporary ADI withdrawal, MOE basis, high-consumer concern, impurity-specification recommendations and sensitivity-data gap are explicit. EFSA's follow-up scope is E220, E221, E222, E223, E224, E226, E227 and E228.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E224": {
     "researchStatus": "All four functional classes for INS 224 cross-checked against Codex",
@@ -5061,6 +5230,46 @@ window.FOSCH_RESEARCH_DATA=
         "label": "FAO/WHO Codex Alimentarius — CXG 36-1989, Class Names and the International Numbering System for Food Additives (amended 2025)",
         "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/pl/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXG%2B36-1989%252FCXG_036e.pdf",
         "note": "The exact INS 224 entry lists Antioxidant, Bleaching agent, Flour treatment agent and Preservative."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sulfur dioxide (INS 220), group ADI evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/985",
+        "note": "JECFA's current record carries a group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide for sulfur dioxide and specified sulfite salts, including calcium, potassium and sodium forms."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium sulfite (INS 225), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2483",
+        "note": "Exact JECFA INS 225 record: potassium sulfite; group ADI 0–0.7 mg/kg bw/day expressed as sulfur dioxide; latest full evaluation 1998."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium hydrogen sulfite (INS 228), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2445",
+        "note": "Exact JECFA INS 228 record: potassium hydrogen sulfite; the 2026 entry considered specifications only and retained the group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide."
+      },
+      {
+        "label": "EFSA — Re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4438",
+        "note": "Established a temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day from a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, while identifying uncertainties and requiring follow-up."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2022",
+        "url": "https://doi.org/10.2903/j.efsa.2022.7594",
+        "note": "No new suitable toxicological data resolved the gaps; EFSA withdrew the temporary 0.7 group ADI, used a BMDL of 38 mg SO2 equivalents/kg bw/day based on prolonged visual evoked potential latency, and set a reference MOE of 80. Exposure scenarios produced MOEs below 80 and raised a safety concern; EFSA also recommended stricter limits for toxic-element impurities."
+      },
+      {
+        "label": "EFSA — Sulfites: safety concern for high consumers, but data lacking, 24 November 2022",
+        "url": "https://www.efsa.europa.eu/en/news/sulfites-safety-concern-high-consumers-data-lacking",
+        "note": "Public summary explains withdrawal of the temporary ADI, concern for high consumers under modelled scenarios, and remaining uncertainty around hypersensitivity/intolerance in sensitive consumers."
+      },
+      {
+        "label": "UK Food Standards Agency — Sulphur dioxide and/or sulphites allergen reference",
+        "url": "https://data.food.gov.uk/codes/alerts/def/allergen/sulphur",
+        "note": "Official allergen reference for sulphur dioxide/sulphites; labelling and sensitivity considerations are separate from the group toxicological assessment."
+      },
+      {
+        "label": "Codex Alimentarius — Sulfites group provisions, GSFA online",
+        "url": "https://www.fao.org/gsfaonline/groups/details.html?d-3586470-o=1&d-3586470-s=5&id=161&lang=&print=true",
+        "note": "Codex defines sulfite provisions at the additive-group level; the maximum level applies to total sulfite content from participating additives in each food category, rather than as separate full limits for every member."
       }
     ],
     "regulatoryGroups": [
@@ -5074,7 +5283,11 @@ window.FOSCH_RESEARCH_DATA=
       "Bleaching agent",
       "Flour treatment agent",
       "Preservative"
-    ]
+    ],
+    "tox": "JECFA's group ADI is 0–0.7 mg/kg body weight/day, expressed as sulfur dioxide, for sulfur dioxide and the specified sulfite salts. This is a JECFA group value and should not be mistaken for the current EFSA position. EFSA's 2016 re-evaluation of E220, E221, E222, E223, E224, E226, E227 and E228 set a temporary group ADI at the same 0.7 mg SO2 equivalents/kg bw/day, based on a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, but flagged important toxicology data gaps. In its 2022 follow-up, EFSA found that no suitable new biological or toxicological data had resolved those gaps and withdrew the temporary ADI. It instead used a margin-of-exposure approach: a BMDL of 38 mg SO2 equivalents/kg bw/day was derived from prolonged visual-evoked-potential latency, and an MOE of at least 80 was identified as the reference for no safety concern. Under the refined exposure scenario, MOEs at the maximum of the 95th-percentile ranges were below 80 for all population groups except adolescents; at maximum permitted use levels, MOEs fell below 80 across all groups at the maximum mean range and for most groups at the 95th percentile. EFSA concluded that these modelled exposures raise a safety concern, particularly for high consumers. This is an uncertainty- and exposure-based population assessment, not a prediction that a given serving will cause harm. EFSA also recommended lower specification limits for arsenic, lead and mercury and a new maximum limit for cadmium. It reiterated that further work is needed to characterise hypersensitivity/intolerance in sensitive consumers; such reactions are separate from the general toxicological exposure assessment.",
+    "intake": "JECFA group ADI: 0–0.7 mg/kg bw/day expressed as SO2 for specified sulfites. EFSA's 2016 temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day was withdrawn in 2022 because the toxicology database remained inadequate. EFSA now uses a BMDL of 38 mg SO2 equivalents/kg bw/day and reference MOE of 80; estimated high-consumer MOEs below 80 raised a safety concern. Do not show 0.7 as a current EFSA ADI.",
+    "toxicityResearchStatus": "Reviewed against JECFA's current group ADI record and EFSA's 2016 and 2022 group opinions; the EFSA temporary ADI withdrawal, MOE basis, high-consumer concern, impurity-specification recommendations and sensitivity-data gap are explicit. EFSA's follow-up scope is E220, E221, E222, E223, E224, E226, E227 and E228.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E225": {
     "researchStatus": "Official regulator classification cross-checked",
@@ -5087,9 +5300,34 @@ window.FOSCH_RESEARCH_DATA=
         "note": "Official UK additive groupings; permitted categories and maximum levels remain food-category-specific."
       },
       {
-        "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
+        "label": "Australia New Zealand Food Standards Code — Schedule 15, sulphite group permissions (30 April 2026)",
         "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
-        "note": "Current Australia/New Zealand food-category permissions, maximum permitted levels and conditions."
+        "note": "INS 225 is listed within the total sulphur dioxide/sulphite additive group permission for defined flour products, with a 300 mg/kg group maximum level. The permission is food-category-specific."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sulfur dioxide (INS 220), group ADI evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/985",
+        "note": "JECFA's current record carries a group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide for sulfur dioxide and specified sulfite salts, including calcium, potassium and sodium forms."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium sulfite (INS 225), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2483",
+        "note": "Exact JECFA INS 225 record: potassium sulfite; group ADI 0–0.7 mg/kg bw/day expressed as sulfur dioxide; latest full evaluation 1998."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium hydrogen sulfite (INS 228), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2445",
+        "note": "Exact JECFA INS 228 record: potassium hydrogen sulfite; the 2026 entry considered specifications only and retained the group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide."
+      },
+      {
+        "label": "FAO/JECFA — Potassium sulfite (INS 225), food-additive specification",
+        "url": "https://www.fao.org/fileadmin/user_upload/jecfa_additives/docs/Monograph1/Additive-351.pdf",
+        "note": "Exact INS 225 identity and JECFA specification; says group ADI 0–0.7 mg/kg bw as SO2 was established at the 51st JECFA in 1998."
+      },
+      {
+        "label": "Codex Alimentarius — Sulfites group provisions, GSFA online",
+        "url": "https://www.fao.org/gsfaonline/groups/details.html?d-3586470-o=1&d-3586470-s=5&id=161&lang=&print=true",
+        "note": "Codex defines sulfite provisions at the additive-group level; the maximum level applies to total sulfite content from participating additives in each food category, rather than as separate full limits for every member."
       }
     ],
     "foodInfoUpdatedAt": "Sunday 5 September, 2021",
@@ -5100,7 +5338,11 @@ window.FOSCH_RESEARCH_DATA=
     "regulatoryGroups": [
       "preservatives",
       "antioxidants"
-    ]
+    ],
+    "tox": "Potassium sulfite (INS 225) has a JECFA group ADI of 0–0.7 mg/kg body weight/day, expressed as sulfur dioxide. The group includes sulfur dioxide and specified calcium, potassium and sodium sulfite/bisulfite/metabisulfite salts, as well as sodium thiosulfate. JECFA's record shows the full toxicological evaluation in 1998; no separate E225-specific ADI was established. EFSA's 2022 follow-up assessed eight EU-authorised additives—E220, E221, E222, E223, E224, E226, E227 and E228—and did not include E225. Its withdrawal of the temporary ADI and its MOE-based safety concern therefore must not be reported as a direct EFSA assessment of E225. The JECFA group value remains the source-specific toxicological reference identified here, but it must not be treated as a permitted food concentration. The Australia/New Zealand Food Standards Code includes INS 225 within the sulphite group for at least one defined food category (flour products), subject to the group maximum level and applicable conditions; this is category-specific and not a general permission for other foods or markets.",
+    "intake": "JECFA group ADI: 0–0.7 mg/kg bw/day expressed as SO2 (full evaluation 1998). EFSA's 2022 E220/E221/E222/E223/E224/E226/E227/E228 follow-up did not include E225, so its withdrawn temporary ADI and MOE conclusion must not be transferred to E225. Australia/New Zealand Schedule 15 includes INS 225 in defined flour-product permissions with the total sulphite group limit.",
+    "toxicityResearchStatus": "Reviewed against JECFA's exact potassium-sulfite record/specification and the current Australia/New Zealand Schedule 15; EFSA's 2022 opinion did not include E225, so its findings are not transferred.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E226": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -5126,6 +5368,46 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
         "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
         "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sulfur dioxide (INS 220), group ADI evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/985",
+        "note": "JECFA's current record carries a group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide for sulfur dioxide and specified sulfite salts, including calcium, potassium and sodium forms."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium sulfite (INS 225), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2483",
+        "note": "Exact JECFA INS 225 record: potassium sulfite; group ADI 0–0.7 mg/kg bw/day expressed as sulfur dioxide; latest full evaluation 1998."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium hydrogen sulfite (INS 228), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2445",
+        "note": "Exact JECFA INS 228 record: potassium hydrogen sulfite; the 2026 entry considered specifications only and retained the group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide."
+      },
+      {
+        "label": "EFSA — Re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4438",
+        "note": "Established a temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day from a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, while identifying uncertainties and requiring follow-up."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2022",
+        "url": "https://doi.org/10.2903/j.efsa.2022.7594",
+        "note": "No new suitable toxicological data resolved the gaps; EFSA withdrew the temporary 0.7 group ADI, used a BMDL of 38 mg SO2 equivalents/kg bw/day based on prolonged visual evoked potential latency, and set a reference MOE of 80. Exposure scenarios produced MOEs below 80 and raised a safety concern; EFSA also recommended stricter limits for toxic-element impurities."
+      },
+      {
+        "label": "EFSA — Sulfites: safety concern for high consumers, but data lacking, 24 November 2022",
+        "url": "https://www.efsa.europa.eu/en/news/sulfites-safety-concern-high-consumers-data-lacking",
+        "note": "Public summary explains withdrawal of the temporary ADI, concern for high consumers under modelled scenarios, and remaining uncertainty around hypersensitivity/intolerance in sensitive consumers."
+      },
+      {
+        "label": "UK Food Standards Agency — Sulphur dioxide and/or sulphites allergen reference",
+        "url": "https://data.food.gov.uk/codes/alerts/def/allergen/sulphur",
+        "note": "Official allergen reference for sulphur dioxide/sulphites; labelling and sensitivity considerations are separate from the group toxicological assessment."
+      },
+      {
+        "label": "Codex Alimentarius — Sulfites group provisions, GSFA online",
+        "url": "https://www.fao.org/gsfaonline/groups/details.html?d-3586470-o=1&d-3586470-s=5&id=161&lang=&print=true",
+        "note": "Codex defines sulfite provisions at the additive-group level; the maximum level applies to total sulfite content from participating additives in each food category, rather than as separate full limits for every member."
       }
     ],
     "regulatoryGroups": [
@@ -5141,7 +5423,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "JECFA's group ADI is 0–0.7 mg/kg body weight/day, expressed as sulfur dioxide, for sulfur dioxide and the specified sulfite salts. This is a JECFA group value and should not be mistaken for the current EFSA position. EFSA's 2016 re-evaluation of E220, E221, E222, E223, E224, E226, E227 and E228 set a temporary group ADI at the same 0.7 mg SO2 equivalents/kg bw/day, based on a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, but flagged important toxicology data gaps. In its 2022 follow-up, EFSA found that no suitable new biological or toxicological data had resolved those gaps and withdrew the temporary ADI. It instead used a margin-of-exposure approach: a BMDL of 38 mg SO2 equivalents/kg bw/day was derived from prolonged visual-evoked-potential latency, and an MOE of at least 80 was identified as the reference for no safety concern. Under the refined exposure scenario, MOEs at the maximum of the 95th-percentile ranges were below 80 for all population groups except adolescents; at maximum permitted use levels, MOEs fell below 80 across all groups at the maximum mean range and for most groups at the 95th percentile. EFSA concluded that these modelled exposures raise a safety concern, particularly for high consumers. This is an uncertainty- and exposure-based population assessment, not a prediction that a given serving will cause harm. EFSA also recommended lower specification limits for arsenic, lead and mercury and a new maximum limit for cadmium. It reiterated that further work is needed to characterise hypersensitivity/intolerance in sensitive consumers; such reactions are separate from the general toxicological exposure assessment.",
+    "intake": "JECFA group ADI: 0–0.7 mg/kg bw/day expressed as SO2 for specified sulfites. EFSA's 2016 temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day was withdrawn in 2022 because the toxicology database remained inadequate. EFSA now uses a BMDL of 38 mg SO2 equivalents/kg bw/day and reference MOE of 80; estimated high-consumer MOEs below 80 raised a safety concern. Do not show 0.7 as a current EFSA ADI.",
+    "toxicityResearchStatus": "Reviewed against JECFA's current group ADI record and EFSA's 2016 and 2022 group opinions; the EFSA temporary ADI withdrawal, MOE basis, high-consumer concern, impurity-specification recommendations and sensitivity-data gap are explicit. EFSA's follow-up scope is E220, E221, E222, E223, E224, E226, E227 and E228.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E227": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -5167,6 +5453,46 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
         "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
         "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sulfur dioxide (INS 220), group ADI evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/985",
+        "note": "JECFA's current record carries a group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide for sulfur dioxide and specified sulfite salts, including calcium, potassium and sodium forms."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium sulfite (INS 225), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2483",
+        "note": "Exact JECFA INS 225 record: potassium sulfite; group ADI 0–0.7 mg/kg bw/day expressed as sulfur dioxide; latest full evaluation 1998."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium hydrogen sulfite (INS 228), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2445",
+        "note": "Exact JECFA INS 228 record: potassium hydrogen sulfite; the 2026 entry considered specifications only and retained the group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide."
+      },
+      {
+        "label": "EFSA — Re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4438",
+        "note": "Established a temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day from a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, while identifying uncertainties and requiring follow-up."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2022",
+        "url": "https://doi.org/10.2903/j.efsa.2022.7594",
+        "note": "No new suitable toxicological data resolved the gaps; EFSA withdrew the temporary 0.7 group ADI, used a BMDL of 38 mg SO2 equivalents/kg bw/day based on prolonged visual evoked potential latency, and set a reference MOE of 80. Exposure scenarios produced MOEs below 80 and raised a safety concern; EFSA also recommended stricter limits for toxic-element impurities."
+      },
+      {
+        "label": "EFSA — Sulfites: safety concern for high consumers, but data lacking, 24 November 2022",
+        "url": "https://www.efsa.europa.eu/en/news/sulfites-safety-concern-high-consumers-data-lacking",
+        "note": "Public summary explains withdrawal of the temporary ADI, concern for high consumers under modelled scenarios, and remaining uncertainty around hypersensitivity/intolerance in sensitive consumers."
+      },
+      {
+        "label": "UK Food Standards Agency — Sulphur dioxide and/or sulphites allergen reference",
+        "url": "https://data.food.gov.uk/codes/alerts/def/allergen/sulphur",
+        "note": "Official allergen reference for sulphur dioxide/sulphites; labelling and sensitivity considerations are separate from the group toxicological assessment."
+      },
+      {
+        "label": "Codex Alimentarius — Sulfites group provisions, GSFA online",
+        "url": "https://www.fao.org/gsfaonline/groups/details.html?d-3586470-o=1&d-3586470-s=5&id=161&lang=&print=true",
+        "note": "Codex defines sulfite provisions at the additive-group level; the maximum level applies to total sulfite content from participating additives in each food category, rather than as separate full limits for every member."
       }
     ],
     "regulatoryGroups": [
@@ -5182,7 +5508,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "JECFA's group ADI is 0–0.7 mg/kg body weight/day, expressed as sulfur dioxide, for sulfur dioxide and the specified sulfite salts. This is a JECFA group value and should not be mistaken for the current EFSA position. EFSA's 2016 re-evaluation of E220, E221, E222, E223, E224, E226, E227 and E228 set a temporary group ADI at the same 0.7 mg SO2 equivalents/kg bw/day, based on a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, but flagged important toxicology data gaps. In its 2022 follow-up, EFSA found that no suitable new biological or toxicological data had resolved those gaps and withdrew the temporary ADI. It instead used a margin-of-exposure approach: a BMDL of 38 mg SO2 equivalents/kg bw/day was derived from prolonged visual-evoked-potential latency, and an MOE of at least 80 was identified as the reference for no safety concern. Under the refined exposure scenario, MOEs at the maximum of the 95th-percentile ranges were below 80 for all population groups except adolescents; at maximum permitted use levels, MOEs fell below 80 across all groups at the maximum mean range and for most groups at the 95th percentile. EFSA concluded that these modelled exposures raise a safety concern, particularly for high consumers. This is an uncertainty- and exposure-based population assessment, not a prediction that a given serving will cause harm. EFSA also recommended lower specification limits for arsenic, lead and mercury and a new maximum limit for cadmium. It reiterated that further work is needed to characterise hypersensitivity/intolerance in sensitive consumers; such reactions are separate from the general toxicological exposure assessment.",
+    "intake": "JECFA group ADI: 0–0.7 mg/kg bw/day expressed as SO2 for specified sulfites. EFSA's 2016 temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day was withdrawn in 2022 because the toxicology database remained inadequate. EFSA now uses a BMDL of 38 mg SO2 equivalents/kg bw/day and reference MOE of 80; estimated high-consumer MOEs below 80 raised a safety concern. Do not show 0.7 as a current EFSA ADI.",
+    "toxicityResearchStatus": "Reviewed against JECFA's current group ADI record and EFSA's 2016 and 2022 group opinions; the EFSA temporary ADI withdrawal, MOE basis, high-consumer concern, impurity-specification recommendations and sensitivity-data gap are explicit. EFSA's follow-up scope is E220, E221, E222, E223, E224, E226, E227 and E228.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E228": {
     "researchStatus": "Cross-checked against official regulator sources",
@@ -5208,6 +5538,46 @@ window.FOSCH_RESEARCH_DATA=
         "label": "Australia New Zealand Food Standards Code — Schedule 15 (in force 30 April 2026)",
         "url": "https://www.legislation.gov.au/F2015L00439/2026-04-30/2026-04-30/text/original/epub/OEBPS/document_1/document_1.html",
         "note": "Current Australia/New Zealand schedule of food-additive permissions, food categories, maximum permitted levels and conditions. Presence in one category is not general permission."
+      },
+      {
+        "label": "FAO/WHO JECFA — Sulfur dioxide (INS 220), group ADI evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/985",
+        "note": "JECFA's current record carries a group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide for sulfur dioxide and specified sulfite salts, including calcium, potassium and sodium forms."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium sulfite (INS 225), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2483",
+        "note": "Exact JECFA INS 225 record: potassium sulfite; group ADI 0–0.7 mg/kg bw/day expressed as sulfur dioxide; latest full evaluation 1998."
+      },
+      {
+        "label": "FAO/WHO JECFA — Potassium hydrogen sulfite (INS 228), evaluation history",
+        "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2445",
+        "note": "Exact JECFA INS 228 record: potassium hydrogen sulfite; the 2026 entry considered specifications only and retained the group ADI of 0–0.7 mg/kg bw/day expressed as sulfur dioxide."
+      },
+      {
+        "label": "EFSA — Re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2016",
+        "url": "https://doi.org/10.2903/j.efsa.2016.4438",
+        "note": "Established a temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day from a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, while identifying uncertainties and requiring follow-up."
+      },
+      {
+        "label": "EFSA — Follow-up of the re-evaluation of sulfur dioxide and sulfites (E220, E221, E222, E223, E224, E226, E227 and E228), 2022",
+        "url": "https://doi.org/10.2903/j.efsa.2022.7594",
+        "note": "No new suitable toxicological data resolved the gaps; EFSA withdrew the temporary 0.7 group ADI, used a BMDL of 38 mg SO2 equivalents/kg bw/day based on prolonged visual evoked potential latency, and set a reference MOE of 80. Exposure scenarios produced MOEs below 80 and raised a safety concern; EFSA also recommended stricter limits for toxic-element impurities."
+      },
+      {
+        "label": "EFSA — Sulfites: safety concern for high consumers, but data lacking, 24 November 2022",
+        "url": "https://www.efsa.europa.eu/en/news/sulfites-safety-concern-high-consumers-data-lacking",
+        "note": "Public summary explains withdrawal of the temporary ADI, concern for high consumers under modelled scenarios, and remaining uncertainty around hypersensitivity/intolerance in sensitive consumers."
+      },
+      {
+        "label": "UK Food Standards Agency — Sulphur dioxide and/or sulphites allergen reference",
+        "url": "https://data.food.gov.uk/codes/alerts/def/allergen/sulphur",
+        "note": "Official allergen reference for sulphur dioxide/sulphites; labelling and sensitivity considerations are separate from the group toxicological assessment."
+      },
+      {
+        "label": "Codex Alimentarius — Sulfites group provisions, GSFA online",
+        "url": "https://www.fao.org/gsfaonline/groups/details.html?d-3586470-o=1&d-3586470-s=5&id=161&lang=&print=true",
+        "note": "Codex defines sulfite provisions at the additive-group level; the maximum level applies to total sulfite content from participating additives in each food category, rather than as separate full limits for every member."
       }
     ],
     "regulatoryGroups": [
@@ -5223,7 +5593,11 @@ window.FOSCH_RESEARCH_DATA=
       "source": "Wikipedia E number purpose table",
       "reviewedAt": "2026-11-25",
       "limitation": "Secondary functional-purpose reference only; not evidence of current authorisation or permitted food categories."
-    }
+    },
+    "tox": "JECFA's group ADI is 0–0.7 mg/kg body weight/day, expressed as sulfur dioxide, for sulfur dioxide and the specified sulfite salts. This is a JECFA group value and should not be mistaken for the current EFSA position. EFSA's 2016 re-evaluation of E220, E221, E222, E223, E224, E226, E227 and E228 set a temporary group ADI at the same 0.7 mg SO2 equivalents/kg bw/day, based on a rat long-term toxicity NOAEL of 70 mg SO2 equivalents/kg bw/day, but flagged important toxicology data gaps. In its 2022 follow-up, EFSA found that no suitable new biological or toxicological data had resolved those gaps and withdrew the temporary ADI. It instead used a margin-of-exposure approach: a BMDL of 38 mg SO2 equivalents/kg bw/day was derived from prolonged visual-evoked-potential latency, and an MOE of at least 80 was identified as the reference for no safety concern. Under the refined exposure scenario, MOEs at the maximum of the 95th-percentile ranges were below 80 for all population groups except adolescents; at maximum permitted use levels, MOEs fell below 80 across all groups at the maximum mean range and for most groups at the 95th percentile. EFSA concluded that these modelled exposures raise a safety concern, particularly for high consumers. This is an uncertainty- and exposure-based population assessment, not a prediction that a given serving will cause harm. EFSA also recommended lower specification limits for arsenic, lead and mercury and a new maximum limit for cadmium. It reiterated that further work is needed to characterise hypersensitivity/intolerance in sensitive consumers; such reactions are separate from the general toxicological exposure assessment.",
+    "intake": "JECFA group ADI: 0–0.7 mg/kg bw/day expressed as SO2 for specified sulfites. EFSA's 2016 temporary group ADI of 0.7 mg SO2 equivalents/kg bw/day was withdrawn in 2022 because the toxicology database remained inadequate. EFSA now uses a BMDL of 38 mg SO2 equivalents/kg bw/day and reference MOE of 80; estimated high-consumer MOEs below 80 raised a safety concern. Do not show 0.7 as a current EFSA ADI.",
+    "toxicityResearchStatus": "Reviewed against JECFA's current group ADI record and EFSA's 2016 and 2022 group opinions; the EFSA temporary ADI withdrawal, MOE basis, high-consumer concern, impurity-specification recommendations and sensitivity-data gap are explicit. EFSA's follow-up scope is E220, E221, E222, E223, E224, E226, E227 and E228.",
+    "toxicityReviewedAt": "2026-11-27"
   },
   "E230": {
     "researchStatus": "Codex GSFA verified",
